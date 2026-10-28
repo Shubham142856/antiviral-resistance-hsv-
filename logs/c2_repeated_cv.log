@@ -1,0 +1,70 @@
+=== CLAIM C2 REPEATED GROUPED CROSS-VALIDATION AUDIT LOG ===
+Repeated CV Iterations: 20 (Seeds 1 to 20)
+Evaluation Method: Per-Fold Mean AUROC and Paired Leakage Gap (Random - Grouped) with 95% Bootstrap CIs
+Hard Assertions: Zero position overlap verified in Regimes 3, 4, 5.
+
+================================================================================
+TARGET PAIR: UL23-Aciclovir (N=375, Positives=177, Negatives=198)
+Distinct Positions: 191 | Distinct Strains: 20
+================================================================================
+--- 20-Repeat Summary for UL23-Aciclovir ---
+Model Architecture        | Regime 1 (Rand)   | Regime 2 (Clade)  | Regime 3 (Pos)    | Regime 4 (Both)   | Regime 5 (Block) 
+-------------------------------------------------------------------------------------------------------------------
+RF_All_Features           | 0.9109 +/- 0.0070 | 0.8793 +/- 0.0269 | 0.8067 +/- 0.0273 | 0.7683 +/- 0.0722 | 0.6875 +/- 0.0079
+RF_No_Position            | 0.7798 +/- 0.0095 | 0.7184 +/- 0.0322 | 0.6758 +/- 0.0286 | 0.6167 +/- 0.0839 | 0.6378 +/- 0.0081
+RF_Position_Only          | 0.8503 +/- 0.0089 | 0.8396 +/- 0.0327 | 0.7683 +/- 0.0182 | 0.7677 +/- 0.0794 | 0.5440 +/- 0.0014
+Logistic_Regression       | 0.7444 +/- 0.0057 | 0.6859 +/- 0.0384 | 0.7117 +/- 0.0213 | 0.7052 +/- 0.0794 | 0.6877 +/- 0.0000
+BLOSUM62_Radicalness      | 0.7370 +/- 0.0046 | 0.6970 +/- 0.0355 | 0.7389 +/- 0.0077 | 0.7337 +/- 0.0792 | 0.7389 +/- 0.0000
+Position_Prior            | 0.8490 +/- 0.0101 | 0.8297 +/- 0.0239 | 0.5000 +/- 0.0000 | 0.5000 +/- 0.0000 | 0.5000 +/- 0.0000
+
+Paired Leakage Gaps (Random minus Position-Grouped) across 20 repeats:
+  RF_All_Features          : Mean Gap = +0.1041 (95% CI: [0.0919, 0.1177]) -> EXCLUDES ZERO (Consistent with leakage)
+  RF_No_Position           : Mean Gap = +0.1040 (95% CI: [0.0916, 0.1175]) -> EXCLUDES ZERO (Consistent with leakage)
+  RF_Position_Only         : Mean Gap = +0.0821 (95% CI: [0.0746, 0.0904]) -> EXCLUDES ZERO (Consistent with leakage)
+  Logistic_Regression      : Mean Gap = +0.0327 (95% CI: [0.0239, 0.0416]) -> EXCLUDES ZERO (Consistent with leakage)
+  BLOSUM62_Radicalness     : Mean Gap = -0.0019 (95% CI: [-0.0064, 0.0022]) -> Includes zero / Not significant
+  Position_Prior           : Mean Gap = +0.3490 (95% CI: [0.3446, 0.3532]) -> EXCLUDES ZERO (Consistent with leakage)
+
+================================================================================
+TARGET PAIR: UL30-Aciclovir (N=340, Positives=84, Negatives=256)
+Distinct Positions: 246 | Distinct Strains: 13
+================================================================================
+--- 20-Repeat Summary for UL30-Aciclovir ---
+Model Architecture        | Regime 1 (Rand)   | Regime 2 (Clade)  | Regime 3 (Pos)    | Regime 4 (Both)   | Regime 5 (Block) 
+-------------------------------------------------------------------------------------------------------------------
+RF_All_Features           | 0.8620 +/- 0.0167 | 0.7976 +/- 0.0621 | 0.7328 +/- 0.0365 | 0.6226 +/- 0.1302 | 0.4089 +/- 0.0198
+RF_No_Position            | 0.6946 +/- 0.0181 | 0.6579 +/- 0.0414 | 0.5052 +/- 0.0536 | 0.4465 +/- 0.1598 | 0.3956 +/- 0.0143
+RF_Position_Only          | 0.9071 +/- 0.0077 | 0.8508 +/- 0.0426 | 0.8715 +/- 0.0171 | 0.7780 +/- 0.1303 | 0.5001 +/- 0.0009
+Logistic_Regression       | 0.5619 +/- 0.0171 | 0.5184 +/- 0.0366 | 0.4521 +/- 0.0338 | 0.3963 +/- 0.1470 | 0.3696 +/- 0.0000
+BLOSUM62_Radicalness      | 0.4471 +/- 0.0042 | 0.4680 +/- 0.0420 | 0.4519 +/- 0.0171 | 0.4536 +/- 0.1313 | 0.4545 +/- 0.0000
+Position_Prior            | 0.8038 +/- 0.0191 | 0.7487 +/- 0.0563 | 0.5000 +/- 0.0000 | 0.5000 +/- 0.0000 | 0.5000 +/- 0.0000
+
+Paired Leakage Gaps (Random minus Position-Grouped) across 20 repeats:
+  RF_All_Features          : Mean Gap = +0.1292 (95% CI: [0.1139, 0.1455]) -> EXCLUDES ZERO (Consistent with leakage)
+  RF_No_Position           : Mean Gap = +0.1894 (95% CI: [0.1659, 0.2138]) -> EXCLUDES ZERO (Consistent with leakage)
+  RF_Position_Only         : Mean Gap = +0.0356 (95% CI: [0.0275, 0.0449]) -> EXCLUDES ZERO (Consistent with leakage)
+  Logistic_Regression      : Mean Gap = +0.1098 (95% CI: [0.0964, 0.1232]) -> EXCLUDES ZERO (Consistent with leakage)
+  BLOSUM62_Radicalness     : Mean Gap = -0.0048 (95% CI: [-0.0128, 0.0033]) -> Includes zero / Not significant
+  Position_Prior           : Mean Gap = +0.3038 (95% CI: [0.2949, 0.3114]) -> EXCLUDES ZERO (Consistent with leakage)
+
+================================================================================
+TARGET PAIR: UL30-Foscarnet (N=309, Positives=46, Negatives=263)
+Distinct Positions: 234 | Distinct Strains: 11
+================================================================================
+--- 20-Repeat Summary for UL30-Foscarnet ---
+Model Architecture        | Regime 1 (Rand)   | Regime 2 (Clade)  | Regime 3 (Pos)    | Regime 4 (Both)   | Regime 5 (Block) 
+-------------------------------------------------------------------------------------------------------------------
+RF_All_Features           | 0.8335 +/- 0.0234 | 0.7317 +/- 0.0587 | 0.6756 +/- 0.0446 | 0.5192 +/- 0.1274 | 0.6372 +/- 0.0181
+RF_No_Position            | 0.7413 +/- 0.0201 | 0.6484 +/- 0.0703 | 0.5548 +/- 0.0342 | 0.4383 +/- 0.1248 | 0.5934 +/- 0.0116
+RF_Position_Only          | 0.9027 +/- 0.0078 | 0.8324 +/- 0.0464 | 0.8684 +/- 0.0282 | 0.7626 +/- 0.1202 | 0.5166 +/- 0.0105
+Logistic_Regression       | 0.6303 +/- 0.0235 | 0.5751 +/- 0.0415 | 0.5468 +/- 0.0507 | 0.4506 +/- 0.0915 | 0.4558 +/- 0.0000
+BLOSUM62_Radicalness      | 0.4313 +/- 0.0142 | 0.4850 +/- 0.0517 | 0.4436 +/- 0.0230 | 0.4738 +/- 0.1331 | 0.4803 +/- 0.0000
+Position_Prior            | 0.7507 +/- 0.0221 | 0.7289 +/- 0.0399 | 0.5000 +/- 0.0000 | 0.5000 +/- 0.0000 | 0.5000 +/- 0.0000
+
+Paired Leakage Gaps (Random minus Position-Grouped) across 20 repeats:
+  RF_All_Features          : Mean Gap = +0.1579 (95% CI: [0.1375, 0.1780]) -> EXCLUDES ZERO (Consistent with leakage)
+  RF_No_Position           : Mean Gap = +0.1865 (95% CI: [0.1707, 0.2032]) -> EXCLUDES ZERO (Consistent with leakage)
+  RF_Position_Only         : Mean Gap = +0.0343 (95% CI: [0.0212, 0.0494]) -> EXCLUDES ZERO (Consistent with leakage)
+  Logistic_Regression      : Mean Gap = +0.0835 (95% CI: [0.0603, 0.1055]) -> EXCLUDES ZERO (Consistent with leakage)
+  BLOSUM62_Radicalness     : Mean Gap = -0.0123 (95% CI: [-0.0233, -0.0017]) -> Includes zero / Not significant
+  Position_Prior           : Mean Gap = +0.2507 (95% CI: [0.2403, 0.2597]) -> EXCLUDES ZERO (Consistent with leakage)

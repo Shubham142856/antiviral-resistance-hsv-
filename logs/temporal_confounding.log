@@ -1,0 +1,39 @@
+=== TEMPORAL SPLIT CONFOUNDING & DOMAIN SHIFT ANALYSIS LOG ===
+Total Samples Analyzed: 2204
+Pre-2016 Samples (Train): 1312 (59.53%)
+Post-2016 Samples (Test): 892 (40.47%)
+
+--- 1. Class Balance Comparison ---
+Pre-2016:  Resistant = 316, Sensitive = 955 -> Resistance Rate = 24.86%
+Post-2016: Resistant = 316, Sensitive = 542 -> Resistance Rate = 36.83%
+Class Balance Shift: +0.1197 (+11.97 percentage points)
+
+--- 2. Target Gene Breakdown ---
+Gene UL23    : Pre-2016 = 564   (42.99%) | Post-2016 = 377   (42.26%)
+Gene UL29    : Pre-2016 = 0     ( 0.00%) | Post-2016 = 5     ( 0.56%)
+Gene UL30    : Pre-2016 = 739   (56.33%) | Post-2016 = 440   (49.33%)
+Gene UL5/UL52: Pre-2016 = 0     ( 0.00%) | Post-2016 = 7     ( 0.78%)
+Gene UL52    : Pre-2016 = 1     ( 0.08%) | Post-2016 = 20    ( 2.24%)
+Gene UL5     : Pre-2016 = 8     ( 0.61%) | Post-2016 = 43    ( 4.82%)
+
+--- 3. Drug Breakdown ---
+Drug Aciclovir   : Pre-2016 = 559   (42.61%) | Post-2016 = 386   (43.27%)
+Drug Amenamevir  : Pre-2016 = 0     ( 0.00%) | Post-2016 = 44    ( 4.93%)
+Drug Brivudine   : Pre-2016 = 75    ( 5.72%) | Post-2016 = 74    ( 8.30%)
+Drug Cidofovir   : Pre-2016 = 115   ( 8.77%) | Post-2016 = 73    ( 8.18%)
+Drug Foscarnet   : Pre-2016 = 467   (35.59%) | Post-2016 = 180   (20.18%)
+Drug Penciclovir : Pre-2016 = 87    ( 6.63%) | Post-2016 = 114   (12.78%)
+Drug Pritelivir  : Pre-2016 = 9     ( 0.69%) | Post-2016 = 21    ( 2.35%)
+
+--- 4. Literature Source Mix ---
+Pre-2016 Rows with CMI Review Citations: 0 (0.00%)
+Post-2016 Rows with CMI Review Citations: 22 (2.47%)
+
+--- 5. Domain Classifier: Predicting Pre-2016 vs Post-2016 from Non-Label Features ---
+Logistic Regression 5-fold AUROC: 0.6460 +/- 0.0199 (Folds: [0.666, 0.619, 0.654, 0.666, 0.625])
+Random Forest 5-fold AUROC:       0.6794 +/- 0.0232 (Folds: [0.697, 0.654, 0.689, 0.707, 0.649])
+
+Methodological Interpretation:
+  [MODERATE-TO-HIGH DOMAIN SHIFT]: Domain classifier AUROC is 0.6794 (significantly above 0.50).
+  This indicates that post-2016 data exhibits systematic non-random distribution shifts in target drugs, genes, or sequence positions relative to pre-2016 data.
+  Therefore, temporal validation performance reflects both temporal generalization AND domain shift across experimental eras.

@@ -1,0 +1,584 @@
+{
+  "UL23-Aciclovir": {
+    "RF_All_Features": {
+      "means": {
+        "Random": 0.9109,
+        "Clade_Grouped": 0.8793,
+        "Position_Grouped": 0.8067,
+        "Both_Grouped": 0.7683,
+        "Contiguous_Block": 0.6875
+      },
+      "stds": {
+        "Random": 0.007,
+        "Clade_Grouped": 0.0269,
+        "Position_Grouped": 0.0273,
+        "Both_Grouped": 0.0722,
+        "Contiguous_Block": 0.0079
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.1041,
+        "ci_95": [
+          0.0919,
+          0.1177
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0315,
+        "ci_95": [
+          0.0197,
+          0.0427
+        ],
+        "excludes_zero": true
+      }
+    },
+    "RF_No_Position": {
+      "means": {
+        "Random": 0.7798,
+        "Clade_Grouped": 0.7184,
+        "Position_Grouped": 0.6758,
+        "Both_Grouped": 0.6167,
+        "Contiguous_Block": 0.6378
+      },
+      "stds": {
+        "Random": 0.0095,
+        "Clade_Grouped": 0.0322,
+        "Position_Grouped": 0.0286,
+        "Both_Grouped": 0.0839,
+        "Contiguous_Block": 0.0081
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.104,
+        "ci_95": [
+          0.0916,
+          0.1175
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0614,
+        "ci_95": [
+          0.0478,
+          0.0749
+        ],
+        "excludes_zero": true
+      }
+    },
+    "RF_Position_Only": {
+      "means": {
+        "Random": 0.8503,
+        "Clade_Grouped": 0.8396,
+        "Position_Grouped": 0.7683,
+        "Both_Grouped": 0.7677,
+        "Contiguous_Block": 0.544
+      },
+      "stds": {
+        "Random": 0.0089,
+        "Clade_Grouped": 0.0327,
+        "Position_Grouped": 0.0182,
+        "Both_Grouped": 0.0794,
+        "Contiguous_Block": 0.0014
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.0821,
+        "ci_95": [
+          0.0746,
+          0.0904
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0108,
+        "ci_95": [
+          -0.0017,
+          0.0256
+        ],
+        "excludes_zero": false
+      }
+    },
+    "Logistic_Regression": {
+      "means": {
+        "Random": 0.7444,
+        "Clade_Grouped": 0.6859,
+        "Position_Grouped": 0.7117,
+        "Both_Grouped": 0.7052,
+        "Contiguous_Block": 0.6877
+      },
+      "stds": {
+        "Random": 0.0057,
+        "Clade_Grouped": 0.0384,
+        "Position_Grouped": 0.0213,
+        "Both_Grouped": 0.0794,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.0327,
+        "ci_95": [
+          0.0239,
+          0.0416
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0584,
+        "ci_95": [
+          0.044,
+          0.0747
+        ],
+        "excludes_zero": true
+      }
+    },
+    "BLOSUM62_Radicalness": {
+      "means": {
+        "Random": 0.737,
+        "Clade_Grouped": 0.697,
+        "Position_Grouped": 0.7389,
+        "Both_Grouped": 0.7337,
+        "Contiguous_Block": 0.7389
+      },
+      "stds": {
+        "Random": 0.0046,
+        "Clade_Grouped": 0.0355,
+        "Position_Grouped": 0.0077,
+        "Both_Grouped": 0.0792,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": -0.0019,
+        "ci_95": [
+          -0.0064,
+          0.0022
+        ],
+        "excludes_zero": false
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.04,
+        "ci_95": [
+          0.0252,
+          0.0558
+        ],
+        "excludes_zero": true
+      }
+    },
+    "Position_Prior": {
+      "means": {
+        "Random": 0.849,
+        "Clade_Grouped": 0.8297,
+        "Position_Grouped": 0.5,
+        "Both_Grouped": 0.5,
+        "Contiguous_Block": 0.5
+      },
+      "stds": {
+        "Random": 0.0101,
+        "Clade_Grouped": 0.0239,
+        "Position_Grouped": 0.0,
+        "Both_Grouped": 0.0,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.349,
+        "ci_95": [
+          0.3446,
+          0.3532
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0193,
+        "ci_95": [
+          0.0082,
+          0.03
+        ],
+        "excludes_zero": true
+      }
+    }
+  },
+  "UL30-Aciclovir": {
+    "RF_All_Features": {
+      "means": {
+        "Random": 0.862,
+        "Clade_Grouped": 0.7976,
+        "Position_Grouped": 0.7328,
+        "Both_Grouped": 0.6226,
+        "Contiguous_Block": 0.4089
+      },
+      "stds": {
+        "Random": 0.0167,
+        "Clade_Grouped": 0.0621,
+        "Position_Grouped": 0.0365,
+        "Both_Grouped": 0.1302,
+        "Contiguous_Block": 0.0198
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.1292,
+        "ci_95": [
+          0.1139,
+          0.1455
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0644,
+        "ci_95": [
+          0.0384,
+          0.0931
+        ],
+        "excludes_zero": true
+      }
+    },
+    "RF_No_Position": {
+      "means": {
+        "Random": 0.6946,
+        "Clade_Grouped": 0.6579,
+        "Position_Grouped": 0.5052,
+        "Both_Grouped": 0.4465,
+        "Contiguous_Block": 0.3956
+      },
+      "stds": {
+        "Random": 0.0181,
+        "Clade_Grouped": 0.0414,
+        "Position_Grouped": 0.0536,
+        "Both_Grouped": 0.1598,
+        "Contiguous_Block": 0.0143
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.1894,
+        "ci_95": [
+          0.1659,
+          0.2138
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0366,
+        "ci_95": [
+          0.018,
+          0.0583
+        ],
+        "excludes_zero": true
+      }
+    },
+    "RF_Position_Only": {
+      "means": {
+        "Random": 0.9071,
+        "Clade_Grouped": 0.8508,
+        "Position_Grouped": 0.8715,
+        "Both_Grouped": 0.778,
+        "Contiguous_Block": 0.5001
+      },
+      "stds": {
+        "Random": 0.0077,
+        "Clade_Grouped": 0.0426,
+        "Position_Grouped": 0.0171,
+        "Both_Grouped": 0.1303,
+        "Contiguous_Block": 0.0009
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.0356,
+        "ci_95": [
+          0.0275,
+          0.0449
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0563,
+        "ci_95": [
+          0.0384,
+          0.0755
+        ],
+        "excludes_zero": true
+      }
+    },
+    "Logistic_Regression": {
+      "means": {
+        "Random": 0.5619,
+        "Clade_Grouped": 0.5184,
+        "Position_Grouped": 0.4521,
+        "Both_Grouped": 0.3963,
+        "Contiguous_Block": 0.3696
+      },
+      "stds": {
+        "Random": 0.0171,
+        "Clade_Grouped": 0.0366,
+        "Position_Grouped": 0.0338,
+        "Both_Grouped": 0.147,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.1098,
+        "ci_95": [
+          0.0964,
+          0.1232
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0436,
+        "ci_95": [
+          0.026,
+          0.0617
+        ],
+        "excludes_zero": true
+      }
+    },
+    "BLOSUM62_Radicalness": {
+      "means": {
+        "Random": 0.4471,
+        "Clade_Grouped": 0.468,
+        "Position_Grouped": 0.4519,
+        "Both_Grouped": 0.4536,
+        "Contiguous_Block": 0.4545
+      },
+      "stds": {
+        "Random": 0.0042,
+        "Clade_Grouped": 0.042,
+        "Position_Grouped": 0.0171,
+        "Both_Grouped": 0.1313,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": -0.0048,
+        "ci_95": [
+          -0.0128,
+          0.0033
+        ],
+        "excludes_zero": false
+      },
+      "paired_gap_clade": {
+        "mean_gap": -0.0209,
+        "ci_95": [
+          -0.0413,
+          -0.0044
+        ],
+        "excludes_zero": false
+      }
+    },
+    "Position_Prior": {
+      "means": {
+        "Random": 0.8038,
+        "Clade_Grouped": 0.7487,
+        "Position_Grouped": 0.5,
+        "Both_Grouped": 0.5,
+        "Contiguous_Block": 0.5
+      },
+      "stds": {
+        "Random": 0.0191,
+        "Clade_Grouped": 0.0563,
+        "Position_Grouped": 0.0,
+        "Both_Grouped": 0.0,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.3038,
+        "ci_95": [
+          0.2949,
+          0.3114
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0551,
+        "ci_95": [
+          0.0282,
+          0.0849
+        ],
+        "excludes_zero": true
+      }
+    }
+  },
+  "UL30-Foscarnet": {
+    "RF_All_Features": {
+      "means": {
+        "Random": 0.8335,
+        "Clade_Grouped": 0.7317,
+        "Position_Grouped": 0.6756,
+        "Both_Grouped": 0.5192,
+        "Contiguous_Block": 0.6372
+      },
+      "stds": {
+        "Random": 0.0234,
+        "Clade_Grouped": 0.0587,
+        "Position_Grouped": 0.0446,
+        "Both_Grouped": 0.1274,
+        "Contiguous_Block": 0.0181
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.1579,
+        "ci_95": [
+          0.1375,
+          0.178
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.1018,
+        "ci_95": [
+          0.0732,
+          0.1293
+        ],
+        "excludes_zero": true
+      }
+    },
+    "RF_No_Position": {
+      "means": {
+        "Random": 0.7413,
+        "Clade_Grouped": 0.6484,
+        "Position_Grouped": 0.5548,
+        "Both_Grouped": 0.4383,
+        "Contiguous_Block": 0.5934
+      },
+      "stds": {
+        "Random": 0.0201,
+        "Clade_Grouped": 0.0703,
+        "Position_Grouped": 0.0342,
+        "Both_Grouped": 0.1248,
+        "Contiguous_Block": 0.0116
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.1865,
+        "ci_95": [
+          0.1707,
+          0.2032
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.093,
+        "ci_95": [
+          0.0607,
+          0.1276
+        ],
+        "excludes_zero": true
+      }
+    },
+    "RF_Position_Only": {
+      "means": {
+        "Random": 0.9027,
+        "Clade_Grouped": 0.8324,
+        "Position_Grouped": 0.8684,
+        "Both_Grouped": 0.7626,
+        "Contiguous_Block": 0.5166
+      },
+      "stds": {
+        "Random": 0.0078,
+        "Clade_Grouped": 0.0464,
+        "Position_Grouped": 0.0282,
+        "Both_Grouped": 0.1202,
+        "Contiguous_Block": 0.0105
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.0343,
+        "ci_95": [
+          0.0212,
+          0.0494
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0703,
+        "ci_95": [
+          0.0499,
+          0.09
+        ],
+        "excludes_zero": true
+      }
+    },
+    "Logistic_Regression": {
+      "means": {
+        "Random": 0.6303,
+        "Clade_Grouped": 0.5751,
+        "Position_Grouped": 0.5468,
+        "Both_Grouped": 0.4506,
+        "Contiguous_Block": 0.4558
+      },
+      "stds": {
+        "Random": 0.0235,
+        "Clade_Grouped": 0.0415,
+        "Position_Grouped": 0.0507,
+        "Both_Grouped": 0.0915,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.0835,
+        "ci_95": [
+          0.0603,
+          0.1055
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0553,
+        "ci_95": [
+          0.0365,
+          0.0763
+        ],
+        "excludes_zero": true
+      }
+    },
+    "BLOSUM62_Radicalness": {
+      "means": {
+        "Random": 0.4313,
+        "Clade_Grouped": 0.485,
+        "Position_Grouped": 0.4436,
+        "Both_Grouped": 0.4738,
+        "Contiguous_Block": 0.4803
+      },
+      "stds": {
+        "Random": 0.0142,
+        "Clade_Grouped": 0.0517,
+        "Position_Grouped": 0.023,
+        "Both_Grouped": 0.1331,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": -0.0123,
+        "ci_95": [
+          -0.0233,
+          -0.0017
+        ],
+        "excludes_zero": false
+      },
+      "paired_gap_clade": {
+        "mean_gap": -0.0538,
+        "ci_95": [
+          -0.0798,
+          -0.0307
+        ],
+        "excludes_zero": false
+      }
+    },
+    "Position_Prior": {
+      "means": {
+        "Random": 0.7507,
+        "Clade_Grouped": 0.7289,
+        "Position_Grouped": 0.5,
+        "Both_Grouped": 0.5,
+        "Contiguous_Block": 0.5
+      },
+      "stds": {
+        "Random": 0.0221,
+        "Clade_Grouped": 0.0399,
+        "Position_Grouped": 0.0,
+        "Both_Grouped": 0.0,
+        "Contiguous_Block": 0.0
+      },
+      "paired_gap_pos": {
+        "mean_gap": 0.2507,
+        "ci_95": [
+          0.2403,
+          0.2597
+        ],
+        "excludes_zero": true
+      },
+      "paired_gap_clade": {
+        "mean_gap": 0.0218,
+        "ci_95": [
+          0.001,
+          0.0415
+        ],
+        "excludes_zero": true
+      }
+    }
+  }
+}

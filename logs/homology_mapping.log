@@ -1,0 +1,13 @@
+=== HSV-1 vs HSV-2 PAIRWISE HOMOLOGY MAPPING LOG ===
+
+Gene: UL23
+  HSV-1 Length: 376 aa | HSV-2 Length: 376 aa
+  Alignment Length: 377 columns | Score: 257.0
+  Identical Residues: 277/376 (73.67%)
+  Gapped Columns: 2
+
+Gene: UL30
+  HSV-1 Length: 1235 aa | HSV-2 Length: 1240 aa
+  Alignment Length: 1240 columns | Score: 1101.5
+  Identical Residues: 1123/1235 (90.93%)
+  Gapped Columns: 5

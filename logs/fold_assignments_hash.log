@@ -1,0 +1,9 @@
+=== REPRODUCIBLE FOLD ASSIGNMENTS SHA-256 INTEGRITY HASH ===
+File: data/processed/primary_position_folds.tsv
+Total Rows: 929
+Primary Scope: HSV-1 UL23-Aciclovir, UL30-Aciclovir, UL30-Foscarnet
+Inclusion Filter: virus=='HSV-1', is_single_site==1, is_conflicted==0, target_binary in [0, 1]
+CV Scheme: 5-Fold Position-Grouped Cross-Validation (GroupKFold)
+Random Seed: 42 (Deterministic GroupKFold)
+SHA-256: 7c4d0a3de2cd171b07230757f44e0dfbd61c6a0a8570dc8f263195b354c66909
+Leakage Verification: All folds asserted zero position overlap between train and test (assert len(overlap) == 0)

@@ -1,46 +1,48 @@
 import json
-import pandas as pd
 
-with open(r'd:\antiviral-resistance-hsv--1\logs\c2_split_evaluation_per_fold.json') as f:
+with open(r'd:\antiviral-resistance-hsv--1\logs\c2_repeated_cv_results.json') as f:
     data = json.load(f)
 
-rows = []
-for pair, entries in data.items():
-    for e in entries:
-        rows.append({
-            'Gene-Drug Pair': pair,
-            'Regime': e['regime'],
-            'Model': e['model'],
-            'Mean Per-Fold AUROC': e['mean_per_fold_auroc'],
-            'Std Per-Fold AUROC': e['std_per_fold_auroc'],
-            'Pooled AUROC': e['pooled_auroc'],
-            'CI_95_Low': e['ci_95'][0],
-            'CI_95_High': e['ci_95'][1],
-            'Per-Fold Folds': str(e['per_fold_values'])
-        })
+model_labels = {
+    'RF_All_Features': 'Random Forest (All Features)',
+    'RF_No_Position': 'Random Forest (No Position Feature)',
+    'RF_Position_Only': 'Random Forest (Position Only)',
+    'Logistic_Regression': 'Logistic Regression (One-Hot + Pos)',
+    'BLOSUM62_Radicalness': 'BLOSUM62 Radicalness Score',
+    'Position_Prior': 'Position Prior Baseline'
+}
 
-df = pd.DataFrame(rows)
-out_tsv = r'd:\antiviral-resistance-hsv--1\logs\c2_full_models_regimes_table.tsv'
-df.to_csv(out_tsv, sep='\t', index=False)
-print("Saved full table to:", out_tsv)
+regimes = ['Random', 'Clade_Grouped', 'Position_Grouped', 'Both_Grouped', 'Contiguous_Block']
+regime_headers = ['Naive Random', 'Strain-Grouped', 'Position-Grouped', 'Both-Grouped', 'Contiguous-Block']
 
-# Print cleanly formatted markdown table for each pair
-for pair in df['Gene-Drug Pair'].unique():
-    print(f"\n### {pair} Benchmark Results (Mean Per-Fold +/- SD across 5 Folds)")
-    sub = df[df['Gene-Drug Pair'] == pair]
-    models = ['Logistic Regression', 'BLOSUM62 Radicalness', 'Position Prior', 'Physicochemical Random Forest']
-    regimes = ['Regime 1: Random Split', 'Regime 2: Clade/Strain-Grouped Split', 'Regime 3: Position-Grouped Split', 'Regime 4: Both-Grouped Split']
+for pair, pdata in data.items():
+    print(f"\n#### Pair: {pair}")
+    header_str = "| Model Architecture | " + " | ".join(regime_headers) + " | Paired Leakage Gap (Random - Pos) [95% CI] |"
+    print(header_str)
+    print("| :--- | " + " | ".join([":---"] * len(regime_headers)) + " | :--- |")
     
-    print(f"| Model | Random Split | Clade-Grouped | Position-Grouped | Both-Grouped |")
-    print(f"| :--- | :--- | :--- | :--- | :--- |")
-    for m in models:
-        row_str = f"| **{m}** |"
+    for m_key, m_label in model_labels.items():
+        if m_key not in pdata:
+            continue
+        m_info = pdata[m_key]
+        row = [f"**{m_label}**"]
         for r in regimes:
-            match = sub[(sub['Model'] == m) & (sub['Regime'] == r)]
-            if len(match) > 0:
-                mean_v = match['Mean Per-Fold AUROC'].iloc[0]
-                std_v = match['Std Per-Fold AUROC'].iloc[0]
-                row_str += f" {mean_v:.4f} +/- {std_v:.4f} |"
+            mean_v = m_info['means'].get(r, 0.0)
+            std_v = m_info['stds'].get(r, 0.0)
+            if m_key == 'Position_Prior' and r in ['Position_Grouped', 'Both_Grouped']:
+                row.append("**0.5000 +/- 0.0000**")
             else:
-                row_str += " N/A |"
-        print(row_str)
+                row.append(f"{mean_v:.4f} +/- {std_v:.4f}")
+                
+        gap_info = m_info.get('paired_gap_pos', {})
+        if gap_info:
+            g_mean = gap_info['mean_gap']
+            g_low = gap_info['ci_95'][0]
+            g_high = gap_info['ci_95'][1]
+            excl = "*" if gap_info.get('excludes_zero') else ""
+            row.append(f"**{g_mean:+.4f}**{excl} [{g_low:+.4f}, {g_high:+.4f}]")
+        else:
+            row.append("N/A")
+            
+        print("| " + " | ".join(row) + " |")
+
