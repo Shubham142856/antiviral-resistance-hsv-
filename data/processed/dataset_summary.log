@@ -1,0 +1,33 @@
+=== UNIFIED MODELING DATASET PROVENANCE & SUMMARY LOG ===
+Scope Status: Provisional Scope (Awaiting Human C1/C2 Tiering & PI Sign-Off)
+Total Deduplicated Mutation-Drug Pairs: 2204
+Primary Scope Rows (UL23-ACV, UL30-ACV, UL30-FOS): 1371
+Discordant / Conflicted Tuples Flagged: 65 (2.95%)
+
+--- Primary Scope Summary ---
+Pair: UL23-Aciclovir
+  Total Distinct Mutations: 464
+  Distinct Positions: 256
+  Resistant Mutations: 255
+  Sensitive Mutations: 191
+  Discordant (Excluded from clean train): 14
+  Pre-2016 Mutations: 246
+  Post-2016 Mutations: 218
+
+Pair: UL30-Aciclovir
+  Total Distinct Mutations: 465
+  Distinct Positions: 373
+  Resistant Mutations: 88
+  Sensitive Mutations: 365
+  Discordant (Excluded from clean train): 10
+  Pre-2016 Mutations: 313
+  Post-2016 Mutations: 152
+
+Pair: UL30-Foscarnet
+  Total Distinct Mutations: 442
+  Distinct Positions: 358
+  Resistant Mutations: 55
+  Sensitive Mutations: 373
+  Discordant (Excluded from clean train): 12
+  Pre-2016 Mutations: 300
+  Post-2016 Mutations: 142
