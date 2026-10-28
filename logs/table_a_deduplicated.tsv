@@ -1,0 +1,27 @@
+Gene	Drug	Evaluation_Mode	Distinct_Mutations	Distinct_Positions	Resistant_Mutations	Resistant_Positions	Sensitive_Positions	HSV1_Res_Positions	HSV2_Res_Positions	Distinct_Literature_Sources	Audit_Tier
+UL23	Aciclovir	All_Inclusive	465	256	270	156	147	124	55	202	PASS (>=15 res pos) - Primary
+UL23	Aciclovir	Strict_Excluding_Conflicts	451	252	256	147	147	115	52	200	PASS (>=15 res pos) - Primary
+UL23	Foscarnet	All_Inclusive	189	153	9	8	146	7	2	60	FAIL (<15 res pos) - Secondary / Pooled
+UL23	Foscarnet	Strict_Excluding_Conflicts	189	153	9	8	146	7	2	60	FAIL (<15 res pos) - Secondary / Pooled
+UL23	Penciclovir	All_Inclusive	115	82	85	59	28	50	12	65	PASS (>=15 res pos) - Primary
+UL23	Penciclovir	Strict_Excluding_Conflicts	113	81	83	58	28	49	11	60	PASS (>=15 res pos) - Primary
+UL23	Brivudine	All_Inclusive	92	64	68	48	21	37	12	50	PASS (>=15 res pos) - Primary
+UL23	Brivudine	Strict_Excluding_Conflicts	92	64	68	48	21	37	12	50	PASS (>=15 res pos) - Primary
+UL30	Aciclovir	All_Inclusive	466	373	98	84	298	62	26	140	PASS (>=15 res pos) - Primary
+UL30	Aciclovir	Strict_Excluding_Conflicts	456	368	88	77	298	56	23	139	PASS (>=15 res pos) - Primary
+UL30	Foscarnet	All_Inclusive	442	358	67	57	308	38	21	136	PASS (>=15 res pos) - Primary
+UL30	Foscarnet	Strict_Excluding_Conflicts	430	352	55	50	308	31	20	133	PASS (>=15 res pos) - Primary
+UL30	Penciclovir	All_Inclusive	85	75	32	28	49	17	12	43	PASS (>=15 res pos) - Primary
+UL30	Penciclovir	Strict_Excluding_Conflicts	69	63	16	14	49	10	4	40	FAIL (<15 res pos) - Secondary / Pooled
+UL30	Cidofovir	All_Inclusive	123	112	23	22	93	18	5	68	PASS (>=15 res pos) - Primary
+UL30	Cidofovir	Strict_Excluding_Conflicts	112	102	12	11	93	11	1	65	FAIL (<15 res pos) - Secondary / Pooled
+UL5	Pritelivir	All_Inclusive	13	8	12	7	1	5	3	13	FAIL (<15 res pos) - Secondary / Pooled
+UL5	Pritelivir	Strict_Excluding_Conflicts	13	8	12	7	1	5	3	13	FAIL (<15 res pos) - Secondary / Pooled
+UL5	Amenamevir	All_Inclusive	17	8	13	4	4	3	2	5	FAIL (<5 res pos) - Relegated / Underpowered
+UL5	Amenamevir	Strict_Excluding_Conflicts	17	8	13	4	4	3	2	5	FAIL (<5 res pos) - Relegated / Underpowered
+UL52	Pritelivir	All_Inclusive	2	2	2	2	0	1	1	3	FAIL (<5 res pos) - Relegated / Underpowered
+UL52	Pritelivir	Strict_Excluding_Conflicts	2	2	2	2	0	1	1	3	FAIL (<5 res pos) - Relegated / Underpowered
+UL52	Amenamevir	All_Inclusive	7	5	4	3	3	3	0	3	FAIL (<5 res pos) - Relegated / Underpowered
+UL52	Amenamevir	Strict_Excluding_Conflicts	7	5	4	3	3	3	0	3	FAIL (<5 res pos) - Relegated / Underpowered
+UL29	Aciclovir	All_Inclusive	1	1	0	0	1	0	0	2	FAIL (<5 res pos) - Relegated / Underpowered
+UL29	Aciclovir	Strict_Excluding_Conflicts	1	1	0	0	1	0	0	2	FAIL (<5 res pos) - Relegated / Underpowered

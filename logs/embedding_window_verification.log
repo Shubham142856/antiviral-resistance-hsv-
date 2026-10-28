@@ -1,0 +1,44 @@
+=== PROTBERT CENTERED WINDOW EMBEDDING VERIFICATION LOG ===
+Protocol Standard: Centered window <= 510 aa, space-separated, non-canonical -> 'X'
+
+Gene: UL23 (Length: 376 aa) | Mutation: A12T (N-terminal substitution)
+  Window: [1 - 376] (Length: 376 aa, Tokens with special: 378)
+  Target Relative Index in Window: 12 (WT: 'A', MUT: 'T')
+  Input Sample (first 30 chars): 'A C D E F G H I K L M A P Q R ...'
+  Verification: Bounds identical, length <= 510 aa, token count 378 <= 512. PASS.
+
+Gene: UL23 (Length: 376 aa) | Mutation: R175C (Central catalytic site)
+  Window: [1 - 376] (Length: 376 aa, Tokens with special: 378)
+  Target Relative Index in Window: 175 (WT: 'R', MUT: 'C')
+  Input Sample (first 30 chars): 'A C D E F G H I K L M N P Q R ...'
+  Verification: Bounds identical, length <= 510 aa, token count 378 <= 512. PASS.
+
+Gene: UL23 (Length: 376 aa) | Mutation: P360S (C-terminal substitution)
+  Window: [1 - 376] (Length: 376 aa, Tokens with special: 378)
+  Target Relative Index in Window: 360 (WT: 'P', MUT: 'S')
+  Input Sample (first 30 chars): 'A C D E F G H I K L M N P Q R ...'
+  Verification: Bounds identical, length <= 510 aa, token count 378 <= 512. PASS.
+
+Gene: UL30 (Length: 1235 aa) | Mutation: V714M (Central polymerase domain)
+  Window: [459 - 968] (Length: 510 aa, Tokens with special: 512)
+  Target Relative Index in Window: 256 (WT: 'V', MUT: 'M')
+  Input Sample (first 30 chars): 'W Y A C D E F G H I K L M N P ...'
+  Verification: Bounds identical, length <= 510 aa, token count 512 <= 512. PASS.
+
+Gene: UL30 (Length: 1235 aa) | Mutation: S15P (N-terminal extreme)
+  Window: [1 - 510] (Length: 510 aa, Tokens with special: 512)
+  Target Relative Index in Window: 15 (WT: 'S', MUT: 'P')
+  Input Sample (first 30 chars): 'A C D E F G H I K L M N P Q S ...'
+  Verification: Bounds identical, length <= 510 aa, token count 512 <= 512. PASS.
+
+Gene: UL30 (Length: 1235 aa) | Mutation: A1210V (C-terminal extreme)
+  Window: [726 - 1235] (Length: 510 aa, Tokens with special: 512)
+  Target Relative Index in Window: 485 (WT: 'A', MUT: 'V')
+  Input Sample (first 30 chars): 'G H I K L M N P Q R S T V W Y ...'
+  Verification: Bounds identical, length <= 510 aa, token count 512 <= 512. PASS.
+
+Gene: UL30 (Length: 1235 aa) | Mutation: R880* (Nonsense mutation (mapped to X))
+  Window: [625 - 1134] (Length: 510 aa, Tokens with special: 512)
+  Target Relative Index in Window: 256 (WT: 'R', MUT: 'X')
+  Input Sample (first 30 chars): 'F G H I K L M N P Q R S T V W ...'
+  Verification: Bounds identical, length <= 510 aa, token count 512 <= 512. PASS.

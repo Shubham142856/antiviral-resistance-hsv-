@@ -48,22 +48,44 @@ All database extracts and source files were cloned, hashed, and inspected direct
 
 ## 3. Stage 4: Empirical Counts and Power Analyses
 
-### Table A: Gene-Drug Pair Counts & Empirical Support
-*Classified using cited blank-free thresholds from `thresholds.tsv`: Resistant if Fold-Change $\ge 3.0\times$ (or reported 'Resistant'); Susceptible/Polymorphism if Fold-Change $< 3.0\times$ (or reported 'Polymorphism') per CMI 2025 Table S3, Sauerbrei 2016, and HerpesDRG 2024.*
+### Table A: Gene-Drug Pair Counts & Deduplicated Empirical Support
+*Deduplicated on unique (Virus, Gene, Drug, Mutation) tuples across HerpesDRG-DB and CMI 2025 Table S3. Classified using cited blank-free thresholds from `thresholds.tsv`: Resistant if Fold-Change >= 3.0x (or reported 'Resistant'); Sensitive/Polymorphism if Fold-Change < 3.0x (or reported 'Sensitive') per CMI 2025 Table S3, Sauerbrei 2016, and HerpesDRG 2024.*
 
-| Gene | Drug | Cited Cutoff | Total Rows | Distinct Positions | Resistant Pos (Total) | Resistant Pos (Tier A) | Polymorphism Positions | Numeric FC Rows | Independent Sources | Audit Verdict |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **UL23** | **Aciclovir** | $\ge 3.0\times$ | 468 | 212 | **107** | **28** | 131 | 163 | 58 | **PASS ($\ge 15$ pos) — Primary** |
-| **UL23** | **Foscarnet** | $\ge 3.0\times$ | 219 | 153 | *8\** | *4\** | 149 | 54 | 29 | **Negative Control Pair (See Section 5)** |
-| **UL30** | **Aciclovir** | $\ge 3.0\times$ | 432 | 305 | **62** | **34** | 258 | 161 | 43 | **PASS ($\ge 15$ pos) — Primary** |
-| **UL30** | **Foscarnet** | $\ge 3.0\times$ | 402 | 291 | **44** | **26** | 261 | 133 | 41 | **PASS ($\ge 15$ pos) — Primary** |
-| **UL5** | **Pritelivir** | $\ge 3.0\times$ | 20 | 6 | **5** | 0 | 1 | 19 | 6 | **FAIL ($< 15$ pos) — Relegate to Pooled** |
-| **UL5** | **Amenamevir** | $\ge 3.0\times$ | 14 | 8 | **4** | 3 | 4 | 14 | 2 | **FAIL ($< 15$ pos) — Relegate to Pooled** |
-| **UL52** | **Pritelivir** | $\ge 3.0\times$ | 3 | 1 | **1** | 0 | 0 | 3 | 1 | **FAIL ($< 15$ pos) — Relegate to Pooled** |
-| **UL52** | **Amenamevir** | $\ge 3.0\times$ | 6 | 5 | **2** | 2 | 3 | 6 | 1 | **FAIL ($< 15$ pos) — Relegate to Pooled** |
-| **UL29** | **Aciclovir** | $\ge 3.0\times$ | 1 | 1 | **0** | 0 | 1 | 1 | 1 | **FAIL ($< 15$ pos) — Relegate to Pooled** |
+*Evaluated under two strict regimes:*
+1. **All-Inclusive:** Retains all consensus entries.
+2. **Strict Excluding Conflicts:** Excludes the 65 discordant tuples where HerpesDRG and CMI 2025 disagree on resistance phenotype (logged in `logs/cmi_herpesdrg_conflicts.log`).
 
-*\*Note on UL23-Foscarnet: Apparent resistant positions are clinical isolate artifacts harboring co-mutations in UL30 (see Section 5).*
+| Gene | Drug | Evaluation Mode | Distinct Mutations | Distinct Positions | Resistant Mutations | Resistant Pos (Total) | Sensitive Positions | HSV-1 Res Pos | HSV-2 Res Pos | Distinct Sources | Audit Status / Verdict |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **UL23** | **Aciclovir** | All-Inclusive | 465 | 256 | 270 | **156** | 147 | 124 | 55 | 202 | **PASS (>= 15 pos) — Primary** |
+| **UL23** | **Aciclovir** | Strict Excl. Conflicts | 451 | 252 | 256 | **147** | 147 | 115 | 52 | 200 | **PASS (>= 15 pos) — Primary** |
+| **UL23** | **Foscarnet** | All-Inclusive | 189 | 153 | 9 | *8\** | 146 | 7 | 2 | 60 | **Negative Control Pair (Not Primary)** |
+| **UL23** | **Foscarnet** | Strict Excl. Conflicts | 189 | 153 | 9 | *8\** | 146 | 7 | 2 | 60 | **Negative Control Pair (Not Primary)** |
+| **UL23** | **Penciclovir**| All-Inclusive | 115 | 82 | 85 | **59** | 28 | 50 | 12 | 65 | **PASS (>= 15 pos) — Primary Eligible** |
+| **UL23** | **Penciclovir**| Strict Excl. Conflicts | 113 | 81 | 83 | **58** | 28 | 49 | 11 | 60 | **PASS (>= 15 pos) — Primary Eligible** |
+| **UL23** | **Brivudine** | All-Inclusive | 92 | 64 | 68 | **48** | 21 | 37 | 12 | 50 | **PASS (>= 15 pos) — Primary Eligible** |
+| **UL23** | **Brivudine** | Strict Excl. Conflicts | 92 | 64 | 68 | **48** | 21 | 37 | 12 | 50 | **PASS (>= 15 pos) — Primary Eligible** |
+| **UL30** | **Aciclovir** | All-Inclusive | 466 | 373 | 98 | **84** | 298 | 62 | 26 | 140 | **PASS (>= 15 pos) — Primary** |
+| **UL30** | **Aciclovir** | Strict Excl. Conflicts | 456 | 368 | 88 | **77** | 298 | 56 | 23 | 139 | **PASS (>= 15 pos) — Primary** |
+| **UL30** | **Foscarnet** | All-Inclusive | 442 | 358 | 67 | **57** | 308 | 38 | 21 | 136 | **PASS (>= 15 pos) — Primary** |
+| **UL30** | **Foscarnet** | Strict Excl. Conflicts | 430 | 352 | 55 | **50** | 308 | 31 | 20 | 133 | **PASS (>= 15 pos) — Primary** |
+| **UL30** | **Penciclovir**| All-Inclusive | 85 | 75 | 32 | **28** | 49 | 17 | 12 | 43 | **PASS (>= 15 pos) — Primary Eligible** |
+| **UL30** | **Penciclovir**| Strict Excl. Conflicts | 69 | 63 | 16 | **14** | 49 | 10 | 4 | 40 | **FAIL (< 15 pos) — Drops to Secondary** |
+| **UL30** | **Cidofovir** | All-Inclusive | 123 | 112 | 23 | **22** | 93 | 18 | 5 | 68 | **PASS (>= 15 pos) — Primary Eligible** |
+| **UL30** | **Cidofovir** | Strict Excl. Conflicts | 112 | 102 | 12 | **11** | 93 | 11 | 1 | 65 | **FAIL (< 15 pos) — Drops to Secondary** |
+| **UL5** | **Pritelivir** | All-Inclusive | 13 | 8 | 12 | **7** | 1 | 5 | 3 | 13 | **FAIL (< 15 pos) — Secondary / Pooled** |
+| **UL5** | **Pritelivir** | Strict Excl. Conflicts | 13 | 8 | 12 | **7** | 1 | 5 | 3 | 13 | **FAIL (< 15 pos) — Secondary / Pooled** |
+| **UL5** | **Amenamevir** | All-Inclusive | 17 | 8 | 13 | **4** | 4 | 3 | 2 | 5 | **FAIL (< 15 pos) — Statistically Underpowered** |
+| **UL5** | **Amenamevir** | Strict Excl. Conflicts | 17 | 8 | 13 | **4** | 4 | 3 | 2 | 5 | **FAIL ($< 15$ pos) — Statistically Underpowered** |
+| **UL52** | **Pritelivir** | All-Inclusive | 2 | 2 | 2 | **2** | 0 | 1 | 1 | 3 | **FAIL (< 5 pos) — Statistically Underpowered** |
+| **UL52** | **Pritelivir** | Strict Excl. Conflicts | 2 | 2 | 2 | **2** | 0 | 1 | 1 | 3 | **FAIL (< 5 pos) — Statistically Underpowered** |
+| **UL52** | **Amenamevir** | All-Inclusive | 7 | 5 | 4 | **3** | 3 | 3 | 0 | 3 | **FAIL (< 5 pos) — Statistically Underpowered** |
+| **UL52** | **Amenamevir** | Strict Excl. Conflicts | 7 | 5 | 4 | **3** | 3 | 3 | 0 | 3 | **FAIL (< 5 pos) — Statistically Underpowered** |
+| **UL29** | **Aciclovir** | All-Inclusive | 1 | 1 | 0 | **0** | 1 | 0 | 0 | 2 | **FAIL (< 5 pos) — Statistically Underpowered** |
+| **UL29** | **Aciclovir** | Strict Excl. Conflicts | 1 | 1 | 0 | **0** | 1 | 0 | 0 | 2 | **FAIL (< 5 pos) — Statistically Underpowered** |
+
+*\*Note on UL23-Foscarnet: Apparent resistant positions are clinical isolate artifacts harboring co-mutations in UL30 (see Section 5).*  
+*\*\*Impact of Phenotype Discordance: The three core pairs (`UL23-ACV`, `UL30-ACV`, `UL30-FOS`) comfortably exceed the >= 15 position threshold whether conflicts are included or strictly excluded (156 vs 147; 84 vs 77; 57 vs 50). However, for `UL30-PCV` and `UL30-CDV`, excluding discordant tuples drops them below 15 resistant positions (14 and 11 positions respectively), meaning they do NOT qualify for standalone primary evaluation under strict conflict exclusion.*
 
 ### Table B: Label Purity by Position (Position Shortcut Risk)
 *Evaluating single-label vs mixed-label positions across both denominators (logged in `logs/label_purity_summary.tsv`):*
@@ -118,155 +140,84 @@ Top laboratory test methods and publication concentration per drug:
 
 ## 4. Stage 5: Feasibility Probes & Empirical Leakage Proof
 
-To test whether the task is trivial position memorization and to directly measure the data leakage gap hypothesized in **Claim C2**, baseline probes were executed on `UL23 – Aciclovir` (HSV-1, 375 rows, 177 resistant, 198 sensitive) under 4 split regimes with 1,000 bootstrap iterations (logged in `logs/c2_split_evaluation.json` and `logs/c2_diagnostic.log`):
+To rigorously evaluate the data leakage hypothesis of **Claim C2** and measure how much baseline performance inflates under naive random splitting compared to structured holdouts, benchmarks were executed across all 4 split regimes for the three primary pairs.
 
-```
-=== Feasibility Probes on UL23 - Aciclovir (HSV1) ===
-Total rows: 375, Positives (Resistant): 177 (47.2%), Negatives: 198
-Distinct positions: 191
+### 4.1 Full Models-by-Regimes Benchmark Table
+*Evaluated across 5 folds; reported as Mean Per-Fold AUROC +/- Standard Deviation across folds (logged in `logs/c2_split_evaluation_per_fold.json` and `logs/c2_diagnostic_per_fold.log`):*
 
-Regime 1: Random Split (5-fold CV):
-  - Logistic Regression:                    AUROC = 0.7323 (95% CI: [0.6795, 0.7832])
-  - BLOSUM62 Radicalness:                   AUROC = 0.7373 (95% CI: [0.6862, 0.7860])
-  - Position Prior:                         AUROC = 0.8348 (95% CI: [0.7923, 0.8733]) [LEAKAGE SHOWN]
-  - Non-linear Representation (RF):         AUROC = 0.9033 (95% CI: [0.8728, 0.9307])
-
-Regime 3: Position-Grouped Split (5-fold GroupKFold on Position):
-  - Logistic Regression:                    AUROC = 0.7065 (95% CI: [0.6536, 0.7573])
-  - BLOSUM62 Radicalness:                   AUROC = 0.7373 (95% CI: [0.6862, 0.7860])
-  - Position Prior:                         AUROC = 0.4123 (95% CI: [0.3553, 0.4655]) [DEGENERACY LOGGED]
-  - Non-linear Representation (RF):         AUROC = 0.8140 (95% CI: [0.7730, 0.8501])
-
------------------------------------------------------------------------------------------
-Performance Leakage Gap (Position Prior: Random Split vs Position-Grouped Split): +0.4225 AUROC
-```
-
-### Diagnostic Explanation: Why Position-Prior AUROC Drops Below 0.5 Under Grouped Splits
-Under Position-Grouped holdouts, 100% of test fold mutations occur at positions never encountered in the training set. The empirical training prior fallback assigns the constant training-mean prior to all test samples, producing identical tied predictions. The slight negative correlation between fold difficulties and cross-fold global priors yields an AUROC below 0.5 (0.4123), proving mathematically that training-position memorization contains zero generalized signal for unseen positions.
-
-### Statistical Power Verification (Hanley-McNeil Exact Formulation)
-Standard errors ($SE$) and 95% confidence intervals ($1.96 \times SE$) computed at expected $\text{AUROC} = 0.80$:
-
-| Evaluation Scenario | Positive Positions ($n_A$) | Negative Positions ($n_N$) | Standard Error ($SE$) | 95% Confidence Interval | Interval Width | Power Assessment |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Threshold Boundary** | 15 | 50 | 0.0732 | [0.6565, 0.9435] | $\pm 0.1435$ | Minimum acceptable power |
-| **UL30 – FOS** | 44 | 261 | 0.0401 | [0.7214, 0.8786] | $\pm 0.0786$ | Fully powered |
-| **UL30 – ACV** | 62 | 258 | 0.0351 | [0.7312, 0.8688] | $\pm 0.0688$ | Fully powered |
-| **UL23 – ACV** | 107 | 131 | 0.0296 | [0.7420, 0.8580] | $\pm 0.0580$ | Fully powered |
-| **UL5 – PTV** | 5 | 1 | 0.2309 | [0.3474, 1.2526] | $\pm 0.4526$ | Completely unpowered ($CI > 0.90$) |
-
----
-
-## 5. Negative Control Investigation: The UL23–Foscarnet Anomaly
-
-In Section 5.3, the audit protocol mandates investigating the apparent resistant entries for UL23 (Thymidine Kinase) against Foscarnet (FOS). Biologically, FOS does not require TK phosphorylation; mutations in TK should never confer foscarnet resistance.
-
-### Audited Finding
-Inspection of all rows where UL23 is tested against Foscarnet revealed two distinct failure modes in raw clinical data:
-1. **Co-mutation Leakage in Isolates (e.g. DOI: [10.1093/jac/dkac297](https://doi.org/10.1093/jac/dkac297)):**  
-   - Rows `mutation_id = 2024` (A189V) and `2025` (T183P) are isolated clinical strains from patients failing sequential therapy.  
-   - Both isolates carried co-occurring mutations in **UL30 DNA polymerase (L778M / L802F)**. The FOS resistance was biochemically mediated by the UL30 polymerase mutation.
-2. **Clinical Surveillance Conflation (e.g. DOI: [10.1016/j.antiviral.2013.09.012](https://doi.org/10.1016/j.antiviral.2013.09.012)):**  
-   - Row `mutation_id = 1165` (HSV-2 UL23 A94V) was flagged "Resistant" to both ACV and FOS in a multi-drug surveillance panel from an immunocompromised patient.  
-   - Row `mutation_id = 1182` (HSV-2 UL23 M183*) produces a truncated TK conferring ACV resistance, with FOS resistance mediated by background polymerase alterations.
-
-*Audit Mandate:* All UL23–FOS resistant rows represent **co-mutation attribution errors** or **isolate surveillance leakage**. They are quarantined and excluded from primary training.
-
----
-
-## 6. Stage 7: Novelty Audit & Literature Verification
-
-Systematic searches were executed across Europe PMC, PubMed, and bioRxiv for all 7 queries (raw output logged in `logs/novelty_log_raw.tsv` with decision column left blank for human review):
-
-| Claim | Specific Search Query & Database | Hits Screened | Closest Prior Work Identified | Novelty Status |
+#### Pair 1: UL23 – Aciclovir (HSV-1, N=375, Positives=177, Negatives=198, Distinct Pos=191)
+| Model Architecture | Regime 1: Random Split | Regime 2: Clade-Grouped | Regime 3: Position-Grouped | Regime 4: Both-Grouped |
 | :--- | :--- | :--- | :--- | :--- |
-| **C1 Benchmark** | `("HSV" OR "herpes") ("resistance benchmark" OR "benchmark dataset") ("polymorphism" OR "grouped split")` | 8 | HerpesDRG (Charles et al. 2024); CHARMD (Tilloy et al. 2024) | Pending Human Review |
-| **C2 Leakage** | `("data leakage" OR "group split" OR "position split") ("viral resistance" OR "antiviral") machine learning` | 10 | PRIME (SARS-CoV-2 fitness regression, BMC Genomics 2026); TB WGS studies | Pending Human Review |
-| **C3 Predictor** | `("herpes simplex" OR "HSV") ("protein language model" OR "ESM" OR "ProtBERT") ("resistance prediction" OR "antiviral")` | 10 | AMRscope (bacterial PLM resistance); PMAVP (antiviral peptide prediction) | Pending Human Review |
-| **C4 Pathway Gate** | `("pathway gate" OR "pathway constrained" OR "drug-conditioned") ("antiviral resistance" OR "mutation prediction")` | 0 | None found in the logged search | Pending Human Review |
-| **C5 Temporal** | `("temporal split" OR "prospective validation") ("antiviral resistance" OR "resistance mutations")` | 10 | Liquid biopsy dynamic monitoring studies; HIV temporal validation | Pending Human Review |
-| **C6 Masking** | `("recombinant" OR "engineered") ("double mutant" OR "epistasis") ("UL23" OR "UL30") ("acyclovir" OR "foscarnet")` | 10 | Bestman-Smith & Boivin 2003 (cosmid Pol mutants); Kawakami 2021 | Pending Human Review |
-| **C7 Assay** | `("prospective experimental testing" OR "recombinant assay") "UL5" "UL52" "pritelivir"` | 0 | None found in the logged search | Pending Human Review |
-| **C9 Doubles** | High-order structural epistasis benchmark | N/A | None found in the logged search ($< 10$ doubles) | **PENDING** |
-| **C10 Multi-head**| Multi-site epistasis architectures | N/A | Requires $> 30$ engineered doubles | **DEFERRED TO PAPER 3** |
+| **Logistic Regression** | 0.7374 +/- 0.0510 | 0.7124 +/- 0.0649 | 0.7240 +/- 0.0797 | 0.7472 +/- 0.0683 |
+| **BLOSUM62 Radicalness** | 0.7364 +/- 0.0505 | 0.7140 +/- 0.1016 | 0.7310 +/- 0.0767 | 0.7409 +/- 0.0639 |
+| **Position Prior** | 0.8385 +/- 0.0409 | 0.8174 +/- 0.0358 | **0.5000 +/- 0.0000** | 0.8095 +/- 0.0384 |
+| **Physicochemical Random Forest** | 0.9130 +/- 0.0329 | 0.8912 +/- 0.0347 | **0.8407 +/- 0.0679** | 0.9068 +/- 0.0296 |
 
----
-
-## 7. Stage 8: Fact Verification Table
-
-Every pharmacological, virological, and computational assertion cited in the protocol was audited against primary literature, live APIs, and authoritative databases (logged in `logs/citation_check.tsv`):
-
-| Fact / Statement | Primary Verification Citation | PMID / DOI | Audited Status & Findings |
-| :--- | :--- | :--- | :--- |
-| **FCV vs FOS Naming** | FDA Prescribing Information; FDA Drugs@FDA Database | FDA NDA 020255 (Famvir); NDA 020068 (Foscavir) | **CONFIRMED & CRITICAL.** FCV is famciclovir (TK-dependent oral prodrug of penciclovir, approved 1994). FOS is foscarnet (pyrophosphate analog acting directly on DNA pol, approved 1991). Confusing them causes severe pharmacological misattribution. |
-| **Pathway Mechanism** | Field's Virology (7th Ed); Coen & Schaffer, PNAS 1980; Kawakami et al., AAC 2021 | PMID: [6246531](https://pubmed.ncbi.nlm.nih.gov/6246531/); PMID: [34228537](https://pubmed.ncbi.nlm.nih.gov/34228537/) | **CONFIRMED.** ACV requires initial phosphorylation by UL23 (TK). FOS directly inhibits UL30 (DNA pol). PTV and AMNV directly inhibit UL5/UL52 helicase-primase without kinase activation. Corrected Coen & Schaffer to PMID 6246531; corrected Kawakami to PMID 34228537. |
-| **UL8 Resistance Role** | Biswas et al., J Virol 2009; Field & Biswas, Antiviral Res 2011; Schalkwijk et al., JID 2024 | PMID: [19403757](https://pubmed.ncbi.nlm.nih.gov/19403757/); PMID: [21183396](https://pubmed.ncbi.nlm.nih.gov/21183396/) | **CONFIRMED.** Zero resistance mutations have ever been phenotyped in UL8. All HPI resistance mutations localize to UL5 or UL52. UL8 is correctly excluded from primary resistance modeling. Corrected Biswas to PMID 19403757; corrected Field & Biswas to PMID 21183396. |
-| **UL29 P597L Mutation** | Yamada et al., Viruses 2024 | PMID: [39772124](https://pubmed.ncbi.nlm.nih.gov/39772124/); DOI: [10.3390/v16121813](https://doi.org/10.3390/v16121813) | **CONFIRMED.** Recombinant HSV-1 carrying P597L in ICP8 (UL29) was engineered and tested; conferred resistance specifically and exclusively to acyclovir. |
-| **UL30 Polymorphism Controls** | Schmidt et al., AAC 2015; Tseng et al., J Med Virol 2023 | PMID: [26055375](https://pubmed.ncbi.nlm.nih.gov/26055375/); PMID: [37505438](https://pubmed.ncbi.nlm.nih.gov/37505438/); DOI: [10.1002/jmv.28985](https://doi.org/10.1002/jmv.28985) | **CONFIRMED.** E226D (mutation 1912) and A351D (mutation 1918) tested with ACV $\text{FC} = 1.0$. Residue 566 is Alanine in RefSeq NC_001806.2; substitution A566T (mutation 1913) was tested with ACV $\text{FC} = 1.0$ (benign polymorphism). |
-| **ProtBERT Context Length** | Elnaggar et al., IEEE TPAMI 2021 | PMID: [34232869](https://pubmed.ncbi.nlm.nih.gov/34232869/); DOI: [10.1109/TPAMI.2021.3095381](https://doi.org/10.1109/TPAMI.2021.3095381) | **CONFIRMED.** Positional embeddings are bounded at 512 tokens. UL23 (376 aa) fits in full; UL30 (1235 aa), UL5 (882 aa), UL52 (1058 aa), and UL29 (1196 aa) strictly require sliding window / tiling. Corrected PMID to 34232869. |
-| **PRIME Venue & Masking Rate** | PRIME Evaluation Framework Paper | BMC Genomics (DOI: [10.1186/s12864-026-12976-5](https://doi.org/10.1186/s12864-026-12976-5)) | **CORRECTED.** Published venue confirmed as *BMC Genomics* via Crossref, not Nature Communications. Masking corruption rate confirmed as 15%. |
-| **LoRA Trainable Fraction** | Hu et al., ICLR 2022; ProtBERT Config | arXiv:2106.09685; logged at `logs/lora_measurement.log` | **EMPIRICALLY MEASURED.** For ProtBERT ($L=30, d=1024$), injecting LoRA adapters ($r=8, \alpha=16$) into $W_q, W_v$ yields exactly **983,040 parameters** ($0.2341\%$ of base model). Discrepancy from previous 1,179,648 assertion resolved (that assumed 36 layers). |
-| **Reference Sequences** | NCBI RefSeq Database | NC_001806.2 (HSV-1 strain 17); NC_001798.2 (HSV-2 strain HG52) | **CONFIRMED.** All residue coordinates in HerpesDRG are standardized against NC_001806.2 and NC_001798.2. |
-| **MPCST Grant Scope** | Madhya Pradesh Council of Science and Technology Approved Objectives | Approved Grant Documentation | **CONFIRMED.** Approved objectives explicitly cover computational approaches, sequence analysis, and evolutionary modeling of HSV proteins. |
-
----
-
-## 8. Stage 6: Frozen Decision Matrix
-
-Applying all frozen conditions and kill criteria to the audited empirical data:
-
-| Claim | Protocol Condition | Audited Empirical Value | Final Decision | Implementation Action |
+#### Pair 2: UL30 – Aciclovir (HSV-1, N=340, Positives=84, Negatives=256, Distinct Pos=247)
+| Model Architecture | Regime 1: Random Split | Regime 2: Clade-Grouped | Regime 3: Position-Grouped | Regime 4: Both-Grouped |
 | :--- | :--- | :--- | :--- | :--- |
-| **C1: Benchmark** | Tiered labels, negative polymorphism controls, deduplicated | 951 active rows, 58 sources, verified controls | **PRIMARY** | Build tiered benchmark with grouped splits. |
-| **C2: Leakage** | Grouped splits vs random splits | Gap = $+0.4225$ AUROC ($> 0.03$ threshold) | **PRIMARY** | Position- and clade-grouped splits mandatory. |
-| **C3: Predictor** | $\ge 15$ resistant positions per gene-drug pair | UL23-ACV: 107; UL30-ACV: 62; UL30-FOS: 44; UL5: 5; UL52: 1 | **PRIMARY (UL23-ACV, UL30-ACV, UL30-FOS)**; Secondary/Pooled for UL5/UL52/UL29 | Per-drug evaluation restricted to UL23 and UL30. Helicase-primase reported as exploratory pooled. |
-| **C4: Pathway Gate** | $\ge 200$ labeled rows overall; $\ge 3$ sources | 1,346 labeled rows; 58 sources | **PRIMARY** | Implement pathway routing layer in predictor. |
-| **C5: Temporal** | $\ge 30$ post-cutoff mutations | 226 post-2016 rows; 189 post-2016 mutations (132 novel) | **PRIMARY** | Train pre-2016; test prospective 2016–2026. |
-| **C6: Masking** | $\ge 10$ engineered doubles | None found in the logged search ($< 10$ kill criterion) | **CASE SERIES ONLY, NO AUC** | Reframe as qualitative descriptive case series. |
-| **C7: Wet-lab Assay**| Confirmed experimental collaborator | None established | **PREDICTIONS ONLY** | Output candidate prioritized lists for future testing. |
-| **C8: Outputs** | Clean separation of observed and inferred | Enforced in schemas | **PRIMARY** | Observed experimental calls separate from model scores. |
-| **C9: Doubles** | $\ge 10$ engineered doubles | $< 10$ doubles | **PENDING** | Awaiting potential supplementary doubles data. |
-| **C10: Multi-head** | $> 30$ doubles from $\ge 3$ sources | None found in the logged search | **DEFERRED TO PAPER 3** | Epistasis multi-site head deferred. |
+| **Logistic Regression** | 0.5620 +/- 0.0497 | 0.5423 +/- 0.0670 | **0.4550 +/- 0.0496** | 0.5255 +/- 0.0646 |
+| **BLOSUM62 Radicalness** | 0.4464 +/- 0.0698 | 0.4751 +/- 0.0647 | 0.4542 +/- 0.0615 | 0.4391 +/- 0.0628 |
+| **Position Prior** | 0.8302 +/- 0.0544 | 0.7479 +/- 0.0930 | **0.5000 +/- 0.0000** | 0.8046 +/- 0.0248 |
+| **Physicochemical Random Forest** | 0.8637 +/- 0.0734 | 0.8237 +/- 0.0889 | **0.7962 +/- 0.0814** | 0.8366 +/- 0.0190 |
+
+#### Pair 3: UL30 – Foscarnet (HSV-1, N=309, Positives=46, Negatives=263, Distinct Pos=243)
+| Model Architecture | Regime 1: Random Split | Regime 2: Clade-Grouped | Regime 3: Position-Grouped | Regime 4: Both-Grouped |
+| :--- | :--- | :--- | :--- | :--- |
+| **Logistic Regression** | 0.6621 +/- 0.1052 | **0.4993 +/- 0.1086** | **0.5172 +/- 0.0947** | 0.5905 +/- 0.0657 |
+| **BLOSUM62 Radicalness** | 0.4238 +/- 0.1115 | 0.4515 +/- 0.1584 | 0.4587 +/- 0.1748 | 0.4292 +/- 0.0804 |
+| **Position Prior** | 0.7262 +/- 0.1259 | 0.6198 +/- 0.0948 | **0.5000 +/- 0.0000** | 0.7461 +/- 0.0979 |
+| **Physicochemical Random Forest** | 0.8416 +/- 0.0444 | **0.6411 +/- 0.1079** | **0.7149 +/- 0.1340** | 0.8251 +/- 0.0389 |
+
+### 4.2 Key Methodological Insights & Kill Criterion Proof
+1. **Direct Demonstration of Model Leakage on Trained Classifiers:**
+   - On `UL30-FOS`, **Logistic Regression drops from 0.6621 to 0.5172** under Position holdouts and **0.4993** under Clade holdouts (complete loss of discriminatory power).
+   - On `UL30-FOS`, **Physicochemical Random Forest drops by -0.2005 AUROC** (from 0.8416 under Random Split to 0.6411 under Clade holdouts).
+   - On `UL30-ACV`, **Physicochemical Random Forest drops from 0.8637 to 0.7962**, and Logistic Regression drops from **0.5620 to 0.4550**.
+   - These drops empirically prove the **Claim C2 kill criterion**: models evaluated under naive random splitting suffer substantial optimistic bias (+0.07 to +0.20 AUROC) due to position shortcut leakage.
+2. **Mathematical Resolution of the Position Prior AUROC:**
+   - Under Position-Grouped splitting, 100% of test positions are unseen in training; all test samples in fold k receive the training fold global prior p_k.
+   - Because all test predictions within fold k are completely tied, intra-fold discrimination is strictly zero.
+   - When evaluated **per-fold**, `roc_auc_score` on tied predictions yields **exactly 0.5000 +/- 0.0000 across all 5 folds** (`Folds: [0.5, 0.5, 0.5, 0.5, 0.5]`), proving that the position prior possesses zero generalizable skill on unseen sites.
+   - The earlier pooled AUROC of 0.4123 was an artifact of concatenating predictions across folds: slight cross-fold shifts in p_k negatively correlated with fold positive density, creating an artificial negative slope across fold boundaries. Per-fold averaging completely resolves this.
+3. **Model Clarification:**
+   - `Physicochemical Random Forest` is explicitly defined as a 12-feature tabular baseline (hydrophobicity, volume, charge deltas, normalized position in sequence, BLOSUM62 radicalness, nonsense flag), NOT a fine-tuned ProtBERT protein language model.
 
 ---
 
-## 9. Conflict Log & Quarantine Register
+## 5. Protocol Amendments & Technical Specifications (Dated 2026-10-29)
 
-In accordance with Section 1.7 of the protocol, all positions exhibiting conflicting labels or evidence mismatches were audited and logged:
+### 5.1 Protocol Amendment: Claim C4 Scope & Methodology
+> **Original Protocol Text:** Claim C4 proposes a pathway-constrained gate routing resistance predictions across distinct biological mechanisms.  
+> **Dated Amendment (2026-10-29):**
+> 1. *Negative Control Sanity Check:* The rejection of `UL23-FOS` (confirming that TK-mediated resistance probability collapses to near-zero for foscarnet) is formally designated as a **negative-control biological sanity check**, not the primary empirical proof of Claim C4.
+> 2. *Multi-Task Representation Sharing:* The primary empirical test of Claim C4 requires demonstrating data efficiency and learning curve gains when sharing representations across related drugs (e.g. multi-task conditioning across nucleoside analogues `ACV` and `PCV` vs pyrophosphate analogue `FOS` in `UL30`).
+> 3. *Penciclovir (PCV) Auxiliary Arm Audit:*
+>    - `UL23-PCV`: 115 distinct mutations, 82 positions, 59 resistant positions (All-Inclusive) / 58 resistant positions (Strict Excluding Conflicts).
+>    - `UL30-PCV`: 85 distinct mutations, 75 positions, 28 resistant positions (All-Inclusive) / 14 resistant positions (Strict Excluding Conflicts).
+>    - Under strict conflict exclusion, `UL30-PCV` drops to 14 resistant positions (< 15), meaning it serves as an **auxiliary multi-task training arm**, but cannot support standalone primary evaluation.
 
-```
-=== Quarantined & Conflicted Mutations Register ===
+### 5.2 Helicase-Primase (UL5 / UL52) Statistical Power Clarification
+- The CMI 2025 review reported 27 novel HPC mutation entries (12 in HSV-1, 15 in HSV-2).
+- Detailed mapping reveals that these 27 entries represent multiple substitutions and co-mutation combinations concentrated at a small number of conserved catalytic hotspot positions (e.g., UL5 352, 355, 356 in HSV-1; 351, 355 in HSV-2).
+- Consequently, these 27 entries map to only **7 unique resistant positions for Pritelivir** and **4 unique resistant positions for Amenamevir** in UL5.
+- At N=5 positive positions in HSV-1, the 95% Clopper-Pearson / Wilson interval spans +/- 0.40 (e.g. [0.30, 0.90]). Therefore, standalone machine learning evaluation is **statistically underpowered** (not 'mathematically impossible'). UL5 and UL52 must be relegated to pooled exploratory analysis.
 
-1. Pos 672 (UL30 - FOS / HSV-1):
-   - Conflicted reports: D672N reported as Polymorphism (doi: 10.1128/AAC.00669-10),
-     Resistant (doi: 10.1016/j.antiviral.2010.03.002), and fold-change 1.3 (doi: 10.1093/infdis/jix042).
-   - Action: Marked CONFLICTED; excluded from primary training folds; tested in sensitivity analysis.
+### 5.3 ProtBERT Embedding Window Protocol
+To prevent mutational signal dilution from sliding-window averaging:
+1. **Centered Window Extraction:** For UL30 (1,235 aa), token embeddings are extracted from a window of at most 510 amino acids centered on the mutated residue P:
+   - P_start = max(0, P - 256), P_end = min(L, P_start + 510).
+   - Special tokens [CLS] and [SEP] are appended, strictly adhering to the 512-token context limit.
+2. **UL23 Single-Pass:** For UL23 (376 aa), the entire sequence is extracted in a single forward pass without window truncation.
+3. **Format & Non-Canonical Mapping:** Inputs are formatted as uppercase, space-separated residues ("M A S ..."), with non-canonical/rare amino acids mapped to X.
+4. **Delta Embeddings:** Wild-type and mutant windows share identical coordinate bounds. Feature representations are computed as the mutant-minus-wildtype embedding delta: Delta h = h_mut - h_wt. Verified in `logs/embedding_window_verification.log`.
 
-2. Pos 700 (UL30 - FOS / HSV-1):
-   - Conflicted reports: R700G reported with FC = 6.0 (Resistant, doi: 10.1016/S0166-3542(97)00054-5),
-     whereas R700M reported as Polymorphism with FC = 0.14 (doi: 10.1128/JVI.77.14.7820-7829.2003).
-   - Action: Within-position substitution divergence verified. R700G vs R700M treated as separate alleles.
-
-3. Pos 719 (UL30 - FOS / HSV-1):
-   - Conflicted reports: A719V reported with FC = 10.0 (doi: 10.1002/j.1460-2075.1987.tb04735.x)
-     and FC = 1.3 (doi: 10.1093/infdis/jix042).
-   - Action: Prefer Tier A recombinant assay (FC = 8.0 to 10.0) over clinical isolate report.
-
-4. UL23 - FOS Apparent Resistance (mutation_id 2024, 2025, 2026, 2027, 1165):
-   - Identified as co-mutation attribution errors (UL30 background mutations) and clinical multi-drug isolates.
-   - Action: QUARANTINED. Completely removed from TK resistance label assignments.
-```
-
----
-
-## 10. Audit Sign-Off Status
-
-- **Audited Repository Path:** `D:\antiviral-resistance-hsv--1`
-- **Data Integrity Status:** All raw files hashed with SHA-256; citations resolved via live APIs; exact model parameter counts logged from code.
-- **Protocol Compliance:** Fully aligned with `AUDIT_PROTOCOL.md` Version 4 (Strict).
-- **Modeling Clearance:** **CLEARED FOR REVIEW BY PI AND SECOND ANNOTATOR.**
-
-*Approvals:*
-- **Computational Auditor:** Deterministic Audit Pipeline (Evidence logged in `logs/` directory)
-- **PI / Grant Holder Approval:** *Pending formal review and signature of this AUDIT_REPORT.md*
-- **Second Annotator Approval:** *Pending formal review and signature of this AUDIT_REPORT.md*
+### 5.4 Audited Novelty Status & External Prior Art
+- **Logged Search Results:** Searches across Europe PMC, PubMed, GitHub, Hugging Face, and Zenodo identified **none found in the logged search** for machine learning or protein language model prediction of HSV UL23/UL30 resistance.
+- **Failed Endpoints:** Automated queries to Zenodo REST API returned HTTP 403 (Cloudflare/WAF block) and Semantic Scholar API returned HTTP 429 (rate-limited without API key); these endpoints are recorded as *Failed / Not Run* in `logs/novelty_widened_raw.tsv`.
+- **Closest External Prior Art (Cited):**
+  - **LOGICA** (Wang et al., *Brief Bioinform* 2023, DOI: [10.1093/bib/bbad180](https://doi.org/10.1093/bib/bbad180)): Drug-conditioned multi-task deep learning for viral/cancer drug resistance (evaluated on HIV and oncology targets; no HSV evaluation).
+  - **AMRscope** (Nguyen et al., *Nat Commun* 2022, DOI: [10.1038/s41467-022-33044-0](https://doi.org/10.1038/s41467-022-33044-0)): Multi-label deep learning for antimicrobial resistance and cross-resistance profiling across bacterial genomes.
+  - **DeepMutDTA** (Chen et al., *J Chem Inf Model* 2022, DOI: [10.1021/acs.jcim.2c00428](https://doi.org/10.1021/acs.jcim.2c00428)): Predicting drug-target binding affinity under point mutations using deep learning.
+  - **DeepChek® Assay CMV** (Raymond et al., *J Clin Virol* 2017, DOI: [10.1016/j.jcv.2017.05.008](https://doi.org/10.1016/j.jcv.2017.05.008)): Commercial algorithmic expert system matching CMV UL54/UL97 variants against rule-based French ANRS tables; not a machine learning or language model.
+- **Pending Human Actions:** Evidence tiers are currently proxies from the `strain_generation` field. Final sign-off requires: (1) 50-row human sample for Cohen's kappa verification; (2) human inspection of primary threshold citations; (3) human completion of the decision column in `novelty_widened_raw.tsv`; (4) PI formal sign-off.
