@@ -1,0 +1,109 @@
+=== Claim C2 Data Leakage & Split Evaluation: Per-Fold vs Pooled Analysis ===
+Audit Requirement: Compute AUROC per fold and average it; clarify model definitions.
+
+================================================================================
+Pair: UL23-Aciclovir (N=375, Positives=177, Negatives=198)
+================================================================================
+
+--- Regime 1: Random Split ---
+  Logistic Regression            Mean Per-Fold = 0.7374 +/- 0.0510 (Folds: [0.825, 0.735, 0.676, 0.75, 0.701]) | Pooled = 0.7323
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.7364 +/- 0.0505 (Folds: [0.831, 0.714, 0.68, 0.721, 0.736]) | Pooled = 0.7373
+  Position Prior                 Mean Per-Fold = 0.8385 +/- 0.0409 (Folds: [0.794, 0.869, 0.791, 0.845, 0.894]) | Pooled = 0.8348
+  Physicochemical Random Forest  Mean Per-Fold = 0.9130 +/- 0.0329 (Folds: [0.922, 0.961, 0.858, 0.911, 0.912]) | Pooled = 0.9033
+
+--- Regime 2: Clade/Strain-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.7124 +/- 0.0649 (Folds: [0.752, 0.772, 0.597, 0.756, 0.685]) | Pooled = 0.7122
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.7140 +/- 0.1016 (Folds: [0.729, 0.768, 0.517, 0.753, 0.803]) | Pooled = 0.7373
+  Position Prior                 Mean Per-Fold = 0.8174 +/- 0.0358 (Folds: [0.821, 0.822, 0.765, 0.876, 0.802]) | Pooled = 0.8028
+  Physicochemical Random Forest  Mean Per-Fold = 0.8912 +/- 0.0347 (Folds: [0.911, 0.877, 0.852, 0.949, 0.868]) | Pooled = 0.8894
+
+--- Regime 3: Position-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.7240 +/- 0.0797 (Folds: [0.823, 0.798, 0.634, 0.732, 0.633]) | Pooled = 0.7065
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.7310 +/- 0.0767 (Folds: [0.857, 0.766, 0.628, 0.695, 0.709]) | Pooled = 0.7373
+  Position Prior                 Mean Per-Fold = 0.5000 +/- 0.0000 (Folds: [0.5, 0.5, 0.5, 0.5, 0.5]) | Pooled = 0.4123
+  Physicochemical Random Forest  Mean Per-Fold = 0.8407 +/- 0.0679 (Folds: [0.919, 0.867, 0.83, 0.871, 0.717]) | Pooled = 0.8140
+
+--- Regime 4: Both-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.7472 +/- 0.0683 (Folds: [0.813, 0.794, 0.652, 0.677, 0.801]) | Pooled = 0.7395
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.7409 +/- 0.0639 (Folds: [0.769, 0.804, 0.626, 0.72, 0.786]) | Pooled = 0.7373
+  Position Prior                 Mean Per-Fold = 0.8095 +/- 0.0384 (Folds: [0.776, 0.812, 0.876, 0.767, 0.816]) | Pooled = 0.8010
+  Physicochemical Random Forest  Mean Per-Fold = 0.9068 +/- 0.0296 (Folds: [0.93, 0.947, 0.868, 0.908, 0.88]) | Pooled = 0.9015
+================================================================================
+Pair: UL30-Aciclovir (N=340, Positives=84, Negatives=256)
+================================================================================
+
+--- Regime 1: Random Split ---
+  Logistic Regression            Mean Per-Fold = 0.5620 +/- 0.0497 (Folds: [0.566, 0.633, 0.478, 0.578, 0.555]) | Pooled = 0.5565
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4464 +/- 0.0698 (Folds: [0.49, 0.429, 0.536, 0.327, 0.45]) | Pooled = 0.4460
+  Position Prior                 Mean Per-Fold = 0.8302 +/- 0.0544 (Folds: [0.882, 0.903, 0.818, 0.786, 0.762]) | Pooled = 0.7937
+  Physicochemical Random Forest  Mean Per-Fold = 0.8637 +/- 0.0734 (Folds: [0.908, 0.958, 0.883, 0.825, 0.744]) | Pooled = 0.8557
+
+--- Regime 2: Clade/Strain-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.5423 +/- 0.0670 (Folds: [0.474, 0.669, 0.511, 0.542, 0.516]) | Pooled = 0.3545
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4751 +/- 0.0647 (Folds: [0.371, 0.571, 0.456, 0.497, 0.48]) | Pooled = 0.4460
+  Position Prior                 Mean Per-Fold = 0.7479 +/- 0.0930 (Folds: [0.574, 0.791, 0.83, 0.813, 0.733]) | Pooled = 0.6692
+  Physicochemical Random Forest  Mean Per-Fold = 0.8237 +/- 0.0889 (Folds: [0.707, 0.946, 0.877, 0.851, 0.738]) | Pooled = 0.7605
+
+--- Regime 3: Position-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.4550 +/- 0.0496 (Folds: [0.417, 0.485, 0.382, 0.469, 0.522]) | Pooled = 0.4415
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4542 +/- 0.0615 (Folds: [0.338, 0.445, 0.498, 0.483, 0.506]) | Pooled = 0.4460
+  Position Prior                 Mean Per-Fold = 0.5000 +/- 0.0000 (Folds: [0.5, 0.5, 0.5, 0.5, 0.5]) | Pooled = 0.4241
+  Physicochemical Random Forest  Mean Per-Fold = 0.7962 +/- 0.0814 (Folds: [0.878, 0.728, 0.768, 0.702, 0.906]) | Pooled = 0.7888
+
+--- Regime 4: Both-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.5255 +/- 0.0646 (Folds: [0.446, 0.641, 0.498, 0.51, 0.533]) | Pooled = 0.5107
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4391 +/- 0.0628 (Folds: [0.47, 0.333, 0.524, 0.444, 0.426]) | Pooled = 0.4460
+  Position Prior                 Mean Per-Fold = 0.8046 +/- 0.0248 (Folds: [0.837, 0.82, 0.805, 0.798, 0.763]) | Pooled = 0.7628
+  Physicochemical Random Forest  Mean Per-Fold = 0.8366 +/- 0.0190 (Folds: [0.808, 0.86, 0.822, 0.847, 0.847]) | Pooled = 0.8286
+================================================================================
+Pair: UL30-Foscarnet (N=309, Positives=46, Negatives=263)
+================================================================================
+
+--- Regime 1: Random Split ---
+  Logistic Regression            Mean Per-Fold = 0.6621 +/- 0.1052 (Folds: [0.598, 0.64, 0.868, 0.629, 0.575]) | Pooled = 0.5943
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4238 +/- 0.1115 (Folds: [0.464, 0.548, 0.397, 0.487, 0.223]) | Pooled = 0.4336
+  Position Prior                 Mean Per-Fold = 0.7262 +/- 0.1259 (Folds: [0.812, 0.768, 0.477, 0.801, 0.773]) | Pooled = 0.7301
+  Physicochemical Random Forest  Mean Per-Fold = 0.8416 +/- 0.0444 (Folds: [0.862, 0.768, 0.904, 0.836, 0.838]) | Pooled = 0.8246
+
+--- Regime 2: Clade/Strain-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.4993 +/- 0.1086 (Folds: [0.346, 0.5, 0.683, 0.457, 0.51]) | Pooled = 0.4209
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4515 +/- 0.1584 (Folds: [0.244, 0.5, 0.452, 0.714, 0.348]) | Pooled = 0.4336
+  Position Prior                 Mean Per-Fold = 0.6198 +/- 0.0948 (Folds: [0.532, 0.5, 0.656, 0.764, 0.647]) | Pooled = 0.5663
+  Physicochemical Random Forest  Mean Per-Fold = 0.6411 +/- 0.1079 (Folds: [0.538, 0.5, 0.794, 0.675, 0.698]) | Pooled = 0.6718
+
+--- Regime 3: Position-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.5172 +/- 0.0947 (Folds: [0.348, 0.612, 0.596, 0.491, 0.538]) | Pooled = 0.4862
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4587 +/- 0.1748 (Folds: [0.215, 0.36, 0.74, 0.455, 0.523]) | Pooled = 0.4336
+  Position Prior                 Mean Per-Fold = 0.5000 +/- 0.0000 (Folds: [0.5, 0.5, 0.5, 0.5, 0.5]) | Pooled = 0.4063
+  Physicochemical Random Forest  Mean Per-Fold = 0.7149 +/- 0.1340 (Folds: [0.536, 0.882, 0.642, 0.655, 0.86]) | Pooled = 0.6672
+
+--- Regime 4: Both-Grouped Split ---
+  Logistic Regression            Mean Per-Fold = 0.5905 +/- 0.0657 (Folds: [0.501, 0.656, 0.671, 0.587, 0.538]) | Pooled = 0.5971
+  BLOSUM62 Radicalness           Mean Per-Fold = 0.4292 +/- 0.0804 (Folds: [0.318, 0.503, 0.494, 0.486, 0.346]) | Pooled = 0.4336
+  Position Prior                 Mean Per-Fold = 0.7461 +/- 0.0979 (Folds: [0.691, 0.783, 0.685, 0.65, 0.921]) | Pooled = 0.7342
+  Physicochemical Random Forest  Mean Per-Fold = 0.8251 +/- 0.0389 (Folds: [0.776, 0.83, 0.871, 0.786, 0.863]) | Pooled = 0.8234
+
+================================================================================
+MATHEMATICAL DIAGNOSIS: POOLED AUROC VS PER-FOLD AUROC
+================================================================================
+1. The 0.4123 Pooled AUROC Paradox Explained:
+   - In Regime 3 (Position-Grouped), every test position is unseen in the training folds.
+   - For any single fold, EVERY test observation receives the constant fallback prior (the training fold mean global prior, e.g. Fold 0: 0.283, Fold 1: 0.312).
+   - Within each fold, because all test predictions are completely identical (all tied), there is NO intra-fold discrimination.
+   - When computed PER FOLD, compute_safe_auc(y_te, tied_predictions) correctly evaluates to EXACTLY 0.5000 in every single fold:
+     Mean Per-Fold AUROC = 0.5000 +/- 0.0000 across all 5 folds!
+   
+2. Why Pooled AUROC was 0.4123:
+   - When predictions across all 5 folds were concatenated into a single pooled vector:
+     Test samples in Fold A received prior = 0.283.
+     Test samples in Fold B received prior = 0.312.
+   - If Fold B happened by chance to have slightly FEWER true positives than Fold A, the higher prior (0.312) was assigned to a subset with lower positive density!
+   - This inter-fold baseline shift introduced a negative correlation across fold boundaries, dragging the concatenated AUROC below 0.5 to 0.4123.
+   - Computing AUROC per-fold and averaging eliminates this cross-fold artifact, revealing the true uninformative baseline: EXACTLY 0.5000.
+
+3. Definition of 'Physicochemical Random Forest':
+   - This baseline uses an ensemble of 100 decision trees trained on hand-crafted amino acid physicochemical properties:
+     (WT hydrophobicity/volume/charge, Mutant hydrophobicity/volume/charge, deltas, normalized position in sequence, BLOSUM62 radicalness, nonsense flag).
+   - It is a non-linear tabular feature baseline, NOT a protein language model (ProtBERT).
+   - Under Random Split, it achieves AUROC ~0.90 because position shortcuts (normalized sequence position + radicalness) leak training labels.
+   - Under Position-Grouped Split, its AUROC drops to ~0.78, proving that sequence position contributes substantially to performance.

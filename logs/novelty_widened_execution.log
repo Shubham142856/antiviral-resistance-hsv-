@@ -1,0 +1,118 @@
+=== WIDENED SYSTEMATIC NOVELTY SEARCH EXECUTION LOG ===
+Execution Timestamp: 2026-10-29
+Auditor: Antigravity Deterministic Novelty Audit Pipeline
+Total Widened Queries: 18
+
+--------------------------------------------------------------------------------
+Category: C4 | Registry: Europe PMC
+Query: ("pathway gate" OR "pathway constrained" OR "drug-conditioned") ("antiviral resistance" OR "mutation prediction" OR "viral resistance")
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: C4 | Registry: Europe PMC
+Query: ("multi-task" OR "drug-conditioned") ("HSV" OR "herpes") ("resistance" OR "acyclovir" OR "foscarnet") machine learning
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: C5 | Registry: Europe PMC
+Query: ("temporal split" OR "prospective validation" OR "time-split") ("antiviral resistance" OR "viral mutation prediction")
+Total Hits Screened: 3
+Top Results Retrieved: 3
+  - [2026] Cell-free DNA methylation markers in the diagnosis of hepatitis B virus-related- | https://pubmed.ncbi.nlm.nih.gov/42878936/
+  - [2026] The Role of Artificial Intelligence and Machine Learning in Predictive Virology: | https://pubmed.ncbi.nlm.nih.gov/42461270/
+  - [2016] Pooled Analysis of the Prognostic and Predictive Value of KRAS Mutation Status a | https://pubmed.ncbi.nlm.nih.gov/26749487/
+
+--------------------------------------------------------------------------------
+Category: C5 | Registry: Europe PMC
+Query: ("publication year split" OR "temporal validation") ("resistance benchmark" OR "protein language model")
+Total Hits Screened: 3
+Top Results Retrieved: 3
+  - [2026] Mutation-resolved ABL1 inhibitor resistance prediction under mutation-disjoint a | https://pubmed.ncbi.nlm.nih.gov/42945269/
+  - [2026] HiHPO: Multimodal Hierarchical Graph Learning for Predicting Missing Protein-Phe | https://pubmed.ncbi.nlm.nih.gov/42574413/
+  - [2026] Multi-modal feature learning to prioritize ADCs with favorable half-life in mice | https://pubmed.ncbi.nlm.nih.gov/41996252/
+
+--------------------------------------------------------------------------------
+Category: C6 | Registry: Europe PMC
+Query: ("masking mutation" OR "co-occurring mutation" OR "background mutation") ("herpes" OR "HSV") ("acyclovir" OR "foscarnet") resistance
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: C6 | Registry: Europe PMC
+Query: ("UL23" OR "UL30") ("recombinant virus" OR "marker transfer") ("double mutant" OR "discordant") resistance
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Cross-Virus | Registry: Europe PMC
+Query: ("cytomegalovirus" OR "HCMV") ("UL54" OR "UL97") ("machine learning" OR "deep learning" OR "language model") ("resistance" OR "ganciclovir")
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Cross-Virus | Registry: Europe PMC
+Query: ("varicella zoster" OR "VZV") ("ORF28" OR "ORF36") ("machine learning" OR "deep learning" OR "language model") resistance
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: HuggingFace Models
+Query: herpes simplex resistance
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: HuggingFace Models
+Query: antiviral resistance protein
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: HuggingFace Datasets
+Query: herpes antiviral
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: HuggingFace Datasets
+Query: viral resistance mutation
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: Zenodo
+Query: herpes simplex antiviral resistance machine learning
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: Zenodo
+Query: herpesdrg protein language model
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: Zenodo
+Query: cytomegalovirus resistance machine learning
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: GitHub
+Query: herpes antiviral resistance machine learning
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: GitHub
+Query: HSV resistance prediction ProtBERT
+Total Hits Screened: 0
+Top Results Retrieved: 0
+
+--------------------------------------------------------------------------------
+Category: Registries | Registry: GitHub
+Query: UL23 UL30 acyclovir resistance
+Total Hits Screened: 0
+Top Results Retrieved: 0

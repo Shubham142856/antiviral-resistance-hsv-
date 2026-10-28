@@ -1,0 +1,14 @@
+Gene	Drug	Total_Rows	HerpesDRG_Rows	CMI_Rows	Distinct_Positions	Resistant_Positions	Sensitive_Positions	HSV1_Res_Positions	HSV2_Res_Positions	Verdict
+UL23	Aciclovir	889	468	421	260	160	156	128	55	PASS (>=15 res pos) - Primary
+UL23	Foscarnet	219	219	0	153	8	149	7	2	FAIL (<15 res pos) - Secondary / Pooled
+UL23	Penciclovir	189	103	86	82	59	31	50	12	PASS (>=15 res pos) - Primary
+UL23	Brivudine	135	77	58	64	48	24	37	12	PASS (>=15 res pos) - Primary
+UL30	Aciclovir	865	432	433	373	84	314	62	26	PASS (>=15 res pos) - Primary
+UL30	Foscarnet	740	402	338	358	57	325	38	21	PASS (>=15 res pos) - Primary
+UL30	Penciclovir	140	64	76	75	28	62	17	12	PASS (>=15 res pos) - Primary
+UL30	Cidofovir	224	113	111	112	22	105	18	5	PASS (>=15 res pos) - Primary
+UL5	Pritelivir	24	20	4	8	7	1	5	3	FAIL (<15 res pos) - Secondary / Pooled
+UL5	Amenamevir	25	14	11	8	4	4	3	2	FAIL (<5 res pos) - Sparse / Relegated
+UL52	Pritelivir	4	3	1	2	2	0	1	1	FAIL (<5 res pos) - Sparse / Relegated
+UL52	Amenamevir	10	6	4	5	3	3	3	0	FAIL (<5 res pos) - Sparse / Relegated
+UL29	Aciclovir	1	1	0	1	0	1	0	0	FAIL (<5 res pos) - Sparse / Relegated

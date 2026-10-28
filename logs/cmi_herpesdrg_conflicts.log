@@ -1,0 +1,267 @@
+=== CONFLICTS AND DISCORDANCE BETWEEN HERPESDRG-DB AND CMI 2025 TABLE S3 ===
+
+Total overlapping tuples evaluated: 1024
+Concordant tuples: 959 (93.65%)
+Conflicting / discordant tuples: 65 (6.35%)
+
+Detailed list of conflicts (HerpesDRG vs CMI 2025):
+Tuple: HSV-2_UL30_Aciclovir_I731F
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL23_Aciclovir_R51W
+  HerpesDRG: ['Resistant']
+  CMI 2025:  ['Sensitive']
+
+Tuple: HSV-1_UL30_Aciclovir_V714M
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Penciclovir_Q125H
+  HerpesDRG: ['Sensitive', 'Resistant']
+  CMI 2025:  ['Sensitive']
+
+Tuple: HSV-1_UL30_Aciclovir_L625I
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Aciclovir_A910V
+  HerpesDRG: ['Sensitive', 'Resistant']
+  CMI 2025:  ['Sensitive']
+
+Tuple: HSV-1_UL30_Cidofovir_V573M
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_A265T
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Mixed/Borderline']
+
+Tuple: HSV-2_UL30_Cidofovir_L783M
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL23_Aciclovir_Y133F
+  HerpesDRG: ['Resistant', 'Sensitive']
+  CMI 2025:  ['Sensitive']
+
+Tuple: HSV-2_UL30_Foscarnet_A724V
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Penciclovir_L802F
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Cidofovir_Y941H
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Penciclovir_A606V
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Penciclovir_R959H
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Cidofovir_T821M
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Mixed/Borderline']
+
+Tuple: HSV-2_UL30_Foscarnet_Y823C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Penciclovir_K533E
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Foscarnet_R628C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Mixed/Borderline']
+
+Tuple: HSV-2_UL30_Penciclovir_R847C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Cidofovir_L778M
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Penciclovir_L702H
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Foscarnet_T821M
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_R32C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Mixed/Borderline', 'Resistant']
+
+Tuple: HSV-1_UL30_Penciclovir_Q618H
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Foscarnet_D780N
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_S276G
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Penciclovir_R628C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Penciclovir_Q732R
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Penciclovir_N815S
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Penciclovir_Y818C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Foscarnet_L702H
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Aciclovir_A724T
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Cidofovir_Y818C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Aciclovir_I619K
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Aciclovir_S725G
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Aciclovir_R700G
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Sensitive']
+
+Tuple: HSV-1_UL30_Aciclovir_W998L
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_R89Q
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Mixed/Borderline']
+
+Tuple: HSV-2_UL30_Cidofovir_D785N
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Foscarnet_Y818C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_A140V
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_D258N
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Sensitive', 'Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_K36E
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Mixed/Borderline']
+
+Tuple: HSV-2_UL30_Penciclovir_M789K
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Foscarnet_A719T
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Penciclovir_V818A
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL23_Aciclovir_A157T
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Sensitive', 'Resistant']
+
+Tuple: HSV-2_UL30_Cidofovir_I731F
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Penciclovir_T934A
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Cidofovir_I1028T
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Foscarnet_I619K
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_V348I
+  HerpesDRG: ['Sensitive', 'Resistant']
+  CMI 2025:  ['Sensitive']
+
+Tuple: HSV-1_UL30_Foscarnet_G841C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL23_Aciclovir_N23S
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Mixed/Borderline']
+
+Tuple: HSV-1_UL30_Foscarnet_L782I
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Penciclovir_T821M
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Aciclovir_R628C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant', 'Mixed/Borderline']
+
+Tuple: HSV-1_UL23_Aciclovir_A156V
+  HerpesDRG: ['Sensitive', 'Resistant']
+  CMI 2025:  ['Sensitive']
+
+Tuple: HSV-2_UL30_Penciclovir_M789T
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Foscarnet_D907V
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-1_UL30_Cidofovir_G841C
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL23_Penciclovir_Y133F
+  HerpesDRG: ['Resistant', 'Sensitive']
+  CMI 2025:  ['Sensitive']
+
+Tuple: HSV-1_UL23_Aciclovir_F161L
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
+Tuple: HSV-2_UL30_Cidofovir_L850I
+  HerpesDRG: ['Sensitive']
+  CMI 2025:  ['Resistant']
+
