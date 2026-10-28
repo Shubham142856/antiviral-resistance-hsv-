@@ -1,0 +1,3 @@
+Europe PMC literature search terms notification.
+User is notified to check terms at https://europepmc.org/ and to always check the license of the papers retrieved by the skill for any restrictions.
+Timestamp: 2026-10-24T20:06:20+05:30

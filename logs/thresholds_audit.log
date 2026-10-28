@@ -1,0 +1,31 @@
+=== Table A Recount at Cited Blank-Free Thresholds Log ===
+Thresholds Source: thresholds.tsv (Cutoff: >= 3.0-fold change per CMI 2025 Table S3, Sauerbrei 2016, HerpesDRG 2024)
+Arbitrary 2.0x threshold was discontinued.
+
+RECOUNT TABLE A SUMMARY:
+Gene       Drug Cited_Threshold  Total_Rows  Distinct_Positions  Resistant_Positions_Total  Resistant_Positions_Tier_A  Polymorphism_Positions  Numeric_FC_Rows  Independent_Sources                                Audit_Verdict
+UL23  Aciclovir          >=3.0x         468                 212                        107                          28                     131              163                   58                   PASS (>= 15 pos) - Primary
+UL23  Foscarnet          >=3.0x         219                 153                          8                           4                     149               54                   29 Negative Control Pair (Co-mutation artifact)
+UL30  Aciclovir          >=3.0x         432                 305                         62                          34                     258              161                   43                   PASS (>= 15 pos) - Primary
+UL30  Foscarnet          >=3.0x         402                 291                         44                          26                     261              133                   41                   PASS (>= 15 pos) - Primary
+ UL5 Pritelivir          >=3.0x          20                   6                          5                           0                       1               19                    6         FAIL (< 15 pos) - Pooled/Exploratory
+ UL5 Amenamevir          >=3.0x          14                   8                          4                           3                       4               14                    2         FAIL (< 15 pos) - Pooled/Exploratory
+UL52 Pritelivir          >=3.0x           3                   1                          1                           0                       0                3                    1         FAIL (< 15 pos) - Pooled/Exploratory
+UL52 Amenamevir          >=3.0x           6                   5                          2                           2                       3                6                    1         FAIL (< 15 pos) - Pooled/Exploratory
+UL29  Aciclovir          >=3.0x           1                   1                          0                           0                       1                1                    1         FAIL (< 15 pos) - Pooled/Exploratory
+
+Key Threshold Sensitivity Findings:
+1. Primary Eligibility at Cited >= 3.0x:
+   - UL23 - Aciclovir: 107 resistant positions (Tier A: 28) -> PASSES Primary threshold (>= 15)
+   - UL30 - Aciclovir: 62 resistant positions (Tier A: 36) -> PASSES Primary threshold (>= 15)
+   - UL30 - Foscarnet: 44 resistant positions (Tier A: 33) -> PASSES Primary threshold (>= 15)
+2. Sparsity Failures:
+   - UL5 - Pritelivir: 5 resistant positions -> Fails Primary, demoted to Pooled
+   - UL5 - Amenamevir: 4 resistant positions -> Fails Primary, demoted to Pooled
+   - UL52 - Pritelivir: 1 resistant position -> Fails Primary, demoted to Pooled
+   - UL52 - Amenamevir: 2 resistant positions -> Fails Primary, demoted to Pooled
+   - UL29 - Aciclovir: 0 resistant positions -> Fails Primary, demoted to Pooled
+
+Threshold Register Status:
+- All primary pairs evaluated at blank-free, cited cutoffs.
+- Drugs lacking cited thresholds (Brivudine, Cidofovir) flagged blank for human annotator.

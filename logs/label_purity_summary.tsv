@@ -1,0 +1,4 @@
+Gene	Drug	D1_All_Positions	D1_Single_Label	D1_Single_Pct	D1_Mixed_Label	D1_Mixed_Pct	D2_Positions_GE2_Subs	D2_Single_Label	D2_Single_Pct	D2_Mixed_Label	D2_Mixed_Pct
+UL23	Aciclovir	191	178	93.19	13	6.81	51	38	74.51	13	25.49
+UL30	Aciclovir	246	242	98.37	4	1.63	31	27	87.1	4	12.9
+UL30	Foscarnet	234	231	98.72	3	1.28	30	27	90.0	3	10.0

@@ -1,0 +1,1999 @@
+Gene,Drug,AA change,AA position,Resistance,PMIDs,resistance status confirmed in cell culture,clinical susceptibility information available,All genes sequenced that may confer resistance?,Motif,Comment,Source_Sheet
+Thymidine Kinase,Aciclovir,Y4D,4,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,C6G,6,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576
+15456088",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H7P,7,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,8Stop,8,Sensitive,34980708,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H9Y,9,Sensitive,29848849,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A12P,12,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A12T,12,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D14V,14,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,D14V,14,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,D14V,14,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,D14Y,14,Sensitive,18336925 20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,D14Y,14,Sensitive,"18336925
+20211650",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D14Y,14,Sensitive,"18336925
+20211650",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q15L,15,Sensitive,21778105,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q15K,15,Sensitive,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A17V,17,Sensitive,10882609,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R18C,18,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,S19P,19,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,S19P,19,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S19P,19,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R20S,20,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R20H,20,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R20C,20,Sensitive,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G21V,21,Sensitive,35079057,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N23Stop ,23,Resistant,24055837,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N23S,23,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,N23S,23,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N23S,23,Sensitive/Resistant,"10882609
+32417677 19795980 14670581 23687576",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N24T,24,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R26H,26,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A28V,28,Sensitive,21778105,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L29V,29,Sensitive,24075863,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R30C,30,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R32C,32,Sensitive/Resistant,18336925 32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R32C,32,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R32C,32,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q35Del,35,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,K36D,36,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,K36E,36,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,K36E,36,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,K36E,36,Sensitive/Resistant,"19795980
+10882609
+23687576 32417677 14670581",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A37V,37,Sensitive,30507553,yes,no,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A37D,37,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E39K,39,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,R41H,41,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R41H,41,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R41H,41,Sensitive,"14670581
+22906425
+27426251
+",yes,contradiction,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L42P,42,Sensitive,"10882609
+11238837
+15456088",yes,contradiction,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E43A/D,43,Sensitive,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q44H,44,Sensitive,22024514,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,44Stop,44,Resistant,34980708,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P47S,47,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L50M,50,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R51W,51,Resistant,"19795980
+14670581
+10882609
+15827202",yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Brivudine,R51W,51,Resistant,"19795980
+14670581
+10882609
+15827202",yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R51W ,51,Resistant,"19795980
+14670581
+10882609
+15827202 24055837",yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y53Stop,53,Resistant,14670581,yes,yes,"No, TK only",ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y53D,53,Resistant,"20733037
+23041200",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Y53C,53,Resistant,"22155911
+",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Brivudine,Y53C,53,Resistant,"22155911
+",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y53C,53,Resistant,"22155911
+23246510",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Y53H,53,Resistant,"22906425
+",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Brivudine,Y53H,53,Resistant,"22906425
+",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y53H,53,Resistant,"22906425
+",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I54T,54,Sensitive,37453453,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D55E,55,Sensitive,29848849,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D55N,55,Resistant,"12406508
+11238837",yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G56S,56,Resistant,19795980,yes,yes,"No, TK only",ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G56D,56,Resistant,28453848,yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G56A,56,Intermediate,35079057,yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G56V,56,Intermediate,35079057,yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P57H,57,Resistant,9697707,yes,yes,"No, TK only",ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H58R,58,Resistant,15456088,yes,yes,No access,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Penciclovir,H58N,58,Resistant,24747042,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Brivudine,H58N,58,Resistant,24747042,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H58N,58,Resistant,24747042,yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H58Y,58,Resistant,35033543,yes,yes,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Brivudine,G59W,59,Resistant,"15827202
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces",HSV-1 TK
+Thymidine Kinase,Aciclovir,G59W,59,Resistant,"15827202
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces",HSV-1 TK
+Thymidine Kinase,Penciclovir,G59W,59,Resistant,"15827202
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces",HSV-1 TK
+Thymidine Kinase,Aciclovir,G59R,59,Resistant,19795980,yes,yes,"No, TK only",ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Penciclovir,G61A,61,Resistant,27426251,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Brivudine,G61A,61,Resistant,27426251,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G61A,61,Resistant,27426251,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G61E,61,Resistant,28576448,yes,no,Yes,ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,K62N,62,Resistant,"9697707
+16982796
+2833027",yes,yes,Yes,ATP-binding site,"2833027 not fact checked, no access",HSV-1 TK
+Thymidine Kinase,Aciclovir,T63A,63,Resistant,"12709344
+9716390
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces",HSV-1 TK
+Thymidine Kinase,Aciclovir,T63I,63,Resistant,9697707,yes,yes,"No, TK only",ATP-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T65N,65,Resistant,12406508,yes,no,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T65P,65,Resistant,35033543,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T66P,66,Sensitive,37586184,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q67R,67,Sensitive,21778105,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q67Stop,67,Resistant,24075863,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L68R,68,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L69M,69,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L72V,72,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,S74Stop,74,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,S74Stop,74,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S74Stop,74,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R75C,75,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D76N,76,Sensitive,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D77N,77,Sensitive,10882609,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Penciclovir,I78F,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,I78F,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I78F,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I78S,78,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y80N,80,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Penciclovir,E83K,83,Resistant,"19795980
+15728902
+10882609
+16546268
+12709344",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E83K,83,Resistant,"19795980
+15728902
+10882609
+16546268
+12709344",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P84S,84,Resistant,12406508,yes,no,"No, TK only",Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P84L,84,Resistant,"
+22796575
+27426251",yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Penciclovir,P84L,84,Resistant,"
+27426251",yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Brivudine,P84L,84,Resistant,"
+27426251",yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M85Stop,85,Resistant,26055375,yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y87H,87,Resistant,19795980,yes,yes,"No, TK only",Conserved region,,HSV-1 TK
+Thymidine Kinase,Brivudine,W88R,88,Resistant,20608173,no,no,No access,Conserved region,not fact checked,HSV-1 TK
+Thymidine Kinase,Aciclovir,W88R,88,Resistant,20608173,no,no,No access,Conserved region,not fact checked,HSV-1 TK
+Thymidine Kinase,Aciclovir,R89W,89,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R89H,89,Sensitive,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R89Q,89,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R89Q,89,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R89Q,89,Sensitive/Resistant,"19795980
+23582986
+14670581
+10882609
+11238837 32417677",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,A93V,93,Sensitive,27309375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A93V,93,Resistant,27309375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E95Stop,95,Resistant,19770274,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A98T,98,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I100T,100,Sensitive,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y101fsx,101,Sensitive/Resistant,37586184 28262533,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T103Stop,103,Resistant,12406508,yes,no,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Penciclovir,T103P,103,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,T103P,103,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T103P,103,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q104H,104,Resistant,9697707,yes,yes,"No, TK only",,Codetection of L297S,HSV-1 TK
+Thymidine Kinase,Penciclovir,Q104Stop,104,Resistant,"22155911
+
+
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,Q104Stop,104,Resistant,"22155911
+
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q104Stop,104,Resistant,"22155911
+23026414
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H105P,105,Resistant,"1846499
+23026414
+16970995",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R106H,106,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,R106H,106,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R106H,106,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q109K,109,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E111K,111,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D116N,116,Resistant,16546268,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,D116N,116,Resistant,16546268,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,A118V,118,Sensitive,22155911 27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,A118V,118,Sensitive,"22155911
+26055375
+27426251",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,A118V,118,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A118V,118,Sensitive,"22155911
+26055375
+27426251",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V120Stop,120,Resistant,24075863,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M121K,121,Resistant,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,M121R,121,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,M121R,121,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M121R,121,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S123R,123,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S123G,123,Resistant,35033543,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,Q125H,125,Sensitive,23100343,yes,no,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Q125H,125,Sensitive,23100343,yes,no,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q125H,125,Resistant,23100343,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M128L,128,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G129D,129,Resistant,15456088,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M130L,130,Resistant,31158412,no,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P131S,131,Resistant,12709344,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A133V,133,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,A133Del,133,Resistant,37224525,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A137N,137,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A137T,137,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V138I,138,Sensitive,"19795980
+23582986",yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V138F,138,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,L139V,139,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L139V,139,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L139P,139,Resistant,31158412,no,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A140V,140,Resistant,14670581,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H142Y,142,Sensitive,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,I143V,143,Resistant,"21178503
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,I143V,143,Resistant,19770274,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I143V,143,Resistant,19770274,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,144fsx,144,Resistant,37586184,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G145E,145,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E146G,146,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G148V,148,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G148W,148,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S150L,150,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H151Y,151,Sensitive,18336925,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A156P,156,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A156V,156,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I160V,160,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,F161L,161,Resistant,14670581,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D162H,162,Resistant,15572000,yes,no,"No, TK only",Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D162A,162,Resistant,"14670581
+16970995",yes,yes,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D162N,162,Resistant,"24075863
+23582986",yes,yes,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R163G,163,Resistant,28576448,yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R163S,163,Resistant,37453453,yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R163H,163,Resistant,"8218229
+23026414
+15456088
+22796575",yes,yes,Yes,Nucleotide-binding site,"8218229 not fact checked, no access",HSV-1 TK
+Thymidine Kinase,Aciclovir,A167V,167,Resistant,12709344,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,A168T,168,Sensitive,"15827202
+8021603
+9716390",yes,no,Yes,Nucleotide-binding site,"8021603 not fact checked, no acces",HSV-1 TK
+Thymidine Kinase,Brivudine,A168T,168,Resistant,"15827202
+8021603
+9716390",yes,no,Yes,Nucleotide-binding site,"8021603 not fact checked, no acces",HSV-1 TK
+Thymidine Kinase,Aciclovir,A168T,168,Sensitive,"15827202
+8021603
+9716390",yes,no,Yes,Nucleotide-binding site,"8021603 not fact checked, no acces",HSV-1 TK
+Thymidine Kinase,Aciclovir,L170P,170,Resistant,"24075863
+24747042
+23041200",yes,yes,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Y172S,172,Resistant,27309375,yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y172S,172,Resistant,27309375,yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y172C,172,Resistant,"
+23246510",yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P173R,173,Resistant,12406508,yes,no,"No, TK only",Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P173Del,173,Resistant,28576448,yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P173L,173,Resistant,"23582986
+12709344",yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A174P,174,Resistant,"
+23246510",yes,no,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A175V,175,Resistant,"15728902
+10882609
+22796575",yes,yes,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R176W,176,Resistant,23041200,yes,no,"No, TK only",Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R176Stop,176,Resistant,24075863,yes,yes,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R176Q,176,Resistant,"14670581
+11238837
+9716390",yes,yes,Yes,Nucleotide-binding site,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L178R,178,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S181N,181,Resistant,18627246,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M182Stop,182,Resistant,"15456088 19795980
+24075863
+23582986
+23246510
+15572000 ",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,M182Stop,182,Resistant,15456088,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,M182Stop,182,Resistant,15456088,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M182Stop,182,Resistant,24075863,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T183P,183,Sensitive,31302149,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q185R,185,Resistant,16546268,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Q185R,185,Resistant,16546268,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V187M,187,Resistant,9728528,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Brivudine,A189V,189,Resistant,36059135,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,A189V,189,Resistant,"19795980
+14670581
+16546268
+23687576
+15456088
+22796575",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A189V,189,Resistant,"19795980
+14670581
+16546268
+23687576
+15456088
+22796575",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V191A,191,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A192V,192,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,"I194
+Del",194,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G200C,200,Resistant,"12406508
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G200S,200,Resistant,"18336925
+22796575",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,G200D,200,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,G200D,200,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G200D,200,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T201P,201,Resistant,9697707,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Penciclovir,V204G,204,Resistant,"
+27309375",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V204G,204,Resistant,"23945375
+27309375",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,G206R,206,Resistant,15827202,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G206R,206,Resistant,15827202,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,G206R,206,Resistant,15827202,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A207P,207,Resistant,"20733037
+23041200",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L208F,208,Resistant,24055837,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,L208H,208,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,L208H,208,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L208H,208,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R212K,212,Intermediate,35079057,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I214T,214,Sensitive,15456088,yes,contradiction,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D215N,215,Sensitive,21778105,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D215H,215,Sensitive,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D215A,215,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R216H,216,Resistant,"23582986
+15456088",yes,yes,"No, TK only",Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R216S,216,Resistant,12709344,yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R216C,216,Resistant,"
+16546268",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R216C,216,Resistant,"9697707
+16546268",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A218T,218,Resistant,37453453,yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Brivudine,K219T,219,Sensitive,27426251,yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Penciclovir,K219T,219,Sensitive,"22024514
+27426251",yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,K219T,219,Sensitive,"22024514
+27426251",yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R220C,220,Resistant,"14670581
+",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Brivudine,R220H,220,Resistant,"19795980
+23582986
+15827202
+12709344",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R220H,220,Resistant,"19795980
+23582986
+15827202
+12709344",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R220H,220,Resistant,"19795980
+23582986
+15827202
+12709344",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Brivudine,R222H,222,Resistant,"19795980
+24747042
+11238837",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R222H,222,Resistant,"19795980
+24747042
+11238837",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R222H,222,Resistant,"19795980
+24747042
+11238837",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Brivudine,R222C,222,Resistant,"24747042
+
+",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R222C,222,Resistant,"24747042
+
+",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R222C,222,Resistant,"24747042
+9697707
+11238837",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G224fsx,224,Resistant,"9697707
+23246510",yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E225K,225,Intermediate,35079057,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E225Stop,225,Resistant,35033543 31158412,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,L227Stop,227,Resistant,27309375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L227Stop,227,Intermediate,27309375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L227F,227,Resistant,"14670581
+22796575",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,D228Stop,228,Resistant,26055375,yes,no,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Penciclovir,D228Stop,228,Resistant,"19795980
+14670581
+9311864
+12709344
+11238837
+21178503
+23246510
+15456088",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,D228Stop,228,Resistant,"19795980
+14670581
+9311864
+12709344
+11238837
+21178503
+23246510
+15456088 11160674 18336925
+14670581
+23246510
+15572000",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D228Stop,228,Resistant,"19795980
+14670581
+9311864
+12709344
+11238837
+21178503
+23246510
+15456088 20733037 18336925
+14670581
+23246510
+15572000",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D229Stop,229,Resistant,31158412,no,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A232S,232,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I235N,235,Sensitive,35033543,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V238F,238,Resistant,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,Y239S,239,Resistant,15827202,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y239S,239,Resistant,15827202,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Y239S,239,Resistant,15827202,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G240E,240,Sensitive,"19795980
+23582986
+14670581
+10882609
+11238837",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L241M,241,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L242P,242,Resistant,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A243S,243,Sensitive,"18336925
+20733037",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N244H,244,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T245P,245,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Brivudine,T245M,245,Resistant,22155911 37224525,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T245M,245,Resistant,"22155911
+12406508
+12709344
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,T245M,245,Resistant,22155911 37224525,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Y248D,248,Resistant,37505438,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L249P,249,Resistant,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,Q250Stop,250,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Q250Stop,250,Resistant,"22155911
+",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q250Stop,250,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G251C,251,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R256W,256,Resistant,23246510,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E257K,257,Resistant,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D258N,258,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D258N,258,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,W259R,259,Sensitive,22024514,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,Q261Stop,261,Resistant,"19795980
+15827202",yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q261Stop,261,Resistant,"19795980
+15827202",yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Penciclovir,Q261Stop,261,Resistant,"19795980
+15827202",yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q261R,261,Resistant,23687576,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S263Stop,263,Resistant,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S263L,263,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G264V,264,Resistant,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G264R,264,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A265T,265,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,A265T,265,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A265T,265,Sensitive/Resistant,"14670581
+23687576 32417677",yes,contradiction,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V267L,267,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P268L,268,Sensitive,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P268M,268,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P268T,268,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P269S,269,Sensitive,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G271D,271,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G271V,271,Sensitive,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A272T,272,Sensitive,18336925,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E273K,273,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E273Q,273,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E273A,273,Sensitive,37586184,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P274T,274,Sensitive,18336925,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q275P,275,Sensitive,"22024514
+21778105",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S276G,276,Resistant,14670581,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Brivudine,S276R,276,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S276N,276,Sensitive,28576448,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S276T,276,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,S276R,276,Sensitive,"22024514
+27426251",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S276R,276,Sensitive,"22024514
+27426251",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N277K,277,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N277S,277,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G279D,279,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P280S,280,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P280T,280,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R281Stop,281,Resistant,"19795980
+15827202
+19795980",yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R281Q,281,Sensitive/Resistant,"19795980
+14670581
+10882609",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H283N,283,Sensitive,30507553,yes,no,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D286V,286,Sensitive,37453453,yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D286E,286,Sensitive,"19795980
+14670581
+10882609
+11238837
+6293376",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T287M,287,Resistant,"19795980
+9697707
+15827202
+12406508
+23246510",yes,yes,"No, TK only",Conserved region,,HSV-1 TK
+Thymidine Kinase,Brivudine,T287M,287,Resistant,"19795980
+9697707
+15827202
+12406508
+23246510",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Penciclovir,T287M,287,Resistant,"19795980
+9697707
+15827202
+12406508
+23246510",yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L288Stop,288,Resistant,24055837,yes,no,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,F289S,289,Resistant,38944159,yes,yes,Yes,Conserved region,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L291R,291,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L291P,291,Resistant,35033543,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,R293W,293,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,R293W,293,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R293W,293,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A294V,294,Sensitive,18336925,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P295T,295,Sensitive,22024514,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L297S,297,Resistant,9697707,yes,yes,"No, TK only",,Codetection of Q104H,HSV-1 TK
+Thymidine Kinase,Brivudine,L298R,298,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,L298R,298,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L298R,298,Sensitive,27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L298P,298,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P299S,299,Sensitive,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P300Del,300,Resistant,35079057,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,A301Ins,301,Resistant,11160674,yes,no,"No, TK only",,Codetection of several mutations in TK,HSV-1 TK
+Thymidine Kinase,Aciclovir,A301Ins,301,Resistant,11160674,yes,no,"No, TK only",,Codetection of several mutations in TK,HSV-1 TK
+Thymidine Kinase,Penciclovir,A301Ins,301,Resistant,11160674,yes,no,"No, TK only",,Codetection of several mutations in TK,HSV-1 TK
+Thymidine Kinase,Aciclovir,N301fsx,301,Resistant,14670581,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N301S,301,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N301fsx,301,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,N301fsx,301,Resistant,32417677,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G302S,302,Sensitive,14670581,yes,contradiction,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D303N,303,Sensitive,24075863,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,N306Stop,306,Resistant,11160674,yes,no,"No, TK only",,Codetection of several mutations in TK,HSV-1 TK
+Thymidine Kinase,Aciclovir,N306Stop,306,Resistant,"24055837
+11160674",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,V307fsx,307,Resistant,11160674,yes,no,"No, TK only",,Codetection of T287M,HSV-1 TK
+Thymidine Kinase,Aciclovir,V307fsx,307,Resistant,11160674,yes,no,"No, TK only",,Codetection of T287M,HSV-1 TK
+Thymidine Kinase,Penciclovir,V307fsx,307,Resistant,11160674,yes,no,"No, TK only",,Codetection of T287M,HSV-1 TK
+Thymidine Kinase,Aciclovir,F308L,308,Resistant,35033543,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A309V,309,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P321H,312,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L315S,315,Resistant,"14670581
+",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A316V,316,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A316S,316,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M322K,322,Resistant,16546268,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,M322K,322,Resistant,16546268,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M322L,322,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,H323Y,323,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I326V,326,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L327M,327,Sensitive,18336925,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L327R,327,Intermediate,28453848,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D328E,328,Sensitive,18336925,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D330A,330,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S332L,332,Sensitive,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S332P,332,Sensitive,18336925,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A334T,334,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G335D,335,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,C336Y,336,Resistant,"23582986
+9697707
+11238837
+9716390",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D338H,338,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L340R,340,Resistant,31199933,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L341R,341,Sensitive,25218782,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q342Stop,342,Resistant,"19795980
+14670581",yes,yes,Yes ,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q342H,342,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T344I,344,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S345P,345,Sensitive,22024514 23582986 23026414 27426251,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,S345P,345,Sensitive,"
+
+23026414
+27426251",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S345P,345,Sensitive,"22024514
+23582986
+23026414
+27426251",yes,contradiction,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G346W,346,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,V348I,348,Sensitive,19795980 14670581 22906425 27426251,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,V348I,348,Sensitive,"19795980
+14670581
+22906425
+27426251",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V348I,348,Sensitive,"19795980
+14670581
+22906425
+27426251",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,Q349R,349,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,T350I,350,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,T350S,350,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T350S,350,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T350I,350,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V352I,352,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V352L,352,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,T354P,354,Resistant,19795980,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,P355fsx,355,Resistant,"22155911
+11238837
+23246510 12406508",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,P355fsx,355,Resistant,22155911,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,P355fsx,355,Resistant,22155911,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,S357C,357,Sensitive,20733037,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,I358V,358,Sensitive,24075863,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,D363N,363,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,L364P,364,Sensitive/Resistant,"10882609
+16970995",yes,contradiction,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A365T,365,Resistant,21778105,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R366C,366,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,M367T,367,Sensitive,10882609,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Aciclovir,V369A,369,Sensitive,37453453,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,R370W,370,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E371D,371,Sensitive,31152759,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,G373E,373,Sensitive,26055375,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E374A,374,Sensitive,10882609,yes,yes,"No, TK only",,,HSV-1 TK
+Thymidine Kinase,Brivudine,E374fsx,374,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,E374fsx,374,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,E374fsx,374,Resistant,"22155911
+23246510",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,A375P,375,Sensitive,24075863,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,N376Stop,376,Resistant,24747042,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N376Stop,376,Resistant,24747042 28576448,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,N376Stop,376,Resistant,24747042,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,N376T,376,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Penciclovir,N376T,376,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N376T,376,Sensitive,20211650,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N376H,376,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,N376P,376,Sensitive,"20733037
+11238837",yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Brivudine,L138V,138,Sensitive,19795980 23582986,yes,yes,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,,nt 269Del,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,,nt 540Del,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,,nt 547InsG,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,,nt 613InsT,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+Thymidine Kinase,Aciclovir,,nt 885Del,Resistant,36309081,yes,no,Yes,,,HSV-1 TK
+DNA Polymerase,Aciclovir,S3A,3,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S3A,3,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G6D,6,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G6D,6,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G12E,12,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G12E,12,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G13V,13,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G13V,13,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S15A,15,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A17T,17,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A17V,17,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A17T,17,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F23I,23,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,F23I,23,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A25V,25,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A25V,25,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A27T,27,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A27T,27,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A27T,27,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A27T,27,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A27T,27,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P29H,29,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P29H,29,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R30C,30,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R30S,30,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R30S,30,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A32I,32,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A32I,32,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S33R,33,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,S33G,33,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,S33G,33,Sensitive,"14670581
+23687576",yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S33R,33,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S33N,33,Sensitive,37586184,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S33G,33,Sensitive,"14670581
+23687576",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q42K,42,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q42K,42,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L49I,49,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,L49I,49,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L49I,49,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K57N,57,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P61S,61,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q63H,63,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q63H,63,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E70D,70,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E70K,70,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,E70K,70,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E70D,70,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E70K,70,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,D72N,72,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D72N,72,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,D72N,72,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,D72N,72,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D72N,72,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A78D,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A78D,78,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A78D,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A78D,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A78V,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A78V,78,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A78V,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A78V,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A78D,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A78V,78,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R80L,80,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K90R,90,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K90R,90,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,H98N,98,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A102T,102,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A102T,102,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Foscarnet,A102T,102,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,K104Q,104,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K104Q,104,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,K104Q,104,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,K104Q,104,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K104Q,104,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G108R,108,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E111K,111,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R116H,116,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R116H,116,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S127L,127,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G132C,132,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G132C,132,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P137Q,137,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P137G,137,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P137Q,137,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A138V,138,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A138V,138,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V144I,144,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T145A,145,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T145A,145,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V146I,146,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V146I,146,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,N155T,155,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V156A,156,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V156A,156,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A159V,159,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F167L,167,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,F167L,167,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F171S,171,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,F171S,171,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I182V,182,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,M207I,207,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K209T,209,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V212A,212,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L216I,216,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L216I,216,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,R219S,219,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R219S,219,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,R219S,219,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,R219S,219,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R219S,219,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A220T,220,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E226D,226,Sensitive,37505438,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R227H,227,Sensitive,37505438,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A229T,229,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A229T,229,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A229T,229,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A229T,229,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A229T,229,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A230V,230,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A231D,231,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A231D,231,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,S239L,239,Resistant,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,S239L,239,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Penciclovir,S239L,239,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Foscarnet,S239L,239,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Brivudine,F248L,248,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,F248L,248,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,F248L,248,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F248L,248,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,F248L,248,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E254G,254,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R264H,264,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,R264C,264,Sensitive,37224525,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R264C,264,Sensitive,37224525,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L267M,267,Sensitive,"26055375
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L267M,267,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V273I,273,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V273I,273,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R274Q,274,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R274Q,274,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V278A,278,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V278A,278,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S280A,280,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S280A,280,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,C287Y,287,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A289D,289,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A289D,289,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V297A,297,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F303L,303,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D306N,306,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D306N,306,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P320S,320,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R322Q,322,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R330A,330,Sensitive,"14670581
+23687576",yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R330A,330,Sensitive,"14670581
+23687576",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A351D,351,Sensitive,37505438,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I352V,352,Sensitive,"
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I352V,352,Sensitive,"
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G354V,354,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,M356I,356,Sensitive/Resistant,"26055375
+24075863",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,M356I,356,Sensitive,"
+24075863",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L359I,359,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L359I,359,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,L359I,359,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,L359I,359,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L359I,359,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L359I,359,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D368A,368,Resistant,9727026 8910584 14982924,yes,no,Yes,Exo I,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D368A,368,Resistant,9727026 8910584 14982924,yes,no,Yes,Exo I,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E376D,376,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E376G,376,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V383L,383,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,H386Y,386,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,H386Y,386,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L398F,398,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L398F,398,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L406M,406,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L406M,406,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,D418N,418,Sensitive,37224525,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D418N,418,Sensitive,37224525,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E421D,421,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E421V,421,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,E421V,421,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E421D,421,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E421V,421,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,N425T,425,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,N425T,425,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A428V,428,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A428V,428,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A429T,429,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A429T,429,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A429T,429,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A429T,429,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A429T,429,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R430K,430,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T434M,434,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T434M,434,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G458S,458,Sensitive,26055375,yes,no,Yes,Exo II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L479M,479,Sensitive,22024514,yes,no,Yes,Exo II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L479M,479,Sensitive,22024514,yes,no,Yes,Exo II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T480M,480,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G495V,495,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V498M,498,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,V498G,498,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,V498G,498,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V498G,498,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V498G,498,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V498M,498,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V498G,498,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G505D,505,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S507R,507,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S507R,507,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V521M,521,Sensitive,24747042,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V521M,521,Sensitive,24747042,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,V521M,521,Sensitive,24747042,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,V521M,521,Sensitive,24747042,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V521M,521,Sensitive,24747042,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,N522S,522,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,N522S,522,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I529M,529,Resistant,20608173,,,No access,,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,I529M,529,Sensitive,20608173,,,No access,,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,K532T,532,Resistant,14670581,yes,yes,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K532T,532,Sensitive,14670581,yes,yes,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E545D,545,Resistant,20608173,,,No access,Exo III,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,E545D,545,Resistant,20608173,,,No access,Exo III,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,Y557S,557,Resistant,"8910584
+19691467",yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A562T,562,Sensitive,"22024514
+23026414",yes,contradiction,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A562T,562,Sensitive,"22024514
+23026414",yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A566T,566,Sensitive,"14670581
+20211650",yes,contradiction,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A566T,566,Sensitive,"14670581
+20211650",yes,yes,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q570R,570,Resistant,15456088,yes,yes,Yes,Exo III,Codetection of V348L in TK,HSV-1 Pol
+DNA Polymerase,Cidofovir,V573M,573,Resistant,"10675401
+17713155",yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V573M,573,Sensitive,"10675401
+17713155",yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V573M,573,Sensitive,17713155,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L583V,583,Resistant,14670581,yes,yes,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K591R,591,Sensitive,26055375,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E597D,597,Resistant,3034575,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Brivudine,A605V,605,Sensitive,29186456,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Brivudine,A605V,605,Sensitive,29186456,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A605V,605,Resistant,15673740 29186456,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A605V,605,Sensitive,15673740 29186456,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A605V,605,Sensitive,15673740 29186456,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A605V,605,Sensitive,29186456,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A605V,605,Resistant,15673740 29186456,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Brivudine,L702P,702,Resistant,20608173,,,No access,II,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Penciclovir,Q618H,618,Resistant,29186456,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q618I,618,Sensitive,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q618H,618,Resistant,17713155 29186456,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Brivudine,Q618H,618,Sensitive,17713155 29186456,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Cidofovir,Q618H,618,Sensitive,17713155 29186456,yes,no,"No, Pol only",Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q618I,618,Sensitive,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q618H,618,Sensitive,29186456,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I619K,619,Resistant,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I619K,619,Resistant,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V621S,621,Resistant,24055837,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T623A,623,Sensitive,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T623A,623,Sensitive,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L625I,625,Resistant,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L625I,625,Sensitive,33875432,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D630A,630,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T639I,639,Sensitive,"
+14670581",yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T639I,639,Sensitive,"
+14670581",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G641R,641,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G641R,641,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G645D,645,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G645D,645,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A646T,646,Sensitive,"
+15456088",yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A646T,646,Sensitive,15456088,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E649D,649,Sensitive,23026414,yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E649G,649,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E649D,649,Sensitive,23026414,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E649G,649,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K652N,652,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K652N,652,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A657T,657,Resistant,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A657T,657,Resistant,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A657T,657,Resistant,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A657T,657,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A657T,657,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E659D,659,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D660E,660,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D660E,660,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E661K,661,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E662D,662,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P664T,664,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E667Del,667,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G668C,668,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G668C,668,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G668Del,668,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G668E,668,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E669D,669,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E669G,669,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E671K,671,Sensitive,25218782,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E673K,673,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R674H,674,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E675A,675,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E675K,675,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E675A,675,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E676D,676,Sensitive,37505438,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G679D,679,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G679D,679,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R681L,681,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R681L,681,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E682Q,682,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E682Q,682,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E684D,684,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E684A,684,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E684D,684,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E684A,684,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E688K,688,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E688K,688,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V694Q,694,Sensitive,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V694Q,694,Sensitive,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q697P,697,Sensitive,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q697P,697,Sensitive,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R700G,700,Resistant,9497069,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Penciclovir,R700G,700,Sensitive,9497069,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R700G,700,Sensitive,28453848,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,R700M,700,Resistant,"12829822
+10675401
+17713155",yes,no,Yes,II,"10675401, 17713155 not fact checked, no acces",HSV-1 Pol
+DNA Polymerase,Aciclovir,R700M,700,Sensitive,"12829822
+10675401
+17713155",yes,no,Yes,II,"10675401, 17713155 not fact checked, no acces",HSV-1 Pol
+DNA Polymerase,Foscarnet,R700G,700,Resistant,9497069,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R700M,700,Sensitive,17713155,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R700G,700,Sensitive,28453848,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Penciclovir,L702H,702,Resistant,12709344,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L702H,702,Resistant,12709344,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L702P,702,Resistant,20608173,,,No access,II,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,F716L,716,Resistant,20608173,,,No access,II,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Foscarnet,L702H,702,Resistant,12709344,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D703N,703,Sensitive,20733037,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D703N,703,Sensitive,20733037,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,N711K,711,Sensitive,20733037,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,N711K,711,Sensitive,20733037,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P712Y,712,Resistant,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P712Y,712,Sensitive,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Penciclovir,V714M,714,Resistant,29186456,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Brivudine,V714M,714,Sensitive,17713155 29186456,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V714M,714,Resistant,17713155 29186456,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V714M,714,Sensitive,17713155 29186456,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V714M,714,Resistant,17713155 29186456,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Penciclovir,V715G,715,Resistant,12210436,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V715G,715,Resistant,12210436,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V715G,715,Sensitive,12210436,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V715M,715,Resistant,12829822,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V715M,715,Sensitive,12829822,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V715S,715,Resistant,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V715G,715,Resistant,12210436,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V715M,715,Sensitive,12829822,yes,no,"No, Pol only",II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V715S,715,Resistant,33875432,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,F716L,716,Sensitive,20608173,,,No access,II,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Foscarnet,F716L,716,Resistant,20608173,,,No access,II,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,M880T,880,Sensitive,20608173,,,No access,,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,A719T,719,Sensitive,29186456,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A719T,719,Sensitive,29186456,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A719T,719,Sensitive,12829822 29186456,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A719T,719,Resistant,12829822 33875432 29186456,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A719V,719,Sensitive/Resistant,"22155911
+18336925
+29186456 23026414 27309375",yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A719V,719,Sensitive/Resistant,"22155911
+18336925
+23026414 27309375 29186456",yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A719V,719,Sensitive/Resistant,"18336925
+23026414 27309375 29186456 22155911",yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Brivudine,A719V,719,Sensitive/Resistant,"29186456 22155911
+23026414",yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A719T,719,Resistant,12829822 29186456 33875432,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A719V,719,Sensitive/Resistant,"22155911
+18336925
+23026414 27309375 29186456",yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,S724N,724,Resistant,29186456,yes,no,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,M880T,880,Resistant,20608173,,,No access,,"20608173 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,Y608Stop,608,Resistant,24055837,yes,no,Yes,Exo III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S724N,724,Intermediate/Resistant,29031157 29186456,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Penciclovir,S724N,724,Resistant,"15040541
+24747042
+12829822
+23026414 29186456",yes,no,Yes,II,"15040541 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Foscarnet,S724G,724,Resistant,12367650,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Cidofovir,Q727R,727,Resistant,37224525,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q727R,727,Resistant,37224525,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q727R,727,Resistant,37224525,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F733C,733,Resistant,24075863,yes,yes,Yes,II,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R739S,739,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A740S,740,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A740S,740,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,V743M,743,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,V743M,743,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V743M,743,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V743M,743,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V743M,743,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E747K,747,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A748V,748,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A748V,748,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G749D,749,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G749D,749,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L753M,753,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L753M,753,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E771Q,771,Resistant,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E771Q,771,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L774F,774,Resistant,"14694096
+19420083",yes,no,Yes,VI,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L774F,774,Resistant,"14694096
+19420083",yes,no,Yes,VI,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S775N,775,Resistant,24075863,yes,yes,Yes,VI,,HSV-1 Pol
+DNA Polymerase,Cidofovir,L778M,778,Resistant,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L778M,778,Resistant,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L778M,778,Resistant,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D780N,780,Resistant,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Cidofovir,D780N,780,Sensitive,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D780N,780,Resistant,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Aciclovir,W781V,781,Resistant,25673718,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Foscarnet,W781V,781,Resistant,25673718,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L782I,782,Resistant,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Cidofovir,L782I,782,Sensitive,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L782I,782,Resistant,12829822,yes,no,"No, Pol only",VI,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q794H,794,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P797T,797,Resistant,2842788,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P797T,797,Resistant,2842788,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Penciclovir,E798K,798,Resistant,23315323,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,E798K,798,Sensitive,23315323,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E798K,798,Resistant,23315323,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,E798K,798,Sensitive,23315323,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E798K,798,Resistant,23315323,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,L802F,802,Resistant,29186456,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,L802F,802,Sensitive,17713155 29186456,yes,no,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Cidofovir,L802F,802,Resistant,17713155 29186456,yes,no,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,L802F,802,Resistant,17713155 29186456,yes,no,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Foscarnet,L802F,802,Resistant,17713155 29186456,yes,no,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,V813M,813,Resistant,9497069,yes,no,"No, Pol only",III,,HSV-1 Pol
+DNA Polymerase,Penciclovir,V813M*,813,Resistant,9497069,yes,no,"No, Pol only",III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V813M,813,Resistant,9497069,yes,no,"No, Pol only",III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,N815S,815,Resistant,"24747042
+3034575 29186456",yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Cidofovir,N815S,815,Sensitive,"24747042
+3034575 29186456",yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Penciclovir,N815S,815,Resistant,"24747042
+3034575 29186456",yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Brivudine,N815S,815,Sensitive,"24747042
+3034575 29186456",yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,N815S,815,Sensitive,29186456,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Penciclovir,Y818C,818,Resistant,24047739,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Brivudine,Y818C,818,Sensitive,24047739,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Cidofovir,Y818C,818,Resistant,24047739,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Y818C,818,Resistant,24047739,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Y818C,818,Resistant,24047739,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Penciclovir,T821M,821,Resistant,29186456,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T821M,821,Resistant,31970398,yes,yes,Yes,III,,HSV-1 Pol
+DNA Polymerase,Cidofovir,T821M,821,Resistant,31970398,yes,yes,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T821M,821,Resistant,"12829822
+17713155 29186456",yes,no,Yes,III,"17713155 not fact checked, no acces",HSV-1 Pol
+DNA Polymerase,Cidofovir,T821M,821,Sensitive/Resistant,17713155 29186456 12829822,yes,no,Yes,III,"17713155 not fact checked, no acces",HSV-1 Pol
+DNA Polymerase,Brivudine,T821M,821,Sensitive,"
+17713155 29186456",yes,no,Yes,III,"17713155 not fact checked, no acces",HSV-1 Pol
+DNA Polymerase,Foscarnet,T821M,821,Resistant,29186456,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T821M,821,Resistant,31970398,yes,yes,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P829S,829,Sensitive,34419483,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Cidofovir,P829S,829,Sensitive,34419483,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P829S,829,Sensitive,34419483,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G841S,841,Resistant,3034575,yes,no,"No, Pol only",III,,HSV-1 Pol
+DNA Polymerase,Cidofovir,G841C,841,Resistant,12709344,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G841C,841,Resistant,12709344,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G841S,841,Sensitive,3034575,yes,no,"No, Pol only",III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G841C,841,Resistant,12709344,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R842S,842,Resistant,9497069,yes,no,"No, Pol only",III,,HSV-1 Pol
+DNA Polymerase,Penciclovir,R842S*,842,Resistant,9497069,yes,no,"No, Pol only",III,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R842C,842,Intermediate,37453453,yes,no,Yes,III,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A854T,854,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A854T,854,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A857V,857,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E860K,860,Sensitive,"26055375
+27309375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,E860K,860,Sensitive,"
+27309375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,E860K,860,Sensitive,"26055375
+27309375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E860K,860,Sensitive,"
+27309375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q861R,861,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q861R,861,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L862F,862,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E868G,868,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E868G,868,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A870V,870,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A870G,870,Sensitive,"20733037
+",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A870G,870,Sensitive,"20733037
+",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A870V,870,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A870G,870,Sensitive,"20733037
+",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,D871N,871,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,D871N,871,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,D871N,871,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D871N,871,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D871N,871,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,M872V,872,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,M872V,872,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R873C,873,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A874T,874,Sensitive,25218782,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P875S,875,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P875S,875,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S724N,724,Resistant,"15040541
+24747042
+12829822
+23026414 29186456",yes,no,Yes,II,"15040541 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,S724N,724,Sensitive/Resistant,"15040541
+29186456 24747042",yes,no,Yes,II,"15040541 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,S889A,889,Resistant,8337848,yes,no,"No, Pol only",I,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S889A,889,Resistant,8337848,yes,no,"No, Pol only",I,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I890M,890,Resistant,28453848,yes,yes,Yes,I,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I890M,890,Resistant,28453848,yes,yes,Yes,I,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F891Y,891,Resistant,2173770,yes,no,"No, Pol only",I,,HSV-1 Pol
+DNA Polymerase,Aciclovir,F891C,891,Resistant,"2173770
+12829822
+9497069",yes,no,Yes,I,,HSV-1 Pol
+DNA Polymerase,Cidofovir,F891C,891,Sensitive,"2173770
+12829822
+9497069",yes,no,Yes,I,,HSV-1 Pol
+DNA Polymerase,Penciclovir,F891C,891,Resistant,"2173770
+12829822
+9497069",yes,no,Yes,I,,HSV-1 Pol
+DNA Polymerase,Foscarnet,F891C,891,Resistant,2173770 9497069 12829822,yes,no,Yes,I,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V892M,892,Resistant,2173770,yes,no,"No, Pol only",I,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G901V,901,Resistant,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V905M,905,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,V905M,905,Sensitive,"18336925
+20733037
+24055837
+23687576",yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V905M,905,Sensitive,"18336925
+20733037
+24055837
+23687576",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D907V,907,Resistant,"12829822
+16982796",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,D907V,907,Sensitive,"12829822
+16982796",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D907V,907,Resistant,12829822 16982796,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K908R,908,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K908Q,908,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K908N,908,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K908R,908,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K908Q,908,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K908N,908,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A910V,910,Sensitive,15673740,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A910V,910,Sensitive,15673740,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A910V,910,Sensitive,15673740,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Penciclovir,S911N,911,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Cidofovir,S911N,911,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,S911N,911,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Foscarnet,S911N,911,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Penciclovir,S914L,914,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Cidofovir,S914L,914,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,S914L,914,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Foscarnet,S914L,914,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,A916T,916,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A916T,916,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P920F,920,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P920S,920,Sensitive,"10395866
+18336925
+12829822",yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,P920S,920,Sensitive,"10395866
+18336925
+12829822",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P920F,920,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P920S,920,Sensitive,"10395866
+18336925
+12829822",yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,I922N,922,Sensitive,12709344,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I922N,922,Resistant,12709344,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,I922T,922,Sensitive,23315323,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,I922T,922,Sensitive,23315323,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I922T,922,Sensitive,23315323,yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I922N,922,Resistant,12709344,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I922T,922,Sensitive,23315323,yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E927D,927,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E927D,927,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T931I,931,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Y941H,941,Resistant,"14694096
+12829822",yes,no,Yes,VII,,HSV-1 Pol
+DNA Polymerase,Cidofovir,Y941H,941,Resistant,"14694096
+12829822",yes,no,Yes,VII,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I942L,942,Sensitive,24075863,yes,yes,Yes,VII,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I942L,942,Sensitive,24075863,yes,yes,Yes,VII,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Y946F,946,Sensitive,26055375,yes,no,Yes,VII,,HSV-1 Pol
+DNA Polymerase,Brivudine,G948C,948,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,G948C,948,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,G948C,948,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G948C,948,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G948C,948,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K949T,949,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,V958L,958,Resistant,15673740,yes,no,"No, Pol only",V,,HSV-1 Pol
+DNA Polymerase,Cidofovir,V958L,958,Sensitive,15673740,yes,no,"No, Pol only",V,,HSV-1 Pol
+DNA Polymerase,Aciclovir,V958L,958,Resistant,15673740,yes,no,"No, Pol only",V,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V958L,958,Resistant,15673740,yes,no,"No, Pol only",V,,HSV-1 Pol
+DNA Polymerase,Penciclovir,R959H,959,Resistant,29186456,yes,no,Yes,V,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R959H,959,Resistant,"17713155
+15673740 29186456",yes,no,Yes,V,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Cidofovir,R959H,959,Sensitive/Resistant,"17713155
+29186456 15673740 ",yes,no,Yes,V,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,R959H,959,Sensitive,"17713155
+15673740 29186456",yes,no,Yes,V,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Foscarnet,R959H,959,Resistant,17713155 15673740 29186456,yes,no,Yes,V,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,K960R,960,Sensitive,17713155,yes,no,"No, Pol only",V,,HSV-1 Pol
+DNA Polymerase,Aciclovir,K960R,960,Sensitive,17713155,yes,no,"No, Pol only",V,,HSV-1 Pol
+DNA Polymerase,Cidofovir,K960R,960,Resistant,17713155,yes,no,"No, Pol only",V,,HSV-1 Pol
+DNA Polymerase,Foscarnet,K960R,960,Sensitive,17713155,yes,no,Yes,V,,HSV-1 Pol
+DNA Polymerase,Cidofovir,N961K,961,Sensitive,"12829822
+
+",yes,no,Yes,V,,HSV-1 Pol
+DNA Polymerase,Aciclovir,N961K,961,Resistant,"12829822
+9497069
+2842788",yes,no,Yes,V,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I966M,966,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I966M,966,Sensitive,31152759,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,G985E,985,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Cidofovir,G985E,985,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,G985E,985,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Foscarnet,G985E,985,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Penciclovir,E992K,992,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Cidofovir,E992K,992,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,E992K,992,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Foscarnet,E992K,992,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,R993L,993,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A995T,995,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A995T,995,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,W998L,998,Sensitive,17713155,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Cidofovir,W998L,998,Resistant,17713155,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Aciclovir,W998L,998,Resistant,17713155,yes,no,"No, Pol only",,,HSV-1 Pol
+DNA Polymerase,Foscarnet,W998L,998,Sensitive,17713155,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1000T,1000,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1000T,1000,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1005K,1005,Sensitive,"22024514
+15456088",yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1005K,1005,Sensitive,"22024514
+15456088",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1012V,1012,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1012V,1012,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R1019G,1019,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R1019G,1019,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R1020H,1020,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,R1020C,1020,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,R1020C,1020,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,R1020C,1020,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R1020C,1020,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R1020C,1020,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T1022A,1022,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,I1028T,1028,Resistant,"12829822
+17713155",yes,no,Yes,,"17713155 not fact checked, no acces",HSV-1 Pol
+DNA Polymerase,Brivudine,I1028T,1028,Sensitive,"12829822
+17713155",yes,no,Yes,,"17713155 not fact checked, no acces",HSV-1 Pol
+DNA Polymerase,Foscarnet,Q1029R,1029,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1036K,1036,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1036K,1036,Intermediate,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D1070N,1070,Resistant,"17713155
+19691467",yes,no,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Brivudine,D1070N,1070,Sensitive,"17713155
+19691467",yes,no,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Foscarnet,D1070N,1070,Resistant,17713155 19691467,yes,no,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,V1077L,1077,Sensitive,"22024514
+",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,V1077L,1077,Sensitive,"22024514
+",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,Q1079K,1079,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,Q1079K,1079,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1082K,1082,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1082K,1082,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1084A,1084,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1084K,1084,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1084A,1084,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1084K,1084,Sensitive,24075863,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1085D,1085,Sensitive,"
+26055375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1085K,1085,Sensitive,"
+26055375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1085D,1085,Sensitive,"
+26055375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1085K,1085,Sensitive,"
+26055375",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T1086M,1086,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T1086M,1086,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1092D,1092,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1092D,1092,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1098T,1098,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1098T,1098,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1099T,1099,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1099T,1099,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1100V,1100,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1100T,1100,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1100V,1100,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1101L,1101,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P1101L,1101,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,D1103H,1103,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,D1103H,1103,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,D1103H,1103,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D1103H,1103,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1100T,1103,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,D1103H,1103,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1104K,1104,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1104D,1104,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1104K,1104,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1104D,1104,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1109T,1109,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1112L,1112,Sensitive,24075863,yes,yes,Yes,,"17713155 not fact checked, no access",HSV-1 Pol
+DNA Polymerase,Aciclovir,S1113C,1113,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S1113C,1113,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1114A,1114,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1114L,1114,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R1117L,1117,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T1121M,1121,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T1121M,1121,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,T1121M,1121,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T1121M,1121,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,S1123A,1123,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,S1123L,1123,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,S1123L,1123,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S1123A,1123,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,S1123L,1123,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1124H,1124,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,P1124H,1124,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1124S,1124,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1124H,1124,Sensitive,"14670581
+24055837",yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P1124H,1124,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P1124S,1124,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P1124H,1124,Sensitive,"14670581
+24055837",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1125S,1125,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1125S,1125,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1128L,1128,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P1128L,1128,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G1129V,1129,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,G1129R,1129,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,G1129V,1129,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1131T,1131,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1131T,1131,Sensitive,28453848,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A1147T,1147,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A1147T,1147,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A1147T,1147,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1147T,1147,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1147V,1147,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1147T,1147,Sensitive,22155911,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,I1150M,1150,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,I1150M,1150,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,H1152N,1152,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,D1159A,1159,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,L1166W,1166,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,L1166W,1166,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,L1166W,1166,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L1166W,1166,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L1166W,1166,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Brivudine,A1168V,1168,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Penciclovir,A1168V,1168,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,A1168V,1168,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1168V,1168,Sensitive,20211650,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1168V,1168,Sensitive,20211650,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1175D,1175,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1175D,1175,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1181T,1181,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1181T,1181,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,E1194D,1194,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,E1194D,1194,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,W1196G,1196,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,W1196H,1196,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1199L,1199,Sensitive,23687576,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,P1199Q,1199,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P1199L,1199,Sensitive,23687576,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,P1199Q,1199,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1203T,1203,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1203T,1203,Sensitive,14670581,yes,yes,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1204T,1204,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1204S,1204,Sensitive,37453453,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1204T,1204,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,T1208A,1208,Sensitive,27309375,yes,no,Yes,,Codetection of several other mutations,HSV-1 Pol
+DNA Polymerase,Aciclovir,T1208A,1208,Sensitive,"14670581
+24055837",yes,contradiction,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T1208A,1208,Sensitive,"14670581
+24055837",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1209T,1209,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,A1209T,1209,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1218S,1218,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,T1219M,1219,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,T1219M,1219,Sensitive,20733037,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1220V,1220,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,M1226I,1226,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,M1226I,1226,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Cidofovir,M1226I,1226,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,M1226I,1226,Sensitive,34419483,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,H1228D,1228,Resistant,24055837,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,R1229I,1229,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,R1229I,1229,Sensitive,"22024514
+20733037",yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,L1234I,1234,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Foscarnet,L1234I,1234,Sensitive,22024514,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,A1235T,1235,Sensitive,26055375,yes,no,Yes,,,HSV-1 Pol
+DNA Polymerase,Aciclovir,,683-688Del,Sensitive,37505438,yes,no,Yes,,,HSV-1 Pol
+UL5,Amenamevir,G352C,352,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL5,Amenamevir,M355T,355,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL5,Amenamevir,K356N,356,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL5/UL52,Amenamevir,K356N/Y222C,356/222,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL52,Amenamevir,F360C,360,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL52,Amenamevir,S364G/N902T,364/902,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL5,Amenamevir,G352V/C477D,352/477,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL52,Amenamevir,F360V,360,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL5/UL52,Amenamevir,M355T/F294L,355/294,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL5,Amenamevir,K356N/E34K,356/34,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL5,Amenamevir,K356N/S341I,356/341,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+UL52,Amenamevir,N902T,902,Resistant,34228537,yes,no,Yes,,,HSV-1 HPC
+Thymidine Kinase,Aciclovir,1-248Del,1,Resistant,24075863,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A19V,19,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G25A,25,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,G25A,25,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R26H,26,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A27T,27,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,S29A,29,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,S32Stop,32,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Brivudine,S32Stop,32,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Penciclovir,S32Stop,32,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R34C,34,Resistant,14670581,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G39E,39,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,G39E,39,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G39E,39,Sensitive,"
+26338148
+23041200",yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R51W,51,Sensitive,15042649,yes,yes,"No, TK only",ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Aciclovir,Y53N,53,Resistant,29427675,yes,no,Yes,ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Penciclovir,Y53N,53,Resistant,29427675,yes,no,Yes,ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Aciclovir,I54Stop,54,Resistant,11160674,yes,no,"No, TK only",ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Brivudine,I54Stop,54,Resistant,11160674,yes,no,"No, TK only",ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Penciclovir,I54Stop,54,Resistant,11160674,yes,no,"No, TK only",ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G59P,59,Resistant,"10395866
+11238837",yes,yes,Yes,ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G61W,61,Resistant,24075863,yes,yes,Yes,ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Aciclovir,K62N,62,Resistant,9697707,yes,yes,Yes,ATP-biding site,,HSV-2 TK
+Thymidine Kinase,Aciclovir,S66P,66,Resistant,23041200,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L69Stop,69,Resistant,11238837,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A72S,72,Resistant,23041200,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,N78D,78,Sensitive,"14670581
+11238837",yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,E84G,84,Resistant,31158412,no,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,M86Stop,86,Resistant,14670581,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,W89G,89,Resistant,35973907,no,yes,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A94V,94,Resistant,24075863,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,E96D,96,Sensitive,20733037,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L98Stop,98,Resistant,24075863,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,I101S,101,Resistant,23041200,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,Q105P,105,Resistant,1846499,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A119T,119,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,T131M,131,Sensitive,26338148,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,T131M,131,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,T131M,131,Sensitive,26338148 29427675,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,T131P,131,Resistant,"9697707
+11238837",yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,Y133F,133,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,Y133F,133,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A135P,135,Sensitive,20733037,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,D137Stop,137,Resistant,20733037,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,D137E,137,Sensitive,20733037,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L140F,140,Sensitive,"14670581
+11238837",yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,145fsx,145,Resistant,37586184,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G150D,150,Sensitive,26338148,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G150D,150,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,G150D,150,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A157T,157,Sensitive,26338148,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A157T,157,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,A157T,157,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A157T,157,Resistant,31158412,no,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L158P,158,Resistant,12771406,no,no,No access,,"No fact check, no access",HSV-2 TK
+Thymidine Kinase,Aciclovir,T159I,159,Resistant,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R177W,177,Resistant,8232486,yes,yes,"No, TK only",Nucleotide-binding site,,HSV-2 TK
+Thymidine Kinase,Aciclovir,S182D,182,Resistant,1846499,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,S182R,182,Resistant,1846499,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,S182N,182,Resistant,8392322,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,M183Stop,183,Resistant,1329374,no,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Brivudine,M183Stop,183,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Penciclovir,M183Stop,183,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,M183Stop,183,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,M183I,183,Resistant,"20733037
+23041200",yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,M183Stop,183,Resistant,24075863 1329374,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,T184Stop,184,Resistant,20733037,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,A190V,190,Resistant,37586184,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,G201D,201,Resistant,12771406,yes,no,No access,,"No fact check, no access",HSV-2 TK
+Thymidine Kinase,Aciclovir,A215T,215,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R217H,217,Resistant,9094663,yes,yes,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R217C,217,Resistant,31158412,no,yes,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R220K,220,Sensitive,14670581,yes,contradiction,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R221C,221,Resistant,24075863,yes,yes,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Penciclovir,R221H,221,Resistant,29427675,yes,no,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R221H,221,Resistant,29427675,yes,no,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,Q222Stop,222,Resistant,20733037,yes,no,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R223H,223,Resistant,2829709,yes,yes,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R223Stop,223,Resistant,9094663,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L228Stop,228,Resistant,35639560,no,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Brivudine,D229Stop,229,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Penciclovir,D229Stop,229,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,D229Stop,229,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,D229Stop,229,Resistant,"
+9697707
+9094663
+24075863",yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,Y239Stop,239,Resistant,14670581,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,N245S,245,Resistant,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R248W,248,Sensitive,26338148,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R248W,248,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,R248W,248,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,Q251R,251,Sensitive,22024514,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Brivudine,D259fsx,259,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Penciclovir,D259fsx,259,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,D259fsx,259,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R262Stop,262,Resistant,14670581,yes,contradiction,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L263Stop,263,Resistant,"24075863
+11238837 ",yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R272V,272,Resistant,9697707,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,P273S,273,Resistant,9697707,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,D274R,274,Resistant,9697707,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,R284S,284,Resistant,14670581,yes,contradiction,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,T288M,288,Resistant,9697707,yes,yes,"No, TK only",Conserved region,,HSV-2 TK
+Thymidine Kinase,Brivudine,T288fsx,288,Resistant,11160674,yes,no,"No, TK only",Conserved region,,HSV-2 TK
+Thymidine Kinase,Penciclovir,T288fsx,288,Resistant,11160674,yes,no,"No, TK only",Conserved region,,HSV-2 TK
+Thymidine Kinase,Aciclovir,T288fsx,288,Resistant,11160674,yes,no,"No, TK only",Conserved region,,HSV-2 TK
+Thymidine Kinase,Penciclovir,T288M,288,Resistant,29031157,yes,yes,Yes,Conserved region,test result was intermediate for one lab in publication,HSV-2 TK
+Thymidine Kinase,Aciclovir,T288M,288,Resistant,29031157  15572000,yes,yes,Yes,Conserved region,,HSV-2 TK
+Thymidine Kinase,Brivudine,I308fsx,308,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Penciclovir,I308fsx,308,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,I308fsx,308,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,M323Del,323,Resistant,12367650,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Brivudine,V335fsx,335,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Penciclovir,V335fsx,335,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,V335fsx,335,Resistant,11160674,yes,no,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,C337T,337,Resistant,9697707,yes,yes,"No, TK only",,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L342W,342,Sensitive,26338148,yes,yes,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,L342W,342,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Penciclovir,L342W,342,Sensitive,29427675,yes,no,Yes,,,HSV-2 TK
+Thymidine Kinase,Aciclovir,M348Stop,348,Resistant,"
+24075863 17854045 14670581 ",yes,yes,Yes,,,HSV-2 TK
+DNA Polymerase,Foscarnet,A9T,9,Sensitive,14670581,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A9T,9,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,G12R,12,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,G12R,12,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,P15S,15,Sensitive,14670581,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,P15S,15,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,P15R,15,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,P15R,15,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,P15R,15,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,P15R,15,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,P15R,15,Sensitive,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,Q34H,34,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,Q34H,34,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Q34H,34,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,Q34H,34,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Q34H,34,Resistant,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A36G,36,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A36G,36,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,P37L,37,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,P37L,37,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,C40W,40,Sensitive,22024514,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,C40W,40,Sensitive,22024514,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,R41H,41,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,R41H,41,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R41H,41,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,R41H,41,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R41H,41,Sensitive,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Q43R,43,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Q43R,43,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,H49Y,49,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,H49Y,49,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,T53A,53,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,T53A,53,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,L60P,60,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,L60P,60,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Q64R,64,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Q64R,64,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R101W,101,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R101W,101,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,L128S,128,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,L128S,128,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,E139K,139,Sensitive,14670581,contradiction,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E139K,139,Sensitive,14670581,contradiction,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,T144P,144,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,T144P,144,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,T202M,202,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,T202M,202,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R203Q,203,Sensitive,22024514,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R203Q,203,Sensitive,22024514,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,C226S,226,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,C226S,226,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,A232T,232,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,A232T,232,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A232T,232,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,A232T,232,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A232T,232,Sensitive,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,E250Q,250,Sensitive,14670581,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E250Q,250,Resistant,14670581,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A251V,251,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A251V,251,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D258N,258,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D258N,258,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R265H,265,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,N286Y,286,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,N286Y,286,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,N286Y,286,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,N286Y,286,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,N286Y,286,Sensitive,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A300T,300,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A300T,300,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D307N,307,Resistant,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D307N,307,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,G324E,324,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,G324E,324,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,F336L,336,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,F336L,336,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Q507H,507,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Q507H,507,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,K533E,533,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Penciclovir,K533E,533,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,K533E,533,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Cidofovir,K533E,533,Sensitive,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A547V,547,Sensitive,26338148,yes,yes,Yes,Exo III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A547V,547,Sensitive,26338148,yes,yes,Yes,Exo III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,K550Q,550,Sensitive,37453453,yes,no,Yes,Exo III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,K550Q,550,Sensitive,37453453,yes,no,Yes,Exo III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A606V,606,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A606V,606,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Penciclovir,A606V,606,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Cidofovir,A606V,606,Sensitive,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,C625R,625,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Penciclovir,C625R,625,Resistant,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Cidofovir,C625R,625,Sensitive,29186456,yes,no,"No, Pol only",Exo III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,C625R,625,Resistant,35973907 29186456,yes,yes,Yes,Exo III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R628G,628,Intermediate,29031157,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,R628G,628,Intermediate,29031157,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R628G,628,Resistant,29031157,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,R628G,628,Intermediate,29031157,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,R628C,628,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Cidofovir,R628C,628,Sensitive,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R628C,628,Resistant,35973907,no,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R628C,628,Resistant,37586184,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R628C,628,Sensitive/Resistant,26338148 29186456,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R628C,628,Sensitive/Resistant,26338148 29186456,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R645W,645,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R645W,645,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,G646S,646,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,G646S,646,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D671N,671,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D671N,671,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D676G,676,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D676N,676,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D676G,676,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D676N,676,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,DD676-677Del,677,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,DD676-677Del,677,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E678Q,678,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E678G,678,Sensitive,"20733037
+26338148",yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,E678G,678,Sensitive,"20733037
+26338148",yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,E678G,678,Sensitive,"20733037
+26338148",yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,DED677-679Del,679,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,DED677-679Del,679,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,G680R,680,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,G680R,680,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,G680D,680,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,G680D,680,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,GD681-682Del,682,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,E682K,682,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,GD681-682Del,682,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E682K,682,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E682G,682,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,E682G,682,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,ED682-683Del,683,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,ED682-683Del,683,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,684Ins,684,Intermediate,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,ED684-685Ins,685,Resistant,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,ED684-685Ins,685,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,DGDE683-686Ins,686,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,DGDE683-686Del,686,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,DGDE683-686Ins,686,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,GD686-687Ins,687,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,GD686-687Ins,687,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D708N,708,Sensitive,26338148,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D708N,708,Sensitive,26338148,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D716N,716,Sensitive,14670581,yes,no,Yes,II,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D716N,716,Sensitive,14670581,yes,contradiction,Yes,II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A724T,724,Resistant,29186456,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A724T,724,Resistant,29186456,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A724V,724,Resistant,20733037,yes,no,Yes,II,,HSV-2 Pol
+DNA Polymerase,Cidofovir,A724V,724,Sensitive,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A724V,724,Resistant,20733037 29186456,yes,no,Yes,II,,HSV-2 Pol
+DNA Polymerase,Penciclovir,A724V,724,Sensitive,29186456,yes,no,Yes,II,,HSV-2 Pol
+DNA Polymerase,Aciclovir,S725G,725,Resistant,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Penciclovir,S725G,725,Sensitive,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Cidofovir,S725G,725,Sensitive,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,S725G,725,Resistant,12367650 29186456,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Cidofovir,S729N,729,Sensitive,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Penciclovir,S729N,729,Resistant,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,S729N,729,Resistant,10395866 29186456,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Aciclovir,S729N,729,Sensitive/Resistant,10395866 29186456,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Aciclovir,I731F,731,Resistant,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Penciclovir,I731F,731,Sensitive,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,I731F,731,Resistant,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Cidofovir,I731F,731,Resistant,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Penciclovir,Q732R,732,Resistant,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Cidofovir,Q732R,732,Sensitive,29186456,yes,no,"No, Pol only",II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Q732R,732,Resistant,24075863 29186456,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Q732R,732,Resistant,24075863 29186456,yes,yes,Yes,II,,HSV-2 Pol
+DNA Polymerase,Foscarnet,E746K,746,Sensitive,22155911,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E746K,746,Sensitive,22155911,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,L783M,783,Resistant,10395866,yes,yes,Yes,VI,,HSV-2 Pol
+DNA Polymerase,Cidofovir,L783M,783,Resistant,10395866,yes,no,Yes,VI,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D785N,785,Resistant,10395866,yes,yes,Yes,VI,,HSV-2 Pol
+DNA Polymerase,Cidofovir,D785N,785,Resistant,10395866,yes,no,Yes,VI,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D785N,785,Sensitive,10395866,yes,yes,Yes,VI,,HSV-2 Pol
+DNA Polymerase,Aciclovir,M789T,789,Resistant,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Penciclovir,M789T,789,Resistant,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Foscarnet,M789T,789,Resistant,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Cidofovir,M789T,789,Sensitive,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Aciclovir,M789K,789,Resistant,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Penciclovir,M789K,789,Resistant,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Foscarnet,M789K,789,Resistant,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Cidofovir,M789K,789,Sensitive,29186456,yes,no,"No, Pol only",VI,,HSV-2 Pol
+DNA Polymerase,Aciclovir,P798H,798,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,P798H,798,Sensitive,37453453,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Q799R,799,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Q799R,799,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,T801P,801,Sensitive,"14670581
+20211650",yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,T801P,801,Sensitive,"
+20211650",yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,T801P,801,Sensitive,"
+20211650",yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,T801P,801,Sensitive,"14670581
+20211650",yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,T801P,801,Sensitive,"14670581
+20211650",yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,V818A,818,Resistant,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Penciclovir,V818A,818,Resistant,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,V818A,818,Resistant,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Cidofovir,V818A,818,Sensitive,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,N820S,820,Resistant,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Penciclovir,N820S,820,Resistant,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,N820S,820,Sensitive,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Cidofovir,N820S,820,Sensitive,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Y823C,823,Resistant,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Penciclovir,Y823C,823,Sensitive,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Y823C,823,Resistant,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Cidofovir,Y823C,823,Sensitive,29186456,yes,no,"No, Pol only",III,,HSV-2 Pol
+DNA Polymerase,Foscarnet,Q829R,829,Sensitive,24075863,yes,yes,Yes,III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,Q829R,829,Resistant,24075863,yes,yes,Yes,III,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R847C,847,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Penciclovir,R847C,847,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R847C,847,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Cidofovir,R847C,847,Sensitive,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Foscarnet,L850I,850,Resistant,10395866,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,L850I,850,Resistant,10395866,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,L850I,850,Sensitive,10395866,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A869D,869,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A869D,869,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A879V,879,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A879V,879,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,P880H,880,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,P880H,880,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,P880H,880,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,P880H,880,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,P880H,880,Sensitive,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,T903M,903,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,T903M,903,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A904G,904,Sensitive,14670581,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A904G,904,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A905E,905,Sensitive,14670581,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A905E,905,Sensitive,14670581,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,M910T,910,Resistant,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,M910T,910,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,M910I,910,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D912V,912,Resistant,10395866,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,D912V,912,Sensitive,10395866,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D912V,912,Resistant,10395866,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,D912N,912,Resistant,"14670581
+10817703",yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,D912N,912,Sensitive,"14670581
+10817703",yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,K913M,913,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,K913M,913,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A915V,915,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A915V,915,Resistant,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,F923L,923,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Penciclovir,F923L,923,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Foscarnet,F923L,923,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Cidofovir,F923L,923,Sensitive,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Penciclovir,T934A,934,Resistant,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Cidofovir,T934A,934,Sensitive,29186456,yes,no,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Aciclovir,T934A,934,Resistant,37586184 29186456,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,T934A,934,Resistant,37586184 29186456,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R964H,964,Resistant,29186456,yes,no,"No, Pol only",V,,HSV-2 Pol
+DNA Polymerase,Penciclovir,R964H,964,Sensitive,29186456,yes,no,"No, Pol only",V,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R964H,964,Resistant,29186456,yes,no,"No, Pol only",V,,HSV-2 Pol
+DNA Polymerase,Cidofovir,R964H,964,Sensitive,29186456,yes,no,"No, Pol only",V,,HSV-2 Pol
+DNA Polymerase,Foscarnet,T987S,987,Sensitive,22024514,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,T987S,987,Sensitive,22024514,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,L995F,995,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,L995F,995,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,L995F,995,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,L995F,995,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,L995F,995,Sensitive,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A1000T,1000,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A1000T,1000,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R1025H,1025,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R1025H,1025,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Brivudine,I1026S,1026,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Penciclovir,I1026S,1026,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,I1026S,1026,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Cidofovir,I1026S,1026,Sensitive,20211650,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,I1026S,1026,Sensitive,20211650,yes,contradiction,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A1083T,1083,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A1083T,1083,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,PGDEPA1106-1111Del,1111,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,PGDEPA1106-1111Del,1111,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A1114V,1114,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A1114V,1114,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,APGDEPA1112-1119Ins,1119,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,APGDEPA1112-1119Ins,1119,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R1124G,1124,Resistant,33947276,no,yes,"No, Pol only",,,HSV-2 Pol
+DNA Polymerase,Foscarnet,E1149G,1149,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,E1149G,1149,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A1156T,1156,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A1156T,1156,Sensitive,24075863,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A1209V,1209,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A1209V,1209,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,A1223V,1223,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,A1223V,1223,Sensitive,20733037,yes,no,Yes,,,HSV-2 Pol
+DNA Polymerase,Foscarnet,R1230Q,1230,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+DNA Polymerase,Aciclovir,R1230Q,1230,Sensitive,26338148,yes,yes,Yes,,,HSV-2 Pol
+UL5,Pritelivir,H334R,334,Sensitive,27056950,yes,yes,Yes,,,HSV-2 HPC
+UL5,Pritelivir,N341K,341,Resistant,27056950,yes,yes,Yes,,,HSV-2 HPC
+UL5,Pritelivir,G351R,351,Resistant,27056950,yes,no,Yes,,,HSV-2 HPC
+UL5,Pritelivir,K355N,355,Resistant,27056950,yes,yes,Yes,,,HSV-2 HPC
+UL52,Pritelivir,A906T,906,Resistant,27056950,yes,yes,Yes,,,HSV-2 HPC
+UL5,Amenamevir,K355R ,355,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5,Amenamevir,I340V,340,Intermediate,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5,Amenamevir,G351R,351,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5,Amenamevir,K355N,355,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5,Amenamevir,K355E,355,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5/UL52,Amenamevir,K355R/T31A,355/31,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5/UL52,Amenamevir,M354I/R397G,354/397,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5/UL52,Amenamevir,K355N/F363S,355/363,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5/UL52,Amenamevir,T39A/H913Q,39/913,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC
+UL5/UL52,Amenamevir,N97T/S290N,97/290,Resistant,34228537,yes,no,Yes,,,HSV-2 HPC

@@ -1,0 +1,612 @@
+{
+  "hitCount": 1,
+  "nextCursorMark": "",
+  "results": [
+    {
+      "id": "39772124",
+      "source": "MED",
+      "pmid": "39772124",
+      "pmcid": "PMC11680290",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC11680290"
+        ]
+      },
+      "doi": "10.3390/v16121813",
+      "title": "A Mutation in the Herpes Simplex Virus Type 1 (HSV-1) UL29 Gene is Associated with Anti-Herpesvirus Drugs' Susceptibility.",
+      "authorString": "Yamada S, Harada S, Fujii H, Kinoshita H, Nguyen PHA, Shibamura M, Yoshikawa T, Kawahara M, Ebihara H, Saijo M, Fukushi S.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Yamada S",
+            "lastName": "Yamada",
+            "firstName": "Souichi",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Harada S",
+            "lastName": "Harada",
+            "firstName": "Shizuko",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fujii H",
+            "lastName": "Fujii",
+            "firstName": "Hikaru",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Faculty of Veterinary Medicine, Okayama University of Science, Imabari 794-8555, Ehime, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kinoshita H",
+            "lastName": "Kinoshita",
+            "firstName": "Hitomi",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nguyen PHA",
+            "lastName": "Nguyen",
+            "firstName": "Phu Hoang Anh",
+            "initials": "PHA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shibamura M",
+            "lastName": "Shibamura",
+            "firstName": "Miho",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-1600-6242"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Center for Surveillance, Immunization and Epidemiologic Research, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yoshikawa T",
+            "lastName": "Yoshikawa",
+            "firstName": "Tomoki",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kawahara M",
+            "lastName": "Kawahara",
+            "firstName": "Madoka",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ebihara H",
+            "lastName": "Ebihara",
+            "firstName": "Hideki",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Saijo M",
+            "lastName": "Saijo",
+            "firstName": "Masayuki",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                },
+                {
+                  "affiliation": "Health and Welfare Bureau, Sapporo City 060-8611, Hokkaido, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fukushi S",
+            "lastName": "Fukushi",
+            "firstName": "Shuetsu",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0002-1600-6242"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "12",
+        "volume": "16",
+        "journalIssueId": 3876562,
+        "dateOfPublication": "2024 Nov",
+        "monthOfPublication": 11,
+        "yearOfPublication": 2024,
+        "journal": {
+          "medlineAbbreviation": "Viruses",
+          "title": "Viruses",
+          "essn": "1999-4915",
+          "issn": "1999-4915",
+          "isoabbreviation": "Viruses",
+          "nlmid": "101509722"
+        },
+        "printPublicationDate": "2024-11-01"
+      },
+      "pubYear": "2024",
+      "pageInfo": "1813",
+      "abstractText": "Herpes simplex virus type 1 (HSV-1) acyclovir (ACV) resistance is acquired by mutations in the viral thymidine kinase (TK) or DNA polymerase (DNApol) genes. We previously obtained an ACV-resistant clone (HSV-1_VZV_TK_clone \u03b1) by sequential passages of HSV-1_VZV-TK, a recombinant virus which lacked its endogenous TK activity and instead expressed the varicella-zoster virus (VZV) TK ectopically. HSV-1_VZV_TK_clone \u03b1 had been generated using an HSV-1_BAC in the presence of increasing concentrations of ACV. The ACV-resistant clone bore normal TK and DNApol genes. Here, we deployed next-generation full-genome sequencing of HSV-1_VZV_TK_clone \u03b1 and identified a single nucleotide substitution, resulting in a P597L missense mutation in the UL29 gene product, the ICP8 protein. Recombinant HSV-1 encoding a P597L ICP8 protein was generated, and its properties and ability to confer drug resistance were analyzed. No difference in virus growth and UL29 expression was observed between the mutant recombinant, the wild type, and a revertant mutant viral strain, and susceptibility tests of these strains to ACV and other drugs using Vero, HEL, and ARPE19 cells identified that the recombinant UL29 mutant virus was resistant only to ACV. These results indicate that ICP8 may be involved in the anti-herpesvirus drugs' mechanism of action on HSV-1.",
+      "affiliation": "Department of Virology 1, National Institute of Infectious Diseases, Tokyo 162-8640, Japan.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "Research Support, Non-U.S. Gov't",
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "15K19594",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "JP22fk0108634",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "20K06404",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "24591591",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "21591402, 24591591, 15K09675, 15K19594, 18K07894, 20K06404, and 21K05967",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "H21-Shinko-Ippan-009",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "15K09675",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "21591402",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "18K07894",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "21K05967",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "15K09675",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "15K19594",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "18K07894",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "21591402",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "21K05967",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "24591591",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Education, Culture, Sports, Science, and Technology of Japan",
+            "grantId": "JP22fk0108634",
+            "orderIn": 0
+          },
+          {
+            "agency": "Ministry of Health, Labor and Welfare Science Research Grant",
+            "grantId": "20K06404",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Vero Cells"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Herpesvirus 1, Human",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DE",
+                  "qualifierName": "drug effects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Herpes Simplex",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "VI",
+                  "qualifierName": "virology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Acyclovir",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PD",
+                  "qualifierName": "pharmacology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TU",
+                  "qualifierName": "therapeutic use"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "DNA-Directed DNA Polymerase",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Thymidine Kinase",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "DNA-Binding Proteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Viral Proteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Antiviral Agents",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PD",
+                  "qualifierName": "pharmacology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TU",
+                  "qualifierName": "therapeutic use"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Microbial Sensitivity Tests"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Drug Resistance, Viral",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mutation, Missense"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Genes, Viral"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Chlorocebus aethiops"
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Drug resistance",
+          "Acyclovir",
+          "Herpes Simplex Virus Type 1 (Hsv-1)",
+          "Ul29"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Antiviral Agents",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Viral Proteins",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Thymidine Kinase",
+            "registryNumber": "EC 2.7.1.21"
+          },
+          {
+            "name": "DNA-Directed DNA Polymerase",
+            "registryNumber": "EC 2.7.7.7"
+          },
+          {
+            "name": "DNA-Binding Proteins",
+            "registryNumber": "0"
+          },
+          {
+            "name": "ICP8 protein, Simplexvirus",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Acyclovir",
+            "registryNumber": "X4HES1O11F"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "doi",
+            "site": "Unpaywall",
+            "url": "https://doi.org/10.3390/v16121813"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3390/v16121813"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11680290"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11680290?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 1,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "gen"
+        ]
+      },
+      "dateOfCompletion": "2025-01-24",
+      "dateOfCreation": "2025-01-08",
+      "dateOfRevision": "2025-06-02",
+      "electronicPublicationDate": "2024-11-21",
+      "firstPublicationDate": "2024-11-21",
+      "firstIndexDate": "2025-01-15",
+      "fullTextReceivedDate": "2025-12-02",
+      "hasEvaluations": "N"
+    }
+  ]
+}

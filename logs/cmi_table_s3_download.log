@@ -1,0 +1,14 @@
+=== CMI 2025 Review Table S3 & Corrigendum Access Log ===
+
+Attempting download for Table_S3_mmc3: https://ars.els-cdn.com/content/image/1-s2.0-S1198743X2500237X-mmc3.xlsx
+  -> SUCCESS: HTTP 200, Downloaded 105,416 bytes, SHA-256: 760ab5f4e3185d5e22b6e37c92097c752e053a72ec274a20c1ed8daca81ceb52
+Attempting download for Corrigendum: https://doi.org/10.1016/j.cmi.2026.01.010
+  -> FAILED / INACCESSIBLE: Exact Error: URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>
+Attempting download for Main_Article_DOI: https://doi.org/10.1016/j.cmi.2025.04.046
+  -> FAILED / INACCESSIBLE: Exact Error: URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>
+
+=== Verification of Local Workspace Supplement Files ===
+Local file 'mmc3.xlsx' found: 105,416 bytes, SHA-256: 760ab5f4e3185d5e22b6e37c92097c752e053a72ec274a20c1ed8daca81ceb52
+  Sheets present: ['HSV-1 TK', 'HSV-1 Pol', 'HSV-1 HPC', 'HSV-2 TK', 'HSV-2 Pol', 'HSV-2 HPC']
+  First sheet headers: ['Gene', 'Drug', 'AA change', 'AA position', 'Resistance', 'PMIDs', 'resistance status confirmed in cell culture', 'clinical susceptibility information available']
+Local main paper PDF found: 740,529 bytes, SHA-256: 621a93c7d51995eb00aed905635b25b575eaf57c12ef2474504305cce5978b90

@@ -1,0 +1,29 @@
+=== Publication Year Temporal Split Methodology & Provenance Log ===
+Database: herpesdrg-db.tsv (Active HSV-1 and HSV-2 rows: 951)
+DOIs resolved via: Crossref REST API (cached in logs/doi_pub_years.json)
+
+CRITICAL PROVENANCE DISTINCTIONS:
+1. Curation Date vs Publication Year:
+   - The raw database column 'created_date' records when Oscar J. Charles entered the record (mostly 2019-2021).
+   - 'created_date' was NOT used for temporal partitioning, as that would reflect database curator workflow, not science.
+   - The temporal split was computed strictly from resolved Crossref DOI publication years ('paper_pub_year').
+
+2. Publication Year vs True First-Report Year:
+   - This split is strictly a 'Publication Year Split' (the date of the publication reporting the measurement in the database).
+   - It is NOT a 'First-Report Year' in the epidemiological sense, because modern benchmark/surveillance papers (e.g., Schmidt et al. AAC 2015, Charles et al. 2024) frequently re-phenotype or re-survey historic mutations originally isolated in the 1980s or 1990s.
+   - All claims must label this partition as 'Publication Year Partition', not 'First-Report Year'.
+
+EMPIRICAL PARTITION COUNTS (Cutoff: January 1, 2016):
+- Pre-2016 Corpus (Training):
+    * Total Rows: 725
+    * Distinct Mutations (gene + aa_change): 569
+- Post-2016 Corpus (Prospective Test):
+    * Total Rows: 226
+    * Distinct Mutations (gene + aa_change): 189
+- Overlapping Mutations present in both Pre- and Post-2016 papers: 57
+- Novel Mutations appearing only in Post-2016 papers: 132
+
+Condition Check (Protocol Section 1.5, Option A):
+- Requirement: At least 30 post-cutoff mutations.
+- Actual Post-2016 rows: 226 (189 mutations, 132 novel).
+- Verdict: PASSES Option A threshold (>= 30).

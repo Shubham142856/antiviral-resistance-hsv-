@@ -1,0 +1,71 @@
+=== Novelty Searches Execution Log ===
+Execution Date: 2026-10-28
+
+Query 1: ("HSV" OR "herpes") ("resistance benchmark" OR "benchmark dataset") ("polymorphism" OR "grouped split")
+  Hits found: 8, Screened: 8
+    1. [Machine Learning in Preclinical Development of Antiviral Peptide Candidates: A Review of the Current Landscape | https://doi.org/10.3390/v18020260]
+    2. [Abstracts | ]
+    3. [2020 CIS Annual Meeting: Immune Deficiency & Dysregulation North American Conference | https://doi.org/10.1007/s10875-020-00764-z]
+    4. [ESICM LIVES 2026 | https://doi.org/10.1186/s40635-026-00962-w]
+    5. [UEG Week 2023 Oral Presentations | ]
+    6. [Abstracts from the 52nd European Society of Human Genetics (ESHG) Conference: Posters | ]
+    7. [UEG Week 2024 Poster Presentations | ]
+    8. [The 29(th) Annual Symposium of the Protein Society, Barcelona, Spain, July 22-25, 2015 | https://doi.org/10.1002/pro.2823]
+
+Query 2: ("data leakage" OR "group split" OR "position split") ("viral resistance" OR "antiviral") machine learning
+  Hits found: 183, Screened: 10
+    1. [Computational Methods in Drug Development: From Molecular Modeling to Artificial Intelligence Technologies | https://doi.org/10.3390/ph19081266]
+    2. [Active Learning for the Discovery of Antiviral Polymers | ]
+    3. [Mutation-Aware Machine Learning Framework for Predicting Binding Affinity of Nirmatrelvir Analogs Targeting Coronavirus Main Proteases | https://doi.org/10.3390/molecules31172949]
+    4. [Integrated pathogen detection and immune profiling in posner-schlossman syndrome: a metagenomic and cytokine approach | ]
+    5. [Postherpetic neuralgia risk prediction in hospitalised patients with herpes zoster based on MIMIC-IV | https://doi.org/10.1097/md.0000000000049164]
+    6. [Development of a Machine Learning Model to Predict Short Duration HCV Treatment Response | https://doi.org/10.1111/jvh.70229]
+    7. [Machine learning-based prediction of SARS-CoV-2 bioactivity: integrating IC&lt;sub&gt;50&lt;/sub&gt; regression and activity classification using multi-task neural networks | https://doi.org/10.1186/s12859-026-06573-2]
+    8. [Boosting the Predictive Power of Virus-Specific T-Cell Clinical Trials via Generative Models | https://doi.org/10.34133/csbj.0208]
+    9. [CEEMDAN-decomposed time series forecasting of reported hepatitis B cases using KOA-optimised deep learning: a nationwide study in mainland China (2004-2027) | https://doi.org/10.7189/jogh.16.04200]
+    10. [Predicting biliary complications after liver transplantation: a machine learning and nomogram-based exploratory study | https://doi.org/10.1186/s12876-026-04924-0]
+
+Query 3: ("herpes simplex" OR "HSV") ("protein language model" OR "ESM" OR "ProtBERT") ("resistance prediction" OR "antiviral")
+  Hits found: 145, Screened: 10
+    1. [Next-generation antiviral peptides: AI-driven design, translational delivery platforms, and future therapeutic directions | https://doi.org/10.1016/j.virusres.2025.199642]
+    2. [Bridging antiviral drug discovery with a large language model-powered framework | https://doi.org/10.1038/s42003-026-10291-z]
+    3. [Exploring the repository of de novo-designed bifunctional antimicrobial peptides through deep learning | https://doi.org/10.7554/elife.97330]
+    4. [Antiviral Potential and Chemical Composition of Wild <i>Baccharis crispa</i> Spreng. Populations (Asteraceae) from Córdoba, Argentina: Perspective on Population Variability | https://doi.org/10.3390/plants13213077]
+    5. [PMAVP: A Mamba-Inspired Deep Learning Framework for Antiviral Peptide Identification and Functional Activity Prediction | https://doi.org/10.3390/ijms27177764]
+    6. [How Feasible is the Use of Saliva for Antiviral Therapeutic Drug Monitoring? A Systematic Review and Analysis | https://doi.org/10.1007/s40262-026-01675-9]
+    7. [Reverse vaccinology-based design of multivalent multiepitope mRNA vaccines targeting key viral proteins of Herpes Simplex Virus type-2 | https://doi.org/10.3389/fimmu.2025.1586271]
+    8. [Leveraging Different Distance Functions to Predict Antiviral Peptides with Geometric Deep Learning from ESMFold-Predicted Tertiary Structures | https://doi.org/10.3390/antibiotics15010039]
+    9. [AI-Driven Enzyme Engineering: Emerging Models and Next-Generation Biotechnological Applications | https://doi.org/10.3390/molecules31010045]
+    10. [Infection prophylaxis following anti-CD20 monoclonal antibodies in childhood kidney diseases | https://doi.org/10.1007/s00467-026-07180-2]
+
+Query 4: ("pathway gate" OR "pathway constrained" OR "drug-conditioned") ("antiviral resistance" OR "mutation prediction")
+  Hits found: 0, Screened: 0
+
+Query 5: ("temporal split" OR "prospective validation") ("antiviral resistance" OR "resistance mutations")
+  Hits found: 317, Screened: 10
+    1. [Integrating single-cell and spatial multi-omics for precision oncology: from tumor ecosystems to clinical decision-making | https://doi.org/10.3389/fonc.2026.1936192]
+    2. [Refining Lung Cancer Care: The Emerging Role of Liquid Biopsy in Screening, Diagnosis, and Precision Oncology | https://doi.org/10.3390/cancers18193140]
+    3. [A federated digital twin reveals cytomegalovirus reactivation impairs CAR-T cell therapy via IL-15-mediated cytokine competition in B-Cell lymphoma | https://doi.org/10.3389/fimmu.2026.1844927]
+    4. [ctDNA-guided precision therapy with trastuzumab deruxtecan plus pyrotinib in HER2-positive breast cancer brain metastases: a case report | https://doi.org/10.3389/fonc.2026.1826447]
+    5. [Inferring tissue origin from cell-free DNA in metastatic cancer | https://doi.org/10.1007/s10555-026-10386-3]
+    6. [Multimodal data fusion: integrating PET/MRI and liquid biopsy for a holistic view of cancer biology | https://doi.org/10.3389/fonc.2026.1775271]
+    7. [Rethinking biomarker strategy in gastric cancer immunotherapy: from tumor to host | https://doi.org/10.3389/fimmu.2026.1847526]
+    8. [Liquid biopsy in cancer drug resistance: real-time monitoring, mechanistic insights, and translational applications | https://doi.org/10.3389/fimmu.2026.1795789]
+    9. [Influenza virus research in an era of emerging respiratory threats: host–virus interactions, surveillance technologies, antiviral management and resistance, and vaccine preparedness | ]
+    10. [Integrating Radiogenomics and CSF-Based Liquid Biopsy Sequencing for Precision Neuro-Oncology | https://doi.org/10.3390/ijms27177619]
+
+Query 6: ("recombinant" OR "engineered") ("double mutant" OR "epistasis") ("UL23" OR "UL30") ("acyclovir" OR "foscarnet")
+  Hits found: 14, Screened: 10
+    1. [Strategies and efforts in circumventing the emergence of antiviral resistance against conventional antivirals | https://doi.org/10.1038/s44259-025-00125-z]
+    2. [A Mutation in the Herpes Simplex Virus Type 1 (HSV-1) UL29 Gene is Associated with Anti-Herpesvirus Drugs' Susceptibility | https://doi.org/10.3390/v16121813]
+    3. [Discovery of a Baloxavir-Inspired Endonuclease Inhibitor That Prevents Herpes Simplex Virus 1 Replication in Cell Culture and In Vivo | https://doi.org/10.1002/advs.202508006]
+    4. [Antitumor power of oncolytic HSV engineered with IL-12 and IL-15 | https://doi.org/10.1016/j.omton.2025.201025]
+    5. [Structural basis of herpesvirus helicase-primase inhibition by pritelivir and amenamevir | https://doi.org/10.1126/sciadv.adz1989]
+    6. [Analysis of Novel Drug-Resistant Human Cytomegalovirus DNA Polymerase Mutations Reveals the Role of a DNA-Binding Loop in Phosphonoformic Acid Resistance | https://doi.org/10.3389/fmicb.2022.771978]
+    7. [Perspectives on immunotherapy via oncolytic viruses | https://doi.org/10.1186/s13027-018-0218-1]
+    8. [Targeting Nucleotide Biosynthesis: A Strategy for Improving the Oncolytic Potential of DNA Viruses | https://doi.org/10.3389/fonc.2017.00229]
+    9. [Reduction in severity of a herpes simplex virus type 1 murine infection by treatment with a ribozyme targeting the UL20 gene RNA | https://doi.org/10.1128/jvi.02720-07]
+    10. [Herpes simplex virus type 1 prereplicative sites are a heterogeneous population: only a subset are likely to be precursors to replication compartments | https://doi.org/10.1128/jvi.71.6.4771-4781.1997]
+
+Query 7: ("prospective experimental testing" OR "recombinant assay") "UL5" "UL52" "pritelivir"
+  Hits found: 0, Screened: 0

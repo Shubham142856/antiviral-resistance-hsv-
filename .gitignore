@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
+.env
+
+# Nested git in cloned sub-repos
+herpesdrg-db/.git/
+herpesdrg/.git/
+data/raw/herpesdrg-db/.git/
+
+# Elsevier supplementary files — do NOT redistribute
+mmc1.docx
+mmc2.docx
+mmc3.xlsx
+PIIS*.pdf
+data/raw/cmi_2025/Table_S3_mmc3.bin
+data/raw/cmi_2025_mmc3.xlsx
+
+# Large raw database files (tracked via SHA-256 in AUDIT_REPORT.md)
+herpesdrg-db/herpesdrg-db.tsv
+data/raw/herpesdrg-db/herpesdrg-db.tsv
+
+# System / OS
+.DS_Store
+Thumbs.db

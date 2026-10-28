@@ -1,0 +1,33 @@
+=== Rostlab/prot_bert_bfd LoRA Architecture Measurement Log ===
+Source: HuggingFace Hub (Rostlab/prot_bert_bfd/config.json)
+
+Config Parameters:
+  - model_type: bert
+  - num_hidden_layers (L): 30
+  - hidden_size (d_model): 1024
+  - intermediate_size (d_ff): 4096
+  - num_attention_heads: 16
+  - vocab_size: 30
+  - max_position_embeddings: 40000
+  - type_vocab_size: 2
+
+Exact Base Parameter Breakdown:
+  - Embeddings: 40,994,816
+  - Per Encoder Layer: 12,596,224
+  - Total Encoder (30 layers): 377,886,720
+  - Pooler Layer: 1,049,600
+  - Total Base BertModel Parameters: 419,931,136 (~419.93M)
+
+LoRA Adaptation (r=8, alpha=16, target_modules=['query', 'value']):
+  - Adapters per layer:
+      * query (A: 1024x8, B: 8x1024) = 16,384 params
+      * value (A: 1024x8, B: 8x1024) = 16,384 params
+      * Total per layer: 32,768 params
+  - Total Trainable LoRA Parameters across 30 layers: 983,040
+  - Trainable Fraction of Base Model (419,931,136): 0.2341%
+  - Trainable Fraction of Nominal 420M: 0.2341%
+
+Comparison with Previous Report Assertion:
+  - Previous Assertion: 1,179,648 parameters (0.28%)
+  - Cause of Discrepancy: 1,179,648 corresponds to 36 layers (36 x 32,768), typical of a 36-layer architecture.
+  - Measured Value: Exactly 983,040 parameters across the 30 layers of ProtBERT.

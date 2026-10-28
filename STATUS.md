@@ -1,0 +1,45 @@
+# STATUS.md: Audit Rectification & Evidence Register
+
+**Project:** HSV Antiviral-Resistance Mutation Prediction (Paper 2)  
+**Date:** 2026-10-28  
+**Audit Protocol Version:** `AUDIT_PROTOCOL.md` (Strict Version 4, Frozen)  
+**Governing Standard:** Evidence-based audit; zero unverified assertions; strict provenance.
+
+---
+
+## Audit Rectification Deliverables (Items 1–10)
+
+| Item | Requirement | Status | Evidence File Name | Summary of Findings & Audit Action |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. CITATIONS** | Resolve all DOIs/PMIDs, verify FDA NDAs & PRIME venue | **DONE** | [`logs/citation_check.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/citation_check.tsv) | 40 identifiers audited via live Crossref, PubMed, and openFDA APIs. 26 confirmed matches, 14 flagged/fixed mismatches. Confirmed FDA NDA 020255 (Famvir/famciclovir, 1994) vs NDA 020068 (Foscavir/foscarnet, 1991). Confirmed PRIME publication venue is *BMC Genomics* (DOI: 10.1186/s12864-026-12976-5), not Nature Communications. Corrected 5 mismatched PMIDs (Coen & Schaffer: 6246531, Kawakami: 34228537, Biswas: 19403757, Field & Biswas: 21183396, ProtTrans: 34232869). |
+| **2. LORA** | Measure ProtBERT-BFD architecture and LoRA trainable params | **DONE** | [`logs/lora_measurement.log`](file:///d:/antiviral-resistance-hsv--1/logs/lora_measurement.log) | Loaded config from HuggingFace Hub: $L=30$, $d=1024$, $d_{ff}=4096$, total BertModel parameters: 419,931,136. Measured LoRA ($r=8, \alpha=16$ on $W_q, W_v$): exactly 983,040 trainable parameters (0.2341% of base model). Replaced previous erroneous assertion of 1,179,648 (which assumed 36 layers). |
+| **3. FIRST-REPORT YEAR** | State exact split basis; log publication years | **DONE** | [`logs/publication_year_lookup.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/publication_year_lookup.tsv), [`logs/publication_year_methodology.log`](file:///d:/antiviral-resistance-hsv--1/logs/publication_year_methodology.log) | Documented that 'created_date' is database entry curation date. Split was recomputed strictly from resolved Crossref DOI publication years ('paper_pub_year') and labeled as 'Publication Year Split' (Pre-2016: 725 rows, 569 mutations; Post-2016: 226 rows, 189 mutations, 132 novel). Passes Option A threshold (>= 30 post-cutoff mutations). |
+| **4. THRESHOLDS** | Build cited threshold register; recompute Table A | **DONE** | [`thresholds.tsv`](file:///d:/antiviral-resistance-hsv--1/thresholds.tsv), [`logs/table_a_recount.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/table_a_recount.tsv), [`logs/thresholds_audit.log`](file:///d:/antiviral-resistance-hsv--1/logs/thresholds_audit.log) | Discontinued arbitrary 2.0x cutoff. Built register of cited assay-specific cutoffs (>= 3.0x per CMI 2025 Review Table S3, Sauerbrei 2016, HerpesDRG 2024). Recounted Table A at blank-free thresholds: UL23-ACV (107 resistant positions), UL30-ACV (62 resistant positions), UL30-FOS (44 resistant positions) qualify for Primary evaluation; UL5, UL52, UL29 demoted to Pooled/Exploratory. Blank cells flagged for human annotator. |
+| **5. PURITY** | Recompute purity reporting both denominators | **DONE** | [`logs/label_purity_summary.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/label_purity_summary.tsv), [`logs/label_purity.log`](file:///d:/antiviral-resistance-hsv--1/logs/label_purity.log) | Denominator 1 (all positions with >= 1 substitution): UL23-ACV 93.19% single-label, UL30-ACV 98.37%, UL30-FOS 98.72%. Denominator 2 (positions with >= 2 distinct substitutions): UL23-ACV 74.51% single-label, UL30-ACV 87.10%, UL30-FOS 90.00%. Proves overwhelming position identity memorization risk. |
+| **6. C2 PROBES** | Benchmark models under 4 split regimes; explain prior < 0.5 | **DONE** | [`logs/c2_split_evaluation.json`](file:///d:/antiviral-resistance-hsv--1/logs/c2_split_evaluation.json), [`logs/c2_diagnostic.log`](file:///d:/antiviral-resistance-hsv--1/logs/c2_diagnostic.log) | Evaluated Logistic Regression, BLOSUM62 Radicalness, Position Prior, and Non-linear Representation (RF) under Random, Clade-Grouped, Position-Grouped, and Both-Grouped splits with 1,000 bootstrap CIs. Proved that Position Prior AUROC drops below 0.5 under Position-Grouped holdouts (0.4123) because 100% of test positions are unseen and receive constant tied default priors, resulting in zero intra-fold variance. |
+| **7. CMI TABLE S3** | Attempt live download; verify local supplement | **DONE** | [`logs/cmi_table_s3_download.log`](file:///d:/antiviral-resistance-hsv--1/logs/cmi_table_s3_download.log) | Live download of mmc3.xlsx from Elsevier CDN succeeded (HTTP 200, 105,416 bytes, SHA-256: 760ab5f4e3185d5e22b6e37c92097c752e053a72ec274a20c1ed8daca81ceb52), matching local workspace file bit-for-bit. Corrigendum and main article DOI returned SSL verify errors and were logged. Local PDF verified (SHA-256: 621a93c7d51995eb00aed905635b25b575eaf57c12ef2474504305cce5978b90). |
+| **8. CHARMD** | Save live query evidence that CHARMD holds no HSV data | **DONE** | [`logs/charmd_evidence_20261028.json`](file:///d:/antiviral-resistance-hsv--1/logs/charmd_evidence_20261028.json), [`logs/charmd_database_snapshot.html`](file:///d:/antiviral-resistance-hsv--1/logs/charmd_database_snapshot.html) | Live query of Limoges CODEXMV database (2026-10-28) confirmed HTTP 200. Verified that the database contains exclusively Cytomegalovirus (Human betaherpesvirus 5) targeting CMV genes (UL27, UL51, UL54, UL56, UL89, UL97). Exactly zero HSV-1 or HSV-2 entries exist online. |
+| **9. NOVELTY** | Run novelty queries and write raw log with blank decisions | **DONE** | [`logs/novelty_log_raw.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/novelty_log_raw.tsv), [`logs/novelty_search_execution.log`](file:///d:/antiviral-resistance-hsv--1/logs/novelty_search_execution.log) | Executed all 7 queries from `novelty_queries.txt` via Europe PMC REST API (covering PubMed, PMC, and bioRxiv). Logged dates, databases, query strings, hit counts, and top 10 closest results with links. Decision column left blank for human review per protocol. |
+| **10. LANGUAGE** | Replace unproven assertions, fix metric discrepancy, update status | **DONE** | [`AUDIT_REPORT.md`](file:///d:/antiviral-resistance-hsv--1/AUDIT_REPORT.md) | Replaced 'exactly 0 exist' with 'none found in the logged search'; marked C9 as 'pending'; resolved 0.88 (Random Forest) vs 0.8348/0.8418 (Position Prior) metric distinction; removed 'locked-scope' and 'sealed' assertions; marked approval as 'Pending PI and Second Annotator Sign-Off'. |
+
+---
+
+## Log Directory Index
+
+All raw evidence files are stored in [`d:\antiviral-resistance-hsv--1\logs`](file:///d:/antiviral-resistance-hsv--1/logs):
+- [`citation_check.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/citation_check.tsv): Line-by-line citation verification table with FDA NDAs and PRIME venue.
+- [`lora_measurement.log`](file:///d:/antiviral-resistance-hsv--1/logs/lora_measurement.log): Exact ProtBERT architecture and LoRA parameter count log.
+- [`publication_year_lookup.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/publication_year_lookup.tsv): Resolved DOI publication year for all 951 active HSV rows.
+- [`publication_year_methodology.log`](file:///d:/antiviral-resistance-hsv--1/logs/publication_year_methodology.log): Provenance explanation distinguishing curation date from publication year.
+- [`table_a_recount.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/table_a_recount.tsv): Table A recounted using cited >= 3.0x thresholds.
+- [`thresholds_audit.log`](file:///d:/antiviral-resistance-hsv--1/logs/thresholds_audit.log): Documentation of threshold citations and blank flags.
+- [`label_purity_summary.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/label_purity_summary.tsv): Label purity tabulated across both denominators.
+- [`label_purity.log`](file:///d:/antiviral-resistance-hsv--1/logs/label_purity.log): Detailed breakdown of single-label vs mixed-label positions.
+- [`c2_split_evaluation.json`](file:///d:/antiviral-resistance-hsv--1/logs/c2_split_evaluation.json): AUROC and 95% bootstrap CIs across 4 split regimes.
+- [`c2_diagnostic.log`](file:///d:/antiviral-resistance-hsv--1/logs/c2_diagnostic.log): Mathematical explanation of position prior behavior under position holdouts.
+- [`cmi_table_s3_download.log`](file:///d:/antiviral-resistance-hsv--1/logs/cmi_table_s3_download.log): Exact download log and SHA-256 verification of CMI 2025 Table S3 and PDF.
+- [`charmd_evidence_20261028.json`](file:///d:/antiviral-resistance-hsv--1/logs/charmd_evidence_20261028.json): Structured proof that CHARMD online contains only CMV.
+- [`charmd_database_snapshot.html`](file:///d:/antiviral-resistance-hsv--1/logs/charmd_database_snapshot.html): Raw HTML snapshot of Limoges CODEXMV database page.
+- [`novelty_log_raw.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/novelty_log_raw.tsv): Systematic search results across 7 novelty queries with blank decisions.
+- [`novelty_search_execution.log`](file:///d:/antiviral-resistance-hsv--1/logs/novelty_search_execution.log): Step-by-step query execution output.
+

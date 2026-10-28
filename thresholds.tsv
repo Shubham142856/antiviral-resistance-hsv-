@@ -1,0 +1,12 @@
+drug	assay	fold_change_cutoff	ic50_cutoff	citation	status
+Aciclovir	PRA	3.0	IC50 > 2.0 ug/mL (or > 8.8 uM)	CMI 2025 Review (Döhne et al. Table S3); Sauerbrei et al. JAC 2016 (PMID: 26433780); HerpesDRG (Charles et al. 2024)	CITED
+Aciclovir	Dye Uptake	3.0	IC50 > 2.0 ug/mL	Burrel et al. Antiviral Res 2010 (PMID: 20380849); CMI 2025 Review Table S3	CITED
+Aciclovir	TK Activity		TK activity < 15% of wild-type	Sauerbrei et al. JAC 2016 (PMID: 26433780)	FLAG_HUMAN_NON_FC
+Foscarnet	PRA	3.0	IC50 > 100 uM (or > 30 ug/mL)	CMI 2025 Review (Döhne et al. 2025); Sauerbrei et al. JAC 2016 (PMID: 26433780); HerpesDRG (PMID: 39192205)	CITED
+Foscarnet	Dye Uptake	3.0	IC50 > 100 uM	Frobert et al. JAC 2014; CMI 2025 Review Table S3	CITED
+Pritelivir	PRA	3.0	IC50 > 0.1 uM (or > 3-fold vs WT)	Birkmann et al. AAC 2022 (PMID: 35862737); Schalkwijk et al. JID 2024	CITED
+Pritelivir	CPE	3.0	Fold change >= 3.0	Birkmann et al. AAC 2022; CMI 2025 Review Table S3	CITED
+Amenamevir	PRA	3.0	Fold change >= 3.0 (or > 4.0 in Vero)	Kawakami et al. AAC 2021 (PMID: 34228537); CMI 2025 Review Table S3	CITED
+Amenamevir	CPE	3.0	Fold change >= 3.0	Kawakami et al. AAC 2021 (PMID: 34228537)	CITED
+Brivudine	Any				BLANK_FLAG_HUMAN
+Cidofovir	Any				BLANK_FLAG_HUMAN

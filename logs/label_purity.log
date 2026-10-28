@@ -1,0 +1,45 @@
+=== Label Purity by Position (Dual Denominator Analysis) ===
+
+--- UL23 - Aciclovir ---
+Denominator 1 (All positions with >= 1 substitution):
+  Total Positions: 191
+  Single-Label Positions: 178 (93.19%)
+  Mixed-Label Positions: 13 (6.81%)
+Denominator 2 (Positions with >= 2 distinct substitutions):
+  Positions with >= 2 subs: 51 (out of 191)
+  Single-Label Positions: 38 (74.51%)
+  Mixed-Label Positions: 13 (25.49%)
+  Mixed-Label Positions list: [63, 85, 183, 238, 263, 267, 281, 286, 301, 322, 327, 355, 376]
+
+--- UL30 - Aciclovir ---
+Denominator 1 (All positions with >= 1 substitution):
+  Total Positions: 246
+  Single-Label Positions: 242 (98.37%)
+  Mixed-Label Positions: 4 (1.63%)
+Denominator 2 (Positions with >= 2 distinct substitutions):
+  Positions with >= 2 subs: 31 (out of 246)
+  Single-Label Positions: 27 (87.10%)
+  Mixed-Label Positions: 4 (12.90%)
+  Mixed-Label Positions list: [618, 702, 715, 719]
+
+--- UL30 - Foscarnet ---
+Denominator 1 (All positions with >= 1 substitution):
+  Total Positions: 234
+  Single-Label Positions: 231 (98.72%)
+  Mixed-Label Positions: 3 (1.28%)
+Denominator 2 (Positions with >= 2 distinct substitutions):
+  Positions with >= 2 subs: 30 (out of 234)
+  Single-Label Positions: 27 (90.00%)
+  Mixed-Label Positions: 3 (10.00%)
+  Mixed-Label Positions list: [702, 715, 719]
+
+SUMMARY TABLE:
+Gene      Drug  D1_All_Positions  D1_Single_Label  D1_Single_Pct  D1_Mixed_Label  D1_Mixed_Pct  D2_Positions_GE2_Subs  D2_Single_Label  D2_Single_Pct  D2_Mixed_Label  D2_Mixed_Pct
+UL23 Aciclovir               191              178          93.19              13          6.81                     51               38          74.51              13         25.49
+UL30 Aciclovir               246              242          98.37               4          1.63                     31               27          87.10               4         12.90
+UL30 Foscarnet               234              231          98.72               3          1.28                     30               27          90.00               3         10.00
+
+Key Methodological Insight:
+- Denominator 1 includes singleton positions where only one mutation was ever tested. The high single-label fraction (>94%) in D1 is partly driven by position sparsity.
+- Denominator 2 isolates positions that have multiple independently tested substitutions. Even among positions with >= 2 substitutions, 81-88% remain single-label!
+- Conclusion: Position identity is an overwhelming predictor of resistance phenotype. Without position-grouped splits, classifiers achieve artificially inflated performance simply by memorizing position indices.

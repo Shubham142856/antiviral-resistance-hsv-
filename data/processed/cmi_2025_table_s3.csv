@@ -1,0 +1,713 @@
+Gene,Drug,AA change,AA position,Resistance,PMIDs,resistance status confirmed in cell culture,clinical susceptibility information available,All genes sequenced that may confer resistance?,Motif,Comment,
+Thymidine Kinase,Aciclovir,Y4D,4,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,C6G,6,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576
+15456088",yes,yes,Yes
+Thymidine Kinase,Aciclovir,H7P,7,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,8Stop,8,Sensitive,34980708,yes,no,Yes
+Thymidine Kinase,Aciclovir,H9Y,9,Sensitive,29848849,yes,no,Yes
+Thymidine Kinase,Aciclovir,A12P,12,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,A12T,12,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,D14V,14,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Penciclovir,D14V,14,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Brivudine,D14V,14,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Brivudine,D14Y,14,Sensitive,18336925 20211650,yes,no,Yes
+Thymidine Kinase,Penciclovir,D14Y,14,Sensitive,"18336925
+20211650",yes,no,Yes
+Thymidine Kinase,Aciclovir,D14Y,14,Sensitive,"18336925
+20211650",yes,no,Yes
+Thymidine Kinase,Aciclovir,Q15L,15,Sensitive,21778105,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q15K,15,Sensitive,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,A17V,17,Sensitive,10882609,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,R18C,18,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Penciclovir,S19P,19,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Brivudine,S19P,19,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,S19P,19,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,R20S,20,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,R20H,20,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,R20C,20,Sensitive,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,G21V,21,Sensitive,35079057,yes,no,Yes
+Thymidine Kinase,Aciclovir,N23Stop ,23,Resistant,24055837,yes,no,Yes
+Thymidine Kinase,Aciclovir,N23S,23,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Penciclovir,N23S,23,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Aciclovir,N23S,23,Sensitive/Resistant,"10882609
+32417677 19795980 14670581 23687576",yes,yes,Yes
+Thymidine Kinase,Aciclovir,N24T,24,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,R26H,26,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,A28V,28,Sensitive,21778105,yes,no,Yes
+Thymidine Kinase,Aciclovir,L29V,29,Sensitive,24075863,yes,yes,Yes
+Thymidine Kinase,Aciclovir,R30C,30,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,R32C,32,Sensitive/Resistant,18336925 32417677,yes,no,Yes
+Thymidine Kinase,Aciclovir,R32C,32,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Penciclovir,R32C,32,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q35Del,35,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,K36D,36,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,K36E,36,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Penciclovir,K36E,36,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Aciclovir,K36E,36,Sensitive/Resistant,"19795980
+10882609
+23687576 32417677 14670581",yes,yes,Yes
+Thymidine Kinase,Aciclovir,A37V,37,Sensitive,30507553,yes,no,"No, TK only"
+Thymidine Kinase,Aciclovir,A37D,37,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,E39K,39,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Brivudine,R41H,41,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Penciclovir,R41H,41,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,R41H,41,Sensitive,"14670581
+22906425
+27426251
+",yes,contradiction,Yes
+Thymidine Kinase,Aciclovir,L42P,42,Sensitive,"10882609
+11238837
+15456088",yes,contradiction,Yes
+Thymidine Kinase,Aciclovir,E43A/D,43,Sensitive,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q44H,44,Sensitive,22024514,yes,yes,Yes
+Thymidine Kinase,Aciclovir,44Stop,44,Resistant,34980708,yes,no,Yes
+Thymidine Kinase,Aciclovir,P47S,47,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,L50M,50,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Penciclovir,R51W,51,Resistant,"19795980
+14670581
+10882609
+15827202",yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Brivudine,R51W,51,Resistant,"19795980
+14670581
+10882609
+15827202",yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,R51W ,51,Resistant,"19795980
+14670581
+10882609
+15827202 24055837",yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,Y53Stop,53,Resistant,14670581,yes,yes,"No, TK only",ATP-binding site
+Thymidine Kinase,Aciclovir,Y53D,53,Resistant,"20733037
+23041200",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Penciclovir,Y53C,53,Resistant,"22155911
+",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Brivudine,Y53C,53,Resistant,"22155911
+",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,Y53C,53,Resistant,"22155911
+23246510",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Penciclovir,Y53H,53,Resistant,"22906425
+",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Brivudine,Y53H,53,Resistant,"22906425
+",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,Y53H,53,Resistant,"22906425
+",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,I54T,54,Sensitive,37453453,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,D55E,55,Sensitive,29848849,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,D55N,55,Resistant,"12406508
+11238837",yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,G56S,56,Resistant,19795980,yes,yes,"No, TK only",ATP-binding site
+Thymidine Kinase,Aciclovir,G56D,56,Resistant,28453848,yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,G56A,56,Intermediate,35079057,yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,G56V,56,Intermediate,35079057,yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,P57H,57,Resistant,9697707,yes,yes,"No, TK only",ATP-binding site
+Thymidine Kinase,Aciclovir,H58R,58,Resistant,15456088,yes,yes,No access,ATP-binding site
+Thymidine Kinase,Penciclovir,H58N,58,Resistant,24747042,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Brivudine,H58N,58,Resistant,24747042,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,H58N,58,Resistant,24747042,yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,H58Y,58,Resistant,35033543,yes,yes,Yes,ATP-binding site
+Thymidine Kinase,Brivudine,G59W,59,Resistant,"15827202
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces"
+Thymidine Kinase,Aciclovir,G59W,59,Resistant,"15827202
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces"
+Thymidine Kinase,Penciclovir,G59W,59,Resistant,"15827202
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces"
+Thymidine Kinase,Aciclovir,G59R,59,Resistant,19795980,yes,yes,"No, TK only",ATP-binding site
+Thymidine Kinase,Penciclovir,G61A,61,Resistant,27426251,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Brivudine,G61A,61,Resistant,27426251,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,G61A,61,Resistant,27426251,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,G61E,61,Resistant,28576448,yes,no,Yes,ATP-binding site
+Thymidine Kinase,Aciclovir,K62N,62,Resistant,"9697707
+16982796
+2833027",yes,yes,Yes,ATP-binding site,"2833027 not fact checked, no access"
+Thymidine Kinase,Aciclovir,T63A,63,Resistant,"12709344
+9716390
+2833027",yes,no,Yes,ATP-binding site,"2833027 not fact checked, no acces"
+Thymidine Kinase,Aciclovir,T63I,63,Resistant,9697707,yes,yes,"No, TK only",ATP-binding site
+Thymidine Kinase,Aciclovir,T65N,65,Resistant,12406508,yes,no,"No, TK only"
+Thymidine Kinase,Aciclovir,T65P,65,Resistant,35033543,yes,yes,Yes
+Thymidine Kinase,Aciclovir,T66P,66,Sensitive,37586184,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q67R,67,Sensitive,21778105,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q67Stop,67,Resistant,24075863,yes,yes,Yes
+Thymidine Kinase,Aciclovir,L68R,68,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,L69M,69,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,L72V,72,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Penciclovir,S74Stop,74,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Brivudine,S74Stop,74,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,S74Stop,74,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,R75C,75,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,D76N,76,Sensitive,25218782,yes,no,Yes
+Thymidine Kinase,Aciclovir,D77N,77,Sensitive,10882609,yes,yes,"No, TK only"
+Thymidine Kinase,Penciclovir,I78F,78,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Brivudine,I78F,78,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,I78F,78,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,I78S,78,Resistant,36309081,yes,no,Yes
+Thymidine Kinase,Aciclovir,Y80N,80,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Penciclovir,E83K,83,Resistant,"19795980
+15728902
+10882609
+16546268
+12709344",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,E83K,83,Resistant,"19795980
+15728902
+10882609
+16546268
+12709344",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,P84S,84,Resistant,12406508,yes,no,"No, TK only",Conserved region
+Thymidine Kinase,Aciclovir,P84L,84,Resistant,"
+22796575
+27426251",yes,no,Yes,Conserved region
+Thymidine Kinase,Penciclovir,P84L,84,Resistant,"
+27426251",yes,no,Yes,Conserved region
+Thymidine Kinase,Brivudine,P84L,84,Resistant,"
+27426251",yes,no,Yes,Conserved region
+Thymidine Kinase,Aciclovir,M85Stop,85,Resistant,26055375,yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,Y87H,87,Resistant,19795980,yes,yes,"No, TK only",Conserved region
+Thymidine Kinase,Brivudine,W88R,88,Resistant,20608173,no,no,No access,Conserved region,not fact checked
+Thymidine Kinase,Aciclovir,W88R,88,Resistant,20608173,no,no,No access,Conserved region,not fact checked
+Thymidine Kinase,Aciclovir,R89W,89,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,R89H,89,Sensitive,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,R89Q,89,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Penciclovir,R89Q,89,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Aciclovir,R89Q,89,Sensitive/Resistant,"19795980
+23582986
+14670581
+10882609
+11238837 32417677",yes,yes,Yes
+Thymidine Kinase,Penciclovir,A93V,93,Sensitive,27309375,yes,no,Yes
+Thymidine Kinase,Aciclovir,A93V,93,Resistant,27309375,yes,no,Yes
+Thymidine Kinase,Aciclovir,E95Stop,95,Resistant,19770274,yes,no,Yes
+Thymidine Kinase,Aciclovir,A98T,98,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,I100T,100,Sensitive,25218782,yes,no,Yes
+Thymidine Kinase,Aciclovir,Y101fsx,101,Sensitive/Resistant,37586184 28262533,yes,yes,Yes
+Thymidine Kinase,Aciclovir,T103Stop,103,Resistant,12406508,yes,no,"No, TK only"
+Thymidine Kinase,Penciclovir,T103P,103,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Brivudine,T103P,103,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,T103P,103,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,Q104H,104,Resistant,9697707,yes,yes,"No, TK only",Codetection of L297S
+Thymidine Kinase,Penciclovir,Q104Stop,104,Resistant,"22155911
+
+
+",yes,no,Yes
+Thymidine Kinase,Brivudine,Q104Stop,104,Resistant,"22155911
+
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,Q104Stop,104,Resistant,"22155911
+23026414
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,H105P,105,Resistant,"1846499
+23026414
+16970995",yes,yes,Yes
+Thymidine Kinase,Penciclovir,R106H,106,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Brivudine,R106H,106,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,R106H,106,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q109K,109,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,E111K,111,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,D116N,116,Resistant,16546268,yes,no,Yes
+Thymidine Kinase,Penciclovir,D116N,116,Resistant,16546268,yes,no,Yes
+Thymidine Kinase,Brivudine,A118V,118,Sensitive,22155911 27426251,yes,no,Yes
+Thymidine Kinase,Penciclovir,A118V,118,Sensitive,"22155911
+26055375
+27426251",yes,no,Yes
+Thymidine Kinase,Brivudine,A118V,118,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,A118V,118,Sensitive,"22155911
+26055375
+27426251",yes,no,Yes
+Thymidine Kinase,Aciclovir,V120Stop,120,Resistant,24075863,yes,yes,Yes
+Thymidine Kinase,Aciclovir,M121K,121,Resistant,28576448,yes,no,Yes
+Thymidine Kinase,Penciclovir,M121R,121,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Brivudine,M121R,121,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,M121R,121,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,S123R,123,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,S123G,123,Resistant,35033543,yes,yes,Yes
+Thymidine Kinase,Brivudine,Q125H,125,Sensitive,23100343,yes,no,"No, TK only"
+Thymidine Kinase,Penciclovir,Q125H,125,Sensitive,23100343,yes,no,"No, TK only"
+Thymidine Kinase,Aciclovir,Q125H,125,Resistant,23100343,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,M128L,128,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,G129D,129,Resistant,15456088,yes,yes,Yes
+Thymidine Kinase,Aciclovir,M130L,130,Resistant,31158412,no,yes,Yes
+Thymidine Kinase,Aciclovir,P131S,131,Resistant,12709344,yes,no,Yes
+Thymidine Kinase,Aciclovir,A133V,133,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Penciclovir,A133Del,133,Resistant,37224525,yes,yes,Yes
+Thymidine Kinase,Aciclovir,A137N,137,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,A137T,137,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,V138I,138,Sensitive,"19795980
+23582986",yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,V138F,138,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Penciclovir,L139V,139,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,L139V,139,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,L139P,139,Resistant,31158412,no,yes,Yes
+Thymidine Kinase,Aciclovir,A140V,140,Resistant,14670581,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,H142Y,142,Sensitive,25218782,yes,no,Yes
+Thymidine Kinase,Brivudine,I143V,143,Resistant,"21178503
+23246510",yes,no,Yes
+Thymidine Kinase,Penciclovir,I143V,143,Resistant,19770274,yes,no,Yes
+Thymidine Kinase,Aciclovir,I143V,143,Resistant,19770274,yes,no,Yes
+Thymidine Kinase,Aciclovir,144fsx,144,Resistant,37586184,yes,no,Yes
+Thymidine Kinase,Aciclovir,G145E,145,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,E146G,146,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,G148V,148,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,G148W,148,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,S150L,150,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,H151Y,151,Sensitive,18336925,yes,no,Yes
+Thymidine Kinase,Aciclovir,A156P,156,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,A156V,156,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,I160V,160,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,F161L,161,Resistant,14670581,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,D162H,162,Resistant,15572000,yes,no,"No, TK only",Nucleotide-binding site
+Thymidine Kinase,Aciclovir,D162A,162,Resistant,"14670581
+16970995",yes,yes,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,D162N,162,Resistant,"24075863
+23582986",yes,yes,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,R163G,163,Resistant,28576448,yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,R163S,163,Resistant,37453453,yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,R163H,163,Resistant,"8218229
+23026414
+15456088
+22796575",yes,yes,Yes,Nucleotide-binding site,"8218229 not fact checked, no access"
+Thymidine Kinase,Aciclovir,A167V,167,Resistant,12709344,yes,no,Yes
+Thymidine Kinase,Penciclovir,A168T,168,Sensitive,"15827202
+8021603
+9716390",yes,no,Yes,Nucleotide-binding site,"8021603 not fact checked, no acces"
+Thymidine Kinase,Brivudine,A168T,168,Resistant,"15827202
+8021603
+9716390",yes,no,Yes,Nucleotide-binding site,"8021603 not fact checked, no acces"
+Thymidine Kinase,Aciclovir,A168T,168,Sensitive,"15827202
+8021603
+9716390",yes,no,Yes,Nucleotide-binding site,"8021603 not fact checked, no acces"
+Thymidine Kinase,Aciclovir,L170P,170,Resistant,"24075863
+24747042
+23041200",yes,yes,Yes,Nucleotide-binding site
+Thymidine Kinase,Penciclovir,Y172S,172,Resistant,27309375,yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,Y172S,172,Resistant,27309375,yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,Y172C,172,Resistant,"
+23246510",yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,P173R,173,Resistant,12406508,yes,no,"No, TK only",Nucleotide-binding site
+Thymidine Kinase,Aciclovir,P173Del,173,Resistant,28576448,yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,P173L,173,Resistant,"23582986
+12709344",yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,A174P,174,Resistant,"
+23246510",yes,no,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,A175V,175,Resistant,"15728902
+10882609
+22796575",yes,yes,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,R176W,176,Resistant,23041200,yes,no,"No, TK only",Nucleotide-binding site
+Thymidine Kinase,Aciclovir,R176Stop,176,Resistant,24075863,yes,yes,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,R176Q,176,Resistant,"14670581
+11238837
+9716390",yes,yes,Yes,Nucleotide-binding site
+Thymidine Kinase,Aciclovir,L178R,178,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,S181N,181,Resistant,18627246,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,M182Stop,182,Resistant,"15456088 19795980
+24075863
+23582986
+23246510
+15572000 ",yes,yes,Yes
+Thymidine Kinase,Penciclovir,M182Stop,182,Resistant,15456088,yes,yes,Yes
+Thymidine Kinase,Brivudine,M182Stop,182,Resistant,15456088,yes,yes,Yes
+Thymidine Kinase,Aciclovir,M182Stop,182,Resistant,24075863,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,T183P,183,Sensitive,31302149,yes,yes,Yes
+Thymidine Kinase,Aciclovir,Q185R,185,Resistant,16546268,yes,no,Yes
+Thymidine Kinase,Penciclovir,Q185R,185,Resistant,16546268,yes,no,Yes
+Thymidine Kinase,Aciclovir,V187M,187,Resistant,9728528,yes,yes,"No, TK only"
+Thymidine Kinase,Brivudine,A189V,189,Resistant,36059135,yes,yes,Yes
+Thymidine Kinase,Penciclovir,A189V,189,Resistant,"19795980
+14670581
+16546268
+23687576
+15456088
+22796575",yes,yes,Yes
+Thymidine Kinase,Aciclovir,A189V,189,Resistant,"19795980
+14670581
+16546268
+23687576
+15456088
+22796575",yes,yes,Yes
+Thymidine Kinase,Aciclovir,V191A,191,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,A192V,192,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes
+Thymidine Kinase,Aciclovir,"I194
+Del",194,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,G200C,200,Resistant,"12406508
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,G200S,200,Resistant,"18336925
+22796575",yes,no,Yes
+Thymidine Kinase,Brivudine,G200D,200,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Penciclovir,G200D,200,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,G200D,200,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,T201P,201,Resistant,9697707,yes,yes,"No, TK only"
+Thymidine Kinase,Penciclovir,V204G,204,Resistant,"
+27309375",yes,no,Yes
+Thymidine Kinase,Aciclovir,V204G,204,Resistant,"23945375
+27309375",yes,yes,Yes
+Thymidine Kinase,Brivudine,G206R,206,Resistant,15827202,yes,no,Yes
+Thymidine Kinase,Aciclovir,G206R,206,Resistant,15827202,yes,no,Yes
+Thymidine Kinase,Penciclovir,G206R,206,Resistant,15827202,yes,no,Yes
+Thymidine Kinase,Aciclovir,A207P,207,Resistant,"20733037
+23041200",yes,no,Yes
+Thymidine Kinase,Aciclovir,L208F,208,Resistant,24055837,yes,no,Yes
+Thymidine Kinase,Brivudine,L208H,208,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Penciclovir,L208H,208,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,L208H,208,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,R212K,212,Intermediate,35079057,yes,yes,Yes
+Thymidine Kinase,Aciclovir,I214T,214,Sensitive,15456088,yes,contradiction,Yes
+Thymidine Kinase,Aciclovir,D215N,215,Sensitive,21778105,yes,no,Yes
+Thymidine Kinase,Aciclovir,D215H,215,Sensitive,25218782,yes,no,Yes
+Thymidine Kinase,Aciclovir,D215A,215,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,R216H,216,Resistant,"23582986
+15456088",yes,yes,"No, TK only",Conserved region
+Thymidine Kinase,Aciclovir,R216S,216,Resistant,12709344,yes,no,Yes,Conserved region
+Thymidine Kinase,Penciclovir,R216C,216,Resistant,"
+16546268",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,R216C,216,Resistant,"9697707
+16546268",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,A218T,218,Resistant,37453453,yes,no,Yes,Conserved region
+Thymidine Kinase,Brivudine,K219T,219,Sensitive,27426251,yes,no,Yes,Conserved region
+Thymidine Kinase,Penciclovir,K219T,219,Sensitive,"22024514
+27426251",yes,no,Yes,Conserved region
+Thymidine Kinase,Aciclovir,K219T,219,Sensitive,"22024514
+27426251",yes,no,Yes,Conserved region
+Thymidine Kinase,Aciclovir,R220C,220,Resistant,"14670581
+",yes,yes,Yes,Conserved region
+Thymidine Kinase,Brivudine,R220H,220,Resistant,"19795980
+23582986
+15827202
+12709344",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,R220H,220,Resistant,"19795980
+23582986
+15827202
+12709344",yes,yes,Yes,Conserved region
+Thymidine Kinase,Penciclovir,R220H,220,Resistant,"19795980
+23582986
+15827202
+12709344",yes,yes,Yes,Conserved region
+Thymidine Kinase,Brivudine,R222H,222,Resistant,"19795980
+24747042
+11238837",yes,yes,Yes,Conserved region
+Thymidine Kinase,Penciclovir,R222H,222,Resistant,"19795980
+24747042
+11238837",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,R222H,222,Resistant,"19795980
+24747042
+11238837",yes,yes,Yes,Conserved region
+Thymidine Kinase,Brivudine,R222C,222,Resistant,"24747042
+
+",yes,yes,Yes,Conserved region
+Thymidine Kinase,Penciclovir,R222C,222,Resistant,"24747042
+
+",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,R222C,222,Resistant,"24747042
+9697707
+11238837",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,G224fsx,224,Resistant,"9697707
+23246510",yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,E225K,225,Intermediate,35079057,yes,yes,Yes
+Thymidine Kinase,Aciclovir,E225Stop,225,Resistant,35033543 31158412,yes,yes,Yes
+Thymidine Kinase,Penciclovir,L227Stop,227,Resistant,27309375,yes,no,Yes
+Thymidine Kinase,Aciclovir,L227Stop,227,Intermediate,27309375,yes,no,Yes
+Thymidine Kinase,Aciclovir,L227F,227,Resistant,"14670581
+22796575",yes,yes,Yes
+Thymidine Kinase,Penciclovir,D228Stop,228,Resistant,26055375,yes,no,"No, TK only"
+Thymidine Kinase,Penciclovir,D228Stop,228,Resistant,"19795980
+14670581
+9311864
+12709344
+11238837
+21178503
+23246510
+15456088",yes,yes,Yes
+Thymidine Kinase,Brivudine,D228Stop,228,Resistant,"19795980
+14670581
+9311864
+12709344
+11238837
+21178503
+23246510
+15456088 11160674 18336925
+14670581
+23246510
+15572000",yes,yes,Yes
+Thymidine Kinase,Aciclovir,D228Stop,228,Resistant,"19795980
+14670581
+9311864
+12709344
+11238837
+21178503
+23246510
+15456088 20733037 18336925
+14670581
+23246510
+15572000",yes,yes,Yes
+Thymidine Kinase,Aciclovir,D229Stop,229,Resistant,31158412,no,yes,Yes
+Thymidine Kinase,Aciclovir,A232S,232,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,I235N,235,Sensitive,35033543,yes,yes,Yes
+Thymidine Kinase,Aciclovir,V238F,238,Resistant,28576448,yes,no,Yes
+Thymidine Kinase,Brivudine,Y239S,239,Resistant,15827202,yes,no,Yes
+Thymidine Kinase,Aciclovir,Y239S,239,Resistant,15827202,yes,no,Yes
+Thymidine Kinase,Penciclovir,Y239S,239,Resistant,15827202,yes,no,Yes
+Thymidine Kinase,Aciclovir,G240E,240,Sensitive,"19795980
+23582986
+14670581
+10882609
+11238837",yes,yes,Yes
+Thymidine Kinase,Aciclovir,L241M,241,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,L242P,242,Resistant,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,A243S,243,Sensitive,"18336925
+20733037",yes,no,Yes
+Thymidine Kinase,Aciclovir,N244H,244,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,T245P,245,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Brivudine,T245M,245,Resistant,22155911 37224525,yes,no,Yes
+Thymidine Kinase,Aciclovir,T245M,245,Resistant,"22155911
+12406508
+12709344
+23246510",yes,no,Yes
+Thymidine Kinase,Penciclovir,T245M,245,Resistant,22155911 37224525,yes,yes,Yes
+Thymidine Kinase,Aciclovir,Y248D,248,Resistant,37505438,yes,no,Yes
+Thymidine Kinase,Aciclovir,L249P,249,Resistant,25218782,yes,no,Yes
+Thymidine Kinase,Brivudine,Q250Stop,250,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Penciclovir,Q250Stop,250,Resistant,"22155911
+",yes,no,Yes
+Thymidine Kinase,Aciclovir,Q250Stop,250,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,G251C,251,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes
+Thymidine Kinase,Aciclovir,R256W,256,Resistant,23246510,yes,no,Yes
+Thymidine Kinase,Aciclovir,E257K,257,Resistant,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,D258N,258,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,D258N,258,Resistant,36309081,yes,no,Yes
+Thymidine Kinase,Aciclovir,W259R,259,Sensitive,22024514,yes,no,Yes
+Thymidine Kinase,Brivudine,Q261Stop,261,Resistant,"19795980
+15827202",yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,Q261Stop,261,Resistant,"19795980
+15827202",yes,yes,"No, TK only"
+Thymidine Kinase,Penciclovir,Q261Stop,261,Resistant,"19795980
+15827202",yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,Q261R,261,Resistant,23687576,yes,yes,Yes
+Thymidine Kinase,Aciclovir,S263Stop,263,Resistant,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,S263L,263,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,G264V,264,Resistant,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,G264R,264,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,A265T,265,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Penciclovir,A265T,265,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Aciclovir,A265T,265,Sensitive/Resistant,"14670581
+23687576 32417677",yes,contradiction,Yes
+Thymidine Kinase,Aciclovir,V267L,267,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes
+Thymidine Kinase,Aciclovir,P268L,268,Sensitive,25218782,yes,no,Yes
+Thymidine Kinase,Aciclovir,P268M,268,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,P268T,268,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes
+Thymidine Kinase,Aciclovir,P269S,269,Sensitive,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,G271D,271,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,G271V,271,Sensitive,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,A272T,272,Sensitive,18336925,yes,no,Yes
+Thymidine Kinase,Aciclovir,E273K,273,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,E273Q,273,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,E273A,273,Sensitive,37586184,yes,no,Yes
+Thymidine Kinase,Aciclovir,P274T,274,Sensitive,18336925,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q275P,275,Sensitive,"22024514
+21778105",yes,no,Yes
+Thymidine Kinase,Aciclovir,S276G,276,Resistant,14670581,yes,yes,"No, TK only"
+Thymidine Kinase,Brivudine,S276R,276,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,S276N,276,Sensitive,28576448,yes,no,Yes
+Thymidine Kinase,Aciclovir,S276T,276,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Penciclovir,S276R,276,Sensitive,"22024514
+27426251",yes,no,Yes
+Thymidine Kinase,Aciclovir,S276R,276,Sensitive,"22024514
+27426251",yes,no,Yes
+Thymidine Kinase,Aciclovir,N277K,277,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,N277S,277,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,G279D,279,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,P280S,280,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,P280T,280,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,R281Stop,281,Resistant,"19795980
+15827202
+19795980",yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,R281Q,281,Sensitive/Resistant,"19795980
+14670581
+10882609",yes,yes,Yes
+Thymidine Kinase,Aciclovir,H283N,283,Sensitive,30507553,yes,no,"No, TK only"
+Thymidine Kinase,Aciclovir,D286V,286,Sensitive,37453453,yes,no,Yes,Conserved region
+Thymidine Kinase,Aciclovir,D286E,286,Sensitive,"19795980
+14670581
+10882609
+11238837
+6293376",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,T287M,287,Resistant,"19795980
+9697707
+15827202
+12406508
+23246510",yes,yes,"No, TK only",Conserved region
+Thymidine Kinase,Brivudine,T287M,287,Resistant,"19795980
+9697707
+15827202
+12406508
+23246510",yes,yes,Yes,Conserved region
+Thymidine Kinase,Penciclovir,T287M,287,Resistant,"19795980
+9697707
+15827202
+12406508
+23246510",yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,L288Stop,288,Resistant,24055837,yes,no,Yes,Conserved region
+Thymidine Kinase,Aciclovir,F289S,289,Resistant,38944159,yes,yes,Yes,Conserved region
+Thymidine Kinase,Aciclovir,L291R,291,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,L291P,291,Resistant,35033543,yes,yes,Yes
+Thymidine Kinase,Brivudine,R293W,293,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Penciclovir,R293W,293,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,R293W,293,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,A294V,294,Sensitive,18336925,yes,no,Yes
+Thymidine Kinase,Aciclovir,P295T,295,Sensitive,22024514,yes,no,Yes
+Thymidine Kinase,Aciclovir,L297S,297,Resistant,9697707,yes,yes,"No, TK only",Codetection of Q104H
+Thymidine Kinase,Brivudine,L298R,298,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Penciclovir,L298R,298,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,L298R,298,Sensitive,27426251,yes,no,Yes
+Thymidine Kinase,Aciclovir,L298P,298,Resistant,36309081,yes,no,Yes
+Thymidine Kinase,Aciclovir,P299S,299,Sensitive,25218782,yes,no,Yes
+Thymidine Kinase,Aciclovir,P300Del,300,Resistant,35079057,yes,yes,Yes
+Thymidine Kinase,Brivudine,A301Ins,301,Resistant,11160674,yes,no,"No, TK only",Codetection of several mutations in TK
+Thymidine Kinase,Aciclovir,A301Ins,301,Resistant,11160674,yes,no,"No, TK only",Codetection of several mutations in TK
+Thymidine Kinase,Penciclovir,A301Ins,301,Resistant,11160674,yes,no,"No, TK only",Codetection of several mutations in TK
+Thymidine Kinase,Aciclovir,N301fsx,301,Resistant,14670581,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,N301S,301,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,N301fsx,301,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Penciclovir,N301fsx,301,Resistant,32417677,yes,no,Yes
+Thymidine Kinase,Aciclovir,G302S,302,Sensitive,14670581,yes,contradiction,"No, TK only"
+Thymidine Kinase,Aciclovir,D303N,303,Sensitive,24075863,yes,yes,Yes
+Thymidine Kinase,Penciclovir,N306Stop,306,Resistant,11160674,yes,no,"No, TK only",Codetection of several mutations in TK
+Thymidine Kinase,Aciclovir,N306Stop,306,Resistant,"24055837
+11160674",yes,no,Yes
+Thymidine Kinase,Brivudine,V307fsx,307,Resistant,11160674,yes,no,"No, TK only",Codetection of T287M
+Thymidine Kinase,Aciclovir,V307fsx,307,Resistant,11160674,yes,no,"No, TK only",Codetection of T287M
+Thymidine Kinase,Penciclovir,V307fsx,307,Resistant,11160674,yes,no,"No, TK only",Codetection of T287M
+Thymidine Kinase,Aciclovir,F308L,308,Resistant,35033543,yes,yes,Yes
+Thymidine Kinase,Aciclovir,A309V,309,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,P321H,312,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,L315S,315,Resistant,"14670581
+",yes,yes,Yes
+Thymidine Kinase,Aciclovir,A316V,316,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,A316S,316,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,M322K,322,Resistant,16546268,yes,no,Yes
+Thymidine Kinase,Penciclovir,M322K,322,Resistant,16546268,yes,no,Yes
+Thymidine Kinase,Aciclovir,M322L,322,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,H323Y,323,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,I326V,326,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,L327M,327,Sensitive,18336925,yes,no,Yes
+Thymidine Kinase,Aciclovir,L327R,327,Intermediate,28453848,yes,yes,Yes
+Thymidine Kinase,Aciclovir,D328E,328,Sensitive,18336925,yes,no,Yes
+Thymidine Kinase,Aciclovir,D330A,330,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,S332L,332,Sensitive,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,S332P,332,Sensitive,18336925,yes,no,Yes
+Thymidine Kinase,Aciclovir,A334T,334,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,G335D,335,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,C336Y,336,Resistant,"23582986
+9697707
+11238837
+9716390",yes,yes,Yes
+Thymidine Kinase,Aciclovir,D338H,338,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,L340R,340,Resistant,31199933,yes,yes,Yes
+Thymidine Kinase,Aciclovir,L341R,341,Sensitive,25218782,yes,no,Yes
+Thymidine Kinase,Aciclovir,Q342Stop,342,Resistant,"19795980
+14670581",yes,yes,Yes 
+Thymidine Kinase,Aciclovir,Q342H,342,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,T344I,344,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,S345P,345,Sensitive,22024514 23582986 23026414 27426251,yes,no,Yes
+Thymidine Kinase,Penciclovir,S345P,345,Sensitive,"
+
+23026414
+27426251",yes,no,Yes
+Thymidine Kinase,Aciclovir,S345P,345,Sensitive,"22024514
+23582986
+23026414
+27426251",yes,contradiction,Yes
+Thymidine Kinase,Aciclovir,G346W,346,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Brivudine,V348I,348,Sensitive,19795980 14670581 22906425 27426251,yes,yes,Yes
+Thymidine Kinase,Penciclovir,V348I,348,Sensitive,"19795980
+14670581
+22906425
+27426251",yes,yes,Yes
+Thymidine Kinase,Aciclovir,V348I,348,Sensitive,"19795980
+14670581
+22906425
+27426251",yes,yes,Yes
+Thymidine Kinase,Aciclovir,Q349R,349,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Brivudine,T350I,350,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Penciclovir,T350S,350,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,T350S,350,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,T350I,350,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,V352I,352,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,V352L,352,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,T354P,354,Resistant,19795980,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,P355fsx,355,Resistant,"22155911
+11238837
+23246510 12406508",yes,no,Yes
+Thymidine Kinase,Penciclovir,P355fsx,355,Resistant,22155911,yes,no,Yes
+Thymidine Kinase,Brivudine,P355fsx,355,Resistant,22155911,yes,no,Yes
+Thymidine Kinase,Aciclovir,S357C,357,Sensitive,20733037,yes,no,Yes
+Thymidine Kinase,Aciclovir,I358V,358,Sensitive,24075863,yes,yes,Yes
+Thymidine Kinase,Aciclovir,D363N,363,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,L364P,364,Sensitive/Resistant,"10882609
+16970995",yes,contradiction,Yes
+Thymidine Kinase,Aciclovir,A365T,365,Resistant,21778105,yes,no,Yes
+Thymidine Kinase,Aciclovir,R366C,366,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,M367T,367,Sensitive,10882609,yes,yes,"No, TK only"
+Thymidine Kinase,Aciclovir,V369A,369,Sensitive,37453453,yes,no,Yes
+Thymidine Kinase,Aciclovir,R370W,370,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,E371D,371,Sensitive,31152759,yes,no,Yes
+Thymidine Kinase,Aciclovir,G373E,373,Sensitive,26055375,yes,no,Yes
+Thymidine Kinase,Aciclovir,E374A,374,Sensitive,10882609,yes,yes,"No, TK only"
+Thymidine Kinase,Brivudine,E374fsx,374,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Penciclovir,E374fsx,374,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,E374fsx,374,Resistant,"22155911
+23246510",yes,no,Yes
+Thymidine Kinase,Aciclovir,A375P,375,Sensitive,24075863,yes,yes,Yes
+Thymidine Kinase,Penciclovir,N376Stop,376,Resistant,24747042,yes,no,Yes
+Thymidine Kinase,Aciclovir,N376Stop,376,Resistant,24747042 28576448,yes,yes,Yes
+Thymidine Kinase,Brivudine,N376Stop,376,Resistant,24747042,yes,no,Yes
+Thymidine Kinase,Brivudine,N376T,376,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Penciclovir,N376T,376,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,N376T,376,Sensitive,20211650,yes,no,Yes
+Thymidine Kinase,Aciclovir,N376H,376,Sensitive,"19795980
+14670581
+10882609
+11238837
+23687576",yes,yes,Yes
+Thymidine Kinase,Aciclovir,N376P,376,Sensitive,"20733037
+11238837",yes,no,Yes
+Thymidine Kinase,Brivudine,L138V,138,Sensitive,19795980 23582986,yes,yes,Yes
+Thymidine Kinase,Aciclovir,nt 269Del,Resistant,36309081,yes,no,Yes
+Thymidine Kinase,Aciclovir,nt 540Del,Resistant,36309081,yes,no,Yes
+Thymidine Kinase,Aciclovir,nt 547InsG,Resistant,36309081,yes,no,Yes
+Thymidine Kinase,Aciclovir,nt 613InsT,Resistant,36309081,yes,no,Yes
+Thymidine Kinase,Aciclovir,nt 885Del,Resistant,36309081,yes,no,Yes

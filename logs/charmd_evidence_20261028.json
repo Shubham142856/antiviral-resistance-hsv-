@@ -1,0 +1,25 @@
+{
+  "query_url": "https://www.unilim.fr/cnr-herpesvirus/outils/codexmv/database/",
+  "query_timestamp_utc": "2026-10-28T14:13:33.606841+00:00",
+  "query_date": "2026-10-28",
+  "http_status": 200,
+  "database_title": "Codex_V5",
+  "viruses_found": [
+    "Human betaherpesvirus 5"
+  ],
+  "genes_found": [
+    "UL27",
+    "UL51",
+    "UL54",
+    "UL56",
+    "UL89",
+    "UL97"
+  ],
+  "drugs_found": [
+    "Antivirals"
+  ],
+  "total_rows_displayed": 1,
+  "hsv1_present": false,
+  "hsv2_present": false,
+  "conclusion": "Verified on 2026-10-28: CHARMD CODEXMV database hosted by CNR Herpesvirus, Limoges (URL: https://www.unilim.fr/cnr-herpesvirus/outils/codexmv/database/) contains exclusively Cytomegalovirus (Human betaherpesvirus 5), targeting CMV genes (UL27, UL51, UL54, UL56, UL89, UL97). Zero HSV-1 or HSV-2 resistance mutations are present in the online CHARMD database."
+}
