@@ -1,0 +1,128 @@
+{
+  "esm2_35m": {
+    "model_id": "facebook/esm2_t12_35M_UR50D",
+    "model_type": "esm",
+    "metrics": {
+      "UL23-Aciclovir": {
+        "overall_auroc": 0.664031124497992,
+        "pos_grouped_mean": 0.6597975633395424,
+        "pos_grouped_sd": 0.0558979533030132,
+        "contig_block_mean": 0.6110002898192237,
+        "contig_block_sd": 0.20010126832262046,
+        "contig_block_ci_95": [
+          0.5748316004894586,
+          0.7291661970041206
+        ],
+        "strictly_passes_stopping_rule": false
+      },
+      "UL30-Aciclovir": {
+        "overall_auroc": 0.6681302270011947,
+        "pos_grouped_mean": 0.6791140568027361,
+        "pos_grouped_sd": 0.10362761346394513,
+        "contig_block_mean": 0.6795059632344332,
+        "contig_block_sd": 0.2441192045145104,
+        "contig_block_ci_95": [
+          0.5813908678555342,
+          0.7478849055297427
+        ],
+        "strictly_passes_stopping_rule": true
+      },
+      "UL30-Foscarnet": {
+        "overall_auroc": 0.7381185960322653,
+        "pos_grouped_mean": 0.7321292412039938,
+        "pos_grouped_sd": 0.052862304330536555,
+        "contig_block_mean": 0.7480813048903773,
+        "contig_block_sd": 0.18421732911527547,
+        "contig_block_ci_95": [
+          0.6204582583646363,
+          0.8351481742045429
+        ],
+        "strictly_passes_stopping_rule": true
+      }
+    }
+  },
+  "esm2_650m": {
+    "model_id": "facebook/esm2_t33_650M_UR50D",
+    "model_type": "esm",
+    "metrics": {
+      "UL23-Aciclovir": {
+        "overall_auroc": 0.7881024096385543,
+        "pos_grouped_mean": 0.785015739520105,
+        "pos_grouped_sd": 0.06686143254132687,
+        "contig_block_mean": 0.7397289510367451,
+        "contig_block_sd": 0.15645834443781348,
+        "contig_block_ci_95": [
+          0.7133701041071543,
+          0.8421845316216882
+        ],
+        "strictly_passes_stopping_rule": true
+      },
+      "UL30-Aciclovir": {
+        "overall_auroc": 0.823984468339307,
+        "pos_grouped_mean": 0.8272910946495852,
+        "pos_grouped_sd": 0.06316165403655107,
+        "contig_block_mean": 0.7875407205383032,
+        "contig_block_sd": 0.1772487007893892,
+        "contig_block_ci_95": [
+          0.7569530791080098,
+          0.8856886228756718
+        ],
+        "strictly_passes_stopping_rule": true
+      },
+      "UL30-Foscarnet": {
+        "overall_auroc": 0.8408545890560281,
+        "pos_grouped_mean": 0.8454215027573074,
+        "pos_grouped_sd": 0.10502250479954868,
+        "contig_block_mean": 0.8809448121353805,
+        "contig_block_sd": 0.12499417138127175,
+        "contig_block_ci_95": [
+          0.7433216422849618,
+          0.9162230731421013
+        ],
+        "strictly_passes_stopping_rule": true
+      }
+    }
+  },
+  "protbert": {
+    "model_id": "Rostlab/prot_bert",
+    "model_type": "protbert",
+    "metrics": {
+      "UL23-Aciclovir": {
+        "overall_auroc": 0.724347389558233,
+        "pos_grouped_mean": 0.7258798535542517,
+        "pos_grouped_sd": 0.09517961911676039,
+        "contig_block_mean": 0.7529964937374881,
+        "contig_block_sd": 0.07131255604588708,
+        "contig_block_ci_95": [
+          0.6533354790543765,
+          0.7857919642857143
+        ],
+        "strictly_passes_stopping_rule": true
+      },
+      "UL30-Aciclovir": {
+        "overall_auroc": 0.8398446833930705,
+        "pos_grouped_mean": 0.8395771716054735,
+        "pos_grouped_sd": 0.0639641456790051,
+        "contig_block_mean": 0.6957124998821926,
+        "contig_block_sd": 0.2415570734123341,
+        "contig_block_ci_95": [
+          0.7740413596380231,
+          0.8937724628617852
+        ],
+        "strictly_passes_stopping_rule": true
+      },
+      "UL30-Foscarnet": {
+        "overall_auroc": 0.854534554174842,
+        "pos_grouped_mean": 0.848483883453236,
+        "pos_grouped_sd": 0.03069502302929319,
+        "contig_block_mean": 0.7422878201778578,
+        "contig_block_sd": 0.1593209724750539,
+        "contig_block_ci_95": [
+          0.795627375909634,
+          0.9136287087925365
+        ],
+        "strictly_passes_stopping_rule": true
+      }
+    }
+  }
+}

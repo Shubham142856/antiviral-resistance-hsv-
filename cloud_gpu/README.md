@@ -39,3 +39,4 @@ Because Kaggle CLI credentials (`~/.kaggle/access_token`) are already verified o
    ```powershell
    kaggle kernels output <username>/hsv-plm-gpu-benchmark -p d:\antiviral-resistance-hsv--1\logs
    ```
+

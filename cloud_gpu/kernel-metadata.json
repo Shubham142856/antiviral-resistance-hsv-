@@ -1,6 +1,6 @@
 {
-  "id": "hsv-plm-gpu-benchmark",
-  "title": "HSV-1 Antiviral Resistance PLM GPU Benchmark",
+  "id": "shubhamraikwar142/hsv-plm-gpu-benchmark",
+  "title": "HSV PLM GPU Benchmark",
   "code_file": "hsv_plm_gpu_runner.py",
   "language": "python",
   "kernel_type": "script",
