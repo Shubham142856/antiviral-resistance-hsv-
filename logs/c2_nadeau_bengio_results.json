@@ -1,0 +1,188 @@
+{
+  "UL23-Aciclovir": {
+    "RF_All_Features": {
+      "mean_gap": -0.0044,
+      "naive_se": 0.0085,
+      "nb_corrected_se": 0.0433,
+      "nb_ci_95": [
+        -0.0903,
+        0.0814
+      ],
+      "excludes_zero": false
+    },
+    "RF_No_Position": {
+      "mean_gap": -0.0118,
+      "naive_se": 0.0107,
+      "nb_corrected_se": 0.0545,
+      "nb_ci_95": [
+        -0.12,
+        0.0964
+      ],
+      "excludes_zero": false
+    },
+    "RF_Position_Only": {
+      "mean_gap": 0.023,
+      "naive_se": 0.0068,
+      "nb_corrected_se": 0.0347,
+      "nb_ci_95": [
+        -0.0459,
+        0.0918
+      ],
+      "excludes_zero": false
+    },
+    "Logistic_Regression": {
+      "mean_gap": 0.0258,
+      "naive_se": 0.0091,
+      "nb_corrected_se": 0.0463,
+      "nb_ci_95": [
+        -0.0661,
+        0.1176
+      ],
+      "excludes_zero": false
+    },
+    "BLOSUM62_Radicalness": {
+      "mean_gap": -0.0012,
+      "naive_se": 0.0072,
+      "nb_corrected_se": 0.0369,
+      "nb_ci_95": [
+        -0.0746,
+        0.0721
+      ],
+      "excludes_zero": false
+    },
+    "Position_Prior": {
+      "mean_gap": 0.2355,
+      "naive_se": 0.0043,
+      "nb_corrected_se": 0.0218,
+      "nb_ci_95": [
+        0.1922,
+        0.2788
+      ],
+      "excludes_zero": true
+    }
+  },
+  "UL30-Aciclovir": {
+    "RF_All_Features": {
+      "mean_gap": 0.0006,
+      "naive_se": 0.0092,
+      "nb_corrected_se": 0.0471,
+      "nb_ci_95": [
+        -0.0928,
+        0.094
+      ],
+      "excludes_zero": false
+    },
+    "RF_No_Position": {
+      "mean_gap": -0.0117,
+      "naive_se": 0.0145,
+      "nb_corrected_se": 0.0738,
+      "nb_ci_95": [
+        -0.158,
+        0.1347
+      ],
+      "excludes_zero": false
+    },
+    "RF_Position_Only": {
+      "mean_gap": 0.0005,
+      "naive_se": 0.0085,
+      "nb_corrected_se": 0.0433,
+      "nb_ci_95": [
+        -0.0855,
+        0.0864
+      ],
+      "excludes_zero": false
+    },
+    "Logistic_Regression": {
+      "mean_gap": -0.0024,
+      "naive_se": 0.0116,
+      "nb_corrected_se": 0.0592,
+      "nb_ci_95": [
+        -0.1199,
+        0.1151
+      ],
+      "excludes_zero": false
+    },
+    "BLOSUM62_Radicalness": {
+      "mean_gap": 0.0037,
+      "naive_se": 0.0101,
+      "nb_corrected_se": 0.0514,
+      "nb_ci_95": [
+        -0.0982,
+        0.1057
+      ],
+      "excludes_zero": false
+    },
+    "Position_Prior": {
+      "mean_gap": 0.1489,
+      "naive_se": 0.0047,
+      "nb_corrected_se": 0.024,
+      "nb_ci_95": [
+        0.1013,
+        0.1965
+      ],
+      "excludes_zero": true
+    }
+  },
+  "UL30-Foscarnet": {
+    "RF_All_Features": {
+      "mean_gap": -0.032,
+      "naive_se": 0.0109,
+      "nb_corrected_se": 0.0555,
+      "nb_ci_95": [
+        -0.142,
+        0.0781
+      ],
+      "excludes_zero": false
+    },
+    "RF_No_Position": {
+      "mean_gap": -0.0207,
+      "naive_se": 0.0118,
+      "nb_corrected_se": 0.0601,
+      "nb_ci_95": [
+        -0.14,
+        0.0986
+      ],
+      "excludes_zero": false
+    },
+    "RF_Position_Only": {
+      "mean_gap": -0.0248,
+      "naive_se": 0.0118,
+      "nb_corrected_se": 0.0603,
+      "nb_ci_95": [
+        -0.1445,
+        0.0949
+      ],
+      "excludes_zero": false
+    },
+    "Logistic_Regression": {
+      "mean_gap": 0.0126,
+      "naive_se": 0.0141,
+      "nb_corrected_se": 0.072,
+      "nb_ci_95": [
+        -0.1304,
+        0.1555
+      ],
+      "excludes_zero": false
+    },
+    "BLOSUM62_Radicalness": {
+      "mean_gap": 0.0361,
+      "naive_se": 0.0192,
+      "nb_corrected_se": 0.0979,
+      "nb_ci_95": [
+        -0.1582,
+        0.2304
+      ],
+      "excludes_zero": false
+    },
+    "Position_Prior": {
+      "mean_gap": 0.1245,
+      "naive_se": 0.0082,
+      "nb_corrected_se": 0.0419,
+      "nb_ci_95": [
+        0.0413,
+        0.2077
+      ],
+      "excludes_zero": true
+    }
+  }
+}
