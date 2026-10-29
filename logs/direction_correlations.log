@@ -1,0 +1,37 @@
+=== ESM-2 (35M) DELTA-LLR BIOLOGICAL DIRECTION CORRELATION AUDIT ===
+Delta-LLR Definition: log P(mut | x_{\i}) - log P(wt | x_{\i})
+Hypothesis 1: Negative correlation (Delta-LLR < 0, deleterious -> resistant)
+Hypothesis 2: Positive correlation (Delta-LLR > 0, stabilizing/fit -> resistant)
+
+=== UL23-Aciclovir (N=286: 120 Resistant, 166 Sensitive) ===
+  Mean Delta-LLR Sensitive: -0.4979 +/- 1.1492
+  Mean Delta-LLR Resistant: -1.7110 +/- 2.3423
+  Spearman rho:             -0.2804 (p = 1.4522e-06)
+  Kendall tau:              -0.2293 (p = 2.2101e-06)
+  Point-Biserial r:         -0.3234 (p = 2.1932e-08)
+  Mann-Whitney U (Res<Sens): p = 1.1090e-06
+  AUROC (Raw Delta-LLR):    0.3360
+  AUROC (-Delta-LLR):       0.6640
+  Direction Verdict:        Consistently Deleterious -> Resistant (Negative Correlation)
+
+=== UL30-Aciclovir (N=332: 62 Resistant, 270 Sensitive) ===
+  Mean Delta-LLR Sensitive: -0.7803 +/- 1.2574
+  Mean Delta-LLR Resistant: -1.9899 +/- 2.1904
+  Spearman rho:             -0.2340 (p = 1.6577e-05)
+  Kendall tau:              -0.1913 (p = 2.0778e-05)
+  Point-Biserial r:         -0.3040 (p = 1.5777e-08)
+  Mann-Whitney U (Res<Sens): p = 1.0423e-05
+  AUROC (Raw Delta-LLR):    0.3267
+  AUROC (-Delta-LLR):       0.6733
+  Direction Verdict:        Consistently Deleterious -> Resistant (Negative Correlation)
+
+=== UL30-Foscarnet (N=311: 33 Resistant, 278 Sensitive) ===
+  Mean Delta-LLR Sensitive: -0.8149 +/- 1.3146
+  Mean Delta-LLR Resistant: -2.3272 +/- 2.0476
+  Spearman rho:             -0.2620 (p = 2.8128e-06)
+  Kendall tau:              -0.2143 (p = 3.9666e-06)
+  Point-Biserial r:         -0.3136 (p = 1.5997e-08)
+  Mann-Whitney U (Res<Sens): p = 1.9931e-06
+  AUROC (Raw Delta-LLR):    0.2544
+  AUROC (-Delta-LLR):       0.7456
+  Direction Verdict:        Consistently Deleterious -> Resistant (Negative Correlation)

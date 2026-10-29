@@ -1,0 +1,50 @@
+{
+  "UL23-Aciclovir": {
+    "mean_llr_sensitive": -0.4979,
+    "std_llr_sensitive": 1.1492,
+    "mean_llr_resistant": -1.711,
+    "std_llr_resistant": 2.3423,
+    "spearman_rho": -0.2804,
+    "spearman_p": 1.4522461887580503e-06,
+    "kendall_tau": -0.2293,
+    "kendall_p": 2.210146755385157e-06,
+    "point_biserial_r": -0.3234,
+    "point_biserial_p": 2.1931975501634295e-08,
+    "mwu_res_less_sens_p": 1.1090257166157807e-06,
+    "auroc_raw": 0.336,
+    "auroc_inverted": 0.664,
+    "verdict": "Consistently Deleterious -> Resistant (Negative Correlation)"
+  },
+  "UL30-Aciclovir": {
+    "mean_llr_sensitive": -0.7803,
+    "std_llr_sensitive": 1.2574,
+    "mean_llr_resistant": -1.9899,
+    "std_llr_resistant": 2.1904,
+    "spearman_rho": -0.234,
+    "spearman_p": 1.6576675366231088e-05,
+    "kendall_tau": -0.1913,
+    "kendall_p": 2.0778063258607984e-05,
+    "point_biserial_r": -0.304,
+    "point_biserial_p": 1.5777375191526087e-08,
+    "mwu_res_less_sens_p": 1.0423156924107862e-05,
+    "auroc_raw": 0.3267,
+    "auroc_inverted": 0.6733,
+    "verdict": "Consistently Deleterious -> Resistant (Negative Correlation)"
+  },
+  "UL30-Foscarnet": {
+    "mean_llr_sensitive": -0.8149,
+    "std_llr_sensitive": 1.3146,
+    "mean_llr_resistant": -2.3272,
+    "std_llr_resistant": 2.0476,
+    "spearman_rho": -0.262,
+    "spearman_p": 2.8128317733894072e-06,
+    "kendall_tau": -0.2143,
+    "kendall_p": 3.966610636449706e-06,
+    "point_biserial_r": -0.3136,
+    "point_biserial_p": 1.59972112631529e-08,
+    "mwu_res_less_sens_p": 1.9931012982954335e-06,
+    "auroc_raw": 0.2544,
+    "auroc_inverted": 0.7456,
+    "verdict": "Consistently Deleterious -> Resistant (Negative Correlation)"
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "UL23-Aciclovir": {
+    "RF_All_Features": {
+      "mean_gap": 0.0103,
+      "se_boot": 0.0141,
+      "ci_95_cluster_bootstrap": [
+        -0.0172,
+        0.0381
+      ],
+      "excludes_zero": false
+    },
+    "RF_No_Position": {
+      "mean_gap": -0.0004,
+      "se_boot": 0.0182,
+      "ci_95_cluster_bootstrap": [
+        -0.0342,
+        0.0342
+      ],
+      "excludes_zero": false
+    },
+    "RF_Position_Only": {
+      "mean_gap": 0.0327,
+      "se_boot": 0.0181,
+      "ci_95_cluster_bootstrap": [
+        0.0018,
+        0.0693
+      ],
+      "excludes_zero": true
+    },
+    "Logistic_Regression": {
+      "mean_gap": -0.001,
+      "se_boot": 0.017,
+      "ci_95_cluster_bootstrap": [
+        -0.0349,
+        0.0331
+      ],
+      "excludes_zero": false
+    },
+    "BLOSUM62_Radicalness": {
+      "mean_gap": 0.0,
+      "se_boot": 0.0,
+      "ci_95_cluster_bootstrap": [
+        0.0,
+        0.0
+      ],
+      "excludes_zero": false
+    },
+    "Position_Prior": {
+      "mean_gap": 0.2664,
+      "se_boot": 0.0372,
+      "ci_95_cluster_bootstrap": [
+        0.1872,
+        0.3331
+      ],
+      "excludes_zero": true
+    }
+  },
+  "UL30-Aciclovir": {
+    "RF_All_Features": {
+      "mean_gap": -0.0144,
+      "se_boot": 0.0167,
+      "ci_95_cluster_bootstrap": [
+        -0.0501,
+        0.0169
+      ],
+      "excludes_zero": false
+    },
+    "RF_No_Position": {
+      "mean_gap": -0.0442,
+      "se_boot": 0.0257,
+      "ci_95_cluster_bootstrap": [
+        -0.0962,
+        0.0067
+      ],
+      "excludes_zero": false
+    },
+    "RF_Position_Only": {
+      "mean_gap": -0.0188,
+      "se_boot": 0.0093,
+      "ci_95_cluster_bootstrap": [
+        -0.0382,
+        -0.0023
+      ],
+      "excludes_zero": false
+    },
+    "Logistic_Regression": {
+      "mean_gap": -0.0003,
+      "se_boot": 0.0165,
+      "ci_95_cluster_bootstrap": [
+        -0.0338,
+        0.0312
+      ],
+      "excludes_zero": false
+    },
+    "BLOSUM62_Radicalness": {
+      "mean_gap": 0.0,
+      "se_boot": 0.0,
+      "ci_95_cluster_bootstrap": [
+        0.0,
+        0.0
+      ],
+      "excludes_zero": false
+    },
+    "Position_Prior": {
+      "mean_gap": 0.0763,
+      "se_boot": 0.0495,
+      "ci_95_cluster_bootstrap": [
+        -0.0212,
+        0.1704
+      ],
+      "excludes_zero": false
+    }
+  },
+  "UL30-Foscarnet": {
+    "RF_All_Features": {
+      "mean_gap": -0.0146,
+      "se_boot": 0.0194,
+      "ci_95_cluster_bootstrap": [
+        -0.054,
+        0.0218
+      ],
+      "excludes_zero": false
+    },
+    "RF_No_Position": {
+      "mean_gap": -0.0465,
+      "se_boot": 0.0244,
+      "ci_95_cluster_bootstrap": [
+        -0.0955,
+        -0.0008
+      ],
+      "excludes_zero": false
+    },
+    "RF_Position_Only": {
+      "mean_gap": -0.003,
+      "se_boot": 0.0149,
+      "ci_95_cluster_bootstrap": [
+        -0.0318,
+        0.0263
+      ],
+      "excludes_zero": false
+    },
+    "Logistic_Regression": {
+      "mean_gap": -0.0008,
+      "se_boot": 0.0231,
+      "ci_95_cluster_bootstrap": [
+        -0.0458,
+        0.0487
+      ],
+      "excludes_zero": false
+    },
+    "BLOSUM62_Radicalness": {
+      "mean_gap": 0.0,
+      "se_boot": 0.0,
+      "ci_95_cluster_bootstrap": [
+        0.0,
+        0.0
+      ],
+      "excludes_zero": false
+    },
+    "Position_Prior": {
+      "mean_gap": 0.0107,
+      "se_boot": 0.063,
+      "ci_95_cluster_bootstrap": [
+        -0.1026,
+        0.1293
+      ],
+      "excludes_zero": false
+    }
+  }
+}

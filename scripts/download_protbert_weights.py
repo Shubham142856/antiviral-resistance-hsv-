@@ -37,3 +37,4 @@ if os.path.exists(target_file):
     os.remove(target_file)
 os.rename(target_file + ".part", target_file)
 print(f"\nDownload COMPLETE! Size: {os.path.getsize(target_file)} bytes", flush=True)
+

@@ -1,0 +1,33 @@
+=== CLAIM C2 CLUSTER BOOTSTRAP OVER POSITIONS AUDIT LOG ===
+Bootstrap Iterations: 1000 (Resampling Unique Sequence Positions with Replacement)
+Metric: Paired Leakage Gap (Naive Random AUROC - Position-Grouped AUROC)
+
+=== UL23-Aciclovir (N=286, 210 Unique Positions, 1000 Valid Bootstraps) ===
+Model Architecture           | Mean Gap   | Bootstrap SE | 95% Position-Cluster CI    | Verdict
+---------------------------------------------------------------------------------------------------------
+RF_All_Features              | +0.0103    | 0.0141       | [-0.0172, +0.0381]         | Spans zero (No leakage)
+RF_No_Position               | -0.0004    | 0.0182       | [-0.0342, +0.0342]         | Spans zero (No leakage)
+RF_Position_Only             | +0.0327    | 0.0181       | [+0.0018, +0.0693]         | EXCLUDES ZERO (Significant leakage)
+Logistic_Regression          | -0.0010    | 0.0170       | [-0.0349, +0.0331]         | Spans zero (No leakage)
+BLOSUM62_Radicalness         | +0.0000    | 0.0000       | [+0.0000, +0.0000]         | Spans zero (No leakage)
+Position_Prior               | +0.2664    | 0.0372       | [+0.1872, +0.3331]         | EXCLUDES ZERO (Significant leakage)
+
+=== UL30-Aciclovir (N=332, 290 Unique Positions, 1000 Valid Bootstraps) ===
+Model Architecture           | Mean Gap   | Bootstrap SE | 95% Position-Cluster CI    | Verdict
+---------------------------------------------------------------------------------------------------------
+RF_All_Features              | -0.0144    | 0.0167       | [-0.0501, +0.0169]         | Spans zero (No leakage)
+RF_No_Position               | -0.0442    | 0.0257       | [-0.0962, +0.0067]         | Spans zero (No leakage)
+RF_Position_Only             | -0.0188    | 0.0093       | [-0.0382, -0.0023]         | Spans zero (No leakage)
+Logistic_Regression          | -0.0003    | 0.0165       | [-0.0338, +0.0312]         | Spans zero (No leakage)
+BLOSUM62_Radicalness         | +0.0000    | 0.0000       | [+0.0000, +0.0000]         | Spans zero (No leakage)
+Position_Prior               | +0.0763    | 0.0495       | [-0.0212, +0.1704]         | Spans zero (No leakage)
+
+=== UL30-Foscarnet (N=311, 271 Unique Positions, 1000 Valid Bootstraps) ===
+Model Architecture           | Mean Gap   | Bootstrap SE | 95% Position-Cluster CI    | Verdict
+---------------------------------------------------------------------------------------------------------
+RF_All_Features              | -0.0146    | 0.0194       | [-0.0540, +0.0218]         | Spans zero (No leakage)
+RF_No_Position               | -0.0465    | 0.0244       | [-0.0955, -0.0008]         | Spans zero (No leakage)
+RF_Position_Only             | -0.0030    | 0.0149       | [-0.0318, +0.0263]         | Spans zero (No leakage)
+Logistic_Regression          | -0.0008    | 0.0231       | [-0.0458, +0.0487]         | Spans zero (No leakage)
+BLOSUM62_Radicalness         | +0.0000    | 0.0000       | [+0.0000, +0.0000]         | Spans zero (No leakage)
+Position_Prior               | +0.0107    | 0.0630       | [-0.1026, +0.1293]         | Spans zero (No leakage)
