@@ -1,0 +1,277 @@
+{
+  "track": "B1",
+  "status": "COMPLETE",
+  "orthologs_aligned": {
+    "UL23": [
+      "HSV-1",
+      "HSV-2",
+      "VZV"
+    ],
+    "UL30": [
+      "HSV-1",
+      "HSV-2",
+      "VZV",
+      "HCMV",
+      "HHV-6B"
+    ]
+  },
+  "results_by_pair": {
+    "UL23-Aciclovir": {
+      "BLOSUM62 Radicalness": {
+        "pos_grouped_mean": 0.6139511365402097,
+        "pos_grouped_sd": 0.05832507812541729,
+        "contig_block_mean": 0.638017252989684,
+        "contig_block_sd": 0.06897166770350281,
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.5523776163061713,
+          0.7236568896731967
+        ],
+        "pooled_auroc": 0.6129518072289156,
+        "per_block_auroc": {
+          "B0": 0.5571705426356589,
+          "B1": 0.5745341614906833,
+          "B2": 0.6602787456445993,
+          "B3": 0.6829865361077111,
+          "B4": 0.7151162790697675
+        }
+      },
+      "MSA Family Conservation Fraction": {
+        "pos_grouped_mean": 0.729164239181657,
+        "pos_grouped_sd": 0.05691797525949982,
+        "contig_block_mean": 0.7302205935935302,
+        "contig_block_sd": 0.09177005816076457,
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.6162730162622433,
+          0.8441681709248171
+        ],
+        "pooled_auroc": 0.7319528112449798,
+        "per_block_auroc": {
+          "B0": 0.7587209302325582,
+          "B1": 0.5729813664596273,
+          "B2": 0.8022648083623694,
+          "B3": 0.784577723378213,
+          "B4": 0.7325581395348837
+        }
+      },
+      "Negative MSA Entropy (-Entropy)": {
+        "pos_grouped_mean": 0.725473560011438,
+        "pos_grouped_sd": 0.058034649764135034,
+        "contig_block_mean": 0.7251075557521884,
+        "contig_block_sd": 0.08919522399495963,
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.6143570573059265,
+          0.8358580541984504
+        ],
+        "pooled_auroc": 0.7279618473895582,
+        "per_block_auroc": {
+          "B0": 0.7587209302325582,
+          "B1": 0.5729813664596273,
+          "B2": 0.7883275261324043,
+          "B3": 0.784577723378213,
+          "B4": 0.7209302325581396
+        }
+      },
+      "Multi-Herpesvirus Weighted Conservation": {
+        "pos_grouped_mean": 0.7313374777469935,
+        "pos_grouped_sd": 0.039918912781153955,
+        "contig_block_mean": 0.7373407717176984,
+        "contig_block_sd": 0.09203445819098915,
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.6230648983877577,
+          0.8516166450476391
+        ],
+        "pooled_auroc": 0.7292670682730924,
+        "per_block_auroc": {
+          "B0": 0.6952519379844961,
+          "B1": 0.59472049689441,
+          "B2": 0.8109756097560975,
+          "B3": 0.8023255813953487,
+          "B4": 0.7834302325581396
+        }
+      }
+    },
+    "UL30-Aciclovir": {
+      "BLOSUM62 Radicalness": {
+        "pos_grouped_mean": 0.49318744585254015,
+        "pos_grouped_sd": 0.06082325484442814,
+        "contig_block_mean": 0.5494306974680135,
+        "contig_block_sd": 0.24959629394815597,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.1522672957241059,
+          0.9465940992119212
+        ],
+        "pooled_auroc": 0.4942054958183991,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 0.8815789473684211,
+          "B2": 0.5301659125188537,
+          "B3": 0.5097222222222222,
+          "B4": 0.2762557077625571
+        }
+      },
+      "MSA Family Conservation Fraction": {
+        "pos_grouped_mean": 0.7020730448796487,
+        "pos_grouped_sd": 0.12963268096978328,
+        "contig_block_mean": 0.6993714888334106,
+        "contig_block_sd": 0.24619940305192556,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.30761329853058317,
+          1.0
+        ],
+        "pooled_auroc": 0.7071385902031063,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 0.9473684210526316,
+          "B2": 0.7168174962292609,
+          "B3": 0.7725694444444444,
+          "B4": 0.3607305936073059
+        }
+      },
+      "Negative MSA Entropy (-Entropy)": {
+        "pos_grouped_mean": 0.7111852333550448,
+        "pos_grouped_sd": 0.11835390186295576,
+        "contig_block_mean": 0.6998543565062965,
+        "contig_block_sd": 0.2600873832138441,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.28599729062639345,
+          1.0
+        ],
+        "pooled_auroc": 0.7155913978494624,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 0.9473684210526316,
+          "B2": 0.7251131221719457,
+          "B3": 0.7913194444444445,
+          "B4": 0.3356164383561644
+        }
+      },
+      "Multi-Herpesvirus Weighted Conservation": {
+        "pos_grouped_mean": 0.6263241964185361,
+        "pos_grouped_sd": 0.0977189296247446,
+        "contig_block_mean": 0.6428155906285942,
+        "contig_block_sd": 0.317363026578468,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.13782019494444386,
+          1.0
+        ],
+        "pooled_auroc": 0.6226403823178017,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 1.0,
+          "B2": 0.6478129713423831,
+          "B3": 0.6951388888888889,
+          "B4": 0.228310502283105
+        }
+      }
+    },
+    "UL30-Foscarnet": {
+      "BLOSUM62 Radicalness": {
+        "pos_grouped_mean": 0.4189989112634903,
+        "pos_grouped_sd": 0.15084833984884594,
+        "contig_block_mean": 0.5074257877048401,
+        "contig_block_sd": 0.2997394065613611,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.03047350422527273,
+          0.9843780711844076
+        ],
+        "pooled_auroc": 0.45312840636581647,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 0.9054054054054054,
+          "B2": 0.46811224489795916,
+          "B3": 0.4785539215686274,
+          "B4": 0.17763157894736842
+        }
+      },
+      "MSA Family Conservation Fraction": {
+        "pos_grouped_mean": 0.7925242778581476,
+        "pos_grouped_sd": 0.06562644896911897,
+        "contig_block_mean": 0.8222999237034786,
+        "contig_block_sd": 0.08320576347649641,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.6899009864264356,
+          0.9546988609805216
+        ],
+        "pooled_auroc": 0.7866797471114018,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 0.9459459459459459,
+          "B2": 0.7965561224489796,
+          "B3": 0.7769607843137255,
+          "B4": 0.7697368421052632
+        }
+      },
+      "Negative MSA Entropy (-Entropy)": {
+        "pos_grouped_mean": 0.7931291132743039,
+        "pos_grouped_sd": 0.06671266083874564,
+        "contig_block_mean": 0.8246164753241269,
+        "contig_block_sd": 0.08173248317147538,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.6945618557787645,
+          0.9546710948694892
+        ],
+        "pooled_auroc": 0.7898408545890561,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 0.9459459459459459,
+          "B2": 0.7984693877551021,
+          "B3": 0.7843137254901961,
+          "B4": 0.7697368421052632
+        }
+      },
+      "Multi-Herpesvirus Weighted Conservation": {
+        "pos_grouped_mean": 0.6358781357783172,
+        "pos_grouped_sd": 0.06472673474031973,
+        "contig_block_mean": 0.660390965596765,
+        "contig_block_sd": 0.26643317526015436,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.2364363284909226,
+          1.0
+        ],
+        "pooled_auroc": 0.6302594288205798,
+        "per_block_auroc": {
+          "B0": null,
+          "B1": 1.0,
+          "B2": 0.6403061224489796,
+          "B3": 0.6525735294117647,
+          "B4": 0.34868421052631576
+        }
+      }
+    }
+  },
+  "comparison_summary": {
+    "UL23-Aciclovir": {
+      "msa_weighted_conservation": 0.7373407717176984,
+      "protbert": 0.7529964937374881,
+      "esm2_650m": 0.7397289510367451,
+      "best_plm": 0.7529964937374881,
+      "plm_delta_vs_conservation": 0.01565572201978971
+    },
+    "UL30-Aciclovir": {
+      "msa_weighted_conservation": 0.6428155906285942,
+      "protbert": 0.6957124998821926,
+      "esm2_650m": 0.7875407205383032,
+      "best_plm": 0.7875407205383032,
+      "plm_delta_vs_conservation": 0.14472512990970898
+    },
+    "UL30-Foscarnet": {
+      "msa_weighted_conservation": 0.660390965596765,
+      "protbert": 0.7422878201778578,
+      "esm2_650m": 0.8809448121353805,
+      "best_plm": 0.8809448121353805,
+      "plm_delta_vs_conservation": 0.22055384653861543
+    }
+  }
+}

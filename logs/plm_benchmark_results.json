@@ -1,85 +1,171 @@
 {
-  "esm2_35m": {
-    "model_id": "facebook/esm2_t12_35M_UR50D",
-    "model_type": "esm",
+  "blosum62_baseline": {
+    "model_id": "BLOSUM62 Radicalness",
     "metrics": {
       "UL23-Aciclovir": {
-        "overall_auroc": 0.664031124497992,
-        "pos_grouped_mean": 0.6597975633395424,
-        "pos_grouped_sd": 0.0558979533030132,
-        "contig_block_mean": 0.6110002898192237,
-        "contig_block_sd": 0.20010126832262046,
-        "contig_block_ci_95": [
-          0.5748316004894586,
-          0.7291661970041206
+        "overall_pooled_auroc_directed": 0.3870481927710844,
+        "overall_pooled_auroc_opposite": 0.6129518072289156,
+        "pooled_position_cluster_ci_95": [
+          0.3272068603515625,
+          0.45159733393081464
         ],
-        "strictly_passes_stopping_rule": false
+        "pos_grouped_mean": 0.38604886345979034,
+        "pos_grouped_sd": 0.05832507812541732,
+        "contig_block_mean": 0.36198274701031596,
+        "contig_block_sd": 0.06897166770350281,
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.2763431103268031,
+          0.44762238369382884
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": 0.4428294573643411,
+            "n_total": 67,
+            "n_resistant": 24,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B1": {
+            "auroc": 0.4254658385093168,
+            "n_total": 51,
+            "n_resistant": 28,
+            "n_sensitive": 23,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.3397212543554007,
+            "n_total": 55,
+            "n_resistant": 41,
+            "n_sensitive": 14,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.31701346389228885,
+            "n_total": 62,
+            "n_resistant": 19,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.28488372093023256,
+            "n_total": 51,
+            "n_resistant": 8,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
       },
       "UL30-Aciclovir": {
-        "overall_auroc": 0.6681302270011947,
-        "pos_grouped_mean": 0.6791140568027361,
-        "pos_grouped_sd": 0.10362761346394513,
-        "contig_block_mean": 0.6795059632344332,
-        "contig_block_sd": 0.2441192045145104,
-        "contig_block_ci_95": [
-          0.5813908678555342,
-          0.7478849055297427
+        "overall_pooled_auroc_directed": 0.505794504181601,
+        "overall_pooled_auroc_opposite": 0.4942054958183991,
+        "pooled_position_cluster_ci_95": [
+          0.4294680443064818,
+          0.5885385723165859
         ],
-        "strictly_passes_stopping_rule": true
+        "pos_grouped_mean": 0.5068125541474597,
+        "pos_grouped_sd": 0.06082325484442809,
+        "contig_block_mean": 0.4505693025319865,
+        "contig_block_sd": 0.2495962939481559,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.05340590078800972,
+          0.8477327042759633
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 63,
+            "n_resistant": 0,
+            "n_sensitive": 63,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 0.11842105263157898,
+            "n_total": 39,
+            "n_resistant": 1,
+            "n_sensitive": 38,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.4698340874811463,
+            "n_total": 77,
+            "n_resistant": 26,
+            "n_sensitive": 51,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.4902777777777778,
+            "n_total": 77,
+            "n_resistant": 32,
+            "n_sensitive": 45,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.7237442922374429,
+            "n_total": 76,
+            "n_resistant": 3,
+            "n_sensitive": 73,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
       },
       "UL30-Foscarnet": {
-        "overall_auroc": 0.7381185960322653,
-        "pos_grouped_mean": 0.7321292412039938,
-        "pos_grouped_sd": 0.052862304330536555,
-        "contig_block_mean": 0.7480813048903773,
-        "contig_block_sd": 0.18421732911527547,
-        "contig_block_ci_95": [
-          0.6204582583646363,
-          0.8351481742045429
+        "overall_pooled_auroc_directed": 0.5468715936341836,
+        "overall_pooled_auroc_opposite": 0.45312840636581647,
+        "pooled_position_cluster_ci_95": [
+          0.44397537209551347,
+          0.6484974173460164
         ],
-        "strictly_passes_stopping_rule": true
-      }
-    }
-  },
-  "esm2_650m": {
-    "model_id": "facebook/esm2_t33_650M_UR50D",
-    "model_type": "esm",
-    "metrics": {
-      "UL23-Aciclovir": {
-        "overall_auroc": 0.7881024096385543,
-        "pos_grouped_mean": 0.785015739520105,
-        "pos_grouped_sd": 0.06686143254132687,
-        "contig_block_mean": 0.7397289510367451,
-        "contig_block_sd": 0.15645834443781348,
-        "contig_block_ci_95": [
-          0.7133701041071543,
-          0.8421845316216882
+        "pos_grouped_mean": 0.5810010887365097,
+        "pos_grouped_sd": 0.15084833984884588,
+        "contig_block_mean": 0.4925742122951599,
+        "contig_block_sd": 0.2997394065613611,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.015621928815509278,
+          0.9695264957748105
         ],
-        "strictly_passes_stopping_rule": true
-      },
-      "UL30-Aciclovir": {
-        "overall_auroc": 0.823984468339307,
-        "pos_grouped_mean": 0.8272910946495852,
-        "pos_grouped_sd": 0.06316165403655107,
-        "contig_block_mean": 0.7875407205383032,
-        "contig_block_sd": 0.1772487007893892,
-        "contig_block_ci_95": [
-          0.7569530791080098,
-          0.8856886228756718
-        ],
-        "strictly_passes_stopping_rule": true
-      },
-      "UL30-Foscarnet": {
-        "overall_auroc": 0.8408545890560281,
-        "pos_grouped_mean": 0.8454215027573074,
-        "pos_grouped_sd": 0.10502250479954868,
-        "contig_block_mean": 0.8809448121353805,
-        "contig_block_sd": 0.12499417138127175,
-        "contig_block_ci_95": [
-          0.7433216422849618,
-          0.9162230731421013
-        ],
-        "strictly_passes_stopping_rule": true
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 61,
+            "n_resistant": 0,
+            "n_sensitive": 61,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 0.09459459459459457,
+            "n_total": 38,
+            "n_resistant": 1,
+            "n_sensitive": 37,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.5318877551020409,
+            "n_total": 70,
+            "n_resistant": 14,
+            "n_sensitive": 56,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.5214460784313726,
+            "n_total": 65,
+            "n_resistant": 17,
+            "n_sensitive": 48,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.8223684210526316,
+            "n_total": 77,
+            "n_resistant": 1,
+            "n_sensitive": 76,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
       }
     }
   },
@@ -88,40 +174,511 @@
     "model_type": "protbert",
     "metrics": {
       "UL23-Aciclovir": {
-        "overall_auroc": 0.724347389558233,
+        "overall_pooled_auroc_directed": 0.724347389558233,
+        "overall_pooled_auroc_opposite": 0.27565261044176703,
+        "pooled_position_cluster_ci_95": [
+          0.6533354790543765,
+          0.7857919642857143
+        ],
         "pos_grouped_mean": 0.7258798535542517,
         "pos_grouped_sd": 0.09517961911676039,
         "contig_block_mean": 0.7529964937374881,
         "contig_block_sd": 0.07131255604588708,
-        "contig_block_ci_95": [
-          0.6533354790543765,
-          0.7857919642857143
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.6644502602754218,
+          0.8415427271995545
         ],
-        "strictly_passes_stopping_rule": true
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": 0.8464147286821706,
+            "n_total": 67,
+            "n_resistant": 24,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B1": {
+            "auroc": 0.7267080745341615,
+            "n_total": 51,
+            "n_resistant": 28,
+            "n_sensitive": 23,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.7770034843205575,
+            "n_total": 55,
+            "n_resistant": 41,
+            "n_sensitive": 14,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.6517747858017136,
+            "n_total": 62,
+            "n_resistant": 19,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.7630813953488372,
+            "n_total": 51,
+            "n_resistant": 8,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": true
       },
       "UL30-Aciclovir": {
-        "overall_auroc": 0.8398446833930705,
+        "overall_pooled_auroc_directed": 0.8398446833930705,
+        "overall_pooled_auroc_opposite": 0.1601553166069295,
+        "pooled_position_cluster_ci_95": [
+          0.7740413596380231,
+          0.8937724628617852
+        ],
         "pos_grouped_mean": 0.8395771716054735,
         "pos_grouped_sd": 0.0639641456790051,
         "contig_block_mean": 0.6957124998821926,
         "contig_block_sd": 0.2415570734123341,
-        "contig_block_ci_95": [
-          0.7740413596380231,
-          0.8937724628617852
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.3113412919840116,
+          1.0
         ],
-        "strictly_passes_stopping_rule": true
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 63,
+            "n_resistant": 0,
+            "n_sensitive": 63,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 0.9473684210526316,
+            "n_total": 39,
+            "n_resistant": 1,
+            "n_sensitive": 38,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.6470588235294118,
+            "n_total": 77,
+            "n_resistant": 26,
+            "n_sensitive": 51,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.804861111111111,
+            "n_total": 77,
+            "n_resistant": 32,
+            "n_sensitive": 45,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.3835616438356164,
+            "n_total": 76,
+            "n_resistant": 3,
+            "n_sensitive": 73,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
       },
       "UL30-Foscarnet": {
-        "overall_auroc": 0.854534554174842,
+        "overall_pooled_auroc_directed": 0.854534554174842,
+        "overall_pooled_auroc_opposite": 0.14546544582515808,
+        "pooled_position_cluster_ci_95": [
+          0.795627375909634,
+          0.9136287087925365
+        ],
         "pos_grouped_mean": 0.848483883453236,
         "pos_grouped_sd": 0.03069502302929319,
         "contig_block_mean": 0.7422878201778578,
         "contig_block_sd": 0.1593209724750539,
-        "contig_block_ci_95": [
-          0.795627375909634,
-          0.9136287087925365
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.4887726000740923,
+          0.9958030402816233
         ],
-        "strictly_passes_stopping_rule": true
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 61,
+            "n_resistant": 0,
+            "n_sensitive": 61,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 0.9459459459459459,
+            "n_total": 38,
+            "n_resistant": 1,
+            "n_sensitive": 37,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.6262755102040817,
+            "n_total": 70,
+            "n_resistant": 14,
+            "n_sensitive": 56,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.7916666666666667,
+            "n_total": 65,
+            "n_resistant": 17,
+            "n_sensitive": 48,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.6052631578947368,
+            "n_total": 77,
+            "n_resistant": 1,
+            "n_sensitive": 76,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
+      }
+    }
+  },
+  "esm2_650m": {
+    "model_id": "facebook/esm2_t33_650M_UR50D",
+    "model_type": "esm",
+    "metrics": {
+      "UL23-Aciclovir": {
+        "overall_pooled_auroc_directed": 0.7881024096385543,
+        "overall_pooled_auroc_opposite": 0.2118975903614458,
+        "pooled_position_cluster_ci_95": [
+          0.7133701041071543,
+          0.8421845316216882
+        ],
+        "pos_grouped_mean": 0.785015739520105,
+        "pos_grouped_sd": 0.06686143254132687,
+        "contig_block_mean": 0.7397289510367451,
+        "contig_block_sd": 0.15645834443781348,
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.5454602575297476,
+          0.9339976445437426
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": 0.9864341085271318,
+            "n_total": 67,
+            "n_resistant": 24,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B1": {
+            "auroc": 0.6677018633540373,
+            "n_total": 51,
+            "n_resistant": 28,
+            "n_sensitive": 23,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.8013937282229966,
+            "n_total": 55,
+            "n_resistant": 41,
+            "n_sensitive": 14,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.6297429620563035,
+            "n_total": 62,
+            "n_resistant": 19,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.6133720930232558,
+            "n_total": 51,
+            "n_resistant": 8,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": true
+      },
+      "UL30-Aciclovir": {
+        "overall_pooled_auroc_directed": 0.823984468339307,
+        "overall_pooled_auroc_opposite": 0.17601553166069292,
+        "pooled_position_cluster_ci_95": [
+          0.7569530791080098,
+          0.8856886228756718
+        ],
+        "pos_grouped_mean": 0.8272910946495852,
+        "pos_grouped_sd": 0.06316165403655107,
+        "contig_block_mean": 0.7875407205383032,
+        "contig_block_sd": 0.1772487007893892,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.5054984840664893,
+          1.0
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 63,
+            "n_resistant": 0,
+            "n_sensitive": 63,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 1.0,
+            "n_total": 39,
+            "n_resistant": 1,
+            "n_sensitive": 38,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.7571644042232277,
+            "n_total": 77,
+            "n_resistant": 26,
+            "n_sensitive": 51,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.8222222222222223,
+            "n_total": 77,
+            "n_resistant": 32,
+            "n_sensitive": 45,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.5707762557077626,
+            "n_total": 76,
+            "n_resistant": 3,
+            "n_sensitive": 73,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": true
+      },
+      "UL30-Foscarnet": {
+        "overall_pooled_auroc_directed": 0.8408545890560281,
+        "overall_pooled_auroc_opposite": 0.15914541094397205,
+        "pooled_position_cluster_ci_95": [
+          0.7433216422849618,
+          0.9162230731421013
+        ],
+        "pos_grouped_mean": 0.8454215027573074,
+        "pos_grouped_sd": 0.10502250479954868,
+        "contig_block_mean": 0.8809448121353805,
+        "contig_block_sd": 0.12499417138127175,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.6820511926881824,
+          1.0
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 61,
+            "n_resistant": 0,
+            "n_sensitive": 61,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 1.0,
+            "n_total": 38,
+            "n_resistant": 1,
+            "n_sensitive": 37,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.7461734693877551,
+            "n_total": 70,
+            "n_resistant": 14,
+            "n_sensitive": 56,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.8039215686274509,
+            "n_total": 65,
+            "n_resistant": 17,
+            "n_sensitive": 48,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.9736842105263158,
+            "n_total": 77,
+            "n_resistant": 1,
+            "n_sensitive": 76,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": true
+      }
+    }
+  },
+  "esm2_35m": {
+    "model_id": "facebook/esm2_t12_35M_UR50D",
+    "model_type": "esm",
+    "metrics": {
+      "UL23-Aciclovir": {
+        "overall_pooled_auroc_directed": 0.664031124497992,
+        "overall_pooled_auroc_opposite": 0.33596887550200805,
+        "pooled_position_cluster_ci_95": [
+          0.5748316004894586,
+          0.7291661970041206
+        ],
+        "pos_grouped_mean": 0.6597975633395424,
+        "pos_grouped_sd": 0.0558979533030132,
+        "contig_block_mean": 0.6110002898192237,
+        "contig_block_sd": 0.20010126832262046,
+        "contig_block_evaluable_folds": 5,
+        "contig_block_student_t_ci_95": [
+          0.36254174894811414,
+          0.8594588306903332
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": 0.9040697674418604,
+            "n_total": 67,
+            "n_resistant": 24,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B1": {
+            "auroc": 0.40372670807453415,
+            "n_total": 51,
+            "n_resistant": 28,
+            "n_sensitive": 23,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.7195121951219513,
+            "n_total": 55,
+            "n_resistant": 41,
+            "n_sensitive": 14,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.4957160342717258,
+            "n_total": 62,
+            "n_resistant": 19,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.5319767441860466,
+            "n_total": 51,
+            "n_resistant": 8,
+            "n_sensitive": 43,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
+      },
+      "UL30-Aciclovir": {
+        "overall_pooled_auroc_directed": 0.6681302270011947,
+        "overall_pooled_auroc_opposite": 0.33186977299880527,
+        "pooled_position_cluster_ci_95": [
+          0.5813908678555342,
+          0.7478849055297427
+        ],
+        "pos_grouped_mean": 0.6791140568027361,
+        "pos_grouped_sd": 0.10362761346394513,
+        "contig_block_mean": 0.6795059632344332,
+        "contig_block_sd": 0.2441192045145104,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.29105783300636473,
+          1.0
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 63,
+            "n_resistant": 0,
+            "n_sensitive": 63,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 1.0,
+            "n_total": 39,
+            "n_resistant": 1,
+            "n_sensitive": 38,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.6425339366515836,
+            "n_total": 77,
+            "n_resistant": 26,
+            "n_sensitive": 51,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.6690972222222221,
+            "n_total": 77,
+            "n_resistant": 32,
+            "n_sensitive": 45,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.4063926940639269,
+            "n_total": 76,
+            "n_resistant": 3,
+            "n_sensitive": 73,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
+      },
+      "UL30-Foscarnet": {
+        "overall_pooled_auroc_directed": 0.7381185960322653,
+        "overall_pooled_auroc_opposite": 0.2618814039677349,
+        "pooled_position_cluster_ci_95": [
+          0.6204582583646363,
+          0.8351481742045429
+        ],
+        "pos_grouped_mean": 0.7321292412039938,
+        "pos_grouped_sd": 0.052862304330536555,
+        "contig_block_mean": 0.7480813048903773,
+        "contig_block_sd": 0.18421732911527547,
+        "contig_block_evaluable_folds": 4,
+        "contig_block_student_t_ci_95": [
+          0.45495042568425553,
+          1.0
+        ],
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": null,
+            "n_total": 61,
+            "n_resistant": 0,
+            "n_sensitive": 61,
+            "status": "single_class_skipped"
+          },
+          "B1": {
+            "auroc": 1.0,
+            "n_total": 38,
+            "n_resistant": 1,
+            "n_sensitive": 37,
+            "status": "evaluable"
+          },
+          "B2": {
+            "auroc": 0.6505102040816327,
+            "n_total": 70,
+            "n_resistant": 14,
+            "n_sensitive": 56,
+            "status": "evaluable"
+          },
+          "B3": {
+            "auroc": 0.7628676470588236,
+            "n_total": 65,
+            "n_resistant": 17,
+            "n_sensitive": 48,
+            "status": "evaluable"
+          },
+          "B4": {
+            "auroc": 0.5789473684210527,
+            "n_total": 77,
+            "n_resistant": 1,
+            "n_sensitive": 76,
+            "status": "evaluable"
+          }
+        },
+        "passes_block_stopping_rule": false
       }
     }
   }
