@@ -1,0 +1,686 @@
+{
+  "audit_protocol": "Strict Version 4 (Frozen)",
+  "dataset_sha256": "7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909",
+  "deliverable_1_1_supervised_predictor_c3": {
+    "UL23-Aciclovir": {
+      "Logistic_Regression_L2": {
+        "pos_grouped_auroc_mean": 0.8231190999865486,
+        "pos_grouped_auroc_sd": 0.02878907521994109,
+        "contig_block_auroc_mean": 0.8187896573785446,
+        "contig_block_auroc_sd": 0.11213728512094553,
+        "contig_block_student_t_ci_95": [
+          0.6795528275875559,
+          0.9580264871695333
+        ],
+        "brier_score_mean": 0.1818023960680611,
+        "ece_mean": 0.21111497539033852,
+        "overall_oof_brier": 0.17765002021635504,
+        "overall_oof_ece": 0.0722275495321791,
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": 0.9757751937984497,
+            "brier": 0.1133319995842213,
+            "ece": 0.22095509091291837
+          },
+          "B1": {
+            "auroc": 0.6723602484472049,
+            "brier": 0.2566514747961657,
+            "ece": 0.18948826509429745
+          },
+          "B2": {
+            "auroc": 0.8641114982578397,
+            "brier": 0.1963299938455637,
+            "ece": 0.25504268696376065
+          },
+          "B3": {
+            "auroc": 0.7735618115055078,
+            "brier": 0.16815116507201608,
+            "ece": 0.14120736660535685
+          },
+          "B4": {
+            "auroc": 0.808139534883721,
+            "brier": 0.17454734704233868,
+            "ece": 0.24888146737535943
+          }
+        },
+        "calibration_bins": [
+          {
+            "bin": "[0.0, 0.1]",
+            "count": 20,
+            "mean_pred": 0.0720658836213607,
+            "mean_true": 0.25
+          },
+          {
+            "bin": "[0.1, 0.2]",
+            "count": 50,
+            "mean_pred": 0.15192713002652608,
+            "mean_true": 0.16
+          },
+          {
+            "bin": "[0.2, 0.3]",
+            "count": 45,
+            "mean_pred": 0.2477199236050202,
+            "mean_true": 0.24444444444444444
+          },
+          {
+            "bin": "[0.3, 0.4]",
+            "count": 41,
+            "mean_pred": 0.34286278263583814,
+            "mean_true": 0.34146341463414637
+          },
+          {
+            "bin": "[0.4, 0.5]",
+            "count": 27,
+            "mean_pred": 0.44826637836661715,
+            "mean_true": 0.2962962962962963
+          },
+          {
+            "bin": "[0.5, 0.6]",
+            "count": 25,
+            "mean_pred": 0.554225610969117,
+            "mean_true": 0.44
+          },
+          {
+            "bin": "[0.6, 0.7]",
+            "count": 24,
+            "mean_pred": 0.6503459837803554,
+            "mean_true": 0.5
+          },
+          {
+            "bin": "[0.7, 0.8]",
+            "count": 22,
+            "mean_pred": 0.7466968225374037,
+            "mean_true": 0.8636363636363636
+          },
+          {
+            "bin": "[0.8, 0.9]",
+            "count": 16,
+            "mean_pred": 0.8517484037666478,
+            "mean_true": 1.0
+          },
+          {
+            "bin": "[0.9, 1.0]",
+            "count": 16,
+            "mean_pred": 0.9388655534440256,
+            "mean_true": 1.0
+          }
+        ]
+      },
+      "Gradient_Boosting": {
+        "pos_grouped_auroc_mean": 0.8109935069389167,
+        "pos_grouped_auroc_sd": 0.023053039979699843,
+        "contig_block_auroc_mean": 0.7926501344238299,
+        "contig_block_auroc_sd": 0.10995407528702571,
+        "contig_block_student_t_ci_95": [
+          0.6561241176841439,
+          0.9291761511635159
+        ],
+        "brier_score_mean": 0.19506797758133748,
+        "ece_mean": 0.18733832985375157,
+        "overall_oof_brier": 0.19081727936062587,
+        "overall_oof_ece": 0.1154472262095692,
+        "per_block_breakdown": {
+          "B0": {
+            "auroc": 0.9476744186046512,
+            "brier": 0.1332920874257747,
+            "ece": 0.15999793323576497
+          },
+          "B1": {
+            "auroc": 0.639751552795031,
+            "brier": 0.29747744917488,
+            "ece": 0.24164508868426782
+          },
+          "B2": {
+            "auroc": 0.8170731707317074,
+            "brier": 0.20823606047834708,
+            "ece": 0.24081774173435588
+          },
+          "B3": {
+            "auroc": 0.7796817625458996,
+            "brier": 0.16961727028837859,
+            "ece": 0.11653221893157353
+          },
+          "B4": {
+            "auroc": 0.7790697674418605,
+            "brier": 0.16671702053930698,
+            "ece": 0.17769866668279571
+          }
+        },
+        "calibration_bins": [
+          {
+            "bin": "[0.0, 0.1]",
+            "count": 75,
+            "mean_pred": 0.05065617710082564,
+            "mean_true": 0.17333333333333334
+          },
+          {
+            "bin": "[0.1, 0.2]",
+            "count": 36,
+            "mean_pred": 0.14881232389642085,
+            "mean_true": 0.19444444444444445
+          },
+          {
+            "bin": "[0.2, 0.3]",
+            "count": 23,
+            "mean_pred": 0.25675664056532,
+            "mean_true": 0.391304347826087
+          },
+          {
+            "bin": "[0.3, 0.4]",
+            "count": 31,
+            "mean_pred": 0.3448740456309893,
+            "mean_true": 0.25806451612903225
+          },
+          {
+            "bin": "[0.4, 0.5]",
+            "count": 21,
+            "mean_pred": 0.45416673169184785,
+            "mean_true": 0.5714285714285714
+          },
+          {
+            "bin": "[0.5, 0.6]",
+            "count": 9,
+            "mean_pred": 0.5619490007484844,
+            "mean_true": 0.3333333333333333
+          },
+          {
+            "bin": "[0.6, 0.7]",
+            "count": 10,
+            "mean_pred": 0.6432431914938541,
+            "mean_true": 0.6
+          },
+          {
+            "bin": "[0.7, 0.8]",
+            "count": 13,
+            "mean_pred": 0.7596642387668258,
+            "mean_true": 0.6153846153846154
+          },
+          {
+            "bin": "[0.8, 0.9]",
+            "count": 17,
+            "mean_pred": 0.869809179592699,
+            "mean_true": 0.5882352941176471
+          },
+          {
+            "bin": "[0.9, 1.0]",
+            "count": 51,
+            "mean_pred": 0.9563491812553107,
+            "mean_true": 0.8627450980392157
+          }
+        ]
+      }
+    },
+    "UL30-Aciclovir": {
+      "Logistic_Regression_L2": {
+        "pos_grouped_auroc_mean": 0.8736171829568056,
+        "pos_grouped_auroc_sd": 0.07990035748472743,
+        "contig_block_auroc_mean": 0.7823118009497441,
+        "contig_block_auroc_sd": 0.19443154084534608,
+        "contig_block_student_t_ci_95": [
+          0.4729278315527991,
+          1.0
+        ],
+        "brier_score_mean": 0.10129280471868263,
+        "ece_mean": 0.11502558558583599,
+        "overall_oof_brier": 0.11362491081616709,
+        "overall_oof_ece": 0.06757808534811006,
+        "per_block_breakdown": {
+          "B0": null,
+          "B1": {
+            "auroc": 1.0,
+            "brier": 0.015451896347379975,
+            "ece": 0.10282569210848436
+          },
+          "B2": {
+            "auroc": 0.7526395173453997,
+            "brier": 0.17019826671846225,
+            "ece": 0.13967450168375226
+          },
+          "B3": {
+            "auroc": 0.8423611111111111,
+            "brier": 0.17361027320402542,
+            "ece": 0.14661663265230399
+          },
+          "B4": {
+            "auroc": 0.5342465753424658,
+            "brier": 0.045910782604862865,
+            "ece": 0.07098551589880336
+          }
+        },
+        "calibration_bins": [
+          {
+            "bin": "[0.0, 0.1]",
+            "count": 104,
+            "mean_pred": 0.05383399715299287,
+            "mean_true": 0.08653846153846154
+          },
+          {
+            "bin": "[0.1, 0.2]",
+            "count": 77,
+            "mean_pred": 0.14124515904706764,
+            "mean_true": 0.07792207792207792
+          },
+          {
+            "bin": "[0.2, 0.3]",
+            "count": 26,
+            "mean_pred": 0.24231051622211058,
+            "mean_true": 0.23076923076923078
+          },
+          {
+            "bin": "[0.3, 0.4]",
+            "count": 17,
+            "mean_pred": 0.34251562733328966,
+            "mean_true": 0.29411764705882354
+          },
+          {
+            "bin": "[0.4, 0.5]",
+            "count": 8,
+            "mean_pred": 0.4540115385222453,
+            "mean_true": 0.5
+          },
+          {
+            "bin": "[0.5, 0.6]",
+            "count": 10,
+            "mean_pred": 0.5375141107774342,
+            "mean_true": 0.9
+          },
+          {
+            "bin": "[0.6, 0.7]",
+            "count": 11,
+            "mean_pred": 0.6495242366955947,
+            "mean_true": 0.7272727272727273
+          },
+          {
+            "bin": "[0.7, 0.8]",
+            "count": 10,
+            "mean_pred": 0.7541123663317334,
+            "mean_true": 1.0
+          },
+          {
+            "bin": "[0.8, 0.9]",
+            "count": 4,
+            "mean_pred": 0.8442882618092425,
+            "mean_true": 1.0
+          },
+          {
+            "bin": "[0.9, 1.0]",
+            "count": 2,
+            "mean_pred": 0.9244005298230045,
+            "mean_true": 0.5
+          }
+        ]
+      },
+      "Gradient_Boosting": {
+        "pos_grouped_auroc_mean": 0.8163176795252266,
+        "pos_grouped_auroc_sd": 0.08332650787550845,
+        "contig_block_auroc_mean": 0.7999508749319889,
+        "contig_block_auroc_sd": 0.14255321044755576,
+        "contig_block_student_t_ci_95": [
+          0.5731169059844116,
+          1.0
+        ],
+        "brier_score_mean": 0.12699110580800227,
+        "ece_mean": 0.11976881208841458,
+        "overall_oof_brier": 0.14173048893898754,
+        "overall_oof_ece": 0.07291001370686487,
+        "per_block_breakdown": {
+          "B0": null,
+          "B1": {
+            "auroc": 1.0,
+            "brier": 0.02425617637066217,
+            "ece": 0.09353979752877353
+          },
+          "B2": {
+            "auroc": 0.6621417797888386,
+            "brier": 0.21527639040462887,
+            "ece": 0.15765017170424894
+          },
+          "B3": {
+            "auroc": 0.7659722222222223,
+            "brier": 0.20240749426483634,
+            "ece": 0.1539442335976712
+          },
+          "B4": {
+            "auroc": 0.771689497716895,
+            "brier": 0.06602436219188171,
+            "ece": 0.07394104552296468
+          }
+        },
+        "calibration_bins": [
+          {
+            "bin": "[0.0, 0.1]",
+            "count": 152,
+            "mean_pred": 0.031180720874978387,
+            "mean_true": 0.09210526315789473
+          },
+          {
+            "bin": "[0.1, 0.2]",
+            "count": 23,
+            "mean_pred": 0.14399360999879138,
+            "mean_true": 0.17391304347826086
+          },
+          {
+            "bin": "[0.2, 0.3]",
+            "count": 14,
+            "mean_pred": 0.2519013611342002,
+            "mean_true": 0.21428571428571427
+          },
+          {
+            "bin": "[0.3, 0.4]",
+            "count": 15,
+            "mean_pred": 0.35406477918298934,
+            "mean_true": 0.4
+          },
+          {
+            "bin": "[0.4, 0.5]",
+            "count": 15,
+            "mean_pred": 0.4574970901838282,
+            "mean_true": 0.3333333333333333
+          },
+          {
+            "bin": "[0.5, 0.6]",
+            "count": 16,
+            "mean_pred": 0.5385157643906373,
+            "mean_true": 0.5
+          },
+          {
+            "bin": "[0.6, 0.7]",
+            "count": 4,
+            "mean_pred": 0.6715660526605072,
+            "mean_true": 0.25
+          },
+          {
+            "bin": "[0.7, 0.8]",
+            "count": 9,
+            "mean_pred": 0.7504053730535442,
+            "mean_true": 0.4444444444444444
+          },
+          {
+            "bin": "[0.8, 0.9]",
+            "count": 15,
+            "mean_pred": 0.8650770986454387,
+            "mean_true": 0.8
+          },
+          {
+            "bin": "[0.9, 1.0]",
+            "count": 6,
+            "mean_pred": 0.9256152151947464,
+            "mean_true": 0.8333333333333334
+          }
+        ]
+      }
+    },
+    "UL30-Foscarnet": {
+      "Logistic_Regression_L2": {
+        "pos_grouped_auroc_mean": 0.9028351563931812,
+        "pos_grouped_auroc_sd": 0.037844697999216026,
+        "contig_block_auroc_mean": 0.8845061050736084,
+        "contig_block_auroc_sd": 0.10030815429616256,
+        "contig_block_student_t_ci_95": [
+          0.724893447558783,
+          1.0
+        ],
+        "brier_score_mean": 0.07833620626754115,
+        "ece_mean": 0.08010626700456304,
+        "overall_oof_brier": 0.08412894157958453,
+        "overall_oof_ece": 0.06475027441538755,
+        "per_block_breakdown": {
+          "B0": null,
+          "B1": {
+            "auroc": 1.0,
+            "brier": 0.008157766248030508,
+            "ece": 0.0624128235521801
+          },
+          "B2": {
+            "auroc": 0.7640306122448979,
+            "brier": 0.13936805472641967,
+            "ece": 0.10811939413308952
+          },
+          "B3": {
+            "auroc": 0.8529411764705882,
+            "brier": 0.15013223906236778,
+            "ece": 0.09659773857869403
+          },
+          "B4": {
+            "auroc": 0.9210526315789473,
+            "brier": 0.01568676503334667,
+            "ece": 0.05329511175428851
+          }
+        },
+        "calibration_bins": [
+          {
+            "bin": "[0.0, 0.1]",
+            "count": 168,
+            "mean_pred": 0.046516726196003604,
+            "mean_true": 0.023809523809523808
+          },
+          {
+            "bin": "[0.1, 0.2]",
+            "count": 44,
+            "mean_pred": 0.1368495431966054,
+            "mean_true": 0.20454545454545456
+          },
+          {
+            "bin": "[0.2, 0.3]",
+            "count": 6,
+            "mean_pred": 0.24519882652757852,
+            "mean_true": 0.0
+          },
+          {
+            "bin": "[0.3, 0.4]",
+            "count": 12,
+            "mean_pred": 0.34486486246380205,
+            "mean_true": 0.5833333333333334
+          },
+          {
+            "bin": "[0.4, 0.5]",
+            "count": 7,
+            "mean_pred": 0.4457248310129488,
+            "mean_true": 0.5714285714285714
+          },
+          {
+            "bin": "[0.5, 0.6]",
+            "count": 6,
+            "mean_pred": 0.5463899512654642,
+            "mean_true": 0.6666666666666666
+          },
+          {
+            "bin": "[0.6, 0.7]",
+            "count": 5,
+            "mean_pred": 0.6352652425010661,
+            "mean_true": 1.0
+          },
+          {
+            "bin": "[0.7, 0.8]",
+            "count": 1,
+            "mean_pred": 0.7424652077756477,
+            "mean_true": 0.0
+          },
+          {
+            "bin": "[0.8, 0.9]",
+            "count": 1,
+            "mean_pred": 0.8935984233821826,
+            "mean_true": 0.0
+          }
+        ]
+      },
+      "Gradient_Boosting": {
+        "pos_grouped_auroc_mean": 0.8696967421511133,
+        "pos_grouped_auroc_sd": 0.039689036354095576,
+        "contig_block_auroc_mean": 0.8221611012826183,
+        "contig_block_auroc_sd": 0.1582260214872238,
+        "contig_block_student_t_ci_95": [
+          0.5703881925417403,
+          1.0
+        ],
+        "brier_score_mean": 0.09431529879154803,
+        "ece_mean": 0.09327629130153584,
+        "overall_oof_brier": 0.10055908312986571,
+        "overall_oof_ece": 0.05928380097644506,
+        "per_block_breakdown": {
+          "B0": null,
+          "B1": {
+            "auroc": 1.0,
+            "brier": 0.01697546646530767,
+            "ece": 0.05409241228483377
+          },
+          "B2": {
+            "auroc": 0.6383928571428571,
+            "brier": 0.156851356691466,
+            "ece": 0.12205685606199353
+          },
+          "B3": {
+            "auroc": 0.755514705882353,
+            "brier": 0.1791115463619255,
+            "ece": 0.15958676962776597
+          },
+          "B4": {
+            "auroc": 0.8947368421052632,
+            "brier": 0.024322825647492937,
+            "ece": 0.03736912723155007
+          }
+        },
+        "calibration_bins": [
+          {
+            "bin": "[0.0, 0.1]",
+            "count": 178,
+            "mean_pred": 0.02042575645647425,
+            "mean_true": 0.056179775280898875
+          },
+          {
+            "bin": "[0.1, 0.2]",
+            "count": 23,
+            "mean_pred": 0.13805678460895823,
+            "mean_true": 0.17391304347826086
+          },
+          {
+            "bin": "[0.2, 0.3]",
+            "count": 9,
+            "mean_pred": 0.23669714433216646,
+            "mean_true": 0.1111111111111111
+          },
+          {
+            "bin": "[0.3, 0.4]",
+            "count": 6,
+            "mean_pred": 0.35378933817131925,
+            "mean_true": 0.3333333333333333
+          },
+          {
+            "bin": "[0.4, 0.5]",
+            "count": 9,
+            "mean_pred": 0.450739376900554,
+            "mean_true": 0.4444444444444444
+          },
+          {
+            "bin": "[0.5, 0.6]",
+            "count": 5,
+            "mean_pred": 0.5274420896929674,
+            "mean_true": 0.4
+          },
+          {
+            "bin": "[0.6, 0.7]",
+            "count": 11,
+            "mean_pred": 0.6531551713327435,
+            "mean_true": 0.7272727272727273
+          },
+          {
+            "bin": "[0.7, 0.8]",
+            "count": 6,
+            "mean_pred": 0.7284799591416239,
+            "mean_true": 0.16666666666666666
+          },
+          {
+            "bin": "[0.8, 0.9]",
+            "count": 3,
+            "mean_pred": 0.8329976335309732,
+            "mean_true": 0.3333333333333333
+          }
+        ]
+      }
+    }
+  },
+  "deliverable_1_3_temporal_holdout_c5": {
+    "UL23-Aciclovir": {
+      "n_train_pre_2016": 155,
+      "n_test_post_2016": 131,
+      "test_resistance_rate": 0.4580152671755725,
+      "overall_test_auroc_supervised": 0.7640845070422535,
+      "overall_test_auprc_supervised": 0.7917993670901755,
+      "overall_test_auroc_esm2_650m": 0.7250000000000001,
+      "stratified_novelty": {
+        "Seen_Position": {
+          "n_rows": 33,
+          "n_resistant": 19,
+          "auroc_supervised": 0.8872180451127819,
+          "auroc_esm2_650m": 0.9022556390977442
+        },
+        "Novel_Position": {
+          "n_rows": 98,
+          "n_resistant": 41,
+          "auroc_supervised": 0.699614890885751,
+          "auroc_esm2_650m": 0.6499786050492085
+        }
+      }
+    },
+    "UL30-Aciclovir": {
+      "n_train_pre_2016": 240,
+      "n_test_post_2016": 92,
+      "test_resistance_rate": 0.18478260869565216,
+      "overall_test_auroc_supervised": 0.8290196078431372,
+      "overall_test_auprc_supervised": 0.5386052035352562,
+      "overall_test_auroc_esm2_650m": 0.7647058823529411,
+      "stratified_novelty": {
+        "Seen_Position": {
+          "n_rows": 15,
+          "n_resistant": 2,
+          "auroc_supervised": 0.9230769230769231,
+          "auroc_esm2_650m": 0.9615384615384616
+        },
+        "Novel_Position": {
+          "n_rows": 77,
+          "n_resistant": 15,
+          "auroc_supervised": 0.8075268817204301,
+          "auroc_esm2_650m": 0.7462365591397849
+        }
+      }
+    },
+    "UL30-Foscarnet": {
+      "n_train_pre_2016": 227,
+      "n_test_post_2016": 84,
+      "test_resistance_rate": 0.10714285714285714,
+      "overall_test_auroc_supervised": 0.8533333333333333,
+      "overall_test_auprc_supervised": 0.3917388423582695,
+      "overall_test_auroc_esm2_650m": 0.8666666666666666,
+      "stratified_novelty": {
+        "Seen_Position": {
+          "n_rows": 16,
+          "n_resistant": 2,
+          "auroc_supervised": 0.9285714285714286,
+          "auroc_esm2_650m": 0.9285714285714286
+        },
+        "Novel_Position": {
+          "n_rows": 68,
+          "n_resistant": 7,
+          "auroc_supervised": 0.8126463700234192,
+          "auroc_esm2_650m": 0.8454332552693209
+        }
+      }
+    }
+  },
+  "deliverable_1_4_drug_conditioning_c4": {
+    "multi_task_contig_block_auroc_mean": 0.8695091544786177,
+    "multi_task_contig_block_auroc_sd": 0.08545321451213947,
+    "multi_task_student_t_ci_95": [
+      0.7634049744881106,
+      0.9756133344691247
+    ],
+    "negative_control_ul23_foscarnet": {
+      "total_rows_unified": 189,
+      "phenotype_distribution": {
+        "Sensitive": 180,
+        "Resistant": 9
+      },
+      "interpretation": "FOS acts on UL30; zero true catalytic mechanism exists in UL23. Multi-task drug conditioning prevents false transfer of UL23 ACV resistance to FOS."
+    }
+  }
+}

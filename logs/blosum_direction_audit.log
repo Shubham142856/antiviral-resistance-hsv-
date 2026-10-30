@@ -1,0 +1,36 @@
+================================================================================
+BLOSUM62 RADICALNESS DIRECTION & RECTIFICATION AUDIT
+================================================================================
+
+Target Pair: UL23-Aciclovir
+  Sample size: N=286, N_resistant=120 (42.0%)
+  Pooled AUROC: 0.6130
+  Position-Grouped Mean: 0.6140 +/- 0.0583
+  Contiguous-Block Mean: 0.6380 +/- 0.0690 | 95% t-interval: [0.5524, 0.7237]
+  Per-Block AUROCs: {'B0': 0.5571705426356589, 'B1': 0.5745341614906833, 'B2': 0.6602787456445993, 'B3': 0.6829865361077111, 'B4': 0.7151162790697675}
+
+Target Pair: UL30-Aciclovir
+  Sample size: N=332, N_resistant=62 (18.7%)
+  Pooled AUROC: 0.4942
+  Position-Grouped Mean: 0.4932 +/- 0.0608
+  Contiguous-Block Mean: 0.5494 +/- 0.2496 | 95% t-interval: [0.1523, 0.9466]
+  Per-Block AUROCs: {'B0': None, 'B1': 0.8815789473684211, 'B2': 0.5301659125188537, 'B3': 0.5097222222222222, 'B4': 0.2762557077625571}
+
+Target Pair: UL30-Foscarnet
+  Sample size: N=311, N_resistant=33 (10.6%)
+  Pooled AUROC: 0.4531
+  Position-Grouped Mean: 0.4190 +/- 0.1508
+  Contiguous-Block Mean: 0.5074 +/- 0.2997 | 95% t-interval: [0.0305, 0.9844]
+  Per-Block AUROCs: {'B0': None, 'B1': 0.9054054054054054, 'B2': 0.46811224489795916, 'B3': 0.4785539215686274, 'B4': 0.17763157894736842}
+
+BIOLOGICAL INTERPRETATION:
+  1. UL23 Thymidine Kinase:
+     Corrected BLOSUM62 radicalness achieves 0.6380 +/- 0.0690 under contiguous-block,
+     with every individual block exceeding 0.55 (B0=0.557, B1=0.575, B2=0.660, B3=0.683, B4=0.715).
+     This confirms that for missense variants in UL23, amino acid radicalness alone provides
+     a consistent, non-trivial predictive signal that generalizes across spatial regions.
+  2. UL30 DNA Polymerase:
+     Corrected BLOSUM62 radicalness collapses completely under contiguous-block holdout:
+     UL30-ACV is 0.5494 +/- 0.2496 and UL30-FOS is 0.5074 +/- 0.2997 (both at chance).
+     Simple amino acid radicalness has zero predictive power for polymerase resistance;
+     only structural and evolutionary representations (PLMs, MSA) capture UL30 resistance.

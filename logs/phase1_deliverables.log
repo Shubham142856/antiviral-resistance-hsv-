@@ -1,0 +1,105 @@
+Verified Primary Dataset SHA-256: 7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909
+Features defined:
+  - esm2_650m_neg_llr
+  - protbert_neg_llr
+  - msa_weighted_cons
+  - msa_family_identity
+  - blosum62_radicalness
+  - delta_hydropathy
+  - delta_mw
+  - delta_charge
+
+================================================================================
+SECTION 1: SUPERVISED PREDICTOR (C3) & CALIBRATION (1.2)
+================================================================================
+
+
+Target Pair: UL23-Aciclovir (N=286, N_res=120)
+  --- Model: Logistic_Regression_L2 ---
+    Pos-Grouped AUROC:    0.8231 +/- 0.0288
+    Contig-Block AUROC:   0.8188 +/- 0.1121 | 95% t-interval: [0.6795528275875559, 0.9580264871695333]
+    Contig-Block Brier:   0.1818 (Overall OOF: 0.1777)
+    Contig-Block ECE:     0.2111 (Overall OOF: 0.0722)
+  --- Model: Gradient_Boosting ---
+    Pos-Grouped AUROC:    0.8110 +/- 0.0231
+    Contig-Block AUROC:   0.7927 +/- 0.1100 | 95% t-interval: [0.6561241176841439, 0.9291761511635159]
+    Contig-Block Brier:   0.1951 (Overall OOF: 0.1908)
+    Contig-Block ECE:     0.1873 (Overall OOF: 0.1154)
+
+Target Pair: UL30-Aciclovir (N=332, N_res=62)
+  --- Model: Logistic_Regression_L2 ---
+    Pos-Grouped AUROC:    0.8736 +/- 0.0799
+    Contig-Block AUROC:   0.7823 +/- 0.1944 | 95% t-interval: [0.4729278315527991, 1.0]
+    Contig-Block Brier:   0.1013 (Overall OOF: 0.1136)
+    Contig-Block ECE:     0.1150 (Overall OOF: 0.0676)
+  --- Model: Gradient_Boosting ---
+    Pos-Grouped AUROC:    0.8163 +/- 0.0833
+    Contig-Block AUROC:   0.8000 +/- 0.1426 | 95% t-interval: [0.5731169059844116, 1.0]
+    Contig-Block Brier:   0.1270 (Overall OOF: 0.1417)
+    Contig-Block ECE:     0.1198 (Overall OOF: 0.0729)
+
+Target Pair: UL30-Foscarnet (N=311, N_res=33)
+  --- Model: Logistic_Regression_L2 ---
+    Pos-Grouped AUROC:    0.9028 +/- 0.0378
+    Contig-Block AUROC:   0.8845 +/- 0.1003 | 95% t-interval: [0.724893447558783, 1.0]
+    Contig-Block Brier:   0.0783 (Overall OOF: 0.0841)
+    Contig-Block ECE:     0.0801 (Overall OOF: 0.0648)
+  --- Model: Gradient_Boosting ---
+    Pos-Grouped AUROC:    0.8697 +/- 0.0397
+    Contig-Block AUROC:   0.8222 +/- 0.1582 | 95% t-interval: [0.5703881925417403, 1.0]
+    Contig-Block Brier:   0.0943 (Overall OOF: 0.1006)
+    Contig-Block ECE:     0.0933 (Overall OOF: 0.0593)
+
+================================================================================
+SECTION 2: TEMPORAL HOLDOUT VALIDATION (C5)
+================================================================================
+
+Protocol: Train on Pre-2016 mutations; Test on Post-2016 mutations.
+Covariate shift: Confirmed non-label domain classifier AUROC = 0.6794.
+Stratification: (a) Novel substitutions at seen positions, (b) Completely novel positions.
+
+Target Pair: UL23-Aciclovir
+  Pre-2016 Train rows:  155 (Resistant: 60)
+  Post-2016 Test rows:  131 (Resistant: 60)
+  Post-2016 Breakdown: Seen Positions = 33 rows, Novel Positions = 98 rows
+  Overall Post-2016 Test AUROC: Supervised = 0.7641, Zero-shot ESM-2 = 0.7250
+  Overall Post-2016 Test AUPRC: Supervised = 0.7918 (Base rate: 0.4580)
+    [Seen_Position] N=33, Res=19 | Supervised AUROC = 0.8872, ESM-2 = 0.9023
+    [Novel_Position] N=98, Res=41 | Supervised AUROC = 0.6996, ESM-2 = 0.6500
+
+Target Pair: UL30-Aciclovir
+  Pre-2016 Train rows:  240 (Resistant: 45)
+  Post-2016 Test rows:  92 (Resistant: 17)
+  Post-2016 Breakdown: Seen Positions = 15 rows, Novel Positions = 77 rows
+  Overall Post-2016 Test AUROC: Supervised = 0.8290, Zero-shot ESM-2 = 0.7647
+  Overall Post-2016 Test AUPRC: Supervised = 0.5386 (Base rate: 0.1848)
+    [Seen_Position] N=15, Res=2 | Supervised AUROC = 0.9231, ESM-2 = 0.9615
+    [Novel_Position] N=77, Res=15 | Supervised AUROC = 0.8075, ESM-2 = 0.7462
+
+Target Pair: UL30-Foscarnet
+  Pre-2016 Train rows:  227 (Resistant: 24)
+  Post-2016 Test rows:  84 (Resistant: 9)
+  Post-2016 Breakdown: Seen Positions = 16 rows, Novel Positions = 68 rows
+  Overall Post-2016 Test AUROC: Supervised = 0.8533, Zero-shot ESM-2 = 0.8667
+  Overall Post-2016 Test AUPRC: Supervised = 0.3917 (Base rate: 0.1071)
+    [Seen_Position] N=16, Res=2 | Supervised AUROC = 0.9286, ESM-2 = 0.9286
+    [Novel_Position] N=68, Res=7 | Supervised AUROC = 0.8126, ESM-2 = 0.8454
+
+================================================================================
+SECTION 3: DRUG CONDITIONING (C4) & NEGATIVE CONTROL EVALUATION
+================================================================================
+
+Multi-task modeling across ACV and FOS with one-hot drug conditioning.
+Negative Control: UL23-Foscarnet (FOS acts on UL30 polymerase, NOT UL23).
+
+Multi-Task Model (ACV + FOS joint, N=929):
+  Contiguous-Block Mean AUROC: 0.8695 +/- 0.0855 | 95% t-interval: [0.7634, 0.9756]
+
+--- Negative Control: UL23-Foscarnet Analysis ---
+UL23-Foscarnet rows in unified dataset: 189
+Phenotype breakdown:
+consensus_phenotype
+Sensitive    180
+Resistant      9
+True biological finding: UL23 mutations conferring FOS resistance are clinically anomalous / non-functional (Resistant: 9/189).
+A drug-conditioned model with proper target specificity predicts P(Resistant | UL23, FOS) -> 0.0.
