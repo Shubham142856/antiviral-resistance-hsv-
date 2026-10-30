@@ -1,0 +1,53 @@
+tuple_key	virus	gene	drug	aa_change	mutation_category	consensus_phenotype	sources	num_sources	annotator_phenotype	annotator_confidence	annotator_notes
+HSV-1|UL23|Aciclovir|N306*	HSV-1	UL23	Aciclovir	N306*	nonsense_stop	Resistant	doi.org/10.1128/JVI.75.4.1761-1769.2001;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC114085/	2			
+HSV-1|UL23|Aciclovir|H151Y	HSV-1	UL23	Aciclovir	H151Y	single_substitution	Sensitive	18336925;doi.org/10.1016/j.antiviral.2008.01.153;https://www.sciencedirect.com/science/article/pii/S016635420800199X	3			
+HSV-1|UL30|Cidofovir|E860K	HSV-1	UL30	Cidofovir	E860K	single_substitution	Sensitive	27309375	1			
+HSV-1|UL23|Pritelivir|A189V	HSV-1	UL23	Pritelivir	A189V	single_substitution	Sensitive	doi.org/10.1093/jac/dkac297;https://academic.oup.com/jac/article/77/11/3153/6691801	2			
+HSV-1|UL23|Penciclovir|I143V	HSV-1	UL23	Penciclovir	I143V	single_substitution	Resistant	19770274	1			
+HSV-2|UL23|Brivudine|T288frameshift*	HSV-2	UL23	Brivudine	T288frameshift*	nonsense_stop	Sensitive	doi.org/10.1128/JVI.75.4.1761-1769.2001;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC114085/	2			
+HSV-2|UL30|Aciclovir|G906A	HSV-2	UL30	Aciclovir	G906A	single_substitution	Sensitive	doi.org/10.1016/j.antiviral.2003.08.018;https://www.sciencedirect.com/science/article/pii/S0166354203002122#TBL6	2			
+HSV-1|UL30|Foscarnet|Q63H	HSV-1	UL30	Foscarnet	Q63H	single_substitution	Sensitive	37453453	1			
+HSV-1|UL30|Foscarnet|E1084A	HSV-1	UL30	Foscarnet	E1084A	single_substitution	Sensitive	24075863	1			
+HSV-1|UL30|Aciclovir|L702P	HSV-1	UL30	Aciclovir	L702P	single_substitution	Resistant	20608173	1			
+"HSV-1|UL23|Aciclovir|I194
+Del"	HSV-1	UL23	Aciclovir	"I194
+Del"	indel	Resistant	19795980	1			
+HSV-2|UL23|Aciclovir|R217C	HSV-2	UL23	Aciclovir	R217C	single_substitution	Resistant	31158412	1			
+HSV-2|UL30|Foscarnet|R41H	HSV-2	UL30	Foscarnet	R41H	single_substitution	Sensitive	20211650	1			
+HSV-2|UL23|Brivudine|I54Stop	HSV-2	UL23	Brivudine	I54Stop	nonsense_stop	Resistant	11160674	1			
+HSV-1|UL23|Aciclovir|T103Stop	HSV-1	UL23	Aciclovir	T103Stop	nonsense_stop	Resistant	12406508	1			
+HSV-1|UL23|Aciclovir|V307fsx	HSV-1	UL23	Aciclovir	V307fsx	frameshift	Resistant	11160674	1			
+HSV-1|UL30|Cidofovir|S911N	HSV-1	UL30	Cidofovir	S911N	single_substitution	Sensitive	27309375	1			
+HSV-1|UL30|Aciclovir|A1147T	HSV-1	UL30	Aciclovir	A1147T	single_substitution	Sensitive	22155911;doi.org/10.3851/IMP1870;https://pubmed.ncbi.nlm.nih.gov/22155911/	3			
+HSV-1|UL23|Brivudine|K219T	HSV-1	UL23	Brivudine	K219T	single_substitution	Sensitive	27426251;doi.org/10.1038/srep29903;https://www.nature.com/articles/srep29903	3			
+HSV-1|UL23|Aciclovir|M121K	HSV-1	UL23	Aciclovir	M121K	single_substitution	Resistant	28576448;doi.org/10.1016/j.jviromet.2017.05.013;https://www.sciencedirect.com/science/article/pii/S016609341730071X	3			
+HSV-1|UL23|Aciclovir|V267frameshift	HSV-1	UL23	Aciclovir	V267frameshift	frameshift	Resistant	doi.org/10.1016/S0166-3542(02)00131-6;https://www.sciencedirect.com/science/article/pii/S0166354202001316	2			
+HSV-1|UL23|Aciclovir|A167V	HSV-1	UL23	Aciclovir	A167V	single_substitution	Resistant	12709344	1			
+HSV-2|UL23|Aciclovir|M183*	HSV-2	UL23	Aciclovir	M183*	nonsense_stop	Resistant	doi.org/10.1016/j.antiviral.2003.08.018;doi.org/10.1128/JVI.75.4.1761-1769.2001;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC114085/;https://www.sciencedirect.com/science/article/pii/S0166354203002122#TBL6	4			
+HSV-1|UL23|Cidofovir|T65P	HSV-1	UL23	Cidofovir	T65P	single_substitution	Sensitive	doi.org/10.1128/aac.00110-24;https://journals.asm.org/doi/10.1128/aac.00110-24	2			
+HSV-1|UL30|Foscarnet|L1234I	HSV-1	UL30	Foscarnet	L1234I	single_substitution	Sensitive	22024514;doi.org/10.3851/IMP1852;http://pdfs.semanticscholar.org/273d/230d2dc0f09225c569b99871ac2aa4e3da70.pdf	3			
+HSV-1|UL30|Aciclovir|K532T	HSV-1	UL30	Aciclovir	K532T	single_substitution	Resistant	14670581	1			
+HSV-1|UL23|Aciclovir|E39K	HSV-1	UL23	Aciclovir	E39K	single_substitution	Sensitive	37453453	1			
+HSV-2|UL30|Foscarnet|A1156T	HSV-2	UL30	Foscarnet	A1156T	single_substitution	Sensitive	24075863	1			
+HSV-1|UL23|Foscarnet|P268M	HSV-1	UL23	Foscarnet	P268M	single_substitution	Sensitive	doi.org/10.1128/AAC.00977-15;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4505214/	2			
+HSV-1|UL30|Foscarnet|V715G	HSV-1	UL30	Foscarnet	V715G	single_substitution	Resistant	12210436;doi.org/10.1002/jmv.10175;doi.org/10.1016/j.antiviral.2021.105046;https://onlinelibrary.wiley.com/doi/epdf/10.1002/jmv.10175;https://www.sciencedirect.com/science/article/abs/pii/S016635422100036X	5			
+HSV-1|UL30|Cidofovir|F716L	HSV-1	UL30	Cidofovir	F716L	single_substitution	Sensitive	20608173;doi.org/10.1128/AAC.49.2.606-611.2005;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC547286/	3			
+HSV-1|UL23|Aciclovir|G129D	HSV-1	UL23	Aciclovir	G129D	single_substitution	Resistant	15456088;doi.org/10.1177/135965350400900413;https://journals.sagepub.com/doi/10.1177/135965350400900413	3			
+HSV-1|UL30|Penciclovir|D871N	HSV-1	UL30	Penciclovir	D871N	single_substitution	Sensitive	22155911;doi.org/10.3851/IMP1870;https://pubmed.ncbi.nlm.nih.gov/22155911/	3			
+HSV-1|UL23|Penciclovir|E83K	HSV-1	UL23	Penciclovir	E83K	single_substitution	Resistant	10882609;12709344;15728902;16546268;19795980;doi.org/10.1016/j.antiviral.2006.01.010;https://www.sciencedirect.com/science/article/pii/S0166354206000313	7			
+HSV-1|UL23|Penciclovir|T103P	HSV-1	UL23	Penciclovir	T103P	single_substitution	Resistant	22155911;doi.org/10.1016/j.jviromet.2012.12.001;https://www.sciencedirect.com/science/article/pii/S0166093412004351	3			
+HSV-2|UL30|Aciclovir|A915V	HSV-2	UL30	Aciclovir	A915V	single_substitution	Resistant	24075863	1			
+HSV-1|UL30|Aciclovir|A1235T	HSV-1	UL30	Aciclovir	A1235T	single_substitution	Sensitive	26055375;doi.org/10.1128/AAC.00977-15;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4505214/	3			
+HSV-1|UL30|Foscarnet|D1103H	HSV-1	UL30	Foscarnet	D1103H	single_substitution	Sensitive	20211650	1			
+HSV-2|UL5|Amenamevir|K355R	HSV-2	UL5	Amenamevir	K355R	single_substitution	Resistant	34228537	1			
+HSV-1|UL23|Foscarnet|A98T	HSV-1	UL23	Foscarnet	A98T	single_substitution	Sensitive	doi.org/10.1128/AAC.00977-15;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4505214/	2			
+HSV-1|UL23|Penciclovir|P355fsx	HSV-1	UL23	Penciclovir	P355fsx	frameshift	Resistant	22155911	1			
+HSV-1|UL23|Aciclovir|G61V	HSV-1	UL23	Aciclovir	G61V	single_substitution	Resistant	doi.org/10.1016/0042-6822(88)90308-X;https://www.sciencedirect.com/science/article/abs/pii/004268228890308X	2			
+HSV-1|UL30|Aciclovir|D780N	HSV-1	UL30	Aciclovir	D780N	single_substitution	Resistant	12829822;doi.org/10.1128/JVI.77.14.7820-7829.2003;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC161916/	3			
+HSV-1|UL23|Foscarnet|R30C	HSV-1	UL23	Foscarnet	R30C	single_substitution	Sensitive	doi.org/10.1128/AAC.00669-10;https://aac.asm.org/content/54/11/4833	2			
+HSV-1|UL23|Aciclovir|R256W	HSV-1	UL23	Aciclovir	R256W	single_substitution	Resistant	23246510	1			
+HSV-1|UL23|Aciclovir|M121R	HSV-1	UL23	Aciclovir	M121R	single_substitution	Resistant	22155911;23246510;doi.org/10.1016/j.jviromet.2012.12.001;https://www.sciencedirect.com/science/article/pii/S0166093412004351	4			
+HSV-1|UL30|Foscarnet|M356I	HSV-1	UL30	Foscarnet	M356I	single_substitution	Sensitive	24075863;doi.org/10.1128/AAC.00977-15;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4505214/	3			
+HSV-2|UL30|Aciclovir|E250Q	HSV-2	UL30	Aciclovir	E250Q	single_substitution	Resistant	14670581	1			
+HSV-2|UL30|Penciclovir|P880H	HSV-2	UL30	Penciclovir	P880H	single_substitution	Sensitive	20211650;doi.org/10.1016/j.antiviral.2010.03.002;https://www.sciencedirect.com/science/article/pii/S0166354210003864	3			
+HSV-2|UL30|Cidofovir|R964H	HSV-2	UL30	Cidofovir	R964H	single_substitution	Sensitive	29186456;doi.org/10.1093/infdis/jix605;https://academic.oup.com/jid/article/217/5/790/4653578	3			

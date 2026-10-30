@@ -1,0 +1,24 @@
+{
+  "track": "B2",
+  "question": "Do truncating mutations inflate UL23-ACV AUROC?",
+  "answer": "NO \u2014 primary cohort is 100% missense",
+  "primary_cohort": {
+    "total_ul23_acv_rows": 286,
+    "missense_rows": 286,
+    "truncating_rows": 0,
+    "other_rows": 0,
+    "pct_missense": 100.0
+  },
+  "unified_dataset": {
+    "total_ul23_rows": 941,
+    "mutation_categories": {
+      "single_substitution": 688,
+      "nonsense_stop": 168,
+      "frameshift": 68,
+      "indel": 16,
+      "co_occurrence_combo": 1
+    }
+  },
+  "verdict": "Primary cohort missense-only by construction. No subset recomputation needed.",
+  "implication": "ESM-2 650M AUROC 0.7397 and ProtBERT AUROC 0.7530 on UL23-ACV are already missense-only results."
+}

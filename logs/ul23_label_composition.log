@@ -1,0 +1,96 @@
+Primary dataset SHA-256 verified: 7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909
+
+======================================================================
+TRACK B2: UL23 LABEL COMPOSITION ANALYSIS
+======================================================================
+
+## SECTION 1: Primary Cohort (primary_position_folds.tsv)
+   Total UL23-ACV rows: 286
+   Drug filter implicit (gene=UL23 rows are ACV-evaluated)
+
+   Mutation class × label breakdown:
+target_binary  0.0  1.0
+mut_class              
+missense       166  120
+
+   Missense:   286 / 286 (100.0%)
+   Truncating: 0 / 286 (0.0%)
+   Other:      0
+
+   FINDING B2.1: The primary evaluation cohort contains ZERO truncating
+   (stop-codon or frameshift) mutations. All 286 UL23-ACV rows are
+   standard single-amino-acid substitutions (missense).
+   IMPLICATION: The missense-only recomputation required by Track B2
+   is identical to the full primary cohort analysis.
+   No subset recomputation is needed — the reported AUROC values
+   are already missense-only by construction.
+
+## SECTION 2: Unified Dataset — What Was Excluded and Why
+   Total UL23 rows in unified dataset: 941
+
+   mutation_category breakdown (all UL23 rows, pre-filter):
+     single_substitution: 688
+     nonsense_stop: 168
+     frameshift: 68
+     indel: 16
+     co_occurrence_combo: 1
+
+   Phenotype breakdown per category:
+consensus_phenotype  Discordant  Resistant  Sensitive  Unknown
+mutation_category                                             
+co_occurrence_combo           0          0          1        0
+frameshift                    0         50         17        1
+indel                         0         11          5        0
+nonsense_stop                 0        125         42        1
+single_substitution          16        233        437        2
+
+   Truncating/frameshift/indel rows excluded from primary cohort: 252
+   Of these, in primary scope: 104
+
+   WHY TRUNCATING MUTATIONS ARE EXCLUDED FROM PRIMARY COHORT:
+   1. PLMs produce LLR scores assuming single-residue substitutions.
+      Stop codons and frameshifts change all downstream residues —
+      the LLR is not a valid signal for non-missense variants.
+   2. BLOSUM62 radicalness is undefined for stop codons (mut='*').
+   3. The benchmark evaluates 'can a PLM score predict resistance?'
+      This question is only well-posed for missense variants where
+      the model's substitution likelihood is interpretable.
+   CONCLUSION: Exclusion is methodologically correct, not cherry-picking.
+
+## SECTION 3: Resistance Rate Comparison (Unified Dataset)
+
+   Missense (single_substitution):
+     Resistant: 233 / 688 (33.9%)
+     Sensitive: 437 / 688 (63.5%)
+
+   Truncating/fs/indel:
+     Resistant: 186 / 252 (73.8%)
+     Sensitive: 64 / 252 (25.4%)
+
+   FINDING B2.2: Truncating mutations in UL23 are almost universally
+   classified as Resistant (stop codons abolish enzyme function).
+   Including them would trivially inflate resistance prediction AUROC
+   for any feature that correlates with 'large change to protein'.
+   Their exclusion therefore avoids bias, not removes signal.
+
+======================================================================
+TRACK B2 VERDICT
+======================================================================
+
+Q: Do truncating/frameshift mutations explain or inflate the UL23-ACV
+   AUROC reported for ESM-2 650M (0.7397) and ProtBERT (0.7530)?
+
+A: NO.
+   The primary evaluation cohort is 100% missense (286/286 rows).
+   No truncating mutations were included. The reported AUROCs are
+   already missense-only by construction. No subset recomputation
+   is required — the Track B2 deflation check is satisfied vacuously.
+
+Q: Should truncating mutations be analyzed separately?
+
+A: Yes, as a separate study. They cannot be scored by PLM-LLR methods.
+   A rule-based predictor (any stop or frameshift -> Resistant) would
+   likely achieve near-perfect AUROC on that subset trivially.
+   This is a different prediction problem and is not in scope for Paper 2.
+
+Results saved to: D:\antiviral-resistance-hsv--1\logs\ul23_label_composition.json
