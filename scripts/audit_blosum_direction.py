@@ -109,3 +109,4 @@ log("     only structural and evolutionary representations (PLMs, MSA) capture U
 with open(LOG_OUT, "w") as f:
     f.write("\n".join(lines))
 log(f"\nSaved audit log to: {LOG_OUT}")
+

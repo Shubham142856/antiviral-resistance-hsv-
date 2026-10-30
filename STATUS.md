@@ -95,13 +95,19 @@
 
 ---
 
-## 4. Pending Human Actions Before Final Sign-Off
+## 4. Manuscript Status and Pending Human Actions Before Final Sign-Off
 
-1. **Dual-Annotator Curation Sample (Cohen's $\kappa$):**
-   - Sample 50 rows from the merged dataset and have two human reviewers independently assign Tier A (Direct Recombinant) vs Tier B (Clinical Isolate / Multi-sequenced).
-2. **Threshold Citation Inspection:**
-   - Reviewer to check the assay-specific cutoff definitions in `thresholds.tsv` against primary sources (CMI 2025 Table S3, Sauerbrei 2016, HerpesDRG 2024).
-3. **Novelty Table Human Completion:**
-   - Complete the human decision column in `logs/novelty_widened_raw.tsv`.
-4. **PI Scope Approval:**
-   - PI formal review and sign-off on the provisional scope statement in `AUDIT_REPORT.md`.
+1. **Manuscript Draft Updated (`manuscript/manuscript_draft.md`):**
+   - **PRIME framework cited** in Introduction §1 for spatial leakage precedent in viral variant prediction.
+   - **Foscarnet threshold clarified** in Methods §2.1: primary criterion is fold-change >= 3.0x; stoichiometric equivalence explained (100 uM * 300.04 g/mol = 30.0 ug/mL for foscarnet trisodium hexahydrate).
+   - **PSSM log-odds baseline incorporated** in Methods §2.4 and Table 3 alongside multi-herpesvirus weighted conservation (0.7409 on UL23-ACV, 0.6815 on UL30-ACV, 0.8119 on UL30-FOS).
+   - **Table 5 Caveats Added:** Seen positions on UL30 explicitly footnoted as descriptive completeness only due to N=2 resistant variants.
+   - **Prospective Novel Wording Refined:** Updated from "closely mirror" to "broadly consistent with".
+   - **Structural Claim Reframed (Option B):** Stated as consistent with Shankar et al. (*Cell* 2024) cryo-EM mechanism without asserting direct proof.
+   - **Scope Prominently Documented:** 44.4% truncating/frameshift class in UL23 documented as deterministic loss-of-function; paper explicitly framed around the missense diagnostic frontier.
+2. **Novelty Decisions Completed (`logs/novelty_widened_raw.tsv`):**
+   - All 67 entries across 6 systematic query categories and claims C1–C3 have recorded audit decisions; zero blank entries remain.
+3. **Pending Human Action Gates (You and the PI):**
+   - **Dual-Annotator Curation Sample (Cohen's kappa):** Complete independent curation of the 50-row sample in [`logs/kappa_sample_50rows.tsv`](file:///d:/antiviral-resistance-hsv--1/logs/kappa_sample_50rows.tsv).
+   - **Threshold Citation Verification:** Review and verify the 11 cited threshold rows against primary papers in [`docs/threshold_citation_checklist.md`](file:///d:/antiviral-resistance-hsv--1/docs/threshold_citation_checklist.md).
+   - **PI Scope Sign-Off:** Execute the formal sign-off in [`docs/pi_signoff_form.md`](file:///d:/antiviral-resistance-hsv--1/docs/pi_signoff_form.md).

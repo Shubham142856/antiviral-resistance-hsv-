@@ -140,3 +140,4 @@ for g in ['UL23', 'UL30']:
     print(f"  Positions with < 50% ortholog coverage: {len(poorly_covered)} / {n_pos}")
     if poorly_covered:
         print(f"    Positions: {poorly_covered}")
+

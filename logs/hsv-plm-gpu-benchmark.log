@@ -1,101 +1,110 @@
-[{"stream_name":"stdout","time":36.436909244,"data":"=== HSV-1 ANTIVIRAL RESISTANCE PLM BENCHMARK ===\n"}
-,{"stream_name":"stdout","time":36.484066036,"data":"Device: cuda (Tesla T4)\n"}
-,{"stream_name":"stdout","time":36.486895277,"data":"[Dataset] Extracted self-contained dataset to: primary_position_folds.tsv\n"}
-,{"stream_name":"stdout","time":36.486910694,"data":"Dataset path: primary_position_folds.tsv\n"}
-,{"stream_name":"stdout","time":36.519196276,"data":"Loaded 929 primary cohort rows across 2 genes, 2 drugs.\n"}
-,{"stream_name":"stdout","time":36.519216844,"data":"\n"}
-,{"stream_name":"stdout","time":36.519220862,"data":"==================================================================\n"}
-,{"stream_name":"stdout","time":36.519224504,"data":"Loading facebook/esm2_t12_35M_UR50D on cuda...\n"}
-,{"stream_name":"stdout","time":36.519227898,"data":"==================================================================\n"}
-,{"stream_name":"stderr","time":36.789704082,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
-,{"stream_name":"stderr","time":37.748877592,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
-,{"stream_name":"stderr","time":40.759646306,"data":"\rLoading weights:   0%|          | 0/203 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 203/203 [00:00\u003c00:00, 2365.69it/s]\n"}
-,{"stream_name":"stdout","time":41.096682845,"data":"Scoring 507 unique sequence positions across UL23 and UL30...\n"}
-,{"stream_name":"stdout","time":42.778086943,"data":"  Processed 50/507 positions (1.7s)...\n"}
-,{"stream_name":"stdout","time":43.492066628,"data":"  Processed 100/507 positions (2.4s)...\n"}
-,{"stream_name":"stdout","time":44.203924906,"data":"  Processed 150/507 positions (3.1s)...\n"}
-,{"stream_name":"stdout","time":44.926772563,"data":"  Processed 200/507 positions (3.8s)...\n"}
-,{"stream_name":"stdout","time":45.680497322,"data":"  Processed 250/507 positions (4.6s)...\n"}
-,{"stream_name":"stdout","time":46.422280745,"data":"  Processed 300/507 positions (5.3s)...\n"}
-,{"stream_name":"stdout","time":47.163575109,"data":"  Processed 350/507 positions (6.1s)...\n"}
-,{"stream_name":"stdout","time":47.900174653,"data":"  Processed 400/507 positions (6.8s)...\n"}
-,{"stream_name":"stdout","time":48.64347607,"data":"  Processed 450/507 positions (7.5s)...\n"}
-,{"stream_name":"stdout","time":49.391718309,"data":"  Processed 500/507 positions (8.3s)...\n"}
-,{"stream_name":"stdout","time":49.496858345,"data":"  Processed 507/507 positions (8.4s)...\n"}
-,{"stream_name":"stdout","time":140.656853761,"data":"\n"}
-,{"stream_name":"stdout","time":140.656904406,"data":"--- facebook/esm2_t12_35M_UR50D Results ---\n"}
-,{"stream_name":"stdout","time":140.656911421,"data":"Target Pair        | Pos-Grouped AUROC    | Contig-Block AUROC   | 95% Bootstrap CI     | Passes (\u003e=0.65)?\n"}
-,{"stream_name":"stdout","time":140.656917999,"data":"-----------------------------------------------------------------------------------------------\n"}
-,{"stream_name":"stdout","time":140.656922939,"data":"UL23-Aciclovir     | 0.6598 +/- 0.0559   | 0.6110 +/- 0.2001   | [0.5748, 0.7292]     | NO\n"}
-,{"stream_name":"stdout","time":140.656927406,"data":"UL30-Aciclovir     | 0.6791 +/- 0.1036   | 0.6795 +/- 0.2441   | [0.5814, 0.7479]     | PASS\n"}
-,{"stream_name":"stdout","time":140.656931894,"data":"UL30-Foscarnet     | 0.7321 +/- 0.0529   | 0.7481 +/- 0.1842   | [0.6205, 0.8351]     | PASS\n"}
-,{"stream_name":"stdout","time":140.656936658,"data":"Stopping rule status: 2/3 primary pairs passed (Threshold: \u003e= 2/3).\n"}
-,{"stream_name":"stdout","time":140.656970792,"data":"\n"}
-,{"stream_name":"stdout","time":140.656975894,"data":"==================================================================\n"}
-,{"stream_name":"stdout","time":140.656980052,"data":"Loading facebook/esm2_t33_650M_UR50D on cuda...\n"}
-,{"stream_name":"stdout","time":140.656983994,"data":"==================================================================\n"}
-,{"stream_name":"stderr","time":153.016079204,"data":"\rLoading weights:   0%|          | 0/539 [00:00\u003c?, ?it/s]\rLoading weights:   3%|▎         | 16/539 [00:00\u003c00:20, 25.98it/s]\rLoading weights: 100%|██████████| 539/539 [00:00\u003c00:00, 770.79it/s]\n"}
-,{"stream_name":"stdout","time":164.04866803,"data":"Scoring 507 unique sequence positions across UL23 and UL30...\n"}
-,{"stream_name":"stdout","time":166.242840193,"data":"  Processed 50/507 positions (2.2s)...\n"}
-,{"stream_name":"stdout","time":168.35557012,"data":"  Processed 100/507 positions (4.3s)...\n"}
-,{"stream_name":"stdout","time":170.475826074,"data":"  Processed 150/507 positions (6.4s)...\n"}
-,{"stream_name":"stdout","time":172.620657812,"data":"  Processed 200/507 positions (8.6s)...\n"}
-,{"stream_name":"stdout","time":175.294397022,"data":"  Processed 250/507 positions (11.2s)...\n"}
-,{"stream_name":"stdout","time":178.107621613,"data":"  Processed 300/507 positions (14.1s)...\n"}
-,{"stream_name":"stdout","time":180.937349976,"data":"  Processed 350/507 positions (16.9s)...\n"}
-,{"stream_name":"stdout","time":183.798789546,"data":"  Processed 400/507 positions (19.8s)...\n"}
-,{"stream_name":"stdout","time":186.66239981,"data":"  Processed 450/507 positions (22.6s)...\n"}
-,{"stream_name":"stdout","time":189.513914519,"data":"  Processed 500/507 positions (25.5s)...\n"}
-,{"stream_name":"stdout","time":189.917318036,"data":"  Processed 507/507 positions (25.9s)...\n"}
-,{"stream_name":"stdout","time":278.517894325,"data":"\n"}
-,{"stream_name":"stdout","time":278.517977267,"data":"--- facebook/esm2_t33_650M_UR50D Results ---\n"}
-,{"stream_name":"stdout","time":278.517981954,"data":"Target Pair        | Pos-Grouped AUROC    | Contig-Block AUROC   | 95% Bootstrap CI     | Passes (\u003e=0.65)?\n"}
-,{"stream_name":"stdout","time":278.517985814,"data":"-----------------------------------------------------------------------------------------------\n"}
-,{"stream_name":"stdout","time":278.517988923,"data":"UL23-Aciclovir     | 0.7850 +/- 0.0669   | 0.7397 +/- 0.1565   | [0.7134, 0.8422]     | PASS\n"}
-,{"stream_name":"stdout","time":278.517991872,"data":"UL30-Aciclovir     | 0.8273 +/- 0.0632   | 0.7875 +/- 0.1772   | [0.7570, 0.8857]     | PASS\n"}
-,{"stream_name":"stdout","time":278.517994967,"data":"UL30-Foscarnet     | 0.8454 +/- 0.1050   | 0.8809 +/- 0.1250   | [0.7433, 0.9162]     | PASS\n"}
-,{"stream_name":"stdout","time":278.51799833,"data":"Stopping rule status: 3/3 primary pairs passed (Threshold: \u003e= 2/3).\n"}
-,{"stream_name":"stdout","time":278.518001345,"data":"\n"}
-,{"stream_name":"stdout","time":278.518004119,"data":"==================================================================\n"}
-,{"stream_name":"stdout","time":278.518006988,"data":"Loading Rostlab/prot_bert on cuda...\n"}
-,{"stream_name":"stdout","time":278.518009876,"data":"==================================================================\n"}
-,{"stream_name":"stderr","time":292.933643828,"data":"\rLoading weights:   0%|          | 0/492 [00:00\u003c?, ?it/s]\rLoading weights:  40%|████      | 197/492 [00:00\u003c00:00, 1917.44it/s]\rLoading weights:  79%|███████▉  | 389/492 [00:00\u003c00:00, 1805.58it/s]\rLoading weights: 100%|██████████| 492/492 [00:00\u003c00:00, 1794.17it/s]\n"}
-,{"stream_name":"stderr","time":298.131773987,"data":"[transformers] \u001b[1mBertForMaskedLM LOAD REPORT\u001b[0m from: Rostlab/prot_bert\n"}
-,{"stream_name":"stderr","time":298.131801999,"data":"Key                         | Status     |  | \n"}
-,{"stream_name":"stderr","time":298.131806644,"data":"----------------------------+------------+--+-\n"}
-,{"stream_name":"stderr","time":298.131811227,"data":"bert.pooler.dense.bias      | UNEXPECTED |  | \n"}
-,{"stream_name":"stderr","time":298.131824715,"data":"bert.pooler.dense.weight    | UNEXPECTED |  | \n"}
-,{"stream_name":"stderr","time":298.131828357,"data":"cls.seq_relationship.weight | UNEXPECTED |  | \n"}
-,{"stream_name":"stderr","time":298.131832335,"data":"cls.seq_relationship.bias   | UNEXPECTED |  | \n"}
-,{"stream_name":"stderr","time":298.131836085,"data":"\n"}
-,{"stream_name":"stderr","time":298.131839439,"data":"Notes:\n"}
-,{"stream_name":"stderr","time":298.131842816,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
-,{"stream_name":"stdout","time":298.373280973,"data":"Scoring 507 unique sequence positions across UL23 and UL30...\n"}
-,{"stream_name":"stdout","time":299.50117217,"data":"  Processed 50/507 positions (1.1s)...\n"}
-,{"stream_name":"stdout","time":300.537213467,"data":"  Processed 100/507 positions (2.2s)...\n"}
-,{"stream_name":"stdout","time":301.620705891,"data":"  Processed 150/507 positions (3.2s)...\n"}
-,{"stream_name":"stdout","time":302.655334511,"data":"  Processed 200/507 positions (4.3s)...\n"}
-,{"stream_name":"stdout","time":303.893815246,"data":"  Processed 250/507 positions (5.5s)...\n"}
-,{"stream_name":"stdout","time":305.190811001,"data":"  Processed 300/507 positions (6.8s)...\n"}
-,{"stream_name":"stdout","time":306.487150708,"data":"  Processed 350/507 positions (8.1s)...\n"}
-,{"stream_name":"stdout","time":307.786037262,"data":"  Processed 400/507 positions (9.4s)...\n"}
-,{"stream_name":"stdout","time":309.089042378,"data":"  Processed 450/507 positions (10.7s)...\n"}
-,{"stream_name":"stdout","time":310.394136575,"data":"  Processed 500/507 positions (12.0s)...\n"}
-,{"stream_name":"stdout","time":310.581936992,"data":"  Processed 507/507 positions (12.2s)...\n"}
-,{"stream_name":"stdout","time":400.481553076,"data":"\n"}
-,{"stream_name":"stdout","time":400.481606318,"data":"--- Rostlab/prot_bert Results ---\n"}
-,{"stream_name":"stdout","time":400.481613958,"data":"Target Pair        | Pos-Grouped AUROC    | Contig-Block AUROC   | 95% Bootstrap CI     | Passes (\u003e=0.65)?\n"}
-,{"stream_name":"stdout","time":400.481619939,"data":"-----------------------------------------------------------------------------------------------\n"}
-,{"stream_name":"stdout","time":400.481625605,"data":"UL23-Aciclovir     | 0.7259 +/- 0.0952   | 0.7530 +/- 0.0713   | [0.6533, 0.7858]     | PASS\n"}
-,{"stream_name":"stdout","time":400.481630669,"data":"UL30-Aciclovir     | 0.8396 +/- 0.0640   | 0.6957 +/- 0.2416   | [0.7740, 0.8938]     | PASS\n"}
-,{"stream_name":"stdout","time":400.481635889,"data":"UL30-Foscarnet     | 0.8485 +/- 0.0307   | 0.7423 +/- 0.1593   | [0.7956, 0.9136]     | PASS\n"}
-,{"stream_name":"stdout","time":400.481641056,"data":"Stopping rule status: 3/3 primary pairs passed (Threshold: \u003e= 2/3).\n"}
-,{"stream_name":"stdout","time":400.482142872,"data":"\n"}
-,{"stream_name":"stdout","time":400.482160846,"data":"All benchmark results saved to: plm_benchmark_results.json\n"}
-,{"stream_name":"stderr","time":407.355902462,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
-,{"stream_name":"stderr","time":407.355951557,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
-,{"stream_name":"stderr","time":407.63021024,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
-,{"stream_name":"stderr","time":407.630234565,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
-,{"stream_name":"stderr","time":408.413865703,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
-,{"stream_name":"stderr","time":409.441568517,"data":"[NbConvertApp] Writing 347944 bytes to __results__.html\n"}
+[{"stream_name":"stdout","time":30.774183818,"data":"=== HSV-1 ANTIVIRAL RESISTANCE PLM BENCHMARK (RIGOROUS AUDIT v3) ===\n"}
+,{"stream_name":"stdout","time":30.827500654,"data":"Device: cuda (Tesla T4)\n"}
+,{"stream_name":"stdout","time":30.829769981,"data":"[Dataset] Extracted self-contained dataset to: primary_position_folds.tsv\n"}
+,{"stream_name":"stdout","time":30.829790746,"data":"Dataset path: primary_position_folds.tsv\n"}
+,{"stream_name":"stdout","time":30.859991596,"data":"Loaded 929 primary cohort rows across 2 genes, 2 drugs.\n"}
+,{"stream_name":"stdout","time":30.860041384,"data":"\n"}
+,{"stream_name":"stdout","time":30.860046405,"data":"--- Computing Conservation Baseline (BLOSUM62 Radicalness) ---\n"}
+,{"stream_name":"stdout","time":130.969955636,"data":"\n"}
+,{"stream_name":"stdout","time":130.970011846,"data":"==================================================================\n"}
+,{"stream_name":"stdout","time":130.970019771,"data":"Loading Rostlab/prot_bert on cuda...\n"}
+,{"stream_name":"stdout","time":130.970024727,"data":"==================================================================\n"}
+,{"stream_name":"stderr","time":131.091535085,"data":"Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n"}
+,{"stream_name":"stderr","time":154.584178859,"data":"\rLoading weights:   0%|          | 0/492 [00:00\u003c?, ?it/s]\rLoading weights:  32%|███▏      | 159/492 [00:00\u003c00:00, 1589.26it/s]\rLoading weights:  65%|██████▍   | 318/492 [00:00\u003c00:00, 1493.66it/s]\rLoading weights:  95%|█████████▌| 468/492 [00:00\u003c00:00, 1444.88it/s]\rLoading weights: 100%|██████████| 492/492 [00:00\u003c00:00, 1492.32it/s]\n"}
+,{"stream_name":"stderr","time":154.626786866,"data":"[transformers] \u001b[1mBertForMaskedLM LOAD REPORT\u001b[0m from: Rostlab/prot_bert\n"}
+,{"stream_name":"stderr","time":154.626827315,"data":"Key                         | Status     |  | \n"}
+,{"stream_name":"stderr","time":154.626838641,"data":"----------------------------+------------+--+-\n"}
+,{"stream_name":"stderr","time":154.626842665,"data":"bert.pooler.dense.weight    | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":154.62684588,"data":"cls.seq_relationship.bias   | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":154.626849132,"data":"bert.pooler.dense.bias      | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":154.626852315,"data":"cls.seq_relationship.weight | UNEXPECTED |  | \n"}
+,{"stream_name":"stderr","time":154.626855546,"data":"\n"}
+,{"stream_name":"stderr","time":154.626858691,"data":"Notes:\n"}
+,{"stream_name":"stderr","time":154.626861997,"data":"- UNEXPECTED:\tcan be ignored when loading from different task/architecture; not ok if you expect identical arch.\n"}
+,{"stream_name":"stdout","time":155.121785209,"data":"Scoring 507 unique sequence positions across UL23 and UL30...\n"}
+,{"stream_name":"stdout","time":156.807468664,"data":"  Processed 50/507 positions (1.7s)...\n"}
+,{"stream_name":"stdout","time":157.903839807,"data":"  Processed 100/507 positions (2.8s)...\n"}
+,{"stream_name":"stdout","time":159.023876732,"data":"  Processed 150/507 positions (3.9s)...\n"}
+,{"stream_name":"stdout","time":160.130974715,"data":"  Processed 200/507 positions (5.0s)...\n"}
+,{"stream_name":"stdout","time":161.303703913,"data":"  Processed 250/507 positions (6.2s)...\n"}
+,{"stream_name":"stdout","time":162.480008492,"data":"  Processed 300/507 positions (7.4s)...\n"}
+,{"stream_name":"stdout","time":163.659459436,"data":"  Processed 350/507 positions (8.5s)...\n"}
+,{"stream_name":"stdout","time":164.846282849,"data":"  Processed 400/507 positions (9.7s)...\n"}
+,{"stream_name":"stdout","time":166.031064294,"data":"  Processed 450/507 positions (10.9s)...\n"}
+,{"stream_name":"stdout","time":167.222741574,"data":"  Processed 500/507 positions (12.1s)...\n"}
+,{"stream_name":"stdout","time":167.389971374,"data":"  Processed 507/507 positions (12.3s)...\n"}
+,{"stream_name":"stdout","time":266.386723554,"data":"\n"}
+,{"stream_name":"stdout","time":266.386820045,"data":"--- Rostlab/prot_bert Results ---\n"}
+,{"stream_name":"stdout","time":266.386828224,"data":"Target Pair        | Contig-Block Mean    | 95% Block t-Interval   | Pooled AUROC [95% CI]      | Passes?\n"}
+,{"stream_name":"stdout","time":266.386833711,"data":"---------------------------------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":266.386838688,"data":"UL23-Aciclovir     | 0.7530 +/- 0.0713   | [0.6645, 0.8415]       | 0.7243 [0.6533, 0.7858]    | PASS\n"}
+,{"stream_name":"stdout","time":266.38684341,"data":"  -\u003e Folds: B0:0.846, B1:0.727, B2:0.777, B3:0.652, B4:0.763\n"}
+,{"stream_name":"stdout","time":266.386848246,"data":"UL30-Aciclovir     | 0.6957 +/- 0.2416   | [0.3113, 1.0000]       | 0.8398 [0.7740, 0.8938]    | NO\n"}
+,{"stream_name":"stdout","time":266.386852824,"data":"  -\u003e Folds: B0:N/A, B1:0.947, B2:0.647, B3:0.805, B4:0.384\n"}
+,{"stream_name":"stdout","time":266.386858033,"data":"UL30-Foscarnet     | 0.7423 +/- 0.1593   | [0.4888, 0.9958]       | 0.8545 [0.7956, 0.9136]    | NO\n"}
+,{"stream_name":"stdout","time":266.386868508,"data":"  -\u003e Folds: B0:N/A, B1:0.946, B2:0.626, B3:0.792, B4:0.605\n"}
+,{"stream_name":"stdout","time":266.386871978,"data":"\n"}
+,{"stream_name":"stdout","time":266.386874806,"data":"==================================================================\n"}
+,{"stream_name":"stdout","time":266.386877828,"data":"Loading facebook/esm2_t33_650M_UR50D on cuda...\n"}
+,{"stream_name":"stdout","time":266.386880768,"data":"==================================================================\n"}
+,{"stream_name":"stderr","time":266.687048886,"data":"[transformers] `torch_dtype` is deprecated! Use `dtype` instead!\n"}
+,{"stream_name":"stderr","time":282.945392505,"data":"\rLoading weights:   0%|          | 0/539 [00:00\u003c?, ?it/s]\rLoading weights:   3%|▎         | 16/539 [00:00\u003c00:17, 29.53it/s]\rLoading weights: 100%|██████████| 539/539 [00:00\u003c00:00, 910.70it/s]\n"}
+,{"stream_name":"stdout","time":283.341492949,"data":"Scoring 507 unique sequence positions across UL23 and UL30...\n"}
+,{"stream_name":"stdout","time":285.683863476,"data":"  Processed 50/507 positions (2.3s)...\n"}
+,{"stream_name":"stdout","time":287.805647621,"data":"  Processed 100/507 positions (4.5s)...\n"}
+,{"stream_name":"stdout","time":289.936302828,"data":"  Processed 150/507 positions (6.6s)...\n"}
+,{"stream_name":"stdout","time":292.083688393,"data":"  Processed 200/507 positions (8.7s)...\n"}
+,{"stream_name":"stdout","time":294.749426938,"data":"  Processed 250/507 positions (11.4s)...\n"}
+,{"stream_name":"stdout","time":297.550233239,"data":"  Processed 300/507 positions (14.2s)...\n"}
+,{"stream_name":"stdout","time":300.358458726,"data":"  Processed 350/507 positions (17.0s)...\n"}
+,{"stream_name":"stdout","time":303.19677832,"data":"  Processed 400/507 positions (19.9s)...\n"}
+,{"stream_name":"stdout","time":306.037034753,"data":"  Processed 450/507 positions (22.7s)...\n"}
+,{"stream_name":"stdout","time":308.880279441,"data":"  Processed 500/507 positions (25.5s)...\n"}
+,{"stream_name":"stdout","time":309.282030359,"data":"  Processed 507/507 positions (25.9s)...\n"}
+,{"stream_name":"stdout","time":408.170660865,"data":"\n"}
+,{"stream_name":"stdout","time":408.170714108,"data":"--- facebook/esm2_t33_650M_UR50D Results ---\n"}
+,{"stream_name":"stdout","time":408.170721105,"data":"Target Pair        | Contig-Block Mean    | 95% Block t-Interval   | Pooled AUROC [95% CI]      | Passes?\n"}
+,{"stream_name":"stdout","time":408.170725816,"data":"---------------------------------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":408.170730229,"data":"UL23-Aciclovir     | 0.7397 +/- 0.1565   | [0.5455, 0.9340]       | 0.7881 [0.7134, 0.8422]    | PASS\n"}
+,{"stream_name":"stdout","time":408.170744125,"data":"  -\u003e Folds: B0:0.986, B1:0.668, B2:0.801, B3:0.630, B4:0.613\n"}
+,{"stream_name":"stdout","time":408.170747999,"data":"UL30-Aciclovir     | 0.7875 +/- 0.1772   | [0.5055, 1.0000]       | 0.8240 [0.7570, 0.8857]    | PASS\n"}
+,{"stream_name":"stdout","time":408.170764385,"data":"  -\u003e Folds: B0:N/A, B1:1.000, B2:0.757, B3:0.822, B4:0.571\n"}
+,{"stream_name":"stdout","time":408.170786039,"data":"UL30-Foscarnet     | 0.8809 +/- 0.1250   | [0.6821, 1.0000]       | 0.8409 [0.7433, 0.9162]    | PASS\n"}
+,{"stream_name":"stdout","time":408.170790777,"data":"  -\u003e Folds: B0:N/A, B1:1.000, B2:0.746, B3:0.804, B4:0.974\n"}
+,{"stream_name":"stdout","time":408.170794704,"data":"\n"}
+,{"stream_name":"stdout","time":408.170798625,"data":"==================================================================\n"}
+,{"stream_name":"stdout","time":408.17080258,"data":"Loading facebook/esm2_t12_35M_UR50D on cuda...\n"}
+,{"stream_name":"stdout","time":408.170806432,"data":"==================================================================\n"}
+,{"stream_name":"stderr","time":409.630406956,"data":"\rLoading weights:   0%|          | 0/203 [00:00\u003c?, ?it/s]\rLoading weights: 100%|██████████| 203/203 [00:00\u003c00:00, 2193.83it/s]\n"}
+,{"stream_name":"stdout","time":409.673900816,"data":"Scoring 507 unique sequence positions across UL23 and UL30...\n"}
+,{"stream_name":"stdout","time":410.529963575,"data":"  Processed 50/507 positions (0.9s)...\n"}
+,{"stream_name":"stdout","time":411.348303382,"data":"  Processed 100/507 positions (1.7s)...\n"}
+,{"stream_name":"stdout","time":412.134021003,"data":"  Processed 150/507 positions (2.5s)...\n"}
+,{"stream_name":"stdout","time":412.89100584,"data":"  Processed 200/507 positions (3.2s)...\n"}
+,{"stream_name":"stdout","time":413.740715052,"data":"  Processed 250/507 positions (4.1s)...\n"}
+,{"stream_name":"stdout","time":414.521626782,"data":"  Processed 300/507 positions (4.8s)...\n"}
+,{"stream_name":"stdout","time":415.300825621,"data":"  Processed 350/507 positions (5.6s)...\n"}
+,{"stream_name":"stdout","time":416.083137761,"data":"  Processed 400/507 positions (6.4s)...\n"}
+,{"stream_name":"stdout","time":416.861752064,"data":"  Processed 450/507 positions (7.2s)...\n"}
+,{"stream_name":"stdout","time":417.654012506,"data":"  Processed 500/507 positions (8.0s)...\n"}
+,{"stream_name":"stdout","time":417.763797671,"data":"  Processed 507/507 positions (8.1s)...\n"}
+,{"stream_name":"stdout","time":517.093040029,"data":"\n"}
+,{"stream_name":"stdout","time":517.093096208,"data":"--- facebook/esm2_t12_35M_UR50D Results ---\n"}
+,{"stream_name":"stdout","time":517.093101258,"data":"Target Pair        | Contig-Block Mean    | 95% Block t-Interval   | Pooled AUROC [95% CI]      | Passes?\n"}
+,{"stream_name":"stdout","time":517.09310493,"data":"---------------------------------------------------------------------------------------------------------\n"}
+,{"stream_name":"stdout","time":517.093108529,"data":"UL23-Aciclovir     | 0.6110 +/- 0.2001   | [0.3625, 0.8595]       | 0.6640 [0.5748, 0.7292]    | NO\n"}
+,{"stream_name":"stdout","time":517.093125432,"data":"  -\u003e Folds: B0:0.904, B1:0.404, B2:0.720, B3:0.496, B4:0.532\n"}
+,{"stream_name":"stdout","time":517.093128709,"data":"UL30-Aciclovir     | 0.6795 +/- 0.2441   | [0.2911, 1.0000]       | 0.6681 [0.5814, 0.7479]    | NO\n"}
+,{"stream_name":"stdout","time":517.093131508,"data":"  -\u003e Folds: B0:N/A, B1:1.000, B2:0.643, B3:0.669, B4:0.406\n"}
+,{"stream_name":"stdout","time":517.09313434,"data":"UL30-Foscarnet     | 0.7481 +/- 0.1842   | [0.4550, 1.0000]       | 0.7381 [0.6205, 0.8351]    | NO\n"}
+,{"stream_name":"stdout","time":517.093137157,"data":"  -\u003e Folds: B0:N/A, B1:1.000, B2:0.651, B3:0.763, B4:0.579\n"}
+,{"stream_name":"stdout","time":517.094801186,"data":"\n"}
+,{"stream_name":"stdout","time":517.09481418,"data":"All detailed benchmark results saved to: plm_benchmark_results.json\n"}
+,{"stream_name":"stdout","time":517.112667705,"data":"Row-level predictions saved to: primary_position_folds_scored.tsv\n"}
+,{"stream_name":"stderr","time":522.976404916,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":522.97646204,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":523.211191669,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":523.211219689,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":524.037980676,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":525.097614482,"data":"[NbConvertApp] Writing 401661 bytes to __results__.html\n"}
 ]

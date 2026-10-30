@@ -397,3 +397,4 @@ with open(LOG_FILE, 'w') as f:
 
 log(f"\nSaved results to: {JSON_FILE}")
 log(f"Saved log to: {LOG_FILE}")
+
