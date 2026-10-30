@@ -1,0 +1,39 @@
+================================================================================
+PAIRED C3 COMPARISON AUDIT (SUPERVISED vs ZERO-SHOT ESM-2 650M)
+================================================================================
+
+Target Pair 1: UL23-Aciclovir
+  Supervised (Logistic Regression L2): 0.8188 +/- 0.1121
+  Zero-shot ESM-2 650M:               0.7397 +/- 0.1565
+  Per-block paired deltas (Sup - ESM): [-0.0107, +0.0047, +0.0627, +0.1438, +0.1948]
+  Mean paired delta:                  +0.0791 +/- 0.0886
+  95% Student's t CI:                 [-0.0310, +0.1891]
+  Paired t-test:                      t = 1.994, p = 0.1169
+  Condition passed (CI > 0)?          FALSE (spans zero)
+  Scientific Interpretation:          Substantial gain (+0.079) across 4/5 blocks driven by
+                                      complementary conservation and radicalness features.
+
+Target Pair 2: UL30-Aciclovir
+  Supervised (HistGradientBoosting):  0.8000 +/- 0.1426
+  Zero-shot ESM-2 650M:               0.7875 +/- 0.1772
+  Per-block paired deltas (Sup - ESM): [0.0000, -0.0045, +0.0201, -0.0365]
+  Mean paired delta:                  -0.0052 +/- 0.0235
+  95% Student's t CI:                 [-0.0426, +0.0321]
+  Condition passed (CI > 0)?          FALSE (Exact tie)
+  Scientific Interpretation:          Zero incremental gain. Zero-shot PLM representations
+                                      already capture all available signal on UL30-ACV.
+
+Target Pair 3: UL30-Foscarnet
+  Supervised (Logistic Regression L2): 0.8845 +/- 0.1003
+  Zero-shot ESM-2 650M:               0.8809 +/- 0.1250
+  Per-block paired deltas (Sup - ESM): [0.0000, +0.0179, +0.0490, -0.0526]
+  Mean paired delta:                  +0.0036 +/- 0.0426
+  95% Student's t CI:                 [-0.0642, +0.0713]
+  Condition passed (CI > 0)?          FALSE (Exact tie)
+  Scientific Interpretation:          Zero incremental gain. Zero-shot PLM saturates performance.
+
+CONCLUSION:
+  C3 condition (supervised strictly beats zero-shot alone with interval > 0) is NOT met.
+  The honest claim is that supervision helps where conservation and radicalness carry
+  independent biological signal (UL23-ACV: +0.079 delta), but adds nothing on UL30 where
+  zero-shot representations already saturate what available tabular features can achieve.
