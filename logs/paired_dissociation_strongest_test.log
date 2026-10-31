@@ -1,0 +1,36 @@
+=====================================================================================
+PAIRED DISSOCIATION TEST: ZERO-SHOT ESM-2 650M vs STRONGEST BASELINE (TABLE 3)
+=====================================================================================
+Target Pair: UL23-Aciclovir
+  Strongest Baseline: Multi-Herpesvirus Weighted Conservation
+  Evaluable Blocks: ['B0', 'B1', 'B2', 'B3', 'B4'] (N=5)
+  ESM-2 650M per-block: [0.9864, 0.6677, 0.8014, 0.6297, 0.6134] (Mean = 0.7397)
+  Baseline   per-block: [0.6953, 0.5947, 0.811, 0.8023, 0.7834] (Mean = 0.7373)
+  Paired deltas: [0.2912, 0.073, -0.0096, -0.1726, -0.1701]
+  Mean paired delta: +0.0024 +/- 0.1929 (SE = 0.0863)
+  t(4) = 0.0277, p = 0.9792
+  95% Student's t CI: [-0.2372, 0.2419]
+  Table 3 Designation: tied
+-------------------------------------------------------------------------------------
+Target Pair: UL30-Aciclovir
+  Strongest Baseline: Negative MSA Entropy (-Entropy)
+  Evaluable Blocks: ['B1', 'B2', 'B3', 'B4'] (N=4)
+  ESM-2 650M per-block: [1.0, 0.7572, 0.8222, 0.5708] (Mean = 0.7875)
+  Baseline   per-block: [0.9474, 0.7251, 0.7913, 0.3356] (Mean = 0.6999)
+  Paired deltas: [0.0526, 0.0321, 0.0309, 0.2352]
+  Mean paired delta: +0.0877 +/- 0.0988 (SE = 0.0494)
+  t(3) = 1.7746, p = 0.1741
+  95% Student's t CI: [-0.0696, 0.2449]
+  Table 3 Designation: n.s.
+-------------------------------------------------------------------------------------
+Target Pair: UL30-Foscarnet
+  Strongest Baseline: Negative MSA Entropy (-Entropy)
+  Evaluable Blocks: ['B1', 'B2', 'B3', 'B4'] (N=4)
+  ESM-2 650M per-block: [1.0, 0.7462, 0.8039, 0.9737] (Mean = 0.8809)
+  Baseline   per-block: [0.9459, 0.7985, 0.7843, 0.7697] (Mean = 0.8246)
+  Paired deltas: [0.0541, -0.0523, 0.0196, 0.2039]
+  Mean paired delta: +0.0563 +/- 0.1079 (SE = 0.0540)
+  t(3) = 1.0438, p = 0.3733
+  95% Student's t CI: [-0.1154, 0.2281]
+  Table 3 Designation: n.s.
+-------------------------------------------------------------------------------------

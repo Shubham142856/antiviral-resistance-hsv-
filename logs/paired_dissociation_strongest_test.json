@@ -1,0 +1,132 @@
+{
+  "UL23-Aciclovir": {
+    "strongest_baseline_name": "Multi-Herpesvirus Weighted Conservation",
+    "evaluable_blocks": [
+      "B0",
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "n_eval": 5,
+    "esm2_650m_per_block": [
+      0.9864341085271318,
+      0.6677018633540373,
+      0.8013937282229966,
+      0.6297429620563035,
+      0.6133720930232558
+    ],
+    "strongest_baseline_per_block": [
+      0.6952519379844961,
+      0.59472049689441,
+      0.8109756097560975,
+      0.8023255813953487,
+      0.7834302325581396
+    ],
+    "esm2_650m_mean": 0.7397289510367451,
+    "strongest_baseline_mean": 0.7373407717176984,
+    "paired_deltas": [
+      0.2911821705426356,
+      0.07298136645962727,
+      -0.009581881533100911,
+      -0.17258261933904517,
+      -0.1700581395348838
+    ],
+    "mean_paired_delta": 0.0023881793190466015,
+    "sd_paired_delta": 0.19292560940919787,
+    "se_paired_delta": 0.0862789554479079,
+    "t_statistic": 0.02767974306884716,
+    "degrees_of_freedom": 4,
+    "p_value": 0.9792435056786681,
+    "student_t_ci_95": [
+      -0.23716060421587576,
+      0.24193696285396898
+    ],
+    "strictly_excludes_zero": false,
+    "table3_label": "tied"
+  },
+  "UL30-Aciclovir": {
+    "strongest_baseline_name": "Negative MSA Entropy (-Entropy)",
+    "evaluable_blocks": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "n_eval": 4,
+    "esm2_650m_per_block": [
+      1.0,
+      0.7571644042232277,
+      0.8222222222222223,
+      0.5707762557077626
+    ],
+    "strongest_baseline_per_block": [
+      0.9473684210526316,
+      0.7251131221719457,
+      0.7913194444444445,
+      0.3356164383561644
+    ],
+    "esm2_650m_mean": 0.7875407205383032,
+    "strongest_baseline_mean": 0.6998543565062965,
+    "paired_deltas": [
+      0.05263157894736836,
+      0.03205128205128205,
+      0.030902777777777835,
+      0.2351598173515982
+    ],
+    "mean_paired_delta": 0.08768636403200661,
+    "sd_paired_delta": 0.09882121129634285,
+    "se_paired_delta": 0.04941060564817142,
+    "t_statistic": 1.7746466144612354,
+    "degrees_of_freedom": 3,
+    "p_value": 0.17405140115277984,
+    "student_t_ci_95": [
+      -0.06956023535484684,
+      0.24493296341886006
+    ],
+    "strictly_excludes_zero": false,
+    "table3_label": "n.s."
+  },
+  "UL30-Foscarnet": {
+    "strongest_baseline_name": "Negative MSA Entropy (-Entropy)",
+    "evaluable_blocks": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "n_eval": 4,
+    "esm2_650m_per_block": [
+      1.0,
+      0.7461734693877551,
+      0.8039215686274509,
+      0.9736842105263158
+    ],
+    "strongest_baseline_per_block": [
+      0.9459459459459459,
+      0.7984693877551021,
+      0.7843137254901961,
+      0.7697368421052632
+    ],
+    "esm2_650m_mean": 0.8809448121353805,
+    "strongest_baseline_mean": 0.8246164753241269,
+    "paired_deltas": [
+      0.05405405405405406,
+      -0.05229591836734704,
+      0.019607843137254832,
+      0.20394736842105265
+    ],
+    "mean_paired_delta": 0.056328336811253626,
+    "sd_paired_delta": 0.10792616970911562,
+    "se_paired_delta": 0.05396308485455781,
+    "t_statistic": 1.043830925586828,
+    "degrees_of_freedom": 3,
+    "p_value": 0.373272478048863,
+    "student_t_ci_95": [
+      -0.11540628320584509,
+      0.22806295682835234
+    ],
+    "strictly_excludes_zero": false,
+    "table3_label": "n.s."
+  }
+}
