@@ -31,7 +31,7 @@ For each row below:
 | **Threshold in `thresholds.tsv`** | Fold-change ≥ 3.0; IC50 ≥ 2.0 µg/mL (predictive value for treatment failure 95%) |
 | **Primary clinical citation** | Safrin et al. *Antimicrob Agents Chemother* 1994;38(6):1246–1250 **PMID: 8092821** [VERIFIED 2026-10-31] |
 | **Database compilations** | Sauerbrei et al. JAC 2016 **PMID: 26433780**; Charles et al. 2024 (HerpesDRG); Döhne et al. CMI 2025 Table S3 |
-| **Current status in TSV** | VERIFIED |
+| **Current status in TSV** | AGENT_VERIFIED_PENDING_HUMAN |
 
 **Verification details (2026-10-31):**
 - Primary text from Safrin et al. 1994: *"The predictive values of a susceptible result (50% effective concentrations, < 2 micrograms/ml for acyclovir and < 100 micrograms/ml for foscarnet) for complete healing of lesions were 62% for acyclovir and 82% for foscarnet; the predictive values of a resistant result for failure to heal were 95% for acyclovir and 88% for foscarnet."*
@@ -46,7 +46,7 @@ For each row below:
 | **Threshold** | Fold-change ≥ 3.0; IC50 > 2.0 µg/mL |
 | **Primary citation** | Burrel et al. *Antimicrob Agents Chemother* 2010;54(11):4833–4842 **PMID: 20733037** [VERIFIED 2026-10-31] |
 | **Secondary citation** | Döhne et al. CMI 2025 Table S3 |
-| **Current status** | VERIFIED |
+| **Current status** | AGENT_VERIFIED_PENDING_HUMAN |
 
 **Correction note (2026-10-31):**
 - Previous entry incorrectly listed "Antiviral Res 2010 (PMID: 20380849)". PMID 20380849 is an unrelated nanoparticle paper (*Development of novel fibrinogen nanoparticles by two-step co-acervation method*).
@@ -77,7 +77,7 @@ For each row below:
 | **Primary clinical citation** | Safrin et al. *Antimicrob Agents Chemother* 1994;38(6):1246–1250 **PMID: 8092821** [VERIFIED 2026-10-31] |
 | **Reaffirmation** | Wang, *J Clin Microbiol* 2024;62(8):e00728-23 **PMID: 39051778** [VERIFIED 2026-10-31] |
 | **Database compilations** | Sauerbrei et al. JAC 2016 (PMID: 26433780); Charles et al. 2024 (HerpesDRG); Döhne et al. CMI 2025 |
-| **Current status** | VERIFIED |
+| **Current status** | AGENT_VERIFIED_PENDING_HUMAN |
 
 **Verification details (2026-10-31):**
 - Resolved ref 26 in Wang 2024: It is Safrin et al. 1994 (AAC 38:1246-1250; PMID 8092821), which established IC50 ≥ 100 µg/mL based on an 88% predictive value for lesion failure to heal in 115 HIV-infected patients.
