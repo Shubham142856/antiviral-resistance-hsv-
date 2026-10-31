@@ -1,0 +1,63 @@
+=========================================================================================================
+GENUINE MULTI-HERPESVIRUS PSSM (POSITION-SPECIFIC SCORING MATRIX) EVALUATION
+=========================================================================================================
+Target Pair: UL23-Aciclovir
+  Pos-Grouped AUROC:               0.7295 +/- 0.0829
+  Contiguous-Block Mean AUROC:     0.7237 +/- 0.1009
+  Block Student's t 95% CI:        [0.5984, 0.8491]
+  Block Student's t 99% CI:        [0.5159, 0.9315]
+  Pooled Dataset AUROC:            0.7356
+  Pooled Cluster Bootstrap 95%:    [0.6730, 0.7904]
+  Pooled Cluster Bootstrap 99%:    [0.6557, 0.8015]
+  Per-Block Breakdown:             {'B0': 0.7877906976744187, 'B1': 0.5535714285714286, 'B2': 0.794425087108014, 'B3': 0.7735618115055078, 'B4': 0.7093023255813953}
+  --- Comparison vs ESM-2 650M ---
+  ESM-2 650M Block Mean:           0.7397
+  PSSM Block Mean:                 0.7237
+  Paired Delta (ESM - PSSM):       +0.0160 +/- 0.1424
+  Paired 95% Student's t CI:       [-0.1608, 0.1928]
+  Paired t-test:                   t = 0.2512, p = 0.8141
+  Pooled Paired Boot Delta Mean:   +0.0517 (95% CI: [-0.0222, 0.1217])
+  Pooled Boot P(ESM > PSSM):       91.5%
+  Block t-CI > 0.50?               True
+  Bootstrap CI > 0.50?             True
+---------------------------------------------------------------------------------------------------------
+Target Pair: UL30-Aciclovir
+  Pos-Grouped AUROC:               0.7599 +/- 0.0872
+  Contiguous-Block Mean AUROC:     0.6507 +/- 0.1920
+  Block Student's t 95% CI:        [0.3451, 0.9563]
+  Block Student's t 99% CI:        [0.0899, 1.0000]
+  Pooled Dataset AUROC:            0.7578
+  Pooled Cluster Bootstrap 95%:    [0.6790, 0.8278]
+  Pooled Cluster Bootstrap 99%:    [0.6476, 0.8492]
+  Per-Block Breakdown:             {'B0': None, 'B1': 0.736842105263158, 'B2': 0.7428355957767723, 'B3': 0.7600694444444445, 'B4': 0.36301369863013694}
+  --- Comparison vs ESM-2 650M ---
+  ESM-2 650M Block Mean:           0.7875
+  PSSM Block Mean:                 0.6507
+  Paired Delta (ESM - PSSM):       +0.1369 +/- 0.1177
+  Paired 95% Student's t CI:       [-0.0505, 0.3242]
+  Paired t-test:                   t = 2.3250, p = 0.1026
+  Pooled Paired Boot Delta Mean:   +0.0663 (95% CI: [-0.0035, 0.1352])
+  Pooled Boot P(ESM > PSSM):       96.7%
+  Block t-CI > 0.50?               False
+  Bootstrap CI > 0.50?             True
+---------------------------------------------------------------------------------------------------------
+Target Pair: UL30-Foscarnet
+  Pos-Grouped AUROC:               0.7968 +/- 0.1035
+  Contiguous-Block Mean AUROC:     0.7832 +/- 0.0949
+  Block Student's t 95% CI:        [0.6323, 0.9341]
+  Block Student's t 99% CI:        [0.5062, 1.0000]
+  Pooled Dataset AUROC:            0.7931
+  Pooled Cluster Bootstrap 95%:    [0.7026, 0.8716]
+  Pooled Cluster Bootstrap 99%:    [0.6709, 0.8974]
+  Per-Block Breakdown:             {'B0': None, 'B1': 0.7297297297297297, 'B2': 0.7130102040816327, 'B3': 0.7689950980392156, 'B4': 0.9210526315789473}
+  --- Comparison vs ESM-2 650M ---
+  ESM-2 650M Block Mean:           0.8809
+  PSSM Block Mean:                 0.7832
+  Paired Delta (ESM - PSSM):       +0.0977 +/- 0.1154
+  Paired 95% Student's t CI:       [-0.0858, 0.2813]
+  Paired t-test:                   t = 1.6948, p = 0.1887
+  Pooled Paired Boot Delta Mean:   +0.0489 (95% CI: [-0.0597, 0.1535])
+  Pooled Boot P(ESM > PSSM):       82.8%
+  Block t-CI > 0.50?               True
+  Bootstrap CI > 0.50?             True
+---------------------------------------------------------------------------------------------------------

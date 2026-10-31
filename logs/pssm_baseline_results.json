@@ -1,0 +1,199 @@
+{
+  "UL23-Aciclovir": {
+    "pos_grouped_mean": 0.7295494441472922,
+    "pos_grouped_sd": 0.08291865659991976,
+    "contig_block_mean": 0.7237302700881529,
+    "contig_block_sd": 0.10092927596223032,
+    "contig_block_evaluable_folds": 5,
+    "block_student_t_ci_95": [
+      0.5984100217610789,
+      0.8490505184152269
+    ],
+    "block_student_t_ci_99": [
+      0.5159154958940547,
+      0.9315450442822512
+    ],
+    "pooled_auroc": 0.7356425702811245,
+    "pooled_cluster_bootstrap_ci_95": [
+      0.6729562485376509,
+      0.7903990614978745
+    ],
+    "pooled_cluster_bootstrap_ci_99": [
+      0.6556677882771771,
+      0.8015421738473862
+    ],
+    "position_cluster_bootstrap_ci_95": [
+      0.6729562485376509,
+      0.7903990614978745
+    ],
+    "per_block_auroc": {
+      "B0": 0.7877906976744187,
+      "B1": 0.5535714285714286,
+      "B2": 0.794425087108014,
+      "B3": 0.7735618115055078,
+      "B4": 0.7093023255813953
+    },
+    "esm2_650m_per_block": [
+      0.9864341085271318,
+      0.6677018633540373,
+      0.8013937282229966,
+      0.6297429620563035,
+      0.6133720930232558
+    ],
+    "esm2_650m_mean": 0.7397289510367451,
+    "paired_deltas_esm_minus_pssm": [
+      0.1986434108527131,
+      0.11413043478260865,
+      0.006968641114982632,
+      -0.1438188494492043,
+      -0.09593023255813948
+    ],
+    "mean_paired_delta": 0.015998680948592116,
+    "sd_paired_delta": 0.14242559881648198,
+    "paired_t_ci_95": [
+      -0.1608460575244462,
+      0.1928434194216304
+    ],
+    "paired_t_stat": 0.25117772681776424,
+    "paired_p_val": 0.8140524524211212,
+    "pooled_esm_auroc": 0.7881024096385543,
+    "paired_cluster_boot_delta_mean": 0.051712058590958274,
+    "paired_cluster_boot_delta_ci_95": [
+      -0.022227325034781198,
+      0.1217046648351368
+    ],
+    "paired_cluster_boot_p_esm_gt_pssm": 0.915,
+    "passes_stopping_rule_ci95_gt_050": true,
+    "bootstrap_ci95_gt_050": true
+  },
+  "UL30-Aciclovir": {
+    "pos_grouped_mean": 0.7599373442769669,
+    "pos_grouped_sd": 0.08716605858219116,
+    "contig_block_mean": 0.6506902110286279,
+    "contig_block_sd": 0.1920369003594292,
+    "contig_block_evaluable_folds": 4,
+    "block_student_t_ci_95": [
+      0.3451166490151274,
+      0.9562637730421284
+    ],
+    "block_student_t_ci_99": [
+      0.08985515146776457,
+      1.0
+    ],
+    "pooled_auroc": 0.7578255675029868,
+    "pooled_cluster_bootstrap_ci_95": [
+      0.6789939332239529,
+      0.8277520437555368
+    ],
+    "pooled_cluster_bootstrap_ci_99": [
+      0.6475999747443643,
+      0.8491514085531076
+    ],
+    "position_cluster_bootstrap_ci_95": [
+      0.6789939332239529,
+      0.8277520437555368
+    ],
+    "per_block_auroc": {
+      "B0": null,
+      "B1": 0.736842105263158,
+      "B2": 0.7428355957767723,
+      "B3": 0.7600694444444445,
+      "B4": 0.36301369863013694
+    },
+    "esm2_650m_per_block": [
+      1.0,
+      0.7571644042232277,
+      0.8222222222222223,
+      0.5707762557077626
+    ],
+    "esm2_650m_mean": 0.7875407205383032,
+    "paired_deltas_esm_minus_pssm": [
+      0.26315789473684204,
+      0.014328808446455454,
+      0.062152777777777835,
+      0.20776255707762564
+    ],
+    "mean_paired_delta": 0.13685050950967526,
+    "sd_paired_delta": 0.11771914657426331,
+    "paired_t_ci_95": [
+      -0.05046692202853251,
+      0.32416794104788305
+    ],
+    "paired_t_stat": 2.325034006653164,
+    "paired_p_val": 0.10261151750897701,
+    "pooled_esm_auroc": 0.823984468339307,
+    "paired_cluster_boot_delta_mean": 0.06630208239084678,
+    "paired_cluster_boot_delta_ci_95": [
+      -0.003549931287617773,
+      0.13520361021410252
+    ],
+    "paired_cluster_boot_p_esm_gt_pssm": 0.967,
+    "passes_stopping_rule_ci95_gt_050": false,
+    "bootstrap_ci95_gt_050": true
+  },
+  "UL30-Foscarnet": {
+    "pos_grouped_mean": 0.7968177479739648,
+    "pos_grouped_sd": 0.10347024550624484,
+    "contig_block_mean": 0.7831969158573814,
+    "contig_block_sd": 0.09485217356277177,
+    "contig_block_evaluable_folds": 4,
+    "block_student_t_ci_95": [
+      0.6322659412058954,
+      0.9341278905088674
+    ],
+    "block_student_t_ci_99": [
+      0.5061854440517626,
+      1.0
+    ],
+    "pooled_auroc": 0.7931109657728364,
+    "pooled_cluster_bootstrap_ci_95": [
+      0.7026358636276732,
+      0.8716261237250043
+    ],
+    "pooled_cluster_bootstrap_ci_99": [
+      0.6709258975428438,
+      0.8974062358475476
+    ],
+    "position_cluster_bootstrap_ci_95": [
+      0.7026358636276732,
+      0.8716261237250043
+    ],
+    "per_block_auroc": {
+      "B0": null,
+      "B1": 0.7297297297297297,
+      "B2": 0.7130102040816327,
+      "B3": 0.7689950980392156,
+      "B4": 0.9210526315789473
+    },
+    "esm2_650m_per_block": [
+      1.0,
+      0.7461734693877551,
+      0.8039215686274509,
+      0.9736842105263158
+    ],
+    "esm2_650m_mean": 0.8809448121353805,
+    "paired_deltas_esm_minus_pssm": [
+      0.2702702702702703,
+      0.03316326530612235,
+      0.03492647058823528,
+      0.052631578947368474
+    ],
+    "mean_paired_delta": 0.0977478962779991,
+    "sd_paired_delta": 0.11535041930407142,
+    "paired_t_ci_95": [
+      -0.08580036158558518,
+      0.2812961541415834
+    ],
+    "paired_t_stat": 1.6947991497166406,
+    "paired_p_val": 0.18868545173961926,
+    "pooled_esm_auroc": 0.8408545890560281,
+    "paired_cluster_boot_delta_mean": 0.04894014647848637,
+    "paired_cluster_boot_delta_ci_95": [
+      -0.05974179772782857,
+      0.1535256423836196
+    ],
+    "paired_cluster_boot_p_esm_gt_pssm": 0.828,
+    "passes_stopping_rule_ci95_gt_050": true,
+    "bootstrap_ci95_gt_050": true
+  }
+}
