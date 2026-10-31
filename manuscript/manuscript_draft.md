@@ -27,10 +27,36 @@ Antiviral drug resistance in Herpes Simplex Virus types 1 and 2 (HSV-1 and HSV-2
 
 While phenotypic susceptibility testing via plaque reduction assays (PRA) or dye uptake remains the diagnostic gold standard, phenotypic assays require 1–2 weeks, prompting extensive efforts toward sequence-based genotypic resistance prediction. In recent years, numerous machine learning classifiers and deep learning models have been proposed for variant effect and resistance prediction across viral pathogens. However, variant-level machine learning benchmarks frequently suffer from unrecognized data leakage.
 
+```mermaid
+flowchart LR
+    A["Clinical Isolates & Phenotypic Assays<br/>(PRA / Dye Uptake: IC50 >= 2.0 ug/mL ACV, >= 100 ug/mL FOS)"] --> B["Deduplication & Provenance Engine<br/>(Unique Virus, Gene, Drug, Mutation; SHA-256 Verified)"]
+    B --> C["Primary Missense Cohort<br/>(N = 929 rows: UL23-ACV, UL30-ACV, UL30-FOS)"]
+    C --> D{"Evaluation Protocol Split"}
+    D -->|"Standard"| E["Position-Grouped CV<br/>(Interleaved Modulo Folds)"]
+    D -->|"Structural Domain"| F["Contiguous-Block Holdout<br/>(5 Spatial Domain Blocks)"]
+    E --> G["Position-Only RF = 0.8715<br/>(VULNERABLE TO SPATIAL SHORTCUT)"]
+    F --> H["Position-Only RF = 0.5001<br/>(SHORTCUT NEUTRALIZED)"]
+    F --> I["Zero-Shot PLMs = 0.74 - 0.88<br/>(ROBUST REGIONAL GENERALIZATION)"]
+```
+
 ### The Spatial Leakage Problem in Resistance Modeling
 Cross-validation protocols that partition datasets randomly across rows fail catastrophically in mutation benchmarks because different amino acid substitutions frequently occur at the same sequence position. When the same position appears in both training and test sets, models easily memorize position identity rather than learning generalizable principles of mutation effect. To address this, "position-grouped" cross-validation—holding out individual positions entirely—has become the standard recommendation.
 
 However, position-grouped holdout does not eliminate spatial shortcut learning. The PRIME framework previously demonstrated that position-stratified validation exposes a related spatial leakage vulnerability in SARS-CoV-2 variant prediction. In this work, we demonstrate this vulnerability in Herpes Simplex Virus antiviral resistance and show that contiguous-block holdout provides the necessary structural evaluation standard. In globular viral enzymes such as DNA polymerase, resistance-conferring mutations cluster within localized structural domains (such as the catalytic Palm and Finger domains). Tree-based models or overparameterized neural networks can interpolate resistance phenotypes from adjacent or spatially neighboring positions. When tested on held-out positions that reside within known active-site clusters, models exploit this spatial interpolation shortcut, achieving high apparent test AUROCs while failing to generalize to novel regions.
+
+```mermaid
+flowchart TD
+    subgraph PosGrouped ["Position-Grouped Cross-Validation (Interleaved Positions)"]
+        direction LR
+        P1["Pos 700: TRAIN (Res)"] --- P2["Pos 701: TEST (Res)"] --- P3["Pos 702: TRAIN (Res)"]
+        note1["Tree interpolates active-site label from Pos 700 & 702 -> Apparent AUROC = 0.87"]
+    end
+    subgraph ContigBlock ["Contiguous-Block Structural Holdout (Domain Separation)"]
+        direction LR
+        B1["Block 2 (aa 495-741): TRAIN<br/>Finger Domain"] === B2["Block 3 (aa 742-988): TEST<br/>Palm Catalytic Domain"]
+        note2["Zero training labels in entire Palm Domain -> Position-Only collapses to 0.5001"]
+    end
+```
 
 ### Contributions of this Work
 1. **Empirical Demonstration of Spatial Shortcut Learning:** We show that a "position-only" random forest, trained solely on sequence index, scores **0.8715** under position-grouped cross-validation, but collapses to **0.5001** under a domain-level contiguous-block structural holdout.
@@ -171,6 +197,20 @@ The statistically robust component of the biological dissociation between thymid
 
 This divergence is the paper's most interpretable finding and is independent of any PLM or alignment method.
 
+```mermaid
+flowchart TD
+    subgraph TK ["Thymidine Kinase (UL23) - Prodrug Activator"]
+        T1["Prodrug Phosphorylation"] --> T2["Non-essential in non-dividing cells in vitro"]
+        T2 --> T3["Disruptive Radical Mutation (BLOSUM62 AUROC = 0.638)"]
+        T3 --> T4["Catalytic Inactivation -> High Resistance"]
+    end
+    subgraph POL ["DNA Polymerase (UL30) - Essential Replicative Motor"]
+        P1["Replicative Synthesis"] --> P2["Strictly essential for viral viability"]
+        P2 --> P3["Subtle Conformational Remodeling (BLOSUM62 AUROC = 0.507 - 0.549, Chance)"]
+        P3 --> P4["Maintains dNTP binding while excluding drug -> Selective Resistance"]
+    end
+```
+
 #### Alignment Baselines and the Residual PLM Margin
 
 Benchmarking PLMs against four alignment-derived baselines provides biological context for the radicalness dissociation (Table 3). On UL23, all four baselines cluster tightly at **0.7237 to 0.7373** and tie ESM-2 650M (**0.7397**; paired $t$-test vs. PSSM: $t=0.251, p=0.814$), confirming that conservation fully accounts for PLM performance on the kinase. On UL30, zero-shot PLMs outperform the strongest alignment baseline (positional Shannon entropy) by **$+0.0876$** (ACV) and **$+0.0563$** (FOS), but both paired per-block 95% Student's $t$ confidence intervals span zero (UL30-ACV $p=0.174$; UL30-FOS $p=0.373$, at $n=4$ evaluable blocks). This residual PLM margin is therefore **directional rather than statistically decisive**.
@@ -182,6 +222,14 @@ Benchmarking PLMs against four alignment-derived baselines provides biological c
 | **UL23-ACV** | <u>0.7373 $\pm$ 0.0920</u> | 0.7302 $\pm$ 0.0918 | 0.7251 $\pm$ 0.0892 | 0.7237 $\pm$ 0.1009 | **0.7397 $\pm$ 0.1565** | $+0.0024$ ($p=0.98$; **tied**) |
 | **UL30-ACV** | 0.6428 $\pm$ 0.3174 | 0.6994 $\pm$ 0.2462 | <u>0.6999 $\pm$ 0.2601</u> | 0.6507 $\pm$ 0.1920 | **0.7875 $\pm$ 0.1772** | $+0.0876$ ($p=0.174$; **n.s.**) |
 | **UL30-FOS** | 0.6604 $\pm$ 0.2664 | 0.8223 $\pm$ 0.0832 | <u>0.8246 $\pm$ 0.0817</u> | 0.7832 $\pm$ 0.0949 | **0.8809 $\pm$ 0.1250** | $+0.0563$ ($p=0.373$; **n.s.**) |
+
+```mermaid
+flowchart LR
+    A["Baseline 1: Amino Acid Radicalness<br/>(BLOSUM62, Chance on UL30: 0.507 - 0.549)"] -->|"PLM Margin: +0.33"| B["Baseline 2: Weighted Conservation<br/>(Entropy + BLOSUM62: 0.643 - 0.660)"]
+    B -->|"PLM Margin: +0.14 to +0.22"| C["Baseline 3: PSSM Profile<br/>(Log-odds Dirichlet Profile: 0.651 - 0.783)"]
+    C -->|"PLM Margin: +0.09 to +0.14"| D["Baseline 4: Pure Positional Entropy<br/>(Shannon Negative Entropy: 0.700 - 0.825)"]
+    D -->|"PLM Margin contracts to +0.056 to +0.088 (p=0.174, p=0.373; n.s.)"| E["Zero-Shot ESM-2 650M<br/>(0.788 on ACV, 0.881 on FOS)"]
+```
 
 ---
 
