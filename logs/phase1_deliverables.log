@@ -51,6 +51,43 @@ Target Pair: UL30-Foscarnet (N=311, N_res=33)
     Contig-Block ECE:     0.0933 (Overall OOF: 0.0593)
 
 ================================================================================
+SECTION 1B: DYNAMIC PAIRED C3 COMPARISON (SUPERVISED vs ZERO-SHOT ESM-2 650M)
+================================================================================
+Target Pair: UL23-Aciclovir
+  Supervised (Logistic_Regression_L2): [0.9758, 0.6724, 0.8641, 0.7736, 0.8081] (Mean = 0.8188)
+  Zero-shot (ESM-2 650M):   [0.9864, 0.6677, 0.8014, 0.6297, 0.6134] (Mean = 0.7397)
+  Paired deltas (Sup - ESM):[-0.0107, 0.0047, 0.0627, 0.1438, 0.1948]
+  Mean paired delta:        +0.0791 +/- 0.0886
+  95% Student's t CI:       [-0.0310, 0.1891]
+  Passes strict C3 rule?    False
+  Calibration Brier: 0.1777 (95% Bootstrap CI: [0.1543, 0.2006])
+  Null Baselines: Eval = 0.2435, Full = 0.2435
+  Brier Skill: Eval = +0.2705, Full = +0.2705
+
+Target Pair: UL30-Aciclovir
+  Supervised (Logistic_Regression_L2): [1.0, 0.7526, 0.8424, 0.5342] (Mean = 0.7823)
+  Zero-shot (ESM-2 650M):   [1.0, 0.7572, 0.8222, 0.5708] (Mean = 0.7875)
+  Paired deltas (Sup - ESM):[0.0, -0.0045, 0.0201, -0.0365]
+  Mean paired delta:        -0.0052 +/- 0.0235
+  95% Student's t CI:       [-0.0426, 0.0321]
+  Passes strict C3 rule?    False
+  Calibration Brier: 0.1136 (95% Bootstrap CI: [0.0878, 0.1406])
+  Null Baselines: Eval = 0.1774, Full = 0.1519
+  Brier Skill: Eval = +0.3594, Full = +0.2518
+
+Target Pair: UL30-Foscarnet
+  Supervised (Logistic_Regression_L2): [1.0, 0.764, 0.8529, 0.9211] (Mean = 0.8845)
+  Zero-shot (ESM-2 650M):   [1.0, 0.7462, 0.8039, 0.9737] (Mean = 0.8809)
+  Paired deltas (Sup - ESM):[0.0, 0.0179, 0.049, -0.0526]
+  Mean paired delta:        +0.0036 +/- 0.0426
+  95% Student's t CI:       [-0.0642, 0.0713]
+  Passes strict C3 rule?    False
+  Calibration Brier: 0.0841 (95% Bootstrap CI: [0.0602, 0.1131])
+  Null Baselines: Eval = 0.1146, Full = 0.0949
+  Brier Skill: Eval = +0.2657, Full = +0.1130
+
+
+================================================================================
 SECTION 2: TEMPORAL HOLDOUT VALIDATION (C5)
 ================================================================================
 

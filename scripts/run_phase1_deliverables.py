@@ -261,6 +261,137 @@ for g, d, p_key in pairs:
         }
 
 # ---------------------------------------------------------------------------
+# SECTION 1B: DYNAMIC PAIRED C3 COMPARISON & BRIER BOOTSTRAP AUDIT
+# ---------------------------------------------------------------------------
+log()
+log("=" * 80)
+log("SECTION 1B: DYNAMIC PAIRED C3 COMPARISON (SUPERVISED vs ZERO-SHOT ESM-2 650M)")
+log("=" * 80)
+
+paired_comparison = {}
+brier_bootstrap_audit = {}
+
+np.random.seed(42)
+
+for g, d, p_key in pairs:
+    sub = df[(df['gene'] == g) & (df['drug'] == d)].copy().reset_index(drop=True)
+    y = sub['target_binary'].values.astype(int)
+    
+    # Primary supervised model is Logistic_Regression_L2
+    primary_m = 'Logistic_Regression_L2'
+    
+    # Extract evaluable blocks and compute paired deltas
+    m_details = supervised_results[p_key][primary_m]['per_block_breakdown']
+    eval_blocks = [int(k[1]) for k, v in m_details.items() if v is not None]
+    
+    sup_aucs = []
+    esm_aucs = []
+    deltas = []
+    
+    for b in eval_blocks:
+        te_idx = np.where(sub['block_fold_id'] == b)[0]
+        y_te = y[te_idx]
+        sup_auc = m_details[f'B{b}']['auroc']
+        esm_auc = float(roc_auc_score(y_te, sub.iloc[te_idx]['esm2_650m_neg_llr'].values))
+        delta = sup_auc - esm_auc
+        
+        sup_aucs.append(sup_auc)
+        esm_aucs.append(esm_auc)
+        deltas.append(delta)
+        
+    n_eval = len(deltas)
+    mean_d = float(np.mean(deltas))
+    sd_d = float(np.std(deltas, ddof=1)) if n_eval > 1 else 0.0
+    se_d = sd_d / math.sqrt(n_eval) if n_eval > 0 else 0.0
+    
+    df_t = n_eval - 1
+    t_crit = float(stats.t.ppf(0.975, df=df_t))
+    t_stat = mean_d / se_d if se_d > 0 else 0.0
+    p_val = float(2 * (1 - stats.t.cdf(abs(t_stat), df=df_t)))
+    ci_95 = [mean_d - t_crit * se_d, mean_d + t_crit * se_d]
+    passes_c3 = bool(ci_95[0] > 0)
+    
+    paired_comparison[p_key] = {
+        'supervised_model': primary_m,
+        'zero_shot_model': 'esm2_650m',
+        'evaluable_blocks': [f'B{b}' for b in eval_blocks],
+        'per_block_supervised': [round(x, 4) for x in sup_aucs],
+        'per_block_zero_shot': [round(x, 4) for x in esm_aucs],
+        'per_block_paired_deltas': [round(x, 4) for x in deltas],
+        'mean_paired_delta': round(mean_d, 4),
+        'sd_paired_delta': round(sd_d, 4),
+        'se_paired_delta': round(se_d, 4),
+        'student_t_ci_95': [round(ci_95[0], 4), round(ci_95[1], 4)],
+        't_statistic': round(t_stat, 4),
+        'p_value': round(p_val, 4),
+        'passes_strict_c3_rule': passes_c3,
+        'scientific_verdict': (
+            f"Supervision provides incremental gain (+{mean_d:.4f}) but 95% t-interval spans zero."
+            if not passes_c3 and mean_d > 0.02
+            else "Exact tie. Adding supervised features to zero-shot ESM-2 650M adds zero incremental signal on polymerase."
+        )
+    }
+    
+    log(f"Target Pair: {p_key}")
+    log(f"  Supervised ({primary_m}): {[round(x, 4) for x in sup_aucs]} (Mean = {np.mean(sup_aucs):.4f})")
+    log(f"  Zero-shot (ESM-2 650M):   {[round(x, 4) for x in esm_aucs]} (Mean = {np.mean(esm_aucs):.4f})")
+    log(f"  Paired deltas (Sup - ESM):{[round(x, 4) for x in deltas]}")
+    log(f"  Mean paired delta:        {mean_d:+.4f} +/- {sd_d:.4f}")
+    log(f"  95% Student's t CI:       [{ci_95[0]:.4f}, {ci_95[1]:.4f}]")
+    log(f"  Passes strict C3 rule?    {passes_c3}")
+    
+    # Calibration bootstrap
+    eval_mask = sub['block_fold_id'].isin(eval_blocks)
+    y_eval = y[eval_mask]
+    
+    # Reconstruct OOF predictions for primary model
+    oof_preds = np.zeros(len(y))
+    for b in eval_blocks:
+        tr_idx = np.where(sub['block_fold_id'] != b)[0]
+        te_idx = np.where(sub['block_fold_id'] == b)[0]
+        clf = Pipeline([
+            ('scaler', StandardScaler()),
+            ('clf', LogisticRegression(C=0.1, random_state=42))
+        ])
+        clf.fit(sub[FEATURE_COLS].values[tr_idx], y[tr_idx])
+        oof_preds[te_idx] = clf.predict_proba(sub[FEATURE_COLS].values[te_idx])[:, 1]
+        
+    p_eval = oof_preds[eval_mask]
+    brier_pt = float(brier_score_loss(y_eval, p_eval))
+    
+    brier_boots = []
+    n_pts = len(y_eval)
+    for _ in range(1000):
+        idx = np.random.choice(n_pts, size=n_pts, replace=True)
+        brier_boots.append(float(brier_score_loss(y_eval[idx], p_eval[idx])))
+    brier_ci = [float(np.percentile(brier_boots, 2.5)), float(np.percentile(brier_boots, 97.5))]
+    
+    null_eval = float(np.mean((y_eval - np.mean(y_eval))**2))
+    null_full = float(np.mean((y - np.mean(y))**2))
+    skill_eval = float(1.0 - (brier_pt / null_eval))
+    skill_full = float(1.0 - (brier_pt / null_full))
+    
+    ece_val, _ = compute_ece(y_eval, p_eval)
+    
+    brier_bootstrap_audit[p_key] = {
+        'n_eval': int(len(y_eval)),
+        'n_total': int(len(y)),
+        'brier_point': round(brier_pt, 4),
+        'bootstrap_ci_95': [round(brier_ci[0], 4), round(brier_ci[1], 4)],
+        'null_baseline_eval_cohort': round(null_eval, 4),
+        'null_baseline_full_cohort': round(null_full, 4),
+        'brier_skill_score_eval': round(skill_eval, 4),
+        'brier_skill_score_full': round(skill_full, 4),
+        'ece_indicative': round(ece_val, 4),
+        'ece_note': f"Indicative secondary metric only; subject to binning instability at N={len(y_eval)}."
+    }
+    
+    log(f"  Calibration Brier: {brier_pt:.4f} (95% Bootstrap CI: [{brier_ci[0]:.4f}, {brier_ci[1]:.4f}])")
+    log(f"  Null Baselines: Eval = {null_eval:.4f}, Full = {null_full:.4f}")
+    log(f"  Brier Skill: Eval = {skill_eval:+.4f}, Full = {skill_full:+.4f}")
+    log()
+
+# ---------------------------------------------------------------------------
 # SECTION 2: TEMPORAL HOLDOUT VALIDATION (C5)
 # ---------------------------------------------------------------------------
 log()
@@ -439,6 +570,8 @@ phase1_output = {
     'audit_protocol': 'Strict Version 4 (Frozen)',
     'dataset_sha256': act_sha,
     'deliverable_1_1_supervised_predictor_c3': supervised_results,
+    'deliverable_1_1_paired_c3_comparison': paired_comparison,
+    'deliverable_1_2_brier_bootstrap_audit': brier_bootstrap_audit,
     'deliverable_1_3_temporal_holdout_c5': temporal_results,
     'deliverable_1_4_drug_conditioning_c4': drug_conditioning_results
 }

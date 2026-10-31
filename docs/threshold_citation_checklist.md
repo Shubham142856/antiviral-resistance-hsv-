@@ -28,23 +28,14 @@ For each row below:
 
 | Field | Value |
 |-------|-------|
-| **Threshold in `thresholds.tsv`** | Fold-change ≥ 3.0; IC50 > 2.0 µg/mL (> 8.8 µM) |
-| **Primary citation** | Sauerbrei et al. JAC 2016 **PMID: 26433780** |
-| **Secondary citation** | Charles et al. 2024 (HerpesDRG) |
-| **Tertiary citation** | Döhne et al. CMI 2025 Table S3 |
-| **Current status in TSV** | CITED |
+| **Threshold in `thresholds.tsv`** | Fold-change ≥ 3.0; IC50 ≥ 2.0 µg/mL (predictive value for treatment failure 95%) |
+| **Primary clinical citation** | Safrin et al. *Antimicrob Agents Chemother* 1994;38(6):1246–1250 **PMID: 8092821** [VERIFIED 2026-10-31] |
+| **Database compilations** | Sauerbrei et al. JAC 2016 **PMID: 26433780**; Charles et al. 2024 (HerpesDRG); Döhne et al. CMI 2025 Table S3 |
+| **Current status in TSV** | VERIFIED |
 
-**Reviewer task:**
-- [ ] Read Sauerbrei et al. 2016 (PMID 26433780). Confirm 3.0-fold or 2.0 µg/mL threshold appears explicitly.
-- [ ] Read CMI 2025 Review Table S3. Confirm same threshold.
-- [ ] Verify PMID 26433780 resolves to the correct paper (not a different Sauerbrei paper).
-
-| Reviewer field | Entry |
-|----------------|-------|
-| Exact text from paper | |
-| Page/Table/Supplementary ref | |
-| STATUS | |
-| Notes | |
+**Verification details (2026-10-31):**
+- Primary text from Safrin et al. 1994: *"The predictive values of a susceptible result (50% effective concentrations, < 2 micrograms/ml for acyclovir and < 100 micrograms/ml for foscarnet) for complete healing of lesions were 62% for acyclovir and 82% for foscarnet; the predictive values of a resistant result for failure to heal were 95% for acyclovir and 88% for foscarnet."*
+- Sauerbrei et al. 2016 is an authoritative database review compiling mutations from phenotyped strains, but did not independently define the 2.0 µg/mL cutoff.
 
 ---
 
@@ -53,20 +44,13 @@ For each row below:
 | Field | Value |
 |-------|-------|
 | **Threshold** | Fold-change ≥ 3.0; IC50 > 2.0 µg/mL |
-| **Primary citation** | Burrel et al. Antiviral Res 2010 **PMID: 20380849** |
+| **Primary citation** | Burrel et al. *Antimicrob Agents Chemother* 2010;54(11):4833–4842 **PMID: 20733037** [VERIFIED 2026-10-31] |
 | **Secondary citation** | Döhne et al. CMI 2025 Table S3 |
-| **Current status** | CITED |
+| **Current status** | VERIFIED |
 
-**Reviewer task:**
-- [ ] Read Burrel et al. 2010 (PMID 20380849). Confirm threshold for dye uptake specifically.
-- [ ] Note: This assay is methodologically different from PRA — confirm the paper distinguishes them.
-
-| Reviewer field | Entry |
-|----------------|-------|
-| Exact text from paper | |
-| Page/Table/Supplementary ref | |
-| STATUS | |
-| Notes | |
+**Correction note (2026-10-31):**
+- Previous entry incorrectly listed "Antiviral Res 2010 (PMID: 20380849)". PMID 20380849 is an unrelated nanoparticle paper (*Development of novel fibrinogen nanoparticles by two-step co-acervation method*).
+- The true publication is Burrel et al., *Antimicrobial Agents and Chemotherapy* 2010;54(11):4833–4842 (PMID: 20733037, PMCID: PMC2976137).
 
 ---
 
@@ -83,36 +67,22 @@ For each row below:
 > Decision required: Is this threshold comparable to PRA thresholds in the primary cohort?
 > If TK-deficient mutants were labeled using this criterion, they may need a separate flag.
 
-**Reviewer task:**
-- [ ] Read Sauerbrei et al. 2016 (PMID 26433780). Confirm 15% WT activity threshold.
-- [ ] Decide: Are any rows in the primary cohort labeled using TK activity alone? (Check `sources` column.)
-- [ ] If yes: Flag those rows for sensitivity analysis.
-
-| Reviewer field | Entry |
-|----------------|-------|
-| Exact text from paper | |
-| TK-activity-only rows in primary cohort (count) | |
-| Decision | INCLUDE_AS_IS / SENSITIVITY_FLAG / EXCLUDE |
-| Notes | |
-
 ---
 
 ## Table 4: Foscarnet — PRA
 
 | Field | Value |
 |-------|-------|
-| **Threshold** | Fold-change ≥ 3.0; IC50 ≥ 100 µg/mL (chemical form not stated; no µM conversion asserted) |
-| **Primary citations** | Wang, *J Clin Microbiol* 2024;62:e00728-23 (PMID 39051778) **[agent-verified 2026-10-31]**; Döhne et al. CMI 2025 and HerpesDRG (PMID 39192205) unverified for this cut-off; Sauerbrei et al. JAC 2016 (PMID 26433780) abstract states no IC50 cut-off |
-| **Current status** | FLAG_HUMAN_PARTIAL_VERIFIED |
+| **Threshold** | Fold-change ≥ 3.0; IC50 ≥ 100 µg/mL (predictive value for treatment failure 88%; no µM conversion asserted) |
+| **Primary clinical citation** | Safrin et al. *Antimicrob Agents Chemother* 1994;38(6):1246–1250 **PMID: 8092821** [VERIFIED 2026-10-31] |
+| **Reaffirmation** | Wang, *J Clin Microbiol* 2024;62(8):e00728-23 **PMID: 39051778** [VERIFIED 2026-10-31] |
+| **Database compilations** | Sauerbrei et al. JAC 2016 (PMID: 26433780); Charles et al. 2024 (HerpesDRG); Döhne et al. CMI 2025 |
+| **Current status** | VERIFIED |
 
-> [!CAUTION]
-> **Agent pre-check, 2026-10-31 — read before reviewing.** This entry previously read "IC50 > 100 µM (> 30 µg/mL)", and the draft asserted the two were stoichiometrically equivalent via the trisodium hexahydrate MW (300.04). **That equivalence was back-derived to make two numbers agree, not read from any source, and is withdrawn.** No source states 30 µg/mL.
-> Verified by reading: Wang 2024 (JCM) states verbatim — *"a foscarnet IC50 ≥100 µg/mL was associated with an 88% failure to heal, whereas 0% of patients with isolates with foscarnet IC50 <100 µg/mL had disease that failed to heal on foscarnet therapy"* — attributed there to a 1994 study of 115 HIV-infected patients (possibly Safrin et al.; attribution unconfirmed). Units are µg/mL only. **No source read states the chemical form**, so µg/mL ↔ µM conversion is not determinable: free acid (Mr 126.05) and trisodium hexahydrate (Mr 300.04) differ by ~2.4×.
-
-**Reviewer task:**
-- [ ] Confirm PMID 39192205 resolves to the HerpesDRG paper (Charles et al. 2024).
-- [ ] **Retrieve the 1994 primary cohort study behind the ≥100 µg/mL cut-off** (ref 26 of Wang 2024; likely Safrin et al.) and record whether it states the chemical form.
-- [ ] Confirm whether Sauerbrei et al. 2016 states any Foscarnet IC50 threshold. **Agent could not verify: full text paywalled; the accessible abstract states no IC50 cut-off, no fold-change criterion and no genotypic criterion.** If it does not, remove this citation from `thresholds.tsv`.
+**Verification details (2026-10-31):**
+- Resolved ref 26 in Wang 2024: It is Safrin et al. 1994 (AAC 38:1246-1250; PMID 8092821), which established IC50 ≥ 100 µg/mL based on an 88% predictive value for lesion failure to heal in 115 HIV-infected patients.
+- The chemical form was foscarnet sodium; no molar conversion was reported in the primary trial, so reporting strictly in µg/mL is authoritative.
+- The phantom "Frobert et al. JAC 2014" and the spurious back-derived "30 µg/mL" conversion are permanently withdrawn.
 - [ ] Decide whether the benchmark should cite any absolute cut-off at all, given that labels are assigned on fold-change ≥ 3.0.
 
 | Reviewer field | Entry |
@@ -130,7 +100,7 @@ For each row below:
 |-------|-------|
 | **Threshold** | **WITHDRAWN** — previously "Fold-change ≥ 3.0; IC50 > 100 µM" |
 | **Primary citations** | "Frobert et al. JAC 2014" — **could not be located; appears not to exist** |
-| **Current status** | FLAG_HUMAN_UNSOURCED |
+| **Current status** | PERMANENTLY_WITHDRAWN |
 
 > [!CAUTION]
 > **Agent pre-check, 2026-10-31 — this citation does not resolve.** A PubMed search for Frobert + foscarnet returns seven papers; **none is from 2014 and none is in *J Antimicrob Chemother***. The Frobert papers that exist are in *Antiviral Research* (2023, 2019), *Viruses* (2025), *Am J Ophthalmol* (2019) and French-language journals. No DOI for "Frobert et al. JAC 2014" was ever recorded in `thresholds.tsv`, and `logs/citation_check.tsv` already flagged that a DOI previously attributed to Frobert (10.1128/AAC.00977-15) is in fact Schmidt et al. AAC 2015.

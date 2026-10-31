@@ -1,0 +1,36 @@
+=====================================================================================
+PAIRED DISSOCIATION TEST: ZERO-SHOT ESM-2 650M vs POSITIONAL ENTROPY
+=====================================================================================
+Target Pair: UL23-Aciclovir
+  Evaluable Blocks: ['B0', 'B1', 'B2', 'B3', 'B4'] (N=5)
+  ESM-2 650M per-block: [0.9864, 0.6677, 0.8014, 0.6297, 0.6134] (Mean = 0.7397)
+  Entropy    per-block: [0.7587, 0.573, 0.7883, 0.7846, 0.7209] (Mean = 0.7251)
+  Paired deltas (ESM - Entropy): [0.2277, 0.0947, 0.0131, -0.1548, -0.1076]
+  Mean paired delta: +0.0146 +/- 0.1545 (SE = 0.0691)
+  t(4) = 0.2116, p = 0.8427
+  95% Student's t CI: [-0.1772, 0.2064]
+  CI strictly excludes zero? False
+  Verdict: Qualitative / directional advantage only (95% CI spans zero)
+-------------------------------------------------------------------------------------
+Target Pair: UL30-Aciclovir
+  Evaluable Blocks: ['B1', 'B2', 'B3', 'B4'] (N=4)
+  ESM-2 650M per-block: [1.0, 0.7572, 0.8222, 0.5708] (Mean = 0.7875)
+  Entropy    per-block: [0.9474, 0.7251, 0.7913, 0.3356] (Mean = 0.6999)
+  Paired deltas (ESM - Entropy): [0.0526, 0.0321, 0.0309, 0.2352]
+  Mean paired delta: +0.0877 +/- 0.0988 (SE = 0.0494)
+  t(3) = 1.7746, p = 0.1741
+  95% Student's t CI: [-0.0696, 0.2449]
+  CI strictly excludes zero? False
+  Verdict: Qualitative / directional advantage only (95% CI spans zero)
+-------------------------------------------------------------------------------------
+Target Pair: UL30-Foscarnet
+  Evaluable Blocks: ['B1', 'B2', 'B3', 'B4'] (N=4)
+  ESM-2 650M per-block: [1.0, 0.7462, 0.8039, 0.9737] (Mean = 0.8809)
+  Entropy    per-block: [0.9459, 0.7985, 0.7843, 0.7697] (Mean = 0.8246)
+  Paired deltas (ESM - Entropy): [0.0541, -0.0523, 0.0196, 0.2039]
+  Mean paired delta: +0.0563 +/- 0.1079 (SE = 0.0540)
+  t(3) = 1.0438, p = 0.3733
+  95% Student's t CI: [-0.1154, 0.2281]
+  CI strictly excludes zero? False
+  Verdict: Qualitative / directional advantage only (95% CI spans zero)
+-------------------------------------------------------------------------------------

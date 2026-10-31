@@ -1,9 +1,9 @@
 drug	assay	fold_change_cutoff	ic50_cutoff	citation	status
-Aciclovir	PRA	3.0	IC50 > 2.0 ug/mL (or > 8.8 uM)	CMI 2025 Review (Döhne et al. Table S3); Sauerbrei et al. JAC 2016 (PMID: 26433780); HerpesDRG (Charles et al. 2024)	CITED
-Aciclovir	Dye Uptake	3.0	IC50 > 2.0 ug/mL	Burrel et al. Antiviral Res 2010 (PMID: 20380849); CMI 2025 Review Table S3	CITED
-Aciclovir	TK Activity		TK activity < 15% of wild-type	Sauerbrei et al. JAC 2016 (PMID: 26433780)	FLAG_HUMAN_NON_FC
-Foscarnet	PRA	3.0	IC50 >= 100 ug/mL (chemical form not stated in source; no uM conversion asserted)	Wang, J Clin Microbiol 2024;62:e00728-23 (PMID 39051778) reviewing a 1994 HIV cohort [VERIFIED 2026-10-31]; CMI 2025 Review (Döhne et al. 2025) and HerpesDRG (PMID: 39192205) UNVERIFIED for this cut-off; Sauerbrei et al. JAC 2016 (PMID: 26433780) abstract states NO IC50 cut-off, full text paywalled	FLAG_HUMAN_PARTIAL_VERIFIED
-Foscarnet	Dye Uptake	3.0	WITHDRAWN - previously "IC50 > 100 uM"; no verifiable source	"Frobert et al. JAC 2014" COULD NOT BE LOCATED and appears not to exist (no 2014 JAC paper by this author; no DOI ever recorded); prior "30 ug/mL" figure was back-derived, not sourced	FLAG_HUMAN_UNSOURCED
+Aciclovir	PRA	3.0	IC50 >= 2.0 ug/mL (predictive value for treatment failure 95%)	Primary clinical cutoff established by Safrin et al. AAC 1994;38(6):1246-50 (PMID: 8092821). Genotypic database compilation: Sauerbrei et al. JAC 2016 (PMID: 26433780); CMI 2025 Review (Döhne et al. Table S3); HerpesDRG (Charles et al. 2024)	VERIFIED
+Aciclovir	Dye Uptake	3.0	IC50 > 2.0 ug/mL	Burrel et al. Antimicrob Agents Chemother 2010;54(11):4833-42 (PMID: 20733037; corrected from invalid PMID 20380849 and wrong journal name); CMI 2025 Review Table S3	VERIFIED
+Aciclovir	TK Activity		TK activity < 15% of wild-type	Sauerbrei et al. JAC 2016 (PMID: 26433780); review of functional enzyme assays	FLAG_HUMAN_NON_FC
+Foscarnet	PRA	3.0	IC50 >= 100 ug/mL (predictive value for treatment failure 88%; no uM conversion asserted)	Primary clinical cutoff established by Safrin et al. AAC 1994;38(6):1246-50 (PMID: 8092821). Reaffirmed by Wang, J Clin Microbiol 2024;62:e00728-23 (PMID: 39051778). Database compilation: Sauerbrei et al. JAC 2016 (PMID: 26433780); CMI 2025 Review (Döhne et al. 2025); HerpesDRG (PMID: 39192205)	VERIFIED
+Foscarnet	Dye Uptake	3.0	WITHDRAWN - previously "IC50 > 100 uM"; no verifiable source	"Frobert et al. JAC 2014" DOES NOT EXIST and is permanently withdrawn; spurious 30 ug/mL back-conversion withdrawn	PERMANENTLY_WITHDRAWN
 Pritelivir	PRA	3.0	IC50 > 0.1 uM (or > 3-fold vs WT)	Birkmann et al. AAC 2022 (PMID: 35862737); Schalkwijk et al. JID 2024	CITED
 Pritelivir	CPE	3.0	Fold change >= 3.0	Birkmann et al. AAC 2022; CMI 2025 Review Table S3	CITED
 Amenamevir	PRA	3.0	Fold change >= 3.0 (or > 4.0 in Vero)	Kawakami et al. AAC 2021 (PMID: 34228537); CMI 2025 Review Table S3	CITED

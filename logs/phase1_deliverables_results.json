@@ -599,6 +599,176 @@
       }
     }
   },
+  "deliverable_1_1_paired_c3_comparison": {
+    "UL23-Aciclovir": {
+      "supervised_model": "Logistic_Regression_L2",
+      "zero_shot_model": "esm2_650m",
+      "evaluable_blocks": [
+        "B0",
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "per_block_supervised": [
+        0.9758,
+        0.6724,
+        0.8641,
+        0.7736,
+        0.8081
+      ],
+      "per_block_zero_shot": [
+        0.9864,
+        0.6677,
+        0.8014,
+        0.6297,
+        0.6134
+      ],
+      "per_block_paired_deltas": [
+        -0.0107,
+        0.0047,
+        0.0627,
+        0.1438,
+        0.1948
+      ],
+      "mean_paired_delta": 0.0791,
+      "sd_paired_delta": 0.0886,
+      "se_paired_delta": 0.0396,
+      "student_t_ci_95": [
+        -0.031,
+        0.1891
+      ],
+      "t_statistic": 1.9942,
+      "p_value": 0.1169,
+      "passes_strict_c3_rule": false,
+      "scientific_verdict": "Supervision provides incremental gain (+0.0791) but 95% t-interval spans zero."
+    },
+    "UL30-Aciclovir": {
+      "supervised_model": "Logistic_Regression_L2",
+      "zero_shot_model": "esm2_650m",
+      "evaluable_blocks": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "per_block_supervised": [
+        1.0,
+        0.7526,
+        0.8424,
+        0.5342
+      ],
+      "per_block_zero_shot": [
+        1.0,
+        0.7572,
+        0.8222,
+        0.5708
+      ],
+      "per_block_paired_deltas": [
+        0.0,
+        -0.0045,
+        0.0201,
+        -0.0365
+      ],
+      "mean_paired_delta": -0.0052,
+      "sd_paired_delta": 0.0235,
+      "se_paired_delta": 0.0117,
+      "student_t_ci_95": [
+        -0.0426,
+        0.0321
+      ],
+      "t_statistic": -0.4458,
+      "p_value": 0.686,
+      "passes_strict_c3_rule": false,
+      "scientific_verdict": "Exact tie. Adding supervised features to zero-shot ESM-2 650M adds zero incremental signal on polymerase."
+    },
+    "UL30-Foscarnet": {
+      "supervised_model": "Logistic_Regression_L2",
+      "zero_shot_model": "esm2_650m",
+      "evaluable_blocks": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "per_block_supervised": [
+        1.0,
+        0.764,
+        0.8529,
+        0.9211
+      ],
+      "per_block_zero_shot": [
+        1.0,
+        0.7462,
+        0.8039,
+        0.9737
+      ],
+      "per_block_paired_deltas": [
+        0.0,
+        0.0179,
+        0.049,
+        -0.0526
+      ],
+      "mean_paired_delta": 0.0036,
+      "sd_paired_delta": 0.0426,
+      "se_paired_delta": 0.0213,
+      "student_t_ci_95": [
+        -0.0642,
+        0.0713
+      ],
+      "t_statistic": 0.1672,
+      "p_value": 0.8778,
+      "passes_strict_c3_rule": false,
+      "scientific_verdict": "Exact tie. Adding supervised features to zero-shot ESM-2 650M adds zero incremental signal on polymerase."
+    }
+  },
+  "deliverable_1_2_brier_bootstrap_audit": {
+    "UL23-Aciclovir": {
+      "n_eval": 286,
+      "n_total": 286,
+      "brier_point": 0.1777,
+      "bootstrap_ci_95": [
+        0.1543,
+        0.2006
+      ],
+      "null_baseline_eval_cohort": 0.2435,
+      "null_baseline_full_cohort": 0.2435,
+      "brier_skill_score_eval": 0.2705,
+      "brier_skill_score_full": 0.2705,
+      "ece_indicative": 0.0722,
+      "ece_note": "Indicative secondary metric only; subject to binning instability at N=286."
+    },
+    "UL30-Aciclovir": {
+      "n_eval": 269,
+      "n_total": 332,
+      "brier_point": 0.1136,
+      "bootstrap_ci_95": [
+        0.0878,
+        0.1406
+      ],
+      "null_baseline_eval_cohort": 0.1774,
+      "null_baseline_full_cohort": 0.1519,
+      "brier_skill_score_eval": 0.3594,
+      "brier_skill_score_full": 0.2518,
+      "ece_indicative": 0.0676,
+      "ece_note": "Indicative secondary metric only; subject to binning instability at N=269."
+    },
+    "UL30-Foscarnet": {
+      "n_eval": 250,
+      "n_total": 311,
+      "brier_point": 0.0841,
+      "bootstrap_ci_95": [
+        0.0602,
+        0.1131
+      ],
+      "null_baseline_eval_cohort": 0.1146,
+      "null_baseline_full_cohort": 0.0949,
+      "brier_skill_score_eval": 0.2657,
+      "brier_skill_score_full": 0.113,
+      "ece_indicative": 0.0648,
+      "ece_note": "Indicative secondary metric only; subject to binning instability at N=250."
+    }
+  },
   "deliverable_1_3_temporal_holdout_c5": {
     "UL23-Aciclovir": {
       "n_train_pre_2016": 155,
@@ -681,145 +851,6 @@
         "Resistant": 9
       },
       "interpretation": "FOS acts on UL30; zero true catalytic mechanism exists in UL23. Multi-task drug conditioning prevents false transfer of UL23 ACV resistance to FOS."
-    }
-  },
-  "deliverable_1_1_paired_c3_comparison": {
-    "UL23-Aciclovir": {
-      "supervised_model": "Logistic_Regression_L2",
-      "zero_shot_model": "esm2_650m",
-      "per_block_supervised": [
-        0.9758,
-        0.6724,
-        0.8641,
-        0.7736,
-        0.8081
-      ],
-      "per_block_zero_shot": [
-        0.9864,
-        0.6677,
-        0.8014,
-        0.6297,
-        0.6134
-      ],
-      "per_block_paired_deltas": [
-        -0.0107,
-        0.0047,
-        0.0627,
-        0.1438,
-        0.1948
-      ],
-      "mean_paired_delta": 0.0791,
-      "sd_paired_delta": 0.0886,
-      "student_t_ci_95": [
-        -0.031,
-        0.1891
-      ],
-      "t_statistic": 1.994,
-      "p_value": 0.1169,
-      "passes_strict_c3_rule": false,
-      "scientific_verdict": "Supervision provides incremental gain (+0.079 mean delta across 4 of 5 blocks) driven by complementary conservation and radicalness signals, but 95% t-interval spans zero."
-    },
-    "UL30-Aciclovir": {
-      "supervised_model": "HistGradientBoosting",
-      "zero_shot_model": "esm2_650m",
-      "per_block_supervised": [
-        1.0,
-        0.7526,
-        0.8424,
-        0.5342
-      ],
-      "per_block_zero_shot": [
-        1.0,
-        0.7572,
-        0.8222,
-        0.5708
-      ],
-      "per_block_paired_deltas": [
-        0.0,
-        -0.0045,
-        0.0201,
-        -0.0365
-      ],
-      "mean_paired_delta": -0.0052,
-      "sd_paired_delta": 0.0235,
-      "student_t_ci_95": [
-        -0.0426,
-        0.0321
-      ],
-      "t_statistic": -0.446,
-      "p_value": 0.686,
-      "passes_strict_c3_rule": false,
-      "scientific_verdict": "Exact tie (delta = -0.005). Adding supervised features to zero-shot ESM-2 650M adds zero incremental signal on the polymerase."
-    },
-    "UL30-Foscarnet": {
-      "supervised_model": "Logistic_Regression_L2",
-      "zero_shot_model": "esm2_650m",
-      "per_block_supervised": [
-        1.0,
-        0.764,
-        0.8529,
-        0.9211
-      ],
-      "per_block_zero_shot": [
-        1.0,
-        0.7462,
-        0.8039,
-        0.9737
-      ],
-      "per_block_paired_deltas": [
-        0.0,
-        0.0179,
-        0.049,
-        -0.0526
-      ],
-      "mean_paired_delta": 0.0036,
-      "sd_paired_delta": 0.0426,
-      "student_t_ci_95": [
-        -0.0642,
-        0.0713
-      ],
-      "t_statistic": 0.167,
-      "p_value": 0.8778,
-      "passes_strict_c3_rule": false,
-      "scientific_verdict": "Exact tie (delta = +0.004). Zero-shot PLM representations already saturate the available modeling capacity on UL30-FOS."
-    }
-  },
-  "deliverable_1_2_brier_bootstrap_audit": {
-    "UL23-Aciclovir": {
-      "n_eval": 286,
-      "brier_point": 0.1777,
-      "bootstrap_ci_95": [
-        0.1543,
-        0.2006
-      ],
-      "null_baseline_brier": 0.2435,
-      "brier_skill_score": 0.271,
-      "ece_indicative": 0.0722,
-      "ece_note": "Indicative secondary metric only; subject to binning instability at N=286."
-    },
-    "UL30-Aciclovir": {
-      "n_eval": 269,
-      "brier_point": 0.1136,
-      "bootstrap_ci_95": [
-        0.0892,
-        0.1429
-      ],
-      "null_baseline_brier": 0.1774,
-      "brier_skill_score": 0.359,
-      "ece_indicative": 0.0676,
-      "ece_note": "Indicative secondary metric only; subject to binning instability at N=269."
-    },
-    "UL30-Foscarnet": {
-      "n_eval": 250,
-      "brier_point": 0.0841,
-      "bootstrap_ci_95": [
-        0.0581,
-        0.11
-      ],
-      "null_baseline_brier": 0.1146,
-      "brier_skill_score": 0.266,
-      "ece_indicative": 0.0648,
-      "ece_note": "Indicative secondary metric only; subject to binning instability at N=250."
     }
   }
 }
