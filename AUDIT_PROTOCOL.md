@@ -74,6 +74,12 @@ Fix per drug and assay a fold-change cutoff **with a cited source** (for example
 - No "to our knowledge" statement without a logged search.
 - Seal the held-out test positions by assigning them with a seeded script and hashing the assignment before modeling.
 
+### 1.9 Standing Manuscript Integrity Rule (The Log-Traceability Invariant)
+**Nothing enters the manuscript unless a log file contains it.**
+- Every single number, point estimate, confidence interval, standard deviation, sample size, or metric reported in the manuscript text, abstract, tables, or supplementary materials **MUST trace directly to an existing, verifiable log file on disk** (`logs/*.json`, `logs/*.tsv`, `logs/*.log`).
+- No metric or interval may be computed on-the-fly in prose, back-derived, or asserted from expectation.
+- Every citation establishing an assay or IC50 cutoff must be verified against the primary published text before inclusion. Fabricated or proxy citations (such as citing a genotypic review for unverified phenotypic IC50 thresholds) are strictly prohibited.
+
 ---
 
 ## 2. Stage 1: Rights and coverage

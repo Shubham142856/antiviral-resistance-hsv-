@@ -101,14 +101,19 @@ For each row below:
 
 | Field | Value |
 |-------|-------|
-| **Threshold** | Fold-change ≥ 3.0; IC50 > 100 µM (> 30 µg/mL) |
-| **Primary citations** | Döhne et al. CMI 2025; Sauerbrei et al. JAC 2016 (PMID: 26433780); HerpesDRG (PMID: 39192205) |
-| **Current status** | CITED |
+| **Threshold** | Fold-change ≥ 3.0; IC50 ≥ 100 µg/mL (chemical form not stated; no µM conversion asserted) |
+| **Primary citations** | Wang, *J Clin Microbiol* 2024;62:e00728-23 (PMID 39051778) **[agent-verified 2026-10-31]**; Döhne et al. CMI 2025 and HerpesDRG (PMID 39192205) unverified for this cut-off; Sauerbrei et al. JAC 2016 (PMID 26433780) abstract states no IC50 cut-off |
+| **Current status** | FLAG_HUMAN_PARTIAL_VERIFIED |
+
+> [!CAUTION]
+> **Agent pre-check, 2026-10-31 — read before reviewing.** This entry previously read "IC50 > 100 µM (> 30 µg/mL)", and the draft asserted the two were stoichiometrically equivalent via the trisodium hexahydrate MW (300.04). **That equivalence was back-derived to make two numbers agree, not read from any source, and is withdrawn.** No source states 30 µg/mL.
+> Verified by reading: Wang 2024 (JCM) states verbatim — *"a foscarnet IC50 ≥100 µg/mL was associated with an 88% failure to heal, whereas 0% of patients with isolates with foscarnet IC50 <100 µg/mL had disease that failed to heal on foscarnet therapy"* — attributed there to a 1994 study of 115 HIV-infected patients (possibly Safrin et al.; attribution unconfirmed). Units are µg/mL only. **No source read states the chemical form**, so µg/mL ↔ µM conversion is not determinable: free acid (Mr 126.05) and trisodium hexahydrate (Mr 300.04) differ by ~2.4×.
 
 **Reviewer task:**
 - [ ] Confirm PMID 39192205 resolves to the HerpesDRG paper (Charles et al. 2024).
-- [ ] Confirm 100 µM (not 100 µg/mL) is the correct molar threshold (FOS MW ≈ 126 g/mol → 30 µg/mL ≈ 238 µM, so check conversion).
-- [ ] Confirm Sauerbrei et al. 2016 states this threshold for Foscarnet specifically.
+- [ ] **Retrieve the 1994 primary cohort study behind the ≥100 µg/mL cut-off** (ref 26 of Wang 2024; likely Safrin et al.) and record whether it states the chemical form.
+- [ ] Confirm whether Sauerbrei et al. 2016 states any Foscarnet IC50 threshold. **Agent could not verify: full text paywalled; the accessible abstract states no IC50 cut-off, no fold-change criterion and no genotypic criterion.** If it does not, remove this citation from `thresholds.tsv`.
+- [ ] Decide whether the benchmark should cite any absolute cut-off at all, given that labels are assigned on fold-change ≥ 3.0.
 
 | Reviewer field | Entry |
 |----------------|-------|
@@ -123,20 +128,25 @@ For each row below:
 
 | Field | Value |
 |-------|-------|
-| **Threshold** | Fold-change ≥ 3.0; IC50 > 100 µM |
-| **Primary citations** | Frobert et al. JAC 2014; Döhne et al. CMI 2025 Table S3 |
-| **Current status** | CITED |
-| **Note** | Frobert et al. JAC 2014 DOI not recorded in TSV — needs retrieval |
+| **Threshold** | **WITHDRAWN** — previously "Fold-change ≥ 3.0; IC50 > 100 µM" |
+| **Primary citations** | "Frobert et al. JAC 2014" — **could not be located; appears not to exist** |
+| **Current status** | FLAG_HUMAN_UNSOURCED |
+
+> [!CAUTION]
+> **Agent pre-check, 2026-10-31 — this citation does not resolve.** A PubMed search for Frobert + foscarnet returns seven papers; **none is from 2014 and none is in *J Antimicrob Chemother***. The Frobert papers that exist are in *Antiviral Research* (2023, 2019), *Viruses* (2025), *Am J Ophthalmol* (2019) and French-language journals. No DOI for "Frobert et al. JAC 2014" was ever recorded in `thresholds.tsv`, and `logs/citation_check.tsv` already flagged that a DOI previously attributed to Frobert (10.1128/AAC.00977-15) is in fact Schmidt et al. AAC 2015.
+> This was the **sole cited source for the 100 µM foscarnet cut-off**, which appears in the manuscript Methods §2.1. Until a real source is produced, the 100 µM figure has no provenance.
 
 **Reviewer task:**
-- [ ] Find Frobert et al. JAC 2014 (search: Frobert foscarnet dye uptake 2014 Journal of Antimicrobial Chemotherapy).
-- [ ] Record DOI.
-- [ ] Confirm 100 µM threshold appears for dye uptake specifically.
+- [ ] Determine whether a real source for a 100 µM foscarnet cut-off exists. Candidate to check: Frobert et al., *Antiviral Research* 2014, "Resistance of herpes simplex viruses to acyclovir: an update from a ten-year survey in France" — **note this is an aciclovir paper and may state no foscarnet cut-off at all** (agent did not retrieve it).
+- [ ] If no source is found: confirm removal of the 100 µM figure from `thresholds.tsv` and from the manuscript.
+- [ ] Confirm whether any primary-cohort rows were labelled using a foscarnet dye-uptake absolute cut-off rather than fold-change. If none were, mark OUT_OF_SCOPE.
 
 | Reviewer field | Entry |
 |----------------|-------|
-| DOI of Frobert et al. 2014 | |
+| Real source found? (cite or "none") | |
 | Exact text from paper | |
+| Rows affected in primary cohort | |
+| Decision | REPLACE_CITATION / REMOVE_THRESHOLD / OUT_OF_SCOPE |
 | STATUS | |
 | Notes | |
 
