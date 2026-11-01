@@ -1,0 +1,64 @@
+==============================================================================================================
+HSV-1 RESISTANCE BENCHMARK: 3D SPATIAL NEIGHBORHOOD HOLDOUT EVALUATION
+==============================================================================================================
+Primary TSV SHA-256 verified: 7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909
+Loaded 8V1Q Chain A (UL30) C-alpha coordinates: 1097 resolved residues
+Loaded 1OF1 Chain B (UL23) C-alpha coordinates: 313 resolved residues
+Saved primary 3D spatial folds: D:\antiviral-resistance-hsv--1\data\processed\primary_3d_spatial_folds.tsv (SHA-256: 0ED51D37D558530EF8B2D0C991780A23936580920E62C7ADE46A426ADFA96F4C)
+
+=============================================================================================================================
+Target Pair      | Cohort       | Model Name                             | 1D Block AUROC     | 3D Spatial AUROC   | Delta (3D - 1D)
+-----------------------------------------------------------------------------------------------------------------------------
+UL23-Aciclovir   | full_cohort  | Position-Only RF                       | 0.5471 +/- 0.0872  | 0.5907 +/- 0.2093  | +0.0435
+UL23-Aciclovir   | full_cohort  | BLOSUM62 Radicalness                   | 0.6380 +/- 0.0690  | 0.6249 +/- 0.0745  | -0.0131
+UL23-Aciclovir   | full_cohort  | Positional Shannon Entropy (-Entropy)  | 0.7251 +/- 0.0892  | 0.7224 +/- 0.0782  | -0.0027
+UL23-Aciclovir   | full_cohort  | Multi-Herpesvirus Weighted Conservation | 0.7373 +/- 0.0920  | 0.7361 +/- 0.0743  | -0.0013
+UL23-Aciclovir   | full_cohort  | Multi-Herpesvirus PSSM                 | 0.7237 +/- 0.1009  | 0.7271 +/- 0.0845  | +0.0034
+UL23-Aciclovir   | full_cohort  | ProtBERT (zero-shot)                   | 0.7530 +/- 0.0713  | 0.7346 +/- 0.0198  | -0.0184
+UL23-Aciclovir   | full_cohort  | ESM-2 35M (zero-shot)                  | 0.6110 +/- 0.2001  | 0.6103 +/- 0.1499  | -0.0007
+UL23-Aciclovir   | full_cohort  | ESM-2 650M (zero-shot)                 | 0.7397 +/- 0.1565  | 0.7303 +/- 0.1222  | -0.0094
+UL23-Aciclovir   | resolved_core | Position-Only RF                       | 0.5320 +/- 0.0699  | 0.5956 +/- 0.1851  | +0.0636
+UL23-Aciclovir   | resolved_core | BLOSUM62 Radicalness                   | 0.6732 +/- 0.0367  | 0.6501 +/- 0.0886  | -0.0231
+UL23-Aciclovir   | resolved_core | Positional Shannon Entropy (-Entropy)  | 0.6865 +/- 0.0901  | 0.6926 +/- 0.0941  | +0.0061
+UL23-Aciclovir   | resolved_core | Multi-Herpesvirus Weighted Conservation | 0.7441 +/- 0.0788  | 0.7358 +/- 0.0936  | -0.0083
+UL23-Aciclovir   | resolved_core | Multi-Herpesvirus PSSM                 | 0.6932 +/- 0.0932  | 0.6988 +/- 0.0931  | +0.0055
+UL23-Aciclovir   | resolved_core | ProtBERT (zero-shot)                   | 0.7384 +/- 0.0568  | 0.7193 +/- 0.0463  | -0.0191
+UL23-Aciclovir   | resolved_core | ESM-2 35M (zero-shot)                  | 0.5932 +/- 0.1648  | 0.5923 +/- 0.1520  | -0.0009
+UL23-Aciclovir   | resolved_core | ESM-2 650M (zero-shot)                 | 0.7255 +/- 0.1480  | 0.7132 +/- 0.1232  | -0.0123
+-----------------------------------------------------------------------------------------------------------------------------
+UL30-Aciclovir   | full_cohort  | Position-Only RF                       | 0.5347 +/- 0.0694  | 0.6241 +/- 0.3448  | +0.0894
+UL30-Aciclovir   | full_cohort  | BLOSUM62 Radicalness                   | 0.5494 +/- 0.2496  | 0.4908 +/- 0.0854  | -0.0586
+UL30-Aciclovir   | full_cohort  | Positional Shannon Entropy (-Entropy)  | 0.6999 +/- 0.2601  | 0.6806 +/- 0.1574  | -0.0193
+UL30-Aciclovir   | full_cohort  | Multi-Herpesvirus Weighted Conservation | 0.6428 +/- 0.3174  | 0.6002 +/- 0.1113  | -0.0426
+UL30-Aciclovir   | full_cohort  | Multi-Herpesvirus PSSM                 | 0.6507 +/- 0.1920  | 0.7189 +/- 0.1146  | +0.0682
+UL30-Aciclovir   | full_cohort  | ProtBERT (zero-shot)                   | 0.6957 +/- 0.2416  | 0.8072 +/- 0.1087  | +0.1114
+UL30-Aciclovir   | full_cohort  | ESM-2 35M (zero-shot)                  | 0.6795 +/- 0.2441  | 0.6207 +/- 0.1505  | -0.0588
+UL30-Aciclovir   | full_cohort  | ESM-2 650M (zero-shot)                 | 0.7875 +/- 0.1772  | 0.7875 +/- 0.1099  | -0.0001
+UL30-Aciclovir   | resolved_core | Position-Only RF                       | 0.5347 +/- 0.0694  | 0.6154 +/- 0.3210  | +0.0807
+UL30-Aciclovir   | resolved_core | BLOSUM62 Radicalness                   | 0.5441 +/- 0.2400  | 0.5077 +/- 0.1011  | -0.0364
+UL30-Aciclovir   | resolved_core | Positional Shannon Entropy (-Entropy)  | 0.7261 +/- 0.2133  | 0.7080 +/- 0.1301  | -0.0182
+UL30-Aciclovir   | resolved_core | Multi-Herpesvirus Weighted Conservation | 0.6609 +/- 0.2742  | 0.6417 +/- 0.0640  | -0.0192
+UL30-Aciclovir   | resolved_core | Multi-Herpesvirus PSSM                 | 0.6340 +/- 0.1756  | 0.7092 +/- 0.1183  | +0.0753
+UL30-Aciclovir   | resolved_core | ProtBERT (zero-shot)                   | 0.6989 +/- 0.2254  | 0.8147 +/- 0.1007  | +0.1158
+UL30-Aciclovir   | resolved_core | ESM-2 35M (zero-shot)                  | 0.7086 +/- 0.2180  | 0.6382 +/- 0.1502  | -0.0704
+UL30-Aciclovir   | resolved_core | ESM-2 650M (zero-shot)                 | 0.7887 +/- 0.1706  | 0.7966 +/- 0.1074  | +0.0079
+-----------------------------------------------------------------------------------------------------------------------------
+UL30-Foscarnet   | full_cohort  | Position-Only RF                       | 0.5278 +/- 0.0321  | 0.6001 +/- 0.2875  | +0.0723
+UL30-Foscarnet   | full_cohort  | BLOSUM62 Radicalness                   | 0.5074 +/- 0.2997  | 0.4847 +/- 0.1433  | -0.0227
+UL30-Foscarnet   | full_cohort  | Positional Shannon Entropy (-Entropy)  | 0.8246 +/- 0.0817  | 0.8338 +/- 0.0966  | +0.0092
+UL30-Foscarnet   | full_cohort  | Multi-Herpesvirus Weighted Conservation | 0.6604 +/- 0.2664  | 0.6880 +/- 0.1380  | +0.0276
+UL30-Foscarnet   | full_cohort  | Multi-Herpesvirus PSSM                 | 0.7832 +/- 0.0949  | 0.8334 +/- 0.0994  | +0.0503
+UL30-Foscarnet   | full_cohort  | ProtBERT (zero-shot)                   | 0.7423 +/- 0.1593  | 0.8619 +/- 0.1103  | +0.1197
+UL30-Foscarnet   | full_cohort  | ESM-2 35M (zero-shot)                  | 0.7481 +/- 0.1842  | 0.8014 +/- 0.1499  | +0.0533
+UL30-Foscarnet   | full_cohort  | ESM-2 650M (zero-shot)                 | 0.8809 +/- 0.1250  | 0.8932 +/- 0.1007  | +0.0122
+UL30-Foscarnet   | resolved_core | Position-Only RF                       | 0.5537 +/- 0.0742  | 0.6105 +/- 0.2484  | +0.0568
+UL30-Foscarnet   | resolved_core | BLOSUM62 Radicalness                   | 0.5080 +/- 0.2887  | 0.5056 +/- 0.1404  | -0.0024
+UL30-Foscarnet   | resolved_core | Positional Shannon Entropy (-Entropy)  | 0.8607 +/- 0.0958  | 0.8602 +/- 0.1013  | -0.0005
+UL30-Foscarnet   | resolved_core | Multi-Herpesvirus Weighted Conservation | 0.6888 +/- 0.2170  | 0.7296 +/- 0.1356  | +0.0408
+UL30-Foscarnet   | resolved_core | Multi-Herpesvirus PSSM                 | 0.7580 +/- 0.1438  | 0.8201 +/- 0.0989  | +0.0621
+UL30-Foscarnet   | resolved_core | ProtBERT (zero-shot)                   | 0.7433 +/- 0.1630  | 0.8675 +/- 0.1015  | +0.1242
+UL30-Foscarnet   | resolved_core | ESM-2 35M (zero-shot)                  | 0.7735 +/- 0.1578  | 0.8207 +/- 0.1387  | +0.0472
+UL30-Foscarnet   | resolved_core | ESM-2 650M (zero-shot)                 | 0.8793 +/- 0.1442  | 0.8977 +/- 0.1083  | +0.0184
+-----------------------------------------------------------------------------------------------------------------------------
+
+Serialized experimental results to: D:\antiviral-resistance-hsv--1\logs\spatial_3d_holdout_results.json

@@ -197,3 +197,4 @@ with open(OUT_LOG, "w") as f:
     f.write("\n".join(log_lines))
 
 log(f"\nSaved interaction test to: {OUT_JSON}")
+

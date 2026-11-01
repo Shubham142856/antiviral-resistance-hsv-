@@ -12,6 +12,7 @@ env/
 herpesdrg-db/
 herpesdrg/
 data/raw/
+data/structures/
 
 # Elsevier supplementary files — do NOT redistribute
 mmc1.docx
