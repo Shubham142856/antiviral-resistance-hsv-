@@ -76,3 +76,4 @@ with open("manuscript/manuscript_draft.md", "w", encoding="utf-8") as f:
     f.write(text)
 
 print("Successfully patched manuscript/manuscript_draft.md with all Phase 1 corrections!")
+

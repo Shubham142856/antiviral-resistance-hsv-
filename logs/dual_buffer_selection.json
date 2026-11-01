@@ -1,0 +1,74 @@
+{
+  "grid_results": [
+    {
+      "seq_buf": 5,
+      "spatial_buf": 8.0,
+      "pooled_auc": 0.6437574671445638,
+      "avg_dropped": 3.8,
+      "passes": false
+    },
+    {
+      "seq_buf": 5,
+      "spatial_buf": 10.0,
+      "pooled_auc": 0.6052867383512545,
+      "avg_dropped": 7.6,
+      "passes": false
+    },
+    {
+      "seq_buf": 5,
+      "spatial_buf": 12.0,
+      "pooled_auc": 0.538142174432497,
+      "avg_dropped": 12.6,
+      "passes": true
+    },
+    {
+      "seq_buf": 10,
+      "spatial_buf": 8.0,
+      "pooled_auc": 0.7415770609318997,
+      "avg_dropped": 5.4,
+      "passes": false
+    },
+    {
+      "seq_buf": 10,
+      "spatial_buf": 10.0,
+      "pooled_auc": 0.7368876941457586,
+      "avg_dropped": 9.2,
+      "passes": false
+    },
+    {
+      "seq_buf": 10,
+      "spatial_buf": 12.0,
+      "pooled_auc": 0.7241039426523297,
+      "avg_dropped": 14.0,
+      "passes": false
+    },
+    {
+      "seq_buf": 15,
+      "spatial_buf": 8.0,
+      "pooled_auc": 0.6624551971326165,
+      "avg_dropped": 7.0,
+      "passes": false
+    },
+    {
+      "seq_buf": 15,
+      "spatial_buf": 10.0,
+      "pooled_auc": 0.7438769414575865,
+      "avg_dropped": 10.6,
+      "passes": false
+    },
+    {
+      "seq_buf": 15,
+      "spatial_buf": 12.0,
+      "pooled_auc": 0.7140979689366785,
+      "avg_dropped": 15.4,
+      "passes": false
+    }
+  ],
+  "selected_buffer": {
+    "seq_buf": 5,
+    "spatial_buf": 12.0,
+    "pooled_auc": 0.538142174432497,
+    "avg_dropped": 12.6,
+    "passes": true
+  }
+}
