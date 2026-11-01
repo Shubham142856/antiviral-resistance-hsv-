@@ -1,0 +1,338 @@
+{
+  "UL30-Aciclovir": {
+    "n_evaluable_rows": 248,
+    "n_evaluable_domains": 4,
+    "domain_records": [
+      {
+        "domain": "Exo",
+        "n_test": 37,
+        "n_pos": 8,
+        "auc_pos": 0.709051724137931,
+        "auc_esm": 0.6594827586206897,
+        "auc_bert": 0.6508620689655172,
+        "auc_blo": 0.5775862068965517,
+        "auc_wh": 0.8620689655172413,
+        "delta_esm": -0.049568965517241326,
+        "delta_bert": -0.05818965517241381,
+        "delta_blo": -0.13146551724137934,
+        "delta_wh": 0.15301724137931028
+      },
+      {
+        "domain": "Fingers",
+        "n_test": 18,
+        "n_pos": 16,
+        "auc_pos": 0.515625,
+        "auc_esm": 0.75,
+        "auc_bert": 0.40625,
+        "auc_blo": 0.5,
+        "auc_wh": 0.875,
+        "delta_esm": 0.234375,
+        "delta_bert": -0.109375,
+        "delta_blo": -0.015625,
+        "delta_wh": 0.359375
+      },
+      {
+        "domain": "Palm",
+        "n_test": 111,
+        "n_pos": 32,
+        "auc_pos": 0.5332278481012659,
+        "auc_esm": 0.8049841772151899,
+        "auc_bert": 0.7086629746835443,
+        "auc_blo": 0.5712025316455696,
+        "auc_wh": 0.8132911392405063,
+        "delta_esm": 0.271756329113924,
+        "delta_bert": 0.17543512658227844,
+        "delta_blo": 0.03797468354430367,
+        "delta_wh": 0.28006329113924044
+      },
+      {
+        "domain": "Thumb_Cterm",
+        "n_test": 82,
+        "n_pos": 6,
+        "auc_pos": 0.5,
+        "auc_esm": 0.7609649122807017,
+        "auc_bert": 0.6776315789473685,
+        "auc_blo": 0.3135964912280702,
+        "auc_wh": 0.5701754385964912,
+        "delta_esm": 0.26096491228070173,
+        "delta_bert": 0.17763157894736847,
+        "delta_blo": -0.1864035087719298,
+        "delta_wh": 0.07017543859649122
+      }
+    ],
+    "pos_only_rf_pooled": 0.6091311134235171,
+    "split_validity_confirmed": false,
+    "excess_esm2": {
+      "domain_mean_excess": 0.1793818189693461,
+      "domain_bootstrap_95ci": [
+        0.02806450393224444,
+        0.26636062069731287
+      ],
+      "pooled_excess": 0.1873482483524107,
+      "pooled_position_bootstrap_95ci": [
+        0.07142416192260044,
+        0.30376646967717474
+      ]
+    },
+    "excess_where": {
+      "domain_mean_excess": 0.2156577427787605,
+      "domain_bootstrap_95ci": [
+        0.11159633998790075,
+        0.32021484374999726
+      ],
+      "pooled_excess": 0.21024106833159917,
+      "pooled_position_bootstrap_95ci": [
+        0.11975722629853824,
+        0.3001991892342864
+      ]
+    },
+    "excess_protbert": {
+      "domain_mean_excess": 0.046375512589308276,
+      "domain_bootstrap_95ci": [
+        -0.0837823275862069,
+        0.17653335276482346
+      ],
+      "pooled_excess": 0.18500693721817563,
+      "pooled_position_bootstrap_95ci": [
+        0.09233521432247638,
+        0.27914607618386517
+      ]
+    },
+    "excess_blosum62": {
+      "domain_mean_excess": -0.07387983561725137,
+      "domain_bootstrap_95ci": [
+        -0.15893451300665457,
+        0.011174841772151833
+      ],
+      "pooled_excess": -0.11676205341657991,
+      "pooled_position_bootstrap_95ci": [
+        -0.217345416193593,
+        0.0006616296042601961
+      ]
+    }
+  },
+  "UL30-Foscarnet": {
+    "n_evaluable_rows": 230,
+    "n_evaluable_domains": 4,
+    "domain_records": [
+      {
+        "domain": "Exo",
+        "n_test": 33,
+        "n_pos": 2,
+        "auc_pos": 0.5080645161290323,
+        "auc_esm": 1.0,
+        "auc_bert": 0.7741935483870969,
+        "auc_blo": 0.903225806451613,
+        "auc_wh": 0.9677419354838709,
+        "delta_esm": 0.49193548387096775,
+        "delta_bert": 0.2661290322580646,
+        "delta_blo": 0.39516129032258074,
+        "delta_wh": 0.45967741935483863
+      },
+      {
+        "domain": "Fingers",
+        "n_test": 14,
+        "n_pos": 8,
+        "auc_pos": 0.5,
+        "auc_esm": 0.41666666666666663,
+        "auc_bert": 0.625,
+        "auc_blo": 0.7395833333333334,
+        "auc_wh": 0.75,
+        "delta_esm": -0.08333333333333337,
+        "delta_bert": 0.125,
+        "delta_blo": 0.23958333333333337,
+        "delta_wh": 0.25
+      },
+      {
+        "domain": "Palm",
+        "n_test": 100,
+        "n_pos": 20,
+        "auc_pos": 0.550625,
+        "auc_esm": 0.7543750000000001,
+        "auc_bert": 0.6775,
+        "auc_blo": 0.429375,
+        "auc_wh": 0.825625,
+        "delta_esm": 0.2037500000000001,
+        "delta_bert": 0.12687499999999996,
+        "delta_blo": -0.12125000000000002,
+        "delta_wh": 0.275
+      },
+      {
+        "domain": "Thumb_Cterm",
+        "n_test": 83,
+        "n_pos": 3,
+        "auc_pos": 0.5,
+        "auc_esm": 0.9833333333333333,
+        "auc_bert": 0.8583333333333334,
+        "auc_blo": 0.2708333333333333,
+        "auc_wh": 0.875,
+        "delta_esm": 0.4833333333333333,
+        "delta_bert": 0.3583333333333334,
+        "delta_blo": -0.22916666666666669,
+        "delta_wh": 0.375
+      }
+    ],
+    "pos_only_rf_pooled": 0.5086909706199046,
+    "split_validity_confirmed": true,
+    "excess_esm2": {
+      "domain_mean_excess": 0.27392137096774194,
+      "domain_bootstrap_95ci": [
+        0.05833333333333329,
+        0.48763440860215057
+      ],
+      "pooled_excess": 0.3059529303184124,
+      "pooled_position_bootstrap_95ci": [
+        0.17318345706543042,
+        0.43794266933444637
+      ]
+    },
+    "excess_where": {
+      "domain_mean_excess": 0.33991935483870966,
+      "domain_bootstrap_95ci": [
+        0.2625,
+        0.4173387096774193
+      ],
+      "pooled_excess": 0.36948161821258263,
+      "pooled_position_bootstrap_95ci": [
+        0.2587980535918779,
+        0.49774566872655035
+      ]
+    },
+    "excess_protbert": {
+      "domain_mean_excess": 0.2190843413978495,
+      "domain_bootstrap_95ci": [
+        0.12593749999999998,
+        0.312231182795699
+      ],
+      "pooled_excess": 0.29556991232118124,
+      "pooled_position_bootstrap_95ci": [
+        0.1488965247638241,
+        0.4479692124342289
+      ]
+    },
+    "excess_blosum62": {
+      "domain_mean_excess": 0.07108198924731186,
+      "domain_bootstrap_95ci": [
+        -0.17520833333333335,
+        0.31737231182795705
+      ],
+      "pooled_excess": -0.05414551607445006,
+      "pooled_position_bootstrap_95ci": [
+        -0.20075413818913065,
+        0.10922835577021672
+      ]
+    }
+  },
+  "UL23-Aciclovir": {
+    "n_evaluable_rows": 254,
+    "n_evaluable_domains": 4,
+    "domain_records": [
+      {
+        "domain": "ATP_Core",
+        "n_test": 90,
+        "n_pos": 52,
+        "auc_pos": 0.4013157894736841,
+        "auc_esm": 0.805668016194332,
+        "auc_bert": 0.7907388663967612,
+        "auc_blo": 0.6371457489878543,
+        "auc_wh": 0.7059716599190283,
+        "delta_esm": 0.4043522267206479,
+        "delta_bert": 0.38942307692307704,
+        "delta_blo": 0.23582995951417013,
+        "delta_wh": 0.3046558704453442
+      },
+      {
+        "domain": "C-term",
+        "n_test": 42,
+        "n_pos": 6,
+        "auc_pos": 0.5,
+        "auc_esm": 0.6111111111111112,
+        "auc_bert": 0.775462962962963,
+        "auc_blo": 0.7083333333333334,
+        "auc_wh": 0.4953703703703704,
+        "delta_esm": 0.11111111111111116,
+        "delta_bert": 0.275462962962963,
+        "delta_blo": 0.20833333333333337,
+        "delta_wh": -0.004629629629629595
+      },
+      {
+        "domain": "Lid_Dimer",
+        "n_test": 62,
+        "n_pos": 17,
+        "auc_pos": 0.46601307189542474,
+        "auc_esm": 0.5980392156862745,
+        "auc_bert": 0.6437908496732025,
+        "auc_blo": 0.734640522875817,
+        "auc_wh": 0.4326797385620915,
+        "delta_esm": 0.13202614379084976,
+        "delta_bert": 0.1777777777777778,
+        "delta_blo": 0.2686274509803923,
+        "delta_wh": -0.033333333333333215
+      },
+      {
+        "domain": "Nucleoside_Pocket",
+        "n_test": 60,
+        "n_pos": 45,
+        "auc_pos": 0.38148148148148153,
+        "auc_esm": 0.7392592592592593,
+        "auc_bert": 0.7340740740740741,
+        "auc_blo": 0.6103703703703703,
+        "auc_wh": 0.6340740740740741,
+        "delta_esm": 0.35777777777777775,
+        "delta_bert": 0.35259259259259257,
+        "delta_blo": 0.2288888888888888,
+        "delta_wh": 0.2525925925925926
+      }
+    ],
+    "pos_only_rf_pooled": 0.4416355721393035,
+    "split_validity_confirmed": false,
+    "excess_esm2": {
+      "domain_mean_excess": 0.2513168148500966,
+      "domain_bootstrap_95ci": [
+        0.12156862745098046,
+        0.3810650022492128
+      ],
+      "pooled_excess": 0.33236940298507456,
+      "pooled_position_bootstrap_95ci": [
+        0.19831199314409972,
+        0.45002880671979106
+      ]
+    },
+    "excess_where": {
+      "domain_mean_excess": 0.1298213750187435,
+      "domain_bootstrap_95ci": [
+        -0.018981481481481405,
+        0.2786242315189684
+      ],
+      "pooled_excess": 0.2881529850746267,
+      "pooled_position_bootstrap_95ci": [
+        0.15646108060675307,
+        0.4000303548464988
+      ]
+    },
+    "excess_protbert": {
+      "domain_mean_excess": 0.2988141025641026,
+      "domain_bootstrap_95ci": [
+        0.2214814814814815,
+        0.37100783475783483
+      ],
+      "pooled_excess": 0.26753731343283593,
+      "pooled_position_bootstrap_95ci": [
+        0.1387098112477502,
+        0.3811546731237662
+      ]
+    },
+    "excess_blosum62": {
+      "domain_mean_excess": 0.23541990817919614,
+      "domain_bootstrap_95ci": [
+        0.21520748987854257,
+        0.25869281045751646
+      ],
+      "pooled_excess": 0.1955845771144279,
+      "pooled_position_bootstrap_95ci": [
+        0.08479472450581411,
+        0.30353642451298696
+      ]
+    }
+  }
+}

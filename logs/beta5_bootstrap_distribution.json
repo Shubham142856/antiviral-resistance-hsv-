@@ -1,0 +1,14 @@
+{
+  "target": "UL30-Aciclovir",
+  "n_resamples": 1000,
+  "point_estimate": -0.01619594545121192,
+  "mean": 0.20766068258909193,
+  "median": 0.031409501971536025,
+  "std": 0.36549092217887436,
+  "ci_95_low": -0.1875639390179412,
+  "ci_95_high": 1.0402413364785805,
+  "skewness": 0.996045937320608,
+  "kurtosis": -0.22947304419331216,
+  "fraction_positive": 0.581,
+  "fraction_negative": 0.419
+}

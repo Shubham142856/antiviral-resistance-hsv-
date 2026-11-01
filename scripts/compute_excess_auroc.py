@@ -108,3 +108,4 @@ for g, d in [('UL30', 'Aciclovir'), ('UL30', 'Foscarnet'), ('UL23', 'Aciclovir')
     print(f"  --> Excess ESM-2 over Pos-Only: Pooled = {pooled_excess_esm:+.4f} | Domain Mean = {mean_excess_esm:+.4f}")
     print(f"  Where Composite Pooled AUROC:  {pooled_wh_auc:.4f} | Domain Mean: {np.mean(domain_where_aucs):.4f}")
     print(f"  --> Excess Where over Pos-Only:  Pooled = {pooled_excess_wh:+.4f} | Domain Mean = {mean_excess_wh:+.4f}")
+

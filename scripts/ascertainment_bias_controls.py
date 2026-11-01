@@ -122,3 +122,4 @@ with open('logs/ascertainment_bias_controls.json', 'w') as f:
     json.dump(results, f, indent=2)
 
 print("\nSaved ascertainment controls to logs/ascertainment_bias_controls.json")
+

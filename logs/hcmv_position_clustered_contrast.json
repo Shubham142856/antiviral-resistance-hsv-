@@ -1,0 +1,31 @@
+{
+  "status": "Exploratory Cross-Virus Replication",
+  "estimator": "Independent Position-Clustered Bootstrap Contrast Test",
+  "target_kinase": {
+    "virus": "HCMV",
+    "gene": "UL97",
+    "drug": "Ganciclovir",
+    "N": 107,
+    "positives": 45,
+    "unique_positions": 79,
+    "auroc": 0.7005
+  },
+  "target_polymerase": {
+    "virus": "HCMV",
+    "gene": "UL54",
+    "drug": "Ganciclovir",
+    "N": 230,
+    "positives": 76,
+    "unique_positions": 177,
+    "auroc": 0.5375
+  },
+  "point_delta": 0.163,
+  "bootstrap_resamples": 2000,
+  "resampling_scheme": "Independent position-clustered resampling within UL97 and UL54",
+  "two_sided_95_ci": [
+    0.0337,
+    0.2939
+  ],
+  "two_sided_empirical_p": 0.016,
+  "statistical_conclusion": "Significant rank-AUROC contrast in HCMV (p = 0.0160, 95% CI strictly excludes 0); replicates HSV-1 kinase vs polymerase divergence in n=1 independent viral gene pair."
+}
