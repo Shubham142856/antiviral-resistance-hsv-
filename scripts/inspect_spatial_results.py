@@ -15,3 +15,4 @@ for pair in d['results_by_pair']:
             s3d = c_data[m]['3d_spatial']
             delta = c_data[m]['delta_3d_minus_1d']
             print(f"{m:<38} | 1D: {b1d['mean_auc']:.4f} (Pooled {b1d['pooled_auc']:.4f} [{b1d['pooled_95ci'][0]:.4f}, {b1d['pooled_95ci'][1]:.4f}]) | 3D: {s3d['mean_auc']:.4f} (Pooled {s3d['pooled_auc']:.4f} [{s3d['pooled_95ci'][0]:.4f}, {s3d['pooled_95ci'][1]:.4f}]) | Delta: {delta['mean_diff']:+.4f}")
+

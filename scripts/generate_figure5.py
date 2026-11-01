@@ -154,3 +154,4 @@ plt.close()
 print(f"Successfully generated Figure 5:")
 print(f"  Artifact:  {out_art}")
 print(f"  Workspace: {out_ws}")
+
