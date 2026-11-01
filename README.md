@@ -2,7 +2,7 @@
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Dataset SHA-256](https://img.shields.io/badge/SHA256-7c4d516d...-orange.svg)](data/processed/unified_modeling_dataset.tsv)
+[![Dataset SHA-256](https://img.shields.io/badge/SHA256-7c4d0a3d...-orange.svg)](data/processed/primary_position_folds.tsv)
 [![Kaggle GPU Verified](https://img.shields.io/badge/Kaggle%20GPU-Tesla%20T4%20(Exit%200)-purple.svg)](cloud_gpu/kernel_output_v5/kernel_log.txt)
 
 This repository provides the complete code, audited dataset, structural mappings, and reproduction pipeline for our empirical study evaluating machine learning models and zero-shot protein language models (PLMs) on clinical drug resistance mutations in **Herpes Simplex Virus type 1 (HSV-1)**.
@@ -242,3 +242,4 @@ If you build upon this benchmark or methodology, please cite:
 - **Cryo-EM UL30:** Shankar, S. et al. (2024). *Cell*, 187(20), 5572–5586.e15. [DOI: 10.1016/j.cell.2024.08.002](https://doi.org/10.1016/j.cell.2024.08.002).
 - **Crystal UL23:** Bennett, M. S. et al. (1999). *FEBS Letters*, 443(2), 121–125. [DOI: 10.1016/S0014-5793(98)01697-8](https://doi.org/10.1016/S0014-5793(98)01697-8).
 - **SARS-CoV-2 Leakage Precedent (PRIME):** *BMC Genomics* (2023). [DOI: 10.1186/s12864-023-09731-0](https://doi.org/10.1186/s12864-023-09731-0).
+
