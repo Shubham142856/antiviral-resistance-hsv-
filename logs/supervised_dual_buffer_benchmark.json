@@ -1,0 +1,32 @@
+{
+  "UL30-Aciclovir": {
+    "n_total": 332,
+    "n_pos": 62,
+    "auc_pos_rf": 0.5184886499402629,
+    "auc_zero_esm2_650m": 0.823984468339307,
+    "auc_zero_protbert": 0.8398446833930705,
+    "auc_zero_blosum": 0.4942054958183991,
+    "auc_sup_logistic_regression": 0.8688172043010753,
+    "auc_sup_random_forest": 0.8385902031063321
+  },
+  "UL30-Foscarnet": {
+    "n_total": 311,
+    "n_pos": 33,
+    "auc_pos_rf": 0.3902877697841726,
+    "auc_zero_esm2_650m": 0.8408545890560281,
+    "auc_zero_protbert": 0.854534554174842,
+    "auc_zero_blosum": 0.45312840636581647,
+    "auc_sup_logistic_regression": 0.8929583605842598,
+    "auc_sup_random_forest": 0.8652169173751908
+  },
+  "UL23-Aciclovir": {
+    "n_total": 286,
+    "n_pos": 120,
+    "auc_pos_rf": 0.377535140562249,
+    "auc_zero_esm2_650m": 0.7881024096385543,
+    "auc_zero_protbert": 0.724347389558233,
+    "auc_zero_blosum": 0.6129518072289156,
+    "auc_sup_logistic_regression": 0.6347389558232932,
+    "auc_sup_random_forest": 0.6623242971887551
+  }
+}

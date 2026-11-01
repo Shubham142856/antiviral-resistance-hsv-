@@ -1,0 +1,86 @@
+{
+  "HCMV_UL97_Ganciclovir": {
+    "virus": "HCMV",
+    "gene": "UL97",
+    "drug": "Ganciclovir",
+    "role": "Kinase / Activator (Dispensable)",
+    "n_total": 107,
+    "n_res": 45,
+    "n_sens": 62,
+    "blosum62_auroc": 0.7005376344086022,
+    "ci_95": [
+      0.5943315372570692,
+      0.795950270268156
+    ]
+  },
+  "HCMV_UL54_Ganciclovir": {
+    "virus": "HCMV",
+    "gene": "UL54",
+    "drug": "Ganciclovir",
+    "role": "DNA Polymerase (Essential)",
+    "n_total": 230,
+    "n_res": 76,
+    "n_sens": 154,
+    "blosum62_auroc": 0.5375085440874914,
+    "ci_95": [
+      0.4605284827591025,
+      0.6159027887658228
+    ]
+  },
+  "HCMV_UL54_Foscarnet": {
+    "virus": "HCMV",
+    "gene": "UL54",
+    "drug": "Foscarnet",
+    "role": "DNA Polymerase (Essential)",
+    "n_total": 160,
+    "n_res": 50,
+    "n_sens": 110,
+    "blosum62_auroc": 0.4377272727272727,
+    "ci_95": [
+      0.34401824038856293,
+      0.5334663917163915
+    ]
+  },
+  "HCMV_UL54_Cidofovir": {
+    "virus": "HCMV",
+    "gene": "UL54",
+    "drug": "Cidofovir",
+    "role": "DNA Polymerase (Essential)",
+    "n_total": 149,
+    "n_res": 57,
+    "n_sens": 92,
+    "blosum62_auroc": 0.5521548436308161,
+    "ci_95": [
+      0.45654277052137443,
+      0.644513075838607
+    ]
+  },
+  "VZV_ORF36_Aciclovir": {
+    "virus": "VZV",
+    "gene": "ORF36",
+    "drug": "Aciclovir",
+    "role": "Thymidine Kinase (Dispensable)",
+    "n_total": 28,
+    "n_res": 18,
+    "n_sens": 10,
+    "blosum62_auroc": 0.7611111111111111,
+    "ci_95": [
+      0.5748181580324437,
+      0.9218896223262031
+    ]
+  },
+  "VZV_ORF28_Aciclovir": {
+    "virus": "VZV",
+    "gene": "ORF28",
+    "drug": "Aciclovir",
+    "role": "DNA Polymerase (Essential; Underpowered)",
+    "n_total": 24,
+    "n_res": 4,
+    "n_sens": 20,
+    "blosum62_auroc": 0.55,
+    "ci_95": [
+      0.22727272727272724,
+      0.9126240079365079
+    ]
+  }
+}
