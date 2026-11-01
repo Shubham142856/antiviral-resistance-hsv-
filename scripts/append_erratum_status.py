@@ -22,3 +22,4 @@ erratum = """
 with open(p, 'a', encoding='utf-8') as f:
     f.write(erratum)
 print("Section 10 Erratum successfully added to STATUS.md")
+

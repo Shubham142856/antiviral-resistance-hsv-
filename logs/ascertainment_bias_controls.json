@@ -1,0 +1,66 @@
+{
+  "UL30-Aciclovir": {
+    "full_cohort": {
+      "N": 332,
+      "Pos": 62,
+      "auc_where": 0.8605734767025087,
+      "auc_constraint": 0.7370967741935484,
+      "auc_proximity": 0.8966547192353644
+    },
+    "evidence_tiers": {
+      "Clinical Isolate": {
+        "N": 233,
+        "Pos": 20,
+        "auc_where": 0.8070422535211268,
+        "auc_constraint": 0.6582159624413146,
+        "auc_proximity": 0.8575117370892018
+      },
+      "Recombinant / Lab-Validated": {
+        "N": 64,
+        "Pos": 41,
+        "auc_where": 0.8478260869565216,
+        "auc_constraint": 0.8234358430540827,
+        "auc_proximity": 0.7820784729586426
+      }
+    },
+    "measured_fold_change_subset": {
+      "N": 78,
+      "Pos": 39,
+      "auc_where": 0.8405654174884944,
+      "auc_constraint": 0.732741617357002,
+      "auc_proximity": 0.8201840894148587
+    }
+  },
+  "UL30-Foscarnet": {
+    "full_cohort": {
+      "N": 311,
+      "Pos": 33,
+      "auc_where": 0.9097449313276652,
+      "auc_constraint": 0.7940919991279703,
+      "auc_proximity": 0.9305646391977328
+    },
+    "evidence_tiers": {
+      "Clinical Isolate": {
+        "N": 216,
+        "Pos": 5,
+        "auc_where": 0.933649289099526,
+        "auc_constraint": 0.8274881516587679,
+        "auc_proximity": 0.8966824644549762
+      },
+      "Recombinant / Lab-Validated": {
+        "N": 57,
+        "Pos": 26,
+        "auc_where": 0.78287841191067,
+        "auc_constraint": 0.7369727047146403,
+        "auc_proximity": 0.7679900744416874
+      }
+    },
+    "measured_fold_change_subset": {
+      "N": 52,
+      "Pos": 18,
+      "auc_where": 0.840686274509804,
+      "auc_constraint": 0.752450980392157,
+      "auc_proximity": 0.8619281045751634
+    }
+  }
+}
