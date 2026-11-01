@@ -3,7 +3,7 @@
 **Authors:** [Author List to be confirmed per PI sign-off]  
 **Correspondence:** [Corresponding Author]  
 **Target Venue:** *Briefings in Bioinformatics* / *PLOS Computational Biology*  
-**Repository & Data:** [`https://github.com/shubhamraikwar142/antiviral-resistance-hsv-1`](https://github.com/shubhamraikwar142/antiviral-resistance-hsv-1)  
+**Repository & Data:** [`https://github.com/Shubham142856/antiviral-resistance-hsv-`](https://github.com/Shubham142856/antiviral-resistance-hsv-)  
 **Dataset Integrity Hash:** SHA-256 `7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909`  
 **Audit Protocol:** `AUDIT_PROTOCOL.md` (Strict Version 4, Frozen)
 
@@ -380,7 +380,7 @@ A critical scope consideration for translational genomics is that our benchmark 
 ## 5. Declarations and Data Availability
 
 - **Data Availability:** The primary evaluation cohort (`primary_position_folds.tsv`, SHA-256 `7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909`) and scored model outputs (`primary_position_folds_scored.tsv`) are permanently archived in the project repository.
-- **Code Availability:** All model training, evaluation scripts, and cross-validation runners are available at: `https://github.com/shubhamraikwar142/antiviral-resistance-hsv-1`.
+- **Code Availability:** All model training, evaluation scripts, and cross-validation runners are available at: `https://github.com/Shubham142856/antiviral-resistance-hsv-`.
 - **Pre-Submission Human Audit Gate:** Submission remains conditional on completion of the 50-row dual-annotator kappa curation (`logs/kappa_sample_50rows.tsv`), threshold citation review (`docs/threshold_citation_checklist.md`), and formal PI sign-off (`docs/pi_signoff_form.md`).
 
 ---
