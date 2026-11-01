@@ -1,3 +1,4 @@
+import pathlib
 """
 Temporal Split Confounding & Domain Shift Analysis.
 Compares Pre-2016 vs Post-2016 partitions:
@@ -16,7 +17,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 
 def main():
-    ds_path = r'd:\antiviral-resistance-hsv--1\data\processed\unified_modeling_dataset.tsv'
+    ds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/unified_modeling_dataset.tsv')
     df = pd.read_csv(ds_path, sep='\t')
     
     # Filter to valid temporal split
@@ -116,7 +117,7 @@ def main():
         log_lines.append(f"  [MINIMAL DOMAIN SHIFT]: Domain classifier AUROC is {np.mean(rf_scores):.4f} (near chance).")
         log_lines.append("  Non-label feature distributions are balanced across pre-2016 and post-2016 eras.")
         
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\temporal_confounding.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/temporal_confounding.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(log_lines))
         

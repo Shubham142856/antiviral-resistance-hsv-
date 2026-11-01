@@ -1,3 +1,4 @@
+import pathlib
 """
 Verification of ProtBERT Centered Window Embedding Protocol for HSV UL23 and UL30.
 Strictly implements:
@@ -112,7 +113,7 @@ def main():
         log_lines.append(f"  Verification: Bounds identical, length <= 510 aa, token count {token_count} <= 512. PASS.")
         log_lines.append("")
         
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\embedding_window_verification.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/embedding_window_verification.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(log_lines))
         

@@ -1,3 +1,4 @@
+import pathlib
 import json
 import numpy as np
 import pandas as pd
@@ -77,7 +78,7 @@ def extract_features(df, glen):
     return np.array(feats)
 
 def run_cluster_bootstrap():
-    ds_path = r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv'
+    ds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv')
     df = pd.read_csv(ds_path, sep='\t')
     glen_map = {'UL23': 376.0, 'UL30': 1235.0}
     
@@ -205,11 +206,11 @@ def run_cluster_bootstrap():
         results[pair_key] = pair_dict
         log_lines.append("")
         
-    out_json = r'd:\antiviral-resistance-hsv--1\logs\c2_position_cluster_bootstrap_results.json'
+    out_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_position_cluster_bootstrap_results.json')
     with open(out_json, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2)
         
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\c2_position_cluster_bootstrap.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_position_cluster_bootstrap.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(log_lines))
         

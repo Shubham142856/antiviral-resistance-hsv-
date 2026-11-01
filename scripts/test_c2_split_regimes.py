@@ -1,3 +1,4 @@
+import pathlib
 import pandas as pd
 import numpy as np
 import re
@@ -107,7 +108,7 @@ def bootstrap_auc_ci(y_true, y_pred, n_boot=1000, random_state=42):
 
 def run_c2_test():
     import json
-    db_path = r'D:\antiviral-resistance-hsv--1\data\raw\herpesdrg-db\herpesdrg-db.tsv'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/herpesdrg-db/herpesdrg-db.tsv')
     df = pd.read_csv(db_path, sep='\t')
     df_a = df[df['status'] == 'A'].copy()
     df_hsv1 = df_a[df_a['virus'] == 'HSV1'].copy()
@@ -189,7 +190,7 @@ def run_c2_test():
                 
         all_results[pair_key] = pair_res
         
-    out_file = r'D:\antiviral-resistance-hsv--1\logs\c2_split_evaluation.json'
+    out_file = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_split_evaluation.json')
     with open(out_file, 'w', encoding='utf-8') as f:
         json.dump(all_results, f, indent=2)
     print(f"\nSaved detailed evaluation to {out_file}")

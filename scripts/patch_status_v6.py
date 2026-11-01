@@ -1,6 +1,7 @@
+import pathlib
 import re
 
-status_path = r'd:\antiviral-resistance-hsv--1\STATUS.md'
+status_path = str(pathlib.Path(__file__).resolve().parent.parent / 'STATUS.md')
 with open(status_path, 'r', encoding='utf-8') as f:
     text = f.read()
 

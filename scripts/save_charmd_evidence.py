@@ -1,3 +1,4 @@
+import pathlib
 import urllib.request
 from bs4 import BeautifulSoup
 import json
@@ -6,8 +7,8 @@ import re
 import os
 
 def main():
-    log_json = r'd:\antiviral-resistance-hsv--1\logs\charmd_evidence_20261028.json'
-    snapshot_html = r'd:\antiviral-resistance-hsv--1\logs\charmd_database_snapshot.html'
+    log_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/charmd_evidence_20261028.json')
+    snapshot_html = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/charmd_database_snapshot.html')
     
     url = "https://www.unilim.fr/cnr-herpesvirus/outils/codexmv/database/"
     req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})

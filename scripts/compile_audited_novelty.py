@@ -1,3 +1,4 @@
+import pathlib
 """
 Compile the complete, audited novelty log with:
 1. Explicit run status per query (Executed vs Failed HTTP 403/429/503)
@@ -200,7 +201,7 @@ def main():
     ]
     
     df = pd.DataFrame(records)
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\novelty_widened_raw.tsv'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_widened_raw.tsv')
     df.to_csv(out_tsv, sep='\t', index=False)
     print(f"Saved {len(df)} audited novelty records to {out_tsv}")
 

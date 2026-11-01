@@ -1,10 +1,11 @@
+import pathlib
 import pandas as pd
 import numpy as np
 import hashlib
 import re
 
 def run_herpesdrg_audit():
-    db_path = r'D:\antiviral-resistance-hsv--1\data\raw\herpesdrg-db\herpesdrg-db.tsv'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/herpesdrg-db/herpesdrg-db.tsv')
     
     with open(db_path, 'rb') as f:
         raw_bytes = f.read()

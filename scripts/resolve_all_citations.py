@@ -1,3 +1,4 @@
+import pathlib
 import urllib.request
 import json
 import time
@@ -61,7 +62,7 @@ def resolve_doi(doi):
         }
 
 def main():
-    log_file = r"D:\antiviral-resistance-hsv--1\logs\resolved_citations.jsonl"
+    log_file = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/resolved_citations.jsonl')
     resolved_records = []
     
     print(f"Resolving {len(citations_to_resolve)} citations via live APIs...")

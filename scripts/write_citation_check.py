@@ -1,3 +1,4 @@
+import pathlib
 import sys
 import csv
 import re
@@ -290,7 +291,7 @@ records = [
     }
 ]
 
-out_tsv = r"d:\antiviral-resistance-hsv--1\logs\citation_check.tsv"
+out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/citation_check.tsv')
 os.makedirs(os.path.dirname(out_tsv), exist_ok=True)
 
 with open(out_tsv, 'w', newline='', encoding='utf-8') as f:

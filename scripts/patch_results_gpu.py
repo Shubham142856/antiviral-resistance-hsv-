@@ -1,8 +1,9 @@
+import pathlib
 import json
 import re
 
-report_path = r'd:\antiviral-resistance-hsv--1\AUDIT_REPORT.md'
-status_path = r'd:\antiviral-resistance-hsv--1\STATUS.md'
+report_path = str(pathlib.Path(__file__).resolve().parent.parent / 'AUDIT_REPORT.md')
+status_path = str(pathlib.Path(__file__).resolve().parent.parent / 'STATUS.md')
 
 with open(report_path, 'r', encoding='utf-8') as f:
     r_text = f.read()

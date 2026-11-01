@@ -1,3 +1,4 @@
+import pathlib
 import json
 import numpy as np
 import pandas as pd
@@ -5,8 +6,8 @@ from scipy import stats
 from sklearn.metrics import roc_auc_score
 
 def main():
-    ds_path = r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv'
-    cache_path = r'd:\antiviral-resistance-hsv--1\data\processed\esm2_pos_cache.json'
+    ds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv')
+    cache_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/esm2_pos_cache.json')
     
     df = pd.read_csv(ds_path, sep='\t')
     with open(cache_path, 'r', encoding='utf-8') as f:
@@ -94,11 +95,11 @@ def main():
             'verdict': verdict
         }
         
-    out_json = r'd:\antiviral-resistance-hsv--1\logs\direction_correlations_results.json'
+    out_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/direction_correlations_results.json')
     with open(out_json, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2)
         
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\direction_correlations.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/direction_correlations.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(lines))
         

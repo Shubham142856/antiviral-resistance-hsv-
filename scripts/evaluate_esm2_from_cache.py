@@ -1,3 +1,4 @@
+import pathlib
 import json
 import numpy as np
 import pandas as pd
@@ -11,8 +12,8 @@ def assign_contiguous_block(gene, pos):
     return int(block)
 
 def main():
-    ds_path = r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv'
-    cache_path = r'd:\antiviral-resistance-hsv--1\data\processed\esm2_pos_cache.json'
+    ds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv')
+    cache_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/esm2_pos_cache.json')
     
     df = pd.read_csv(ds_path, sep='\t')
     df['block_fold_id'] = df.apply(lambda r: assign_contiguous_block(r['gene'], r['pos']), axis=1)

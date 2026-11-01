@@ -1,3 +1,4 @@
+import pathlib
 import pandas as pd
 import numpy as np
 import json
@@ -106,9 +107,9 @@ def bootstrap_auc_ci(y_true, y_pred, n_boot=1000, random_state=42):
     return float(np.percentile(boot_aucs, 2.5)), float(np.percentile(boot_aucs, 97.5))
 
 def main():
-    db_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    out_json = r'd:\antiviral-resistance-hsv--1\logs\c2_split_evaluation.json'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\c2_diagnostic.log'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    out_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_split_evaluation.json')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_diagnostic.log')
     
     df = pd.read_csv(db_path, sep='\t')
     df_hsv1 = df[(df['status'] == 'A') & (df['virus'] == 'HSV1')].copy()

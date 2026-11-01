@@ -1,3 +1,4 @@
+import pathlib
 import urllib.request
 import json
 import time
@@ -112,8 +113,8 @@ def clean(s):
     return re.sub(r'[^a-zA-Z0-9]', '', str(s).lower())
 
 def main():
-    os.makedirs(r"d:\antiviral-resistance-hsv--1\logs", exist_ok=True)
-    out_tsv = r"d:\antiviral-resistance-hsv--1\logs\citation_check.tsv"
+    os.makedirs(str(pathlib.Path(__file__).resolve().parent.parent / 'logs'), exist_ok=True)
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/citation_check.tsv')
     
     rows = []
     print(f"Starting citation resolution for {len(items)} items...")

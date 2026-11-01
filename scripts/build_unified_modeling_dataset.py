@@ -1,3 +1,4 @@
+import pathlib
 """
 Assemble the Unified Modeling Dataset under Provisional Scope.
 Strictly sourced from deterministic empirical data:
@@ -67,9 +68,9 @@ def extract_sources(row):
     return sources
 
 def main():
-    hdrg_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    cmi_path = r'd:\antiviral-resistance-hsv--1\data\processed\cmi_2025_all_sheets.csv'
-    pub_years_path = r'd:\antiviral-resistance-hsv--1\logs\publication_year_lookup.tsv'
+    hdrg_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    cmi_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/cmi_2025_all_sheets.csv')
+    pub_years_path = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/publication_year_lookup.tsv')
     
     # 1. Load pub year lookup
     pub_df = pd.read_csv(pub_years_path, sep='\t')
@@ -260,7 +261,7 @@ def main():
                 actual_te_indices = grp_indices[te_idx]
                 unified_df.loc[actual_te_indices, 'position_fold_id'] = fold_i
                 
-    out_tsv = r'd:\antiviral-resistance-hsv--1\data\processed\unified_modeling_dataset.tsv'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/unified_modeling_dataset.tsv')
     unified_df.to_csv(out_tsv, sep='\t', index=False)
     
     # Summary log
@@ -286,7 +287,7 @@ def main():
         log_lines.append(f"  Post-2016 Mutations: {(p_sub['temporal_split'] == 'Post-2016 (Test)').sum()}")
         log_lines.append("")
         
-    out_log = r'd:\antiviral-resistance-hsv--1\data\processed\dataset_summary.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/dataset_summary.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(log_lines))
         

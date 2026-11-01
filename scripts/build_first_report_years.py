@@ -1,3 +1,4 @@
+import pathlib
 import pandas as pd
 import urllib.request
 import urllib.parse
@@ -7,8 +8,8 @@ import os
 import re
 
 def build_first_report_years():
-    db_path = r'D:\antiviral-resistance-hsv--1\data\raw\herpesdrg-db\herpesdrg-db.tsv'
-    cache_path = r'D:\antiviral-resistance-hsv--1\logs\doi_pub_years.json'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/herpesdrg-db/herpesdrg-db.tsv')
+    cache_path = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/doi_pub_years.json')
     
     df = pd.read_csv(db_path, sep='\t')
     df_a = df[df['status'] == 'A'].copy()

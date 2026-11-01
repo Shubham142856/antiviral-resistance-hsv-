@@ -1,3 +1,4 @@
+import pathlib
 """
 Build Pairwise Sequence Alignment and Homology Map for HSV-1 vs HSV-2:
 - UL23 (Thymidine Kinase: HSV-1 376 aa vs HSV-2 376 aa)
@@ -10,8 +11,8 @@ from Bio.Align import PairwiseAligner
 import pandas as pd
 
 def main():
-    ref1_path = r'd:\antiviral-resistance-hsv--1\herpesdrg\inst\ref\NC_001806.2.fasta'
-    ref2_path = r'd:\antiviral-resistance-hsv--1\herpesdrg\inst\ref\NC_001798.2.fasta'
+    ref1_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg/inst/ref/NC_001806.2.fasta')
+    ref2_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg/inst/ref/NC_001798.2.fasta')
     
     ref1 = SeqIO.read(ref1_path, 'fasta')
     ref2 = SeqIO.read(ref2_path, 'fasta')
@@ -86,10 +87,10 @@ def main():
         log_lines.append("")
         
     df = pd.DataFrame(records)
-    out_tsv = r'd:\antiviral-resistance-hsv--1\data\processed\hsv1_hsv2_homology_map.tsv'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/hsv1_hsv2_homology_map.tsv')
     df.to_csv(out_tsv, sep='\t', index=False)
     
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\homology_mapping.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/homology_mapping.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(log_lines))
         

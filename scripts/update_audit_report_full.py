@@ -1,3 +1,4 @@
+import pathlib
 """
 Update AUDIT_REPORT.md with:
 - 20-repeat CV results with paired leakage gaps and 95% CIs
@@ -13,7 +14,7 @@ Update AUDIT_REPORT.md with:
 import re
 
 def main():
-    report_path = r'd:\antiviral-resistance-hsv--1\AUDIT_REPORT.md'
+    report_path = str(pathlib.Path(__file__).resolve().parent.parent / 'AUDIT_REPORT.md')
     with open(report_path, 'r', encoding='utf-8') as f:
         content = f.read()
 

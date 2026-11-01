@@ -1,3 +1,4 @@
+import pathlib
 import urllib.request
 import urllib.parse
 import json
@@ -7,9 +8,9 @@ import os
 import time
 
 def main():
-    queries_file = r'd:\antiviral-resistance-hsv--1\novelty_queries.txt'
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\novelty_log_raw.tsv'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\novelty_search_execution.log'
+    queries_file = str(pathlib.Path(__file__).resolve().parent.parent / 'novelty_queries.txt')
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_log_raw.tsv')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_search_execution.log')
     
     with open(queries_file, 'r', encoding='utf-8') as f:
         queries = [line.strip() for line in f if line.strip()]

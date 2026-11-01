@@ -1,3 +1,4 @@
+import pathlib
 import pandas as pd
 import numpy as np
 
@@ -8,7 +9,7 @@ def assign_contiguous_block(gene, pos):
         block = min(4, (pos - 1) // 247)
     return int(block)
 
-df = pd.read_csv(r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv', sep='\t')
+df = pd.read_csv(str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv'), sep='\t')
 df['block'] = df.apply(lambda r: assign_contiguous_block(r['gene'], r['pos']), axis=1)
 
 pairs = [

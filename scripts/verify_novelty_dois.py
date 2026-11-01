@@ -1,3 +1,4 @@
+import pathlib
 """
 Verify all DOIs, PMIDs, and cited references in logs/novelty_widened_raw.tsv against
 official Crossref and PubMed APIs.
@@ -88,7 +89,7 @@ def search_pubmed_for_term(term):
         return []
 
 def main():
-    raw_path = r'd:\antiviral-resistance-hsv--1\logs\novelty_widened_raw.tsv'
+    raw_path = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_widened_raw.tsv')
     df = pd.read_csv(raw_path, sep='\t')
     
     results = []
@@ -154,7 +155,7 @@ def main():
         })
         
     res_df = pd.DataFrame(results)
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\novelty_doi_verification.tsv'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_doi_verification.tsv')
     res_df.to_csv(out_tsv, sep='\t', index=False)
     print(f"Saved DOI verification table to: {out_tsv}")
     print("\n--- Summary of Verification ---")

@@ -1,3 +1,4 @@
+import pathlib
 """
 Recomputes Confidence Intervals for Claim C2 Paired Leakage Gaps:
 1. Nadeau & Bengio (2003) corrected resampled variance:
@@ -126,7 +127,7 @@ def compute_nadeau_bengio_ci(diffs, n_repeats=20, n_folds=5):
     return d_bar, se_nb, ci_low, ci_high, bool(ci_low > 0)
 
 def main():
-    ds_path = r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv'
+    ds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv')
     df = pd.read_csv(ds_path, sep='\t')
     
     glen_map = {'UL23': 376, 'UL30': 1235}
@@ -246,11 +247,11 @@ def main():
         master_results[pair_key] = pair_dict
         log_lines.append("")
         
-    out_json = r'd:\antiviral-resistance-hsv--1\logs\c2_nadeau_bengio_results.json'
+    out_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_nadeau_bengio_results.json')
     with open(out_json, 'w', encoding='utf-8') as f:
         json.dump(master_results, f, indent=2)
         
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\c2_corrected_intervals.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_corrected_intervals.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(log_lines))
         

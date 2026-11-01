@@ -1,3 +1,4 @@
+import pathlib
 """
 C2 Probes: Strict Per-Fold AUROC and Pooled AUROC Comparison across 4 Split Regimes.
 Resolves the diagnostic on why pooled position prior drops below 0.5 (inter-fold prior variation)
@@ -117,9 +118,9 @@ def bootstrap_ci(values, n_boot=1000, random_state=42):
     return float(np.percentile(boot_means, 2.5)), float(np.percentile(boot_means, 97.5))
 
 def main():
-    db_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    out_json = r'd:\antiviral-resistance-hsv--1\logs\c2_split_evaluation_per_fold.json'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\c2_diagnostic_per_fold.log'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    out_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_split_evaluation_per_fold.json')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_diagnostic_per_fold.log')
     
     df = pd.read_csv(db_path, sep='\t')
     df_hsv1 = df[(df['status'] == 'A') & (df['virus'] == 'HSV1')].copy()

@@ -1,3 +1,4 @@
+import pathlib
 """
 Merge CMI 2025 Table S3 with HerpesDRG-DB to compute unified Table A.
 Detects overlaps, discordances/conflicts, and computes per-virus and combined counts.
@@ -54,8 +55,8 @@ def normalize_herpesdrg_resistance(val):
         return 'Unknown'
 
 def main():
-    hdrg_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    cmi_path = r'd:\antiviral-resistance-hsv--1\data\processed\cmi_2025_all_sheets.csv'
+    hdrg_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    cmi_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/cmi_2025_all_sheets.csv')
     
     hdrg = pd.read_csv(hdrg_path, sep='\t')
     # Filter active HSV
@@ -254,10 +255,10 @@ def main():
     print(sum_df.to_string(index=False))
     
     # Save output
-    sum_df.to_csv(r'd:\antiviral-resistance-hsv--1\logs\table_a_merged_recount.tsv', sep='\t', index=False)
+    sum_df.to_csv(str(pathlib.Path(__file__).resolve().parent.parent / 'logs/table_a_merged_recount.tsv'), sep='\t', index=False)
     
     # Write detailed conflicts log
-    with open(r'd:\antiviral-resistance-hsv--1\logs\cmi_herpesdrg_conflicts.log', 'w', encoding='utf-8') as f:
+    with open(str(pathlib.Path(__file__).resolve().parent.parent / 'logs/cmi_herpesdrg_conflicts.log'), 'w', encoding='utf-8') as f:
         f.write("=== CONFLICTS AND DISCORDANCE BETWEEN HERPESDRG-DB AND CMI 2025 TABLE S3 ===\n\n")
         f.write(f"Total overlapping tuples evaluated: {len(common_keys)}\n")
         f.write(f"Concordant tuples: {concordant} ({concordant/len(common_keys)*100:.2f}%)\n")

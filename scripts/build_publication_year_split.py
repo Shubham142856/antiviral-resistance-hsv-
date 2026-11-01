@@ -1,13 +1,14 @@
+import pathlib
 import pandas as pd
 import json
 import re
 import os
 
 def main():
-    db_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    cache_path = r'd:\antiviral-resistance-hsv--1\logs\doi_pub_years.json'
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\publication_year_lookup.tsv'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\publication_year_methodology.log'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    cache_path = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/doi_pub_years.json')
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/publication_year_lookup.tsv')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/publication_year_methodology.log')
     
     df = pd.read_csv(db_path, sep='\t')
     df_hsv = df[(df['status'] == 'A') & (df['virus'].isin(['HSV1', 'HSV2']))].copy()

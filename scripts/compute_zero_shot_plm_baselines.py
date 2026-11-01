@@ -1,3 +1,4 @@
+import pathlib
 """
 Compute Zero-Shot Masked-Marginal Log-Likelihood Ratios (LLR) for Primary Benchmark Rows.
 Models:
@@ -27,7 +28,7 @@ from sklearn.metrics import roc_auc_score
 from transformers import AutoTokenizer, BertTokenizer, AutoModelForMaskedLM, BertForMaskedLM
 
 def get_hsv1_reference_sequences():
-    ref_path = r'd:\antiviral-resistance-hsv--1\herpesdrg\inst\ref\NC_001806.2.fasta'
+    ref_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg/inst/ref/NC_001806.2.fasta')
     ref = SeqIO.read(ref_path, 'fasta')
     # UL23 (TK)
     ul23_nt = ref.seq[46672:47803].reverse_complement()
@@ -45,7 +46,7 @@ def assign_contiguous_block(gene, pos):
     return int(block)
 
 def score_esm2(df, ref_seqs, model_id='facebook/esm2_t12_35M_UR50D', device='cpu'):
-    cache_path = r'd:\antiviral-resistance-hsv--1\data\processed\esm2_pos_cache.json'
+    cache_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/esm2_pos_cache.json')
     if os.path.exists(cache_path):
         print(f"[ESM-2] Loading cached position scores from: {cache_path}", flush=True)
         with open(cache_path, 'r', encoding='utf-8') as f:
@@ -128,7 +129,7 @@ def score_esm2(df, ref_seqs, model_id='facebook/esm2_t12_35M_UR50D', device='cpu
     return np.array(llrs)
 
 def score_protbert(df, ref_seqs, device='cpu'):
-    cache_path = r'd:\antiviral-resistance-hsv--1\data\processed\protbert_pos_cache.json'
+    cache_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/protbert_pos_cache.json')
     if os.path.exists(cache_path):
         print(f"[ProtBERT] Loading cached position scores from: {cache_path}", flush=True)
         with open(cache_path, 'r', encoding='utf-8') as f:
@@ -272,7 +273,7 @@ def evaluate_model_auroc(df, score_col, model_name):
     return pair_res, lines
 
 def main():
-    ds_path = r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv'
+    ds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv')
     df = pd.read_csv(ds_path, sep='\t')
     df['block_fold_id'] = df.apply(lambda r: assign_contiguous_block(r['gene'], r['pos']), axis=1)
     
@@ -289,7 +290,7 @@ def main():
     df['protbert_llr'] = protbert_llrs
     
     # Save scored primary dataset
-    out_tsv = r'd:\antiviral-resistance-hsv--1\data\processed\primary_with_zero_shot_llr.tsv'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_with_zero_shot_llr.tsv')
     df.to_csv(out_tsv, sep='\t', index=False)
     print(f"\nSaved scored dataset with zero-shot LLRs to: {out_tsv}")
     
@@ -342,11 +343,11 @@ def main():
         master_log.append(f"{pair_key:<18} | Zero-Shot ProtBERT   | {pr_b['position_grouped_mean']:.4f} +/- {pr_b['position_grouped_sd']:.4f}   | {pr_b['contiguous_block_mean']:.4f} +/- {pr_b['contiguous_block_sd']:.4f}")
         master_log.append("-" * 88)
         
-    out_json = r'd:\antiviral-resistance-hsv--1\logs\zero_shot_plm_results.json'
+    out_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/zero_shot_plm_results.json')
     with open(out_json, 'w', encoding='utf-8') as f:
         json.dump(all_results, f, indent=2)
         
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\zero_shot_plm_evaluation.log'
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/zero_shot_plm_evaluation.log')
     with open(out_log, 'w', encoding='utf-8') as f:
         f.write("\n".join(master_log))
         

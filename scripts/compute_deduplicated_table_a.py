@@ -1,3 +1,4 @@
+import pathlib
 """
 Deduplicated Table A with Conflict Handling (With vs Without Conflicted Tuples).
 Deduplicates on (Virus, Gene, Drug, Mutation).
@@ -67,8 +68,8 @@ def extract_sources(row):
     return sources
 
 def main():
-    hdrg_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    cmi_path = r'd:\antiviral-resistance-hsv--1\data\processed\cmi_2025_all_sheets.csv'
+    hdrg_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    cmi_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/cmi_2025_all_sheets.csv')
     
     hdrg = pd.read_csv(hdrg_path, sep='\t')
     hdrg = hdrg[(hdrg['status'] == 'A') & (hdrg['virus'].isin(['HSV1', 'HSV2']))].copy()
@@ -266,7 +267,7 @@ def main():
     print("\n=== DEDUPLICATED TABLE A: WITH VS WITHOUT CONFLICTED TUPLES ===")
     print(res_df.to_string(index=False))
     
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\table_a_deduplicated.tsv'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/table_a_deduplicated.tsv')
     res_df.to_csv(out_tsv, sep='\t', index=False)
     print(f"\nSaved deduplicated Table A to: {out_tsv}")
 

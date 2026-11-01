@@ -1,3 +1,4 @@
+import pathlib
 """
 Build Reproducible Folds, Multi-Mutation Exclusions, and Dataset Enhancements:
 1. Enhances data/processed/unified_modeling_dataset.tsv:
@@ -46,7 +47,7 @@ def categorize_mutation(aa_str):
     return 'other', 0
 
 def main():
-    ds_path = r'd:\antiviral-resistance-hsv--1\data\processed\unified_modeling_dataset.tsv'
+    ds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/unified_modeling_dataset.tsv')
     df = pd.read_csv(ds_path, sep='\t')
     
     # 1. Add categories and single site flag
@@ -67,7 +68,7 @@ def main():
     print(df['mutation_category'].value_counts())
     
     # 2. Extract co-occurrence entries from HerpesDRG and CMI
-    hdrg_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
+    hdrg_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
     hdrg = pd.read_csv(hdrg_path, sep='\t')
     
     co_records = []
@@ -115,7 +116,7 @@ def main():
         })
         
     co_df = pd.DataFrame(co_records)
-    co_path = r'd:\antiviral-resistance-hsv--1\data\processed\co_occurrence_entries.tsv'
+    co_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/co_occurrence_entries.tsv')
     co_df.to_csv(co_path, sep='\t', index=False)
     print(f"\nSaved {len(co_df)} co-occurrence / combo records to: {co_path}")
     
@@ -149,7 +150,7 @@ def main():
     print("\nPrimary Scope Clean Single-Site Dataset Folds:")
     print(p_df.groupby(['gene', 'drug', 'cv_fold_id']).size().unstack(fill_value=0))
     
-    folds_out = r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv'
+    folds_out = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv')
     cols_to_save = ['virus', 'gene', 'drug', 'aa_change', 'wt', 'pos', 'mut', 'target_binary', 'temporal_split', 'cv_fold_id', 'sources']
     p_df[cols_to_save].to_csv(folds_out, sep='\t', index=False)
     print(f"\nSaved clean primary position folds to: {folds_out}")
@@ -159,7 +160,7 @@ def main():
         file_bytes = f.read()
         sha256_hash = hashlib.sha256(file_bytes).hexdigest()
         
-    hash_log_path = r'd:\antiviral-resistance-hsv--1\logs\fold_assignments_hash.log'
+    hash_log_path = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/fold_assignments_hash.log')
     with open(hash_log_path, 'w', encoding='utf-8') as f:
         f.write("=== REPRODUCIBLE FOLD ASSIGNMENTS SHA-256 INTEGRITY HASH ===\n")
         f.write(f"File: data/processed/primary_position_folds.tsv\n")

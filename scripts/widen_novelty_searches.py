@@ -1,3 +1,4 @@
+import pathlib
 """
 Widen Novelty Searches across:
 1. Claims C4, C5, C6 (pathway-gate, temporal split, mutation masking)
@@ -250,8 +251,8 @@ def main():
         log_lines.append("")
         time.sleep(1) # respectful rate limiting
         
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\novelty_widened_raw.tsv'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\novelty_widened_execution.log'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_widened_raw.tsv')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_widened_execution.log')
     
     df_out = pd.DataFrame(rows)
     df_out.to_csv(out_tsv, sep='\t', index=False)

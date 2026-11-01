@@ -1,3 +1,4 @@
+import pathlib
 import os
 import sys
 import urllib.request
@@ -10,7 +11,7 @@ from Bio.SeqUtils import seq1
 
 # 1. Canonical Reference Sequences from NC_001806.2
 def get_hsv1_reference_sequences():
-    ref_path = r'd:\antiviral-resistance-hsv--1\herpesdrg\inst\ref\NC_001806.2.fasta'
+    ref_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg/inst/ref/NC_001806.2.fasta')
     ref = SeqIO.read(ref_path, 'fasta')
     # UL23 (TK)
     ul23_nt = ref.seq[46672:47803].reverse_complement()
@@ -118,13 +119,13 @@ def align_and_map_coords(ref_seq, chain_residues):
     return mapping
 
 def main():
-    dest_dir = r'd:\antiviral-resistance-hsv--1\data\structures'
+    dest_dir = str(pathlib.Path(__file__).resolve().parent.parent / 'data/structures')
     ref_seqs = get_hsv1_reference_sequences()
     print(f"Reference UL23 length: {len(ref_seqs['UL23'])} aa")
     print(f"Reference UL30 length: {len(ref_seqs['UL30'])} aa")
     
     # Load benchmark dataset to see position coverage
-    folds_path = r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv'
+    folds_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv')
     df_folds = pd.read_csv(folds_path, sep='\t')
     
     target_pdbs = {
@@ -197,7 +198,7 @@ def main():
                 print(f"Error processing {pdb_id}: {e}")
                 
     cov_df = pd.DataFrame(coverage_results)
-    out_csv = r'd:\antiviral-resistance-hsv--1\logs\structure_coverage_audit.csv'
+    out_csv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/structure_coverage_audit.csv')
     cov_df.to_csv(out_csv, index=False)
     print(f"\nSaved coverage audit results to: {out_csv}")
     print("\nSummary Table:")

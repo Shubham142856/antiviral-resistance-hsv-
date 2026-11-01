@@ -1,3 +1,4 @@
+import pathlib
 import json
 import numpy as np
 import pandas as pd
@@ -10,10 +11,10 @@ def assign_contiguous_block(gene, pos):
         block = min(4, (pos - 1) // 247)
     return int(block)
 
-df = pd.read_csv(r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv', sep='\t')
+df = pd.read_csv(str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv'), sep='\t')
 df['block'] = df.apply(lambda r: assign_contiguous_block(r['gene'], r['pos']), axis=1)
 
-with open(r'd:\antiviral-resistance-hsv--1\data\processed\esm2_pos_cache.json', 'r', encoding='utf-8') as f:
+with open(str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/esm2_pos_cache.json'), 'r', encoding='utf-8') as f:
     raw_cache = json.load(f)
 pos_llr_cache = { (k.split(':')[0], int(k.split(':')[1])): v for k, v in raw_cache.items() }
 

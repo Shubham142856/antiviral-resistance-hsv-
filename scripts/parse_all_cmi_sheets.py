@@ -1,8 +1,9 @@
+import pathlib
 import pandas as pd
 import numpy as np
 
 def parse_all_cmi():
-    excel_path = r'D:\antiviral-resistance-hsv--1\data\raw\cmi_2025_mmc3.xlsx'
+    excel_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/cmi_2025_mmc3.xlsx')
     xl = pd.ExcelFile(excel_path)
     print("Sheets in CMI Table S3:", xl.sheet_names)
     
@@ -18,7 +19,7 @@ def parse_all_cmi():
     print("Combined columns:", combined.columns.tolist())
     
     # Save combined to CSV
-    out_csv = r'D:\antiviral-resistance-hsv--1\data\processed\cmi_2025_all_sheets.csv'
+    out_csv = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/cmi_2025_all_sheets.csv')
     combined.to_csv(out_csv, index=False)
     print(f"Saved all sheets combined to: {out_csv}")
     

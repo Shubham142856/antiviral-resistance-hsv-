@@ -1,11 +1,12 @@
+import pathlib
 import pandas as pd
 import re
 import os
 
 def main():
-    db_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\label_purity_summary.tsv'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\label_purity.log'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/label_purity_summary.tsv')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/label_purity.log')
     
     df = pd.read_csv(db_path, sep='\t')
     df_hsv = df[(df['status'] == 'A') & (df['virus'] == 'HSV1')].copy()

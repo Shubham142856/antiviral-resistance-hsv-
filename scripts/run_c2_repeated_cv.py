@@ -1,3 +1,4 @@
+import pathlib
 """
 Rerun Claim C2 under 20 Repeated Grouped Cross-Validations with Hard Leakage Assertions.
 Features:
@@ -160,9 +161,9 @@ def create_both_grouped_splits(df, n_splits=5, seed=42):
     return splits
 
 def main():
-    db_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    out_json = r'd:\antiviral-resistance-hsv--1\logs\c2_repeated_cv_results.json'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\c2_repeated_cv.log'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    out_json = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_repeated_cv_results.json')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_repeated_cv.log')
     
     df = pd.read_csv(db_path, sep='\t')
     df_hsv1 = df[(df['status'] == 'A') & (df['virus'] == 'HSV1')].copy()

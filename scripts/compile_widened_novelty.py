@@ -1,3 +1,4 @@
+import pathlib
 """
 Compile the widened systematic novelty log covering all requested dimensions:
 - Claims C4 (pathway conditioning / multi-task routing)
@@ -194,7 +195,7 @@ def main():
     ]
     
     df = pd.DataFrame(records)
-    out_tsv = r'd:\antiviral-resistance-hsv--1\logs\novelty_widened_raw.tsv'
+    out_tsv = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/novelty_widened_raw.tsv')
     df.to_csv(out_tsv, sep='\t', index=False)
     print(f"Successfully wrote {len(df)} widened novelty records to {out_tsv}")
 

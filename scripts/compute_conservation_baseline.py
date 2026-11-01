@@ -1,3 +1,4 @@
+import pathlib
 import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score
@@ -37,11 +38,11 @@ def assign_contiguous_block(gene, pos):
     return int(block)
 
 # 1. Load dataset
-df = pd.read_csv(r'd:\antiviral-resistance-hsv--1\data\processed\primary_position_folds.tsv', sep='\t')
+df = pd.read_csv(str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/primary_position_folds.tsv'), sep='\t')
 df['block_fold_id'] = df.apply(lambda r: assign_contiguous_block(r['gene'], r['pos']), axis=1)
 
 # 2. Load homology map (HSV-1 vs HSV-2 conservation)
-hom_df = pd.read_csv(r'd:\antiviral-resistance-hsv--1\data\processed\hsv1_hsv2_homology_map.tsv', sep='\t')
+hom_df = pd.read_csv(str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/hsv1_hsv2_homology_map.tsv'), sep='\t')
 hom_dict = {}
 for _, r in hom_df.iterrows():
     if pd.notna(r['hsv1_pos']):

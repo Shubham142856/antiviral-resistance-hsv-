@@ -1,6 +1,7 @@
+import pathlib
 import json
 
-with open(r'd:\antiviral-resistance-hsv--1\logs\spatial_3d_holdout_results.json') as f:
+with open(str(pathlib.Path(__file__).resolve().parent.parent / 'logs/spatial_3d_holdout_results.json')) as f:
     d = json.load(f)
 
 for pair in d['results_by_pair']:

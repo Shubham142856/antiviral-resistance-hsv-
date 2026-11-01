@@ -1,12 +1,13 @@
+import pathlib
 import pandas as pd
 import csv
 import os
 
 def main():
-    db_path = r'd:\antiviral-resistance-hsv--1\herpesdrg-db\herpesdrg-db.tsv'
-    thresh_path = r'd:\antiviral-resistance-hsv--1\thresholds.tsv'
-    out_table_a = r'd:\antiviral-resistance-hsv--1\logs\table_a_recount.tsv'
-    out_log = r'd:\antiviral-resistance-hsv--1\logs\thresholds_audit.log'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'herpesdrg-db/herpesdrg-db.tsv')
+    thresh_path = str(pathlib.Path(__file__).resolve().parent.parent / 'thresholds.tsv')
+    out_table_a = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/table_a_recount.tsv')
+    out_log = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/thresholds_audit.log')
     
     # 1. Define cited thresholds register
     # Per AUDIT_PROTOCOL.md Section 1.4:

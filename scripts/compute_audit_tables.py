@@ -1,10 +1,11 @@
+import pathlib
 import pandas as pd
 import numpy as np
 import re
 import json
 
 def compute_all_tables():
-    db_path = r'D:\antiviral-resistance-hsv--1\data\raw\herpesdrg-db\herpesdrg-db.tsv'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/herpesdrg-db/herpesdrg-db.tsv')
     df = pd.read_csv(db_path, sep='\t')
     
     # Filter active

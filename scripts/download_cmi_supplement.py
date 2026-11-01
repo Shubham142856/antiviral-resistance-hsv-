@@ -1,3 +1,4 @@
+import pathlib
 import urllib.request
 import hashlib
 import json
@@ -5,8 +6,8 @@ import os
 import openpyxl
 
 def main():
-    log_path = r'd:\antiviral-resistance-hsv--1\logs\cmi_table_s3_download.log'
-    out_dir = r'd:\antiviral-resistance-hsv--1\data\raw\cmi_2025'
+    log_path = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/cmi_table_s3_download.log')
+    out_dir = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/cmi_2025')
     os.makedirs(out_dir, exist_ok=True)
     
     urls_to_test = [
@@ -32,8 +33,8 @@ def main():
             log_entries.append(f"  -> FAILED / INACCESSIBLE: Exact Error: {type(e).__name__}: {str(e)}")
             
     # Verify local files already in workspace
-    local_mmc3 = r'd:\antiviral-resistance-hsv--1\mmc3.xlsx'
-    local_pdf = r'd:\antiviral-resistance-hsv--1\PIIS1198743X2500237X.pdf'
+    local_mmc3 = str(pathlib.Path(__file__).resolve().parent.parent / 'mmc3.xlsx')
+    local_pdf = str(pathlib.Path(__file__).resolve().parent.parent / 'PIIS1198743X2500237X.pdf')
     
     log_entries.append("\n=== Verification of Local Workspace Supplement Files ===")
     if os.path.exists(local_mmc3):

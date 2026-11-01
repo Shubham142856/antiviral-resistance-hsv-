@@ -1,3 +1,4 @@
+import pathlib
 import zipfile
 import xml.etree.ElementTree as ET
 import csv
@@ -58,6 +59,6 @@ def parse_xlsx(xlsx_path, output_csv_path):
         print(f"Successfully saved parsed CSV to: {output_csv_path}")
 
 if __name__ == '__main__':
-    xlsx = r'D:\antiviral-resistance-hsv--1\data\raw\cmi_2025_mmc3.xlsx'
-    csv_out = r'D:\antiviral-resistance-hsv--1\data\processed\cmi_2025_table_s3.csv'
+    xlsx = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/cmi_2025_mmc3.xlsx')
+    csv_out = str(pathlib.Path(__file__).resolve().parent.parent / 'data/processed/cmi_2025_table_s3.csv')
     parse_xlsx(xlsx, csv_out)

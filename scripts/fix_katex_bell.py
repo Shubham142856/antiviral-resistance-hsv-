@@ -1,8 +1,9 @@
+import pathlib
 import os
 
 files_to_check = [
-    r'd:\antiviral-resistance-hsv--1\manuscript\manuscript_draft.md',
-    r'd:\antiviral-resistance-hsv--1\STATUS.md',
+    str(pathlib.Path(__file__).resolve().parent.parent / 'manuscript/manuscript_draft.md'),
+    str(pathlib.Path(__file__).resolve().parent.parent / 'STATUS.md'),
     r'C:\Users\HP\.gemini\antigravity\brain\7e2c0f5f-723c-45b3-9f56-f3ec4abc7b17\hsv_antiviral_resistance_research_paper.md'
 ]
 
@@ -29,3 +30,4 @@ for path in files_to_check:
         print(f"Cleaned {path}.")
     else:
         print(f"No \\x07 found in {path}.")
+

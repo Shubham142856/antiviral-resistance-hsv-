@@ -1,9 +1,10 @@
+import pathlib
 import urllib.request
 import json
 import os
 
 def measure_protbert_lora():
-    log_path = r"d:\antiviral-resistance-hsv--1\logs\lora_measurement.log"
+    log_path = str(pathlib.Path(__file__).resolve().parent.parent / 'logs/lora_measurement.log')
     os.makedirs(os.path.dirname(log_path), exist_ok=True)
     
     url = "https://huggingface.co/Rostlab/prot_bert_bfd/raw/main/config.json"

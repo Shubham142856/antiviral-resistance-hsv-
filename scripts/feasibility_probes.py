@@ -1,3 +1,4 @@
+import pathlib
 import pandas as pd
 import numpy as np
 import re
@@ -47,7 +48,7 @@ def get_blosum(wt, mut):
     return -2 # default penalty for unseen non-conservative substitution
 
 def run_probes():
-    db_path = r'D:\antiviral-resistance-hsv--1\data\raw\herpesdrg-db\herpesdrg-db.tsv'
+    db_path = str(pathlib.Path(__file__).resolve().parent.parent / 'data/raw/herpesdrg-db/herpesdrg-db.tsv')
     df = pd.read_csv(db_path, sep='\t')
     df_a = df[df['status'] == 'A'].copy()
     df_hsv1 = df_a[df_a['virus'] == 'HSV1'].copy()

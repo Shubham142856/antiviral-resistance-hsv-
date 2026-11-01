@@ -1,6 +1,7 @@
+import pathlib
 import json
 
-with open(r'd:\antiviral-resistance-hsv--1\logs\c2_repeated_cv_results.json') as f:
+with open(str(pathlib.Path(__file__).resolve().parent.parent / 'logs/c2_repeated_cv_results.json')) as f:
     data = json.load(f)
 
 model_labels = {
