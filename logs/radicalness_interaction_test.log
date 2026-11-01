@@ -1,0 +1,42 @@
+================================================================================
+RADICALNESS DISSOCIATION INTERACTION TEST: UL23 vs UL30
+================================================================================
+Observed Pooled AUROC (BLOSUM62 Radicalness):
+  UL23-ACV:       0.6130 (N=286)
+  UL30-ACV:       0.4942 (N=332)
+  UL30-FOS:       0.4531 (N=311)
+  UL30-Combined:  0.4801 (N=643)
+  Point Delta (UL23-ACV - UL30-ACV):      +0.1187
+  Point Delta (UL23-ACV - UL30-FOS):      +0.1598
+  Point Delta (UL23-ACV - UL30-Combined): +0.1328
+--------------------------------------------------------------------------------
+Comparison: UL23-ACV vs UL30-ACV
+  Observed Point Delta: +0.1187
+  Bootstrap Mean Delta: +0.1184 +/- 0.0415
+  95% Position-Cluster Bootstrap CI: [0.0387, 0.2021]
+  99% Position-Cluster Bootstrap CI: [0.0191, 0.2275]
+  Empirical p-value: 0.0020
+  Strictly Excludes Zero? True
+  Scientific Verdict: Statistically significant dissociation (CI excludes zero)
+--------------------------------------------------------------------------------
+Comparison: UL23-ACV vs UL30-FOS
+  Observed Point Delta: +0.1598
+  Bootstrap Mean Delta: +0.1600 +/- 0.0500
+  95% Position-Cluster Bootstrap CI: [0.0655, 0.2597]
+  99% Position-Cluster Bootstrap CI: [0.0332, 0.2878]
+  Empirical p-value: 0.0000
+  Strictly Excludes Zero? True
+  Scientific Verdict: Statistically significant dissociation (CI excludes zero)
+--------------------------------------------------------------------------------
+Comparison: UL23-ACV vs UL30-Combined
+  Observed Point Delta: +0.1328
+  Bootstrap Mean Delta: +0.1344 +/- 0.0404
+  95% Position-Cluster Bootstrap CI: [0.0616, 0.2150]
+  99% Position-Cluster Bootstrap CI: [0.0308, 0.2394]
+  Empirical p-value: 0.0000
+  Strictly Excludes Zero? True
+  Scientific Verdict: Statistically significant dissociation (CI excludes zero)
+--------------------------------------------------------------------------------
+Block-Level Welch's Two-Sample t-tests:
+  UL23-ACV vs UL30-ACV: Delta = +0.0887, t = 0.8850, p = 0.4309
+  UL23-ACV vs UL30-FOS: Delta = +0.1307, t = 0.9493, p = 0.4063

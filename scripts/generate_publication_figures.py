@@ -322,3 +322,4 @@ plt.close()
 print(f"Saved: {fig4_path_art}")
 
 print("All publication figures successfully generated!")
+
