@@ -248,3 +248,17 @@
 
    - **PI Scope Sign-Off:** Execute the formal sign-off in [`docs/pi_signoff_form.md`](file:///d:/antiviral-resistance-hsv--1/docs/pi_signoff_form.md).
 
+
+
+---
+
+## 8. Phase 1 Rectification Audit Log (2026-11-02)
+
+| Item | Focus Area | Action Taken | Evidence / Verification |
+| :--- | :--- | :--- | :--- |
+| **P1.1** | Table 1 vs Table 6 Discrepancy | Resolved 0.5001 vs 0.5347 at source: Table 1 reports 20-repeat CV average ($0.5001 \pm 0.0009$); Table 6 reports single 5-block partition where 3 of 4 evaluable folds are exactly 0.5000 (chance), fold mean is $0.5347 \pm 0.0694$, and pooled AUROC is $0.4591$ [0.3741, 0.5468]. Explicit cross-table reconciliation notes added to both tables. | `manuscript/manuscript_draft.md` Tables 1 & 6, `logs/spatial_3d_holdout_results.json` |
+| **P1.2** | Structural Ligand / PDB Metadata | Corrected PDB `1OF1` metadata: 1.95 Å, chain B, complexed with (South)-methanocarba-thymidine (ligand SCT; Bennett et al. 1999). Clarified Shankar et al. (Cell 2024; 187:5572-5586.e15) structures (`8EXX` foscarnet-bound; `8V1Q`/`8V1R`/`8V1S`/`8V1T` holoenzyme states). | `manuscript/manuscript_draft.md`, `data/structures/1of1.cif` |
+| **P1.3** | Reference List Completion | Added primary database references: HerpesDRG (Charles et al. 2024) and CMI review (Dähne et al. 2025). Standardized spelling to "Dähne". Verified abstract scope is restricted strictly to HSV-1. | `manuscript/manuscript_draft.md` References & Abstract |
+| **P1.4** | 3D Spatial Null Re-interpretation | Removed assertions that zero-shot PLM invariance across 3D folds constitutes biological proof of contact independence (zero-shot scores are computed from sequence and do not change across folds). Reframed §3.6 and Contribution 7 around the genuine empirical hazard: 3D geometric clustering partitions sequence non-contiguously, reintroducing sequence-adjacency interpolation shortcuts (Position-Only RF rebounds to 0.6241). | `manuscript/manuscript_draft.md` §3.6, Contribution 7 |
+| **P1.5** | Equal PLM Evaluation & ProtBERT Claims | Removed post-hoc designation of ESM-2 650M as "primary". Evaluated all three models (ESM-2 650M, ProtBERT, ESM-2 35M) symmetrically. Corrected ProtBERT claim in Contribution 4 (passes $\ge 0.65$ mean on all 3 pairs, satisfies strict $t$-CI lower bound on UL23-ACV, exhibits wider fold variance on UL30). | `manuscript/manuscript_draft.md` Table 2, Contribution 4 |
+| **P1.6** | Rhetorical Calibration | Replaced strong claims ("Discovery", "proves", "strictly more stringent") with calibrated empirical statements ("Empirical Demonstration", "demonstrates", "provides a more effective control against spatial interpolation shortcuts"). | `manuscript/manuscript_draft.md` |
