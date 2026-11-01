@@ -23,3 +23,5 @@ PIIS*.pdf
 # System / OS
 .DS_Store
 Thumbs.db
+.claude/
+cloud_gpu/
