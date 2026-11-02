@@ -156,7 +156,7 @@ Evaluating orthologous target pairs in HerpesDRG-DB (`logs/cross_virus_replicati
 To verify that structural and evolutionary signals are not driven by unmeasured surveillance polymorphisms:
 - **Measured Fold-Change Subset (Quantitative Phenotyping, Balanced 50% Base Rate, $N=78$):** Where composite maintains **AUROC = 0.8406** on UL30-ACV (Constraint = 0.7327, Proximity = 0.8202) and **0.8407** on UL30-FOS.
 - **Recombinant Marker Transfer Tier ($N=64$):** Gold-standard lab-validated variants achieve `Where` **AUROC = 0.8478**, where **Evolutionary Constraint alone (0.8234) outperforms Active-Site Proximity alone (0.7821)**.
-- **Curation-Source Asymmetry Limitation:** Variant labels correlate strongly with curation source on UL30 ($P(\text{resistant} \mid \text{in CMI}) = 67.5\%$ vs. $3.2\%$ outside CMI on ACV; $55.2\%$ vs. $0.4\%$ on FOS), whereas UL23 shows no such association ($41.9\%$ vs. $42.9\%$). This ascertainment asymmetry reinforces the necessity of within-study controls to guard against surveillance polymorphism confounding.
+- **Study-Composition and Ascertainment Disparity:** Retrospective curation exhibits substantial study-level asymmetry (`logs/stage_b2_study_counts.json`): single-class studies contribute 38.6% of variants on UL30-ACV (95/332, 28.6% from all-sensitive cohorts) and 76.8% on UL30-FOS (220/311, 70.7% from all-sensitive cohorts), compared to 30.8% on UL23-ACV (37/286, 12.9% from all-sensitive cohorts). Within-study pairing removes between-study composition effects but not within-study position selection: authors choose which positions to assay, and those choices concentrate near drug-binding sites. Pooled estimates should therefore be read as upper bounds.
 
 ---
 
