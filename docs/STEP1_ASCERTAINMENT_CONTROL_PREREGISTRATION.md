@@ -115,3 +115,18 @@ All outcomes are determined strictly by pre-registered criteria:
 ### H. Single-Run Protocol Gate
 
 A single deterministic execution script (`scripts/run_step1_ascertainment_control.py`) will execute this protocol. Output metrics will be serialized to `logs/step1_ascertainment_control_results.json`. Following execution, all results including nulls will be printed in a final numbers table, and execution will **STOP immediately** without further extensions or iterative re-analyses.
+
+---
+
+## 3. Pre-Run Amendment (November 2, 2026)
+
+*This amendment was committed and pushed prior to the execution of any Step 1 benchmark script. It adds descriptive reporting diagnostics and refines interpretation without altering any pre-registered thresholds, estimators, or pass/fail decision rules.*
+
+### Amendment Item 1: Additional Descriptive Diagnostics (No Pass/Fail)
+1. **Contributing Resistant Variant Count:** Report, for each target arm, the exact number of distinct resistant variants contributing to same-study pairs. (Rationale: As observed in the positivity check, large mixed studies may have high pair counts driven by only one or two resistant variants; quantifying distinct resistant variants clarifies the effective diversity of resistant observations).
+2. **Leave-One-Study-Out S0 Sensitivity:** Report the leave-one-study-out (LOSO) pair-weighted AUROC for S0, systematically excluding each mixed study one at a time. This identifies whether any single laboratory cohort exerts outsized leverage on the S0 estimate (analogous to the position 927 diagnostic).
+
+### Amendment Item 2: Interpretation Refinement and Scope of S0 vs. S2
+1. **Scope of S0 Within-Study Survival:** A PASS outcome for the Where composite on S0 demonstrates that the structural and evolutionary prior separates resistant variants from tolerated variants within the same laboratory study. However, because many sensitive variants in mixed studies are natural surveillance polymorphisms that occur at evolutionarily tolerant positions, this within-study separation cannot prove *resistance-specificity* per se (i.e. distinguishing resistant mutations from benign mutations at the same constrained sites).
+2. **S2 as Nearest Resistance-Specificity Benchmark:** Stratum S2 (HerpesDRG numeric fold-change, where both resistant and sensitive variants were subjected to direct quantitative phenotypic assay) is designated as the descriptive stratum closest to true resistance-specificity. S2 results will be highlighted alongside S0 to contextualize whether positional constraint discriminates when all evaluated variants are functionally characterized.
+
