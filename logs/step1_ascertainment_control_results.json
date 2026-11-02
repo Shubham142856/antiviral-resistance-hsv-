@@ -1,0 +1,547 @@
+{
+  "protocol_metadata": {
+    "protocol_version": "1.0 (Audit-Grade Frozen Specification with Pre-Run Amendment)",
+    "preregistration_doc": "docs/STEP1_ASCERTAINMENT_CONTROL_PREREGISTRATION.md",
+    "amended_commit_hash": "ef69018dfa2ea2d545783233a8518cb71f7d870d",
+    "amended_sha256": "61500c501df95c28bf44692b91b805d3f1eb8bbcdc37b0fcbc6abe0d7ea5b435"
+  },
+  "positivity_check": {
+    "UL30-Aciclovir": {
+      "role": "Primary",
+      "mixed_studies_count": 14,
+      "total_same_study_pairs": 267,
+      "top1_study_share_pct": 27.34,
+      "distinct_resistant_variants": 29,
+      "total_resistant_in_mixed": 29,
+      "top5_studies": [
+        {
+          "study_id": "DOI:doi.org/10.1128/AAC.00977-15",
+          "resistant": 1,
+          "sensitive": 73,
+          "pairs": 73,
+          "share_pct": 27.34
+        },
+        {
+          "study_id": "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003",
+          "resistant": 9,
+          "sensitive": 5,
+          "pairs": 45,
+          "share_pct": 16.85
+        },
+        {
+          "study_id": "DOI:doi.org/10.1016/j.antiviral.2013.09.012",
+          "resistant": 2,
+          "sensitive": 22,
+          "pairs": 44,
+          "share_pct": 16.48
+        },
+        {
+          "study_id": "DOI:doi.org/10.1128/AAC.00669-10",
+          "resistant": 1,
+          "sensitive": 37,
+          "pairs": 37,
+          "share_pct": 13.86
+        },
+        {
+          "study_id": "DOI:doi.org/10.1016/j.antiviral.2003.08.018",
+          "resistant": 3,
+          "sensitive": 11,
+          "pairs": 33,
+          "share_pct": 12.36
+        }
+      ],
+      "rule_pairs_ge_100": true,
+      "rule_mixed_ge_5": true,
+      "rule_share_le_50": true,
+      "positivity_verdict": "PASS"
+    },
+    "UL30-Foscarnet": {
+      "role": "Secondary",
+      "mixed_studies_count": 8,
+      "total_same_study_pairs": 82,
+      "top1_study_share_pct": 45.12,
+      "distinct_resistant_variants": 14,
+      "total_resistant_in_mixed": 14,
+      "top5_studies": [
+        {
+          "study_id": "DOI:doi.org/10.1128/AAC.00669-10",
+          "resistant": 1,
+          "sensitive": 37,
+          "pairs": 37,
+          "share_pct": 45.12
+        },
+        {
+          "study_id": "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003",
+          "resistant": 3,
+          "sensitive": 8,
+          "pairs": 24,
+          "share_pct": 29.27
+        },
+        {
+          "study_id": "DOI:doi.org/10.1177/135965350701200502",
+          "resistant": 3,
+          "sensitive": 3,
+          "pairs": 9,
+          "share_pct": 10.98
+        },
+        {
+          "study_id": "DOI:doi.org/10.1093/infdis/jix042",
+          "resistant": 1,
+          "sensitive": 5,
+          "pairs": 5,
+          "share_pct": 6.1
+        },
+        {
+          "study_id": "DOI:doi.org/10.1128/AAC.49.2.606-611.2005",
+          "resistant": 3,
+          "sensitive": 1,
+          "pairs": 3,
+          "share_pct": 3.66
+        }
+      ],
+      "rule_pairs_ge_100": false,
+      "rule_mixed_ge_5": true,
+      "rule_share_le_50": true,
+      "positivity_verdict": "THIN DATA (Secondary Only, Non-independent)"
+    },
+    "UL23-Aciclovir": {
+      "role": "Counter-Arm",
+      "mixed_studies_count": 17,
+      "total_same_study_pairs": 331,
+      "top1_study_share_pct": 16.92,
+      "distinct_resistant_variants": 69,
+      "total_resistant_in_mixed": 69,
+      "top5_studies": [
+        {
+          "study_id": "DOI:doi.org/10.1128/AAC.00669-10",
+          "resistant": 4,
+          "sensitive": 14,
+          "pairs": 56,
+          "share_pct": 16.92
+        },
+        {
+          "study_id": "DOI:doi.org/10.1016/j.jviromet.2017.05.013",
+          "resistant": 6,
+          "sensitive": 9,
+          "pairs": 54,
+          "share_pct": 16.31
+        },
+        {
+          "study_id": "DOI:doi.org/10.1016/j.antiviral.2003.08.018",
+          "resistant": 4,
+          "sensitive": 12,
+          "pairs": 48,
+          "share_pct": 14.5
+        },
+        {
+          "study_id": "PMID:37453453",
+          "resistant": 2,
+          "sensitive": 18,
+          "pairs": 36,
+          "share_pct": 10.88
+        },
+        {
+          "study_id": "DOI:doi.org/10.1128/AAC.00977-15",
+          "resistant": 1,
+          "sensitive": 27,
+          "pairs": 27,
+          "share_pct": 8.16
+        }
+      ],
+      "rule_pairs_ge_100": true,
+      "rule_mixed_ge_5": true,
+      "rule_share_le_50": true,
+      "positivity_verdict": "PASS"
+    }
+  },
+  "S0_primary_within_study": {
+    "UL30-Aciclovir": {
+      "role": "Primary",
+      "pairs": 267,
+      "where": {
+        "pair_weighted_auroc": 0.7865168539325843,
+        "study_equal_auroc": 0.7355917275193207,
+        "loso_auroc": {
+          "DOI:doi.org/10.1006/viro.1993.1439": 0.7857142857142857,
+          "DOI:doi.org/10.1016/j.antiviral.2003.08.018": 0.782051282051282,
+          "DOI:doi.org/10.1016/j.antiviral.2013.09.012": 0.7982062780269058,
+          "DOI:doi.org/10.1093/infdis/jiad184": 0.7857142857142857,
+          "DOI:doi.org/10.1093/infdis/jit019": 0.7894736842105263,
+          "DOI:doi.org/10.1093/infdis/jix042": 0.7824427480916031,
+          "DOI:doi.org/10.1128/AAC.00390-21": 0.7832699619771863,
+          "DOI:doi.org/10.1128/AAC.00669-10": 0.7739130434782608,
+          "DOI:doi.org/10.1128/AAC.00977-15": 0.788659793814433,
+          "DOI:doi.org/10.1128/AAC.49.2.606-611.2005": 0.7829457364341085,
+          "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003": 0.7882882882882883,
+          "DOI:doi.org/10.1177/135965350400900413": 0.7946768060836502,
+          "DOI:doi.org/10.1177/135965350701200502": 0.7916666666666666,
+          "DOI:doi.org/10.3851/IMP1870": 0.7846153846153846
+        },
+        "bootstrap_95ci": [
+          0.738908080044151,
+          0.8333333333333334
+        ]
+      },
+      "blosum62": {
+        "pair_weighted_auroc": 0.5561797752808989,
+        "study_equal_auroc": 0.39978985103740483,
+        "loso_auroc": {
+          "DOI:doi.org/10.1006/viro.1993.1439": 0.5582706766917294,
+          "DOI:doi.org/10.1016/j.antiviral.2003.08.018": 0.5854700854700855,
+          "DOI:doi.org/10.1016/j.antiviral.2013.09.012": 0.5493273542600897,
+          "DOI:doi.org/10.1093/infdis/jiad184": 0.5582706766917294,
+          "DOI:doi.org/10.1093/infdis/jit019": 0.5582706766917294,
+          "DOI:doi.org/10.1093/infdis/jix042": 0.5610687022900763,
+          "DOI:doi.org/10.1128/AAC.00390-21": 0.5513307984790875,
+          "DOI:doi.org/10.1128/AAC.00669-10": 0.6,
+          "DOI:doi.org/10.1128/AAC.00977-15": 0.4072164948453608,
+          "DOI:doi.org/10.1128/AAC.49.2.606-611.2005": 0.563953488372093,
+          "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003": 0.5923423423423423,
+          "DOI:doi.org/10.1177/135965350400900413": 0.5608365019011406,
+          "DOI:doi.org/10.1177/135965350701200502": 0.5511363636363636,
+          "DOI:doi.org/10.3851/IMP1870": 0.5634615384615385
+        },
+        "bootstrap_95ci": [
+          0.32622904577691814,
+          0.7597030958488806
+        ]
+      },
+      "delta_where_minus_blosum": 0.2303370786516854,
+      "delta_where_minus_blosum_95ci": [
+        0.014679765348762404,
+        0.49607213160854885
+      ]
+    },
+    "UL30-Foscarnet": {
+      "role": "Secondary",
+      "pairs": 82,
+      "where": {
+        "pair_weighted_auroc": 0.8414634146341463,
+        "study_equal_auroc": 0.5890108858858859,
+        "loso_auroc": {
+          "DOI:doi.org/10.1002/j.1460-2075.1987.tb04735.x": 0.8625,
+          "DOI:doi.org/10.1006/viro.1993.1439": 0.8395061728395061,
+          "DOI:doi.org/10.1093/infdis/jit019": 0.8518518518518519,
+          "DOI:doi.org/10.1093/infdis/jix042": 0.8311688311688312,
+          "DOI:doi.org/10.1128/AAC.00669-10": 0.8222222222222222,
+          "DOI:doi.org/10.1128/AAC.49.2.606-611.2005": 0.8734177215189873,
+          "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003": 0.7931034482758621,
+          "DOI:doi.org/10.1177/135965350701200502": 0.8356164383561644
+        },
+        "bootstrap_95ci": [
+          0.47814645308924486,
+          0.9272793148880105
+        ]
+      },
+      "blosum62": {
+        "pair_weighted_auroc": 0.3231707317073171,
+        "study_equal_auroc": 0.2014451951951952,
+        "loso_auroc": {
+          "DOI:doi.org/10.1002/j.1460-2075.1987.tb04735.x": 0.33125,
+          "DOI:doi.org/10.1006/viro.1993.1439": 0.3271604938271605,
+          "DOI:doi.org/10.1093/infdis/jit019": 0.3271604938271605,
+          "DOI:doi.org/10.1093/infdis/jix042": 0.3246753246753247,
+          "DOI:doi.org/10.1128/AAC.00669-10": 0.35555555555555557,
+          "DOI:doi.org/10.1128/AAC.49.2.606-611.2005": 0.3291139240506329,
+          "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003": 0.28448275862068967,
+          "DOI:doi.org/10.1177/135965350701200502": 0.3082191780821918
+        },
+        "bootstrap_95ci": [
+          0.1921875,
+          0.39876582278481
+        ]
+      },
+      "delta_where_minus_blosum": 0.5182926829268293,
+      "delta_where_minus_blosum_95ci": [
+        0.25,
+        0.5806560592850916
+      ]
+    },
+    "UL23-Aciclovir": {
+      "role": "Counter-Arm",
+      "pairs": 331,
+      "where": {
+        "pair_weighted_auroc": 0.6676737160120846,
+        "study_equal_auroc": 0.6453236850295674,
+        "loso_auroc": {
+          "DOI:doi.org/10.1016/j.antiviral.2003.08.018": 0.6113074204946997,
+          "DOI:doi.org/10.1016/j.antiviral.2010.03.002": 0.6591639871382636,
+          "DOI:doi.org/10.1016/j.antiviral.2013.09.012": 0.6636085626911316,
+          "DOI:doi.org/10.1016/j.antiviral.2014.08.013": 0.6728395061728395,
+          "DOI:doi.org/10.1016/j.antiviral.2019.05.012": 0.6784565916398714,
+          "DOI:doi.org/10.1016/j.jcv.2011.06.009": 0.6625766871165644,
+          "DOI:doi.org/10.1016/j.jviromet.2017.05.013": 0.6859205776173285,
+          "DOI:doi.org/10.1038/s41598-022-05188-w": 0.668693009118541,
+          "DOI:doi.org/10.1086/606028": 0.6655948553054662,
+          "DOI:doi.org/10.1093/infdis/jix042": 0.6656534954407295,
+          "DOI:doi.org/10.1128/AAC.00669-10": 0.6472727272727272,
+          "DOI:doi.org/10.1128/AAC.00977-15": 0.7269736842105263,
+          "DOI:doi.org/10.1128/AAC.47.5.1707-1713.2003": 0.6869009584664537,
+          "DOI:doi.org/10.1128/aac.00110-24": 0.6748466257668712,
+          "DOI:doi.org/10.1177/135965350400900413": 0.6646341463414634,
+          "PMID:35033543": 0.672782874617737,
+          "PMID:37453453": 0.6372881355932203
+        },
+        "bootstrap_95ci": [
+          0.47169495803622136,
+          0.8150740722014358
+        ]
+      },
+      "blosum62": {
+        "pair_weighted_auroc": 0.5785498489425982,
+        "study_equal_auroc": 0.5252139744786805,
+        "loso_auroc": {
+          "DOI:doi.org/10.1016/j.antiviral.2003.08.018": 0.5918727915194346,
+          "DOI:doi.org/10.1016/j.antiviral.2010.03.002": 0.5980707395498392,
+          "DOI:doi.org/10.1016/j.antiviral.2013.09.012": 0.5795107033639144,
+          "DOI:doi.org/10.1016/j.antiviral.2014.08.013": 0.5709876543209876,
+          "DOI:doi.org/10.1016/j.antiviral.2019.05.012": 0.5530546623794212,
+          "DOI:doi.org/10.1016/j.jcv.2011.06.009": 0.5797546012269938,
+          "DOI:doi.org/10.1016/j.jviromet.2017.05.013": 0.5469314079422383,
+          "DOI:doi.org/10.1038/s41598-022-05188-w": 0.5820668693009119,
+          "DOI:doi.org/10.1086/606028": 0.5755627009646302,
+          "DOI:doi.org/10.1093/infdis/jix042": 0.5775075987841946,
+          "DOI:doi.org/10.1128/AAC.00669-10": 0.5490909090909091,
+          "DOI:doi.org/10.1128/AAC.00977-15": 0.6200657894736842,
+          "DOI:doi.org/10.1128/AAC.47.5.1707-1713.2003": 0.5654952076677316,
+          "DOI:doi.org/10.1128/aac.00110-24": 0.5751533742331288,
+          "DOI:doi.org/10.1177/135965350400900413": 0.5823170731707317,
+          "PMID:35033543": 0.5840978593272171,
+          "PMID:37453453": 0.6
+        },
+        "bootstrap_95ci": [
+          0.42937963933280937,
+          0.7056417083242772
+        ]
+      },
+      "delta_where_minus_blosum": 0.08912386706948638,
+      "delta_where_minus_blosum_95ci": [
+        -0.11997979287698915,
+        0.2971111890291413
+      ]
+    }
+  },
+  "cross_gene_contrast_D": {
+    "point_estimate": 0.14121321158219902,
+    "bootstrap_95ci": [
+      -0.11808325326169378,
+      0.48212894795180966
+    ],
+    "n_resamples": 2000
+  },
+  "secondary_strata_descriptive": {
+    "UL30-Aciclovir": {
+      "S1_CMI_Confirmed": {
+        "N": 304,
+        "Resistant": 51,
+        "Sensitive": 253,
+        "evaluable": true,
+        "where_auroc": 0.8650701387274278,
+        "blosum_auroc": 0.512322715647524
+      },
+      "S2_Numeric_FC": {
+        "N": 78,
+        "Resistant": 39,
+        "Sensitive": 39,
+        "evaluable": true,
+        "where_auroc": 0.8405654174884944,
+        "blosum_auroc": 0.4720578566732413
+      },
+      "S3_Recombinant_Transfer_BAC": {
+        "N": 37,
+        "Resistant": 22,
+        "Sensitive": 15,
+        "evaluable": false,
+        "flag": "Underpowered (N=37, Res=22, Sens=15)",
+        "where_auroc": 0.8151515151515152,
+        "blosum_auroc": 0.42878787878787883
+      }
+    },
+    "UL30-Foscarnet": {
+      "S1_CMI_Confirmed": {
+        "N": 213,
+        "Resistant": 24,
+        "Sensitive": 189,
+        "evaluable": true,
+        "where_auroc": 0.9157848324514991,
+        "blosum_auroc": 0.5223765432098766
+      },
+      "S2_Numeric_FC": {
+        "N": 52,
+        "Resistant": 18,
+        "Sensitive": 34,
+        "evaluable": true,
+        "where_auroc": 0.840686274509804,
+        "blosum_auroc": 0.48692810457516333
+      }
+    },
+    "UL23-Aciclovir": {
+      "S1_CMI_Confirmed": {
+        "N": 262,
+        "Resistant": 108,
+        "Sensitive": 154,
+        "evaluable": true,
+        "where_auroc": 0.7202080327080327,
+        "blosum_auroc": 0.5983345358345359
+      },
+      "S2_Numeric_FC": {
+        "N": 66,
+        "Resistant": 37,
+        "Sensitive": 29,
+        "evaluable": true,
+        "where_auroc": 0.749767008387698,
+        "blosum_auroc": 0.68452935694315
+      }
+    }
+  },
+  "source_diagnostics_within_class": {
+    "UL30-Aciclovir": {
+      "within_sensitive": {
+        "survey_only_vs_mixed": {
+          "counts": {
+            "1": 175,
+            "0": 95
+          },
+          "evaluable": true,
+          "where_auroc": 0.4917593984962406,
+          "blosum_auroc": 0.5029473684210526
+        },
+        "in_cmi_vs_not": {
+          "counts": {
+            "1": 253,
+            "0": 17
+          },
+          "evaluable": true,
+          "where_auroc": 0.35398744478028366,
+          "blosum_auroc": 0.44710532434317596
+        }
+      },
+      "within_resistant": {
+        "mixed_vs_all_resistant": {
+          "counts": {
+            "0": 33,
+            "1": 29
+          },
+          "evaluable": true,
+          "where_auroc": 0.39237199582027166,
+          "blosum_auroc": 0.3286311389759665
+        },
+        "in_cmi_vs_not": {
+          "counts": {
+            "1": 51,
+            "0": 11
+          },
+          "evaluable": true,
+          "where_auroc": 0.5436720142602496,
+          "blosum_auroc": 0.589126559714795
+        }
+      }
+    },
+    "UL30-Foscarnet": {
+      "within_sensitive": {
+        "survey_only_vs_mixed": {
+          "counts": {
+            "0": 220,
+            "1": 58
+          },
+          "evaluable": true,
+          "where_auroc": 0.5315830721003135,
+          "blosum_auroc": 0.4461990595611285
+        },
+        "in_cmi_vs_not": {
+          "counts": {
+            "1": 189,
+            "0": 89
+          },
+          "evaluable": true,
+          "where_auroc": 0.5044289875750549,
+          "blosum_auroc": 0.4548778312823257
+        }
+      },
+      "within_resistant": {
+        "mixed_vs_all_resistant": {
+          "counts": {
+            "0": 19,
+            "1": 14
+          },
+          "evaluable": true,
+          "where_auroc": 0.4830827067669173,
+          "blosum_auroc": 0.2368421052631579
+        },
+        "in_cmi_vs_not": {
+          "counts": {
+            "1": 24,
+            "0": 9
+          },
+          "evaluable": false,
+          "note": "Underpowered (counts={1: 24, 0: 9}, min < 10)"
+        }
+      }
+    },
+    "UL23-Aciclovir": {
+      "within_sensitive": {
+        "survey_only_vs_mixed": {
+          "counts": {
+            "1": 129,
+            "0": 37
+          },
+          "evaluable": true,
+          "where_auroc": 0.4954954954954955,
+          "blosum_auroc": 0.5426356589147288
+        },
+        "in_cmi_vs_not": {
+          "counts": {
+            "1": 154,
+            "0": 12
+          },
+          "evaluable": true,
+          "where_auroc": 0.4537337662337662,
+          "blosum_auroc": 0.648538961038961
+        }
+      },
+      "within_resistant": {
+        "mixed_vs_all_resistant": {
+          "counts": {
+            "1": 69,
+            "0": 51
+          },
+          "evaluable": true,
+          "where_auroc": 0.5956237567490764,
+          "blosum_auroc": 0.4116226200625177
+        },
+        "in_cmi_vs_not": {
+          "counts": {
+            "1": 111,
+            "0": 9
+          },
+          "evaluable": false,
+          "note": "Underpowered (counts={1: 111, 0: 9}, min < 10)"
+        }
+      }
+    }
+  },
+  "decision_verdicts": {
+    "UL30_ACV_Where_Survival": {
+      "point_estimate": 0.7865168539325843,
+      "ci_95": [
+        0.738908080044151,
+        0.8333333333333334
+      ],
+      "thresholds": {
+        "pass_point_ge": 0.65,
+        "pass_ci_lower_gt": 0.55,
+        "artifact_point_lt": 0.55
+      },
+      "verdict": "PASS"
+    },
+    "Cross_Gene_Dissociation_Contrast_D": {
+      "point_estimate": 0.14121321158219902,
+      "ci_95": [
+        -0.11808325326169378,
+        0.48212894795180966
+      ],
+      "rule": "PASS if D > 0 and 95% CI excludes 0",
+      "verdict": "INCONCLUSIVE"
+    }
+  }
+}
