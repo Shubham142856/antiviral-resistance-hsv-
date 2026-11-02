@@ -1,0 +1,163 @@
+{
+  "source_experimental_pdbs": [
+    "8EXX (FOS, PPF)",
+    "8V1T (ACV-TP, AVP)"
+  ],
+  "distance_cutoff_angstrom": 5.0,
+  "mapped_residues": [
+    {
+      "hsv1_pos": 717,
+      "hsv1_wt": "D",
+      "hcmv_pos": 717,
+      "hcmv_wt": "D",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 718,
+      "hsv1_wt": "F",
+      "hcmv_pos": 718,
+      "hcmv_wt": "F",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 719,
+      "hsv1_wt": "A",
+      "hcmv_pos": 719,
+      "hcmv_wt": "A",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 720,
+      "hsv1_wt": "S",
+      "hcmv_pos": 720,
+      "hcmv_wt": "S",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 721,
+      "hsv1_wt": "L",
+      "hcmv_pos": 721,
+      "hcmv_wt": "L",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 722,
+      "hsv1_wt": "Y",
+      "hcmv_pos": 722,
+      "hcmv_wt": "Y",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 723,
+      "hsv1_wt": "P",
+      "hcmv_pos": 723,
+      "hcmv_wt": "P",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 785,
+      "hsv1_wt": "R",
+      "hcmv_pos": 784,
+      "hcmv_wt": "R",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 789,
+      "hsv1_wt": "R",
+      "hcmv_pos": 788,
+      "hcmv_wt": "R",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 811,
+      "hsv1_wt": "K",
+      "hcmv_pos": 811,
+      "hcmv_wt": "K",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 812,
+      "hsv1_wt": "V",
+      "hcmv_pos": 812,
+      "hcmv_wt": "V",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 815,
+      "hsv1_wt": "N",
+      "hcmv_pos": 815,
+      "hcmv_wt": "N",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 816,
+      "hsv1_wt": "S",
+      "hcmv_pos": 816,
+      "hcmv_wt": "A",
+      "conserved": false
+    },
+    {
+      "hsv1_pos": 818,
+      "hsv1_wt": "Y",
+      "hcmv_pos": 818,
+      "hcmv_wt": "Y",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 819,
+      "hsv1_wt": "G",
+      "hcmv_pos": 819,
+      "hcmv_wt": "G",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 887,
+      "hsv1_wt": "T",
+      "hcmv_pos": 911,
+      "hcmv_wt": "T",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 888,
+      "hsv1_wt": "D",
+      "hcmv_pos": 912,
+      "hcmv_wt": "D",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 925,
+      "hsv1_wt": "E",
+      "hcmv_pos": 949,
+      "hcmv_wt": "E",
+      "conserved": true
+    },
+    {
+      "hsv1_pos": 927,
+      "hsv1_wt": "E",
+      "hcmv_pos": 951,
+      "hcmv_wt": "E",
+      "conserved": true
+    }
+  ],
+  "hcmv_active_site_positions": [
+    717,
+    718,
+    719,
+    720,
+    721,
+    722,
+    723,
+    784,
+    788,
+    811,
+    812,
+    815,
+    816,
+    818,
+    819,
+    911,
+    912,
+    949,
+    951
+  ]
+}

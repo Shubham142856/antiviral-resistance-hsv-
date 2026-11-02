@@ -160,7 +160,8 @@ def generate_step1_tables():
             n_tot_strat = s_data['N']
             pct_cohort = (n_tot_strat / tot) * 100
             if 'S1' in s_key:
-                desc = f"{pct_cohort:.1f}% of cohort ({n_tot_strat}/{tot}; CMI cell-culture confirmed = yes; near-full cohort for ACV, 68.5% for FOS)"
+                qual = "near-full cohort" if pct_cohort > 80.0 else "partial cohort"
+                desc = f"{pct_cohort:.1f}% of cohort ({n_tot_strat}/{tot}; CMI cell-culture confirmed = yes; {qual})"
             elif 'S2' in s_key:
                 desc = f"{pct_cohort:.1f}% of cohort ({n_tot_strat}/{tot}; HerpesDRG numeric fold-change, balanced quantitative)"
             elif 'S3' in s_key:

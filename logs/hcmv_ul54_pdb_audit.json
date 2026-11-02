@@ -1,0 +1,25 @@
+{
+  "uniprot_accession": "P08546",
+  "gene": "UL54",
+  "organism": "Human cytomegalovirus (strain AD169)",
+  "full_length_aa": 1242,
+  "rcsb_pdb_total_hits": 1,
+  "pdb_hits": [
+    "1YYP"
+  ],
+  "structure_1YYP_audit": {
+    "title": "Crystal structure of cytomegalovirus UL44 bound to C-terminal peptide from CMV UL54",
+    "resolution_angstrom": 2.5,
+    "method": "X-RAY DIFFRACTION",
+    "entity_1": "UL44 processivity factor (residues 1-290, core sliding clamp)",
+    "entity_2": "UL54 C-terminal peptide (length 22 aa)",
+    "entity_2_sequence": "LPRRLHLEPAFLPYSVKAHECC",
+    "uniprot_mapped_range": "1221-1242",
+    "catalytic_core_covered": false,
+    "active_site_covered": false,
+    "exonuclease_domain_covered": false,
+    "palm_fingers_thumb_covered": false,
+    "fraction_of_ul54_covered": "22/1242 (1.77%)"
+  },
+  "conclusion": "No experimental crystal or cryo-EM structure of the catalytic core of HCMV UL54 exists in the RCSB PDB as of November 2026. Entry 1YYP covers only the 22-residue C-terminal sliding-clamp binding peptide. Computing 3D Euclidean active-site distance on UL54 requires predicted coordinates (AlphaFold DB AF-P08546-F1) or structural alignment to HSV-1 UL30 experimental holoenzyme (PDB 8V1Q / 8EXX)."
+}
