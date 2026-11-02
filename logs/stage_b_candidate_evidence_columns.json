@@ -1,0 +1,863 @@
+{
+  "UL30-Aciclovir": {
+    "total": 332,
+    "resistant": 62,
+    "sensitive": 270,
+    "columns": {
+      "strain_generation": {
+        "Isolated strain": {
+          "total": 233,
+          "resistant": 20,
+          "sensitive": 213,
+          "pct_resistant": 8.583690987124463
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 35,
+          "resistant": 1,
+          "sensitive": 34,
+          "pct_resistant": 2.857142857142857
+        },
+        "Lab induced strain": {
+          "total": 25,
+          "resistant": 17,
+          "sensitive": 8,
+          "pct_resistant": 68.0
+        },
+        "Marker Transfer": {
+          "total": 22,
+          "resistant": 17,
+          "sensitive": 5,
+          "pct_resistant": 77.27272727272727
+        },
+        "Recombinant BAC": {
+          "total": 11,
+          "resistant": 2,
+          "sensitive": 9,
+          "pct_resistant": 18.181818181818183
+        },
+        "Marker transfer": {
+          "total": 4,
+          "resistant": 3,
+          "sensitive": 1,
+          "pct_resistant": 75.0
+        },
+        "lab induced strain": {
+          "total": 2,
+          "resistant": 2,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "test_method": {
+        "PRA": {
+          "total": 205,
+          "resistant": 47,
+          "sensitive": 158,
+          "pct_resistant": 22.926829268292686
+        },
+        "dye uptake assay": {
+          "total": 54,
+          "resistant": 1,
+          "sensitive": 53,
+          "pct_resistant": 1.8518518518518516
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 35,
+          "resistant": 1,
+          "sensitive": 34,
+          "pct_resistant": 2.857142857142857
+        },
+        "PCR DNA hybridization assay": {
+          "total": 19,
+          "resistant": 6,
+          "sensitive": 13,
+          "pct_resistant": 31.57894736842105
+        },
+        "Cytopathic effect": {
+          "total": 8,
+          "resistant": 5,
+          "sensitive": 3,
+          "pct_resistant": 62.5
+        },
+        "GFP fluorescence reduction assay": {
+          "total": 5,
+          "resistant": 0,
+          "sensitive": 5,
+          "pct_resistant": 0.0
+        },
+        "yield reduction assay (ELVIRA)": {
+          "total": 5,
+          "resistant": 1,
+          "sensitive": 4,
+          "pct_resistant": 20.0
+        },
+        "TK functional kinetic assay": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "control_strain": {
+        "<MISSING / NOT PRESENT>": {
+          "total": 159,
+          "resistant": 34,
+          "sensitive": 125,
+          "pct_resistant": 21.38364779874214
+        },
+        "MacIntyre": {
+          "total": 73,
+          "resistant": 1,
+          "sensitive": 72,
+          "pct_resistant": 1.36986301369863
+        },
+        "KOS": {
+          "total": 59,
+          "resistant": 9,
+          "sensitive": 50,
+          "pct_resistant": 15.254237288135593
+        },
+        "HSV1-17": {
+          "total": 24,
+          "resistant": 10,
+          "sensitive": 14,
+          "pct_resistant": 41.66666666666667
+        },
+        "TAS": {
+          "total": 7,
+          "resistant": 2,
+          "sensitive": 5,
+          "pct_resistant": 28.57142857142857
+        },
+        "L2": {
+          "total": 5,
+          "resistant": 5,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "sc16": {
+          "total": 3,
+          "resistant": 0,
+          "sensitive": 3,
+          "pct_resistant": 0.0
+        },
+        "Strain17": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "strain 17": {
+          "total": 1,
+          "resistant": 0,
+          "sensitive": 1,
+          "pct_resistant": 0.0
+        }
+      },
+      "herpesdrg_phenotype_format": {
+        "Categorical String: 'Polymorphism'": {
+          "total": 198,
+          "resistant": 1,
+          "sensitive": 197,
+          "pct_resistant": 0.5050505050505051
+        },
+        "Numeric Fold-Change (e.g. 2.5, 5.0)": {
+          "total": 78,
+          "resistant": 39,
+          "sensitive": 39,
+          "pct_resistant": 50.0
+        },
+        "<Missing in HerpesDRG>": {
+          "total": 37,
+          "resistant": 3,
+          "sensitive": 34,
+          "pct_resistant": 8.108108108108109
+        },
+        "Categorical String: 'Resistant'": {
+          "total": 19,
+          "resistant": 19,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "resistance status confirmed in cell culture": {
+        "yes": {
+          "total": 304,
+          "resistant": 51,
+          "sensitive": 253,
+          "pct_resistant": 16.776315789473685
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 28,
+          "resistant": 11,
+          "sensitive": 17,
+          "pct_resistant": 39.285714285714285
+        }
+      },
+      "clinical susceptibility information available": {
+        "no": {
+          "total": 238,
+          "resistant": 37,
+          "sensitive": 201,
+          "pct_resistant": 15.546218487394958
+        },
+        "yes": {
+          "total": 56,
+          "resistant": 14,
+          "sensitive": 42,
+          "pct_resistant": 25.0
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 28,
+          "resistant": 11,
+          "sensitive": 17,
+          "pct_resistant": 39.285714285714285
+        },
+        "contradiction": {
+          "total": 10,
+          "resistant": 0,
+          "sensitive": 10,
+          "pct_resistant": 0.0
+        }
+      },
+      "All genes sequenced that may confer resistance?": {
+        "Yes": {
+          "total": 286,
+          "resistant": 35,
+          "sensitive": 251,
+          "pct_resistant": 12.237762237762238
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 23,
+          "resistant": 6,
+          "sensitive": 17,
+          "pct_resistant": 26.08695652173913
+        },
+        "No, Pol only": {
+          "total": 18,
+          "resistant": 16,
+          "sensitive": 2,
+          "pct_resistant": 88.88888888888889
+        },
+        "No access": {
+          "total": 5,
+          "resistant": 5,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "Resistance": {
+        "Sensitive": {
+          "total": 252,
+          "resistant": 0,
+          "sensitive": 252,
+          "pct_resistant": 0.0
+        },
+        "Resistant": {
+          "total": 54,
+          "resistant": 54,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 23,
+          "resistant": 6,
+          "sensitive": 17,
+          "pct_resistant": 26.08695652173913
+        },
+        "Sensitive/Resistant": {
+          "total": 2,
+          "resistant": 1,
+          "sensitive": 1,
+          "pct_resistant": 50.0
+        },
+        "Intermediate/Resistant": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      }
+    }
+  },
+  "UL30-Foscarnet": {
+    "total": 311,
+    "resistant": 33,
+    "sensitive": 278,
+    "columns": {
+      "strain_generation": {
+        "Isolated strain": {
+          "total": 216,
+          "resistant": 5,
+          "sensitive": 211,
+          "pct_resistant": 2.314814814814815
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 38,
+          "resistant": 2,
+          "sensitive": 36,
+          "pct_resistant": 5.263157894736842
+        },
+        "Lab induced strain": {
+          "total": 22,
+          "resistant": 11,
+          "sensitive": 11,
+          "pct_resistant": 50.0
+        },
+        "Marker Transfer": {
+          "total": 17,
+          "resistant": 9,
+          "sensitive": 8,
+          "pct_resistant": 52.94117647058824
+        },
+        "Recombinant BAC": {
+          "total": 12,
+          "resistant": 1,
+          "sensitive": 11,
+          "pct_resistant": 8.333333333333332
+        },
+        "Marker transfer": {
+          "total": 4,
+          "resistant": 3,
+          "sensitive": 1,
+          "pct_resistant": 75.0
+        },
+        "lab induced strain": {
+          "total": 2,
+          "resistant": 2,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "test_method": {
+        "PRA": {
+          "total": 185,
+          "resistant": 23,
+          "sensitive": 162,
+          "pct_resistant": 12.432432432432433
+        },
+        "dye uptake assay": {
+          "total": 51,
+          "resistant": 0,
+          "sensitive": 51,
+          "pct_resistant": 0.0
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 38,
+          "resistant": 2,
+          "sensitive": 36,
+          "pct_resistant": 5.263157894736842
+        },
+        "PCR DNA hybridization assay": {
+          "total": 18,
+          "resistant": 3,
+          "sensitive": 15,
+          "pct_resistant": 16.666666666666664
+        },
+        "Cytopathic effect": {
+          "total": 9,
+          "resistant": 5,
+          "sensitive": 4,
+          "pct_resistant": 55.55555555555556
+        },
+        "GFP fluorescence reduction assay": {
+          "total": 5,
+          "resistant": 0,
+          "sensitive": 5,
+          "pct_resistant": 0.0
+        },
+        "yield reduction assay (ELVIRA)": {
+          "total": 5,
+          "resistant": 0,
+          "sensitive": 5,
+          "pct_resistant": 0.0
+        }
+      },
+      "control_strain": {
+        "<MISSING / NOT PRESENT>": {
+          "total": 150,
+          "resistant": 17,
+          "sensitive": 133,
+          "pct_resistant": 11.333333333333332
+        },
+        "MacIntyre": {
+          "total": 73,
+          "resistant": 0,
+          "sensitive": 73,
+          "pct_resistant": 0.0
+        },
+        "KOS": {
+          "total": 56,
+          "resistant": 9,
+          "sensitive": 47,
+          "pct_resistant": 16.071428571428573
+        },
+        "HSV1-17": {
+          "total": 22,
+          "resistant": 3,
+          "sensitive": 19,
+          "pct_resistant": 13.636363636363635
+        },
+        "TAS": {
+          "total": 7,
+          "resistant": 2,
+          "sensitive": 5,
+          "pct_resistant": 28.57142857142857
+        },
+        "L2": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "Strain17": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "strain 17": {
+          "total": 1,
+          "resistant": 0,
+          "sensitive": 1,
+          "pct_resistant": 0.0
+        }
+      },
+      "herpesdrg_phenotype_format": {
+        "Categorical String: 'Polymorphism'": {
+          "total": 208,
+          "resistant": 1,
+          "sensitive": 207,
+          "pct_resistant": 0.4807692307692308
+        },
+        "Numeric Fold-Change (e.g. 2.5, 5.0)": {
+          "total": 52,
+          "resistant": 18,
+          "sensitive": 34,
+          "pct_resistant": 34.61538461538461
+        },
+        "<Missing in HerpesDRG>": {
+          "total": 40,
+          "resistant": 3,
+          "sensitive": 37,
+          "pct_resistant": 7.5
+        },
+        "Categorical String: 'Resistant'": {
+          "total": 11,
+          "resistant": 11,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "resistance status confirmed in cell culture": {
+        "yes": {
+          "total": 213,
+          "resistant": 24,
+          "sensitive": 189,
+          "pct_resistant": 11.267605633802818
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 98,
+          "resistant": 9,
+          "sensitive": 89,
+          "pct_resistant": 9.183673469387756
+        }
+      },
+      "clinical susceptibility information available": {
+        "no": {
+          "total": 182,
+          "resistant": 19,
+          "sensitive": 163,
+          "pct_resistant": 10.43956043956044
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 98,
+          "resistant": 9,
+          "sensitive": 89,
+          "pct_resistant": 9.183673469387756
+        },
+        "yes": {
+          "total": 30,
+          "resistant": 5,
+          "sensitive": 25,
+          "pct_resistant": 16.666666666666664
+        },
+        "contradiction": {
+          "total": 1,
+          "resistant": 0,
+          "sensitive": 1,
+          "pct_resistant": 0.0
+        }
+      },
+      "All genes sequenced that may confer resistance?": {
+        "Yes": {
+          "total": 201,
+          "resistant": 15,
+          "sensitive": 186,
+          "pct_resistant": 7.462686567164178
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 97,
+          "resistant": 8,
+          "sensitive": 89,
+          "pct_resistant": 8.24742268041237
+        },
+        "No, Pol only": {
+          "total": 12,
+          "resistant": 9,
+          "sensitive": 3,
+          "pct_resistant": 75.0
+        },
+        "No access": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "Resistance": {
+        "Sensitive": {
+          "total": 189,
+          "resistant": 0,
+          "sensitive": 189,
+          "pct_resistant": 0.0
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 97,
+          "resistant": 8,
+          "sensitive": 89,
+          "pct_resistant": 8.24742268041237
+        },
+        "Resistant": {
+          "total": 24,
+          "resistant": 24,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "Sensitive/Resistant": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      }
+    }
+  },
+  "UL23-Aciclovir": {
+    "total": 286,
+    "resistant": 120,
+    "sensitive": 166,
+    "columns": {
+      "strain_generation": {
+        "Isolated strain": {
+          "total": 182,
+          "resistant": 64,
+          "sensitive": 118,
+          "pct_resistant": 35.16483516483517
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 45,
+          "resistant": 14,
+          "sensitive": 31,
+          "pct_resistant": 31.11111111111111
+        },
+        "Lab induced strain": {
+          "total": 41,
+          "resistant": 30,
+          "sensitive": 11,
+          "pct_resistant": 73.17073170731707
+        },
+        "Marker Transfer": {
+          "total": 9,
+          "resistant": 9,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "Recombinant BAC": {
+          "total": 7,
+          "resistant": 2,
+          "sensitive": 5,
+          "pct_resistant": 28.57142857142857
+        },
+        "Marker transfer": {
+          "total": 2,
+          "resistant": 1,
+          "sensitive": 1,
+          "pct_resistant": 50.0
+        }
+      },
+      "test_method": {
+        "PRA": {
+          "total": 110,
+          "resistant": 46,
+          "sensitive": 64,
+          "pct_resistant": 41.81818181818181
+        },
+        "dye uptake assay": {
+          "total": 68,
+          "resistant": 17,
+          "sensitive": 51,
+          "pct_resistant": 25.0
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 45,
+          "resistant": 14,
+          "sensitive": 31,
+          "pct_resistant": 31.11111111111111
+        },
+        "TK functional kinetic assay": {
+          "total": 25,
+          "resistant": 15,
+          "sensitive": 10,
+          "pct_resistant": 60.0
+        },
+        "PCR DNA hybridization assay": {
+          "total": 19,
+          "resistant": 17,
+          "sensitive": 2,
+          "pct_resistant": 89.47368421052632
+        },
+        "Cytopathic effect": {
+          "total": 7,
+          "resistant": 5,
+          "sensitive": 2,
+          "pct_resistant": 71.42857142857143
+        },
+        "ICP10 Luciferase assay": {
+          "total": 6,
+          "resistant": 1,
+          "sensitive": 5,
+          "pct_resistant": 16.666666666666664
+        },
+        "yield reduction assay (ELVIRA)": {
+          "total": 5,
+          "resistant": 4,
+          "sensitive": 1,
+          "pct_resistant": 80.0
+        },
+        "indirect ELISA": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "control_strain": {
+        "<MISSING / NOT PRESENT>": {
+          "total": 166,
+          "resistant": 70,
+          "sensitive": 96,
+          "pct_resistant": 42.168674698795186
+        },
+        "KOS": {
+          "total": 52,
+          "resistant": 29,
+          "sensitive": 23,
+          "pct_resistant": 55.769230769230774
+        },
+        "MacIntyre": {
+          "total": 28,
+          "resistant": 1,
+          "sensitive": 27,
+          "pct_resistant": 3.571428571428571
+        },
+        "JQ352247.1": {
+          "total": 15,
+          "resistant": 6,
+          "sensitive": 9,
+          "pct_resistant": 40.0
+        },
+        "sc16": {
+          "total": 8,
+          "resistant": 1,
+          "sensitive": 7,
+          "pct_resistant": 12.5
+        },
+        "A2": {
+          "total": 5,
+          "resistant": 5,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "TAS": {
+          "total": 3,
+          "resistant": 2,
+          "sensitive": 1,
+          "pct_resistant": 66.66666666666666
+        },
+        "HM3PP": {
+          "total": 2,
+          "resistant": 2,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "Strain 17": {
+          "total": 2,
+          "resistant": 0,
+          "sensitive": 2,
+          "pct_resistant": 0.0
+        },
+        "F": {
+          "total": 1,
+          "resistant": 0,
+          "sensitive": 1,
+          "pct_resistant": 0.0
+        },
+        "Mackityre": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "L2": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "co-occurs with resistant mutation": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "strain 17": {
+          "total": 1,
+          "resistant": 1,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "herpesdrg_phenotype_format": {
+        "Categorical String: 'Polymorphism'": {
+          "total": 106,
+          "resistant": 1,
+          "sensitive": 105,
+          "pct_resistant": 0.9433962264150944
+        },
+        "Categorical String: 'Resistant'": {
+          "total": 68,
+          "resistant": 68,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "Numeric Fold-Change (e.g. 2.5, 5.0)": {
+          "total": 66,
+          "resistant": 37,
+          "sensitive": 29,
+          "pct_resistant": 56.060606060606055
+        },
+        "<Missing in HerpesDRG>": {
+          "total": 46,
+          "resistant": 14,
+          "sensitive": 32,
+          "pct_resistant": 30.434782608695656
+        }
+      },
+      "resistance status confirmed in cell culture": {
+        "yes": {
+          "total": 262,
+          "resistant": 108,
+          "sensitive": 154,
+          "pct_resistant": 41.221374045801525
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 21,
+          "resistant": 9,
+          "sensitive": 12,
+          "pct_resistant": 42.857142857142854
+        },
+        "no": {
+          "total": 3,
+          "resistant": 3,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "clinical susceptibility information available": {
+        "no": {
+          "total": 180,
+          "resistant": 52,
+          "sensitive": 128,
+          "pct_resistant": 28.888888888888886
+        },
+        "yes": {
+          "total": 81,
+          "resistant": 59,
+          "sensitive": 22,
+          "pct_resistant": 72.8395061728395
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 21,
+          "resistant": 9,
+          "sensitive": 12,
+          "pct_resistant": 42.857142857142854
+        },
+        "contradiction": {
+          "total": 4,
+          "resistant": 0,
+          "sensitive": 4,
+          "pct_resistant": 0.0
+        }
+      },
+      "All genes sequenced that may confer resistance?": {
+        "Yes": {
+          "total": 228,
+          "resistant": 83,
+          "sensitive": 145,
+          "pct_resistant": 36.40350877192983
+        },
+        "No, TK only": {
+          "total": 35,
+          "resistant": 26,
+          "sensitive": 9,
+          "pct_resistant": 74.28571428571429
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 21,
+          "resistant": 9,
+          "sensitive": 12,
+          "pct_resistant": 42.857142857142854
+        },
+        "No access": {
+          "total": 2,
+          "resistant": 2,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        }
+      },
+      "Resistance": {
+        "Sensitive": {
+          "total": 153,
+          "resistant": 0,
+          "sensitive": 153,
+          "pct_resistant": 0.0
+        },
+        "Resistant": {
+          "total": 107,
+          "resistant": 107,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "<MISSING / NOT PRESENT>": {
+          "total": 21,
+          "resistant": 9,
+          "sensitive": 12,
+          "pct_resistant": 42.857142857142854
+        },
+        "Intermediate": {
+          "total": 4,
+          "resistant": 4,
+          "sensitive": 0,
+          "pct_resistant": 100.0
+        },
+        "Sensitive/Resistant": {
+          "total": 1,
+          "resistant": 0,
+          "sensitive": 1,
+          "pct_resistant": 0.0
+        }
+      }
+    }
+  }
+}

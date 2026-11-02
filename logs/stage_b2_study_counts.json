@@ -1,0 +1,1268 @@
+{
+  "UL30-Aciclovir": {
+    "total_rows": 332,
+    "resistant_rows": 62,
+    "sensitive_rows": 270,
+    "total_studies": 48,
+    "single_class_studies_count": 34,
+    "mixed_studies_count": 14,
+    "fraction_rows_from_single_class_studies": 0.3855421686746988,
+    "rows_from_all_sensitive_studies": 95,
+    "rows_from_all_resistant_studies": 33,
+    "rows_from_mixed_studies": 204,
+    "studies": [
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00977-15",
+        "total": 74,
+        "resistant": 1,
+        "sensitive": 73,
+        "pct_resistant": 1.3513513513513513,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00669-10",
+        "total": 38,
+        "resistant": 1,
+        "sensitive": 37,
+        "pct_resistant": 2.631578947368421,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "PMID:37453453",
+        "total": 27,
+        "resistant": 0,
+        "sensitive": 27,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.3851/IMP1852",
+        "total": 26,
+        "resistant": 0,
+        "sensitive": 26,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2013.09.012",
+        "total": 24,
+        "resistant": 2,
+        "sensitive": 22,
+        "pct_resistant": 8.333333333333332,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2003.08.018",
+        "total": 14,
+        "resistant": 3,
+        "sensitive": 11,
+        "pct_resistant": 21.428571428571427,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003",
+        "total": 14,
+        "resistant": 9,
+        "sensitive": 5,
+        "pct_resistant": 64.28571428571429,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.3851/IMP1870",
+        "total": 8,
+        "resistant": 1,
+        "sensitive": 7,
+        "pct_resistant": 12.5,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2010.03.002",
+        "total": 7,
+        "resistant": 0,
+        "sensitive": 7,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jix042",
+        "total": 6,
+        "resistant": 1,
+        "sensitive": 5,
+        "pct_resistant": 16.666666666666664,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.49.2.606-611.2005",
+        "total": 6,
+        "resistant": 3,
+        "sensitive": 3,
+        "pct_resistant": 50.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2019.05.012",
+        "total": 6,
+        "resistant": 0,
+        "sensitive": 6,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2021.105166",
+        "total": 5,
+        "resistant": 0,
+        "sensitive": 5,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:27309375",
+        "total": 5,
+        "resistant": 0,
+        "sensitive": 5,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1177/135965350400900413",
+        "total": 5,
+        "resistant": 1,
+        "sensitive": 4,
+        "pct_resistant": 20.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00390-21",
+        "total": 5,
+        "resistant": 1,
+        "sensitive": 4,
+        "pct_resistant": 20.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1134/S0026893310030118",
+        "total": 5,
+        "resistant": 5,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1177/135965350701200502",
+        "total": 4,
+        "resistant": 3,
+        "sensitive": 1,
+        "pct_resistant": 75.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/jmv.28985",
+        "total": 4,
+        "resistant": 0,
+        "sensitive": 4,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jix605",
+        "total": 4,
+        "resistant": 4,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.4161/viru.1.6.13806",
+        "total": 3,
+        "resistant": 0,
+        "sensitive": 3,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2014.08.013",
+        "total": 3,
+        "resistant": 0,
+        "sensitive": 3,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1099/0022-1317-81-3-639",
+        "total": 3,
+        "resistant": 0,
+        "sensitive": 3,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.47.5.1707-1713.2003",
+        "total": 3,
+        "resistant": 3,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/j.1460-2075.1987.tb04735.x",
+        "total": 3,
+        "resistant": 3,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.7883/yoken.66.404",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.64.12.5883-5890.1990",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jiad184",
+        "total": 2,
+        "resistant": 1,
+        "sensitive": 1,
+        "pct_resistant": 50.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jit019",
+        "total": 2,
+        "resistant": 1,
+        "sensitive": 1,
+        "pct_resistant": 50.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/S0166-3542(97)00054-5",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2013.09.008",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1006/viro.1993.1439",
+        "total": 2,
+        "resistant": 1,
+        "sensitive": 1,
+        "pct_resistant": 50.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1073/pnas.85.18.6672",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.jcv.2012.09.004",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2021.105046",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2014.03.015",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/jmv.10175",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1074/jbc.273.37.24075",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1074/jbc.271.46.29245",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/ve/veae101",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.03360-14",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1099/vir.0.18880-0",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/jpids/pis009",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/aac.00110-24",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.78.2.650-657.2004",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:17713155\n19691467",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:26055375",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:28453848",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      }
+    ]
+  },
+  "UL30-Foscarnet": {
+    "total_rows": 311,
+    "resistant_rows": 33,
+    "sensitive_rows": 278,
+    "total_studies": 45,
+    "single_class_studies_count": 37,
+    "mixed_studies_count": 8,
+    "fraction_rows_from_single_class_studies": 0.7684887459807074,
+    "rows_from_all_sensitive_studies": 220,
+    "rows_from_all_resistant_studies": 19,
+    "rows_from_mixed_studies": 72,
+    "studies": [
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00977-15",
+        "total": 74,
+        "resistant": 0,
+        "sensitive": 74,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00669-10",
+        "total": 38,
+        "resistant": 1,
+        "sensitive": 37,
+        "pct_resistant": 2.631578947368421,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "PMID:37453453",
+        "total": 29,
+        "resistant": 0,
+        "sensitive": 29,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.3851/IMP1852",
+        "total": 26,
+        "resistant": 0,
+        "sensitive": 26,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2013.09.012",
+        "total": 23,
+        "resistant": 0,
+        "sensitive": 23,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2003.08.018",
+        "total": 13,
+        "resistant": 0,
+        "sensitive": 13,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.77.14.7820-7829.2003",
+        "total": 11,
+        "resistant": 3,
+        "sensitive": 8,
+        "pct_resistant": 27.27272727272727,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.3851/IMP1870",
+        "total": 8,
+        "resistant": 0,
+        "sensitive": 8,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2010.03.002",
+        "total": 7,
+        "resistant": 0,
+        "sensitive": 7,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00390-21",
+        "total": 6,
+        "resistant": 0,
+        "sensitive": 6,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jix042",
+        "total": 6,
+        "resistant": 1,
+        "sensitive": 5,
+        "pct_resistant": 16.666666666666664,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2019.05.012",
+        "total": 6,
+        "resistant": 0,
+        "sensitive": 6,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1177/135965350701200502",
+        "total": 6,
+        "resistant": 3,
+        "sensitive": 3,
+        "pct_resistant": 50.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2021.105166",
+        "total": 5,
+        "resistant": 0,
+        "sensitive": 5,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1177/135965350400900413",
+        "total": 5,
+        "resistant": 0,
+        "sensitive": 5,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:27309375",
+        "total": 5,
+        "resistant": 0,
+        "sensitive": 5,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.49.2.606-611.2005",
+        "total": 4,
+        "resistant": 3,
+        "sensitive": 1,
+        "pct_resistant": 75.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.4161/viru.1.6.13806",
+        "total": 3,
+        "resistant": 0,
+        "sensitive": 3,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1099/0022-1317-81-3-639",
+        "total": 3,
+        "resistant": 0,
+        "sensitive": 3,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/j.1460-2075.1987.tb04735.x",
+        "total": 3,
+        "resistant": 1,
+        "sensitive": 2,
+        "pct_resistant": 33.33333333333333,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1006/viro.1993.1439",
+        "total": 2,
+        "resistant": 1,
+        "sensitive": 1,
+        "pct_resistant": 50.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.64.12.5883-5890.1990",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/S0166-3542(97)00054-5",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jix605",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jit019",
+        "total": 2,
+        "resistant": 1,
+        "sensitive": 1,
+        "pct_resistant": 50.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/jmv.10175",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.jcv.2012.09.004",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2021.105046",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2014.03.015",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1073/pnas.85.18.6672",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.03360-14",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/jpids/pis009",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.47.5.1707-1713.2003",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jiad184",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1074/jbc.273.37.24075",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/ve/veae101",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1074/jbc.271.46.29245",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/aac.00110-24",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.78.2.650-657.2004",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1134/S0026893310030118",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.7883/yoken.66.404",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:17713155 19691467",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:12367650",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:37224525",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:37586184",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      }
+    ]
+  },
+  "UL23-Aciclovir": {
+    "total_rows": 286,
+    "resistant_rows": 120,
+    "sensitive_rows": 166,
+    "total_studies": 60,
+    "single_class_studies_count": 43,
+    "mixed_studies_count": 17,
+    "fraction_rows_from_single_class_studies": 0.3076923076923077,
+    "rows_from_all_sensitive_studies": 37,
+    "rows_from_all_resistant_studies": 51,
+    "rows_from_mixed_studies": 198,
+    "studies": [
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00977-15",
+        "total": 28,
+        "resistant": 1,
+        "sensitive": 27,
+        "pct_resistant": 3.571428571428571,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2019.05.012",
+        "total": 21,
+        "resistant": 1,
+        "sensitive": 20,
+        "pct_resistant": 4.761904761904762,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "PMID:37453453",
+        "total": 20,
+        "resistant": 2,
+        "sensitive": 18,
+        "pct_resistant": 10.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.47.5.1707-1713.2003",
+        "total": 19,
+        "resistant": 18,
+        "sensitive": 1,
+        "pct_resistant": 94.73684210526315,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00669-10",
+        "total": 18,
+        "resistant": 4,
+        "sensitive": 14,
+        "pct_resistant": 22.22222222222222,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2003.08.018",
+        "total": 16,
+        "resistant": 4,
+        "sensitive": 12,
+        "pct_resistant": 25.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.jviromet.2017.05.013",
+        "total": 15,
+        "resistant": 6,
+        "sensitive": 9,
+        "pct_resistant": 40.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1086/606028",
+        "total": 12,
+        "resistant": 10,
+        "sensitive": 2,
+        "pct_resistant": 83.33333333333334,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2010.03.002",
+        "total": 9,
+        "resistant": 4,
+        "sensitive": 5,
+        "pct_resistant": 44.44444444444444,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2008.01.153",
+        "total": 8,
+        "resistant": 0,
+        "sensitive": 8,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2014.08.013",
+        "total": 8,
+        "resistant": 1,
+        "sensitive": 7,
+        "pct_resistant": 12.5,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.jviromet.2012.12.001",
+        "total": 6,
+        "resistant": 6,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/aac.00110-24",
+        "total": 6,
+        "resistant": 5,
+        "sensitive": 1,
+        "pct_resistant": 83.33333333333334,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.jcv.2011.06.009",
+        "total": 6,
+        "resistant": 1,
+        "sensitive": 5,
+        "pct_resistant": 16.666666666666664,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.3851/IMP1852",
+        "total": 5,
+        "resistant": 0,
+        "sensitive": 5,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:35033543",
+        "total": 5,
+        "resistant": 4,
+        "sensitive": 1,
+        "pct_resistant": 80.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1038/srep29903",
+        "total": 5,
+        "resistant": 0,
+        "sensitive": 5,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1086/515626",
+        "total": 5,
+        "resistant": 5,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2013.09.012",
+        "total": 5,
+        "resistant": 1,
+        "sensitive": 4,
+        "pct_resistant": 20.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1177/135965350400900413",
+        "total": 4,
+        "resistant": 3,
+        "sensitive": 1,
+        "pct_resistant": 75.0,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/0042-6822(88)90308-X",
+        "total": 4,
+        "resistant": 4,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2006.01.010",
+        "total": 4,
+        "resistant": 4,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1038/s41598-022-05188-w",
+        "total": 3,
+        "resistant": 2,
+        "sensitive": 1,
+        "pct_resistant": 66.66666666666666,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/S0166-3542(02)00131-6",
+        "total": 3,
+        "resistant": 3,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:10882609",
+        "total": 3,
+        "resistant": 0,
+        "sensitive": 3,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jix042",
+        "total": 3,
+        "resistant": 2,
+        "sensitive": 1,
+        "pct_resistant": 66.66666666666666,
+        "study_type": "Mixed (Both Classes)"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2014.03.015",
+        "total": 3,
+        "resistant": 3,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/(SICI)1096-9071(199810)56:2<151::AID-JMV9>3.0.CO;2-7",
+        "total": 2,
+        "resistant": 0,
+        "sensitive": 2,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:37586184",
+        "total": 2,
+        "resistant": 0,
+        "sensitive": 2,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2013.09.008",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1086/590668",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.79.9.5863-5869.2005",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.3851/IMP3279",
+        "total": 2,
+        "resistant": 0,
+        "sensitive": 2,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:36309081",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:31158412",
+        "total": 2,
+        "resistant": 2,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:29848849",
+        "total": 2,
+        "resistant": 0,
+        "sensitive": 2,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/jha2.899",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1086/515375",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1046/j.1432-1327.1998.2550472.x",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.jcv.2012.09.004",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.jcv.2004.04.002",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2019.06.007",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1002/jmv.28985",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1016/j.antiviral.2012.09.016",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1086/315696",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1134/S0026893310030118",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JCM.02247-12",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/JVI.75.7.3105-3110.2001",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/jac/dkac297",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/infdis/jit437",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1093/jpids/pis009",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "DOI:doi.org/10.1128/AAC.00889-06",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:27309375",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:26055375",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:25218782",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:20211650",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "PMID:15827202\n2833027",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:15827202",
+        "total": 1,
+        "resistant": 1,
+        "sensitive": 0,
+        "pct_resistant": 100.0,
+        "study_type": "All-Resistant"
+      },
+      {
+        "study_id": "PMID:31152759",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      },
+      {
+        "study_id": "Unassigned_or_Novel_Curation",
+        "total": 1,
+        "resistant": 0,
+        "sensitive": 1,
+        "pct_resistant": 0.0,
+        "study_type": "All-Sensitive"
+      }
+    ]
+  }
+}
