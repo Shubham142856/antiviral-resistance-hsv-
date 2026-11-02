@@ -1,0 +1,675 @@
+{
+  "protocol": {
+    "document": "docs/STEP1_ASCERTAINMENT_CONTROL_PREREGISTRATION.md",
+    "commit": "756ffe6",
+    "sha256": "298c59cbe64e06aece43d179287a55190f70e34d9a36194ed9d58adadca22937"
+  },
+  "targets": {
+    "UL30-Aciclovir": {
+      "role": "Primary Target",
+      "full_cohort": {
+        "where": {
+          "n": 332,
+          "pos": 62,
+          "neg": 270,
+          "unique_positions": 290,
+          "auroc": 0.8605734767025087,
+          "ci_95": [
+            0.7923938181753316,
+            0.9120810268639987
+          ]
+        },
+        "constraint_only": {
+          "n": 332,
+          "pos": 62,
+          "neg": 270,
+          "unique_positions": 290,
+          "auroc": 0.7370967741935484,
+          "ci_95": [
+            0.6562913484915934,
+            0.8118807159232484
+          ]
+        },
+        "proximity_only": {
+          "n": 332,
+          "pos": 62,
+          "neg": 270,
+          "unique_positions": 290,
+          "auroc": 0.8966547192353644,
+          "ci_95": [
+            0.8449790767137872,
+            0.9391638503999099
+          ]
+        }
+      },
+      "strata": {
+        "measured_fold_change_subset": {
+          "where": {
+            "n": 82,
+            "pos": 41,
+            "neg": 41,
+            "unique_positions": 76,
+            "auroc": 0.8497917906008329,
+            "ci_95": [
+              0.7421383219954649,
+              0.9310053892146318
+            ]
+          },
+          "constraint_only": {
+            "n": 82,
+            "pos": 41,
+            "neg": 41,
+            "unique_positions": 76,
+            "auroc": 0.748661511005354,
+            "ci_95": [
+              0.6248258596737437,
+              0.8534077435944813
+            ]
+          },
+          "proximity_only": {
+            "n": 82,
+            "pos": 41,
+            "neg": 41,
+            "unique_positions": 76,
+            "auroc": 0.8283759666864962,
+            "ci_95": [
+              0.724071391317804,
+              0.9110662425570161
+            ]
+          },
+          "delta_vs_full": -0.010781686101675847,
+          "decision": "PASS"
+        },
+        "Recombinant / Lab-Validated": {
+          "where": {
+            "n": 69,
+            "pos": 44,
+            "neg": 25,
+            "unique_positions": 62,
+            "auroc": 0.8622727272727273,
+            "ci_95": [
+              0.7624923780487805,
+              0.9389043793320732
+            ]
+          },
+          "constraint_only": {
+            "n": 69,
+            "pos": 44,
+            "neg": 25,
+            "unique_positions": 62,
+            "auroc": 0.8286363636363636,
+            "ci_95": [
+              0.7194106934731935,
+              0.9150833333333334
+            ]
+          },
+          "proximity_only": {
+            "n": 69,
+            "pos": 44,
+            "neg": 25,
+            "unique_positions": 62,
+            "auroc": 0.8013636363636363,
+            "ci_95": [
+              0.6851809767549262,
+              0.8962151875901876
+            ]
+          },
+          "delta_vs_full": 0.00169925057021858,
+          "decision": "PASS"
+        },
+        "Clinical Isolate": {
+          "where": {
+            "n": 228,
+            "pos": 17,
+            "neg": 211,
+            "unique_positions": 203,
+            "auroc": 0.7805965988291051,
+            "ci_95": [
+              0.6546238379679169,
+              0.8887729536258947
+            ]
+          },
+          "constraint_only": {
+            "n": 228,
+            "pos": 17,
+            "neg": 211,
+            "unique_positions": 203,
+            "auroc": 0.6353498745469751,
+            "ci_95": [
+              0.4774349783395836,
+              0.7829504794144901
+            ]
+          },
+          "proximity_only": {
+            "n": 228,
+            "pos": 17,
+            "neg": 211,
+            "unique_positions": 203,
+            "auroc": 0.839141343741288,
+            "ci_95": [
+              0.7014085515303682,
+              0.9342875274791203
+            ]
+          },
+          "delta_vs_full": -0.07997687787340357,
+          "decision": "INCONCLUSIVE"
+        },
+        "PRA": {
+          "where": {
+            "n": 203,
+            "pos": 47,
+            "neg": 156,
+            "unique_positions": 180,
+            "auroc": 0.8734997272231315,
+            "ci_95": [
+              0.7916846745733941,
+              0.9349402469089743
+            ]
+          },
+          "constraint_only": {
+            "n": 203,
+            "pos": 47,
+            "neg": 156,
+            "unique_positions": 180,
+            "auroc": 0.7559328968903437,
+            "ci_95": [
+              0.6567131125229574,
+              0.838936210332054
+            ]
+          },
+          "proximity_only": {
+            "n": 203,
+            "pos": 47,
+            "neg": 156,
+            "unique_positions": 180,
+            "auroc": 0.8950490998363339,
+            "ci_95": [
+              0.8304053997194951,
+              0.9449385101856508
+            ]
+          },
+          "delta_vs_full": 0.012926250520622795,
+          "decision": "PASS"
+        },
+        "dye uptake assay": {
+          "where": {
+            "n": 54,
+            "pos": 1,
+            "neg": 53,
+            "unique_positions": 52,
+            "auroc": 0.8867924528301887,
+            "ci_95": [
+              0.78763197586727,
+              0.9636363636363636
+            ]
+          },
+          "constraint_only": {
+            "n": 54,
+            "pos": 1,
+            "neg": 53,
+            "unique_positions": 52,
+            "auroc": 0.9056603773584906,
+            "ci_95": [
+              0.8113207547169811,
+              0.9807692307692307
+            ]
+          },
+          "proximity_only": {
+            "n": 54,
+            "pos": 1,
+            "neg": 53,
+            "unique_positions": 52,
+            "auroc": 0.5660377358490566,
+            "ci_95": [
+              0.42459818308874914,
+              0.6834897959183671
+            ]
+          },
+          "delta_vs_full": 0.026218976127679983,
+          "decision": "UNDERPOWERED (1 events)"
+        }
+      }
+    },
+    "UL30-Foscarnet": {
+      "role": "Secondary Target",
+      "full_cohort": {
+        "where": {
+          "n": 311,
+          "pos": 33,
+          "neg": 278,
+          "unique_positions": 271,
+          "auroc": 0.9097449313276652,
+          "ci_95": [
+            0.8581967674748748,
+            0.9540154453480874
+          ]
+        },
+        "constraint_only": {
+          "n": 311,
+          "pos": 33,
+          "neg": 278,
+          "unique_positions": 271,
+          "auroc": 0.7940919991279703,
+          "ci_95": [
+            0.6960358728237485,
+            0.8788560263085736
+          ]
+        },
+        "proximity_only": {
+          "n": 311,
+          "pos": 33,
+          "neg": 278,
+          "unique_positions": 271,
+          "auroc": 0.9305646391977328,
+          "ci_95": [
+            0.8939493224746784,
+            0.9616485516886619
+          ]
+        }
+      },
+      "strata": {
+        "measured_fold_change_subset": {
+          "where": {
+            "n": 55,
+            "pos": 19,
+            "neg": 36,
+            "unique_positions": 52,
+            "auroc": 0.8552631578947368,
+            "ci_95": [
+              0.760207753266224,
+              0.9418939393939394
+            ]
+          },
+          "constraint_only": {
+            "n": 55,
+            "pos": 19,
+            "neg": 36,
+            "unique_positions": 52,
+            "auroc": 0.7690058479532164,
+            "ci_95": [
+              0.6184166073968705,
+              0.8941889483065953
+            ]
+          },
+          "proximity_only": {
+            "n": 55,
+            "pos": 19,
+            "neg": 36,
+            "unique_positions": 52,
+            "auroc": 0.8757309941520468,
+            "ci_95": [
+              0.7812722816399287,
+              0.9521800108932462
+            ]
+          },
+          "delta_vs_full": -0.05448177343292837,
+          "decision": "INCONCLUSIVE"
+        },
+        "Recombinant / Lab-Validated": {
+          "where": {
+            "n": 62,
+            "pos": 29,
+            "neg": 33,
+            "unique_positions": 57,
+            "auroc": 0.7978056426332288,
+            "ci_95": [
+              0.6794824660633484,
+              0.9027823464912281
+            ]
+          },
+          "constraint_only": {
+            "n": 62,
+            "pos": 29,
+            "neg": 33,
+            "unique_positions": 57,
+            "auroc": 0.7434691745036572,
+            "ci_95": [
+              0.6218263064335046,
+              0.860539527063094
+            ]
+          },
+          "proximity_only": {
+            "n": 62,
+            "pos": 29,
+            "neg": 33,
+            "unique_positions": 57,
+            "auroc": 0.7873563218390804,
+            "ci_95": [
+              0.6833746807546548,
+              0.885778716504523
+            ]
+          },
+          "delta_vs_full": -0.11193928869443637,
+          "decision": "ARTIFACT"
+        },
+        "Clinical Isolate": {
+          "where": {
+            "n": 211,
+            "pos": 2,
+            "neg": 209,
+            "unique_positions": 188,
+            "auroc": 0.8995215311004785,
+            "ci_95": [
+              0.7586567732115678,
+              1.0
+            ]
+          },
+          "constraint_only": {
+            "n": 211,
+            "pos": 2,
+            "neg": 209,
+            "unique_positions": 188,
+            "auroc": 0.8923444976076556,
+            "ci_95": [
+              0.7986384976525821,
+              0.9752136594256441
+            ]
+          },
+          "proximity_only": {
+            "n": 211,
+            "pos": 2,
+            "neg": 209,
+            "unique_positions": 188,
+            "auroc": 0.812200956937799,
+            "ci_95": [
+              0.5823861089484983,
+              1.0
+            ]
+          },
+          "delta_vs_full": -0.010223400227186707,
+          "decision": "UNDERPOWERED (2 events)"
+        },
+        "PRA": {
+          "where": {
+            "n": 183,
+            "pos": 23,
+            "neg": 160,
+            "unique_positions": 163,
+            "auroc": 0.8978260869565218,
+            "ci_95": [
+              0.8385128348214286,
+              0.9470321582395161
+            ]
+          },
+          "constraint_only": {
+            "n": 183,
+            "pos": 23,
+            "neg": 160,
+            "unique_positions": 163,
+            "auroc": 0.7899456521739131,
+            "ci_95": [
+              0.6800805084867996,
+              0.8839737153919538
+            ]
+          },
+          "proximity_only": {
+            "n": 183,
+            "pos": 23,
+            "neg": 160,
+            "unique_positions": 163,
+            "auroc": 0.9126358695652175,
+            "ci_95": [
+              0.8605102974828376,
+              0.9562161160039492
+            ]
+          },
+          "delta_vs_full": -0.011918844371143433,
+          "decision": "PASS"
+        },
+        "dye uptake assay": {
+          "where": {
+            "n": 51,
+            "pos": 0,
+            "neg": 51,
+            "auroc": null,
+            "ci_95": null,
+            "status": "Undefined (single class)"
+          },
+          "constraint_only": {
+            "n": 51,
+            "pos": 0,
+            "neg": 51,
+            "auroc": null,
+            "ci_95": null,
+            "status": "Undefined (single class)"
+          },
+          "proximity_only": {
+            "n": 51,
+            "pos": 0,
+            "neg": 51,
+            "auroc": null,
+            "ci_95": null,
+            "status": "Undefined (single class)"
+          },
+          "delta_vs_full": null,
+          "decision": "UNDERPOWERED (0 events)"
+        }
+      }
+    },
+    "UL23-Aciclovir": {
+      "role": "Secondary Target",
+      "full_cohort": {
+        "where": {
+          "n": 286,
+          "pos": 120,
+          "neg": 166,
+          "unique_positions": 210,
+          "auroc": 0.7265060240963855,
+          "ci_95": [
+            0.6538976040125914,
+            0.7952000511236207
+          ]
+        },
+        "constraint_only": {
+          "n": 286,
+          "pos": 120,
+          "neg": 166,
+          "unique_positions": 210,
+          "auroc": 0.5636546184738955,
+          "ci_95": [
+            0.47595117519119595,
+            0.6540733998294209
+          ]
+        },
+        "proximity_only": {
+          "n": 286,
+          "pos": 120,
+          "neg": 166,
+          "unique_positions": 210,
+          "auroc": 0.7617971887550201,
+          "ci_95": [
+            0.6948068968874891,
+            0.8298813823682176
+          ]
+        }
+      },
+      "strata": {
+        "measured_fold_change_subset": {
+          "where": {
+            "n": 75,
+            "pos": 44,
+            "neg": 31,
+            "unique_positions": 67,
+            "auroc": 0.7730938416422287,
+            "ci_95": [
+              0.6543976244343892,
+              0.868061755952381
+            ]
+          },
+          "constraint_only": {
+            "n": 75,
+            "pos": 44,
+            "neg": 31,
+            "unique_positions": 67,
+            "auroc": 0.6088709677419355,
+            "ci_95": [
+              0.45841505642954855,
+              0.7411066784869977
+            ]
+          },
+          "proximity_only": {
+            "n": 75,
+            "pos": 44,
+            "neg": 31,
+            "unique_positions": 67,
+            "auroc": 0.7994868035190617,
+            "ci_95": [
+              0.6859921676098147,
+              0.8936853579747117
+            ]
+          },
+          "delta_vs_full": 0.04658781754584318,
+          "decision": "PASS"
+        },
+        "Recombinant / Lab-Validated": {
+          "where": {
+            "n": 79,
+            "pos": 55,
+            "neg": 24,
+            "unique_positions": 64,
+            "auroc": 0.7125,
+            "ci_95": [
+              0.5759807924317325,
+              0.8170130657327586
+            ]
+          },
+          "constraint_only": {
+            "n": 79,
+            "pos": 55,
+            "neg": 24,
+            "unique_positions": 64,
+            "auroc": 0.6231060606060607,
+            "ci_95": [
+              0.4878428028118807,
+              0.745920106265794
+            ]
+          },
+          "proximity_only": {
+            "n": 79,
+            "pos": 55,
+            "neg": 24,
+            "unique_positions": 64,
+            "auroc": 0.728030303030303,
+            "ci_95": [
+              0.5931895253184315,
+              0.840357730263158
+            ]
+          },
+          "delta_vs_full": -0.014006024096385516,
+          "decision": "PASS"
+        },
+        "Clinical Isolate": {
+          "where": {
+            "n": 162,
+            "pos": 51,
+            "neg": 111,
+            "unique_positions": 138,
+            "auroc": 0.7222222222222222,
+            "ci_95": [
+              0.6060287563667232,
+              0.8188794181000597
+            ]
+          },
+          "constraint_only": {
+            "n": 162,
+            "pos": 51,
+            "neg": 111,
+            "unique_positions": 138,
+            "auroc": 0.5309132662073839,
+            "ci_95": [
+              0.39810463121783873,
+              0.6542441014867485
+            ]
+          },
+          "proximity_only": {
+            "n": 162,
+            "pos": 51,
+            "neg": 111,
+            "unique_positions": 138,
+            "auroc": 0.7532238120473415,
+            "ci_95": [
+              0.6448985782184642,
+              0.8609093405038372
+            ]
+          },
+          "delta_vs_full": -0.004283801874163329,
+          "decision": "PASS"
+        },
+        "PRA": {
+          "where": {
+            "n": 102,
+            "pos": 41,
+            "neg": 61,
+            "unique_positions": 91,
+            "auroc": 0.757297081167533,
+            "ci_95": [
+              0.6370860323239554,
+              0.8644296068024883
+            ]
+          },
+          "constraint_only": {
+            "n": 102,
+            "pos": 41,
+            "neg": 61,
+            "unique_positions": 91,
+            "auroc": 0.583766493402639,
+            "ci_95": [
+              0.4473996427070198,
+              0.726512484374509
+            ]
+          },
+          "proximity_only": {
+            "n": 102,
+            "pos": 41,
+            "neg": 61,
+            "unique_positions": 91,
+            "auroc": 0.7632946821271491,
+            "ci_95": [
+              0.6404293548206591,
+              0.8692599349550031
+            ]
+          },
+          "delta_vs_full": 0.030791057071147487,
+          "decision": "PASS"
+        },
+        "dye uptake assay": {
+          "where": {
+            "n": 67,
+            "pos": 16,
+            "neg": 51,
+            "unique_positions": 64,
+            "auroc": 0.7107843137254901,
+            "ci_95": [
+              0.525083857442348,
+              0.8552228618421053
+            ]
+          },
+          "constraint_only": {
+            "n": 67,
+            "pos": 16,
+            "neg": 51,
+            "unique_positions": 64,
+            "auroc": 0.47916666666666663,
+            "ci_95": [
+              0.2911519320843092,
+              0.6567685574229691
+            ]
+          },
+          "proximity_only": {
+            "n": 67,
+            "pos": 16,
+            "neg": 51,
+            "unique_positions": 64,
+            "auroc": 0.7401960784313726,
+            "ci_95": [
+              0.5706170329670329,
+              0.8897317538126361
+            ]
+          },
+          "delta_vs_full": -0.015721710370895425,
+          "decision": "PASS"
+        }
+      }
+    }
+  }
+}
