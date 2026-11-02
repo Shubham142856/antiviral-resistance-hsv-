@@ -1,0 +1,528 @@
+{
+  "protocol": {
+    "document": "docs/STEP2_HCMV_REPLICATION_PREREGISTRATION.md",
+    "commit": "da59f55",
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "targets": {
+    "HCMV_UL54_Ganciclovir": {
+      "gene": "UL54",
+      "drug": "Ganciclovir",
+      "role": "DNA Polymerase (Essential Replicative Engine)",
+      "arm_type": "Primary Replication Arm",
+      "positivity": {
+        "total_cohort_rows": 324,
+        "unique_mutations_overall": 237,
+        "total_studies": 62,
+        "mixed_study_count": 25,
+        "total_same_study_pairs": 399,
+        "top_1_study_share_pct": 23.31,
+        "distinct_res_variants_in_mixed": 60,
+        "distinct_sens_variants_in_mixed": 100,
+        "top_5_studies_by_pairs": [
+          {
+            "study_id": "DOI:doi.org/10.1093/infdis/jit654",
+            "resistant": 3,
+            "sensitive": 31,
+            "pairs": 93,
+            "share_pct": 23.31
+          },
+          {
+            "study_id": "DOI:doi.org/10.1128/aac.00334-11",
+            "resistant": 7,
+            "sensitive": 11,
+            "pairs": 77,
+            "share_pct": 19.3
+          },
+          {
+            "study_id": "DOI:doi.org/10.1128/jvi.72.7.5927-5936.1998",
+            "resistant": 9,
+            "sensitive": 8,
+            "pairs": 72,
+            "share_pct": 18.05
+          },
+          {
+            "study_id": "DOI:doi.org/10.1097/TP.0b013e3181fdd9d2",
+            "resistant": 2,
+            "sensitive": 15,
+            "pairs": 30,
+            "share_pct": 7.52
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2022.105328",
+            "resistant": 11,
+            "sensitive": 2,
+            "pairs": 22,
+            "share_pct": 5.51
+          }
+        ],
+        "rules": {
+          "pairs_ge_100": true,
+          "mixed_ge_5": true,
+          "top_share_le_50": true,
+          "overall_status": "PASS"
+        }
+      },
+      "features": {
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted_auroc": 0.6353,
+          "s0_pair_weighted_ci_95": [
+            0.4906,
+            0.7297
+          ],
+          "s0_study_mean_auroc": 0.5852,
+          "s0_study_mean_ci_95": [
+            0.4469,
+            0.7277
+          ],
+          "s0_loso_range": [
+            0.5916,
+            0.652
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.6505,
+          "s2_numeric_fc_pairs": 372,
+          "s2_numeric_fc_pooled_auroc": 0.5619,
+          "d1_pooled_auroc": 0.5362,
+          "d1_pooled_ci_95": [
+            0.4548,
+            0.6155
+          ],
+          "decision": "CONFIRMED (Polymerase Radicalness Chance/Suppressed)"
+        },
+        "Where (Option A: Swiss-Model)": {
+          "s0_pair_weighted_auroc": 0.4135,
+          "s0_pair_weighted_ci_95": [
+            0.229,
+            0.6306
+          ],
+          "s0_study_mean_auroc": 0.4349,
+          "s0_study_mean_ci_95": [
+            0.2934,
+            0.5805
+          ],
+          "s0_loso_range": [
+            0.2958,
+            0.4801
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.422,
+          "s2_numeric_fc_pairs": 372,
+          "s2_numeric_fc_pooled_auroc": 0.4495,
+          "d1_pooled_auroc": 0.4898,
+          "d1_pooled_ci_95": [
+            0.4029,
+            0.5717
+          ],
+          "decision": "NOT SUPPORTED (Operates Near or Below Chance)"
+        },
+        "Where (Option B: HSV-1 Mapped)": {
+          "s0_pair_weighted_auroc": 0.7043,
+          "s0_pair_weighted_ci_95": [
+            0.5908,
+            0.7804
+          ],
+          "s0_study_mean_auroc": 0.5731,
+          "s0_study_mean_ci_95": [
+            0.4162,
+            0.7173
+          ],
+          "s0_loso_range": [
+            0.6832,
+            0.7273
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.7285,
+          "s2_numeric_fc_pairs": 372,
+          "s2_numeric_fc_pooled_auroc": 0.7905,
+          "d1_pooled_auroc": 0.7961,
+          "d1_pooled_ci_95": [
+            0.7317,
+            0.8547
+          ],
+          "decision": "SENSITIVITY CONTROL"
+        }
+      }
+    },
+    "HCMV_UL54_Foscarnet": {
+      "gene": "UL54",
+      "drug": "Foscarnet",
+      "role": "DNA Polymerase (Essential Replicative Engine)",
+      "arm_type": "Secondary Descriptive Arm",
+      "positivity": {
+        "total_cohort_rows": 324,
+        "unique_mutations_overall": 237,
+        "total_studies": 62,
+        "mixed_study_count": 25,
+        "total_same_study_pairs": 416,
+        "top_1_study_share_pct": 22.36,
+        "distinct_res_variants_in_mixed": 34,
+        "distinct_sens_variants_in_mixed": 107,
+        "top_5_studies_by_pairs": [
+          {
+            "study_id": "DOI:doi.org/10.1093/infdis/jit654",
+            "resistant": 3,
+            "sensitive": 31,
+            "pairs": 93,
+            "share_pct": 22.36
+          },
+          {
+            "study_id": "DOI:doi.org/10.1128/aac.00334-11",
+            "resistant": 6,
+            "sensitive": 12,
+            "pairs": 72,
+            "share_pct": 17.31
+          },
+          {
+            "study_id": "DOI:doi.org/10.1128/jvi.72.7.5927-5936.1998",
+            "resistant": 6,
+            "sensitive": 11,
+            "pairs": 66,
+            "share_pct": 15.87
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2021.105181",
+            "resistant": 4,
+            "sensitive": 12,
+            "pairs": 48,
+            "share_pct": 11.54
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2022.105328",
+            "resistant": 6,
+            "sensitive": 7,
+            "pairs": 42,
+            "share_pct": 10.1
+          }
+        ],
+        "rules": {
+          "pairs_ge_100": true,
+          "mixed_ge_5": true,
+          "top_share_le_50": true,
+          "overall_status": "PASS"
+        }
+      },
+      "features": {
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted_auroc": 0.3882,
+          "s0_pair_weighted_ci_95": [
+            0.2681,
+            0.5171
+          ],
+          "s0_study_mean_auroc": 0.368,
+          "s0_study_mean_ci_95": [
+            0.2489,
+            0.4981
+          ],
+          "s0_loso_range": [
+            0.3189,
+            0.4273
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.3858,
+          "s2_numeric_fc_pairs": 359,
+          "s2_numeric_fc_pooled_auroc": 0.4257,
+          "d1_pooled_auroc": 0.4373,
+          "d1_pooled_ci_95": [
+            0.3483,
+            0.5244
+          ],
+          "decision": "CONFIRMED (Polymerase Radicalness Chance/Suppressed)"
+        },
+        "Where (Option A: Swiss-Model)": {
+          "s0_pair_weighted_auroc": 0.8822,
+          "s0_pair_weighted_ci_95": [
+            0.8032,
+            0.9527
+          ],
+          "s0_study_mean_auroc": 0.9492,
+          "s0_study_mean_ci_95": [
+            0.8957,
+            0.9886
+          ],
+          "s0_loso_range": [
+            0.8657,
+            0.9142
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.8733,
+          "s2_numeric_fc_pairs": 359,
+          "s2_numeric_fc_pooled_auroc": 0.8505,
+          "d1_pooled_auroc": 0.8638,
+          "d1_pooled_ci_95": [
+            0.7973,
+            0.922
+          ],
+          "decision": "PASS (Replicated Proximity)"
+        },
+        "Where (Option B: HSV-1 Mapped)": {
+          "s0_pair_weighted_auroc": 0.5144,
+          "s0_pair_weighted_ci_95": [
+            0.3219,
+            0.6884
+          ],
+          "s0_study_mean_auroc": 0.4375,
+          "s0_study_mean_ci_95": [
+            0.281,
+            0.5952
+          ],
+          "s0_loso_range": [
+            0.4118,
+            0.5508
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.5362,
+          "s2_numeric_fc_pairs": 359,
+          "s2_numeric_fc_pooled_auroc": 0.5785,
+          "d1_pooled_auroc": 0.7006,
+          "d1_pooled_ci_95": [
+            0.627,
+            0.7743
+          ],
+          "decision": "SENSITIVITY CONTROL"
+        }
+      }
+    },
+    "HCMV_UL54_Cidofovir": {
+      "gene": "UL54",
+      "drug": "Cidofovir",
+      "role": "DNA Polymerase (Essential Replicative Engine)",
+      "arm_type": "Secondary Descriptive Arm",
+      "positivity": {
+        "total_cohort_rows": 324,
+        "unique_mutations_overall": 237,
+        "total_studies": 62,
+        "mixed_study_count": 23,
+        "total_same_study_pairs": 367,
+        "top_1_study_share_pct": 19.62,
+        "distinct_res_variants_in_mixed": 49,
+        "distinct_sens_variants_in_mixed": 86,
+        "top_5_studies_by_pairs": [
+          {
+            "study_id": "DOI:doi.org/10.1128/jvi.72.7.5927-5936.1998",
+            "resistant": 9,
+            "sensitive": 8,
+            "pairs": 72,
+            "share_pct": 19.62
+          },
+          {
+            "study_id": "DOI:doi.org/10.1128/aac.00334-11",
+            "resistant": 5,
+            "sensitive": 13,
+            "pairs": 65,
+            "share_pct": 17.71
+          },
+          {
+            "study_id": "DOI:doi.org/10.1093/infdis/jit654",
+            "resistant": 2,
+            "sensitive": 32,
+            "pairs": 64,
+            "share_pct": 17.44
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2022.105328",
+            "resistant": 5,
+            "sensitive": 8,
+            "pairs": 40,
+            "share_pct": 10.9
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2021.105181",
+            "resistant": 14,
+            "sensitive": 2,
+            "pairs": 28,
+            "share_pct": 7.63
+          }
+        ],
+        "rules": {
+          "pairs_ge_100": true,
+          "mixed_ge_5": true,
+          "top_share_le_50": true,
+          "overall_status": "PASS"
+        }
+      },
+      "features": {
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted_auroc": 0.6131,
+          "s0_pair_weighted_ci_95": [
+            0.5119,
+            0.6942
+          ],
+          "s0_study_mean_auroc": 0.5942,
+          "s0_study_mean_ci_95": [
+            0.4546,
+            0.7263
+          ],
+          "s0_loso_range": [
+            0.5762,
+            0.637
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.6198,
+          "s2_numeric_fc_pairs": 338,
+          "s2_numeric_fc_pooled_auroc": 0.5567,
+          "d1_pooled_auroc": 0.5196,
+          "d1_pooled_ci_95": [
+            0.4264,
+            0.6068
+          ],
+          "decision": "CONFIRMED (Polymerase Radicalness Chance/Suppressed)"
+        },
+        "Where (Option A: Swiss-Model)": {
+          "s0_pair_weighted_auroc": 0.2507,
+          "s0_pair_weighted_ci_95": [
+            0.1426,
+            0.4105
+          ],
+          "s0_study_mean_auroc": 0.246,
+          "s0_study_mean_ci_95": [
+            0.1339,
+            0.3711
+          ],
+          "s0_loso_range": [
+            0.2112,
+            0.2983
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.2189,
+          "s2_numeric_fc_pairs": 338,
+          "s2_numeric_fc_pooled_auroc": 0.3037,
+          "d1_pooled_auroc": 0.4168,
+          "d1_pooled_ci_95": [
+            0.3348,
+            0.4942
+          ],
+          "decision": "NOT SUPPORTED (Operates Near or Below Chance)"
+        },
+        "Where (Option B: HSV-1 Mapped)": {
+          "s0_pair_weighted_auroc": 0.7766,
+          "s0_pair_weighted_ci_95": [
+            0.6949,
+            0.8698
+          ],
+          "s0_study_mean_auroc": 0.6064,
+          "s0_study_mean_ci_95": [
+            0.4457,
+            0.7581
+          ],
+          "s0_loso_range": [
+            0.7517,
+            0.8
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.7722,
+          "s2_numeric_fc_pairs": 338,
+          "s2_numeric_fc_pooled_auroc": 0.7561,
+          "d1_pooled_auroc": 0.8255,
+          "d1_pooled_ci_95": [
+            0.7647,
+            0.8789
+          ],
+          "decision": "SENSITIVITY CONTROL"
+        }
+      }
+    },
+    "HCMV_UL97_Ganciclovir": {
+      "gene": "UL97",
+      "drug": "Ganciclovir",
+      "role": "Phosphotransferase (Dispensable Prodrug Activator)",
+      "arm_type": "Dispensable Counter-Arm",
+      "positivity": {
+        "total_cohort_rows": 204,
+        "unique_mutations_overall": 110,
+        "total_studies": 48,
+        "mixed_study_count": 23,
+        "total_same_study_pairs": 272,
+        "top_1_study_share_pct": 41.18,
+        "distinct_res_variants_in_mixed": 34,
+        "distinct_sens_variants_in_mixed": 53,
+        "top_5_studies_by_pairs": [
+          {
+            "study_id": "DOI:doi.org/10.1128/AAC.00186-10",
+            "resistant": 8,
+            "sensitive": 14,
+            "pairs": 112,
+            "share_pct": 41.18
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2021.105139",
+            "resistant": 4,
+            "sensitive": 8,
+            "pairs": 32,
+            "share_pct": 11.76
+          },
+          {
+            "study_id": "DOI:doi.org/10.1086/338362",
+            "resistant": 5,
+            "sensitive": 4,
+            "pairs": 20,
+            "share_pct": 7.35
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2022.105328",
+            "resistant": 4,
+            "sensitive": 4,
+            "pairs": 16,
+            "share_pct": 5.88
+          },
+          {
+            "study_id": "DOI:doi.org/10.1016/j.antiviral.2026.106536",
+            "resistant": 2,
+            "sensitive": 7,
+            "pairs": 14,
+            "share_pct": 5.15
+          }
+        ],
+        "rules": {
+          "pairs_ge_100": true,
+          "mixed_ge_5": true,
+          "top_share_le_50": true,
+          "overall_status": "PASS"
+        }
+      },
+      "features": {
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted_auroc": 0.7408,
+          "s0_pair_weighted_ci_95": [
+            0.5885,
+            0.8269
+          ],
+          "s0_study_mean_auroc": 0.7342,
+          "s0_study_mean_ci_95": [
+            0.6097,
+            0.8462
+          ],
+          "s0_loso_range": [
+            0.6625,
+            0.7708
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.726,
+          "s2_numeric_fc_pairs": 219,
+          "s2_numeric_fc_pooled_auroc": 0.7284,
+          "d1_pooled_auroc": 0.6979,
+          "d1_pooled_ci_95": [
+            0.5974,
+            0.7977
+          ],
+          "decision": "PASS (Replicated Kinase Radicalness)"
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "kinase_vs_polymerase_gcv_blosum": {
+      "ul97_gcv_s0": 0.7408,
+      "ul54_gcv_s0": 0.6353,
+      "delta_observed": 0.1055,
+      "delta_ci_95": [
+        -0.0861,
+        0.2743
+      ],
+      "empirical_p": 0.149,
+      "verdict": "DESCRIPTIVE"
+    },
+    "polymerase_fos_where_vs_blosum": {
+      "ul54_fos_proximity_s0": 0.8822,
+      "ul54_fos_blosum_s0": 0.3882,
+      "delta_observed": 0.494,
+      "delta_ci_95": [
+        0.3782,
+        0.6216
+      ],
+      "empirical_p": 0.0,
+      "verdict": "CONFIRMED (Massive Proximity Advantage over Radicalness)"
+    }
+  }
+}
