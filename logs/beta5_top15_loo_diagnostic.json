@@ -1,0 +1,265 @@
+{
+  "label": "EXPLORATORY",
+  "status": "Model and falsifier unchanged. Beta5 unidentifiable at current sample size.",
+  "baseline_coefs": {
+    "where_b1": 1.941289367830142,
+    "severity_b2": -0.08012036909636715,
+    "severity_sq_b3": -0.08331116976148811,
+    "where_x_severity_b4": 0.21872628225351165,
+    "where_x_severity_sq_b5": -0.016132786323445763
+  },
+  "top15_influential_positions": [
+    {
+      "pos": 927,
+      "wt": "E",
+      "domain": "Palm",
+      "n_variants": 1,
+      "n_resistant": 0,
+      "beta5_loo": 0.601180226945881,
+      "delta_beta5": 0.6173130132693267,
+      "abs_delta_beta5": 0.6173130132693267
+    },
+    {
+      "pos": 1228,
+      "wt": "H",
+      "domain": "Thumb_Cterm",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.07551078919707514,
+      "delta_beta5": -0.059378002873629376,
+      "abs_delta_beta5": 0.059378002873629376
+    },
+    {
+      "pos": 716,
+      "wt": "F",
+      "domain": "Palm",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": 0.017489087252532586,
+      "delta_beta5": 0.033621873575978345,
+      "abs_delta_beta5": 0.033621873575978345
+    },
+    {
+      "pos": 922,
+      "wt": "I",
+      "domain": "Palm",
+      "n_variants": 2,
+      "n_resistant": 1,
+      "beta5_loo": -0.04541924485078019,
+      "delta_beta5": -0.029286458527334424,
+      "abs_delta_beta5": 0.029286458527334424
+    },
+    {
+      "pos": 1007,
+      "wt": "L",
+      "domain": "Thumb_Cterm",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": 0.001380306577497911,
+      "delta_beta5": 0.017513092900943675,
+      "abs_delta_beta5": 0.017513092900943675
+    },
+    {
+      "pos": 881,
+      "wt": "R",
+      "domain": "Palm",
+      "n_variants": 1,
+      "n_resistant": 0,
+      "beta5_loo": -0.0010541227958346532,
+      "delta_beta5": 0.01507866352761111,
+      "abs_delta_beta5": 0.01507866352761111
+    },
+    {
+      "pos": 889,
+      "wt": "S",
+      "domain": "Palm",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.030339627234146613,
+      "delta_beta5": -0.01420684091070085,
+      "abs_delta_beta5": 0.01420684091070085
+    },
+    {
+      "pos": 961,
+      "wt": "N",
+      "domain": "Thumb_Cterm",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.030057924667575193,
+      "delta_beta5": -0.01392513834412943,
+      "abs_delta_beta5": 0.01392513834412943
+    },
+    {
+      "pos": 821,
+      "wt": "T",
+      "domain": "Fingers",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.028230522731186838,
+      "delta_beta5": -0.012097736407741075,
+      "abs_delta_beta5": 0.012097736407741075
+    },
+    {
+      "pos": 669,
+      "wt": "E",
+      "domain": "Palm",
+      "n_variants": 2,
+      "n_resistant": 0,
+      "beta5_loo": -0.027655353992112493,
+      "delta_beta5": -0.01152256766866673,
+      "abs_delta_beta5": 0.01152256766866673
+    },
+    {
+      "pos": 901,
+      "wt": "G",
+      "domain": "Palm",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.004966981775628125,
+      "delta_beta5": 0.011165804547817638,
+      "abs_delta_beta5": 0.011165804547817638
+    },
+    {
+      "pos": 778,
+      "wt": "L",
+      "domain": "Fingers",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.005640706014866249,
+      "delta_beta5": 0.010492080308579513,
+      "abs_delta_beta5": 0.010492080308579513
+    },
+    {
+      "pos": 570,
+      "wt": "Q",
+      "domain": "Exo",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.026214592608612617,
+      "delta_beta5": -0.010081806285166854,
+      "abs_delta_beta5": 0.010081806285166854
+    },
+    {
+      "pos": 668,
+      "wt": "G",
+      "domain": "Palm",
+      "n_variants": 2,
+      "n_resistant": 0,
+      "beta5_loo": -0.025469608094175623,
+      "delta_beta5": -0.00933682177072986,
+      "abs_delta_beta5": 0.00933682177072986
+    },
+    {
+      "pos": 890,
+      "wt": "I",
+      "domain": "Palm",
+      "n_variants": 1,
+      "n_resistant": 1,
+      "beta5_loo": -0.006842133189566815,
+      "delta_beta5": 0.009290653133878949,
+      "abs_delta_beta5": 0.009290653133878949
+    }
+  ],
+  "per_pos_resample_correlation": [
+    {
+      "pos": 927,
+      "wt": "E",
+      "domain": "Palm",
+      "correlation_with_beta5": -0.6966247098739309
+    },
+    {
+      "pos": 1228,
+      "wt": "H",
+      "domain": "Thumb_Cterm",
+      "correlation_with_beta5": 0.20942527819732737
+    },
+    {
+      "pos": 716,
+      "wt": "F",
+      "domain": "Palm",
+      "correlation_with_beta5": 0.0046898073780620424
+    },
+    {
+      "pos": 922,
+      "wt": "I",
+      "domain": "Palm",
+      "correlation_with_beta5": 0.07378779481375072
+    },
+    {
+      "pos": 1007,
+      "wt": "L",
+      "domain": "Thumb_Cterm",
+      "correlation_with_beta5": -0.072143016755582
+    },
+    {
+      "pos": 881,
+      "wt": "R",
+      "domain": "Palm",
+      "correlation_with_beta5": -0.09323971385761086
+    },
+    {
+      "pos": 889,
+      "wt": "S",
+      "domain": "Palm",
+      "correlation_with_beta5": 0.02034143723846439
+    },
+    {
+      "pos": 961,
+      "wt": "N",
+      "domain": "Thumb_Cterm",
+      "correlation_with_beta5": -0.03067155592444798
+    },
+    {
+      "pos": 821,
+      "wt": "T",
+      "domain": "Fingers",
+      "correlation_with_beta5": 0.10236812871803155
+    },
+    {
+      "pos": 669,
+      "wt": "E",
+      "domain": "Palm",
+      "correlation_with_beta5": -0.030362976872077414
+    },
+    {
+      "pos": 901,
+      "wt": "G",
+      "domain": "Palm",
+      "correlation_with_beta5": -0.09180837214312598
+    },
+    {
+      "pos": 778,
+      "wt": "L",
+      "domain": "Fingers",
+      "correlation_with_beta5": 0.013439424937121896
+    },
+    {
+      "pos": 570,
+      "wt": "Q",
+      "domain": "Exo",
+      "correlation_with_beta5": 0.060266618776386546
+    },
+    {
+      "pos": 668,
+      "wt": "G",
+      "domain": "Palm",
+      "correlation_with_beta5": 0.022972703785437476
+    },
+    {
+      "pos": 890,
+      "wt": "I",
+      "domain": "Palm",
+      "correlation_with_beta5": -0.004472709536003388
+    }
+  ],
+  "bimodal_decomposition": {
+    "total_resamples": 2000,
+    "mode1_count": 1371,
+    "mode1_pct": 68.55,
+    "mode1_mean_beta5": -0.01753932435766762,
+    "mode2_count": 629,
+    "mode2_pct": 31.45,
+    "mode2_mean_beta5": 0.6830667424638338,
+    "correlation_top5_count_with_beta5": -0.21968083644043757
+  }
+}

@@ -1,0 +1,369 @@
+{
+  "UL30-Aciclovir": {
+    "description": "Primary Target",
+    "n_evaluable_domains": 4,
+    "evaluable_domains_list": [
+      "Exo",
+      "Palm",
+      "Fingers",
+      "Thumb_Cterm"
+    ],
+    "theoretical_distinct_resamples": 35,
+    "ci_status": "Descriptive only (small-n domain bootstrap)",
+    "per_domain_records": [
+      {
+        "domain": "Exo",
+        "n_test": 37,
+        "n_pos": 8,
+        "auc_pos_rf": 0.709051724137931,
+        "reference_baseline": 0.709051724137931,
+        "auc_esm2": 0.6594827586206897,
+        "auc_protbert": 0.6508620689655172,
+        "auc_blosum62": 0.5775862068965517,
+        "auc_where": 0.8620689655172413,
+        "auc_sup_lr": 0.8232758620689655,
+        "excess_esm2": -0.049568965517241326,
+        "excess_protbert": -0.05818965517241381,
+        "excess_blosum62": -0.13146551724137934,
+        "excess_where": 0.15301724137931028,
+        "excess_sup_lr": 0.11422413793103448,
+        "raw_diff_05_esm2": 0.15948275862068972,
+        "raw_diff_05_blosum62": 0.07758620689655171,
+        "raw_diff_05_where": 0.3620689655172413,
+        "raw_diff_05_sup_lr": 0.3232758620689655
+      },
+      {
+        "domain": "Palm",
+        "n_test": 111,
+        "n_pos": 32,
+        "auc_pos_rf": 0.5332278481012659,
+        "reference_baseline": 0.5332278481012659,
+        "auc_esm2": 0.8049841772151899,
+        "auc_protbert": 0.7086629746835443,
+        "auc_blosum62": 0.5712025316455696,
+        "auc_where": 0.8132911392405063,
+        "auc_sup_lr": 0.7982594936708861,
+        "excess_esm2": 0.271756329113924,
+        "excess_protbert": 0.17543512658227844,
+        "excess_blosum62": 0.03797468354430367,
+        "excess_where": 0.28006329113924044,
+        "excess_sup_lr": 0.2650316455696202,
+        "raw_diff_05_esm2": 0.3049841772151899,
+        "raw_diff_05_blosum62": 0.07120253164556956,
+        "raw_diff_05_where": 0.31329113924050633,
+        "raw_diff_05_sup_lr": 0.2982594936708861
+      },
+      {
+        "domain": "Fingers",
+        "n_test": 18,
+        "n_pos": 16,
+        "auc_pos_rf": 0.515625,
+        "reference_baseline": 0.515625,
+        "auc_esm2": 0.75,
+        "auc_protbert": 0.40625,
+        "auc_blosum62": 0.5,
+        "auc_where": 0.875,
+        "auc_sup_lr": 0.65625,
+        "excess_esm2": 0.234375,
+        "excess_protbert": -0.109375,
+        "excess_blosum62": -0.015625,
+        "excess_where": 0.359375,
+        "excess_sup_lr": 0.140625,
+        "raw_diff_05_esm2": 0.25,
+        "raw_diff_05_blosum62": 0.0,
+        "raw_diff_05_where": 0.375,
+        "raw_diff_05_sup_lr": 0.15625
+      },
+      {
+        "domain": "Thumb_Cterm",
+        "n_test": 82,
+        "n_pos": 6,
+        "auc_pos_rf": 0.5,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.7609649122807017,
+        "auc_protbert": 0.6776315789473685,
+        "auc_blosum62": 0.3135964912280702,
+        "auc_where": 0.5701754385964912,
+        "auc_sup_lr": 0.6885964912280702,
+        "excess_esm2": 0.26096491228070173,
+        "excess_protbert": 0.17763157894736847,
+        "excess_blosum62": -0.1864035087719298,
+        "excess_where": 0.07017543859649122,
+        "excess_sup_lr": 0.1885964912280702,
+        "raw_diff_05_esm2": 0.26096491228070173,
+        "raw_diff_05_blosum62": -0.1864035087719298,
+        "raw_diff_05_where": 0.07017543859649122,
+        "raw_diff_05_sup_lr": 0.1885964912280702
+      }
+    ],
+    "domain_means": {
+      "pos_only_rf": 0.5644761430597992,
+      "reference_clamped": 0.5644761430597992,
+      "esm2_650m": 0.7438579620291453,
+      "protbert": 0.6108516556491075,
+      "blosum62": 0.4905963074425479,
+      "where_specexact": 0.7801338858385598,
+      "supervised_lr": 0.7415954617419804
+    },
+    "excess_over_reference": {
+      "esm2_650m": 0.17938181896934613,
+      "protbert": 0.046375512589308276,
+      "blosum62": -0.07387983561725131,
+      "where_specexact": 0.2156577427787606,
+      "supervised_lr": 0.17711931868218123
+    },
+    "excess_descriptive_ci_95": {
+      "esm2_650m": [
+        0.02806450393224444,
+        0.26636062069731287
+      ],
+      "where_specexact": [
+        0.11159633998790075,
+        0.3197191455696202
+      ],
+      "blosum62": [
+        -0.15893451300665457,
+        0.011509839794301903
+      ],
+      "supervised_lr": [
+        0.12742456896551724,
+        0.23392998417721517
+      ]
+    },
+    "sign_consistency_vs_pos_rf": {
+      "esm2_650m": "3/4",
+      "protbert": "2/4",
+      "blosum62": "1/4",
+      "where_specexact": "4/4",
+      "supervised_lr": "4/4"
+    }
+  },
+  "UL30-Foscarnet": {
+    "description": "Secondary Target (Strict N_pos>=5 Rule: Palm, Fingers only)",
+    "n_evaluable_domains": 2,
+    "evaluable_domains_list": [
+      "Palm",
+      "Fingers"
+    ],
+    "theoretical_distinct_resamples": 3,
+    "ci_status": "NO bootstrap CI reported (< 4 evaluable domains, n=2, theoretical distinct resamples = 3)",
+    "per_domain_records": [
+      {
+        "domain": "Palm",
+        "n_test": 100,
+        "n_pos": 20,
+        "auc_pos_rf": 0.550625,
+        "reference_baseline": 0.550625,
+        "auc_esm2": 0.7543750000000001,
+        "auc_protbert": 0.6775,
+        "auc_blosum62": 0.429375,
+        "auc_where": 0.825625,
+        "auc_sup_lr": 0.8200000000000001,
+        "excess_esm2": 0.2037500000000001,
+        "excess_protbert": 0.12687499999999996,
+        "excess_blosum62": -0.12125000000000002,
+        "excess_where": 0.275,
+        "excess_sup_lr": 0.26937500000000003,
+        "raw_diff_05_esm2": 0.25437500000000013,
+        "raw_diff_05_blosum62": -0.070625,
+        "raw_diff_05_where": 0.32562500000000005,
+        "raw_diff_05_sup_lr": 0.32000000000000006
+      },
+      {
+        "domain": "Fingers",
+        "n_test": 14,
+        "n_pos": 8,
+        "auc_pos_rf": 0.5,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.41666666666666663,
+        "auc_protbert": 0.625,
+        "auc_blosum62": 0.7395833333333334,
+        "auc_where": 0.75,
+        "auc_sup_lr": 0.5833333333333334,
+        "excess_esm2": -0.08333333333333337,
+        "excess_protbert": 0.125,
+        "excess_blosum62": 0.23958333333333337,
+        "excess_where": 0.25,
+        "excess_sup_lr": 0.08333333333333337,
+        "raw_diff_05_esm2": -0.08333333333333337,
+        "raw_diff_05_blosum62": 0.23958333333333337,
+        "raw_diff_05_where": 0.25,
+        "raw_diff_05_sup_lr": 0.08333333333333337
+      }
+    ],
+    "domain_means": {
+      "pos_only_rf": 0.5253125000000001,
+      "reference_clamped": 0.5253125000000001,
+      "esm2_650m": 0.5855208333333334,
+      "protbert": 0.65125,
+      "blosum62": 0.5844791666666667,
+      "where_specexact": 0.7878125,
+      "supervised_lr": 0.7016666666666667
+    },
+    "excess_over_reference": {
+      "esm2_650m": 0.06020833333333331,
+      "protbert": 0.12593749999999992,
+      "blosum62": 0.05916666666666659,
+      "where_specexact": 0.26249999999999996,
+      "supervised_lr": 0.1763541666666666
+    },
+    "excess_descriptive_ci_95": {
+      "esm2_650m": null,
+      "where_specexact": null,
+      "blosum62": null,
+      "supervised_lr": null
+    },
+    "sign_consistency_vs_pos_rf": {
+      "esm2_650m": "1/2",
+      "protbert": "2/2",
+      "blosum62": "1/2",
+      "where_specexact": "2/2",
+      "supervised_lr": "2/2"
+    }
+  },
+  "UL23-Aciclovir": {
+    "description": "Comparative Kinase (Dispensable Target)",
+    "n_evaluable_domains": 4,
+    "evaluable_domains_list": [
+      "ATP_Core",
+      "Nucleoside_Pocket",
+      "Lid_Dimer",
+      "C-term"
+    ],
+    "theoretical_distinct_resamples": 35,
+    "ci_status": "Descriptive only (small-n domain bootstrap)",
+    "per_domain_records": [
+      {
+        "domain": "ATP_Core",
+        "n_test": 90,
+        "n_pos": 52,
+        "auc_pos_rf": 0.4013157894736841,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.805668016194332,
+        "auc_protbert": 0.7907388663967612,
+        "auc_blosum62": 0.6371457489878543,
+        "auc_where": 0.7059716599190283,
+        "auc_sup_lr": 0.7854251012145749,
+        "excess_esm2": 0.30566801619433204,
+        "excess_protbert": 0.29073886639676116,
+        "excess_blosum62": 0.13714574898785425,
+        "excess_where": 0.20597165991902833,
+        "excess_sup_lr": 0.2854251012145749,
+        "raw_diff_05_esm2": 0.30566801619433204,
+        "raw_diff_05_blosum62": 0.13714574898785425,
+        "raw_diff_05_where": 0.20597165991902833,
+        "raw_diff_05_sup_lr": 0.2854251012145749
+      },
+      {
+        "domain": "Nucleoside_Pocket",
+        "n_test": 60,
+        "n_pos": 45,
+        "auc_pos_rf": 0.38148148148148153,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.7392592592592593,
+        "auc_protbert": 0.7340740740740741,
+        "auc_blosum62": 0.6103703703703703,
+        "auc_where": 0.6340740740740741,
+        "auc_sup_lr": 0.7481481481481481,
+        "excess_esm2": 0.23925925925925928,
+        "excess_protbert": 0.2340740740740741,
+        "excess_blosum62": 0.11037037037037034,
+        "excess_where": 0.13407407407407412,
+        "excess_sup_lr": 0.24814814814814812,
+        "raw_diff_05_esm2": 0.23925925925925928,
+        "raw_diff_05_blosum62": 0.11037037037037034,
+        "raw_diff_05_where": 0.13407407407407412,
+        "raw_diff_05_sup_lr": 0.24814814814814812
+      },
+      {
+        "domain": "Lid_Dimer",
+        "n_test": 62,
+        "n_pos": 17,
+        "auc_pos_rf": 0.46601307189542474,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.5980392156862745,
+        "auc_protbert": 0.6437908496732025,
+        "auc_blosum62": 0.734640522875817,
+        "auc_where": 0.4326797385620915,
+        "auc_sup_lr": 0.5777777777777778,
+        "excess_esm2": 0.0980392156862745,
+        "excess_protbert": 0.14379084967320255,
+        "excess_blosum62": 0.23464052287581705,
+        "excess_where": -0.06732026143790848,
+        "excess_sup_lr": 0.07777777777777783,
+        "raw_diff_05_esm2": 0.0980392156862745,
+        "raw_diff_05_blosum62": 0.23464052287581705,
+        "raw_diff_05_where": -0.06732026143790848,
+        "raw_diff_05_sup_lr": 0.07777777777777783
+      },
+      {
+        "domain": "C-term",
+        "n_test": 42,
+        "n_pos": 6,
+        "auc_pos_rf": 0.5,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.6111111111111112,
+        "auc_protbert": 0.775462962962963,
+        "auc_blosum62": 0.7083333333333334,
+        "auc_where": 0.4953703703703704,
+        "auc_sup_lr": 0.7592592592592593,
+        "excess_esm2": 0.11111111111111116,
+        "excess_protbert": 0.275462962962963,
+        "excess_blosum62": 0.20833333333333337,
+        "excess_where": -0.004629629629629595,
+        "excess_sup_lr": 0.2592592592592593,
+        "raw_diff_05_esm2": 0.11111111111111116,
+        "raw_diff_05_blosum62": 0.20833333333333337,
+        "raw_diff_05_where": -0.004629629629629595,
+        "raw_diff_05_sup_lr": 0.2592592592592593
+      }
+    ],
+    "domain_means": {
+      "pos_only_rf": 0.4372025857126476,
+      "reference_clamped": 0.5,
+      "esm2_650m": 0.6885194005627443,
+      "protbert": 0.7360166882767503,
+      "blosum62": 0.6726224938918438,
+      "where_specexact": 0.567023960731391,
+      "supervised_lr": 0.71765257159994
+    },
+    "excess_over_reference": {
+      "esm2_650m": 0.1885194005627443,
+      "protbert": 0.23601668827675026,
+      "blosum62": 0.1726224938918438,
+      "where_specexact": 0.06702396073139105,
+      "supervised_lr": 0.21765257159994
+    },
+    "excess_descriptive_ci_95": {
+      "esm2_650m": [
+        0.10457516339869283,
+        0.27246363772679566
+      ],
+      "where_specexact": [
+        -0.03597494553376904,
+        0.17002286699655123
+      ],
+      "blosum62": [
+        0.1237580596791123,
+        0.2214869281045752
+      ],
+      "supervised_lr": [
+        0.1231481481481482,
+        0.2761058629479682
+      ]
+    },
+    "sign_consistency_vs_pos_rf": {
+      "esm2_650m": "4/4",
+      "protbert": "4/4",
+      "blosum62": "4/4",
+      "where_specexact": "2/4",
+      "supervised_lr": "4/4"
+    }
+  },
+  "descriptive_contrast_blosum62": {
+    "ul23_mean": 0.6726224938918438,
+    "ul30_mean": 0.4905963074425479,
+    "delta": 0.1820261864492959,
+    "label": "DESCRIPTIVE ONLY (n=4 domains each)"
+  }
+}
