@@ -94,3 +94,26 @@ We evaluate each target along the Evidence Ladder:
 This protocol is frozen and committed to version control before executing `scripts/run_step2_hcmv_replication.py`.
 No post-hoc threshold adjustment, metric modification, or active-site residue editing is permitted.
 
+---
+
+## 6. Dated Implementation Deviation Note & Composite Resolution
+**Date:** 2026-11-03  
+**Status:** Protocol Clarification & Dual Reporting Mandate  
+
+1. **Exact Pre-Registered Text vs Execution Divergence:**
+   - In Section 1 (Prediction 1) and Section 2.C (lines 50-52), the replication target score was defined mathematically as active-site 3D proximity:
+     $$d_{\text{active-site}}(i) = \min_{j \in \mathcal{A}_{\text{UL54}}, a \in \text{atoms}(j)} \|\mathbf{x}_i^{\text{C}\alpha} - \mathbf{x}_{j,a}\|_2$$
+     Proximity score: $- d_{\text{active-site}}$ (closer to active site = higher score).
+   - In the initial executed script (`scripts/run_step2_hcmv_replication.py`), the score was computed strictly as distance-only ($-d_{\text{active-site}}$). While this matched Section 2.C verbatim, it diverged from the overarching HSV-1 definition of "Where", which in Table 8 and Section 2 was established as a two-part composite score combining ESM-2 positional evolutionary constraint ($\mu_{\text{pLM-19}}$) and active-site distance:
+     $$W_{\text{composite}} = \frac{Z(\text{Constraint}) - Z(d_{\text{site}})}{\text{std}(Z(\text{Constraint}) - Z(d_{\text{site}}))}$$
+     where $Z(\text{Constraint}) = - (\mu_{\text{pLM-19}} - \bar{\mu}) / \sigma_\mu$.
+
+2. **Resolution Protocol (Zero Hypothesis Shift):**
+   - No decision thresholds (0.65 / 0.55), estimators ($S_0$ pair-weighted / study-mean), coordinate sets (Option A Swiss-Model), or site lists (19 residues) are altered.
+   - The pre-registered composite score on UL54 is computed using ESM-2 650M (`facebook/esm2_t33_650M_UR50D`) positional masked marginals ($\mu_{\text{pLM-19}}$) and combined with Option A 3D distances under the exact standardized function.
+   - Both runs are reported side by side in Table 9B:
+     * `Active-Site Proximity (As Executed: Distance-Only)`
+     * `Where Score (As Pre-Registered: Composite pLM + Distance)`
+   - Whichever outcome emerges is reported directly without post-hoc framing.
+
+

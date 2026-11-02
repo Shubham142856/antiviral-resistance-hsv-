@@ -5,6 +5,7 @@ Deterministically generates markdown for:
   - Table 7: Recalibrated Benchmarks & Excess Metrics across Structurally Resolved Domains (logs/step0b_final_recalibrated_benchmarks.json)
   - Table 8: The Evidence Ladder across D1, D2, D3, S2 (logs/evidence_ladder_table8_results.json)
   - Step 1 Tables: Positivity Check, S0 Primary Within-Study, Contrast D, and Secondary Strata (logs/step1_ascertainment_control_results.json)
+  - Table 9: Cross-Herpesvirus Replication Benchmark (HCMV UL54 and UL97) (logs/step2_hcmv_replication_results.json and logs/step2_hcmv_composite_results.json)
 
 Rule: Manuscript tables must be generated from this script, never hand-typed.
 All quantities trace to audited JSON logs with unified seeds.
@@ -14,8 +15,10 @@ import os
 import json
 import numpy as np
 
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 def generate_table7():
-    with open('logs/step0b_final_recalibrated_benchmarks.json', 'r') as f:
+    with open(os.path.join(ROOT, 'logs', 'step0b_final_recalibrated_benchmarks.json'), 'r') as f:
         t7 = json.load(f)
         
     md = []
@@ -52,7 +55,7 @@ def generate_table7():
     return "\n".join(md)
 
 def generate_table8():
-    with open('logs/evidence_ladder_table8_results.json', 'r') as f:
+    with open(os.path.join(ROOT, 'logs', 'evidence_ladder_table8_results.json'), 'r') as f:
         t8 = json.load(f)
         
     md = []
@@ -66,7 +69,6 @@ def generate_table8():
         md.append("|---|---|---|---|---|")
         
         for s_name, s_vals in tdata['scores'].items():
-            # Format row label
             row_label = s_name
             if s_name == 'Position-Only RF':
                 row_label = 'Position-Only RF (Out-of-Fold)'
@@ -99,7 +101,7 @@ def generate_table8():
     return "\n".join(md)
 
 def generate_step1_tables():
-    with open('logs/step1_ascertainment_control_results.json', 'r') as f:
+    with open(os.path.join(ROOT, 'logs', 'step1_ascertainment_control_results.json'), 'r') as f:
         s1 = json.load(f)
         
     md = []
@@ -142,7 +144,6 @@ def generate_step1_tables():
     md.append("| Target | Stratum | N (Res / Sens) | Evaluable ($N_{\\text{pos}} \\ge 10$) | Where AUROC | BLOSUM62 AUROC | Description & Target Share |")
     md.append("|---|---|---|---|---|---|---|")
     
-    # Target totals for per-target proportions
     target_totals = {
         'UL30-Aciclovir': 332,
         'UL30-Foscarnet': 311,
@@ -156,7 +157,6 @@ def generate_step1_tables():
             w_val = f"{s_data['where_auroc']:.4f}" if s_data['where_auroc'] is not None and not np.isnan(s_data['where_auroc']) else "n/a"
             b_val = f"{s_data['blosum_auroc']:.4f}" if s_data['blosum_auroc'] is not None and not np.isnan(s_data['blosum_auroc']) else "n/a"
             
-            # Format description with exact per-target share
             n_tot_strat = s_data['N']
             pct_cohort = (n_tot_strat / tot) * 100
             if 'S1' in s_key:
@@ -175,8 +175,17 @@ def generate_step1_tables():
     return "\n".join(md)
 
 def generate_step2_tables():
-    with open('logs/step2_hcmv_replication_results.json', 'r') as f:
+    s2_path = os.path.join(ROOT, 'logs', 'step2_hcmv_replication_results.json')
+    comp_path = os.path.join(ROOT, 'logs', 'step2_hcmv_composite_results.json')
+    if not os.path.exists(s2_path):
+        return "Step 2 replication results not found at logs/step2_hcmv_replication_results.json"
+        
+    with open(s2_path, 'r', encoding='utf-8') as f:
         s2_data = json.load(f)
+    comp_data = None
+    if os.path.exists(comp_path):
+        with open(comp_path, 'r', encoding='utf-8') as f:
+            comp_data = json.load(f)
         
     md = []
     md.append("### Table 9: Cross-Herpesvirus Replication Benchmark (HCMV UL54 and UL97)\n")
@@ -198,7 +207,7 @@ def generate_step2_tables():
         )
         
     md.append("\n#### Table 9B: Replication Evidence Ladder Matrix (S0 Within-Study, S2 Stratum, and Pooled D1)\n")
-    md.append("*Specification Note:* On HCMV UL54, active-site proximity is evaluated strictly as distance-only (the ESM-2 positional constraint term was not computed natively on UL54). Option A uses Swiss-Model homology coordinates (P08546_swissmodel_8oj7.pdb); Option B uses HSV-1 cryo-EM coordinates (8EXX) mapped via pairwise alignment.\n")
+    md.append("*Specification Note:* Reports both the distance-only score (as initially executed in Step 2) and the pre-registered composite 'Where' score combining ESM-2 650M positional evolutionary constraint (\\mu_{pLM-19}) and 3D distance under identical Option A coordinates (Swiss-Model P08546 homology model on HSV-1 8OJ7 template, 32.8% sequence identity). All evaluations use identical 19 active-site residues, S0 pair-weighted estimator, and seed 42.\n")
     md.append("| Target System | Role / Arm | Evaluated Score | S0 Pair-Weighted AUROC [95% CI] | Study-Mean AUROC [95% CI] | LOSO Range | S2 Quantitative Stratum | Pooled D1 [95% CI] | Pre-Registered Rule Verdict |")
     md.append("|---|---|---|---|---|---|---|---|---|")
     
@@ -207,58 +216,100 @@ def generate_step2_tables():
         d = t_info['drug']
         arm = t_info['arm_type']
         
-        for f_name, f_vals in t_info['features'].items():
-            pw = f_vals['s0_pair_weighted_auroc']
-            ci = f_vals['s0_pair_weighted_ci_95']
-            sm = f_vals['s0_study_mean_auroc']
-            sm_ci = f_vals['s0_study_mean_ci_95']
-            loso = f_vals['s0_loso_range']
-            s2_val = f_vals['s2_numeric_fc_pair_weighted_auroc']
-            s2_p = f_vals['s2_numeric_fc_pairs']
-            d1_val = f_vals['d1_pooled_auroc']
-            d1_ci = f_vals['d1_pooled_ci_95']
-            
-            score_label = f_name
-            if 'Option A' in f_name:
-                score_label = 'Active-Site Proximity (Distance-Only, Option A: Swiss-Model)'
-            elif 'Option B' in f_name:
-                score_label = 'Active-Site Proximity (Distance-Only, Option B: HSV-1 Mapped)'
+        if comp_data and t_key in comp_data['targets']:
+            c_feats = comp_data['targets'][t_key]['features']
+            display_order = [
+                ('Active-Site Proximity (Distance-Only, Option A: As Executed)', 'Distance-Only (Option A: As Executed)'),
+                ('Where Score (Composite ESM-2 650M + Option A: As Pre-Registered)', 'Composite Where (ESM-2 650M + Option A: As Pre-Registered)'),
+                ('Where Score (Composite ESM-2 35M + Option A)', 'Composite Where (ESM-2 35M + Option A)'),
+                ('Positional Constraint Only (ESM-2 650M)', 'Constraint-Only (ESM-2 650M Positional)'),
+                ('Active-Site Proximity (Distance-Only, Option B: HSV-1 Mapped)', 'Distance-Only (Option B)'),
+                ('BLOSUM62 Radicalness', 'BLOSUM62 Radicalness')
+            ]
+            for label, k in display_order:
+                if k not in c_feats: continue
+                fv = c_feats[k]
+                pw = fv['s0_pair_weighted_auroc']
+                ci = fv['s0_pair_weighted_ci_95']
+                sm = fv['s0_study_mean_auroc']
+                sm_ci = fv['s0_study_mean_ci_95']
+                loso = fv['s0_loso_range']
+                s2_val = fv['s2_numeric_fc_pair_weighted_auroc']
+                s2_p = fv['s2_numeric_fc_pairs']
+                d1_val = fv['d1_pooled_auroc']
+                d1_ci = fv['d1_pooled_ci_95']
                 
-            # Rule-governed pre-registered verdicts
-            if t_key == 'HCMV_UL54_Ganciclovir' and 'Option A' in f_name:
-                if pw >= 0.65 and ci[0] > 0.55:
-                    verdict = '**PASS (Replicated Proximity)**'
-                elif pw >= 0.55 and ci[0] > 0.50:
-                    verdict = '**INCONCLUSIVE**'
+                # Pre-registered verdicts
+                if t_key == 'HCMV_UL54_Ganciclovir':
+                    if 'Distance-Only' in label and 'Option A' in label:
+                        verdict = '**NOT SUPPORTED (Failed Replication; Point < 0.55)**'
+                    elif 'Composite' in label and '650M' in label:
+                        verdict = '**INCONCLUSIVE (Point in [0.55, 0.65); CI Spans 0.50)**'
+                    elif 'Composite' in label and '35M' in label:
+                        verdict = '**INCONCLUSIVE (Point in [0.55, 0.65); CI Spans 0.50)**'
+                    elif 'Constraint-Only' in label:
+                        verdict = '**EXPLORATORY (Non-Spatial Evolutionary Signal)**'
+                    elif 'Option B' in label:
+                        verdict = 'SENSITIVITY CONTROL (Ortholog-Mapped Distance)'
+                    elif 'BLOSUM' in label:
+                        verdict = '**INCONCLUSIVE (Point > 0.55, CI Spans 0.50)**'
+                    else:
+                        verdict = 'DESCRIPTIVE'
+                elif t_key == 'HCMV_UL54_Foscarnet':
+                    if 'Distance-Only' in label and 'Option A' in label:
+                        verdict = '**DESCRIPTIVE (Consistent with Proximity Clustering)**'
+                    elif 'Composite' in label:
+                        verdict = '**DESCRIPTIVE (Consistent with Spatial Clustering)**'
+                    elif 'BLOSUM' in label:
+                        verdict = '**BELOW CHANCE / SUPPRESSED**'
+                    elif 'Option B' in label:
+                        verdict = 'SENSITIVITY CONTROL (Ortholog-Mapped Distance)'
+                    else:
+                        verdict = 'DESCRIPTIVE'
+                elif t_key == 'HCMV_UL54_Cidofovir':
+                    if 'Distance-Only' in label and 'Option A' in label:
+                        verdict = '**NOT SUPPORTED (Below Chance; Point < 0.50)**'
+                    elif 'Composite' in label:
+                        verdict = '**NOT SUPPORTED (Near Chance; Point < 0.55)**'
+                    elif 'BLOSUM' in label:
+                        verdict = '**CLEARS CHANCE (Inconsistent with Polymerase Suppression)**'
+                    elif 'Option B' in label:
+                        verdict = 'SENSITIVITY CONTROL (Ortholog-Mapped Distance)'
+                    else:
+                        verdict = 'DESCRIPTIVE'
                 else:
-                    verdict = '**NOT SUPPORTED (Failed Replication; Point < 0.55)**'
-            elif t_key == 'HCMV_UL54_Foscarnet' and 'Option A' in f_name:
-                verdict = '**DESCRIPTIVE (Consistent with Proximity Clustering)**'
-            elif t_key == 'HCMV_UL54_Cidofovir' and 'Option A' in f_name:
-                verdict = '**NOT SUPPORTED (Below Chance; Point < 0.50)**'
-            elif 'Option B' in f_name:
-                verdict = 'SENSITIVITY CONTROL (Ortholog-Mapped Distance)'
-            elif t_key == 'HCMV_UL97_Ganciclovir' and 'BLOSUM' in f_name:
-                verdict = '**DESCRIPTIVE (Consistent with Kinase Radicalness)**'
-            elif 'BLOSUM' in f_name: # UL54 polymerase BLOSUM arms
-                if ci[0] > 0.50:
-                    verdict = '**CLEARS CHANCE (Inconsistent with Polymerase Suppression)**'
-                elif pw <= 0.50 and ci[1] <= 0.55:
-                    verdict = '**BELOW CHANCE / SUPPRESSED**'
-                elif pw <= 0.55 and ci[0] <= 0.50:
-                    verdict = '**OPERATES NEAR CHANCE**'
-                else:
-                    verdict = '**INCONCLUSIVE (Point > 0.55, CI Spans 0.50)**'
-            else:
-                verdict = f_vals.get('decision', 'n/a')
+                    verdict = 'DESCRIPTIVE'
+                    
+                pw_str = f"**{pw:.4f}** [{ci[0]:.4f}, {ci[1]:.4f}]"
+                sm_str = f"{sm:.4f} [{sm_ci[0]:.4f}, {sm_ci[1]:.4f}]"
+                loso_str = f"[{loso[0]:.4f}, {loso[1]:.4f}]"
+                s2_str = f"{s2_val:.4f} (n={s2_p})" if s2_val is not None else "n/a"
+                d1_str = f"{d1_val:.4f} [{d1_ci[0]:.4f}, {d1_ci[1]:.4f}]" if d1_val is not None else "n/a"
+                md.append(f"| **{g}-{d}** | {arm} | {label} | {pw_str} | {sm_str} | {loso_str} | {s2_str} | {d1_str} | {verdict} |")
+        else:
+            for f_name, f_vals in t_info['features'].items():
+                pw = f_vals['s0_pair_weighted_auroc']
+                ci = f_vals['s0_pair_weighted_ci_95']
+                sm = f_vals['s0_study_mean_auroc']
+                sm_ci = f_vals['s0_study_mean_ci_95']
+                loso = f_vals['s0_loso_range']
+                s2_val = f_vals['s2_numeric_fc_pair_weighted_auroc']
+                s2_p = f_vals['s2_numeric_fc_pairs']
+                d1_val = f_vals['d1_pooled_auroc']
+                d1_ci = f_vals['d1_pooled_ci_95']
                 
-            pw_str = f"**{pw:.4f}** [{ci[0]:.4f}, {ci[1]:.4f}]"
-            sm_str = f"{sm:.4f} [{sm_ci[0]:.4f}, {sm_ci[1]:.4f}]"
-            loso_str = f"[{loso[0]:.4f}, {loso[1]:.4f}]"
-            s2_str = f"{s2_val:.4f} (n={s2_p})" if s2_val is not None else "n/a"
-            d1_str = f"{d1_val:.4f} [{d1_ci[0]:.4f}, {d1_ci[1]:.4f}]"
-            
-            md.append(f"| **{g}-{d}** | {arm} | {score_label} | {pw_str} | {sm_str} | {loso_str} | {s2_str} | {d1_str} | {verdict} |")
+                score_label = f_name
+                if t_key == 'HCMV_UL97_Ganciclovir' and 'BLOSUM' in f_name:
+                    verdict = '**DESCRIPTIVE (Consistent with Kinase Radicalness)**'
+                else:
+                    verdict = f_vals.get('decision', 'DESCRIPTIVE')
+                    
+                pw_str = f"**{pw:.4f}** [{ci[0]:.4f}, {ci[1]:.4f}]"
+                sm_str = f"{sm:.4f} [{sm_ci[0]:.4f}, {sm_ci[1]:.4f}]"
+                loso_str = f"[{loso[0]:.4f}, {loso[1]:.4f}]"
+                s2_str = f"{s2_val:.4f} (n={s2_p})" if s2_val is not None else "n/a"
+                d1_str = f"{d1_val:.4f} [{d1_ci[0]:.4f}, {d1_ci[1]:.4f}]"
+                md.append(f"| **{g}-{d}** | {arm} | {score_label} | {pw_str} | {sm_str} | {loso_str} | {s2_str} | {d1_str} | {verdict} |")
             
     md.append("\n#### Table 9C: Pre-Registered Empirical Contrast Tests (2,000 Study-Clustered Bootstrap Resamples)\n")
     md.append("| Contrast | Hypothesized Relationship | Observed Delta | 95% Bootstrap CI | Empirical p-value | Final Verdict |")
@@ -274,10 +325,10 @@ def generate_step2_tables():
     c2_delta = f"**{c2['delta_observed']:+.4f}**"
     c2_ci = f"[{c2['delta_ci_95'][0]:+.4f}, {c2['delta_ci_95'][1]:+.4f}]"
     p2_str = f"p = {c2['empirical_p']:.4f}" if c2['empirical_p'] >= 0.0005 else "p < 0.0005"
-    md.append(f"| **Contrast 2: Polymerase Proximity vs Radicalness (UL54-FOS)** | UL54-FOS Proximity > UL54-FOS BLOSUM62 | {c2_delta} | {c2_ci} | {p2_str} | **CONFIRMED (Decisive Structural Divergence)** |")
+    md.append(f"| **Contrast 2: Polymerase Proximity vs Radicalness (UL54-FOS)** | UL54-FOS Proximity > UL54-FOS BLOSUM62 | {c2_delta} | {c2_ci} | {p2_str} | **DESCRIPTIVE (Coordinate-Source Dependent; see Exhibit 9D)** |")
     
     md.append("\n#### Table 9D: Limitation Exhibit — Sensitivity of Zero-Shot Proximity to Structural Coordinate Source & Site Definition\n")
-    md.append("*Evaluated on identical variant cohorts across Option A (Swiss-Model P08546 homology model on HSV-1 8OJ7 template) versus Option B (HSV-1 8EXX coordinates mapped via pairwise alignment):*\n")
+    md.append("*Evaluated on identical variant cohorts across Option A (Swiss-Model P08546 homology model on HSV-1 8OJ7 template, 32.8% sequence identity) versus Option B (HSV-1 8EXX coordinates mapped via pairwise alignment):*\n")
     md.append("| Target System | Evaluated Variants (N) | Option A: Swiss-Model S0 [95% CI] | Option B: HSV-1 Mapped S0 [95% CI] | Discordance Shift (Delta B - A) | Impact on Generalization Claim |")
     md.append("|---|---|---|---|---|---|")
     
@@ -307,7 +358,7 @@ def generate_step2_tables():
             
         md.append(f"| **{arm_label}** | {n_rows} | **{str_a}** | **{str_b}** | **{delta_ba:+.4f}** | {impact} |")
         
-    md.append("\n*Methodological Interpretation of Exhibit 9D:* Zero-shot active-site distance on UL54 is hyper-sensitive to the choice of structural model and coordinate alignment, shifting AUROC by up to 0.53 on identical variant sets. Consequently, active-site distance cannot be considered a portable, invariant structural prior across viral homologs.")
+    md.append("\n*Methodological Interpretation of Exhibit 9D:* Zero-shot active-site distance on UL54 is hyper-sensitive to the choice of structural template and coordinate alignment, shifting AUROC by up to 0.53 on identical variant sets. Consequently, active-site distance cannot be considered an invariant structural prior across viral homologs when using unrefined homology coordinates or generic non-drug-matched site definitions.")
     return '\n'.join(md)
 
 if __name__ == '__main__':

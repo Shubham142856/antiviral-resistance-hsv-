@@ -1,0 +1,531 @@
+{
+  "protocol": {
+    "seed": 42,
+    "n_boot": 2000,
+    "models": [
+      "ESM-2 650M (facebook/esm2_t33_650M_UR50D)",
+      "ESM-2 35M (facebook/esm2_t12_35M_UR50D)"
+    ]
+  },
+  "targets": {
+    "HCMV_UL54_Ganciclovir": {
+      "drug": "Ganciclovir",
+      "features": {
+        "Distance-Only (Option A: As Executed)": {
+          "s0_pair_weighted_auroc": 0.4135,
+          "s0_pair_weighted_ci_95": [
+            0.1901,
+            0.6941
+          ],
+          "s0_study_mean_auroc": 0.4349,
+          "s0_study_mean_ci_95": [
+            0.3102,
+            0.5496
+          ],
+          "s0_loso_range": [
+            0.2958,
+            0.4801
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.4184,
+          "s2_numeric_fc_pairs": 380,
+          "s2_numeric_fc_pooled_auroc": 0.4682,
+          "d1_pooled_auroc": 0.5044,
+          "d1_pooled_ci_95": [
+            0.3597,
+            0.6079
+          ]
+        },
+        "Composite Where (ESM-2 650M + Option A: As Pre-Registered)": {
+          "s0_pair_weighted_auroc": 0.6316,
+          "s0_pair_weighted_ci_95": [
+            0.4373,
+            0.7611
+          ],
+          "s0_study_mean_auroc": 0.5825,
+          "s0_study_mean_ci_95": [
+            0.4677,
+            0.6942
+          ],
+          "s0_loso_range": [
+            0.5964,
+            0.6575
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.6553,
+          "s2_numeric_fc_pairs": 380,
+          "s2_numeric_fc_pooled_auroc": 0.6656,
+          "d1_pooled_auroc": 0.7059,
+          "d1_pooled_ci_95": [
+            0.5465,
+            0.8123
+          ]
+        },
+        "Composite Where (ESM-2 35M + Option A)": {
+          "s0_pair_weighted_auroc": 0.5639,
+          "s0_pair_weighted_ci_95": [
+            0.4154,
+            0.7158
+          ],
+          "s0_study_mean_auroc": 0.5581,
+          "s0_study_mean_ci_95": [
+            0.4443,
+            0.6655
+          ],
+          "s0_loso_range": [
+            0.5438,
+            0.5854
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.5842,
+          "s2_numeric_fc_pairs": 380,
+          "s2_numeric_fc_pooled_auroc": 0.6249,
+          "d1_pooled_auroc": 0.6516,
+          "d1_pooled_ci_95": [
+            0.514,
+            0.7488
+          ]
+        },
+        "Constraint-Only (ESM-2 650M Positional)": {
+          "s0_pair_weighted_auroc": 0.7619,
+          "s0_pair_weighted_ci_95": [
+            0.5816,
+            0.863
+          ],
+          "s0_study_mean_auroc": 0.6926,
+          "s0_study_mean_ci_95": [
+            0.5916,
+            0.7947
+          ],
+          "s0_loso_range": [
+            0.7391,
+            0.787
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.7921,
+          "s2_numeric_fc_pairs": 380,
+          "s2_numeric_fc_pooled_auroc": 0.7459,
+          "d1_pooled_auroc": 0.7721,
+          "d1_pooled_ci_95": [
+            0.6219,
+            0.867
+          ]
+        },
+        "Distance-Only (Option B)": {
+          "s0_pair_weighted_auroc": 0.7043,
+          "s0_pair_weighted_ci_95": [
+            0.5295,
+            0.8125
+          ],
+          "s0_study_mean_auroc": 0.5731,
+          "s0_study_mean_ci_95": [
+            0.4565,
+            0.6988
+          ],
+          "s0_loso_range": [
+            0.6832,
+            0.7273
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.7289,
+          "s2_numeric_fc_pairs": 380,
+          "s2_numeric_fc_pooled_auroc": 0.6948,
+          "d1_pooled_auroc": 0.7441,
+          "d1_pooled_ci_95": [
+            0.5822,
+            0.8388
+          ]
+        },
+        "Composite Where (ESM-2 650M + Option B)": {
+          "s0_pair_weighted_auroc": 0.7769,
+          "s0_pair_weighted_ci_95": [
+            0.5886,
+            0.8781
+          ],
+          "s0_study_mean_auroc": 0.6658,
+          "s0_study_mean_ci_95": [
+            0.5608,
+            0.7762
+          ],
+          "s0_loso_range": [
+            0.7516,
+            0.8026
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.8079,
+          "s2_numeric_fc_pairs": 380,
+          "s2_numeric_fc_pooled_auroc": 0.7505,
+          "d1_pooled_auroc": 0.7856,
+          "d1_pooled_ci_95": [
+            0.6293,
+            0.8763
+          ]
+        },
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted_auroc": 0.6353,
+          "s0_pair_weighted_ci_95": [
+            0.4597,
+            0.7617
+          ],
+          "s0_study_mean_auroc": 0.5852,
+          "s0_study_mean_ci_95": [
+            0.4629,
+            0.701
+          ],
+          "s0_loso_range": [
+            0.5916,
+            0.652
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.6487,
+          "s2_numeric_fc_pairs": 380,
+          "s2_numeric_fc_pooled_auroc": 0.5595,
+          "d1_pooled_auroc": 0.5467,
+          "d1_pooled_ci_95": [
+            0.4825,
+            0.6136
+          ]
+        }
+      }
+    },
+    "HCMV_UL54_Foscarnet": {
+      "drug": "Foscarnet",
+      "features": {
+        "Distance-Only (Option A: As Executed)": {
+          "s0_pair_weighted_auroc": 0.8822,
+          "s0_pair_weighted_ci_95": [
+            0.7693,
+            0.9677
+          ],
+          "s0_study_mean_auroc": 0.9492,
+          "s0_study_mean_ci_95": [
+            0.9173,
+            0.9883
+          ],
+          "s0_loso_range": [
+            0.8657,
+            0.9142
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.8747,
+          "s2_numeric_fc_pairs": 363,
+          "s2_numeric_fc_pooled_auroc": 0.8865,
+          "d1_pooled_auroc": 0.8824,
+          "d1_pooled_ci_95": [
+            0.8314,
+            0.9207
+          ]
+        },
+        "Composite Where (ESM-2 650M + Option A: As Pre-Registered)": {
+          "s0_pair_weighted_auroc": 0.7308,
+          "s0_pair_weighted_ci_95": [
+            0.5442,
+            0.9126
+          ],
+          "s0_study_mean_auroc": 0.7446,
+          "s0_study_mean_ci_95": [
+            0.6467,
+            0.8481
+          ],
+          "s0_loso_range": [
+            0.6594,
+            0.7747
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.7231,
+          "s2_numeric_fc_pairs": 363,
+          "s2_numeric_fc_pooled_auroc": 0.7896,
+          "d1_pooled_auroc": 0.792,
+          "d1_pooled_ci_95": [
+            0.6777,
+            0.8643
+          ]
+        },
+        "Composite Where (ESM-2 35M + Option A)": {
+          "s0_pair_weighted_auroc": 0.5938,
+          "s0_pair_weighted_ci_95": [
+            0.4551,
+            0.7541
+          ],
+          "s0_study_mean_auroc": 0.5536,
+          "s0_study_mean_ci_95": [
+            0.4522,
+            0.6678
+          ],
+          "s0_loso_range": [
+            0.5356,
+            0.615
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.6047,
+          "s2_numeric_fc_pairs": 363,
+          "s2_numeric_fc_pooled_auroc": 0.6904,
+          "d1_pooled_auroc": 0.6952,
+          "d1_pooled_ci_95": [
+            0.5689,
+            0.7795
+          ]
+        },
+        "Constraint-Only (ESM-2 650M Positional)": {
+          "s0_pair_weighted_auroc": 0.4856,
+          "s0_pair_weighted_ci_95": [
+            0.2581,
+            0.814
+          ],
+          "s0_study_mean_auroc": 0.4388,
+          "s0_study_mean_ci_95": [
+            0.3125,
+            0.562
+          ],
+          "s0_loso_range": [
+            0.3498,
+            0.5214
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.5165,
+          "s2_numeric_fc_pairs": 363,
+          "s2_numeric_fc_pooled_auroc": 0.5909,
+          "d1_pooled_auroc": 0.5989,
+          "d1_pooled_ci_95": [
+            0.3922,
+            0.7318
+          ]
+        },
+        "Distance-Only (Option B)": {
+          "s0_pair_weighted_auroc": 0.5144,
+          "s0_pair_weighted_ci_95": [
+            0.2806,
+            0.7743
+          ],
+          "s0_study_mean_auroc": 0.4375,
+          "s0_study_mean_ci_95": [
+            0.3103,
+            0.5685
+          ],
+          "s0_loso_range": [
+            0.4118,
+            0.5508
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.5386,
+          "s2_numeric_fc_pairs": 363,
+          "s2_numeric_fc_pooled_auroc": 0.6347,
+          "d1_pooled_auroc": 0.6385,
+          "d1_pooled_ci_95": [
+            0.4442,
+            0.7619
+          ]
+        },
+        "Composite Where (ESM-2 650M + Option B)": {
+          "s0_pair_weighted_auroc": 0.4856,
+          "s0_pair_weighted_ci_95": [
+            0.2554,
+            0.8059
+          ],
+          "s0_study_mean_auroc": 0.454,
+          "s0_study_mean_ci_95": [
+            0.3304,
+            0.5832
+          ],
+          "s0_loso_range": [
+            0.3529,
+            0.5214
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.5165,
+          "s2_numeric_fc_pairs": 363,
+          "s2_numeric_fc_pooled_auroc": 0.6106,
+          "d1_pooled_auroc": 0.6165,
+          "d1_pooled_ci_95": [
+            0.392,
+            0.7535
+          ]
+        },
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted_auroc": 0.3882,
+          "s0_pair_weighted_ci_95": [
+            0.2431,
+            0.5663
+          ],
+          "s0_study_mean_auroc": 0.368,
+          "s0_study_mean_ci_95": [
+            0.2613,
+            0.4644
+          ],
+          "s0_loso_range": [
+            0.3189,
+            0.4273
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.3871,
+          "s2_numeric_fc_pairs": 363,
+          "s2_numeric_fc_pooled_auroc": 0.3859,
+          "d1_pooled_auroc": 0.4015,
+          "d1_pooled_ci_95": [
+            0.3284,
+            0.4692
+          ]
+        }
+      }
+    },
+    "HCMV_UL54_Cidofovir": {
+      "drug": "Cidofovir",
+      "features": {
+        "Distance-Only (Option A: As Executed)": {
+          "s0_pair_weighted_auroc": 0.2507,
+          "s0_pair_weighted_ci_95": [
+            0.115,
+            0.4668
+          ],
+          "s0_study_mean_auroc": 0.246,
+          "s0_study_mean_ci_95": [
+            0.1484,
+            0.3376
+          ],
+          "s0_loso_range": [
+            0.2112,
+            0.2983
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.2168,
+          "s2_numeric_fc_pairs": 346,
+          "s2_numeric_fc_pooled_auroc": 0.3809,
+          "d1_pooled_auroc": 0.385,
+          "d1_pooled_ci_95": [
+            0.2508,
+            0.4813
+          ]
+        },
+        "Composite Where (ESM-2 650M + Option A: As Pre-Registered)": {
+          "s0_pair_weighted_auroc": 0.5477,
+          "s0_pair_weighted_ci_95": [
+            0.4351,
+            0.7013
+          ],
+          "s0_study_mean_auroc": 0.4418,
+          "s0_study_mean_ci_95": [
+            0.3264,
+            0.5531
+          ],
+          "s0_loso_range": [
+            0.5297,
+            0.5864
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.5231,
+          "s2_numeric_fc_pairs": 346,
+          "s2_numeric_fc_pooled_auroc": 0.6712,
+          "d1_pooled_auroc": 0.6702,
+          "d1_pooled_ci_95": [
+            0.5067,
+            0.7742
+          ]
+        },
+        "Composite Where (ESM-2 35M + Option A)": {
+          "s0_pair_weighted_auroc": 0.6213,
+          "s0_pair_weighted_ci_95": [
+            0.5386,
+            0.7638
+          ],
+          "s0_study_mean_auroc": 0.5286,
+          "s0_study_mean_ci_95": [
+            0.4027,
+            0.648
+          ],
+          "s0_loso_range": [
+            0.6055,
+            0.6436
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.6012,
+          "s2_numeric_fc_pairs": 346,
+          "s2_numeric_fc_pooled_auroc": 0.6816,
+          "d1_pooled_auroc": 0.6788,
+          "d1_pooled_ci_95": [
+            0.5672,
+            0.7618
+          ]
+        },
+        "Constraint-Only (ESM-2 650M Positional)": {
+          "s0_pair_weighted_auroc": 0.7766,
+          "s0_pair_weighted_ci_95": [
+            0.6461,
+            0.8683
+          ],
+          "s0_study_mean_auroc": 0.6804,
+          "s0_study_mean_ci_95": [
+            0.5651,
+            0.7965
+          ],
+          "s0_loso_range": [
+            0.7649,
+            0.8218
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.7717,
+          "s2_numeric_fc_pairs": 346,
+          "s2_numeric_fc_pooled_auroc": 0.8314,
+          "d1_pooled_auroc": 0.8314,
+          "d1_pooled_ci_95": [
+            0.7442,
+            0.8906
+          ]
+        },
+        "Distance-Only (Option B)": {
+          "s0_pair_weighted_auroc": 0.7766,
+          "s0_pair_weighted_ci_95": [
+            0.6755,
+            0.8949
+          ],
+          "s0_study_mean_auroc": 0.6064,
+          "s0_study_mean_ci_95": [
+            0.4756,
+            0.7289
+          ],
+          "s0_loso_range": [
+            0.7517,
+            0.8
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.7688,
+          "s2_numeric_fc_pairs": 346,
+          "s2_numeric_fc_pooled_auroc": 0.7947,
+          "d1_pooled_auroc": 0.7926,
+          "d1_pooled_ci_95": [
+            0.675,
+            0.8615
+          ]
+        },
+        "Composite Where (ESM-2 650M + Option B)": {
+          "s0_pair_weighted_auroc": 0.8093,
+          "s0_pair_weighted_ci_95": [
+            0.7001,
+            0.8966
+          ],
+          "s0_study_mean_auroc": 0.6524,
+          "s0_study_mean_ci_95": [
+            0.5324,
+            0.779
+          ],
+          "s0_loso_range": [
+            0.792,
+            0.8449
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.8064,
+          "s2_numeric_fc_pairs": 346,
+          "s2_numeric_fc_pooled_auroc": 0.8427,
+          "d1_pooled_auroc": 0.8424,
+          "d1_pooled_ci_95": [
+            0.7557,
+            0.9002
+          ]
+        },
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted_auroc": 0.6131,
+          "s0_pair_weighted_ci_95": [
+            0.4795,
+            0.7162
+          ],
+          "s0_study_mean_auroc": 0.5942,
+          "s0_study_mean_ci_95": [
+            0.4893,
+            0.6996
+          ],
+          "s0_loso_range": [
+            0.5762,
+            0.637
+          ],
+          "s2_numeric_fc_pair_weighted_auroc": 0.6185,
+          "s2_numeric_fc_pairs": 346,
+          "s2_numeric_fc_pooled_auroc": 0.5604,
+          "d1_pooled_auroc": 0.562,
+          "d1_pooled_ci_95": [
+            0.5065,
+            0.625
+          ]
+        }
+      }
+    }
+  }
+}
