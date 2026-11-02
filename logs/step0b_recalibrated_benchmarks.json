@@ -1,0 +1,340 @@
+{
+  "UL30-Aciclovir": {
+    "description": "Primary Target",
+    "n_evaluable_domains": 4,
+    "evaluable_domains_list": [
+      "Exo",
+      "Fingers",
+      "Palm",
+      "Thumb_Cterm"
+    ],
+    "distinct_bootstrap_multisets": 35,
+    "theoretical_multisets_max": 35,
+    "domain_records": [
+      {
+        "domain": "Exo",
+        "n_test": 37,
+        "n_pos": 8,
+        "auc_pos_rf": 0.709051724137931,
+        "reference_baseline": 0.709051724137931,
+        "auc_esm2": 0.6594827586206897,
+        "auc_protbert": 0.6508620689655172,
+        "auc_blosum62": 0.5775862068965517,
+        "auc_where": 0.8620689655172413,
+        "excess_esm2": -0.049568965517241326,
+        "excess_protbert": -0.05818965517241381,
+        "excess_blosum62": -0.13146551724137934,
+        "excess_where": 0.15301724137931028
+      },
+      {
+        "domain": "Fingers",
+        "n_test": 18,
+        "n_pos": 16,
+        "auc_pos_rf": 0.515625,
+        "reference_baseline": 0.515625,
+        "auc_esm2": 0.75,
+        "auc_protbert": 0.40625,
+        "auc_blosum62": 0.5,
+        "auc_where": 0.875,
+        "excess_esm2": 0.234375,
+        "excess_protbert": -0.109375,
+        "excess_blosum62": -0.015625,
+        "excess_where": 0.359375
+      },
+      {
+        "domain": "Palm",
+        "n_test": 111,
+        "n_pos": 32,
+        "auc_pos_rf": 0.5332278481012659,
+        "reference_baseline": 0.5332278481012659,
+        "auc_esm2": 0.8049841772151899,
+        "auc_protbert": 0.7086629746835443,
+        "auc_blosum62": 0.5712025316455696,
+        "auc_where": 0.8132911392405063,
+        "excess_esm2": 0.271756329113924,
+        "excess_protbert": 0.17543512658227844,
+        "excess_blosum62": 0.03797468354430367,
+        "excess_where": 0.28006329113924044
+      },
+      {
+        "domain": "Thumb_Cterm",
+        "n_test": 82,
+        "n_pos": 6,
+        "auc_pos_rf": 0.5,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.7609649122807017,
+        "auc_protbert": 0.6776315789473685,
+        "auc_blosum62": 0.3135964912280702,
+        "auc_where": 0.5701754385964912,
+        "excess_esm2": 0.26096491228070173,
+        "excess_protbert": 0.17763157894736847,
+        "excess_blosum62": -0.1864035087719298,
+        "excess_where": 0.07017543859649122
+      }
+    ],
+    "domain_means": {
+      "auc_pos_rf": 0.5644761430597992,
+      "auc_esm2": 0.7438579620291453,
+      "auc_blosum62": 0.49059630744254784,
+      "auc_where": 0.7801338858385598
+    },
+    "excess_metrics": {
+      "reference_rule": "max(0.50, auc_pos_rf)",
+      "esm2": {
+        "domain_mean_excess": 0.1793818189693461,
+        "ci_95": [
+          0.02806450393224444,
+          0.26636062069731287
+        ],
+        "sign_consistency": "3/4"
+      },
+      "blosum62": {
+        "domain_mean_excess": -0.07387983561725137,
+        "ci_95": [
+          -0.15893451300665457,
+          0.011174841772151833
+        ],
+        "sign_consistency": "1/4"
+      },
+      "where": {
+        "domain_mean_excess": 0.2156577427787605,
+        "ci_95": [
+          0.11159633998790075,
+          0.32021484374999726
+        ],
+        "sign_consistency": "4/4"
+      }
+    }
+  },
+  "UL30-Foscarnet": {
+    "description": "Secondary Target (2 evaluable domains per N_pos>=5 rule)",
+    "n_evaluable_domains": 2,
+    "evaluable_domains_list": [
+      "Fingers",
+      "Palm"
+    ],
+    "distinct_bootstrap_multisets": 3,
+    "theoretical_multisets_max": 3,
+    "domain_records": [
+      {
+        "domain": "Fingers",
+        "n_test": 14,
+        "n_pos": 8,
+        "auc_pos_rf": 0.5,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.41666666666666663,
+        "auc_protbert": 0.625,
+        "auc_blosum62": 0.7395833333333334,
+        "auc_where": 0.75,
+        "excess_esm2": -0.08333333333333337,
+        "excess_protbert": 0.125,
+        "excess_blosum62": 0.23958333333333337,
+        "excess_where": 0.25
+      },
+      {
+        "domain": "Palm",
+        "n_test": 100,
+        "n_pos": 20,
+        "auc_pos_rf": 0.550625,
+        "reference_baseline": 0.550625,
+        "auc_esm2": 0.7543750000000001,
+        "auc_protbert": 0.6775,
+        "auc_blosum62": 0.429375,
+        "auc_where": 0.825625,
+        "excess_esm2": 0.2037500000000001,
+        "excess_protbert": 0.12687499999999996,
+        "excess_blosum62": -0.12125000000000002,
+        "excess_where": 0.275
+      }
+    ],
+    "domain_means": {
+      "auc_pos_rf": 0.5253125000000001,
+      "auc_esm2": 0.5855208333333334,
+      "auc_blosum62": 0.5844791666666667,
+      "auc_where": 0.7878125
+    },
+    "excess_metrics": {
+      "reference_rule": "max(0.50, auc_pos_rf)",
+      "esm2": {
+        "domain_mean_excess": 0.060208333333333364,
+        "ci_95": [
+          -0.08333333333333337,
+          0.2037500000000001
+        ],
+        "sign_consistency": "1/2"
+      },
+      "blosum62": {
+        "domain_mean_excess": 0.05916666666666667,
+        "ci_95": [
+          -0.12125000000000002,
+          0.23958333333333337
+        ],
+        "sign_consistency": "1/2"
+      },
+      "where": {
+        "domain_mean_excess": 0.2625,
+        "ci_95": [
+          0.25,
+          0.275
+        ],
+        "sign_consistency": "2/2"
+      }
+    }
+  },
+  "UL23-Aciclovir": {
+    "description": "Comparative Kinase (Dispensable Target)",
+    "n_evaluable_domains": 4,
+    "evaluable_domains_list": [
+      "ATP_Core",
+      "C-term",
+      "Lid_Dimer",
+      "Nucleoside_Pocket"
+    ],
+    "distinct_bootstrap_multisets": 35,
+    "theoretical_multisets_max": 35,
+    "domain_records": [
+      {
+        "domain": "ATP_Core",
+        "n_test": 90,
+        "n_pos": 52,
+        "auc_pos_rf": 0.4013157894736841,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.805668016194332,
+        "auc_protbert": 0.7907388663967612,
+        "auc_blosum62": 0.6371457489878543,
+        "auc_where": 0.7059716599190283,
+        "excess_esm2": 0.30566801619433204,
+        "excess_protbert": 0.29073886639676116,
+        "excess_blosum62": 0.13714574898785425,
+        "excess_where": 0.20597165991902833
+      },
+      {
+        "domain": "C-term",
+        "n_test": 42,
+        "n_pos": 6,
+        "auc_pos_rf": 0.5,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.6111111111111112,
+        "auc_protbert": 0.775462962962963,
+        "auc_blosum62": 0.7083333333333334,
+        "auc_where": 0.4953703703703704,
+        "excess_esm2": 0.11111111111111116,
+        "excess_protbert": 0.275462962962963,
+        "excess_blosum62": 0.20833333333333337,
+        "excess_where": -0.004629629629629595
+      },
+      {
+        "domain": "Lid_Dimer",
+        "n_test": 62,
+        "n_pos": 17,
+        "auc_pos_rf": 0.46601307189542474,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.5980392156862745,
+        "auc_protbert": 0.6437908496732025,
+        "auc_blosum62": 0.734640522875817,
+        "auc_where": 0.4326797385620915,
+        "excess_esm2": 0.0980392156862745,
+        "excess_protbert": 0.14379084967320255,
+        "excess_blosum62": 0.23464052287581705,
+        "excess_where": -0.06732026143790848
+      },
+      {
+        "domain": "Nucleoside_Pocket",
+        "n_test": 60,
+        "n_pos": 45,
+        "auc_pos_rf": 0.38148148148148153,
+        "reference_baseline": 0.5,
+        "auc_esm2": 0.7392592592592593,
+        "auc_protbert": 0.7340740740740741,
+        "auc_blosum62": 0.6103703703703703,
+        "auc_where": 0.6340740740740741,
+        "excess_esm2": 0.23925925925925928,
+        "excess_protbert": 0.2340740740740741,
+        "excess_blosum62": 0.11037037037037034,
+        "excess_where": 0.13407407407407412
+      }
+    ],
+    "domain_means": {
+      "auc_pos_rf": 0.4372025857126476,
+      "auc_esm2": 0.6885194005627442,
+      "auc_blosum62": 0.6726224938918438,
+      "auc_where": 0.567023960731391
+    },
+    "excess_metrics": {
+      "reference_rule": "max(0.50, auc_pos_rf)",
+      "esm2": {
+        "domain_mean_excess": 0.18851940056274424,
+        "ci_95": [
+          0.10457516339869283,
+          0.27246363772679566
+        ],
+        "sign_consistency": "4/4"
+      },
+      "blosum62": {
+        "domain_mean_excess": 0.17262249389184375,
+        "ci_95": [
+          0.1237580596791123,
+          0.2214869281045752
+        ],
+        "sign_consistency": "4/4"
+      },
+      "where": {
+        "domain_mean_excess": 0.0670239607313911,
+        "ci_95": [
+          -0.03597494553376904,
+          0.17002286699655123
+        ],
+        "sign_consistency": "2/4"
+      }
+    }
+  },
+  "beta5_bimodality_diagnostic": {
+    "leave_one_domain_out": {
+      "Exo": {
+        "beta5": -0.014841492880921894,
+        "beta1_where": 1.8800792448841555,
+        "n_dropped": 37,
+        "pos_dropped": 8
+      },
+      "Fingers": {
+        "beta5": -0.01231334470588438,
+        "beta1_where": 1.8127868691309856,
+        "n_dropped": 18,
+        "pos_dropped": 16
+      },
+      "NTD": {
+        "beta5": -0.002360026293860404,
+        "beta1_where": 1.6944497367948226,
+        "n_dropped": 84,
+        "pos_dropped": 0
+      },
+      "Palm": {
+        "beta5": 0.42886666426718456,
+        "beta1_where": 1.5545030914991855,
+        "n_dropped": 111,
+        "pos_dropped": 32
+      },
+      "Thumb_Cterm": {
+        "beta5": -0.0856046509829653,
+        "beta1_where": 2.378235968397695,
+        "n_dropped": 82,
+        "pos_dropped": 6
+      }
+    },
+    "interpretation": "Drop Fingers (18 rows, 16 resistant) vs Drop Palm (111 rows, 32 resistant) shows how beta5 shifts depending on high-influence clusters."
+  },
+  "variant_record_census": {
+    "total_variant_drug_records": 929,
+    "total_unique_amino_acid_substitutions": 630,
+    "ul30_overlap": {
+      "acv_positions": 290,
+      "fos_positions": 271,
+      "shared_positions": 264,
+      "shared_positions_pct_acv": 91.0,
+      "acv_substitutions": 332,
+      "fos_substitutions": 311,
+      "shared_substitutions": 299,
+      "shared_substitutions_pct_acv": 90.1
+    }
+  }
+}

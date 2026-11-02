@@ -105,3 +105,4 @@ p.write_text(text, encoding='utf-8')
 artifact_path = pathlib.Path(r'C:\Users\HP\.gemini\antigravity\brain\7e2c0f5f-723c-45b3-9f56-f3ec4abc7b17\hsv_antiviral_resistance_research_paper.md')
 shutil.copyfile(p, artifact_path)
 print("Artifact successfully synchronized.")
+

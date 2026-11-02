@@ -164,3 +164,4 @@ artifact_fig = pathlib.Path(r'C:\Users\HP\.gemini\antigravity\brain\7e2c0f5f-723
 artifact_fig.parent.mkdir(parents=True, exist_ok=True)
 shutil.copyfile(fig_path, artifact_fig)
 print(f"Synced figure to artifact directory: {artifact_fig}")
+
