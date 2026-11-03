@@ -1,0 +1,38 @@
+{
+  "purpose": "Provenance and exact contingency counts for UL23 clinical scope quantification",
+  "source_dataset": "data/processed/unified_modeling_dataset.tsv",
+  "total_ul23_entries": 941,
+  "evaluable_ul23_entries": 921,
+  "all_drugs_ul23_catalog": {
+    "description": "All cataloged resistant UL23 entries across all 7 antiviral drugs (aciclovir, foscarnet, penciclovir, brivudine, cidofovir, pritelivir, amenamevir)",
+    "total_resistant_denominator": 419,
+    "non_missense_numerator": 186,
+    "missense_count": 233,
+    "pct_non_missense": 44.4,
+    "pct_missense": 55.6,
+    "exact_quotient_non_missense": "186 / 419",
+    "exact_quotient_missense": "233 / 419",
+    "mutation_category_counts": {
+      "single_substitution": 233,
+      "nonsense_stop": 125,
+      "frameshift": 50,
+      "indel": 11
+    }
+  },
+  "aciclovir_specific_ul23_catalog": {
+    "description": "UL23 entries filtered strictly to aciclovir assays",
+    "total_resistant_denominator": 255,
+    "non_missense_numerator": 98,
+    "missense_count": 157,
+    "pct_non_missense": 38.4,
+    "pct_missense": 61.6,
+    "exact_quotient_non_missense": "98 / 255",
+    "exact_quotient_missense": "157 / 255",
+    "mutation_category_counts": {
+      "single_substitution": 157,
+      "nonsense_stop": 69,
+      "frameshift": 21,
+      "indel": 8
+    }
+  }
+}

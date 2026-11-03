@@ -1,0 +1,84 @@
+{
+ "purpose": "recomputation of the UL23 truncating fraction, because the stated 44.4% (186/419) traces to no file under logs/",
+ "manuscript_asserted": {
+  "pct": 44.4,
+  "numerator": 186,
+  "denominator": 419,
+  "traces_to_log": false,
+  "appears_in": [
+   "abstract",
+   "introduction",
+   "results",
+   "discussion"
+  ]
+ },
+ "cmi_supplement_status": "columns not identifiable; available = ['Gene', 'Drug', 'AA change', 'AA position', 'Resistance', 'PMIDs', 'resistance status confirmed in cell culture', 'clinical susceptibility information available', 'All genes sequenced that may confer resistance?', 'Motif', 'Comment', 'Unnamed: 11']",
+ "specifications": {
+  "HerpesDRG only | FC>=2.0 | all rows | indels_in": {
+   "n_resistant_total": 311,
+   "n_truncating": 69,
+   "n_missense": 232,
+   "n_other_unclassified": 10,
+   "pct_truncating": 22.2,
+   "pct_missense": 74.6
+  },
+  "HerpesDRG only | FC>=2.0 | all rows | indels_out": {
+   "n_resistant_total": 311,
+   "n_truncating": 67,
+   "n_missense": 232,
+   "n_other_unclassified": 10,
+   "pct_truncating": 21.5,
+   "pct_missense": 74.6
+  },
+  "HerpesDRG only | FC>=2.0 | dedup | indels_in": {
+   "n_resistant_total": 187,
+   "n_truncating": 37,
+   "n_missense": 140,
+   "n_other_unclassified": 10,
+   "pct_truncating": 19.8,
+   "pct_missense": 74.9
+  },
+  "HerpesDRG only | FC>=2.0 | dedup | indels_out": {
+   "n_resistant_total": 187,
+   "n_truncating": 35,
+   "n_missense": 140,
+   "n_other_unclassified": 10,
+   "pct_truncating": 18.7,
+   "pct_missense": 74.9
+  },
+  "HerpesDRG only | FC>=3.0 | all rows | indels_in": {
+   "n_resistant_total": 309,
+   "n_truncating": 69,
+   "n_missense": 230,
+   "n_other_unclassified": 10,
+   "pct_truncating": 22.3,
+   "pct_missense": 74.4
+  },
+  "HerpesDRG only | FC>=3.0 | all rows | indels_out": {
+   "n_resistant_total": 309,
+   "n_truncating": 67,
+   "n_missense": 230,
+   "n_other_unclassified": 10,
+   "pct_truncating": 21.7,
+   "pct_missense": 74.4
+  },
+  "HerpesDRG only | FC>=3.0 | dedup | indels_in": {
+   "n_resistant_total": 185,
+   "n_truncating": 37,
+   "n_missense": 138,
+   "n_other_unclassified": 10,
+   "pct_truncating": 20.0,
+   "pct_missense": 74.6
+  },
+  "HerpesDRG only | FC>=3.0 | dedup | indels_out": {
+   "n_resistant_total": 185,
+   "n_truncating": 35,
+   "n_missense": 138,
+   "n_other_unclassified": 10,
+   "pct_truncating": 18.9,
+   "pct_missense": 74.6
+  }
+ },
+ "specifications_matching_44_4_within_1_5_points": [],
+ "note": "'other_unclassified' records are reported separately and are never folded into the truncating or missense counts; a specification whose n_other_unclassified is large should not be used."
+}
