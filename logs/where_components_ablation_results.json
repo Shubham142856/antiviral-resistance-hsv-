@@ -1,0 +1,335 @@
+{
+  "protocol": {
+    "document": "docs/WHERE_COMPONENTS_ABLATION_PLAN.md",
+    "version": "1.2",
+    "status": "COMPLETED ABLATION",
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "targets": {
+    "UL30-Aciclovir": {
+      "gene": "UL30",
+      "drug": "Aciclovir",
+      "arm_role": "Primary Arm",
+      "cohort": {
+        "total_rows": 332,
+        "resistant": 62,
+        "sensitive": 270,
+        "mixed_studies": 14,
+        "same_study_pairs": 267
+      },
+      "scores": {
+        "Composite Where (Standardized)": {
+          "s0_pair_weighted": 0.7865,
+          "s0_pair_weighted_ci_95": [
+            0.7368,
+            0.8321
+          ],
+          "s0_study_mean": 0.7356,
+          "s2_stratum_pair_weighted": 0.7778,
+          "d1_pooled": 0.8606
+        },
+        "Evolutionary Constraint Only (ESM-2 650M)": {
+          "s0_pair_weighted": 0.7041,
+          "s0_pair_weighted_ci_95": [
+            0.6093,
+            0.8298
+          ],
+          "s0_study_mean": 0.6979,
+          "s2_stratum_pair_weighted": 0.8254,
+          "d1_pooled": 0.7371
+        },
+        "Active-Site Proximity Only (Linear Std)": {
+          "s0_pair_weighted": 0.7846,
+          "s0_pair_weighted_ci_95": [
+            0.6632,
+            0.8805
+          ],
+          "s0_study_mean": 0.7533,
+          "s2_stratum_pair_weighted": 0.6825,
+          "d1_pooled": 0.8967
+        },
+        "Active-Site Proximity Only (Rank-Norm)": {
+          "s0_pair_weighted": 0.7846,
+          "s0_pair_weighted_ci_95": [
+            0.6632,
+            0.8805
+          ],
+          "s0_study_mean": 0.7533,
+          "s2_stratum_pair_weighted": 0.6825,
+          "d1_pooled": 0.8967
+        },
+        "Composite Where (Rank-Norm Dist)": {
+          "s0_pair_weighted": 0.8165,
+          "s0_pair_weighted_ci_95": [
+            0.7808,
+            0.8496
+          ],
+          "s0_study_mean": 0.7713,
+          "s2_stratum_pair_weighted": 0.7937,
+          "d1_pooled": 0.879
+        },
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted": 0.5562,
+          "s0_pair_weighted_ci_95": [
+            0.3282,
+            0.7751
+          ],
+          "s0_study_mean": 0.3998,
+          "s2_stratum_pair_weighted": 0.4206,
+          "d1_pooled": 0.4942
+        }
+      },
+      "paired_deltas": {
+        "Delta(Composite - Constraint)": {
+          "observed_delta": 0.0768,
+          "ci_95": [
+            -0.0192,
+            0.1559
+          ],
+          "p_value": 0.0615
+        },
+        "Delta(Composite - Distance_Std)": {
+          "observed_delta": 0.0085,
+          "ci_95": [
+            -0.1089,
+            0.1449
+          ],
+          "p_value": 0.4795
+        },
+        "Delta(Distance_Std - Constraint)": {
+          "observed_delta": 0.0683,
+          "ci_95": [
+            -0.1571,
+            0.2629
+          ],
+          "p_value": 0.263
+        },
+        "Delta(Composite_Rank - Composite_Std)": {
+          "observed_delta": 0.0297,
+          "ci_95": [
+            -0.0061,
+            0.0645
+          ],
+          "p_value": 0.0645
+        }
+      }
+    },
+    "UL30-Foscarnet": {
+      "gene": "UL30",
+      "drug": "Foscarnet",
+      "arm_role": "Secondary Descriptive Arm",
+      "cohort": {
+        "total_rows": 311,
+        "resistant": 33,
+        "sensitive": 278,
+        "mixed_studies": 8,
+        "same_study_pairs": 82
+      },
+      "scores": {
+        "Composite Where (Standardized)": {
+          "s0_pair_weighted": 0.8415,
+          "s0_pair_weighted_ci_95": [
+            0.5333,
+            0.9305
+          ],
+          "s0_study_mean": 0.589,
+          "s2_stratum_pair_weighted": 0.9091,
+          "d1_pooled": 0.9097
+        },
+        "Evolutionary Constraint Only (ESM-2 650M)": {
+          "s0_pair_weighted": 0.8415,
+          "s0_pair_weighted_ci_95": [
+            0.5554,
+            0.9403
+          ],
+          "s0_study_mean": 0.7001,
+          "s2_stratum_pair_weighted": 0.9091,
+          "d1_pooled": 0.7941
+        },
+        "Active-Site Proximity Only (Linear Std)": {
+          "s0_pair_weighted": 0.7195,
+          "s0_pair_weighted_ci_95": [
+            0.5251,
+            0.8825
+          ],
+          "s0_study_mean": 0.5566,
+          "s2_stratum_pair_weighted": 0.7576,
+          "d1_pooled": 0.9306
+        },
+        "Active-Site Proximity Only (Rank-Norm)": {
+          "s0_pair_weighted": 0.7195,
+          "s0_pair_weighted_ci_95": [
+            0.5251,
+            0.8825
+          ],
+          "s0_study_mean": 0.5566,
+          "s2_stratum_pair_weighted": 0.7576,
+          "d1_pooled": 0.9306
+        },
+        "Composite Where (Rank-Norm Dist)": {
+          "s0_pair_weighted": 0.8293,
+          "s0_pair_weighted_ci_95": [
+            0.5333,
+            0.9305
+          ],
+          "s0_study_mean": 0.5856,
+          "s2_stratum_pair_weighted": 0.9091,
+          "d1_pooled": 0.9211
+        },
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted": 0.3232,
+          "s0_pair_weighted_ci_95": [
+            0.2083,
+            0.4
+          ],
+          "s0_study_mean": 0.2014,
+          "s2_stratum_pair_weighted": 0.3485,
+          "d1_pooled": 0.4531
+        }
+      },
+      "paired_deltas": {
+        "Delta(Composite - Constraint)": {
+          "observed_delta": -0.004,
+          "ci_95": [
+            -0.0769,
+            0.0556
+          ],
+          "p_value": 0.648
+        },
+        "Delta(Composite - Distance_Std)": {
+          "observed_delta": 0.1011,
+          "ci_95": [
+            -0.0769,
+            0.1786
+          ],
+          "p_value": 0.128
+        },
+        "Delta(Distance_Std - Constraint)": {
+          "observed_delta": -0.1051,
+          "ci_95": [
+            -0.2055,
+            0.1191
+          ],
+          "p_value": 0.116
+        },
+        "Delta(Composite_Rank - Composite_Std)": {
+          "observed_delta": -0.0098,
+          "ci_95": [
+            -0.0238,
+            0.0
+          ],
+          "p_value": 0.37
+        }
+      }
+    },
+    "UL23-Aciclovir": {
+      "gene": "UL23",
+      "drug": "Aciclovir",
+      "arm_role": "Comparative Counter-Arm",
+      "cohort": {
+        "total_rows": 286,
+        "resistant": 120,
+        "sensitive": 166,
+        "mixed_studies": 17,
+        "same_study_pairs": 331
+      },
+      "scores": {
+        "Composite Where (Standardized)": {
+          "s0_pair_weighted": 0.6677,
+          "s0_pair_weighted_ci_95": [
+            0.4634,
+            0.8212
+          ],
+          "s0_study_mean": 0.6453,
+          "s2_stratum_pair_weighted": 0.5172,
+          "d1_pooled": 0.7265
+        },
+        "Evolutionary Constraint Only (ESM-2 650M)": {
+          "s0_pair_weighted": 0.571,
+          "s0_pair_weighted_ci_95": [
+            0.4233,
+            0.6946
+          ],
+          "s0_study_mean": 0.6227,
+          "s2_stratum_pair_weighted": 0.2069,
+          "d1_pooled": 0.5637
+        },
+        "Active-Site Proximity Only (Linear Std)": {
+          "s0_pair_weighted": 0.6556,
+          "s0_pair_weighted_ci_95": [
+            0.4563,
+            0.8072
+          ],
+          "s0_study_mean": 0.6162,
+          "s2_stratum_pair_weighted": 0.7931,
+          "d1_pooled": 0.7618
+        },
+        "Active-Site Proximity Only (Rank-Norm)": {
+          "s0_pair_weighted": 0.6556,
+          "s0_pair_weighted_ci_95": [
+            0.4563,
+            0.8072
+          ],
+          "s0_study_mean": 0.6162,
+          "s2_stratum_pair_weighted": 0.7931,
+          "d1_pooled": 0.7618
+        },
+        "Composite Where (Rank-Norm Dist)": {
+          "s0_pair_weighted": 0.6949,
+          "s0_pair_weighted_ci_95": [
+            0.4983,
+            0.8385
+          ],
+          "s0_study_mean": 0.673,
+          "s2_stratum_pair_weighted": 0.7931,
+          "d1_pooled": 0.74
+        },
+        "BLOSUM62 Radicalness": {
+          "s0_pair_weighted": 0.5785,
+          "s0_pair_weighted_ci_95": [
+            0.4246,
+            0.7072
+          ],
+          "s0_study_mean": 0.5252,
+          "s2_stratum_pair_weighted": 0.8793,
+          "d1_pooled": 0.613
+        }
+      },
+      "paired_deltas": {
+        "Delta(Composite - Constraint)": {
+          "observed_delta": 0.094,
+          "ci_95": [
+            -0.0161,
+            0.1861
+          ],
+          "p_value": 0.045
+        },
+        "Delta(Composite - Distance_Std)": {
+          "observed_delta": 0.0093,
+          "ci_95": [
+            -0.0971,
+            0.1079
+          ],
+          "p_value": 0.423
+        },
+        "Delta(Distance_Std - Constraint)": {
+          "observed_delta": 0.0847,
+          "ci_95": [
+            -0.0717,
+            0.237
+          ],
+          "p_value": 0.115
+        },
+        "Delta(Composite_Rank - Composite_Std)": {
+          "observed_delta": 0.0291,
+          "ci_95": [
+            -0.012,
+            0.0995
+          ],
+          "p_value": 0.168
+        }
+      }
+    }
+  }
+}

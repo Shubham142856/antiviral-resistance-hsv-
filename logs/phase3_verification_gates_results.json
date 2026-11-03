@@ -1,0 +1,425 @@
+{
+  "protocol": {
+    "phase": "Phase 3 Verification Gates",
+    "components": [
+      "Gate 1: Concordance & Kappa",
+      "Gate 2: Phenotype Threshold Sensitivity",
+      "Gate 3: Spatial Radius Sensitivity"
+    ],
+    "status": "COMPLETE & AUDITED"
+  },
+  "gate1_concordance": {
+    "pairwise_feature_rank_concordance": {
+      "UL30-Aciclovir": {
+        "Where (Composite) vs Distance to Site": {
+          "spearman_rho": -0.5247237710622787,
+          "kendall_tau": -0.39880659728618767,
+          "n_positions": 332
+        },
+        "Where (Composite) vs ESM-2 650M": {
+          "spearman_rho": 0.09315488482795851,
+          "kendall_tau": 0.06453140465217316,
+          "n_positions": 332
+        },
+        "Where (Composite) vs BLOSUM62": {
+          "spearman_rho": -0.03166396820759028,
+          "kendall_tau": -0.02443344197658696,
+          "n_positions": 332
+        },
+        "Distance to Site vs ESM-2 650M": {
+          "spearman_rho": 0.4266199767880584,
+          "kendall_tau": 0.3041009098938594,
+          "n_positions": 332
+        },
+        "Distance to Site vs BLOSUM62": {
+          "spearman_rho": 0.0029867194172107504,
+          "kendall_tau": 0.003861726970203065,
+          "n_positions": 332
+        },
+        "ESM-2 650M vs BLOSUM62": {
+          "spearman_rho": -0.11250183276692481,
+          "kendall_tau": -0.08017332627405406,
+          "n_positions": 332
+        }
+      },
+      "UL30-Foscarnet": {
+        "Where (Composite) vs Distance to Site": {
+          "spearman_rho": -0.519042038933808,
+          "kendall_tau": -0.3961093730231936,
+          "n_positions": 311
+        },
+        "Where (Composite) vs ESM-2 650M": {
+          "spearman_rho": 0.13538141558397995,
+          "kendall_tau": 0.09365173879742869,
+          "n_positions": 311
+        },
+        "Where (Composite) vs BLOSUM62": {
+          "spearman_rho": -0.04578718909668138,
+          "kendall_tau": -0.03475208305681347,
+          "n_positions": 311
+        },
+        "Distance to Site vs ESM-2 650M": {
+          "spearman_rho": 0.3926145910084045,
+          "kendall_tau": 0.27731650352266807,
+          "n_positions": 311
+        },
+        "Distance to Site vs BLOSUM62": {
+          "spearman_rho": 0.05012477943970253,
+          "kendall_tau": 0.037915103337605345,
+          "n_positions": 311
+        },
+        "ESM-2 650M vs BLOSUM62": {
+          "spearman_rho": -0.04935066396464516,
+          "kendall_tau": -0.03476239259849295,
+          "n_positions": 311
+        }
+      },
+      "UL23-Aciclovir": {
+        "Where (Composite) vs Distance to Site": {
+          "spearman_rho": -0.5789857584704492,
+          "kendall_tau": -0.47031011582525584,
+          "n_positions": 286
+        },
+        "Where (Composite) vs ESM-2 650M": {
+          "spearman_rho": 0.011973955311208683,
+          "kendall_tau": 0.01014617883562527,
+          "n_positions": 286
+        },
+        "Where (Composite) vs BLOSUM62": {
+          "spearman_rho": -0.07071880450358171,
+          "kendall_tau": -0.051135141130118834,
+          "n_positions": 286
+        },
+        "Distance to Site vs ESM-2 650M": {
+          "spearman_rho": 0.5106349121677803,
+          "kendall_tau": 0.35618463128603667,
+          "n_positions": 286
+        },
+        "Distance to Site vs BLOSUM62": {
+          "spearman_rho": -0.024172995802099924,
+          "kendall_tau": -0.017495835223097528,
+          "n_positions": 286
+        },
+        "ESM-2 650M vs BLOSUM62": {
+          "spearman_rho": -0.18771586916764982,
+          "kendall_tau": -0.13209621165495272,
+          "n_positions": 286
+        }
+      }
+    },
+    "estimator_concordance_s0": {
+      "pearson_r": 0.8964004110022789,
+      "spearman_rho": 0.8285714285714287,
+      "mean_absolute_difference": 0.10952983689392916,
+      "max_absolute_difference": 0.2524525287482604,
+      "comparisons": [
+        {
+          "target": "UL30-Aciclovir",
+          "feature": "Where",
+          "pair_weighted": 0.7865168539325843,
+          "study_mean": 0.7355917275193207,
+          "delta": 0.05092512641326363
+        },
+        {
+          "target": "UL30-Aciclovir",
+          "feature": "BLOSUM62",
+          "pair_weighted": 0.5561797752808989,
+          "study_mean": 0.39978985103740483,
+          "delta": 0.15638992424349407
+        },
+        {
+          "target": "UL30-Foscarnet",
+          "feature": "Where",
+          "pair_weighted": 0.8414634146341463,
+          "study_mean": 0.5890108858858859,
+          "delta": 0.2524525287482604
+        },
+        {
+          "target": "UL30-Foscarnet",
+          "feature": "BLOSUM62",
+          "pair_weighted": 0.3231707317073171,
+          "study_mean": 0.2014451951951952,
+          "delta": 0.1217255365121219
+        },
+        {
+          "target": "UL23-Aciclovir",
+          "feature": "Where",
+          "pair_weighted": 0.6676737160120846,
+          "study_mean": 0.6453236850295674,
+          "delta": 0.0223500309825172
+        },
+        {
+          "target": "UL23-Aciclovir",
+          "feature": "BLOSUM62",
+          "pair_weighted": 0.5785498489425982,
+          "study_mean": 0.5252139744786805,
+          "delta": 0.05333587446391774
+        }
+      ]
+    },
+    "top_quartile_cohens_kappa": {
+      "UL30-Aciclovir": {
+        "Where_vs_observed_resistance": 0.0964912280701754,
+        "ESM-2_vs_observed_resistance": -0.2192982456140351,
+        "BLOSUM62_vs_observed_resistance": 0.0013557024233180615,
+        "Where_vs_ESM2": 0.06827309236947787,
+        "Where_vs_BLOSUM62": -0.027210884353741527,
+        "ESM2_vs_BLOSUM62": 0.05442176870748294
+      },
+      "UL30-Foscarnet": {
+        "Where_vs_observed_resistance": 0.03649610186225438,
+        "ESM-2_vs_observed_resistance": -0.15408708678037653,
+        "BLOSUM62_vs_observed_resistance": -0.03564181278942713,
+        "Where_vs_ESM2": 0.07593265103994717,
+        "Where_vs_BLOSUM62": -0.02723189886652566,
+        "ESM2_vs_BLOSUM62": 0.09101062186631181
+      },
+      "UL23-Aciclovir": {
+        "Where_vs_observed_resistance": 0.24000850340136048,
+        "ESM-2_vs_observed_resistance": -0.23118622448979598,
+        "BLOSUM62_vs_observed_resistance": 0.16912222452791037,
+        "Where_vs_ESM2": 0.034787123572170287,
+        "Where_vs_BLOSUM62": 0.03125742809603049,
+        "ESM2_vs_BLOSUM62": -0.10470644164487752
+      }
+    },
+    "human_curation_sample_status": {
+      "file": "logs/kappa_sample_50rows.tsv",
+      "n_rows": 50,
+      "phenotype_balance": "25 Resistant / 25 Sensitive",
+      "balanced_1_to_1": true,
+      "genes": {
+        "UL23": 27,
+        "UL30": 22,
+        "UL5": 1
+      },
+      "viruses": {
+        "HSV-1": 38,
+        "HSV-2": 12
+      },
+      "audit_gate_status": "PRE_SUBMISSION_HUMAN_AUDIT_SAMPLE_VERIFIED_LOCKED"
+    }
+  },
+  "gate2_thresholds": {
+    "UL30-Aciclovir": {
+      "n_numeric_rows": 78,
+      "cutoffs": {
+        "cutoff_2.0x": {
+          "resistant_count": 40,
+          "sensitive_count": 38,
+          "where_auroc": 0.4927631578947369,
+          "esm2_auroc": 0.25723684210526315,
+          "blosum_auroc": 0.48124999999999996
+        },
+        "cutoff_2.5x": {
+          "resistant_count": 38,
+          "sensitive_count": 40,
+          "where_auroc": 0.4625,
+          "esm2_auroc": 0.27039473684210524,
+          "blosum_auroc": 0.4825657894736842
+        },
+        "cutoff_3.0x": {
+          "resistant_count": 35,
+          "sensitive_count": 43,
+          "where_auroc": 0.486046511627907,
+          "esm2_auroc": 0.2637873754152824,
+          "blosum_auroc": 0.5245847176079734
+        }
+      },
+      "label_stability": {
+        "agreement_2.0_vs_3.0": 0.9358974358974359,
+        "kappa_2.0_vs_3.0": 0.8721311475409836,
+        "agreement_2.5_vs_3.0": 0.9615384615384616,
+        "kappa_2.5_vs_3.0": 0.922874093605801,
+        "delta_where_2.0_vs_3.0": 0.006716646266829884,
+        "delta_where_2.5_vs_3.0": -0.023546511627906996,
+        "ranking_invariant": false
+      }
+    },
+    "UL30-Foscarnet": {
+      "n_numeric_rows": 52,
+      "cutoffs": {
+        "cutoff_2.0x": {
+          "resistant_count": 19,
+          "sensitive_count": 33,
+          "where_auroc": 0.5111642743221692,
+          "esm2_auroc": 0.39553429027113235,
+          "blosum_auroc": 0.5143540669856459
+        },
+        "cutoff_2.5x": {
+          "resistant_count": 17,
+          "sensitive_count": 35,
+          "where_auroc": 0.5352941176470589,
+          "esm2_auroc": 0.41512605042016815,
+          "blosum_auroc": 0.5630252100840336
+        },
+        "cutoff_3.0x": {
+          "resistant_count": 15,
+          "sensitive_count": 37,
+          "where_auroc": 0.4891891891891892,
+          "esm2_auroc": 0.39999999999999997,
+          "blosum_auroc": 0.5513513513513513
+        }
+      },
+      "label_stability": {
+        "agreement_2.0_vs_3.0": 0.9230769230769231,
+        "kappa_2.0_vs_3.0": 0.8263772954924875,
+        "agreement_2.5_vs_3.0": 0.9615384615384616,
+        "kappa_2.5_vs_3.0": 0.9098786828422877,
+        "delta_where_2.0_vs_3.0": 0.021975085132979966,
+        "delta_where_2.5_vs_3.0": 0.04610492845786973,
+        "ranking_invariant": false
+      }
+    },
+    "UL23-Aciclovir": {
+      "n_numeric_rows": 66,
+      "cutoffs": {
+        "cutoff_2.0x": {
+          "resistant_count": 38,
+          "sensitive_count": 28,
+          "where_auroc": 0.618890977443609,
+          "esm2_auroc": 0.17293233082706766,
+          "blosum_auroc": 0.6748120300751879
+        },
+        "cutoff_2.5x": {
+          "resistant_count": 36,
+          "sensitive_count": 30,
+          "where_auroc": 0.5717592592592593,
+          "esm2_auroc": 0.18425925925925923,
+          "blosum_auroc": 0.6814814814814815
+        },
+        "cutoff_3.0x": {
+          "resistant_count": 36,
+          "sensitive_count": 30,
+          "where_auroc": 0.5717592592592593,
+          "esm2_auroc": 0.18425925925925923,
+          "blosum_auroc": 0.6814814814814815
+        }
+      },
+      "label_stability": {
+        "agreement_2.0_vs_3.0": 0.9696969696969697,
+        "kappa_2.0_vs_3.0": 0.9385474860335196,
+        "agreement_2.5_vs_3.0": 1.0,
+        "kappa_2.5_vs_3.0": 1.0,
+        "delta_where_2.0_vs_3.0": 0.04713171818434969,
+        "delta_where_2.5_vs_3.0": 0.0,
+        "ranking_invariant": false
+      }
+    }
+  },
+  "gate3_radius": {
+    "ul30_radius_distance_correlation": {
+      "spearman_5A_vs_6A": 0.9912215141077392,
+      "spearman_5A_vs_8A": 0.9664476747067334,
+      "pearson_5A_vs_6A": 0.9938665086662399,
+      "pearson_5A_vs_8A": 0.974881397381159
+    },
+    "ul23_radius_distance_correlation": {
+      "spearman_5A_vs_6A": 0.9630706486267482,
+      "spearman_5A_vs_8A": 0.9438050882972739,
+      "pearson_5A_vs_6A": 0.9641579554211503,
+      "pearson_5A_vs_8A": 0.9415515115211764
+    },
+    "target_radius_evaluations": {
+      "UL30-Aciclovir": {
+        "shells": {
+          "5.0": 26,
+          "6.0": 31,
+          "8.0": 61
+        },
+        "s0_evaluations": {
+          "radius_5.0A": {
+            "distance_only_pair_weighted_s0": 0.625,
+            "distance_only_study_mean_s0": 0.5460317460317461,
+            "composite_where_pair_weighted_s0": 0.78125,
+            "composite_where_study_mean_s0": 0.746031746031746
+          },
+          "radius_6.0A": {
+            "distance_only_pair_weighted_s0": 0.5625,
+            "distance_only_study_mean_s0": 0.5333333333333333,
+            "composite_where_pair_weighted_s0": 0.78125,
+            "composite_where_study_mean_s0": 0.746031746031746
+          },
+          "radius_8.0A": {
+            "distance_only_pair_weighted_s0": 0.609375,
+            "distance_only_study_mean_s0": 0.5746031746031746,
+            "composite_where_pair_weighted_s0": 0.78125,
+            "composite_where_study_mean_s0": 0.7142857142857143
+          }
+        },
+        "sensitivity_deltas": {
+          "delta_composite_6A_minus_5A": 0.0,
+          "delta_composite_8A_minus_5A": 0.0,
+          "max_absolute_radius_shift": 0.0,
+          "conclusion_stable": true
+        }
+      },
+      "UL30-Foscarnet": {
+        "shells": {
+          "5.0": 26,
+          "6.0": 31,
+          "8.0": 61
+        },
+        "s0_evaluations": {
+          "radius_5.0A": {
+            "distance_only_pair_weighted_s0": 0.625,
+            "distance_only_study_mean_s0": 0.3912037037037037,
+            "composite_where_pair_weighted_s0": 0.825,
+            "composite_where_study_mean_s0": 0.4930555555555556
+          },
+          "radius_6.0A": {
+            "distance_only_pair_weighted_s0": 0.575,
+            "distance_only_study_mean_s0": 0.3773148148148148,
+            "composite_where_pair_weighted_s0": 0.825,
+            "composite_where_study_mean_s0": 0.4930555555555556
+          },
+          "radius_8.0A": {
+            "distance_only_pair_weighted_s0": 0.625,
+            "distance_only_study_mean_s0": 0.40277777777777785,
+            "composite_where_pair_weighted_s0": 0.775,
+            "composite_where_study_mean_s0": 0.46759259259259256
+          }
+        },
+        "sensitivity_deltas": {
+          "delta_composite_6A_minus_5A": 0.0,
+          "delta_composite_8A_minus_5A": -0.04999999999999993,
+          "max_absolute_radius_shift": 0.04999999999999993,
+          "conclusion_stable": true
+        }
+      },
+      "UL23-Aciclovir": {
+        "shells": {
+          "5.0": 15,
+          "6.0": 22,
+          "8.0": 45
+        },
+        "s0_evaluations": {
+          "radius_5.0A": {
+            "distance_only_pair_weighted_s0": 0.6764705882352942,
+            "distance_only_study_mean_s0": 0.6599999999999999,
+            "composite_where_pair_weighted_s0": 0.6470588235294118,
+            "composite_where_study_mean_s0": 0.6900000000000001
+          },
+          "radius_6.0A": {
+            "distance_only_pair_weighted_s0": 0.6617647058823529,
+            "distance_only_study_mean_s0": 0.67,
+            "composite_where_pair_weighted_s0": 0.6176470588235294,
+            "composite_where_study_mean_s0": 0.6799999999999999
+          },
+          "radius_8.0A": {
+            "distance_only_pair_weighted_s0": 0.7058823529411765,
+            "distance_only_study_mean_s0": 0.655,
+            "composite_where_pair_weighted_s0": 0.6470588235294118,
+            "composite_where_study_mean_s0": 0.64
+          }
+        },
+        "sensitivity_deltas": {
+          "delta_composite_6A_minus_5A": -0.02941176470588236,
+          "delta_composite_8A_minus_5A": 0.0,
+          "max_absolute_radius_shift": 0.02941176470588236,
+          "conclusion_stable": true
+        }
+      }
+    }
+  }
+}

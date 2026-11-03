@@ -1,0 +1,108 @@
+{
+ "scope": "LABEL-FREE: no resistance labels, fold-changes or phenotypes read",
+ "source": "data\\processed\\primary_3d_spatial_folds.tsv",
+ "n_rows": 929,
+ "n_rows_with_3d": 737,
+ "metric": "min |pos_test - pos_train| per held-out position, pooled over the 5 folds of each scheme; unique positions only",
+ "targets": {
+  "UL23-Aciclovir": {
+   "n_unique_positions": 173,
+   "schemes": {
+    "position-grouped": {
+     "column": "cv_fold_id",
+     "median_nearest_train_distance": 1.0,
+     "p25": 1.0,
+     "mean": 1.289,
+     "frac_within_2_residues": 0.9653,
+     "frac_within_5_residues": 1.0
+    },
+    "contiguous-block": {
+     "column": "seq_block_id",
+     "median_nearest_train_distance": 22.0,
+     "p25": 13.0,
+     "mean": 24.636,
+     "frac_within_2_residues": 0.0405,
+     "frac_within_5_residues": 0.0809
+    },
+    "3D k-means": {
+     "column": "spatial_cluster_id",
+     "median_nearest_train_distance": 5.0,
+     "p25": 3.0,
+     "mean": 6.249,
+     "frac_within_2_residues": 0.185,
+     "frac_within_5_residues": 0.5145
+    }
+   },
+   "spatial_vs_contiguous_agreement": {
+    "normalized_mutual_info": 0.2918,
+    "adjusted_mutual_info": 0.2695
+   }
+  },
+  "UL30-Aciclovir": {
+   "n_unique_positions": 236,
+   "schemes": {
+    "position-grouped": {
+     "column": "cv_fold_id",
+     "median_nearest_train_distance": 2.0,
+     "p25": 1.0,
+     "mean": 2.559,
+     "frac_within_2_residues": 0.6314,
+     "frac_within_5_residues": 0.9068
+    },
+    "contiguous-block": {
+     "column": "seq_block_id",
+     "median_nearest_train_distance": 78.5,
+     "p25": 35.75,
+     "mean": 85.0,
+     "frac_within_2_residues": 0.0085,
+     "frac_within_5_residues": 0.0339
+    },
+    "3D k-means": {
+     "column": "spatial_cluster_id",
+     "median_nearest_train_distance": 17.0,
+     "p25": 9.0,
+     "mean": 20.809,
+     "frac_within_2_residues": 0.0381,
+     "frac_within_5_residues": 0.1017
+    }
+   },
+   "spatial_vs_contiguous_agreement": {
+    "normalized_mutual_info": 0.3745,
+    "adjusted_mutual_info": 0.3604
+   }
+  },
+  "UL30-Foscarnet": {
+   "n_unique_positions": 219,
+   "schemes": {
+    "position-grouped": {
+     "column": "cv_fold_id",
+     "median_nearest_train_distance": 2.0,
+     "p25": 1.0,
+     "mean": 2.626,
+     "frac_within_2_residues": 0.6073,
+     "frac_within_5_residues": 0.9041
+    },
+    "contiguous-block": {
+     "column": "seq_block_id",
+     "median_nearest_train_distance": 81.0,
+     "p25": 35.5,
+     "mean": 86.114,
+     "frac_within_2_residues": 0.0,
+     "frac_within_5_residues": 0.0228
+    },
+    "3D k-means": {
+     "column": "spatial_cluster_id",
+     "median_nearest_train_distance": 19.0,
+     "p25": 9.0,
+     "mean": 21.945,
+     "frac_within_2_residues": 0.0411,
+     "frac_within_5_residues": 0.1005
+    }
+   },
+   "spatial_vs_contiguous_agreement": {
+    "normalized_mutual_info": 0.3724,
+    "adjusted_mutual_info": 0.3572
+   }
+  }
+ }
+}

@@ -1,0 +1,138 @@
+{
+  "status": "COMPLETED",
+  "description": "Apportionment of reference set specification (distal MG) vs imputation policy (complete cases vs -max_dist)",
+  "drugs": {
+    "Ganciclovir": {
+      "option_a_full_cohort": {
+        "s0_pair_weighted": 0.4135,
+        "study_mean": 0.4349,
+        "n_pairs": 399,
+        "m_studies": 25
+      },
+      "option_a_common_cases": {
+        "s0_pair_weighted": 0.3823,
+        "study_mean": 0.444,
+        "n_pairs": 327,
+        "m_studies": 24
+      },
+      "cell1_b_clean_shell19_common": {
+        "s0_pair_weighted": 0.3914,
+        "study_mean": 0.4695,
+        "n_pairs": 327,
+        "m_studies": 24
+      },
+      "cell2_b_clean_shell19_imputed": {
+        "s0_pair_weighted": 0.4912,
+        "study_mean": 0.4868,
+        "n_pairs": 399,
+        "m_studies": 25
+      },
+      "cell3_b_distal_mg_triad_common": {
+        "s0_pair_weighted": 0.6514,
+        "study_mean": 0.5685,
+        "n_pairs": 327,
+        "m_studies": 24
+      },
+      "cell4_old_option_b_imputed": {
+        "s0_pair_weighted": 0.7043,
+        "study_mean": 0.5731,
+        "n_pairs": 399,
+        "m_studies": 25
+      },
+      "effects_apportionment": {
+        "pure_provenance_delta": 0.0092,
+        "reference_set_shift_common": 0.2599,
+        "imputation_shift_buggy_shell": 0.0529,
+        "total_divergence": 0.2907
+      }
+    },
+    "Foscarnet": {
+      "option_a_full_cohort": {
+        "s0_pair_weighted": 0.8822,
+        "study_mean": 0.9492,
+        "n_pairs": 416,
+        "m_studies": 25
+      },
+      "option_a_common_cases": {
+        "s0_pair_weighted": 0.8709,
+        "study_mean": 0.9446,
+        "n_pairs": 364,
+        "m_studies": 24
+      },
+      "cell1_b_clean_shell19_common": {
+        "s0_pair_weighted": 0.8709,
+        "study_mean": 0.9375,
+        "n_pairs": 364,
+        "m_studies": 24
+      },
+      "cell2_b_clean_shell19_imputed": {
+        "s0_pair_weighted": 0.887,
+        "study_mean": 0.944,
+        "n_pairs": 416,
+        "m_studies": 25
+      },
+      "cell3_b_distal_mg_triad_common": {
+        "s0_pair_weighted": 0.4451,
+        "study_mean": 0.3963,
+        "n_pairs": 364,
+        "m_studies": 24
+      },
+      "cell4_old_option_b_imputed": {
+        "s0_pair_weighted": 0.5144,
+        "study_mean": 0.4375,
+        "n_pairs": 416,
+        "m_studies": 25
+      },
+      "effects_apportionment": {
+        "pure_provenance_delta": 0.0,
+        "reference_set_shift_common": -0.4258,
+        "imputation_shift_buggy_shell": 0.0694,
+        "total_divergence": -0.3678
+      }
+    },
+    "Cidofovir": {
+      "option_a_full_cohort": {
+        "s0_pair_weighted": 0.2507,
+        "study_mean": 0.246,
+        "n_pairs": 367,
+        "m_studies": 23
+      },
+      "option_a_common_cases": {
+        "s0_pair_weighted": 0.2177,
+        "study_mean": 0.2577,
+        "n_pairs": 317,
+        "m_studies": 22
+      },
+      "cell1_b_clean_shell19_common": {
+        "s0_pair_weighted": 0.2208,
+        "study_mean": 0.2586,
+        "n_pairs": 317,
+        "m_studies": 22
+      },
+      "cell2_b_clean_shell19_imputed": {
+        "s0_pair_weighted": 0.3215,
+        "study_mean": 0.2771,
+        "n_pairs": 367,
+        "m_studies": 23
+      },
+      "cell3_b_distal_mg_triad_common": {
+        "s0_pair_weighted": 0.7476,
+        "study_mean": 0.6229,
+        "n_pairs": 317,
+        "m_studies": 22
+      },
+      "cell4_old_option_b_imputed": {
+        "s0_pair_weighted": 0.7766,
+        "study_mean": 0.6064,
+        "n_pairs": 367,
+        "m_studies": 23
+      },
+      "effects_apportionment": {
+        "pure_provenance_delta": 0.0032,
+        "reference_set_shift_common": 0.5268,
+        "imputation_shift_buggy_shell": 0.0289,
+        "total_divergence": 0.5259
+      }
+    }
+  }
+}

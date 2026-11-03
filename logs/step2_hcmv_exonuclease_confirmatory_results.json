@@ -1,0 +1,179 @@
+{
+  "protocol": {
+    "document": "docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md",
+    "version": "1.0",
+    "status": "CONFIRMATORY EXECUTION",
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "definitions": {
+    "polymerase_active_site_shell_19": [
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      784,
+      788,
+      811,
+      812,
+      815,
+      816,
+      818,
+      819,
+      911,
+      912,
+      949,
+      951
+    ],
+    "exonuclease_catalytic_site_7": [
+      301,
+      302,
+      303,
+      407,
+      408,
+      412,
+      413
+    ],
+    "sensitivity_windows": {
+      "standard_exo_300_545": [
+        300,
+        545
+      ],
+      "tight_exo_300_520": [
+        300,
+        520
+      ],
+      "expanded_exo_280_560": [
+        280,
+        560
+      ]
+    }
+  },
+  "targets": {
+    "Ganciclovir": {
+      "s0_polymerase": {
+        "point": 0.4135,
+        "ci_95": [
+          0.2183,
+          0.6393
+        ],
+        "study_mean": 0.4349
+      },
+      "s0_exonuclease": {
+        "point": 0.7243,
+        "ci_95": [
+          0.5667,
+          0.8621
+        ],
+        "study_mean": 0.7166
+      },
+      "delta_exo_minus_pol": {
+        "observed": 0.3108,
+        "ci_95": [
+          -0.0592,
+          0.6272
+        ],
+        "p_value": 0.055
+      },
+      "n_pairs": 399,
+      "m_mixed_studies": 25,
+      "sensitivity_windows_s0": {
+        "standard_exo_300_545": 0.6942,
+        "tight_exo_300_520": 0.683,
+        "expanded_exo_280_560": 0.6529
+      }
+    },
+    "Foscarnet": {
+      "s0_polymerase": {
+        "point": 0.8822,
+        "ci_95": [
+          0.8056,
+          0.9559
+        ],
+        "study_mean": 0.9492
+      },
+      "s0_exonuclease": {
+        "point": 0.3197,
+        "ci_95": [
+          0.1288,
+          0.463
+        ],
+        "study_mean": 0.1761
+      },
+      "delta_exo_minus_pol": {
+        "observed": -0.5625,
+        "ci_95": [
+          -0.8028,
+          -0.3978
+        ],
+        "p_value": 0.0
+      },
+      "n_pairs": 416,
+      "m_mixed_studies": 25,
+      "sensitivity_windows_s0": {
+        "standard_exo_300_545": 0.28,
+        "tight_exo_300_520": 0.2812,
+        "expanded_exo_280_560": 0.3029
+      }
+    },
+    "Cidofovir": {
+      "s0_polymerase": {
+        "point": 0.2507,
+        "ci_95": [
+          0.139,
+          0.4067
+        ],
+        "study_mean": 0.246
+      },
+      "s0_exonuclease": {
+        "point": 0.9264,
+        "ci_95": [
+          0.8649,
+          0.9602
+        ],
+        "study_mean": 0.8232
+      },
+      "delta_exo_minus_pol": {
+        "observed": 0.6757,
+        "ci_95": [
+          0.4643,
+          0.8136
+        ],
+        "p_value": 0.0
+      },
+      "n_pairs": 367,
+      "m_mixed_studies": 23,
+      "sensitivity_windows_s0": {
+        "standard_exo_300_545": 0.8924,
+        "tight_exo_300_520": 0.8869,
+        "expanded_exo_280_560": 0.8665
+      }
+    }
+  },
+  "crossover_contrasts": {
+    "gcv_vs_fos": {
+      "observed_delta": 0.8733,
+      "ci_95": [
+        0.4677,
+        1.2745
+      ],
+      "p_value": 0.0
+    },
+    "cdv_vs_fos": {
+      "observed_delta": 1.2382,
+      "ci_95": [
+        0.9696,
+        1.5112
+      ],
+      "p_value": 0.0
+    }
+  },
+  "verdicts": {
+    "rule1_gcv_exonuclease_recovery": "CONFIRMED (Point >= 0.550 and CI excludes 0.50)",
+    "rule2_cdv_exonuclease_recovery": "CONFIRMED (Point >= 0.550 and CI excludes 0.50)",
+    "rule3_double_dissociation_crossover": "CONFIRMED (Double Dissociation Crossover Statistically Significant)"
+  }
+}

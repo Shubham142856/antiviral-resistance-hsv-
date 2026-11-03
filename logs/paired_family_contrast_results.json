@@ -1,0 +1,291 @@
+{
+ "purpose": "paired contrasts that the frozen degradation log cannot supply: absolute out-of-block PLM-minus-conservation difference, and the paired delta-of-deltas between the two families' degradations",
+ "rationale": "comparing one family's p-value against another's is the difference-of-significance fallacy; and ranking by smallest degradation is confounded because the unfitted control has delta 0.0000 by construction",
+ "degradation_definition": "AUROC(position_grouped) - AUROC(contiguous_block)",
+ "n_boot": 2000,
+ "seed": 42,
+ "targets": {
+  "UL23-Aciclovir": {
+   "n_rows": 286,
+   "n_resistant": 120,
+   "models": {
+    "random_forest": {
+     "point_estimates": {
+      "Positional Identity": {
+       "position_grouped_auc": 0.8121,
+       "contiguous_block_auc": 0.545,
+       "degradation_delta": 0.2671
+      },
+      "Evolutionary Conservation": {
+       "position_grouped_auc": 0.7962,
+       "contiguous_block_auc": 0.7406,
+       "degradation_delta": 0.0556
+      },
+      "Protein Language Models": {
+       "position_grouped_auc": 0.789,
+       "contiguous_block_auc": 0.7539,
+       "degradation_delta": 0.0351
+      },
+      "Multi-Modal Combined": {
+       "position_grouped_auc": 0.8652,
+       "contiguous_block_auc": 0.7841,
+       "degradation_delta": 0.081
+      }
+     },
+     "paired_block_auroc_plm_minus_conservation": {
+      "mean": 0.0128,
+      "ci_95": [
+       -0.0699,
+       0.0933
+      ],
+      "excludes_zero": false,
+      "p_one_sided": 0.363,
+      "n_valid_resamples": 2000
+     },
+     "paired_delta_of_deltas_conservation_minus_plm": {
+      "mean": 0.0196,
+      "ci_95": [
+       -0.0171,
+       0.053
+      ],
+      "excludes_zero": false,
+      "p_one_sided": 0.1325,
+      "n_valid_resamples": 2000
+     }
+    },
+    "logistic_regression": {
+     "point_estimates": {
+      "Positional Identity": {
+       "position_grouped_auc": 0.5806,
+       "contiguous_block_auc": 0.347,
+       "degradation_delta": 0.2336
+      },
+      "Evolutionary Conservation": {
+       "position_grouped_auc": 0.7616,
+       "contiguous_block_auc": 0.7165,
+       "degradation_delta": 0.0452
+      },
+      "Protein Language Models": {
+       "position_grouped_auc": 0.8061,
+       "contiguous_block_auc": 0.7705,
+       "degradation_delta": 0.0356
+      },
+      "Multi-Modal Combined": {
+       "position_grouped_auc": 0.8139,
+       "contiguous_block_auc": 0.6997,
+       "degradation_delta": 0.1142
+      }
+     },
+     "paired_block_auroc_plm_minus_conservation": {
+      "mean": 0.0541,
+      "ci_95": [
+       -0.0237,
+       0.1307
+      ],
+      "excludes_zero": false,
+      "p_one_sided": 0.0805,
+      "n_valid_resamples": 2000
+     },
+     "paired_delta_of_deltas_conservation_minus_plm": {
+      "mean": 0.0092,
+      "ci_95": [
+       -0.0119,
+       0.03
+      ],
+      "excludes_zero": false,
+      "p_one_sided": 0.196,
+      "n_valid_resamples": 2000
+     }
+    }
+   }
+  },
+  "UL30-Aciclovir": {
+   "n_rows": 332,
+   "n_resistant": 62,
+   "models": {
+    "random_forest": {
+     "point_estimates": {
+      "Positional Identity": {
+       "position_grouped_auc": 0.8797,
+       "contiguous_block_auc": 0.4591,
+       "degradation_delta": 0.4206
+      },
+      "Evolutionary Conservation": {
+       "position_grouped_auc": 0.7476,
+       "contiguous_block_auc": 0.6819,
+       "degradation_delta": 0.0656
+      },
+      "Protein Language Models": {
+       "position_grouped_auc": 0.8388,
+       "contiguous_block_auc": 0.8326,
+       "degradation_delta": 0.0062
+      },
+      "Multi-Modal Combined": {
+       "position_grouped_auc": 0.8582,
+       "contiguous_block_auc": 0.7886,
+       "degradation_delta": 0.0696
+      }
+     },
+     "paired_block_auroc_plm_minus_conservation": {
+      "mean": 0.1504,
+      "ci_95": [
+       0.0698,
+       0.2324
+      ],
+      "excludes_zero": true,
+      "p_one_sided": "< 0.0005",
+      "n_valid_resamples": 2000
+     },
+     "paired_delta_of_deltas_conservation_minus_plm": {
+      "mean": 0.0596,
+      "ci_95": [
+       0.0091,
+       0.1143
+      ],
+      "excludes_zero": true,
+      "p_one_sided": 0.008,
+      "n_valid_resamples": 2000
+     }
+    },
+    "logistic_regression": {
+     "point_estimates": {
+      "Positional Identity": {
+       "position_grouped_auc": 0.5668,
+       "contiguous_block_auc": 0.2244,
+       "degradation_delta": 0.3424
+      },
+      "Evolutionary Conservation": {
+       "position_grouped_auc": 0.7376,
+       "contiguous_block_auc": 0.6283,
+       "degradation_delta": 0.1092
+      },
+      "Protein Language Models": {
+       "position_grouped_auc": 0.8572,
+       "contiguous_block_auc": 0.8439,
+       "degradation_delta": 0.0133
+      },
+      "Multi-Modal Combined": {
+       "position_grouped_auc": 0.8563,
+       "contiguous_block_auc": 0.801,
+       "degradation_delta": 0.0553
+      }
+     },
+     "paired_block_auroc_plm_minus_conservation": {
+      "mean": 0.2154,
+      "ci_95": [
+       0.149,
+       0.2898
+      ],
+      "excludes_zero": true,
+      "p_one_sided": "< 0.0005",
+      "n_valid_resamples": 2000
+     },
+     "paired_delta_of_deltas_conservation_minus_plm": {
+      "mean": 0.096,
+      "ci_95": [
+       0.0628,
+       0.1301
+      ],
+      "excludes_zero": true,
+      "p_one_sided": "< 0.0005",
+      "n_valid_resamples": 2000
+     }
+    }
+   }
+  },
+  "UL30-Foscarnet": {
+   "n_rows": 311,
+   "n_resistant": 33,
+   "models": {
+    "random_forest": {
+     "point_estimates": {
+      "Positional Identity": {
+       "position_grouped_auc": 0.8677,
+       "contiguous_block_auc": 0.4669,
+       "degradation_delta": 0.4008
+      },
+      "Evolutionary Conservation": {
+       "position_grouped_auc": 0.7848,
+       "contiguous_block_auc": 0.7497,
+       "degradation_delta": 0.0351
+      },
+      "Protein Language Models": {
+       "position_grouped_auc": 0.8607,
+       "contiguous_block_auc": 0.8292,
+       "degradation_delta": 0.0316
+      },
+      "Multi-Modal Combined": {
+       "position_grouped_auc": 0.8874,
+       "contiguous_block_auc": 0.86,
+       "degradation_delta": 0.0274
+      }
+     },
+     "paired_block_auroc_plm_minus_conservation": {
+      "mean": 0.081,
+      "ci_95": [
+       -0.0225,
+       0.1922
+      ],
+      "excludes_zero": false,
+      "p_one_sided": 0.0645,
+      "n_valid_resamples": 2000
+     },
+     "paired_delta_of_deltas_conservation_minus_plm": {
+      "mean": 0.0039,
+      "ci_95": [
+       -0.0456,
+       0.0576
+      ],
+      "excludes_zero": false,
+      "p_one_sided": 0.447,
+      "n_valid_resamples": 2000
+     }
+    },
+    "logistic_regression": {
+     "point_estimates": {
+      "Positional Identity": {
+       "position_grouped_auc": 0.5438,
+       "contiguous_block_auc": 0.2509,
+       "degradation_delta": 0.2929
+      },
+      "Evolutionary Conservation": {
+       "position_grouped_auc": 0.7953,
+       "contiguous_block_auc": 0.7329,
+       "degradation_delta": 0.0624
+      },
+      "Protein Language Models": {
+       "position_grouped_auc": 0.8774,
+       "contiguous_block_auc": 0.866,
+       "degradation_delta": 0.0113
+      },
+      "Multi-Modal Combined": {
+       "position_grouped_auc": 0.8948,
+       "contiguous_block_auc": 0.8379,
+       "degradation_delta": 0.0569
+      }
+     },
+     "paired_block_auroc_plm_minus_conservation": {
+      "mean": 0.134,
+      "ci_95": [
+       0.0485,
+       0.228
+      ],
+      "excludes_zero": true,
+      "p_one_sided": 0.001,
+      "n_valid_resamples": 2000
+     },
+     "paired_delta_of_deltas_conservation_minus_plm": {
+      "mean": 0.0504,
+      "ci_95": [
+       0.021,
+       0.0822
+      ],
+      "excludes_zero": true,
+      "p_one_sided": 0.0005,
+      "n_valid_resamples": 2000
+     }
+    }
+   }
+  }
+ }
+}

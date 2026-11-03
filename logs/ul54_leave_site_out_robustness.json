@@ -1,0 +1,346 @@
+{
+ "purpose": "robustness of S_0(exo) and S_0(pol) to removal of the variants that sit on the reference residues defining each feature",
+ "estimator": "within-study pair-weighted S_0, study-clustered bootstrap",
+ "n_boot": 2000,
+ "seed": 42,
+ "polymerase_shell_19": [
+  717,
+  718,
+  719,
+  720,
+  721,
+  722,
+  723,
+  784,
+  788,
+  811,
+  812,
+  815,
+  816,
+  818,
+  819,
+  911,
+  912,
+  949,
+  951
+ ],
+ "exonuclease_site_7": [
+  301,
+  302,
+  303,
+  407,
+  408,
+  412,
+  413
+ ],
+ "drugs": {
+  "Ganciclovir": {
+   "n_total": 324,
+   "n_resistant": 120,
+   "n_rows_at_exo_sites": 26,
+   "n_resistant_at_exo_sites": 21,
+   "n_rows_at_pol_sites": 7,
+   "n_resistant_at_pol_sites": 4,
+   "cohorts": {
+    "full": {
+     "n_rows": 324,
+     "n_pairs": 399,
+     "m_mixed_studies": 25,
+     "s0_polymerase": 0.4135,
+     "s0_exonuclease": 0.7243,
+     "s0_polymerase_ci_95": [
+      0.2249,
+      0.6348
+     ],
+     "s0_exonuclease_ci_95": [
+      0.5764,
+      0.8639
+     ],
+     "delta_exo_minus_pol": 0.3108,
+     "delta_ci_95": [
+      -0.0512,
+      0.6194
+     ],
+     "delta_p_one_sided": 0.0515
+    },
+    "drop_exo_sites": {
+     "n_rows": 298,
+     "n_pairs": 342,
+     "m_mixed_studies": 25,
+     "s0_polymerase": 0.462,
+     "s0_exonuclease": 0.6784,
+     "s0_polymerase_ci_95": [
+      0.2668,
+      0.6598
+     ],
+     "s0_exonuclease_ci_95": [
+      0.5334,
+      0.8259
+     ],
+     "delta_exo_minus_pol": 0.2164,
+     "delta_ci_95": [
+      -0.1014,
+      0.5406
+     ],
+     "delta_p_one_sided": 0.1125
+    },
+    "drop_pol_sites": {
+     "n_rows": 317,
+     "n_pairs": 388,
+     "m_mixed_studies": 25,
+     "s0_polymerase": 0.4072,
+     "s0_exonuclease": 0.7268,
+     "s0_polymerase_ci_95": [
+      0.2117,
+      0.6417
+     ],
+     "s0_exonuclease_ci_95": [
+      0.5622,
+      0.8613
+     ],
+     "delta_exo_minus_pol": 0.3196,
+     "delta_ci_95": [
+      -0.0682,
+      0.6389
+     ],
+     "delta_p_one_sided": 0.057
+    },
+    "drop_both": {
+     "n_rows": 291,
+     "n_pairs": 331,
+     "m_mixed_studies": 24,
+     "s0_polymerase": 0.4562,
+     "s0_exonuclease": 0.6798,
+     "s0_polymerase_ci_95": [
+      0.264,
+      0.6611
+     ],
+     "s0_exonuclease_ci_95": [
+      0.5289,
+      0.8317
+     ],
+     "delta_exo_minus_pol": 0.2236,
+     "delta_ci_95": [
+      -0.1131,
+      0.553
+     ],
+     "delta_p_one_sided": 0.1155
+    }
+   }
+  },
+  "Foscarnet": {
+   "n_total": 324,
+   "n_resistant": 88,
+   "n_rows_at_exo_sites": 26,
+   "n_resistant_at_exo_sites": 1,
+   "n_rows_at_pol_sites": 7,
+   "n_resistant_at_pol_sites": 6,
+   "cohorts": {
+    "full": {
+     "n_rows": 324,
+     "n_pairs": 416,
+     "m_mixed_studies": 25,
+     "s0_polymerase": 0.8822,
+     "s0_exonuclease": 0.3197,
+     "s0_polymerase_ci_95": [
+      0.807,
+      0.9539
+     ],
+     "s0_exonuclease_ci_95": [
+      0.1306,
+      0.4657
+     ],
+     "delta_exo_minus_pol": -0.5625,
+     "delta_ci_95": [
+      -0.8054,
+      -0.3974
+     ],
+     "delta_p_one_sided": 1.0
+    },
+    "drop_exo_sites": {
+     "n_rows": 298,
+     "n_pairs": 348,
+     "m_mixed_studies": 23,
+     "s0_polymerase": 0.8649,
+     "s0_exonuclease": 0.3822,
+     "s0_polymerase_ci_95": [
+      0.7783,
+      0.9487
+     ],
+     "s0_exonuclease_ci_95": [
+      0.183,
+      0.4971
+     ],
+     "delta_exo_minus_pol": -0.4828,
+     "delta_ci_95": [
+      -0.7423,
+      -0.3416
+     ],
+     "delta_p_one_sided": 1.0
+    },
+    "drop_pol_sites": {
+     "n_rows": 317,
+     "n_pairs": 382,
+     "m_mixed_studies": 23,
+     "s0_polymerase": 0.8874,
+     "s0_exonuclease": 0.322,
+     "s0_polymerase_ci_95": [
+      0.8011,
+      0.9505
+     ],
+     "s0_exonuclease_ci_95": [
+      0.1144,
+      0.4736
+     ],
+     "delta_exo_minus_pol": -0.5654,
+     "delta_ci_95": [
+      -0.8257,
+      -0.3866
+     ],
+     "delta_p_one_sided": 1.0
+    },
+    "drop_both": {
+     "n_rows": 291,
+     "n_pairs": 318,
+     "m_mixed_studies": 21,
+     "s0_polymerase": 0.8711,
+     "s0_exonuclease": 0.3868,
+     "s0_polymerase_ci_95": [
+      0.7781,
+      0.9454
+     ],
+     "s0_exonuclease_ci_95": [
+      0.159,
+      0.5183
+     ],
+     "delta_exo_minus_pol": -0.4843,
+     "delta_ci_95": [
+      -0.7778,
+      -0.3297
+     ],
+     "delta_p_one_sided": 1.0
+    }
+   }
+  },
+  "Cidofovir": {
+   "n_total": 324,
+   "n_resistant": 101,
+   "n_rows_at_exo_sites": 26,
+   "n_resistant_at_exo_sites": 26,
+   "n_rows_at_pol_sites": 7,
+   "n_resistant_at_pol_sites": 3,
+   "cohorts": {
+    "full": {
+     "n_rows": 324,
+     "n_pairs": 367,
+     "m_mixed_studies": 23,
+     "s0_polymerase": 0.2507,
+     "s0_exonuclease": 0.9264,
+     "s0_polymerase_ci_95": [
+      0.136,
+      0.3969
+     ],
+     "s0_exonuclease_ci_95": [
+      0.8713,
+      0.9583
+     ],
+     "delta_exo_minus_pol": 0.6757,
+     "delta_ci_95": [
+      0.4837,
+      0.8151
+     ],
+     "delta_p_one_sided": 0.0
+    },
+    "drop_exo_sites": {
+     "n_rows": 298,
+     "n_pairs": 289,
+     "m_mixed_studies": 21,
+     "s0_polymerase": 0.2872,
+     "s0_exonuclease": 0.9066,
+     "s0_polymerase_ci_95": [
+      0.1659,
+      0.4379
+     ],
+     "s0_exonuclease_ci_95": [
+      0.8287,
+      0.9474
+     ],
+     "delta_exo_minus_pol": 0.6194,
+     "delta_ci_95": [
+      0.4017,
+      0.7729
+     ],
+     "delta_p_one_sided": 0.0
+    },
+    "drop_pol_sites": {
+     "n_rows": 317,
+     "n_pairs": 354,
+     "m_mixed_studies": 23,
+     "s0_polymerase": 0.2345,
+     "s0_exonuclease": 0.935,
+     "s0_polymerase_ci_95": [
+      0.1197,
+      0.3964
+     ],
+     "s0_exonuclease_ci_95": [
+      0.8784,
+      0.9687
+     ],
+     "delta_exo_minus_pol": 0.7006,
+     "delta_ci_95": [
+      0.4881,
+      0.8432
+     ],
+     "delta_p_one_sided": 0.0
+    },
+    "drop_both": {
+     "n_rows": 291,
+     "n_pairs": 276,
+     "m_mixed_studies": 20,
+     "s0_polymerase": 0.2681,
+     "s0_exonuclease": 0.9167,
+     "s0_polymerase_ci_95": [
+      0.1341,
+      0.4306
+     ],
+     "s0_exonuclease_ci_95": [
+      0.8396,
+      0.9574
+     ],
+     "delta_exo_minus_pol": 0.6486,
+     "delta_ci_95": [
+      0.4215,
+      0.8166
+     ],
+     "delta_p_one_sided": 0.0
+    }
+   }
+  }
+ },
+ "survival_verdicts": {
+  "Ganciclovir": {
+   "primary_feature": "s0_exonuclease",
+   "s0_full": 0.7243,
+   "s0_drop_both": 0.6798,
+   "retained_delta": -0.0445,
+   "survives_above_0.55": true,
+   "ci_excludes_0.50": true
+  },
+  "Foscarnet": {
+   "primary_feature": "s0_polymerase",
+   "s0_full": 0.8822,
+   "s0_drop_both": 0.8711,
+   "retained_delta": -0.0111,
+   "survives_above_0.55": true,
+   "ci_excludes_0.50": true
+  },
+  "Cidofovir": {
+   "primary_feature": "s0_exonuclease",
+   "s0_full": 0.9264,
+   "s0_drop_both": 0.9167,
+   "retained_delta": -0.0097,
+   "survives_above_0.55": true,
+   "ci_excludes_0.50": true
+  }
+ }
+}

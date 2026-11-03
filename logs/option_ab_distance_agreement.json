@@ -1,0 +1,539 @@
+{
+ "scope": "LABEL-FREE: no resistance labels, fold-changes or phenotypes read",
+ "evaluated_positions": {
+  "source": "data/raw/herpesdrg-db/herpesdrg-db.tsv",
+  "filter": "virus==HCMV & gene==UL54, single missense",
+  "n_rows": 368,
+  "n_parsed": 353,
+  "n_unique_positions": 180
+ },
+ "alignment": {
+  "hsv1_ul30_aa": 1235,
+  "hcmv_ul54_aa": 1242,
+  "n_aligned_pairs": 1056
+ },
+ "reference_sets": {
+  "hcmv_shell_19": [
+   717,
+   718,
+   719,
+   720,
+   721,
+   722,
+   723,
+   784,
+   788,
+   811,
+   812,
+   815,
+   816,
+   818,
+   819,
+   911,
+   912,
+   949,
+   951
+  ],
+  "hcmv_triad": [
+   717,
+   912,
+   913
+  ],
+  "hsv1_shell_19": [
+   717,
+   718,
+   719,
+   720,
+   721,
+   722,
+   723,
+   785,
+   789,
+   811,
+   812,
+   815,
+   816,
+   818,
+   819,
+   887,
+   888,
+   925,
+   927
+  ],
+  "hsv1_triad": [
+   717,
+   888,
+   889
+  ]
+ },
+ "coverage": {
+  "A_as_executed (SwissModel + shell19)": {
+   "covered": 178,
+   "missing": 2,
+   "missing_positions": [
+    15,
+    1235
+   ],
+   "impute_value_angstrom": 73.72
+  },
+  "A_triad (SwissModel + triad)": {
+   "covered": 178,
+   "missing": 2,
+   "missing_positions": [
+    15,
+    1235
+   ],
+   "impute_value_angstrom": 77.19
+  },
+  "B_as_executed (8EXX + ligand+triad)": {
+   "covered": 133,
+   "missing": 47,
+   "missing_positions": [
+    15,
+    24,
+    32,
+    345,
+    347,
+    355,
+    357,
+    437,
+    460,
+    600,
+    612,
+    640,
+    648,
+    649,
+    654,
+    655,
+    660,
+    663,
+    667,
+    669,
+    676,
+    678,
+    685,
+    688,
+    691,
+    692,
+    744,
+    859,
+    862,
+    873,
+    874,
+    877,
+    879,
+    885,
+    897,
+    898,
+    899,
+    1116,
+    1122,
+    1133,
+    1146,
+    1147,
+    1149,
+    1153,
+    1154,
+    1162,
+    1235
+   ],
+   "impute_value_angstrom": 69.38
+  },
+  "B_shell19 (8EXX + shell19)": {
+   "covered": 133,
+   "missing": 47,
+   "missing_positions": [
+    15,
+    24,
+    32,
+    345,
+    347,
+    355,
+    357,
+    437,
+    460,
+    600,
+    612,
+    640,
+    648,
+    649,
+    654,
+    655,
+    660,
+    663,
+    667,
+    669,
+    676,
+    678,
+    685,
+    688,
+    691,
+    692,
+    744,
+    859,
+    862,
+    873,
+    874,
+    877,
+    879,
+    885,
+    897,
+    898,
+    899,
+    1116,
+    1122,
+    1133,
+    1146,
+    1147,
+    1149,
+    1153,
+    1154,
+    1162,
+    1235
+   ],
+   "impute_value_angstrom": 70.19
+  },
+  "C_ligand_triad (8V1T)": {
+   "covered": 130,
+   "missing": 50,
+   "missing_positions": [
+    15,
+    24,
+    32,
+    345,
+    347,
+    355,
+    357,
+    437,
+    460,
+    600,
+    612,
+    631,
+    633,
+    635,
+    640,
+    648,
+    649,
+    654,
+    655,
+    660,
+    663,
+    667,
+    669,
+    676,
+    678,
+    685,
+    688,
+    691,
+    692,
+    744,
+    859,
+    862,
+    873,
+    874,
+    877,
+    879,
+    885,
+    897,
+    898,
+    899,
+    1116,
+    1122,
+    1133,
+    1146,
+    1147,
+    1149,
+    1153,
+    1154,
+    1162,
+    1235
+   ],
+   "impute_value_angstrom": 68.48
+  },
+  "C_shell19 (8V1T + shell19)": {
+   "covered": 130,
+   "missing": 50,
+   "missing_positions": [
+    15,
+    24,
+    32,
+    345,
+    347,
+    355,
+    357,
+    437,
+    460,
+    600,
+    612,
+    631,
+    633,
+    635,
+    640,
+    648,
+    649,
+    654,
+    655,
+    660,
+    663,
+    667,
+    669,
+    676,
+    678,
+    685,
+    688,
+    691,
+    692,
+    744,
+    859,
+    862,
+    873,
+    874,
+    877,
+    879,
+    885,
+    897,
+    898,
+    899,
+    1116,
+    1122,
+    1133,
+    1146,
+    1147,
+    1149,
+    1153,
+    1154,
+    1162,
+    1235
+   ],
+   "impute_value_angstrom": 69.74
+  }
+ },
+ "pairwise_agreement": [
+  {
+   "a": "A_as_executed (SwissModel + shell19)",
+   "b": "A_triad (SwissModel + triad)",
+   "n_common": 178,
+   "spearman": 0.9417,
+   "median_abs_delta_angstrom": 9.514,
+   "max_abs_delta_angstrom": 15.977
+  },
+  {
+   "a": "A_as_executed (SwissModel + shell19)",
+   "b": "B_as_executed (8EXX + ligand+triad)",
+   "n_common": 133,
+   "spearman": 0.3563,
+   "median_abs_delta_angstrom": 9.123,
+   "max_abs_delta_angstrom": 28.554
+  },
+  {
+   "a": "A_as_executed (SwissModel + shell19)",
+   "b": "B_shell19 (8EXX + shell19)",
+   "n_common": 133,
+   "spearman": 0.9893,
+   "median_abs_delta_angstrom": 0.385,
+   "max_abs_delta_angstrom": 19.974
+  },
+  {
+   "a": "A_as_executed (SwissModel + shell19)",
+   "b": "C_ligand_triad (8V1T)",
+   "n_common": 130,
+   "spearman": 0.4451,
+   "median_abs_delta_angstrom": 5.144,
+   "max_abs_delta_angstrom": 30.52
+  },
+  {
+   "a": "A_as_executed (SwissModel + shell19)",
+   "b": "C_shell19 (8V1T + shell19)",
+   "n_common": 130,
+   "spearman": 0.9906,
+   "median_abs_delta_angstrom": 0.504,
+   "max_abs_delta_angstrom": 21.519
+  },
+  {
+   "a": "A_triad (SwissModel + triad)",
+   "b": "B_as_executed (8EXX + ligand+triad)",
+   "n_common": 133,
+   "spearman": 0.3612,
+   "median_abs_delta_angstrom": 4.922,
+   "max_abs_delta_angstrom": 39.378
+  },
+  {
+   "a": "A_triad (SwissModel + triad)",
+   "b": "B_shell19 (8EXX + shell19)",
+   "n_common": 133,
+   "spearman": 0.9322,
+   "median_abs_delta_angstrom": 10.256,
+   "max_abs_delta_angstrom": 23.33
+  },
+  {
+   "a": "A_triad (SwissModel + triad)",
+   "b": "C_ligand_triad (8V1T)",
+   "n_common": 130,
+   "spearman": 0.42,
+   "median_abs_delta_angstrom": 7.21,
+   "max_abs_delta_angstrom": 38.582
+  },
+  {
+   "a": "A_triad (SwissModel + triad)",
+   "b": "C_shell19 (8V1T + shell19)",
+   "n_common": 130,
+   "spearman": 0.9326,
+   "median_abs_delta_angstrom": 10.549,
+   "max_abs_delta_angstrom": 24.875
+  },
+  {
+   "a": "B_as_executed (8EXX + ligand+triad)",
+   "b": "B_shell19 (8EXX + shell19)",
+   "n_common": 133,
+   "spearman": 0.3416,
+   "median_abs_delta_angstrom": 9.398,
+   "max_abs_delta_angstrom": 27.252
+  },
+  {
+   "a": "B_as_executed (8EXX + ligand+triad)",
+   "b": "C_ligand_triad (8V1T)",
+   "n_common": 130,
+   "spearman": 0.94,
+   "median_abs_delta_angstrom": 0.938,
+   "max_abs_delta_angstrom": 11.455
+  },
+  {
+   "a": "B_as_executed (8EXX + ligand+triad)",
+   "b": "C_shell19 (8V1T + shell19)",
+   "n_common": 130,
+   "spearman": 0.3479,
+   "median_abs_delta_angstrom": 9.383,
+   "max_abs_delta_angstrom": 26.993
+  },
+  {
+   "a": "B_shell19 (8EXX + shell19)",
+   "b": "C_ligand_triad (8V1T)",
+   "n_common": 130,
+   "spearman": 0.4416,
+   "median_abs_delta_angstrom": 5.587,
+   "max_abs_delta_angstrom": 27.235
+  },
+  {
+   "a": "B_shell19 (8EXX + shell19)",
+   "b": "C_shell19 (8V1T + shell19)",
+   "n_common": 130,
+   "spearman": 0.999,
+   "median_abs_delta_angstrom": 0.29,
+   "max_abs_delta_angstrom": 3.724
+  },
+  {
+   "a": "C_ligand_triad (8V1T)",
+   "b": "C_shell19 (8V1T + shell19)",
+   "n_common": 130,
+   "spearman": 0.4384,
+   "median_abs_delta_angstrom": 5.477,
+   "max_abs_delta_angstrom": 26.5
+  }
+ ],
+ "ligand_reference_set_audit": {
+  "8EXX": {
+   "ligand_members": [
+    {
+     "resname": "MG",
+     "chain": "A",
+     "resseq": 1301,
+     "centroid": [
+      147.2,
+      147.6,
+      118.5
+     ]
+    },
+    {
+     "resname": "MG",
+     "chain": "A",
+     "resseq": 1302,
+     "centroid": [
+      147.5,
+      146.8,
+      113.3
+     ]
+    },
+    {
+     "resname": "MG",
+     "chain": "A",
+     "resseq": 1303,
+     "centroid": [
+      141.3,
+      112.1,
+      130.1
+     ]
+    },
+    {
+     "resname": "PPF",
+     "chain": "A",
+     "resseq": 1304,
+     "centroid": [
+      148.7,
+      145.6,
+      116.4
+     ]
+    }
+   ],
+   "n_atoms": 10,
+   "max_pairwise_spread_angstrom": 39.0,
+   "max_ligand_atom_to_chainA_triad_centroid_angstrom": 41.4
+  },
+  "8V1T": {
+   "ligand_members": [
+    {
+     "resname": "MG",
+     "chain": "A",
+     "resseq": 1301,
+     "centroid": [
+      147.0,
+      147.8,
+      119.1
+     ]
+    },
+    {
+     "resname": "MG",
+     "chain": "A",
+     "resseq": 1302,
+     "centroid": [
+      143.5,
+      148.4,
+      119.9
+     ]
+    },
+    {
+     "resname": "MG",
+     "chain": "A",
+     "resseq": 1303,
+     "centroid": [
+      142.3,
+      111.4,
+      126.4
+     ]
+    },
+    {
+     "resname": "MG",
+     "chain": "A",
+     "resseq": 1304,
+     "centroid": [
+      140.3,
+      112.8,
+      131.2
+     ]
+    },
+    {
+     "resname": "AVP",
+     "chain": "A",
+     "resseq": 1305,
+     "centroid": [
+      147.3,
+      144.8,
+      124.0
+     ]
+    }
+   ],
+   "n_atoms": 32,
+   "max_pairwise_spread_angstrom": 37.7,
+   "max_ligand_atom_to_chainA_triad_centroid_angstrom": 40.6
+  }
+ }
+}

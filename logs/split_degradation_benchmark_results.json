@@ -1,0 +1,833 @@
+{
+  "protocol": {
+    "document": "docs/SPLIT_DEGRADATION_CONFIRMATORY_PROTOCOL.md",
+    "version": "1.0",
+    "status": "CONFIRMATORY EXECUTION",
+    "n_boot": 2000,
+    "seed": 42
+  },
+  "targets": {
+    "UL30-Aciclovir": {
+      "n_total": 332,
+      "n_with_3d": 262,
+      "n_resistant": 62,
+      "n_sensitive": 270,
+      "models": {
+        "random_forest": {
+          "Positional Identity": {
+            "features": [
+              "norm_pos"
+            ],
+            "position_grouped_auc": 0.8797,
+            "position_grouped_ci_95": [
+              0.8294,
+              0.9277
+            ],
+            "spatial_3d_auc": 0.6745,
+            "contiguous_block_auc": 0.4591,
+            "contiguous_block_ci_95": [
+              0.3862,
+              0.5375
+            ],
+            "degradation_delta_pg_minus_block": 0.4206,
+            "degradation_delta_ci_95": [
+              0.3287,
+              0.5085
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.875,
+              "spatial_3d_auc": 0.6745,
+              "contiguous_block_auc": 0.5234,
+              "spatial_degradation_delta": 0.2005
+            }
+          },
+          "Evolutionary Conservation": {
+            "features": [
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm"
+            ],
+            "position_grouped_auc": 0.7477,
+            "position_grouped_ci_95": [
+              0.6675,
+              0.8218
+            ],
+            "spatial_3d_auc": 0.7242,
+            "contiguous_block_auc": 0.6799,
+            "contiguous_block_ci_95": [
+              0.5955,
+              0.7616
+            ],
+            "degradation_delta_pg_minus_block": 0.0678,
+            "degradation_delta_ci_95": [
+              0.0281,
+              0.11
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.7579,
+              "spatial_3d_auc": 0.7242,
+              "contiguous_block_auc": 0.706,
+              "spatial_degradation_delta": 0.0337
+            }
+          },
+          "Protein Language Models": {
+            "features": [
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8388,
+            "position_grouped_ci_95": [
+              0.7754,
+              0.8953
+            ],
+            "spatial_3d_auc": 0.8672,
+            "contiguous_block_auc": 0.8326,
+            "contiguous_block_ci_95": [
+              0.7699,
+              0.8897
+            ],
+            "degradation_delta_pg_minus_block": 0.0062,
+            "degradation_delta_ci_95": [
+              -0.0402,
+              0.049
+            ],
+            "degradation_p_value": 0.389,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.8618,
+              "spatial_3d_auc": 0.8672,
+              "contiguous_block_auc": 0.8508,
+              "spatial_degradation_delta": -0.0053
+            }
+          },
+          "Multi-Modal Combined": {
+            "features": [
+              "norm_pos",
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm",
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8578,
+            "position_grouped_ci_95": [
+              0.7982,
+              0.9131
+            ],
+            "spatial_3d_auc": 0.8538,
+            "contiguous_block_auc": 0.7885,
+            "contiguous_block_ci_95": [
+              0.7114,
+              0.8595
+            ],
+            "degradation_delta_pg_minus_block": 0.0693,
+            "degradation_delta_ci_95": [
+              0.0231,
+              0.1187
+            ],
+            "degradation_p_value": 0.002,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.8748,
+              "spatial_3d_auc": 0.8538,
+              "contiguous_block_auc": 0.8163,
+              "spatial_degradation_delta": 0.021
+            }
+          }
+        },
+        "logistic_regression": {
+          "Positional Identity": {
+            "features": [
+              "norm_pos"
+            ],
+            "position_grouped_auc": 0.5668,
+            "position_grouped_ci_95": [
+              0.5084,
+              0.6243
+            ],
+            "spatial_3d_auc": 0.4658,
+            "contiguous_block_auc": 0.2244,
+            "contiguous_block_ci_95": [
+              0.1692,
+              0.2816
+            ],
+            "degradation_delta_pg_minus_block": 0.3424,
+            "degradation_delta_ci_95": [
+              0.2757,
+              0.4112
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.5766,
+              "spatial_3d_auc": 0.4658,
+              "contiguous_block_auc": 0.2012,
+              "spatial_degradation_delta": 0.1107
+            }
+          },
+          "Evolutionary Conservation": {
+            "features": [
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm"
+            ],
+            "position_grouped_auc": 0.7376,
+            "position_grouped_ci_95": [
+              0.6556,
+              0.8141
+            ],
+            "spatial_3d_auc": 0.7263,
+            "contiguous_block_auc": 0.6283,
+            "contiguous_block_ci_95": [
+              0.5502,
+              0.7039
+            ],
+            "degradation_delta_pg_minus_block": 0.1092,
+            "degradation_delta_ci_95": [
+              0.0803,
+              0.1408
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.7654,
+              "spatial_3d_auc": 0.7263,
+              "contiguous_block_auc": 0.7019,
+              "spatial_degradation_delta": 0.0391
+            }
+          },
+          "Protein Language Models": {
+            "features": [
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8572,
+            "position_grouped_ci_95": [
+              0.7935,
+              0.9139
+            ],
+            "spatial_3d_auc": 0.8575,
+            "contiguous_block_auc": 0.8439,
+            "contiguous_block_ci_95": [
+              0.7749,
+              0.9031
+            ],
+            "degradation_delta_pg_minus_block": 0.0133,
+            "degradation_delta_ci_95": [
+              -0.0032,
+              0.0306
+            ],
+            "degradation_p_value": 0.0545,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.858,
+              "spatial_3d_auc": 0.8575,
+              "contiguous_block_auc": 0.8544,
+              "spatial_degradation_delta": 0.0005
+            }
+          },
+          "Multi-Modal Combined": {
+            "features": [
+              "norm_pos",
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm",
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8563,
+            "position_grouped_ci_95": [
+              0.7914,
+              0.9171
+            ],
+            "spatial_3d_auc": 0.8483,
+            "contiguous_block_auc": 0.801,
+            "contiguous_block_ci_95": [
+              0.7275,
+              0.8681
+            ],
+            "degradation_delta_pg_minus_block": 0.0553,
+            "degradation_delta_ci_95": [
+              0.0263,
+              0.0864
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 262,
+              "position_grouped_auc": 0.8601,
+              "spatial_3d_auc": 0.8483,
+              "contiguous_block_auc": 0.8428,
+              "spatial_degradation_delta": 0.0119
+            }
+          }
+        }
+      },
+      "negative_control_zero_shot_blosum": {
+        "position_grouped_auc": 0.4942,
+        "contiguous_block_auc": 0.4942,
+        "degradation_delta": 0.0,
+        "status": "VERIFIED INVARIANT BY CONSTRUCTION (Delta = 0.0000)"
+      }
+    },
+    "UL30-Foscarnet": {
+      "n_total": 311,
+      "n_with_3d": 242,
+      "n_resistant": 33,
+      "n_sensitive": 278,
+      "models": {
+        "random_forest": {
+          "Positional Identity": {
+            "features": [
+              "norm_pos"
+            ],
+            "position_grouped_auc": 0.8661,
+            "position_grouped_ci_95": [
+              0.7863,
+              0.9382
+            ],
+            "spatial_3d_auc": 0.7147,
+            "contiguous_block_auc": 0.4669,
+            "contiguous_block_ci_95": [
+              0.3791,
+              0.556
+            ],
+            "degradation_delta_pg_minus_block": 0.3992,
+            "degradation_delta_ci_95": [
+              0.2891,
+              0.5054
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.8611,
+              "spatial_3d_auc": 0.7147,
+              "contiguous_block_auc": 0.4496,
+              "spatial_degradation_delta": 0.1464
+            }
+          },
+          "Evolutionary Conservation": {
+            "features": [
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm"
+            ],
+            "position_grouped_auc": 0.7861,
+            "position_grouped_ci_95": [
+              0.6932,
+              0.8671
+            ],
+            "spatial_3d_auc": 0.7863,
+            "contiguous_block_auc": 0.7499,
+            "contiguous_block_ci_95": [
+              0.6502,
+              0.8442
+            ],
+            "degradation_delta_pg_minus_block": 0.0362,
+            "degradation_delta_ci_95": [
+              -0.0026,
+              0.0773
+            ],
+            "degradation_p_value": 0.035,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.7852,
+              "spatial_3d_auc": 0.7863,
+              "contiguous_block_auc": 0.7667,
+              "spatial_degradation_delta": -0.0011
+            }
+          },
+          "Protein Language Models": {
+            "features": [
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8605,
+            "position_grouped_ci_95": [
+              0.7885,
+              0.9184
+            ],
+            "spatial_3d_auc": 0.8621,
+            "contiguous_block_auc": 0.829,
+            "contiguous_block_ci_95": [
+              0.739,
+              0.8981
+            ],
+            "degradation_delta_pg_minus_block": 0.0316,
+            "degradation_delta_ci_95": [
+              -0.0033,
+              0.0741
+            ],
+            "degradation_p_value": 0.043,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.8808,
+              "spatial_3d_auc": 0.8621,
+              "contiguous_block_auc": 0.8606,
+              "spatial_degradation_delta": 0.0187
+            }
+          },
+          "Multi-Modal Combined": {
+            "features": [
+              "norm_pos",
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm",
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8866,
+            "position_grouped_ci_95": [
+              0.8366,
+              0.929
+            ],
+            "spatial_3d_auc": 0.8699,
+            "contiguous_block_auc": 0.86,
+            "contiguous_block_ci_95": [
+              0.7942,
+              0.9152
+            ],
+            "degradation_delta_pg_minus_block": 0.0266,
+            "degradation_delta_ci_95": [
+              0.0016,
+              0.0537
+            ],
+            "degradation_p_value": 0.0155,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.9021,
+              "spatial_3d_auc": 0.8699,
+              "contiguous_block_auc": 0.8835,
+              "spatial_degradation_delta": 0.0321
+            }
+          }
+        },
+        "logistic_regression": {
+          "Positional Identity": {
+            "features": [
+              "norm_pos"
+            ],
+            "position_grouped_auc": 0.5438,
+            "position_grouped_ci_95": [
+              0.4753,
+              0.6087
+            ],
+            "spatial_3d_auc": 0.4749,
+            "contiguous_block_auc": 0.2509,
+            "contiguous_block_ci_95": [
+              0.1893,
+              0.3214
+            ],
+            "degradation_delta_pg_minus_block": 0.2929,
+            "degradation_delta_ci_95": [
+              0.1949,
+              0.3808
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.5436,
+              "spatial_3d_auc": 0.4749,
+              "contiguous_block_auc": 0.2369,
+              "spatial_degradation_delta": 0.0688
+            }
+          },
+          "Evolutionary Conservation": {
+            "features": [
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm"
+            ],
+            "position_grouped_auc": 0.7953,
+            "position_grouped_ci_95": [
+              0.6932,
+              0.8738
+            ],
+            "spatial_3d_auc": 0.7978,
+            "contiguous_block_auc": 0.7329,
+            "contiguous_block_ci_95": [
+              0.6312,
+              0.8212
+            ],
+            "degradation_delta_pg_minus_block": 0.0624,
+            "degradation_delta_ci_95": [
+              0.0347,
+              0.0928
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.8129,
+              "spatial_3d_auc": 0.7978,
+              "contiguous_block_auc": 0.7687,
+              "spatial_degradation_delta": 0.0152
+            }
+          },
+          "Protein Language Models": {
+            "features": [
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8774,
+            "position_grouped_ci_95": [
+              0.8028,
+              0.9335
+            ],
+            "spatial_3d_auc": 0.8591,
+            "contiguous_block_auc": 0.866,
+            "contiguous_block_ci_95": [
+              0.7856,
+              0.9298
+            ],
+            "degradation_delta_pg_minus_block": 0.0113,
+            "degradation_delta_ci_95": [
+              -0.0035,
+              0.0263
+            ],
+            "degradation_p_value": 0.0625,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.8793,
+              "spatial_3d_auc": 0.8591,
+              "contiguous_block_auc": 0.8771,
+              "spatial_degradation_delta": 0.0202
+            }
+          },
+          "Multi-Modal Combined": {
+            "features": [
+              "norm_pos",
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm",
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8948,
+            "position_grouped_ci_95": [
+              0.8241,
+              0.9499
+            ],
+            "spatial_3d_auc": 0.8607,
+            "contiguous_block_auc": 0.8379,
+            "contiguous_block_ci_95": [
+              0.7579,
+              0.9067
+            ],
+            "degradation_delta_pg_minus_block": 0.0569,
+            "degradation_delta_ci_95": [
+              0.0296,
+              0.0869
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 242,
+              "position_grouped_auc": 0.8991,
+              "spatial_3d_auc": 0.8607,
+              "contiguous_block_auc": 0.8728,
+              "spatial_degradation_delta": 0.0384
+            }
+          }
+        }
+      },
+      "negative_control_zero_shot_blosum": {
+        "position_grouped_auc": 0.4531,
+        "contiguous_block_auc": 0.4531,
+        "degradation_delta": 0.0,
+        "status": "VERIFIED INVARIANT BY CONSTRUCTION (Delta = 0.0000)"
+      }
+    },
+    "UL23-Aciclovir": {
+      "n_total": 286,
+      "n_with_3d": 233,
+      "n_resistant": 120,
+      "n_sensitive": 166,
+      "models": {
+        "random_forest": {
+          "Positional Identity": {
+            "features": [
+              "norm_pos"
+            ],
+            "position_grouped_auc": 0.8185,
+            "position_grouped_ci_95": [
+              0.7686,
+              0.8645
+            ],
+            "spatial_3d_auc": 0.6696,
+            "contiguous_block_auc": 0.545,
+            "contiguous_block_ci_95": [
+              0.4752,
+              0.6157
+            ],
+            "degradation_delta_pg_minus_block": 0.2735,
+            "degradation_delta_ci_95": [
+              0.1916,
+              0.354
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.7299,
+              "spatial_3d_auc": 0.6696,
+              "contiguous_block_auc": 0.5754,
+              "spatial_degradation_delta": 0.0603
+            }
+          },
+          "Evolutionary Conservation": {
+            "features": [
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm"
+            ],
+            "position_grouped_auc": 0.7962,
+            "position_grouped_ci_95": [
+              0.7462,
+              0.8444
+            ],
+            "spatial_3d_auc": 0.7177,
+            "contiguous_block_auc": 0.741,
+            "contiguous_block_ci_95": [
+              0.6835,
+              0.7974
+            ],
+            "degradation_delta_pg_minus_block": 0.0552,
+            "degradation_delta_ci_95": [
+              0.0317,
+              0.0801
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.7466,
+              "spatial_3d_auc": 0.7177,
+              "contiguous_block_auc": 0.7048,
+              "spatial_degradation_delta": 0.0289
+            }
+          },
+          "Protein Language Models": {
+            "features": [
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.788,
+            "position_grouped_ci_95": [
+              0.732,
+              0.8419
+            ],
+            "spatial_3d_auc": 0.7349,
+            "contiguous_block_auc": 0.7538,
+            "contiguous_block_ci_95": [
+              0.6926,
+              0.8144
+            ],
+            "degradation_delta_pg_minus_block": 0.0342,
+            "degradation_delta_ci_95": [
+              0.0097,
+              0.0596
+            ],
+            "degradation_p_value": 0.0035,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.7533,
+              "spatial_3d_auc": 0.7349,
+              "contiguous_block_auc": 0.706,
+              "spatial_degradation_delta": 0.0184
+            }
+          },
+          "Multi-Modal Combined": {
+            "features": [
+              "norm_pos",
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm",
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8646,
+            "position_grouped_ci_95": [
+              0.8187,
+              0.903
+            ],
+            "spatial_3d_auc": 0.7961,
+            "contiguous_block_auc": 0.7848,
+            "contiguous_block_ci_95": [
+              0.7253,
+              0.8382
+            ],
+            "degradation_delta_pg_minus_block": 0.0798,
+            "degradation_delta_ci_95": [
+              0.0449,
+              0.1183
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.8129,
+              "spatial_3d_auc": 0.7961,
+              "contiguous_block_auc": 0.7814,
+              "spatial_degradation_delta": 0.0168
+            }
+          }
+        },
+        "logistic_regression": {
+          "Positional Identity": {
+            "features": [
+              "norm_pos"
+            ],
+            "position_grouped_auc": 0.5806,
+            "position_grouped_ci_95": [
+              0.5154,
+              0.6468
+            ],
+            "spatial_3d_auc": 0.6968,
+            "contiguous_block_auc": 0.347,
+            "contiguous_block_ci_95": [
+              0.2861,
+              0.4102
+            ],
+            "degradation_delta_pg_minus_block": 0.2336,
+            "degradation_delta_ci_95": [
+              0.1656,
+              0.3007
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.7062,
+              "spatial_3d_auc": 0.6968,
+              "contiguous_block_auc": 0.6955,
+              "spatial_degradation_delta": 0.0094
+            }
+          },
+          "Evolutionary Conservation": {
+            "features": [
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm"
+            ],
+            "position_grouped_auc": 0.7616,
+            "position_grouped_ci_95": [
+              0.7037,
+              0.8168
+            ],
+            "spatial_3d_auc": 0.7302,
+            "contiguous_block_auc": 0.7165,
+            "contiguous_block_ci_95": [
+              0.6565,
+              0.774
+            ],
+            "degradation_delta_pg_minus_block": 0.0452,
+            "degradation_delta_ci_95": [
+              0.0287,
+              0.0631
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.7535,
+              "spatial_3d_auc": 0.7302,
+              "contiguous_block_auc": 0.7055,
+              "spatial_degradation_delta": 0.0233
+            }
+          },
+          "Protein Language Models": {
+            "features": [
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8061,
+            "position_grouped_ci_95": [
+              0.7516,
+              0.8571
+            ],
+            "spatial_3d_auc": 0.7534,
+            "contiguous_block_auc": 0.7705,
+            "contiguous_block_ci_95": [
+              0.7087,
+              0.8254
+            ],
+            "degradation_delta_pg_minus_block": 0.0356,
+            "degradation_delta_ci_95": [
+              0.0213,
+              0.052
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.7699,
+              "spatial_3d_auc": 0.7534,
+              "contiguous_block_auc": 0.7311,
+              "spatial_degradation_delta": 0.0165
+            }
+          },
+          "Multi-Modal Combined": {
+            "features": [
+              "norm_pos",
+              "score_blosum62",
+              "score_neg_entropy",
+              "score_weighted_cons",
+              "score_pssm",
+              "score_esm2_650m",
+              "score_protbert",
+              "score_esm2_35m"
+            ],
+            "position_grouped_auc": 0.8139,
+            "position_grouped_ci_95": [
+              0.7602,
+              0.8626
+            ],
+            "spatial_3d_auc": 0.7912,
+            "contiguous_block_auc": 0.6997,
+            "contiguous_block_ci_95": [
+              0.6326,
+              0.7593
+            ],
+            "degradation_delta_pg_minus_block": 0.1142,
+            "degradation_delta_ci_95": [
+              0.0828,
+              0.1491
+            ],
+            "degradation_p_value": 0.0,
+            "spatial_subset_comparison": {
+              "n_3d": 233,
+              "position_grouped_auc": 0.7999,
+              "spatial_3d_auc": 0.7912,
+              "contiguous_block_auc": 0.7583,
+              "spatial_degradation_delta": 0.0087
+            }
+          }
+        }
+      },
+      "negative_control_zero_shot_blosum": {
+        "position_grouped_auc": 0.613,
+        "contiguous_block_auc": 0.613,
+        "degradation_delta": 0.0,
+        "status": "VERIFIED INVARIANT BY CONSTRUCTION (Delta = 0.0000)"
+      }
+    }
+  }
+}

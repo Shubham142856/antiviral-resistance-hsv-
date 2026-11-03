@@ -1,0 +1,89 @@
+{
+ "status": "EXPLORATORY / POST HOC on the frozen Step 2 HCMV arm; pre-registered GCV verdict S_0=0.4135 NOT SUPPORTED is unchanged",
+ "phenotyping_rule": "fold-change >= 2.0 or 'Resistant' => R (frozen Step 2 rule)",
+ "exo_region": [
+  300,
+  545
+ ],
+ "pol_core_region": [
+  690,
+  960
+ ],
+ "coordinate_source": "data/structures/P08546_swissmodel_8oj7.pdb, validated vs 8EXX at spearman 0.989 / median 0.39 A",
+ "geometric_separation": {
+  "exo_median_distance_to_pol_shell_angstrom": 32.3,
+  "pol_core_median_distance_to_pol_shell_angstrom": 10.5,
+  "separation_of_medians_angstrom": 21.7
+ },
+ "drugs": {
+  "Foscarnet": {
+   "n_total": 160,
+   "n_resistant": 50,
+   "n_sensitive": 110,
+   "matches_frozen_cohort": true,
+   "frozen_cohort_expected": [
+    160,
+    50,
+    110
+   ],
+   "pct_resistant_in_exo": 10.0,
+   "pct_sensitive_in_exo": 53.6,
+   "n_resistant_in_exo": 5,
+   "n_sensitive_in_exo": 59,
+   "median_pos_resistant": 756.0,
+   "median_pos_sensitive": 524.0,
+   "frozen_distance_only_s0_option_a": 0.8822
+  },
+  "Ganciclovir": {
+   "n_total": 230,
+   "n_resistant": 76,
+   "n_sensitive": 154,
+   "matches_frozen_cohort": true,
+   "frozen_cohort_expected": [
+    230,
+    76,
+    154
+   ],
+   "pct_resistant_in_exo": 59.2,
+   "pct_sensitive_in_exo": 20.8,
+   "n_resistant_in_exo": 45,
+   "n_sensitive_in_exo": 32,
+   "median_pos_resistant": 532.5,
+   "median_pos_sensitive": 689.5,
+   "frozen_distance_only_s0_option_a": 0.4135
+  },
+  "Cidofovir": {
+   "n_total": 149,
+   "n_resistant": 57,
+   "n_sensitive": 92,
+   "matches_frozen_cohort": true,
+   "frozen_cohort_expected": [
+    149,
+    57,
+    92
+   ],
+   "pct_resistant_in_exo": 77.2,
+   "pct_sensitive_in_exo": 21.7,
+   "n_resistant_in_exo": 44,
+   "n_sensitive_in_exo": 20,
+   "median_pos_resistant": 516.0,
+   "median_pos_sensitive": 715.0,
+   "frozen_distance_only_s0_option_a": 0.2507
+  }
+ },
+ "monotonicity_check": {
+  "drugs_sorted_by_pct_resistant_in_exo": [
+   "Foscarnet",
+   "Ganciclovir",
+   "Cidofovir"
+  ],
+  "corresponding_distance_s0": [
+   0.8822,
+   0.4135,
+   0.2507
+  ],
+  "s0_strictly_decreasing": true,
+  "n_points": 3,
+  "caveat": "3 drugs only; ordering is exact but no inferential claim is made, and the GCV S_0 95% CI [0.1901, 0.6941] is wide"
+ }
+}

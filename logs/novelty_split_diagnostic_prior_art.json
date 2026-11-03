@@ -1,0 +1,40 @@
+{
+ "claim_under_assessment": "A label-free, pre-fit split-quality diagnostic that measures, for each held-out test position, the sequence distance to the nearest training position (min |p_test - p_train|), and uses that distribution to show that position-grouped cross-validation does not separate sequence neighbourhoods while contiguous-block holdout does.",
+ "date_assessed": "2026-11-03",
+ "why_reassessed": "logs/novelty_track_a_report.md records Q3 as 'VERY SPARSE (19 total hits): Highly uncrowded niche', but that query returned largely off-target hits (soil antibiotic-resistance genes, PROTAC chemical space), so the sparseness verdict is not reliable evidence of novelty for this specific claim. Two hits in that list are genuinely adjacent and had not been read.",
+ "papers_assessed": [
+  {
+   "pmid": "41169760",
+   "doi": "10.1016/j.csbj.2025.10.020",
+   "citation": "Xie L, Bao G, Zhang D et al. Comput Struct Biotechnol J 2025; 27:4418-4430",
+   "task": "relative protein-ligand binding free energy (ddG) for protein mutations, MdrDB, 4179 records",
+   "partitioning_strategies_compared": ["random 8:1:1", "UniProt-ID grouped", "anchor-query pairwise framework (their proposal)"],
+   "has_prefit_labelfree_split_metric": "partially: Figure 2 reports train/test sequence and SMILES similarity prior to fitting",
+   "measures_residue_index_distance_between_test_and_train": false,
+   "has_position_grouped_condition": false,
+   "reports_position_grouped_leakage": false,
+   "verdict": "DIFFERENT PROBLEM. Grouping is at the level of protein identity (UniProt ID), not residue position within a protein. Their pre-fit similarity check is whole-sequence and ligand-fingerprint identity between proteins, not sequence-index proximity between residues of one protein, and no position-grouped split is evaluated. Overlap is confined to the general theme that random splitting inflates performance and that train/test similarity should be inspected before fitting.",
+   "anticipates_claim": false
+  },
+  {
+   "pmid": "42838683",
+   "doi": "10.1016/j.aca.2026.346185",
+   "citation": "Al-Shaebi Z, Akdeniz M, Yerlitas Tastan SI et al. Anal Chim Acta 2026; 1423:346185",
+   "task": "antimicrobial resistance phenotype classification from 15000 SERS spectra of 15 clinical Staphylococcus aureus isolates",
+   "partitioning_strategies_compared": ["twelve strategies; principal contrast is spectrum-level vs isolate/subject-level"],
+   "has_prefit_labelfree_split_metric": "none disclosed in the abstract",
+   "measures_residue_index_distance_between_test_and_train": false,
+   "has_position_grouped_condition": false,
+   "reports_position_grouped_leakage": false,
+   "verdict": "DIFFERENT PROBLEM. The data are spectra, not sequences, so no residue-index notion exists. Leakage reported arises from non-independent replicate spectra of the same isolate. Shares only the broad theme that dataset organisation dominates algorithm choice.",
+   "anticipates_claim": false
+  }
+ ],
+ "assessment_outcome": "Neither paper anticipates the claim. The nearest prior art (41169760) performs a pre-fit train/test similarity inspection, which establishes that pre-fit split inspection is not itself new as a general idea; what is not present in either paper is a residue-index separation metric within a single protein, applied to adjudicate position-grouped versus contiguous-block splitting.",
+ "stated_limitations_of_this_assessment": [
+  "Paper 42838683 was assessed from its abstract only; the Elsevier full text was not retrieved, so a split-characterisation metric disclosed only in its methods or supplement would not have been seen.",
+  "For paper 41169760 the PMC full text was retrieved but truncated; the exact computation behind its Figure 2 train/test similarity panel was not located in the text read, and the supplementary material was not examined.",
+  "The underlying Q3 PubMed query was poorly targeted. A novelty claim in the manuscript should be worded as a delimitation against these specific papers rather than as an assertion that the niche is empty."
+ ],
+ "recommended_manuscript_wording": "Claim the metric as a contribution with an explicit delimitation: pre-fit inspection of train/test similarity has precedent at the level of whole-sequence and chemical identity between distinct proteins (Xie et al. 2025), and partition-induced leakage has been systematically benchmarked in non-sequence modalities (Al-Shaebi et al. 2026). What we add is a residue-index separation statistic within a single protein target, and its use to show that position-grouped splitting, the current standard recommendation, leaves the sequence-neighbour channel open."
+}
