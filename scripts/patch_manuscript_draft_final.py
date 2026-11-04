@@ -56,7 +56,7 @@ Machine learning models for viral drug resistance are frequently evaluated using
 
 To establish a leak-free evaluation standard, we constructed a verified, deduplicated benchmark of 929 single-site missense variant-drug records (630 unique substitutions; SHA-256 `7C4D...`) across UL23 and UL30. Under an apples-to-apples feature-family degradation benchmark in which every family is fitted supervised under identical splits, leakage localizes to the **feature representation rather than the model class**: positional-identity features degrade by $\\Delta = 0.2336$–$0.4206$ across all three targets and both a non-linear and a linear model class (6/6 combinations, all $p < 0.0005$), whereas every variant-level family degrades by an order of magnitude less — evolutionary conservation $\\Delta = 0.0362$–$0.1092$, protein language models $\\Delta = 0.0062$–$0.0356$. Because classical conservation scores carry no learned representation yet behave equivalently, the contrast establishes that position-indexed features cannot extrapolate out of block by construction, and we explicitly do not read it as evidence that language models uniquely acquire transferable sequence-to-function structure. By evaluating models across a 4-design Evidence Ladder (D1 pooled, D2 dual-buffered domain-mean, D3 within-study pair-weighted $S_0$, and S2 quantitative fold-change stratum), we demonstrate that active-site spatial proximity drives dominant predictive power on the essential polymerase (UL30-ACV $S_0 = 0.7846$), where combining distance with evolutionary constraint yields a composite prior ($S_0 = 0.7865$, rank-normalized $S_0 = 0.8165$) that reduces interval uncertainty by 56% relative to distance alone. Crucially, under the strictest within-study ascertainment control (D3 $S_0$), the classical multi-herpesvirus Position-Specific Scoring Matrix (PSSM) is the **single baseline whose 95% bootstrap confidence interval strictly excludes 0.50 across all three targets** (UL30-ACV: 0.7079 [0.612, 0.803]; UL30-FOS: 0.7744 [0.619, 0.932]; UL23-ACV: 0.6994 [0.600, 0.795]), providing an empirical counterweight to uncritical deep learning hype.
 
-In cross-herpesvirus replication on Human Cytomegalovirus (HCMV UL54 and UL97), an initial primary test of polymerase active-site distance on UL54-GCV failed replication ($S_0 = 0.4135$, Not Supported). In a pre-registered confirmatory protocol (`docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md`), we hypothesized and confirmed a mechanistic **Double Dissociation Crossover**: measuring distance to the exonuclease proofreading pocket (the primary biological site of resistance for chain terminators) recovered predictive performance on ganciclovir ($S_0 = 0.7243$ [0.5667, 0.8621]) and cidofovir ($S_0 = 0.9264$ [0.8649, 0.9602]) while inverting below chance on foscarnet ($S_0 = 0.3197$ [0.1288, 0.4630]). The crossover contrasts are significant at the bootstrap resolution limit ($p < 0.0005$ at $B = 2{{,}}000$); the ganciclovir arm meets the pre-registered point criteria but its paired within-drug delta spans zero ($p = 0.055$), so the dissociation is carried by the cidofovir-versus-foscarnet crossover with ganciclovir directionally consistent. A leave-site-out control removing every variant located on each feature's own defining residues shifts the three primary estimates by at most 0.045 AUROC, all retaining intervals that exclude 0.50, indicating a spatial gradient rather than memorization of a few frequent resistance positions. A factorial audit showed that coordinate provenance (Swiss-Model homology vs. experimental cryo-EM) explained $\\le 0.0092$ AUROC ($\\rho = 0.989$, median $\\Delta = 0.39$ \\AA), with the residual divergence attributable essentially in full to reference-set specification (inadvertent inclusion of the distal exonuclease magnesium MG 1303, 21.7 \\AA\\ away). Truncating and frameshift variants represent 44.4% of cataloged clinical UL23 resistance; our benchmark isolates the 55.6% missense class where predictive modeling is biologically non-trivial and clinically urgent.
+In cross-herpesvirus replication on Human Cytomegalovirus (HCMV UL54 and UL97), an initial primary test of polymerase active-site distance on UL54-GCV failed replication ($S_0 = 0.4135$, Not Supported). In a pre-registered confirmatory protocol (`docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md`), we hypothesized and confirmed a mechanistic **Double Dissociation Crossover**: measuring distance to the exonuclease proofreading pocket (the primary biological site of resistance for chain terminators) recovered predictive performance on ganciclovir ($S_0 = 0.7243$ [0.5667, 0.8621]) and cidofovir ($S_0 = 0.9264$ [0.8649, 0.9602]) while inverting below chance on foscarnet ($S_0 = 0.3197$ [0.1288, 0.4630]). The crossover contrasts are significant at the bootstrap resolution limit ($p < 0.0005$ at $B = 2{{,}}000$); the ganciclovir arm meets the pre-registered point criteria but its paired within-drug delta spans zero ($p = 0.055$), so the dissociation is carried by the cidofovir-versus-foscarnet crossover with ganciclovir directionally consistent. A leave-site-out control removing every variant located on each feature's own defining residues shifts the three primary estimates by at most 0.045 AUROC, all retaining intervals that exclude 0.50, indicating a spatial gradient rather than memorization of a few frequent resistance positions. A factorial audit showed that coordinate provenance (Swiss-Model homology vs. experimental cryo-EM) explained $\\le 0.0092$ AUROC ($\\rho = 0.989$, median $\\Delta = 0.39$ \\AA), with the residual divergence attributable essentially in full to reference-set specification (inadvertent inclusion of the distal exonuclease magnesium MG 1303, 21.7 \\AA\\ away). Within the curated UL23 catalogue restricted to aciclovir — the arm the thymidine kinase benchmark actually evaluates — truncating and frameshift variants account for 38.4% (98/255) of resistance-conferring entries. Our primary UL23 arm is missense-only by construction (286 variant-drug records, 100% single substitutions), isolating the class where prediction is biologically non-trivial, since a premature stop codon requires no model to interpret.
 """
 
     # Check contributions list in Section 1
@@ -70,7 +70,7 @@ In cross-herpesvirus replication on Human Cytomegalovirus (HCMV UL54 and UL97), 
 4. **Confirmatory Exonuclease Double Dissociation in HCMV UL54:** In an audited confirmatory protocol (`docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md`), we prove that the primary replication failure of polymerase-active-site distance on UL54-GCV ($S_0 = 0.4135$) reflected a mechanism mismatch between pyrophosphate inhibitors and chain terminators. Measuring distance to the exonuclease proofreading pocket recovered predictive performance on chain terminators (GCV $S_0 = 0.7243$; CDV $S_0 = 0.9264$) while inverting below chance on the pyrophosphate inhibitor (FOS $S_0 = 0.3197$; crossover contrasts $p < 0.0005$ at the $B = 2{{,}}000$ resolution limit). The ganciclovir paired delta spans zero ($p = 0.055$), so the dissociation rests on the cidofovir-versus-foscarnet crossover. A symmetric leave-site-out control confirms the effect survives removal of the variants sitting on each feature's own defining residues (shift $\\le 0.045$ AUROC; all intervals exclude 0.50).
 5. **Factorial Audit of Homology Model Coordinates:** Factorial apportionment shows that Swiss-Model homology modeling did not corrupt distance geometry ($\\rho = 0.989$, median $\\Delta = 0.39$ \\AA, pure coordinate effect $\\le 0.0092$ AUROC). The apparent divergence between Option A and Option B is attributable essentially in full to reference-set specification — inadvertent inclusion of the distal exonuclease magnesium MG 1303, 21.7 \\AA\\ from the polymerase shell — with the unmapped-position imputation policy contributing $\\le 0.0694$ AUROC. The two effects are measured on different case sets and partially oppose one another on foscarnet, so they are not additively separable and no single percentage attribution is quoted.
 6. **Standardized Missense Resistance Benchmark:** We establish a curated, deduplicated primary cohort of 929 single-site missense variant-drug records (630 unique substitutions) across UL23 and UL30, verified with cryptographic provenance (SHA-256 hash `7C4D...`).
-7. **Quantification of Clinical Scope:** We document that truncating and frameshift variants represent 44.4% of cataloged UL23 resistance, establishing that our benchmark rigorously evaluates the missense class where predictive modeling is genuinely needed.
+7. **Quantification of Clinical Scope:** We document that truncating and frameshift variants account for 38.4% (98/255) of resistance-conferring UL23 entries under aciclovir, the arm this benchmark evaluates (`logs/ul23_clinical_scope_contingency.json`). The figure is reported on the aciclovir-restricted catalogue rather than on the pooled UL23 catalogue, because pooling across drugs would place penciclovir, brivudine, foscarnet and cidofovir entries in one denominator, and foscarnet and cidofovir do not require thymidine-kinase activation at all — indeed UL23-foscarnet serves elsewhere in this work as a negative control against false resistance transfer. Our primary UL23 arm is missense-only by construction, establishing that it evaluates the class in which prediction is genuinely needed.
 """
 
     # Section 3.8 and beyond
@@ -161,7 +161,10 @@ In accordance with Phase 3 verification standards, all primary findings were sub
     rest_after_contrib = c_split[1].split("## 2. Materials and Methods")[1]
     
     # In rest_after_contrib, find Section 3.8 and replace till ## 4. Discussion
-    res_split = rest_after_contrib.split("### 3.8 Dual-Buffered Domain Benchmark")
+    if "### 3.8 Dual-Buffered Domain Benchmark" in rest_after_contrib:
+        res_split = rest_after_contrib.split("### 3.8 Dual-Buffered Domain Benchmark")
+    else:
+        res_split = rest_after_contrib.split("### 3.8 The Evidence Ladder: 4-Design Evaluation Matrix and Within-Study Ascertainment Controls")
     before_38 = res_split[0]
     after_38 = res_split[1].split("## 4. Discussion")[1]
     
@@ -181,10 +184,43 @@ In accordance with Phase 3 verification standards, all primary findings were sub
         ("(empirical $p < 0.0001$)", "(empirical $p < 0.0005$)"),
         ("$p < 0.0001$ on FOS)",
          "$p < 0.0005$ on FOS at the $B = 2{,}000$ resolution limit)"),
+        # The pooled UL23 denominator of 419 resistant entries spans Aciclovir (255),
+        # Penciclovir (83), Brivudine (68), Foscarnet (9) and Cidofovir (4). Foscarnet
+        # and cidofovir do not require thymidine-kinase activation, and UL23-foscarnet
+        # is used elsewhere in this work as a negative control against false resistance
+        # transfer, so it cannot also count as cataloged UL23 resistance. The benchmark
+        # arm is aciclovir, so the aciclovir-restricted figure 98/255 = 38.4% is the one
+        # reported. Both are logged in logs/ul23_clinical_scope_contingency.json.
+        ("Among all cataloged resistant UL23 variants, truncating/frameshift variants "
+         "account for **186 / 419 (44.4%)**.",
+         "Restricted to aciclovir, the arm this benchmark evaluates, truncating and "
+         "frameshift variants account for **98 / 255 (38.4%)** of resistance-conferring "
+         "entries. Pooled across every drug in the catalogue the figure is 186 / 419 "
+         "(44.4%), but that denominator spans penciclovir (83), brivudine (68), "
+         "foscarnet (9) and cidofovir (4) alongside aciclovir (255), and neither "
+         "foscarnet nor cidofovir requires thymidine-kinase activation; UL23-foscarnet "
+         "is used in Section 3.7 as a negative control against false resistance "
+         "transfer. We therefore report the aciclovir-restricted figure."),
+        ("In our unified clinical database, truncating and frameshift mutations account "
+         "for 44.4% (186/419) of cataloged resistance-conferring variants in thymidine "
+         "kinase (UL23).",
+         "In our unified clinical database restricted to aciclovir, truncating and "
+         "frameshift mutations account for 38.4% (98/255) of resistance-conferring "
+         "variants in thymidine kinase (UL23)."),
+        ("While missense mutations represent 55.6% of UL23 and nearly 100% of UL30 "
+         "resistance, roughly 44.4% of clinical UL23 resistance arises via frameshift "
+         "or nonsense truncations.",
+         "While missense mutations represent 61.6% of aciclovir-associated UL23 "
+         "resistance and nearly 100% of UL30 resistance, 38.4% of aciclovir-associated "
+         "UL23 resistance arises via frameshift or nonsense truncation."),
+        ("The genuine clinical and computational bottleneck lies in interpreting novel "
+         "missense variants, which represent 55.6% of UL23 and virtually all UL30 resistance,",
+         "The genuine clinical and computational bottleneck lies in interpreting novel "
+         "missense variants, which represent 61.6% of aciclovir-associated UL23 resistance and virtually all UL30 resistance,"),
     ]
     for old, new in baseline_prose_fixes:
         full_ms = full_ms.replace(old, new)
-    for bad in ("t(5.4)", "t(3.8)", "p < 0.0001"):
+    for bad in ("t(5.4)", "t(3.8)", "p < 0.0001", "186/419", "186 / 419 (44.4%)**.", "55.6%"):
         assert bad not in full_ms, (
             "Baseline prose fix did not apply; '%s' still present. The baseline text "
             "changed and baseline_prose_fixes needs updating." % bad)
