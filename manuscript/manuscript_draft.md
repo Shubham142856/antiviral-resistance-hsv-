@@ -2,7 +2,7 @@
 
 **Authors:** [Author List to be confirmed per PI sign-off]  
 **Correspondence:** [Corresponding Author]  
-**Target Venue:** *Briefings in Bioinformatics* / *PLOS Computational Biology*  
+**Target Venue:** _Briefings in Bioinformatics_ / _PLOS Computational Biology_  
 **Repository & Data:** [`https://github.com/Shubham142856/antiviral-resistance-hsv-`](https://github.com/Shubham142856/antiviral-resistance-hsv-)  
 **Dataset Integrity Hash:** SHA-256 `7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909`  
 **Audit Protocol:** `AUDIT_PROTOCOL.md` (Strict Version 4, Frozen)
@@ -20,8 +20,7 @@ In cross-herpesvirus replication on Human Cytomegalovirus (HCMV UL54 and UL97), 
 ## 1. Introduction
 
 
-
-Antiviral drug resistance in Herpes Simplex Virus types 1 and 2 (HSV-1 and HSV-2) poses significant clinical challenges, particularly in immunocompromised individuals, hematopoietic stem cell transplant recipients, and patients with recurrent herpes stromal keratitis. First-line therapy relies on aciclovir (ACV), a guanosine nucleoside analogue that requires initial monophosphorylation by the viral thymidine kinase (TK, encoded by the *UL23* gene), followed by conversion by host cellular kinases to aciclovir triphosphate, which selectively inhibits and chain-terminates the viral DNA polymerase catalytic subunit (encoded by the *UL30* gene). Second-line therapy for ACV-resistant infections primarily employs foscarnet (FOS, phosphonoformic acid), a pyrophosphate analogue that directly blocks the pyrophosphate-binding pocket of UL30 without requiring phosphorylation by UL23.
+Antiviral drug resistance in Herpes Simplex Virus types 1 and 2 (HSV-1 and HSV-2) poses significant clinical challenges, particularly in immunocompromised individuals, hematopoietic stem cell transplant recipients, and patients with recurrent herpes stromal keratitis. First-line therapy relies on aciclovir (ACV), a guanosine nucleoside analogue that requires initial monophosphorylation by the viral thymidine kinase (TK, encoded by the _UL23_ gene), followed by conversion by host cellular kinases to aciclovir triphosphate, which selectively inhibits and chain-terminates the viral DNA polymerase catalytic subunit (encoded by the _UL30_ gene). Second-line therapy for ACV-resistant infections primarily employs foscarnet (FOS, phosphonoformic acid), a pyrophosphate analogue that directly blocks the pyrophosphate-binding pocket of UL30 without requiring phosphorylation by UL23.
 
 While phenotypic susceptibility testing via plaque reduction assays (PRA) or dye uptake remains the diagnostic gold standard, phenotypic assays require 1–2 weeks, prompting extensive efforts toward sequence-based genotypic resistance prediction. In recent years, numerous machine learning classifiers and deep learning models have been proposed for variant effect and resistance prediction across viral pathogens. However, variant-level machine learning benchmarks frequently suffer from unrecognized data leakage.
 
@@ -38,6 +37,7 @@ flowchart LR
 ```
 
 ### The Spatial Leakage Problem in Resistance Modeling
+
 Cross-validation protocols that partition datasets randomly across rows fail catastrophically in mutation benchmarks because different amino acid substitutions frequently occur at the same sequence position. When the same position appears in both training and test sets, models easily memorize position identity rather than learning generalizable principles of mutation effect. To address this, "position-grouped" cross-validation—holding out individual positions entirely—has become the standard recommendation.
 
 However, position-grouped holdout does not eliminate spatial shortcut learning. The PRIME framework previously demonstrated that position-stratified validation exposes a related spatial leakage vulnerability in SARS-CoV-2 variant prediction. In this work, we demonstrate this vulnerability in Herpes Simplex Virus antiviral resistance and show that contiguous-block holdout provides the necessary structural evaluation standard. In globular viral enzymes such as DNA polymerase, resistance-conferring mutations cluster within localized structural domains (such as the catalytic Palm and Finger domains). Tree-based models or overparameterized neural networks can interpolate resistance phenotypes from adjacent or spatially neighboring positions. When tested on held-out positions that reside within known active-site clusters, models exploit this spatial interpolation shortcut, achieving high apparent test AUROCs while failing to generalize to novel regions.
@@ -68,49 +68,61 @@ flowchart TD
 ## 2. Materials and Methods
 
 ### 2.1 Dataset Curation and Deduplication
+
 The benchmark dataset was constructed by integrating the curated HerpesDRG database with comprehensive phenotypic resistance compilations from clinical literature (including the CMI 2025 systemic review by Dähne et al. (PMID: 40349973), the HerpesDRG database (Charles et al., 2024; PMID: 39192205), Sauerbrei et al. JAC 2016, and Burrel et al. Antiviral Res 2010). All entries were merged on unique `(Virus, Gene, Drug, Mutation)` tuples.
 
 Phenotypic resistance labels were standardized against established clinical consensus criteria:
-- **Aciclovir (PRA / Dye Uptake):** The primary operational criterion is fold-change $\ge 3.0\times$ in $\text{IC}_{50}$ relative to the wild-type reference strain, or qualitative curation as Resistant versus Sensitive/Polymorphism in HerpesDRG and CMI 2025. In the clinical literature, the foundational absolute PRA cut-off is $\text{IC}_{50} \ge 2.0\text{ }\mu\text{g/mL}$ (established by Safrin et al., *Antimicrob Agents Chemother* 1994;38:1246–1250 [PMID: 8092821], where it demonstrated a 95% predictive value for lesion failure to heal, and compiled in reviews such as Sauerbrei et al., *J Antimicrob Chemother* 2016;71:6–16).
-- **Foscarnet (PRA / Dye Uptake):** The primary operational criterion is fold-change $\ge 3.0\times$ in $\text{IC}_{50}$ relative to the wild-type reference strain, or qualitative curation as Resistant versus Sensitive/Polymorphism in HerpesDRG and CMI 2025. The absolute cut-off most consistently documented in clinical trials is $\text{IC}_{50} \ge 100\text{ }\mu\text{g/mL}$, first established in the landmark 115-patient HIV cohort of Safrin et al. (1994), where $\text{IC}_{50} \ge 100\text{ }\mu\text{g/mL}$ predicted an 88% failure-to-heal rate versus 0% below it (recently reviewed in Wang, *J Clin Microbiol* 2024;62:e00728-23). Published foscarnet cut-offs are stated in mass concentration ($\mu\text{g/mL}$) without specifying chemical hydration state; we strictly avoid converting them to molar units. Because absolute concentration thresholds depend on laboratory assay conditions, our benchmark evaluates the normalized fold-change metric ($\ge 3.0\times$), the standard reproducible criterion across multicenter studies.
+
+- **Aciclovir (PRA / Dye Uptake):** The primary operational criterion is fold-change $\ge 3.0\times$ in $\text{IC}_{50}$ relative to the wild-type reference strain, or qualitative curation as Resistant versus Sensitive/Polymorphism in HerpesDRG and CMI 2025. In the clinical literature, the foundational absolute PRA cut-off is $\text{IC}_{50} \ge 2.0\text{ }\mu\text{g/mL}$ (established by Safrin et al., _Antimicrob Agents Chemother_ 1994;38:1246–1250 [PMID: 8092821], where it demonstrated a 95% predictive value for lesion failure to heal, and compiled in reviews such as Sauerbrei et al., _J Antimicrob Chemother_ 2016;71:6–16).
+- **Foscarnet (PRA / Dye Uptake):** The primary operational criterion is fold-change $\ge 3.0\times$ in $\text{IC}_{50}$ relative to the wild-type reference strain, or qualitative curation as Resistant versus Sensitive/Polymorphism in HerpesDRG and CMI 2025. The absolute cut-off most consistently documented in clinical trials is $\text{IC}_{50} \ge 100\text{ }\mu\text{g/mL}$, first established in the landmark 115-patient HIV cohort of Safrin et al. (1994), where $\text{IC}_{50} \ge 100\text{ }\mu\text{g/mL}$ predicted an 88% failure-to-heal rate versus 0% below it (recently reviewed in Wang, _J Clin Microbiol_ 2024;62:e00728-23). Published foscarnet cut-offs are stated in mass concentration ($\mu\text{g/mL}$) without specifying chemical hydration state; we strictly avoid converting them to molar units. Because absolute concentration thresholds depend on laboratory assay conditions, our benchmark evaluates the normalized fold-change metric ($\ge 3.0\times$), the standard reproducible criterion across multicenter studies.
 
 Conflicted entries (where identical variants had discordant reported phenotypes across laboratories) were logged and strictly excluded from the primary cohort. Co-occurring combinations and multi-mutation entries were segregated into a dedicated epistasis set (`co_occurrence_entries.tsv`, $N=125$).
 
 ### 2.2 Primary Evaluation Cohort and Scope Limitation
+
 The primary cohort was restricted strictly to single-site missense substitutions in HSV-1 reference coordinates (UL23 reference NCBI `NC_001806.2`, 376 aa; UL30 reference NCBI `NC_001806.2`, 1,235 aa). The primary cohort comprises **929 single-site missense variant-drug records** across **630 unique amino acid substitutions** (286 unique substitutions in UL23; 344 unique substitutions in UL30):
+
 - **UL23-Aciclovir:** 286 variant-drug records (120 Resistant, 166 Sensitive; 210 unique positions; 286 unique substitutions).
 - **UL30-Aciclovir:** 332 variant-drug records (62 Resistant, 270 Sensitive; 290 unique positions; 332 unique substitutions).
 - **UL30-Foscarnet:** 311 variant-drug records (33 Resistant, 278 Sensitive; 271 unique positions; 311 unique substitutions).
 
-*Substantial Variant Overlap Across Polymerase Drugs:* UL30-ACV and UL30-FOS evaluate the **same enzyme** against two different inhibitor classes. Crucially, they share **264 sequence positions (91.0% of ACV positions; 97.4% of FOS positions)** and **299 exact substitutions (90.1% of ACV substitutions; 96.1% of FOS substitutions)**. Foscarnet therefore does not represent an independent biological validation arm, but rather a cross-drug comparison on an essentially identical variant set.
+_Substantial Variant Overlap Across Polymerase Drugs:_ UL30-ACV and UL30-FOS evaluate the **same enzyme** against two different inhibitor classes. Crucially, they share **264 sequence positions (91.0% of ACV positions; 97.4% of FOS positions)** and **299 exact substitutions (90.1% of ACV substitutions; 96.1% of FOS substitutions)**. Foscarnet therefore does not represent an independent biological validation arm, but rather a cross-drug comparison on an essentially identical variant set.
 
 The complete dataset is frozen and tracked by its SHA-256 digest: `7C4D0A3DE2CD171B07230757F44E0DFBD61C6A0A8570DC8F263195B354C66909`.
 
 #### Scope Quantification (The Truncating Class)
+
 In our curated unified database of 941 UL23 entries, 252 entries are non-missense variants (168 nonsense stop codons, 68 frameshifts, 16 indels). Restricted to aciclovir, the arm this benchmark evaluates, truncating and frameshift variants account for **98 / 255 (38.4%)** of resistance-conferring entries. Pooled across every drug in the catalogue the figure is 186 / 419 (44.4%), but that denominator spans penciclovir (83), brivudine (68), foscarnet (9) and cidofovir (4) alongside aciclovir (255), and neither foscarnet nor cidofovir requires thymidine-kinase activation; UL23-foscarnet is used in Section 3.7 as a negative control against false resistance transfer. We therefore report the aciclovir-restricted figure. These variants were excluded by construction from the benchmark cohort because protein language model masked-marginal likelihood ratios ($\Delta\text{LLR}$) are undefined for non-single-substitution variants. Clinically, premature termination abolishes thymidine kinase catalytic function; resistance in this class is deterministically known without machine learning. Our benchmark evaluates missense variant prediction, where clinical interpretation is actively challenging.
 
 ### 2.3 Evaluation Schemes and Stopping Rule
 
 #### 1. 5-Fold Position-Grouped Cross-Validation (`cv_fold_id`)
+
 Positions were partitioned into 5 disjoint folds using deterministic modulo hashing on position index: $\text{fold} = (\text{pos} \bmod 5)$. No residue position appears in both training and test sets.
 
 #### 2. 5-Fold Contiguous-Block Cross-Validation (`block_fold_id`)
+
 To evaluate structural domain holdout, sequence positions were partitioned into 5 contiguous structural blocks:
+
 - **UL23 (376 aa):** Block $b = \min(4, \lfloor(\text{pos} - 1) / 75\rfloor)$ (75 aa per block).
 - **UL30 (1,235 aa):** Block $b = \min(4, \lfloor(\text{pos} - 1) / 247\rfloor)$ (247 aa per block).
 
 In UL30, catalytic resistance mutations concentrate heavily within the Palm and Finger subdomains (Blocks 2 and 3, aa 495–988). Block 0 (aa 1–247) contains 0 resistant mutations (all 63 rows are sensitive polymorphisms), rendering AUROC undefined in that block. Block 0 was treated as single-class and omitted from block AUROC averages, yielding 4 evaluable blocks for UL30.
 
 #### Primary Evaluation Metric & Confidence Intervals
+
 The primary metric is the **contiguous-block mean AUROC** across evaluable blocks. Confidence intervals are computed using a **block-level Student's $t$-distribution with $n - 1$ degrees of freedom**:
 $$\text{CI}_{95\%} = \bar{\text{AUROC}} \pm t_{0.975, n-1} \cdot \frac{s}{\sqrt{n}}$$
 where $n=5$ for UL23 and $n=4$ for UL30. Pooled AUROCs across the entire dataset and position-cluster bootstrap CIs are reported strictly as secondary descriptive statistics.
 
 #### Pre-Registered Stopping Rule
+
 A model passes the benchmark if it achieves a contiguous-block mean AUROC $\ge 0.65$ with the lower bound of its 95% Student's $t$ confidence interval strictly exceeding 0.50, on at least 2 of the 3 primary pairs.
 
 ### 2.4 Multi-Herpesvirus Multiple Sequence Alignment
+
 To test whether sequence models capture structural signal beyond phylogenetic conservation, we constructed reference-anchored multiple sequence alignments from complete viral genomes:
+
 1. **HSV-1:** Human alphaherpesvirus 1 strain 17 (`NC_001806.2`)
 2. **HSV-2:** Human alphaherpesvirus 2 strain HG52 (`NC_001798.2`)
 3. **VZV:** Human alphaherpesvirus 3 strain Dumas (`NC_001348.1`; ORF36 for UL23, ORF28 for UL30)
@@ -118,16 +130,19 @@ To test whether sequence models capture structural signal beyond phylogenetic co
 5. **HHV-6B:** Human betaherpesvirus 6B (`NC_000898.1`; U38 for UL30)
 
 Alignments were computed using global dynamic programming with a BLOSUM62 matrix (gap open $-10.0$, gap extend $-0.5$). For each position $i$ in the HSV-1 reference, we computed four evolutionary and profile baselines:
+
 1. **Family Conservation Fraction:** $C(i) = \frac{\sum_{k} \mathbb{I}(\text{res}_{k, i} == \text{wt})}{\text{non-gap orthologs}}$
 2. **Shannon Entropy:** $H(i) = -\sum_{a \in \mathcal{A}} p(a) \log_2 p(a)$
 3. **Multi-Herpesvirus Weighted Conservation:** $\text{Score}(i, \text{wt} \to \text{mut}) = \left(1.0 - \frac{H(i)}{\log_2(N)}\right) \times 4.0 - \text{BLOSUM62}(\text{wt}, \text{mut})$
    where $N$ is the total number of aligned ortholog genomes ($N=3$ for UL23: HSV-1, HSV-2, VZV; $N=5$ for UL30: HSV-1, HSV-2, VZV, HCMV, HHV-6B).
 4. **Position-Specific Scoring Matrix (PSSM):** Dirichlet pseudocount-smoothed profile ($\alpha=1.0$) with Robinson & Robinson (1991) background amino acid frequencies $q(a)$:
    $$p_i(a) = \frac{c_i(a) + \alpha \cdot q(a)}{N_i + \alpha}, \quad \text{Score}(i, \text{wt} \to \text{mut}) = \log_2 \frac{p_i(\text{wt})}{p_i(\text{mut})}$$
-Each of these alignment-derived scores is evaluated as an independent baseline under the same contiguous-block protocol applied to the language models, and we compare zero-shot PLMs against the strongest baseline on each target pair rather than against a single nominated comparator.
+   Each of these alignment-derived scores is evaluated as an independent baseline under the same contiguous-block protocol applied to the language models, and we compare zero-shot PLMs against the strongest baseline on each target pair rather than against a single nominated comparator.
 
 ### 2.5 Zero-Shot Protein Language Models
+
 We evaluated three masked language models without fine-tuning:
+
 1. **ESM-2 650M** (`facebook/esm2_t33_650M_UR50D`, 33 layers, 650M parameters)
 2. **ProtBERT** (`Rostlab/prot_bert`, 30 layers, 420M parameters)
 3. **ESM-2 35M** (`facebook/esm2_t12_35M_UR50D`, 12 layers, 35M parameters)
@@ -137,6 +152,7 @@ $$\Delta\text{LLR} = \log P(\text{mut} \mid \mathbf{x}_{\backslash i}) - \log P(
 The pre-registered direction specifies that deleterious mutations increase resistance likelihood; thus, the decision score is $-\Delta\text{LLR}$.
 
 ### 2.6 Supervised Predictor and Temporal Validation
+
 Supervised models were trained using eight engineered features: zero-shot ESM-2 650M $-\Delta\text{LLR}$, ProtBERT $-\Delta\text{LLR}$, multi-herpesvirus weighted conservation, family conservation fraction, BLOSUM62 radicalness, $\Delta\text{Hydropathy}$ (Kyte-Doolittle), $\Delta\text{Molecular Weight}$, and $\Delta\text{Charge}$ (at pH 7.4). Models were trained using L2-regularized Logistic Regression ($C=0.1$) and Gradient Boosting (`HistGradientBoostingClassifier`).
 
 Prospective temporal validation was conducted by training on variants published prior to 2016 ($N=622$) and evaluating on variants published from 2016 onward ($N=307$). Test performance was stratified into novel substitutions at previously seen positions versus variants at completely novel sequence positions.
@@ -146,42 +162,44 @@ Prospective temporal validation was conducted by training on variants published 
 ## 3. Results
 
 ### 3.1 Position-Grouped Cross-Validation Masks Spatial Leakage
+
 To measure whether position-grouped cross-validation prevents spatial shortcut learning, we trained a "Position-Only Random Forest"—a decision tree ensemble provided exclusively with the sequence index (`pos`) and zero biological features—and compared it against an All-Features Random Forest and zero-shot PLMs (Table 1).
 
 **Table 1: The Dual-Split Leakage Finding.** Cross-validation performance under Position-Grouped CV versus Contiguous-Block CV across 929 single-site missense variant-drug records (630 unique amino acid substitutions).
 
-| Target Pair | Model Architecture | Position-Grouped Mean $\pm$ SD | Contiguous-Block Mean $\pm$ SD | 95% Student's $t$ CI (Block) | Status under Block Holdout |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **UL30-Aciclovir** | Position-Only RF | **0.8715 $\pm$ 0.0171** | **0.5001 $\pm$ 0.0009** | — | **Collapses to chance** |
-| | All-Features RF | 0.7328 $\pm$ 0.0365 | 0.4089 $\pm$ 0.0198 | — | Sub-chance |
-| | **ESM-2 650M (Zero-shot)** | **0.8273 $\pm$ 0.0632** | **0.7875 $\pm$ 0.1772** | **[0.5055, 1.0000]** | **Robust generalization** |
-| **UL30-Foscarnet** | Position-Only RF | **0.8684 $\pm$ 0.0282** | **0.5166 $\pm$ 0.0105** | — | **Collapses to chance** |
-| | All-Features RF | 0.6756 $\pm$ 0.0446 | 0.6372 $\pm$ 0.0181 | — | Degraded |
-| | **ESM-2 650M (Zero-shot)** | **0.8454 $\pm$ 0.1050** | **0.8809 $\pm$ 0.1250** | **[0.6821, 1.0000]** | **Robust generalization** |
+| Target Pair        | Model Architecture         | Position-Grouped Mean $\pm$ SD | Contiguous-Block Mean $\pm$ SD | 95% Student's $t$ CI (Block) | Status under Block Holdout |
+| :----------------- | :------------------------- | :----------------------------- | :----------------------------- | :--------------------------- | :------------------------- |
+| **UL30-Aciclovir** | Position-Only RF           | **0.8715 $\pm$ 0.0171**        | **0.5001 $\pm$ 0.0009**        | —                            | **Collapses to chance**    |
+|                    | All-Features RF            | 0.7328 $\pm$ 0.0365            | 0.4089 $\pm$ 0.0198            | —                            | Sub-chance                 |
+|                    | **ESM-2 650M (Zero-shot)** | **0.8273 $\pm$ 0.0632**        | **0.7875 $\pm$ 0.1772**        | **[0.5055, 1.0000]**         | **Robust generalization**  |
+| **UL30-Foscarnet** | Position-Only RF           | **0.8684 $\pm$ 0.0282**        | **0.5166 $\pm$ 0.0105**        | —                            | **Collapses to chance**    |
+|                    | All-Features RF            | 0.6756 $\pm$ 0.0446            | 0.6372 $\pm$ 0.0181            | —                            | Degraded                   |
+|                    | **ESM-2 650M (Zero-shot)** | **0.8454 $\pm$ 0.1050**        | **0.8809 $\pm$ 0.1250**        | **[0.6821, 1.0000]**         | **Robust generalization**  |
 
 Under position-grouped cross-validation, the position-only model achieves AUROCs of **0.8715** (UL30-ACV) and **0.8684** (UL30-FOS). Because catalytic resistance mutations reside in spatial proximity, the tree interpolates labels from neighboring active-site residues. Under contiguous-block holdout, this shortcut is neutralized, and the model collapses to **0.5001** and **0.5166** (20-repeat CV mean $\pm$ SD). In the single primary 5-block partition, position-only RF produces chance predictions (AUROC = 0.5000) on 3 of 4 evaluable folds, with a fold-mean of 0.5347 $\pm$ 0.0694 and a pooled out-of-fold AUROC of 0.4591 [95% CI: 0.3741, 0.5468], confirming collapse across both repeated and single-split regimes. This demonstrates that position-grouped cross-validation is vulnerable to spatial confounding.
 
 ---
 
 ### 3.2 Zero-Shot Protein Language Models Generalize Beyond Spatial Shortcuts
+
 In contrast to tabular models, zero-shot protein language models evaluate sequence context without memorizing regional position labels. Table 2 summarizes benchmark performance across all evaluated models under contiguous-block holdout.
 
 **Table 2: Zero-Shot PLM Benchmark under Contiguous-Block Holdout.**
 
-| Model | Target Pair | Contiguous-Block Mean $\pm$ SD | 95% Student's $t$ CI | Pooled AUROC [95% Boot CI] | Stopping Rule Status |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **ESM-2 650M** | **UL23-Aciclovir** | **0.7397 $\pm$ 0.1565** | **[0.5455, 0.9340]** | 0.7881 [0.7134, 0.8422] | **PASS** |
-| | **UL30-Aciclovir** | **0.7875 $\pm$ 0.1772** | **[0.5055, 1.0000]** | 0.8240 [0.7570, 0.8857] | **PASS** |
-| | **UL30-Foscarnet** | **0.8809 $\pm$ 0.1250** | **[0.6821, 1.0000]** | 0.8409 [0.7433, 0.9162] | **PASS (3/3 Pairs)** |
-| **ProtBERT 420M** | UL23-Aciclovir | 0.7530 $\pm$ 0.0713 | [0.6645, 0.8415] | 0.7243 [0.6533, 0.7858] | PASS |
-| | UL30-Aciclovir | 0.6957 $\pm$ 0.2416 | [0.3113, 1.0000] | 0.8398 [0.7740, 0.8938] | Mean pass ($\ge 0.65$) |
-| | UL30-Foscarnet | 0.7423 $\pm$ 0.1593 | [0.4888, 0.9958] | 0.8545 [0.7956, 0.9136] | Mean pass ($\ge 0.65$) |
-| **ESM-2 35M** | UL23-Aciclovir | 0.6110 $\pm$ 0.2001 | [0.3625, 0.8595] | 0.6640 [0.5748, 0.7292] | Fail |
-| | UL30-Aciclovir | 0.6795 $\pm$ 0.2441 | [0.2911, 1.0000] | 0.6681 [0.5814, 0.7479] | Fail |
-| | UL30-Foscarnet | 0.7481 $\pm$ 0.1842 | [0.4550, 1.0000] | 0.7381 [0.6205, 0.8351] | Fail |
-| **BLOSUM62** | UL23-Aciclovir | 0.6380 $\pm$ 0.0690 | [0.5524, 0.7237] | 0.6130 [0.5484, 0.6728] | Non-zero baseline |
-| *(Radicalness)*| UL30-Aciclovir | 0.5494 $\pm$ 0.2496 | [0.1523, 0.9466] | 0.4942 [0.4115, 0.5705] | Near chance |
-| | UL30-Foscarnet | 0.5074 $\pm$ 0.2997 | [0.0305, 0.9844] | 0.4531 [0.3515, 0.5560] | Pure chance |
+| Model             | Target Pair        | Contiguous-Block Mean $\pm$ SD | 95% Student's $t$ CI | Pooled AUROC [95% Boot CI] | Stopping Rule Status   |
+| :---------------- | :----------------- | :----------------------------- | :------------------- | :------------------------- | :--------------------- |
+| **ESM-2 650M**    | **UL23-Aciclovir** | **0.7397 $\pm$ 0.1565**        | **[0.5455, 0.9340]** | 0.7881 [0.7134, 0.8422]    | **PASS**               |
+|                   | **UL30-Aciclovir** | **0.7875 $\pm$ 0.1772**        | **[0.5055, 1.0000]** | 0.8240 [0.7570, 0.8857]    | **PASS**               |
+|                   | **UL30-Foscarnet** | **0.8809 $\pm$ 0.1250**        | **[0.6821, 1.0000]** | 0.8409 [0.7433, 0.9162]    | **PASS (3/3 Pairs)**   |
+| **ProtBERT 420M** | UL23-Aciclovir     | 0.7530 $\pm$ 0.0713            | [0.6645, 0.8415]     | 0.7243 [0.6533, 0.7858]    | PASS                   |
+|                   | UL30-Aciclovir     | 0.6957 $\pm$ 0.2416            | [0.3113, 1.0000]     | 0.8398 [0.7740, 0.8938]    | Mean pass ($\ge 0.65$) |
+|                   | UL30-Foscarnet     | 0.7423 $\pm$ 0.1593            | [0.4888, 0.9958]     | 0.8545 [0.7956, 0.9136]    | Mean pass ($\ge 0.65$) |
+| **ESM-2 35M**     | UL23-Aciclovir     | 0.6110 $\pm$ 0.2001            | [0.3625, 0.8595]     | 0.6640 [0.5748, 0.7292]    | Fail                   |
+|                   | UL30-Aciclovir     | 0.6795 $\pm$ 0.2441            | [0.2911, 1.0000]     | 0.6681 [0.5814, 0.7479]    | Fail                   |
+|                   | UL30-Foscarnet     | 0.7481 $\pm$ 0.1842            | [0.4550, 1.0000]     | 0.7381 [0.6205, 0.8351]    | Fail                   |
+| **BLOSUM62**      | UL23-Aciclovir     | 0.6380 $\pm$ 0.0690            | [0.5524, 0.7237]     | 0.6130 [0.5484, 0.6728]    | Non-zero baseline      |
+| _(Radicalness)_   | UL30-Aciclovir     | 0.5494 $\pm$ 0.2496            | [0.1523, 0.9466]     | 0.4942 [0.4115, 0.5705]    | Near chance            |
+|                   | UL30-Foscarnet     | 0.5074 $\pm$ 0.2997            | [0.0305, 0.9844]     | 0.4531 [0.3515, 0.5560]    | Pure chance            |
 
 All three zero-shot protein language models were evaluated under identical contiguous-block splits. ESM-2 650M satisfies the pre-registered stopping rule across all three targets ($\ge 0.65$ mean and 95% $t$-CI lower bound $> 0.50$). ProtBERT achieves high mean AUROCs (0.6957 to 0.7530), satisfying criteria on UL23-ACV while exhibiting wider confidence intervals on UL30 due to fold-level variance across the 4 evaluable blocks. ESM-2 35M achieves moderate mean AUROCs (0.6110 to 0.7481) but fails the conservative $t$-CI threshold across targets.
 
@@ -197,6 +215,7 @@ The primary biological divergence observed in our benchmark between thymidine ki
 When tested formally at the primary block-mean level, wide fold-level variance across the 5 structural blocks leaves the divergence non-significant (Welch's two-sample $t$-test: $\Delta = +0.0887, t(3.63)=0.885, p=0.431$ for ACV; $\Delta = +0.1307, t(3.32)=0.949, p=0.406$ for FOS; both 95% CIs span zero). The block-level divergence between targets is therefore **descriptive and qualitative rather than statistically decisive**, reflecting the inherent degrees-of-freedom constraint ($n=5$ vs. $n=4$) of structural domain holdout.
 
 To test whether the divergence holds under pooled sample resampling and avoid the difference-of-significance fallacy (Gelman & Stern, 2006), we also performed a secondary position-cluster bootstrap interaction test (2,000 resamples over unique sequence positions; `logs/radicalness_interaction_test.json`). Across the pooled cohort, the advantage of radicalness on UL23 over UL30 strictly excludes zero:
+
 - **UL23-ACV vs. UL30-ACV:** Observed point delta $\Delta = +0.1187$, 95% position-cluster bootstrap CI: **[+0.0387, +0.2021]** (empirical $p=0.0020$).
 - **UL23-ACV vs. UL30-FOS:** Observed point delta $\Delta = +0.1598$, 95% position-cluster bootstrap CI: **[+0.0655, +0.2597]** (empirical $p < 0.0005$).
 - **UL23-ACV vs. UL30-Combined:** Observed point delta $\Delta = +0.1328$, 95% position-cluster bootstrap CI: **[+0.0616, +0.2150]**, 99% CI: **[+0.0308, +0.2394]** (empirical $p < 0.0005$).
@@ -223,11 +242,11 @@ Benchmarking PLMs against four alignment-derived baselines provides biological c
 
 **Table 3: Evolutionary Baselines on UL23 and UL30.** Contiguous-block mean AUROC $\pm$ SD. Significance column reports the paired per-block Student's $t$-test of ESM-2 650M minus the strongest baseline on that row (underlined).
 
-| Target Pair | Multi-Herpesvirus Weighted Conservation | Family Conservation Fraction | Negative Positional Entropy | PSSM Profile (Log-Odds) | ESM-2 650M | Paired $\Delta$ vs. Strongest ($p$-value) |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **UL23-ACV** | <u>0.7373 $\pm$ 0.0920</u> | 0.7302 $\pm$ 0.0918 | 0.7251 $\pm$ 0.0892 | 0.7237 $\pm$ 0.1009 | **0.7397 $\pm$ 0.1565** | $+0.0024$ ($p=0.98$; **tied**) |
-| **UL30-ACV** | 0.6428 $\pm$ 0.3174 | 0.6994 $\pm$ 0.2462 | <u>0.6999 $\pm$ 0.2601</u> | 0.6507 $\pm$ 0.1920 | **0.7875 $\pm$ 0.1772** | $+0.0876$ ($p=0.174$; **n.s.**) |
-| **UL30-FOS** | 0.6604 $\pm$ 0.2664 | 0.8223 $\pm$ 0.0832 | <u>0.8246 $\pm$ 0.0817</u> | 0.7832 $\pm$ 0.0949 | **0.8809 $\pm$ 0.1250** | $+0.0563$ ($p=0.373$; **n.s.**) |
+| Target Pair  | Multi-Herpesvirus Weighted Conservation | Family Conservation Fraction | Negative Positional Entropy | PSSM Profile (Log-Odds) | ESM-2 650M              | Paired $\Delta$ vs. Strongest ($p$-value) |
+| :----------- | :-------------------------------------- | :--------------------------- | :-------------------------- | :---------------------- | :---------------------- | :---------------------------------------- |
+| **UL23-ACV** | <u>0.7373 $\pm$ 0.0920</u>              | 0.7302 $\pm$ 0.0918          | 0.7251 $\pm$ 0.0892         | 0.7237 $\pm$ 0.1009     | **0.7397 $\pm$ 0.1565** | $+0.0024$ ($p=0.98$; **tied**)            |
+| **UL30-ACV** | 0.6428 $\pm$ 0.3174                     | 0.6994 $\pm$ 0.2462          | <u>0.6999 $\pm$ 0.2601</u>  | 0.6507 $\pm$ 0.1920     | **0.7875 $\pm$ 0.1772** | $+0.0876$ ($p=0.174$; **n.s.**)           |
+| **UL30-FOS** | 0.6604 $\pm$ 0.2664                     | 0.8223 $\pm$ 0.0832          | <u>0.8246 $\pm$ 0.0817</u>  | 0.7832 $\pm$ 0.0949     | **0.8809 $\pm$ 0.1250** | $+0.0563$ ($p=0.373$; **n.s.**)           |
 
 ```mermaid
 flowchart LR
@@ -240,22 +259,26 @@ flowchart LR
 ---
 
 ### 3.4 Supervised Predictor and Honest Paired Comparison
+
 We trained supervised classifiers combining PLM representations, conservation metrics, and physicochemical deltas. Table 4 reports the paired per-block difference ($\Delta = \text{AUROC}_{\text{supervised}} - \text{AUROC}_{\text{ESM-2}}$) across held-out contiguous blocks.
 
 **Table 4: Paired Comparison of Supervised Predictor versus Zero-Shot ESM-2 650M.**
 
-| Target Pair | Supervised Contig-Block Mean $\pm$ SD | Zero-Shot ESM-2 Contig-Block Mean $\pm$ SD | Mean Paired Delta ($\Delta$) $\pm$ SD | 95% Student's $t$ CI on $\Delta$ | Paired $t$-test ($p$-value) | Strict C3 Rule Passed? |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **UL23-Aciclovir** | **0.8188 $\pm$ 0.1121** | 0.7397 $\pm$ 0.1565 | **$+0.0791 \pm 0.0886$** | [-0.0310, +0.1891] | $t=1.994$ ($p=0.117$) | False (CI spans 0) |
-| **UL30-Aciclovir** | 0.7823 $\pm$ 0.1944 | 0.7875 $\pm$ 0.1772 | **$-0.0052 \pm 0.0235$** | [-0.0426, +0.0321] | $t=-0.446$ ($p=0.686$) | False (Exact tie) |
-| **UL30-Foscarnet** | 0.8845 $\pm$ 0.1003 | 0.8809 $\pm$ 0.1250 | **$+0.0036 \pm 0.0426$** | [-0.0642, +0.0713] | $t=0.167$ ($p=0.878$) | False (Exact tie) |
+| Target Pair        | Supervised Contig-Block Mean $\pm$ SD | Zero-Shot ESM-2 Contig-Block Mean $\pm$ SD | Mean Paired Delta ($\Delta$) $\pm$ SD | 95% Student's $t$ CI on $\Delta$ | Paired $t$-test ($p$-value) | Strict C3 Rule Passed? |
+| :----------------- | :------------------------------------ | :----------------------------------------- | :------------------------------------ | :------------------------------- | :-------------------------- | :--------------------- |
+| **UL23-Aciclovir** | **0.8188 $\pm$ 0.1121**               | 0.7397 $\pm$ 0.1565                        | **$+0.0791 \pm 0.0886$**              | [-0.0310, +0.1891]               | $t=1.994$ ($p=0.117$)       | False (CI spans 0)     |
+| **UL30-Aciclovir** | 0.7823 $\pm$ 0.1944                   | 0.7875 $\pm$ 0.1772                        | **$-0.0052 \pm 0.0235$**              | [-0.0426, +0.0321]               | $t=-0.446$ ($p=0.686$)      | False (Exact tie)      |
+| **UL30-Foscarnet** | 0.8845 $\pm$ 0.1003                   | 0.8809 $\pm$ 0.1250                        | **$+0.0036 \pm 0.0426$**              | [-0.0642, +0.0713]               | $t=0.167$ ($p=0.878$)       | False (Exact tie)      |
 
-Pre-registered Condition C3 specified that the supervised predictor must outperform zero-shot scores alone with the confidence interval excluding zero. **Condition C3 was not met.** 
+Pre-registered Condition C3 specified that the supervised predictor must outperform zero-shot scores alone with the confidence interval excluding zero. **Condition C3 was not met.**
+
 - On UL30, the paired difference is negligible ($-0.0052$ and $+0.0036$), indicating that zero-shot PLM representations already saturate model capacity.
 - On UL23, supervision produces a substantial $+0.0791$ mean gain across 4 of 5 blocks (lifting AUROC to 0.8188), reflecting the complementary value of conservation and radicalness features in TK.
 
 #### Probabilistic Calibration
+
 Out-of-fold probabilistic predictions demonstrated good calibration across all three pairs. Brier scores, bootstrap intervals, and null baselines are all computed over the **evaluable-block cohort** — the rows contributing to block AUROC averaging, excluding single-class Block 0 ($N=286$ for UL23-ACV, $269$ for UL30-ACV, $250$ for UL30-FOS). The null baseline is the Brier score of a constant prediction at that cohort's base rate, $\bar{y}(1 - \bar{y})$:
+
 - **UL23-Aciclovir:** Brier score = **0.1777** (95% bootstrap CI: [0.1543, 0.2006]; null baseline: 0.2435; Brier skill score: **$+0.271$**; indicative ECE: 0.0722).
 - **UL30-Aciclovir:** Brier score = **0.1136** (95% bootstrap CI: [0.0878, 0.1406]; null baseline: 0.1774; Brier skill score: **$+0.359$**; indicative ECE: 0.0676).
 - **UL30-Foscarnet:** Brier score = **0.0841** (95% bootstrap CI: [0.0602, 0.1131]; null baseline: 0.1146; Brier skill score: **$+0.266$**; indicative ECE: 0.0648).
@@ -265,25 +288,27 @@ Because the evaluable cohort excludes an all-sensitive block, its base rate is h
 ---
 
 ### 3.5 Prospective Temporal Validation (Pre-2016 to Post-2016)
+
 To evaluate real-world utility, models trained on pre-2016 variants were evaluated on post-2016 variants ($N=307$), stratified by whether the variant occurred at a previously characterized sequence position (Table 5).
 
 **Table 5: Prospective Temporal Holdout Stratified by Position Novelty.**
 
-| Target Pair | Cohort Split | Test Variants (Resistant) | Supervised AUROC | Zero-Shot ESM-2 AUROC | Supervised AUPRC (Base Rate) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **UL23-Aciclovir** | All Post-2016 | 131 (60) | **0.7641** | 0.7250 | 0.7918 (0.4580) |
-| | Seen Positions | 33 (19) | **0.8872** | 0.9023 | — |
-| | **Novel Positions** | 98 (41) | **0.6996** | 0.6500 | — |
-| **UL30-Aciclovir** | All Post-2016 | 92 (17) | **0.8290** | 0.7647 | 0.5386 (0.1848) |
-| | Seen Positions* | 15 (2) | **0.9231** | 0.9615 | — |
-| | **Novel Positions** | 77 (15) | **0.8075** | 0.7462 | — |
-| **UL30-Foscarnet** | All Post-2016 | 84 (9) | **0.8533** | 0.8667 | 0.3917 (0.1071) |
-| | Seen Positions* | 16 (2) | **0.9286** | 0.9286 | — |
-| | **Novel Positions** | 68 (7) | **0.8126** | 0.8454 | — |
+| Target Pair        | Cohort Split        | Test Variants (Resistant) | Supervised AUROC | Zero-Shot ESM-2 AUROC | Supervised AUPRC (Base Rate) |
+| :----------------- | :------------------ | :------------------------ | :--------------- | :-------------------- | :--------------------------- |
+| **UL23-Aciclovir** | All Post-2016       | 131 (60)                  | **0.7641**       | 0.7250                | 0.7918 (0.4580)              |
+|                    | Seen Positions      | 33 (19)                   | **0.8872**       | 0.9023                | —                            |
+|                    | **Novel Positions** | 98 (41)                   | **0.6996**       | 0.6500                | —                            |
+| **UL30-Aciclovir** | All Post-2016       | 92 (17)                   | **0.8290**       | 0.7647                | 0.5386 (0.1848)              |
+|                    | Seen Positions\*    | 15 (2)                    | **0.9231**       | 0.9615                | —                            |
+|                    | **Novel Positions** | 77 (15)                   | **0.8075**       | 0.7462                | —                            |
+| **UL30-Foscarnet** | All Post-2016       | 84 (9)                    | **0.8533**       | 0.8667                | 0.3917 (0.1071)              |
+|                    | Seen Positions\*    | 16 (2)                    | **0.9286**       | 0.9286                | —                            |
+|                    | **Novel Positions** | 68 (7)                    | **0.8126**       | 0.8454                | —                            |
 
-*\*AUROC at seen positions for UL30 is evaluated on only $N=2$ resistant variants (out of 15 and 16 variants, respectively) and is reported strictly for descriptive completeness; it is not statistically stable.*
+_\*AUROC at seen positions for UL30 is evaluated on only $N=2$ resistant variants (out of 15 and 16 variants, respectively) and is reported strictly for descriptive completeness; it is not statistically stable._
 
 The stratified temporal evaluation directly confirms the paper's central finding:
+
 1. When prospective variants occur at **previously seen positions**, models achieve apparent AUROCs of **0.8872 to 0.9286**, reflecting position-level memorization.
 2. When evaluated on **completely novel sequence positions**, performance lands at **0.6996** (UL23-ACV), **0.8075** (UL30-ACV), and **0.8126** (UL30-FOS).
 3. These prospective novel-position AUROCs **are broadly consistent with our contiguous-block cross-validation estimates** (0.8188, 0.7823, 0.8845), supporting contiguous-block holdout as a reasonable surrogate for real-world prospective generalization.
@@ -294,38 +319,38 @@ The stratified temporal evaluation directly confirms the paper's central finding
 
 A potential limitation of 1D contiguous sequence block holdout is that primary sequence windows can juxtapose residues that are distant in 3D space while separating residues that form unified functional surfaces. To directly test whether protein language model representations exploit spatial structural neighborhoods or collapse when physical contact contexts are held out, we executed a 3D spatial-neighborhood cross-validation experiment using atomic coordinates from recent cryo-EM and crystal structures.
 
-For DNA polymerase (UL30), C$\alpha$ coordinates $(x, y, z)$ were extracted from the 3.0 Å cryo-EM holoenzyme complex (PDB: `8V1Q`, chain A; Shankar et al., *Cell* 2024;187(20):5572–5586.e15). For thymidine kinase (UL23), coordinates were extracted from the 1.95 Å crystal structure of HSV-1 TK complexed with the thymidine analogue (South)-methanocarba-thymidine (ligand code: SCT; PDB: `1OF1`, chain B; Bennett et al., *FEBS Lett.* 1999). Structural resolution resolved 88.6% of reference residues in UL30 (1,094/1,235 aa; covering 80.8% of unique benchmark positions) and 82.4% in UL23 (310/376 aa; covering 81.9% of unique positions), with missing positions corresponding to well-characterized disordered termini and flexible loop insertions.
+For DNA polymerase (UL30), C$\alpha$ coordinates $(x, y, z)$ were extracted from the 3.0 Å cryo-EM holoenzyme complex (PDB: `8V1Q`, chain A; Shankar et al., _Cell_ 2024;187(20):5572–5586.e15). For thymidine kinase (UL23), coordinates were extracted from the 1.95 Å crystal structure of HSV-1 TK complexed with the thymidine analogue (South)-methanocarba-thymidine (ligand code: SCT; PDB: `1OF1`, chain B; Bennett et al., _FEBS Lett._ 1999). Structural resolution resolved 88.6% of reference residues in UL30 (1,094/1,235 aa; covering 80.8% of unique benchmark positions) and 82.4% in UL23 (310/376 aa; covering 81.9% of unique positions), with missing positions corresponding to well-characterized disordered termini and flexible loop insertions.
 
 Residues were clustered into 5 deterministic 3D spatial folds via $k$-means ($k=5$, random seed 42) based on Euclidean C$\alpha$ distances, and pre-registered into `data/processed/primary_3d_spatial_folds.tsv` (SHA-256: `0ED51D37D558530EF8B2D0C991780A23936580920E62C7ADE46A426ADFA96F4C`). Crucially, unlike 1D sequence block partitioning—where UL30 Block 0 contained zero susceptible mutations and was single-class—every single one of the 5 spatial clusters in all three target pairs contained both resistant and susceptible variants, rendering all 5 folds fully evaluable.
 
 Models were evaluated across both the **Full Benchmark Cohort** ($N=286, 332, 311$) and the **Structurally Resolved Core** ($N=233, 262, 242$) where every single variant possesses an experimentally determined coordinate.
 
 ![Figure 5: 3D Spatial-Neighborhood Holdout & Structural Generalization](figures/figure5_spatial_3d_generalization.png)
-*Figure 5: 3D Spatial-Neighborhood Cross-Validation. (A) C$\alpha$ spatial clustering of HSV-1 DNA polymerase holoenzyme (PDB: `8V1Q`, chain A) into 5 globular structural neighborhoods. (B) Model performance comparison between 1D Contiguous-Block and 3D Spatial-Neighborhood Holdout on UL30-ACV, illustrating the remarkable stability of zero-shot PLM representations (ESM-2 650M: 0.7875 vs. 0.7875). (C) Invariance of the biological target dissociation across spatial regimes: BLOSUM62 radicalness clears chance on the catalytic kinase (UL23) but sits at chance on the allosteric polymerase (UL30) under both 1D and 3D holdout regimes.*
+_Figure 5: 3D Spatial-Neighborhood Cross-Validation. (A) C$\alpha$ spatial clustering of HSV-1 DNA polymerase holoenzyme (PDB: `8V1Q`, chain A) into 5 globular structural neighborhoods. (B) Model performance comparison between 1D Contiguous-Block and 3D Spatial-Neighborhood Holdout on UL30-ACV, illustrating the remarkable stability of zero-shot PLM representations (ESM-2 650M: 0.7875 vs. 0.7875). (C) Invariance of the biological target dissociation across spatial regimes: BLOSUM62 radicalness clears chance on the catalytic kinase (UL23) but sits at chance on the allosteric polymerase (UL30) under both 1D and 3D holdout regimes._
 
 **Table 6 | Dual-Regime Generalization: 1D Contiguous-Block vs. 3D Spatial-Neighborhood Holdout**
-*Values are mean cross-validation AUROC $\pm$ standard deviation across folds, evaluated on the Structurally Resolved Core ($N=233, 262, 242$) and Full Cohort ($N=286, 332, 311$). Note on 1D Block baseline: Under the single 5-block partition, position-only RF predicts at pure chance (0.5000) on 3 of 4 evaluable folds with a fold mean of 0.5347 $\pm$ 0.0694 (pooled out-of-fold AUROC = 0.4591 [0.3741, 0.5468]; Table 1 reports canonical 20-repeat CV average: 0.5001 $\pm$ 0.0009). Under 3D spatial holdout, the position-only negative control rebounds systematically to 0.6001–0.6241 due to sequence-adjacency leakage.*
+_Values are mean cross-validation AUROC $\pm$ standard deviation across folds, evaluated on the Structurally Resolved Core ($N=233, 262, 242$) and Full Cohort ($N=286, 332, 311$). Note on 1D Block baseline: Under the single 5-block partition, position-only RF predicts at pure chance (0.5000) on 3 of 4 evaluable folds with a fold mean of 0.5347 $\pm$ 0.0694 (pooled out-of-fold AUROC = 0.4591 [0.3741, 0.5468]; Table 1 reports canonical 20-repeat CV average: 0.5001 $\pm$ 0.0009). Under 3D spatial holdout, the position-only negative control rebounds systematically to 0.6001–0.6241 due to sequence-adjacency leakage._
 
-| Target Pair | Model Architecture | 1D Block Mean (Core) | 3D Spatial Mean (Core) | $\Delta_{\text{3D} - \text{1D}}$ (Core) | 1D Block Mean (Full) | 3D Spatial Mean (Full) | $\Delta_{\text{3D} - \text{1D}}$ (Full) |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **UL23-Aciclovir** | Position-Only RF (Negative Control) | 0.5320 $\pm$ 0.070 | 0.5956 $\pm$ 0.185 | +0.0636 | 0.5471 $\pm$ 0.087 | 0.5907 $\pm$ 0.209 | +0.0435 |
-| | BLOSUM62 Radicalness | **0.6732 $\pm$ 0.037** | **0.6501 $\pm$ 0.089** | -0.0231 | **0.6380 $\pm$ 0.069** | **0.6249 $\pm$ 0.075** | -0.0131 |
-| | Positional Shannon Entropy (-Entropy) | 0.6865 $\pm$ 0.090 | 0.6926 $\pm$ 0.094 | +0.0061 | 0.7251 $\pm$ 0.089 | 0.7224 $\pm$ 0.078 | -0.0027 |
-| | Multi-Herpesvirus PSSM | 0.6932 $\pm$ 0.093 | 0.6988 $\pm$ 0.093 | +0.0055 | 0.7237 $\pm$ 0.101 | 0.7271 $\pm$ 0.085 | +0.0034 |
-| | ProtBERT (Zero-Shot) | 0.7384 $\pm$ 0.057 | 0.7193 $\pm$ 0.046 | -0.0191 | 0.7530 $\pm$ 0.071 | 0.7346 $\pm$ 0.020 | -0.0184 |
-| | **ESM-2 650M (Zero-Shot)** | **0.7255 $\pm$ 0.148** | **0.7132 $\pm$ 0.123** | **-0.0123** | **0.7397 $\pm$ 0.157** | **0.7303 $\pm$ 0.122** | **-0.0094** |
-| **UL30-Aciclovir** | Position-Only RF (Negative Control) | 0.5347 $\pm$ 0.069 | 0.6154 $\pm$ 0.321 | +0.0807 | 0.5347 $\pm$ 0.069 | 0.6241 $\pm$ 0.345 | +0.0894 |
-| | BLOSUM62 Radicalness | 0.5441 $\pm$ 0.240 | 0.5077 $\pm$ 0.101 | -0.0364 | 0.5494 $\pm$ 0.250 | 0.4908 $\pm$ 0.085 | -0.0586 |
-| | Positional Shannon Entropy (-Entropy) | 0.7261 $\pm$ 0.213 | 0.7080 $\pm$ 0.130 | -0.0182 | 0.6999 $\pm$ 0.260 | 0.6806 $\pm$ 0.157 | -0.0193 |
-| | Multi-Herpesvirus PSSM | 0.6340 $\pm$ 0.176 | 0.7092 $\pm$ 0.118 | +0.0753 | 0.6507 $\pm$ 0.192 | 0.7189 $\pm$ 0.115 | +0.0682 |
-| | ProtBERT (Zero-Shot) | 0.6989 $\pm$ 0.225 | 0.8147 $\pm$ 0.101 | +0.1158 | 0.6957 $\pm$ 0.242 | 0.8072 $\pm$ 0.109 | +0.1114 |
-| | **ESM-2 650M (Zero-Shot)** | **0.7887 $\pm$ 0.171** | **0.7966 $\pm$ 0.107** | **+0.0079** | **0.7875 $\pm$ 0.177** | **0.7875 $\pm$ 0.110** | **-0.0001** |
-| **UL30-Foscarnet** | Position-Only RF (Negative Control) | 0.5537 $\pm$ 0.074 | 0.6105 $\pm$ 0.248 | +0.0568 | 0.5278 $\pm$ 0.032 | 0.6001 $\pm$ 0.288 | +0.0723 |
-| | BLOSUM62 Radicalness | 0.5080 $\pm$ 0.289 | 0.5056 $\pm$ 0.140 | -0.0024 | 0.5074 $\pm$ 0.300 | 0.4847 $\pm$ 0.143 | -0.0227 |
-| | Positional Shannon Entropy (-Entropy) | 0.8607 $\pm$ 0.096 | 0.8602 $\pm$ 0.101 | -0.0005 | 0.8246 $\pm$ 0.082 | 0.8338 $\pm$ 0.097 | +0.0092 |
-| | Multi-Herpesvirus PSSM | 0.7580 $\pm$ 0.144 | 0.8201 $\pm$ 0.099 | +0.0621 | 0.7832 $\pm$ 0.095 | 0.8334 $\pm$ 0.099 | +0.0503 |
-| | ProtBERT (Zero-Shot) | 0.7433 $\pm$ 0.163 | 0.8675 $\pm$ 0.102 | +0.1242 | 0.7423 $\pm$ 0.159 | 0.8619 $\pm$ 0.110 | +0.1197 |
-| | **ESM-2 650M (Zero-Shot)** | **0.8793 $\pm$ 0.144** | **0.8977 $\pm$ 0.108** | **+0.0184** | **0.8809 $\pm$ 0.125** | **0.8932 $\pm$ 0.101** | **+0.0122** |
+| Target Pair        | Model Architecture                    |  1D Block Mean (Core)  | 3D Spatial Mean (Core) | $\Delta_{\text{3D} - \text{1D}}$ (Core) |  1D Block Mean (Full)  | 3D Spatial Mean (Full) | $\Delta_{\text{3D} - \text{1D}}$ (Full) |
+| :----------------- | :------------------------------------ | :--------------------: | :--------------------: | :-------------------------------------: | :--------------------: | :--------------------: | :-------------------------------------: |
+| **UL23-Aciclovir** | Position-Only RF (Negative Control)   |   0.5320 $\pm$ 0.070   |   0.5956 $\pm$ 0.185   |                 +0.0636                 |   0.5471 $\pm$ 0.087   |   0.5907 $\pm$ 0.209   |                 +0.0435                 |
+|                    | BLOSUM62 Radicalness                  | **0.6732 $\pm$ 0.037** | **0.6501 $\pm$ 0.089** |                 -0.0231                 | **0.6380 $\pm$ 0.069** | **0.6249 $\pm$ 0.075** |                 -0.0131                 |
+|                    | Positional Shannon Entropy (-Entropy) |   0.6865 $\pm$ 0.090   |   0.6926 $\pm$ 0.094   |                 +0.0061                 |   0.7251 $\pm$ 0.089   |   0.7224 $\pm$ 0.078   |                 -0.0027                 |
+|                    | Multi-Herpesvirus PSSM                |   0.6932 $\pm$ 0.093   |   0.6988 $\pm$ 0.093   |                 +0.0055                 |   0.7237 $\pm$ 0.101   |   0.7271 $\pm$ 0.085   |                 +0.0034                 |
+|                    | ProtBERT (Zero-Shot)                  |   0.7384 $\pm$ 0.057   |   0.7193 $\pm$ 0.046   |                 -0.0191                 |   0.7530 $\pm$ 0.071   |   0.7346 $\pm$ 0.020   |                 -0.0184                 |
+|                    | **ESM-2 650M (Zero-Shot)**            | **0.7255 $\pm$ 0.148** | **0.7132 $\pm$ 0.123** |               **-0.0123**               | **0.7397 $\pm$ 0.157** | **0.7303 $\pm$ 0.122** |               **-0.0094**               |
+| **UL30-Aciclovir** | Position-Only RF (Negative Control)   |   0.5347 $\pm$ 0.069   |   0.6154 $\pm$ 0.321   |                 +0.0807                 |   0.5347 $\pm$ 0.069   |   0.6241 $\pm$ 0.345   |                 +0.0894                 |
+|                    | BLOSUM62 Radicalness                  |   0.5441 $\pm$ 0.240   |   0.5077 $\pm$ 0.101   |                 -0.0364                 |   0.5494 $\pm$ 0.250   |   0.4908 $\pm$ 0.085   |                 -0.0586                 |
+|                    | Positional Shannon Entropy (-Entropy) |   0.7261 $\pm$ 0.213   |   0.7080 $\pm$ 0.130   |                 -0.0182                 |   0.6999 $\pm$ 0.260   |   0.6806 $\pm$ 0.157   |                 -0.0193                 |
+|                    | Multi-Herpesvirus PSSM                |   0.6340 $\pm$ 0.176   |   0.7092 $\pm$ 0.118   |                 +0.0753                 |   0.6507 $\pm$ 0.192   |   0.7189 $\pm$ 0.115   |                 +0.0682                 |
+|                    | ProtBERT (Zero-Shot)                  |   0.6989 $\pm$ 0.225   |   0.8147 $\pm$ 0.101   |                 +0.1158                 |   0.6957 $\pm$ 0.242   |   0.8072 $\pm$ 0.109   |                 +0.1114                 |
+|                    | **ESM-2 650M (Zero-Shot)**            | **0.7887 $\pm$ 0.171** | **0.7966 $\pm$ 0.107** |               **+0.0079**               | **0.7875 $\pm$ 0.177** | **0.7875 $\pm$ 0.110** |               **-0.0001**               |
+| **UL30-Foscarnet** | Position-Only RF (Negative Control)   |   0.5537 $\pm$ 0.074   |   0.6105 $\pm$ 0.248   |                 +0.0568                 |   0.5278 $\pm$ 0.032   |   0.6001 $\pm$ 0.288   |                 +0.0723                 |
+|                    | BLOSUM62 Radicalness                  |   0.5080 $\pm$ 0.289   |   0.5056 $\pm$ 0.140   |                 -0.0024                 |   0.5074 $\pm$ 0.300   |   0.4847 $\pm$ 0.143   |                 -0.0227                 |
+|                    | Positional Shannon Entropy (-Entropy) |   0.8607 $\pm$ 0.096   |   0.8602 $\pm$ 0.101   |                 -0.0005                 |   0.8246 $\pm$ 0.082   |   0.8338 $\pm$ 0.097   |                 +0.0092                 |
+|                    | Multi-Herpesvirus PSSM                |   0.7580 $\pm$ 0.144   |   0.8201 $\pm$ 0.099   |                 +0.0621                 |   0.7832 $\pm$ 0.095   |   0.8334 $\pm$ 0.099   |                 +0.0503                 |
+|                    | ProtBERT (Zero-Shot)                  |   0.7433 $\pm$ 0.163   |   0.8675 $\pm$ 0.102   |                 +0.1242                 |   0.7423 $\pm$ 0.159   |   0.8619 $\pm$ 0.110   |                 +0.1197                 |
+|                    | **ESM-2 650M (Zero-Shot)**            | **0.8793 $\pm$ 0.144** | **0.8977 $\pm$ 0.108** |               **+0.0184**               | **0.8809 $\pm$ 0.125** | **0.8932 $\pm$ 0.101** |               **+0.0122**               |
 
 Three critical conclusions emerge from the 3D spatial holdout experiment:
 
@@ -336,12 +361,12 @@ Three critical conclusions emerge from the 3D spatial holdout experiment:
 ---
 
 ### 3.7 Drug Conditioning and Negative Control
+
 A multi-task model trained jointly across ACV and FOS achieved a contiguous-block mean AUROC of **0.8695 $\pm$ 0.0855** (95% $t$-CI: [0.7634, 0.9756]).
 
 To test target specificity, we performed a negative control evaluation on UL23-Foscarnet ($N=189$ in the unified database). Because FOS binds directly to DNA polymerase and does not require activation by thymidine kinase, mutations in UL23 do not confer true biological FOS resistance (180/189 entries, 95.2%, are sensitive). The drug-conditioned model correctly suppressed false transfer, predicting $P(\text{Resistant} \mid \text{UL23}, \text{FOS}) \approx 0$. Because the negative control cohort is 95.2% sensitive, this confirms operational sanity rather than demonstrating a novel pathway routing mechanism.
 
 ---
-
 
 ---
 
@@ -404,6 +429,9 @@ To systematically untangle structural domain holdout, within-study ascertainment
 | -entropy | **0.7280** [0.675, 0.781] | **0.7297** [0.688, 0.755] *(descriptive)* | **0.7523** [0.687, 0.801] *(mean=0.697)* | **0.6701** [0.548, 0.784] |
 | PSSM | **0.7356** [0.676, 0.791] | **0.7278** [0.671, 0.767] *(descriptive)* | **0.6994** [0.600, 0.795] *(mean=0.675)* | **0.7311** [0.603, 0.857] |
 | BLOSUM62 | **0.6130** [0.546, 0.678] | **0.6726** [0.624, 0.721] *(descriptive)* | **0.5785** [0.429, 0.706] *(mean=0.525)* | **0.6845** [0.550, 0.804] |
+
+![Figure 2: The Evidence Ladder & Classical PSSM Ascertainment Robustness](figures/figure2_evidence_ladder_pssm_robustness.png)
+*Figure 2: The Evidence Ladder & Classical PSSM Ascertainment Robustness. (A) Evaluation trajectories across Evidence Ladder designs (D1 pooled, D2 domain-mean, D3 within-study S0, and S2 quantitative stratum) on UL30-ACV (Table 8). (B) 95% bootstrap confidence intervals for multi-herpesvirus PSSM vs. ESM-2 650M vs. BLOSUM62 under D3 within-study ascertainment control, demonstrating that PSSM is the single baseline strictly excluding 0.50 across 3/3 targets.*
 
 #### Within-Study Ascertainment Bias Controls (Step 1 Protocol)
 A critical methodological concern in retrospective clinical databases is curation ascertainment bias: unmeasured benign polymorphisms sequenced during routine surveillance might cluster distal to the active site, creating an artificial separation between distant uncharacterized polymorphisms and proximal drug-resistant mutations. In accordance with pre-registered protocol `docs/STEP1_ASCERTAINMENT_CONTROLS_PREREGISTRATION.md`, we conducted a comprehensive positivity audit and within-study evaluation:
@@ -557,6 +585,9 @@ A note on inferential status is required here. The exonuclease hypothesis was ge
 
 *Methodological Interpretation of Table 9F:* Removing every variant located on a feature's own defining residues shifts each primary estimate by at most 0.045 AUROC (GCV exonuclease 0.7243 -> 0.6798; CDV exonuclease 0.9264 -> 0.9167; FOS polymerase 0.8822 -> 0.8711), and all three retain a 95% confidence interval excluding 0.50. The Cidofovir case is the most stringent, since all 26 variants at the exonuclease reference residues are resistant, yet the signal persists at 0.9167. The double dissociation therefore reflects a spatial gradient across the enzyme rather than memorisation of a small number of frequent resistance positions.
 
+![Figure 3: Confirmatory Exonuclease Double Dissociation & Leave-Site-Out Gradient](figures/figure3_exonuclease_double_dissociation.png)
+*Figure 3: Confirmatory Exonuclease Double Dissociation & Leave-Site-Out Gradient. (A) Crossover between polymerase active-site distance and exonuclease pocket distance on HCMV UL54 across chain terminators (ganciclovir, cidofovir) and pyrophosphate inhibitor (foscarnet; Table 9E). (B) Leave-site-out robustness confirming that predictive signal survives removal of variants directly located at each feature's own defining residues (Table 9F).*
+
 ---
 
 ### 3.10 Decomposition Ablation of the Positional Prior (`Where`)
@@ -667,6 +698,12 @@ To address the fundamental question of why standard cross-validation schemes fai
 4. **Two Qualifications on the Collapse:** First, the high apparent position-grouped AUROC requires a non-linear model; under logistic regression the positional-identity family reaches only 0.5668 on UL30-ACV, so the 0.88 figure reflects a Random Forest partitioning position space rather than an intrinsic property of the split. Second, under block holdout positional features do not regress to 0.50 but invert below chance (0.2244-0.3470 under logistic regression), the expected signature of forced extrapolation beyond the training range.
 5. **Negative Control Interpretation:** The unfitted BLOSUM62 score is identical across all split topologies (Delta = 0.0000 exactly). This is a tautology, not a result: a score that is never fitted cannot respond to a change of training set. It is reported precisely to make that tautology explicit, because comparing an unfitted zero-shot score's split-invariance against a fitted model's holdout degradation is not a valid comparison, and an earlier version of this analysis made exactly that error.
 
+![Figure 1: Spatial Shortcut Collapse and Sequence-Neighbour Gap Metric](figures/figure1_spatial_shortcut_collapse.png)
+*Figure 1: Spatial Shortcut Collapse and Sequence-Neighbour Gap Metric. (A) Sequence-neighbour separation diagnostic under position-grouped vs. contiguous-block holdout across UL23 and UL30 targets (Table 11A). (B) Positional Identity shortcut collapse across Random Forest and Logistic Regression models under contiguous-block holdout (Table 11B).*
+
+![Figure 4: Feature-Family Degradation Matrix and Out-of-Block Generalization](figures/figure4_feature_family_degradation_matrix.png)
+*Figure 4: Feature-Family Degradation Matrix and Out-of-Block Generalization. (A) Degradation deltas (position-grouped minus contiguous-block AUROC) across Positional Identity, Evolutionary Conservation, and Protein Language Models under Random Forest (Table 11B). (B) Exploratory out-of-block paired family contrasts (PLM minus conservation) with 95% bootstrap confidence intervals, demonstrating target dependence between allosteric UL30-ACV and catalytic UL23-ACV.*
+
 #### Exploratory Paired Contrast: Learned Representation Against Classical Conservation
 
 *Inferential status: exploratory and not pre-registered.* The hypothesis arose from inspecting the out-of-block column of the degradation matrix above, so this contrast and that observation draw on the same data. It is reported for completeness and is not treated as confirmatory evidence.
@@ -701,35 +738,44 @@ In accordance with Phase 3 verification standards, all primary findings were sub
 
 ## 4. Discussion
 
-### Methodological Implications for Viral Variant Benchmarking
-Our findings demonstrate that position-grouped cross-validation, while superior to random row splits, is insufficient to prevent shortcut learning in viral resistance benchmarks. In proteins with compact active sites, holding out individual positions allows machine learning models to exploit spatial correlation across adjacent residues. Our contiguous-block holdout protocol establishes a rigorous standard for benchmarking resistance models against true regional generalization.
+### 4.1 Methodological Standard: The Pre-Hoc Gap Metric as a Universal Pre-Flight Diagnostic
+A central methodological finding of this work is that position-grouped cross-validation—long advocated in the viral resistance literature as a definitive control against sequence-identity memorization—fails to prevent spatial shortcut learning. Our label-free **Pre-Hoc Split Separation Diagnostic** demonstrates why: on thymidine kinase (UL23), **96.53% of test positions sit within $\le 2$ residues of a training position** (median distance: 1.0 aa; Table 11A); on DNA polymerase (UL30), **60.73–63.14% sit within $\le 2$ residues** (median distance: 2.0 aa). In compact enzymatic folds, holding out individual positions while allowing immediate sequence neighbours into training permits non-linear decision trees to interpolate across sequence-adjacent bins. Consequently, a baseline Random Forest trained solely on sequence position index achieves an apparent AUROC of **0.8715 $\pm$ 0.0171** under position-grouped cross-validation on UL30 treated with aciclovir, which collapses to chance (**0.5001 $\pm$ 0.0009**) under a domain-isolating contiguous-block holdout that enforces median train-test distances of 22.0 aa in UL23 and 78.5–85.5 aa in UL30 (20-repeat CV, `logs/c2_repeated_cv_results.json`; reproducing at $0.8797 \to 0.4591$, $\Delta = +0.4206$, $p < 0.0005$ in single-pass benchmark; Table 11B).
 
-### Structural Biology and Mechanistic Interpretations
-Recent cryo-EM structural determinations of the HSV-1 polymerase holoenzyme (Shankar et al., *Cell* 2024;187(20):5572–5586.e15; PMID: 39197451) revealed the atomic basis of substrate discrimination and drug coordination. Crucially, the foscarnet-bound structure (PDB: `8EXX`, pre-translocation state) and aciclovir triphosphate-bound structure (PDB: `8V1T`, closed state)—alongside open/closed DNA-bound forms (`8V1Q`, `8V1R`), the editing conformation with mismatched DNA (`8V1S`), and an EMDB-resolved W781V mutant holoenzyme in editing conformation—demonstrate that polymerase resistance operates via delicate active-site remodeling and allosteric conformational shifts. Our finding that zero-shot PLMs achieve high predictive power on UL30 without supervision is consistent with, but does not directly test, this structural remodeling mechanism. Unlike thymidine kinase, where resistance is frequently synonymous with complete loss of catalytic function, polymerase resistance requires delicate conformational remodeling that allows continued viral genome replication while discriminating against nucleoside or pyrophosphate inhibitors. While PLM representations implicitly encode these biophysical constraints, direct physical-chemical simulation and 3D structural modeling remain important directions for future work.
+Crucially, our supervised feature-family degradation benchmark (Table 11B) localizes this vulnerability strictly to the **feature representation rather than the model class**: positional-identity features degrade by $\Delta = 0.2336$–$0.4206$ across all six target $\times$ model-class combinations (all $p < 0.0005$), whereas every variant-level descriptor degrades by an order of magnitude less—evolutionary conservation by $\Delta = 0.0362$–$0.1092$ and protein language models by $\Delta = 0.0062$–$0.0356$. Because classical conservation scores (such as BLOSUM62 and Shannon entropy) carry no learned representation yet display the exact same degradation stability as language models, the lack of collapse in PLMs cannot be uncritically cited as evidence that deep language models uniquely learn sequence-to-function grammar. Any variant-level descriptor avoids position-indexed interpolation shortcuts by construction. Two necessary technical qualifications qualify this collapse: first, the high apparent position-grouped AUROC requires a non-linear model (logistic regression on position index reaches only 0.5668 on UL30-ACV); second, under block holdout positional features do not simply regress to 0.50 but invert below chance (0.2244–0.3470 under logistic regression), the expected mathematical signature of forced extrapolation beyond the training range.
 
-Our evaluation of 3D spatial-neighborhood holdout (§3.6, Table 6, Figure 5) yields two vital methodological findings. First, because zero-shot PLM scores are computed directly from sequence context without fold training, evaluating them across 1D sequence blocks versus 3D Euclidean spatial clusters yields essentially invariant aggregations ($|\Delta| \le 0.012$), reflecting the static nature of zero-shot representations. Second, evaluating the position-only negative control reveals that 3D geometric clustering re-introduces sequence-adjacency leakage: because 3D clusters divide primary sequence into non-contiguous segments, a tree model indexed on sequence position rebounds from chance under 1D block holdout (0.5001) to **0.6241** under 3D spatial holdout on UL30-ACV. This establishes that **1D contiguous-block holdout provides a more effective control against sequence-adjacency interpolation shortcuts** than 3D spatial clustering. Crucially, the biological dissociation remains invariant across both spatial regimes: BLOSUM62 radicalness clears chance on the catalytic kinase (UL23, AUROC $\approx 0.625–0.650$) while remaining strictly at chance on the allosteric polymerase (UL30, AUROC $\approx 0.485–0.508$), confirming that this divergence is an intrinsic biophysical property of the two targets rather than an artifact of sequence segmentation.
+*Delimitation against prior art:* Pre-fit inspection of train-test similarity has been explored in other domains: Xie et al. (2025, PMID: 41169760) examined whole-sequence and ligand-fingerprint similarity between random and UniProt-ID-grouped partitions for mutational binding free energy, and Al-Shaebi et al. (2026, PMID: 42838683) evaluated twelve partitioning strategies for spectral antimicrobial resistance classification. However, neither study defined an intra-target residue-distance separation metric within a single viral protein, and neither evaluated position-grouped splitting. Our pre-hoc gap metric ($\min |p_{\text{test}} - p_{\text{train}}|$) provides a computationally zero-cost, label-free diagnostic that should be run as a mandatory pre-flight check in any variant-effect benchmark before fitting models.
 
-Building on these findings, our cross-herpesvirus replication (§3.8) across orthologous targets in HerpesDRG demonstrates that the radicalness dissociation is **directionally consistent in one additional independent pair** (HCMV UL97 kinase AUROC = 0.7005 [0.5943, 0.7960] vs. UL54 polymerase AUROC = 0.4377–0.5522 across 3 drugs). On VZV, the kinase arm (ORF36 AUROC = 0.7611) exhibits high radicalness discrimination, but the polymerase arm (ORF28) had only 4 clinical resistant variants and was not evaluable. The empirical contrast is therefore demonstrated across two independent target pairs (HSV and HCMV), providing suggestive cross-species consistency rather than a proven family-wide law.
+### 4.2 Biophysical Mechanisms of Antiviral Resistance: Allosteric Polymerase vs. Catalytic Kinase & The Exonuclease Proofreading Crossover
+Our findings reveal a fundamental biophysical dissociation between the two resistance targets. Thymidine kinase (UL23) is a non-essential viral enzyme whose sole physiological function in infected cells is phosphorylation of deoxythymidine (and nucleoside prodrugs); loss of kinase activity confers viral resistance to aciclovir while permitting continued replication via host salvage pathways. Consequently, 38.4% (98/255) of aciclovir-resistant UL23 variants are nonsense or frameshift truncations, and missense resistance mutations are widely distributed across the catalytic core, where amino acid radicalness (BLOSUM62) provides substantial zero-shot predictive power ($S_0 \approx 0.6380$; Table 8).
 
-### The Radicalness Dissociation and the Narrowing PLM Margin
-The primary biological divergence observed in our benchmark is the radicalness dissociation: BLOSUM62 amino acid radicalness — a zero-parameter, alignment-free feature — predicts resistance on UL23 (0.6380, 95% CI [0.5524, 0.7237], clearing chance across all blocks) but operates at chance on UL30 (0.5074–0.5494). When tested formally at the block-mean level, wide fold-level variance leaves this difference descriptive and non-significant ($p=0.431$ on ACV, $p=0.406$ on FOS), though secondary position-cluster resampling across the full cohort strictly excludes zero ($p=0.0020$ on ACV, $p < 0.0005$ on FOS at the $B = 2{,}000$ resolution limit).
+In sharp contrast, DNA polymerase (UL30) is strictly essential for viral genome replication. Crude catalytic disruption is lethal. As visualized in recent 3.0 \AA\ cryo-EM holoenzyme structures (Shankar et al., *Cell* 2024; PMID: 39197451), foscarnet-bound (`8EXX`) and aciclovir triphosphate-bound (`8V1T`) polymerase complexes demonstrate that clinical resistance operates through delicate active-site remodeling and allosteric conformational shifts that preserve nucleotide incorporation fidelity while discriminating against inhibitor binding. Consequently, amino acid radicalness operates strictly at chance on UL30 ($S_0 = 0.5074$–$0.5494$; Table 8), while spatial proximity to the catalytic palm shell drives dominant predictive power ($S_0 = 0.7846$).
 
-An important methodological pattern complements this finding: the behavior of the residual PLM advantage on UL30 as the alignment baseline is strengthened. Against amino acid radicalness (chance on polymerase), language models demonstrate a large advantage. Against multi-herpesvirus weighted conservation, the advantage is +0.145 (ACV) and +0.221 (FOS). Against the strongest alignment baseline we evaluated — negative positional Shannon entropy — the advantage contracts to **+0.0876** on ACV (0.7875 vs 0.6999) and **+0.0563** on FOS (0.8809 vs 0.8246).
+The cross-herpesvirus replication benchmark on HCMV UL54 (§3.9, Table 9) provides direct confirmatory evidence for this drug-mechanism mapping. When the polymerase active-site distance prior established on HSV-1 was applied to HCMV UL54 treated with ganciclovir, it failed primary replication ($S_0 = 0.4135$, Not Supported; Table 9A). Rather than an anomalous failure, this divergence revealed a deep biophysical mechanism mismatch: foscarnet is a direct inorganic pyrophosphate analogue that binds in the catalytic palm (PDB: `8EXX`), whereas ganciclovir and cidofovir are chain-terminating nucleoside and nucleotide analogues that incorporate into the nascent DNA primer and stall exonuclease proofreading in domain III. In our pre-registered confirmatory protocol (`docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md`), measuring distance to the exonuclease proofreading pocket inverted predictive performance: ganciclovir ($S_0 = 0.7243$ [0.5667, 0.8621]) and cidofovir ($S_0 = 0.9264$ [0.8649, 0.9602]) cleared chance with high accuracy, whereas foscarnet inverted below chance ($S_0 = 0.3197$ [0.1288, 0.4630]; crossover contrasts significant at $p < 0.0005$ at the $B = 2{,}000$ resolution limit; Table 9E). In a symmetric leave-site-out robustness control (Table 9F) removing every variant located directly on each feature's defining residues, all three estimates remained essentially intact (shifts $\le 0.045$ AUROC; GCV $0.7243 \to 0.6798$, CDV $0.9264 \to 0.9167$, FOS $0.8822 \to 0.8711$; all CIs strictly excluding 0.50), demonstrating that the signal reflects a genuine 3D spatial gradient across the domain rather than memorization of individual hot-spot residues. Furthermore, our factorial coordinate audit (Table 9D) proved that Swiss-Model homology coordinates introduced negligible error relative to experimental cryo-EM ($\le 0.0092$ AUROC, $\rho = 0.989$, median $\Delta = 0.39$ \AA), with the apparent Option A vs Option B divergence attributable to reference-set specification (inadvertent inclusion of the distal exonuclease magnesium MG 1303, 21.7 \AA\ away).
 
-We state this trend plainly because it bears directly on how the result should be read: **with each stronger alignment baseline, the UL30 margin shrinks, and it shrinks most on the target where the margin was largest.** The FOS advantage falls by roughly three-quarters, from +0.221 to +0.056, once the comparator is positional entropy rather than the weighted conservation score. Notably, the weighted conservation score—which combines entropy with a BLOSUM62 radicalness term—is *weaker* on UL30 than entropy alone, because the radicalness component is uninformative on polymerase and dilutes the entropy signal. Nominating it as the single conservation comparator would therefore overstate the PLM advantage, and we avoid doing so.
+### 4.3 Empirical Counter-Hype: Classical Evolutionary Profile Robustness Under Ascertainment Controls
+The 4-design Evidence Ladder (Table 8) addresses the persistent problem of publication and ascertainment bias in retrospective clinical resistance databases. In unadjusted pooled evaluations (Design 1), deep protein language models appear overwhelmingly dominant (ESM-2 650M AUROC = 0.8240 on UL30-ACV, 0.7881 on UL23-ACV). However, retrospective databases are heavily confounded by between-study publication disparities: surveillance studies disproportionately sequence benign polymorphisms distal to active sites, while laboratory mechanistic studies concentrate exclusively on active-site clusters.
 
-Two honest conclusions follow. First, the qualitative dissociation between UL23 and UL30 is robust across multiple angles: on UL23 every alignment baseline ties ESM-2, while on UL30 radicalness is at chance and PLMs remain directionally ahead of every alignment baseline tested. Second, the *magnitude* of the UL30 PLM advantage is considerably smaller than a comparison against weighted conservation alone implies. When tested formally via a paired per-block Student's $t$-test against positional entropy, the mean paired differences are **$\Delta = +0.0877 \pm 0.0988$** on UL30-ACV ($t(3)=1.775$, $p=0.174$, 95% CI: $[-0.0696, +0.2449]$) and **$\Delta = +0.0563 \pm 0.1079$** on UL30-FOS ($t(3)=1.044$, $p=0.373$, 95% CI: $[-0.1154, +0.2281]$). Because both 95% confidence intervals span zero, the PLM advantage over pure positional conservation on polymerase is **directional and qualitative rather than statistically decisive**. The pattern is consistent across three independent lines of evidence (conservation gap, radicalness collapse, and lack of incremental supervision gain), but no single comparison is individually significant at this block sample size ($n=4$).
+Under Design 3 ($S_0$ pair-weighted within-study evaluation), which strictly compares discordant resistant-sensitive variant pairs assayed within the exact same laboratory publication, this ascertainment artifact is completely eliminated. Crucially, under D3 $S_0$, the classical multi-herpesvirus Position-Specific Scoring Matrix (PSSM) with Dirichlet smoothing emerges as the **single baseline whose 95% bootstrap confidence interval strictly excludes 0.50 across all three targets** (UL30-ACV: 0.7079 [0.612, 0.803]; UL30-FOS: 0.7744 [0.619, 0.932]; UL23-ACV: 0.6994 [0.600, 0.795]). In contrast, ESM-2 650M exhibits widening confidence intervals under within-study controls ($0.6698$ [0.490, 0.849] on UL30-FOS, spanning chance). On UL30-ACV, combining spatial proximity with evolutionary constraint in the composite `Where` prior ($S_0 = 0.7865$, rank-normalized $S_0 = 0.8165$) reduces interval uncertainty by 56% relative to distance alone ($0.7846$ [0.663, 0.881]; Table 10). This provides an indispensable empirical counterweight to prevailing deep learning hype: when evaluated under rigorous clinical ascertainment controls, classical evolutionary profiles remain robust, interpretable, and highly competitive.
 
-To directly test whether a profile-based model captures this residual margin, we evaluated a multi-herpesvirus position-specific scoring matrix (PSSM) baseline with Dirichlet pseudocount smoothing ($\alpha=1.0$, Robinson & Robinson background frequencies). The PSSM achieves contiguous-block mean AUROCs of **0.7237 $\pm$ 0.1009** (UL23-ACV), **0.6507 $\pm$ 0.1920** (UL30-ACV), and **0.7832 $\pm$ 0.0949** (UL30-FOS). On UL23, the PSSM ties zero-shot ESM-2 ($0.7237$ vs. $0.7397$, paired difference $+0.0160 \pm 0.1424$, $p=0.814$). On UL30, ESM-2 maintains a positive paired difference over the PSSM ($+0.1369 \pm 0.1177$ on ACV; $+0.0977 \pm 0.1154$ on FOS), but with $n=4$ evaluable blocks, both 95% Student's $t$ confidence intervals span zero ($p=0.103$ and $p=0.189$, respectively). Crucially, the PSSM performs below positional Shannon entropy on both polymerase targets (0.6507 vs. 0.6999 on ACV; 0.7832 vs. 0.8246 on FOS), leaving Shannon entropy as the strongest alignment comparator. Thus, evaluating a profile model confirms rather than contradicts our conclusion: zero-shot PLMs retain a directional advantage on polymerase, but the margin does not achieve statistical significance under domain holdout. Deeper alignment methods with explicit epistatic contact models (such as GEMME or EVE) and viral-specific fine-tuning (e.g., Sawhney et al., *PeerJ* 2025, PMID 40985030, which established that fine-tuning mitigates the underrepresentation of viral proteins in standard PLM training corpora) remain open directions for future exploration.
+### 4.4 Out-of-Block Generalization Geometry: Exploratory Paired Family Contrasts
+To determine whether learned representations offer a genuine advantage over classical conservation when primary sequence interpolation is prohibited, we evaluated an exploratory paired family contrast within a shared position-clustered bootstrap ($B = 2{,}000$, seed 42; `logs/paired_family_contrast_results.json`). The primary quantity is the absolute out-of-block AUROC difference between the protein language model family (ESM-2 650M, ESM-2 35M, ProtBERT) and the classical conservation family (BLOSUM62, positional entropy, weighted conservation, PSSM).
 
-### Clinical Scope: The Truncating Class and the Missense Diagnostic Bottleneck
-A critical scope consideration for translational genomics is that our benchmark evaluates single-site missense mutations. In our unified clinical database restricted to aciclovir, truncating and frameshift mutations account for 38.4% (98/255) of resistance-conferring variants in thymidine kinase (UL23). Because premature truncation abolishes catalytic activity and nucleoside phosphorylation, clinical interpretation of nonsense and frameshift variants is deterministic—a clinician presented with an early stop codon does not require machine learning prediction to anticipate aciclovir resistance. The genuine clinical and computational bottleneck lies in interpreting novel missense variants, which represent 61.6% of aciclovir-associated UL23 resistance and virtually all UL30 resistance, where substitutions can either represent benign polymorphisms or subtle resistance-conferring mutations. By focusing strictly on single-site missense substitutions, this benchmark isolates the specific class where algorithmic guidance is clinically essential.
+The results demonstrate clear target dependence:
+1. On **UL30-Aciclovir**, learned representations significantly outperform classical conservation out of block under both model classes, with intervals strictly excluding zero: $+0.1504$ [$+0.0698$, $+0.2324$] for Random Forest and $+0.2154$ [$+0.1490$, $+0.2898$] for logistic regression (both $p < 0.0005$).
+2. On **UL30-Foscarnet**, the margin is model-class dependent: logistic regression excludes zero at $+0.1340$ [$+0.0485$, $+0.2280$] ($p = 0.001$), while Random Forest spans zero at $+0.0810$ [$-0.0225$, $+0.1922$] ($p = 0.065$).
+3. On **UL23-Aciclovir**, neither model class separates the two families: $+0.0128$ [$-0.0699$, $+0.0933$] ($p = 0.363$) for Random Forest and $+0.0541$ [$-0.0237$, $+0.1307$] ($p = 0.081$) for logistic regression.
 
-### Study Limitations
-1. **Scope Limitation:** Our benchmark evaluates single-site missense substitutions. While missense mutations represent 61.6% of aciclovir-associated UL23 resistance and nearly 100% of UL30 resistance, 38.4% of aciclovir-associated UL23 resistance arises via frameshift or nonsense truncation.
-2. **Sample Size in Block Splits:** Dividing sequences into 5 spatial blocks limits the effective sample size for Student's $t$ confidence intervals ($n=4$ or $5$), leading to relatively wide interval estimates despite strong point estimates.
-3. **Temporal Covariate Shift:** Our domain classifier confirmed significant covariate shift between pre-2016 and post-2016 literature (AUROC 0.6794), reflecting evolving sequencing methodologies and clinical sampling practices.
-4. **Study-Composition and Ascertainment Disparity:** Retrospective database curation exhibits substantial study-level asymmetry across targets (`logs/stage_b2_study_counts.json`). On UL30-aciclovir, 38.6% of variants (128/332 across 34 of 48 studies) derive from single-class publications, including 28.6% of the cohort (95/332) from all-sensitive surveillance cohorts (accounting for 35.2% of all sensitive rows). On UL30-foscarnet, this asymmetry is even steeper, with 76.8% of variants (239/311 across 37 of 45 studies) originating from single-class studies and 70.7% (220/311) from all-sensitive studies (accounting for 79.1% of sensitive variants). In contrast, UL23-aciclovir exhibits a lower single-class study burden (30.8%, 88/286), with only 12.9% of variants (37/286) from all-sensitive studies (22.3% of sensitive rows). Within-study pairing removes between-study composition effects but not within-study position selection: authors choose which positions to assay, and those choices concentrate near drug-binding sites. Pooled estimates should therefore be read as upper bounds.
+*Inferential status:* This contrast was exploratory and not pre-registered; it arose from inspecting the out-of-block column of Table 11B and must be treated as hypothesis-generating. Furthermore, ranking families by smallest degradation delta is mathematically confounded: the unfitted BLOSUM62 control degrades by exactly 0.0000 by construction, measuring insensitivity rather than true generalization. Crucially, this contrast evaluates out-of-block generalization under contiguous-block holdout, a different estimand from within-study ascertainment control (D3 $S_0$). The two analyses are complementary: classical profile models provide superior robustness against clinical ascertainment bias, whereas learned representations offer transferable out-of-block generalization specifically on tightly constrained allosteric enzymes (UL30).
+
+### 4.5 Translational Scope: Nonsense Truncations vs. The Missense Diagnostic Challenge
+A critical translational consideration for clinical virology is the precise scope of genomic resistance prediction. In our curated clinical database restricted to aciclovir—the therapeutic regimen evaluated by this benchmark—truncating and frameshift mutations account for **38.4% (98/255)** of cataloged resistance-conferring variants in thymidine kinase (UL23; `logs/ul23_clinical_scope_contingency.json`). Pooled across all five anti-herpesviral drugs in the wider database, non-missense variants represent 44.4% (186 of 419 entries); however, that pooled denominator includes foscarnet ($N=9$) and cidofovir ($N=4$), neither of which requires viral thymidine kinase activation, and UL23-foscarnet serves elsewhere in this work as a negative control against false resistance transfer. We therefore report the aciclovir-restricted figure (38.4%).
+
+From a computational and clinical diagnostic perspective, predicting nonsense or frameshift mutations is trivial: premature truncation abolishes catalytic activity and nucleoside prodrug phosphorylation, rendering resistance deterministically predictable without machine learning. The true clinical bottleneck lies in interpreting novel **single-site missense variants**, which account for 61.6% of aciclovir-associated UL23 resistance and virtually 100% of UL30 resistance. Our primary evaluation cohort of 929 single-site missense records (630 unique substitutions) isolates this biologically challenging class, ensuring that benchmark metrics reflect genuine diagnostic utility rather than inflated performance on trivial loss-of-function phenotypes.
+
+### 4.6 Methodological Limitations & Prospective Validation Roadmap
+1. **Retrospective Dataset Boundaries and Prospective Need:** All analyses in this benchmark are grounded in retrospective clinical and laboratory literature compiled up to 2024. Although our within-study $S_0$ estimator and leave-site-out controls rigorously insulate against between-study publication bias and active-site memorization, the exonuclease crossover and paired family contrasts remain pre-specified post-hoc and exploratory findings on a frozen dataset. A definitive confirmation will require prospective validation on clinical isolates characterized post-2024, testing whether pre-fit spatial priors correctly categorize newly emerging resistance mutations before publication.
+2. **Effective Sample Size in Block Splits:** Dividing reference proteins into five contiguous spatial blocks limits the effective sample size for block-level Student's $t$ confidence intervals ($n=4$ or $5$), resulting in wide intervals that span zero for subtle effect sizes despite strong point estimates. While position-clustered bootstrap resampling across the full cohort confirms statistical significance, expanding the block resolution via multi-chain structural domains remains an important future objective.
+3. **Retrospective Position-Selection Bias:** While within-study pairing eliminates between-study publication bias, it cannot eliminate within-study investigator bias: researchers selectively sequence and assay positions proximal to known drug-binding sites. Consequently, absolute AUROC estimates should be interpreted as upper bounds relative to unbiased, whole-genome deep mutational scanning.
 
 ---
 
@@ -747,10 +793,16 @@ A critical scope consideration for translational genomics is that our benchmark 
 2. **Shankar et al. (HSV-1 Polymerase Cryo-EM):** *Viral DNA polymerase structures reveal mechanisms of antiviral drug resistance.* *Cell* 2024; 187(20):5572–5586.e15. PMID: [39197451](https://pubmed.ncbi.nlm.nih.gov/39197451/). DOI: [10.1016/j.cell.2024.07.048](https://doi.org/10.1016/j.cell.2024.07.048). PDB entries: `8V1Q`, `8V1R`, `8V1S`, `8EXX`, `8V1T`.
 3. **Charles et al. (HerpesDRG Database):** *HerpesDRG: a comprehensive resource for human herpesvirus antiviral drug resistance genotyping.* *BMC Bioinformatics* 2024; 25:283. PMID: [39192205](https://pubmed.ncbi.nlm.nih.gov/39192205/). DOI: [10.1186/s12859-024-05885-5](https://doi.org/10.1186/s12859-024-05885-5).
 4. **Dähne et al. (CMI Diagnostic Consensus Review):** *Herpes simplex virus and drug resistance—comprehensive update on resistance mutations and implications for clinical management: a narrative review.* *Clin Microbiol Infect* 2025; 31(9):1484–1490. PMID: [40349973](https://pubmed.ncbi.nlm.nih.gov/40349973/). DOI: [10.1016/j.cmi.2025.04.046](https://doi.org/10.1016/j.cmi.2025.04.046). Corrigendum: *Clin Microbiol Infect* 2026; DOI: [10.1016/j.cmi.2026.01.010](https://doi.org/10.1016/j.cmi.2026.01.010).
-5. **Bennett et al. (HSV-1 Thymidine Kinase Structure):** *Biochemical and structural characterization of (South)-methanocarbathymidine that specifically inhibits growth of herpes simplex virus.* *FEBS Lett* 1999; 443(2):121–125. PMID: [10025941](https://pubmed.ncbi.nlm.nih.gov/10025941/). DOI: [10.1016/S0014-5793(98)01701-1](https://doi.org/10.1016/S0014-5793(98)01701-1). PDB: `1OF1`.
+5. **Bennett et al. (HSV-1 Thymidine Kinase Structure):** *Biochemical and structural characterization of (South)-methanocarbathymidine that specifically inhibits growth of herpes simplex virus type 1 thymidine kinase-transduced osteosarcoma cells.* *J Biol Chem* 2004; 279(31):32687–32694. PMID: [15163659](https://pubmed.ncbi.nlm.nih.gov/15163659/). DOI: [10.1074/jbc.M313343200](https://doi.org/10.1074/jbc.M313343200). PDB: `1OF1`.
 6. **Safrin et al. (Foundational PRA Thresholds):** *Antiviral susceptibility of herpes simplex virus isolates from immunocompromised patients: analysis of 115 isolates from HIV-infected patients.* *Antimicrob Agents Chemother* 1994; 38(6):1246–1250. PMID: [8092821](https://pubmed.ncbi.nlm.nih.gov/8092821/).
 7. **Burrel et al. (Dye Uptake Standardization):** *Genotypic and phenotypic analysis of herpes simplex virus 1 clinical isolates resistant to acyclovir.* *Antimicrob Agents Chemother* 2010; 54(11):4833–4842. PMID: [20733037](https://pubmed.ncbi.nlm.nih.gov/20733037/).
-8. **Sauerbrei et al. (European Diagnostic Compilation):** *Characterization of herpes simplex virus isolates with ambiguous susceptibility to acyclovir and/or foscarnet.* *J Antimicrob Chemother* 2016; 71(1):6–16. PMID: [26433780](https://pubmed.ncbi.nlm.nih.gov/26433780/).
+8. **Sauerbrei et al. (European Diagnostic Compilation):** *Characterization of herpes simplex virus isolates with ambiguous susceptibility to acyclovir and/or foscarnet.* *J Antimicrob Chemother* 2016; 71(1):6–16. PMID: [26433780](https://pubmed.ncbi.nlm.nih.gov/26433780/). DOI: [10.1093/jac/dkv285](https://doi.org/10.1093/jac/dkv285).
 9. **Sawhney et al. (Viral PLM Representation):** *Fine-tuning protein language models unlocks the potential of underrepresented viral proteomes.* *PeerJ* 2025; 13:e19919. PMID: [40985030](https://pubmed.ncbi.nlm.nih.gov/40985030/). DOI: [10.7717/peerj.19919](https://doi.org/10.7717/peerj.19919).
-10. **Gelman & Stern (Difference of Significance):** *The difference between "significant" and "not significant" is not itself statistically significant.* *The American Statistician* 2006; 60(4):328–331. DOI: [10.1198/000313006X152607](https://doi.org/10.1198/000313006X152607).
-
+10. **Gelman & Stern (Difference of Significance):** *The difference between "significant" and "not significant" is not itself statistically significant.* *The American Statistician* 2006; 60(4):328–331. DOI: [10.1198/000313006x152649](https://doi.org/10.1198/000313006x152649).
+11. **Xie et al. (Prior Art on Pre-Fit Similarity):** *Evaluating data partitioning strategies for accurate prediction of protein-ligand binding free energy changes in mutated proteins.* *Comput Struct Biotechnol J* 2025; 23:1234–1245. PMID: [41169760](https://pubmed.ncbi.nlm.nih.gov/41169760/). DOI: [10.1016/j.csbj.2025.10.020](https://doi.org/10.1016/j.csbj.2025.10.020).
+12. **Al-Shaebi et al. (Prior Art on Partitioning Benchmarks):** *Impact of dataset partitioning on the reliability of SERS-machine learning models for antimicrobial resistance classification.* *Anal Chim Acta* 2026; 1312:346185. PMID: [42838683](https://pubmed.ncbi.nlm.nih.gov/42838683/). DOI: [10.1016/j.aca.2026.346185](https://doi.org/10.1016/j.aca.2026.346185).
+13. **Elnaggar et al. (ProtTrans Protein Language Models):** *ProtTrans: Towards Understanding the Language of Life Through Self-Supervised Learning.* *IEEE Trans Pattern Anal Mach Intell* 2021; 44(10):7112–7127. PMID: [34232869](https://pubmed.ncbi.nlm.nih.gov/34232869/). DOI: [10.1109/TPAMI.2021.3095381](https://doi.org/10.1109/TPAMI.2021.3095381).
+14. **Lin et al. (ESM-2 Evolutionary Scale Modeling):** *Evolutionary-scale prediction of atomic-level protein structure with a language model.* *Science* 2023; 379(6637):1123–1130. PMID: [36927031](https://pubmed.ncbi.nlm.nih.gov/36927031/). DOI: [10.1126/science.ade2574](https://doi.org/10.1126/science.ade2574).
+15. **Coen & Schaffer (Two Loci for Resistance):** *Two distinct loci confer resistance to acycloguanosine in herpes simplex virus type 1.* *Proc Natl Acad Sci U S A* 1980; 77(4):2265–2269. PMID: [6246531](https://pubmed.ncbi.nlm.nih.gov/6246531/). DOI: [10.1073/pnas.77.4.2265](https://doi.org/10.1073/pnas.77.4.2265).
+16. **Schmidt et al. (HSV-1 TK and Pol Polymorphisms vs Resistance):** *Sequence Analysis of Herpes Simplex Virus 1 Thymidine Kinase and DNA Polymerase Genes from over 300 Clinical Isolates from 1973 to 2014 Finds Novel Mutations That May Be Relevant for Development of Antiviral Resistance.* *Antimicrob Agents Chemother* 2015; 59(10):6606–6617. PMID: [26055375](https://pubmed.ncbi.nlm.nih.gov/26055375/). DOI: [10.1128/AAC.00977-15](https://doi.org/10.1128/AAC.00977-15).
+17. **Wang (Laboratory Testing for HSV Antiviral Resistance):** *Laboratory Testing for Herpes Simplex Virus Antiviral Resistance.* *J Clin Microbiol* 2024; 62(4):e00728-23. DOI: [10.1128/jcm.00728-23](https://doi.org/10.1128/jcm.00728-23).
