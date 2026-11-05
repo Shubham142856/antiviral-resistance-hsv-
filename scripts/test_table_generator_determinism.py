@@ -37,6 +37,8 @@ def test_determinism():
     hash2 = hashlib.sha256(out2.encode('utf-8')).hexdigest()
     
     assert hash1 == hash2, f"FATAL: Non-deterministic output!\nRun 1 SHA: {hash1}\nRun 2 SHA: {hash2}"
+    expected_sha = "664f2fd3b99ce880065281cbdc74448fe0ae845c7d80a00194b04a8f4d29b9f3"
+    assert hash1 == expected_sha, f"FATAL: SHA-256 drifted! Expected {expected_sha}, got {hash1}"
     print(f"PASS: Determinism verified (SHA-256: {hash1})")
     return out1
 
@@ -236,6 +238,17 @@ def test_manuscript_table_byte_match():
         # logs/radicalness_interaction_test.json; t(5.4) and t(3.8) trace to no log.
         "t(5.4)",
         "t(3.8)",
+        # Critique fixes: remove uncalibrated overclaims and deprecated phrases
+        "ROBUST REGIONAL GENERALIZATION",
+        "Robust generalization",
+        "Domain-Generalization Benchmark",
+        "order of magnitude less",
+        "completely eliminated",
+        "0.6698 [0.490",
+        "CLEARS CHANCE (Inconsistent with Polymerase Suppression)",
+        "Zero-Shot Protein Language Models Generalize Beyond Spatial Shortcuts",
+        "186/419",
+        "55.6%",
     ]
     hits = [s for s in manuscript_forbidden if s in ms_text]
     assert not hits, (
@@ -243,9 +256,42 @@ def test_manuscript_table_byte_match():
     print("PASS: Manuscript prose contains no retracted claims (%d patterns checked)."
           % len(manuscript_forbidden))
 
+def test_prose_table_concordance():
+    print("Testing Prose vs. Table Concordance & Inferential Calibration...")
+    manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
+    with open(manuscript_path, 'r', encoding='utf-8') as f:
+        ms_text = f.read()
+
+    # 1. Section 4.3 number check against Table 8
+    assert "$0.8049$ [0.353, 0.895]" in ms_text, "ESM-2 UL30-FOS D3 ($0.8049$ [0.353, 0.895]) missing in Section 4.3"
+    assert "0.6698" not in ms_text, "Stale unverified number 0.6698 found in manuscript"
+
+    # 2. Scope uniformity check: 38.4% (98/255) and 61.6% missense
+    assert "38.4% (98/255)" in ms_text, "Aciclovir-restricted 38.4% (98/255) missing"
+    assert "61.6%" in ms_text, "Aciclovir-restricted missense share 61.6% missing"
+
+    # 3. Exonuclease status: must be labeled pre-specified post-hoc
+    assert "pre-specified post-hoc" in ms_text, "Exonuclease must be designated pre-specified post-hoc"
+
+    # 4. Prior art references: Notin et al. 2022 and 2023 must be present
+    assert "Tranception" in ms_text, "Tranception prior art missing"
+    assert "ProteinGym" in ms_text, "ProteinGym prior art missing"
+
+    # 5. Table 10 S2 numbers must match Table 8 S2 numbers
+    assert "| **0.8406** [0.738, 0.927] |" in ms_text, "Table 8 UL30-ACV S2 must be 0.8406"
+    assert "| 0.8406 |" in ms_text, "Table 10 UL30-ACV S2 must match Table 8 at 0.8406"
+    assert "| 0.8407 |" in ms_text, "Table 10 UL30-FOS S2 must match Table 8 at 0.8407"
+    assert "| 0.7498 |" in ms_text, "Table 10 UL23-ACV S2 must match Table 8 at 0.7498"
+    assert "| 0.4721 |" in ms_text, "Table 10 BLOSUM UL30-ACV S2 must match Table 8 at 0.4721"
+    assert "| 0.4869 |" in ms_text, "Table 10 BLOSUM UL30-FOS S2 must match Table 8 at 0.4869"
+    assert "| 0.6845 |" in ms_text, "Table 10 BLOSUM UL23-ACV S2 must match Table 8 at 0.6845"
+
+    print("PASS: Prose-vs-table concordance and inferential calibration verified.")
+
 if __name__ == '__main__':
     out = test_determinism()
     test_log_fidelity(out)
     test_manuscript_table_byte_match()
+    test_prose_table_concordance()
     print("\nALL VERIFICATION TESTS PASSED.")
 

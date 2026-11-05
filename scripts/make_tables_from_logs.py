@@ -280,7 +280,7 @@ def generate_step2_tables():
                     elif 'Composite' in label and 'Option B' in label:
                         verdict = '**POST HOC EXPLORATORY (Point > 0.80)**'
                     elif 'BLOSUM' in label:
-                        verdict = '**CLEARS CHANCE (Inconsistent with Polymerase Suppression)**'
+                        verdict = '**INCONCLUSIVE (Point > 0.55, CI Spans 0.50)**'
                     elif 'Option B' in label:
                         verdict = 'SENSITIVITY CONTROL (Ortholog-Mapped Distance)'
                     else:
@@ -512,7 +512,7 @@ def generate_where_ablation_table():
             pw = sc['s0_pair_weighted']
             ci = sc['s0_pair_weighted_ci_95']
             sm = sc['s0_study_mean']
-            s2 = sc['s2_stratum_pair_weighted']
+            s2 = sc.get('s2_stratum_pooled_auc', sc.get('s2_stratum_pair_weighted'))
             d1 = sc['d1_pooled']
             
             pw_str = f"**{pw:.4f}** [{ci[0]:.4f}, {ci[1]:.4f}]" if 'Composite' in label or 'Proximity' in label else f"{pw:.4f} [{ci[0]:.4f}, {ci[1]:.4f}]"
@@ -538,10 +538,11 @@ def generate_where_ablation_table():
         md.append(f"| **{t_key}** | {str_cc} | {str_cd} | {str_dc} | {str_rr} |")
         
     md.append("\n*Methodological Interpretation of Table 10:*")
-    md.append("1. On the primary essential target (UL30-ACV), active-site proximity alone (S0 = 0.7846) drives the dominant share of the positional signal, outperforming constraint alone (0.7041) by +0.0683 points.")
-    md.append("2. Combining distance with evolutionary constraint in Composite Where yields S0 = 0.7865 (+0.0768 over constraint alone, p = 0.0615), with Composite Where substantially narrowing the uncertainty interval relative to distance alone ([0.737, 0.832] vs [0.663, 0.881]).")
-    md.append("3. Rank-normalized distance formulation in Composite Where further improves within-study concordance to 0.8165 (+0.0297 excess over linear standardization).")
-    md.append("4. On the dispensable kinase (UL23-ACV), distance alone (0.6556) significantly exceeds constraint alone (0.5710, delta = +0.0847), confirming that spatial pocket proximity remains informative even in targets subject to high truncating tolerance.")
+    md.append("1. On the primary essential target (UL30-ACV), active-site proximity alone reaches S0 = 0.7846 versus constraint alone (0.7041, observed paired delta delta = +0.0683 [-0.1571, +0.2629], p = 0.2630); while distance achieves a higher point estimate, the paired difference spans zero.")
+    md.append("2. Combining distance with evolutionary constraint in Composite Where yields S0 = 0.7865 (paired delta delta = +0.0768 [-0.0192, +0.1559] over constraint alone, p = 0.0615, spanning zero). Composite Where substantially narrows the 95% bootstrap confidence interval width relative to distance alone (0.0953 vs. 0.2173 AUROC interval width), improving estimation precision rather than mean discriminative performance.")
+    md.append("3. Rank-normalized distance formulation in Composite Where further improves within-study concordance to 0.8165 (paired excess delta = +0.0297 [-0.0061, +0.0645], p = 0.0645).")
+    md.append("4. On the dispensable kinase (UL23-ACV), distance alone reaches 0.6556 versus constraint alone (0.5710, paired delta delta = +0.0847 [-0.0717, +0.2370], p = 0.1150, spanning zero), indicating directional consistency without statistical separation.")
+    md.append("5. S2 values report pooled AUROC on the quantitative fold-change stratum, matching the Table 8 definition.")
     
     return '\n'.join(md)
 
@@ -689,7 +690,7 @@ def generate_split_degradation_table():
     md.append("\n*Methodological Interpretation of Table 11:*")
     md.append("1. **Pre-Hoc Diagnostic Utility:** The label-free distance diagnostic demonstrates that position-grouped splits fail to close sequence-neighbour correlation channels (median nearest-train distance 1.0 aa in UL23, 2.0 aa in UL30; 60-96% of test positions sit within <= 2 residues of a training position).")
     md.append("2. **Positional Collapse Is Representation-Bound, Not Model-Bound:** Positional-identity features collapse under contiguous-block holdout in all six target x model-class combinations (Random Forest: 0.8797 -> 0.4591, Delta = +0.4206; 0.8661 -> 0.4669, Delta = +0.3992; 0.8185 -> 0.5450, Delta = +0.2735. Logistic Regression: Delta = +0.3424, +0.2929, +0.2336). A position-indexed feature cannot extrapolate to a sequence block disjoint from its training range, so the collapse is a property of the representation rather than of model capacity.")
-    md.append("3. **All Variant-Level Families Survive, Including Classical Ones:** Every family whose features are computed from the variant itself degrades by an order of magnitude less than positional identity: evolutionary conservation Delta = 0.0362-0.1092 and protein language models Delta = 0.0062-0.0356. Because classical conservation scores (BLOSUM62, positional entropy, PSSM) embed no learned representation yet behave equivalently to ESM-2 and ProtBERT, this contrast must not be read as evidence that language models uniquely acquire transferable sequence-to-function structure. The defensible claim is narrower and stronger: leakage under position-grouped splitting is carried by position-indexed features, and any variant-level descriptor avoids it.")
+    md.append("3. **All Variant-Level Families Survive, Including Classical Ones:** Every family whose features are computed from the variant itself degrades substantially less than positional identity (a 2.5- to 10-fold reduction in degradation: evolutionary conservation Delta = 0.0362-0.1092 and protein language models Delta = 0.0062-0.0356). Because classical conservation scores (BLOSUM62, positional entropy, PSSM) embed no learned representation yet behave equivalently to ESM-2 and ProtBERT, this contrast must not be read as evidence that language models uniquely acquire transferable sequence-to-function structure. The defensible claim is narrower and stronger: leakage under position-grouped splitting is carried by position-indexed features, and any variant-level descriptor avoids it.")
     md.append("4. **Two Qualifications on the Collapse:** First, the high apparent position-grouped AUROC requires a non-linear model; under logistic regression the positional-identity family reaches only 0.5668 on UL30-ACV, so the 0.88 figure reflects a Random Forest partitioning position space rather than an intrinsic property of the split. Second, under block holdout positional features do not regress to 0.50 but invert below chance (0.2244-0.3470 under logistic regression), the expected signature of forced extrapolation beyond the training range.")
     md.append("5. **Negative Control Interpretation:** The unfitted BLOSUM62 score is identical across all split topologies (Delta = 0.0000 exactly). This is a tautology, not a result: a score that is never fitted cannot respond to a change of training set. It is reported precisely to make that tautology explicit, because comparing an unfitted zero-shot score's split-invariance against a fitted model's holdout degradation is not a valid comparison, and an earlier version of this analysis made exactly that error.")
     

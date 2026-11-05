@@ -256,6 +256,10 @@ def main():
             sub_s2 = sub[sub['is_numeric_fc']].copy()
             st_dict_s2 = compute_study_pair_stats(sub_s2, sc_col)
             s2_pw, s2_pairs = pair_weighted_from_stats(st_dict_s2)
+            try:
+                s2_pooled = float(roc_auc_score(sub_s2['target_binary'], sub_s2[sc_col]))
+            except:
+                s2_pooled = np.nan
 
             # D1 Pooled AUROC
             try:
@@ -271,6 +275,7 @@ def main():
                 'n_pairs': n_pairs,
                 'm_mixed_studies': len(st_dict),
                 's2_pair_weighted': s2_pw,
+                's2_pooled': s2_pooled,
                 's2_pairs': s2_pairs,
                 's2_n_rows': len(sub_s2),
                 'd1_pooled': d1_auc
@@ -341,10 +346,11 @@ def main():
             ci = [float(np.nanpercentile(boot_s0[sc_name], 2.5)), float(np.nanpercentile(boot_s0[sc_name], 97.5))]
             sm = obs_stats[sc_name]['s0_study_mean']
             s2 = obs_stats[sc_name]['s2_pair_weighted']
+            s2_pooled = obs_stats[sc_name]['s2_pooled']
             d1 = obs_stats[sc_name]['d1_pooled']
 
             ci_str = f"[{ci[0]:.4f}, {ci[1]:.4f}]"
-            s2_str = f"{s2:.4f}" if not np.isnan(s2) else "n/a"
+            s2_str = f"{s2_pooled:.4f}" if not np.isnan(s2_pooled) else "n/a"
             print(f"  %-46s %8.4f %19s %8.4f %8s %8.4f" % (sc_name, pw, ci_str, sm, s2_str, d1))
 
             target_res['scores'][sc_name] = {
@@ -352,6 +358,7 @@ def main():
                 's0_pair_weighted_ci_95': [round(ci[0], 4), round(ci[1], 4)],
                 's0_study_mean': round(sm, 4),
                 's2_stratum_pair_weighted': round(s2, 4) if not np.isnan(s2) else None,
+                's2_stratum_pooled_auc': round(s2_pooled, 4) if not np.isnan(s2_pooled) else None,
                 'd1_pooled': round(d1, 4)
             }
 

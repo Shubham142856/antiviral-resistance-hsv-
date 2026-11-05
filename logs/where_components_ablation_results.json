@@ -27,6 +27,7 @@
           ],
           "s0_study_mean": 0.7356,
           "s2_stratum_pair_weighted": 0.7778,
+          "s2_stratum_pooled_auc": 0.8406,
           "d1_pooled": 0.8606
         },
         "Evolutionary Constraint Only (ESM-2 650M)": {
@@ -37,6 +38,7 @@
           ],
           "s0_study_mean": 0.6979,
           "s2_stratum_pair_weighted": 0.8254,
+          "s2_stratum_pooled_auc": 0.7327,
           "d1_pooled": 0.7371
         },
         "Active-Site Proximity Only (Linear Std)": {
@@ -47,6 +49,7 @@
           ],
           "s0_study_mean": 0.7533,
           "s2_stratum_pair_weighted": 0.6825,
+          "s2_stratum_pooled_auc": 0.8202,
           "d1_pooled": 0.8967
         },
         "Active-Site Proximity Only (Rank-Norm)": {
@@ -57,6 +60,7 @@
           ],
           "s0_study_mean": 0.7533,
           "s2_stratum_pair_weighted": 0.6825,
+          "s2_stratum_pooled_auc": 0.8202,
           "d1_pooled": 0.8967
         },
         "Composite Where (Rank-Norm Dist)": {
@@ -67,6 +71,7 @@
           ],
           "s0_study_mean": 0.7713,
           "s2_stratum_pair_weighted": 0.7937,
+          "s2_stratum_pooled_auc": 0.8531,
           "d1_pooled": 0.879
         },
         "BLOSUM62 Radicalness": {
@@ -77,6 +82,7 @@
           ],
           "s0_study_mean": 0.3998,
           "s2_stratum_pair_weighted": 0.4206,
+          "s2_stratum_pooled_auc": 0.4721,
           "d1_pooled": 0.4942
         }
       },
@@ -135,6 +141,7 @@
           ],
           "s0_study_mean": 0.589,
           "s2_stratum_pair_weighted": 0.9091,
+          "s2_stratum_pooled_auc": 0.8407,
           "d1_pooled": 0.9097
         },
         "Evolutionary Constraint Only (ESM-2 650M)": {
@@ -145,6 +152,7 @@
           ],
           "s0_study_mean": 0.7001,
           "s2_stratum_pair_weighted": 0.9091,
+          "s2_stratum_pooled_auc": 0.7525,
           "d1_pooled": 0.7941
         },
         "Active-Site Proximity Only (Linear Std)": {
@@ -155,6 +163,7 @@
           ],
           "s0_study_mean": 0.5566,
           "s2_stratum_pair_weighted": 0.7576,
+          "s2_stratum_pooled_auc": 0.8619,
           "d1_pooled": 0.9306
         },
         "Active-Site Proximity Only (Rank-Norm)": {
@@ -165,6 +174,7 @@
           ],
           "s0_study_mean": 0.5566,
           "s2_stratum_pair_weighted": 0.7576,
+          "s2_stratum_pooled_auc": 0.8619,
           "d1_pooled": 0.9306
         },
         "Composite Where (Rank-Norm Dist)": {
@@ -175,6 +185,7 @@
           ],
           "s0_study_mean": 0.5856,
           "s2_stratum_pair_weighted": 0.9091,
+          "s2_stratum_pooled_auc": 0.8374,
           "d1_pooled": 0.9211
         },
         "BLOSUM62 Radicalness": {
@@ -185,6 +196,7 @@
           ],
           "s0_study_mean": 0.2014,
           "s2_stratum_pair_weighted": 0.3485,
+          "s2_stratum_pooled_auc": 0.4869,
           "d1_pooled": 0.4531
         }
       },
@@ -243,6 +255,7 @@
           ],
           "s0_study_mean": 0.6453,
           "s2_stratum_pair_weighted": 0.5172,
+          "s2_stratum_pooled_auc": 0.7498,
           "d1_pooled": 0.7265
         },
         "Evolutionary Constraint Only (ESM-2 650M)": {
@@ -253,6 +266,7 @@
           ],
           "s0_study_mean": 0.6227,
           "s2_stratum_pair_weighted": 0.2069,
+          "s2_stratum_pooled_auc": 0.5885,
           "d1_pooled": 0.5637
         },
         "Active-Site Proximity Only (Linear Std)": {
@@ -263,6 +277,7 @@
           ],
           "s0_study_mean": 0.6162,
           "s2_stratum_pair_weighted": 0.7931,
+          "s2_stratum_pooled_auc": 0.7973,
           "d1_pooled": 0.7618
         },
         "Active-Site Proximity Only (Rank-Norm)": {
@@ -273,6 +288,7 @@
           ],
           "s0_study_mean": 0.6162,
           "s2_stratum_pair_weighted": 0.7931,
+          "s2_stratum_pooled_auc": 0.7973,
           "d1_pooled": 0.7618
         },
         "Composite Where (Rank-Norm Dist)": {
@@ -283,6 +299,7 @@
           ],
           "s0_study_mean": 0.673,
           "s2_stratum_pair_weighted": 0.7931,
+          "s2_stratum_pooled_auc": 0.7544,
           "d1_pooled": 0.74
         },
         "BLOSUM62 Radicalness": {
@@ -293,6 +310,7 @@
           ],
           "s0_study_mean": 0.5252,
           "s2_stratum_pair_weighted": 0.8793,
+          "s2_stratum_pooled_auc": 0.6845,
           "d1_pooled": 0.613
         }
       },
