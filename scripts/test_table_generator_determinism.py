@@ -37,7 +37,7 @@ def test_determinism():
     hash2 = hashlib.sha256(out2.encode('utf-8')).hexdigest()
     
     assert hash1 == hash2, f"FATAL: Non-deterministic output!\nRun 1 SHA: {hash1}\nRun 2 SHA: {hash2}"
-    expected_sha = "664f2fd3b99ce880065281cbdc74448fe0ae845c7d80a00194b04a8f4d29b9f3"
+    expected_sha = "e62b962cddd727396bbb828c52ba6521300ec4ed7c5ed04ab12fe3efc1f50c5c"
     assert hash1 == expected_sha, f"FATAL: SHA-256 drifted! Expected {expected_sha}, got {hash1}"
     print(f"PASS: Determinism verified (SHA-256: {hash1})")
     return out1

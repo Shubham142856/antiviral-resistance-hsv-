@@ -538,11 +538,11 @@ def generate_where_ablation_table():
         md.append(f"| **{t_key}** | {str_cc} | {str_cd} | {str_dc} | {str_rr} |")
         
     md.append("\n*Methodological Interpretation of Table 10:*")
-    md.append("1. On the primary essential target (UL30-ACV), active-site proximity alone reaches S0 = 0.7846 versus constraint alone (0.7041, observed paired delta delta = +0.0683 [-0.1571, +0.2629], p = 0.2630); while distance achieves a higher point estimate, the paired difference spans zero.")
-    md.append("2. Combining distance with evolutionary constraint in Composite Where yields S0 = 0.7865 (paired delta delta = +0.0768 [-0.0192, +0.1559] over constraint alone, p = 0.0615, spanning zero). Composite Where substantially narrows the 95% bootstrap confidence interval width relative to distance alone (0.0953 vs. 0.2173 AUROC interval width), improving estimation precision rather than mean discriminative performance.")
-    md.append("3. Rank-normalized distance formulation in Composite Where further improves within-study concordance to 0.8165 (paired excess delta = +0.0297 [-0.0061, +0.0645], p = 0.0645).")
-    md.append("4. On the dispensable kinase (UL23-ACV), distance alone reaches 0.6556 versus constraint alone (0.5710, paired delta delta = +0.0847 [-0.0717, +0.2370], p = 0.1150, spanning zero), indicating directional consistency without statistical separation.")
-    md.append("5. S2 values report pooled AUROC on the quantitative fold-change stratum, matching the Table 8 definition.")
+    md.append("1. Across all evaluated targets and component pairs, all paired delta confidence intervals span zero; neither active-site proximity nor evolutionary constraint statistically separates from the other in isolation under study-clustered resampling.")
+    md.append("2. Combining distance with evolutionary constraint in Composite Where yields S0 = 0.7865 on UL30-ACV (paired delta delta = +0.0768 [-0.0192, +0.1559] over constraint alone, p = 0.0615, spanning zero). Composite Where yields a narrower 95% bootstrap confidence interval width relative to distance alone (0.0953 vs. 0.2173 AUROC interval width), reflecting improved precision rather than mean discriminative performance.")
+    md.append("3. Rank-normalized distance formulation in Composite Where reaches within-study concordance of 0.8165 (paired delta = +0.0297 [-0.0061, +0.0645], p = 0.0645, spanning zero).")
+    md.append("4. On the dispensable kinase (UL23-ACV), distance alone reaches 0.6556 versus constraint alone (0.5710, paired delta = +0.0847 [-0.0717, +0.2370], p = 0.1150, spanning zero), indicating directional consistency without statistical separation.")
+    md.append("5. S2 values report pooled stratum AUROC on the quantitative fold-change stratum, matching the Table 8 definition.")
     
     return '\n'.join(md)
 
