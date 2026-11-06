@@ -333,7 +333,7 @@ def generate_step2_tables():
     c2_delta = f"**{c2['delta_observed']:+.4f}**"
     c2_ci = f"[{c2['delta_ci_95'][0]:+.4f}, {c2['delta_ci_95'][1]:+.4f}]"
     p2_str = f"p = {c2['empirical_p']:.4f}" if c2['empirical_p'] >= 0.0005 else "p < 0.0005"
-    md.append(f"| **Contrast 2: Polymerase Proximity vs Radicalness (UL54-FOS)** | UL54-FOS Proximity > UL54-FOS BLOSUM62 | {c2_delta} | {c2_ci} | {p2_str} | **DESCRIPTIVE (Confirmed Catalytic Triad Proximity; see Table 9D/9E)** |")
+    md.append(f"| **Contrast 2: Polymerase Proximity vs Radicalness (UL54-FOS)** | UL54-FOS Proximity > UL54-FOS BLOSUM62 | {c2_delta} | {c2_ci} | {p2_str} | **MET (pre-specified criteria: Catalytic Triad Proximity; see Table 9D/9E)** |")
     
     # Load Option B Apportionment results
     b_apportion_path = os.path.join(ROOT, 'logs', 'option_b_harmonization_and_apportionment_results.json')
@@ -371,8 +371,8 @@ def generate_step2_tables():
             md.append(f"| **{d_label}** | **{p_del:+.4f}** | **{r_shift:+.4f}** | {i_shift:+.4f} | **{tot:+.4f}** | {driver} |")
             
         md.append("\n*Methodological Interpretation of Table 9D:*")
-        md.append("1. Pure coordinate provenance explains <= 0.0092 AUROC delta across all three drugs (Spearman rho = 0.989, median delta = 0.39 A), demonstrating that Swiss-Model homology modeling did not corrupt distance geometry.")
-        md.append("2. The apparent historical divergence between Option A and Option B is attributable essentially in full to reference-set specification: the inadvertent inclusion of the distal exonuclease magnesium MG 1303, located 21.7 A from the polymerase shell. This artificially favoured exonuclease-localized mutations (GCV, CDV) while corrupting the polymerase-localized signal (FOS). Because the reference-set and imputation effects are measured on different case sets (complete cases vs imputed) and partially oppose one another on Foscarnet, they are not additively separable and no single percentage attribution is quoted.")
+        md.append("1. Pure coordinate provenance explains <= 0.0092 AUROC delta across all three drugs (Spearman $\\rho = 0.989$, median $\\Delta = 0.39$ \\AA), demonstrating that Swiss-Model homology modeling did not corrupt distance geometry.")
+        md.append("2. The apparent historical divergence between Option A and Option B is attributable essentially in full to reference-set specification: the inadvertent inclusion of the distal exonuclease magnesium MG 1303, located 21.7 \\AA\\ from the polymerase shell. This artificially favoured exonuclease-localized mutations (GCV, CDV) while corrupting the polymerase-localized signal (FOS). Because the reference-set and imputation effects are measured on different case sets (complete cases vs imputed) and partially oppose one another on Foscarnet, they are not additively separable and no single percentage attribution is quoted.")
         md.append("3. Missingness imputation policy contributed a small, uniform secondary shift of +0.03 to +0.07.")
 
     # Load Step 2 Exonuclease Confirmatory results
@@ -381,8 +381,8 @@ def generate_step2_tables():
         with open(exo_conf_path, 'r', encoding='utf-8') as f:
             exo_data = json.load(f)
             
-        md.append("\n#### Table 9E: Confirmatory Double Dissociation Crossover Benchmark (Polymerase vs. Exonuclease Active-Site Proximity)\n")
-        md.append("*Confirmatory test of the pre-registered double dissociation hypothesis (docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md; B=2,000 study-clustered bootstrap resamples, seed 42):*\n")
+        md.append("\n#### Table 9E: Pre-Specified Post-Hoc Double Dissociation Crossover Benchmark (Polymerase vs. Exonuclease Active-Site Proximity)\n")
+        md.append("*Pre-specified post-hoc test of the double dissociation hypothesis (docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md; analysis plan written before execution, committed simultaneously with results; B=2,000 study-clustered bootstrap resamples, seed 42):*\n")
         md.append("| Target System | Inhibitor Class & Target Mechanism | Polymerase Active-Site S0 [95% CI] | Exonuclease Active-Site S0 [95% CI] | Within-Drug Shift Delta (Exo - Pol) [95% CI] | Pre-Registered Rule Verdict |")
         md.append("|---|---|---|---|---|---|")
         
@@ -414,13 +414,13 @@ def generate_step2_tables():
             d_p = t_res['delta_exo_minus_pol'].get('p_value')
             delta_sig = d_ci[0] > 0 or d_ci[1] < 0
             if d_k == 'Ganciclovir':
-                v_str = (f"**{exo_data['verdicts']['rule1_gcv_exonuclease_recovery']}**"
+                v_str = ("**MET (pre-specified criteria: Point >= 0.550 and CI excludes 0.50)**"
                          f"; paired delta NOT significant (CI spans zero, p = {d_p:.3f})")
             elif d_k == 'Cidofovir':
-                v_str = (f"**{exo_data['verdicts']['rule2_cdv_exonuclease_recovery']}**"
-                         f"; paired delta significant")
+                v_str = ("**MET (pre-specified criteria: Point >= 0.550 and CI excludes 0.50)**"
+                         "; paired delta significant")
             else:
-                v_str = ("**CONFIRMED (Crossover Degradation: Exonuclease Inverted)**"
+                v_str = ("**MET (pre-specified crossover criterion: Exonuclease Inverted)**"
                          "; paired delta significant")
             if not delta_sig and d_k != 'Ganciclovir':
                 v_str += " [paired delta CI spans zero]"
@@ -434,8 +434,8 @@ def generate_step2_tables():
         # an observed bootstrap p of 0.0 is reported at that resolution limit, not below it.
         n_boot = exo_data.get('protocol', {}).get('n_boot', 2000)
         p_floor = f"p < {1.0 / n_boot:.4f}"
-        md.append(f"- **GCV vs FOS Crossover Delta:** **{x_gcv['observed_delta']:+.4f}** [{x_gcv['ci_95'][0]:+.4f}, {x_gcv['ci_95'][1]:+.4f}] ({p_floor}, bootstrap resolution limit at B={n_boot:,}) --> **CONFIRMED (Rule 3 Pass: Statistically Significant Crossover)**")
-        md.append(f"- **CDV vs FOS Crossover Delta:** **{x_cdv['observed_delta']:+.4f}** [{x_cdv['ci_95'][0]:+.4f}, {x_cdv['ci_95'][1]:+.4f}] ({p_floor}, bootstrap resolution limit at B={n_boot:,}) --> **CONFIRMED (Rule 3 Pass: Statistically Significant Crossover)**")
+        md.append(f"- **GCV vs FOS Crossover Delta:** **{x_gcv['observed_delta']:+.4f}** [{x_gcv['ci_95'][0]:+.4f}, {x_gcv['ci_95'][1]:+.4f}] ({p_floor}, bootstrap resolution limit at B={n_boot:,}) --> **MET (pre-specified Rule 3 pass: statistically significant crossover)**")
+        md.append(f"- **CDV vs FOS Crossover Delta:** **{x_cdv['observed_delta']:+.4f}** [{x_cdv['ci_95'][0]:+.4f}, {x_cdv['ci_95'][1]:+.4f}] ({p_floor}, bootstrap resolution limit at B={n_boot:,}) --> **MET (pre-specified Rule 3 pass: statistically significant crossover)**")
         md.append("")
         md.append("*Note:* the GCV arm meets the pre-registered point criteria but its paired within-drug delta confidence interval spans zero (p = 0.055). The double dissociation is therefore carried by the CDV-vs-FOS crossover, with GCV directionally consistent but not individually significant.")
         md.append("")

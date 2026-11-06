@@ -37,7 +37,7 @@ def test_determinism():
     hash2 = hashlib.sha256(out2.encode('utf-8')).hexdigest()
     
     assert hash1 == hash2, f"FATAL: Non-deterministic output!\nRun 1 SHA: {hash1}\nRun 2 SHA: {hash2}"
-    expected_sha = "e62b962cddd727396bbb828c52ba6521300ec4ed7c5ed04ab12fe3efc1f50c5c"
+    expected_sha = "3012fcf1e3b8e78c0ae5fc9c4b8ecdb3f9ee880da4904b5d5df94f5e6ac13927"
     assert hash1 == expected_sha, f"FATAL: SHA-256 drifted! Expected {expected_sha}, got {hash1}"
     print(f"PASS: Determinism verified (SHA-256: {hash1})")
     return out1
@@ -288,10 +288,32 @@ def test_prose_table_concordance():
 
     print("PASS: Prose-vs-table concordance and inferential calibration verified.")
 
+def test_manuscript_file_paths():
+    print("Testing Manuscript Cited File Paths...")
+    import re
+    manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
+    with open(manuscript_path, 'r', encoding='utf-8') as f:
+        ms_text = f.read()
+
+    # Extract all cited docs/ and logs/ paths
+    paths = re.findall(r'(?:docs|logs)/[A-Za-z0-9_\-\.]+', ms_text)
+    unique_paths = sorted(list(set(paths)))
+    assert len(unique_paths) > 0, "No docs/ or logs/ paths found in manuscript"
+
+    missing = []
+    for p in unique_paths:
+        full_p = os.path.join(ROOT, p)
+        if not os.path.exists(full_p):
+            missing.append(p)
+
+    assert not missing, f"FATAL: The following cited paths do not exist on disk: {missing}"
+    print(f"PASS: All {len(unique_paths)} cited docs/ and logs/ paths exist on disk.")
+
 if __name__ == '__main__':
     out = test_determinism()
     test_log_fidelity(out)
     test_manuscript_table_byte_match()
     test_prose_table_concordance()
+    test_manuscript_file_paths()
     print("\nALL VERIFICATION TESTS PASSED.")
 

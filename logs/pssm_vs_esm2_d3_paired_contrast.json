@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "description": "Paired D3 within-study contrast: PSSM minus ESM-2 650M",
+    "n_boot": 2000,
+    "seed": 42,
+    "n_mixed_studies": 26,
+    "status": "EXPLORATORY"
+  },
+  "targets": {
+    "UL30-Aciclovir": {
+      "target": "UL30-Aciclovir",
+      "total_pairs": 267,
+      "pssm_d3_s0": 0.7078651685393258,
+      "esm2_650m_d3_s0": 0.7078651685393258,
+      "observed_delta": 0.0,
+      "ci_95": [
+        -0.1111,
+        0.1012
+      ],
+      "p_value_two_sided": 0.982,
+      "p_value_formatted": "p = 0.9820",
+      "excludes_zero": false,
+      "verdict": "INCONCLUSIVE (CI spans zero)"
+    },
+    "UL30-Foscarnet": {
+      "target": "UL30-Foscarnet",
+      "total_pairs": 82,
+      "pssm_d3_s0": 0.774390243902439,
+      "esm2_650m_d3_s0": 0.8048780487804879,
+      "observed_delta": -0.0305,
+      "ci_95": [
+        -0.1992,
+        0.3751
+      ],
+      "p_value_two_sided": 0.89,
+      "p_value_formatted": "p = 0.8900",
+      "excludes_zero": false,
+      "verdict": "INCONCLUSIVE (CI spans zero)"
+    },
+    "UL23-Aciclovir": {
+      "target": "UL23-Aciclovir",
+      "total_pairs": 331,
+      "pssm_d3_s0": 0.6993957703927492,
+      "esm2_650m_d3_s0": 0.7734138972809668,
+      "observed_delta": -0.074,
+      "ci_95": [
+        -0.2026,
+        0.0379
+      ],
+      "p_value_two_sided": 0.247,
+      "p_value_formatted": "p = 0.2470",
+      "excludes_zero": false,
+      "verdict": "INCONCLUSIVE (CI spans zero)"
+    }
+  }
+}
