@@ -37,7 +37,7 @@ def test_determinism():
     hash2 = hashlib.sha256(out2.encode('utf-8')).hexdigest()
     
     assert hash1 == hash2, f"FATAL: Non-deterministic output!\nRun 1 SHA: {hash1}\nRun 2 SHA: {hash2}"
-    expected_sha = "3012fcf1e3b8e78c0ae5fc9c4b8ecdb3f9ee880da4904b5d5df94f5e6ac13927"
+    expected_sha = "395cba189ef9b02135f8284e528fa8a0053dd506f12cea207e6618ad776434f2"
     assert hash1 == expected_sha, f"FATAL: SHA-256 drifted! Expected {expected_sha}, got {hash1}"
     print(f"PASS: Determinism verified (SHA-256: {hash1})")
     return out1
@@ -249,6 +249,15 @@ def test_manuscript_table_byte_match():
         "Zero-Shot Protein Language Models Generalize Beyond Spatial Shortcuts",
         "186/419",
         "55.6%",
+        # Remnants & uncalibrated overclaims audited in final review
+        "single baseline whose 95% bootstrap confidence interval strictly excludes 0.50 across all three targets",
+        "superior robustness",
+        "dominant predictive power",
+        "78.5-85.5",
+        "78.5–85.5",
+        "across UL23, UL30, and UL5",
+        "Burrel et al. Antiviral Res 2010",
+        "2.5- to 10-fold",
     ]
     hits = [s for s in manuscript_forbidden if s in ms_text]
     assert not hits, (

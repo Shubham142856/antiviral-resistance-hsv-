@@ -208,7 +208,7 @@ def generate_step2_tables():
         
     md.append("\n#### Table 9B: Replication Evidence Ladder Matrix (S0 Within-Study, S2 Stratum, and Pooled D1)\n")
     md.append("*Specification Note:* Reports the pre-registered primary distance-only score alongside post hoc exploratory evaluations (composite Where combining ESM-2 positional evolutionary constraint with Option A distance, 35M model, and Option B mapped coordinates). Option A uses the Swiss-Model P08546 homology model (HSV-1 8OJ7 template, 32.8% sequence identity). All evaluations evaluate identical 19 active-site residues using the S0 pair-weighted estimator and seed 42.\n")
-    md.append("| Target System | Role / Arm | Evaluated Score | S0 Pair-Weighted AUROC [95% CI] | Study-Mean AUROC [95% CI] | LOSO Range | S2 Quantitative Stratum | Pooled D1 [95% CI] | Pre-Registered Rule Verdict |")
+    md.append("| Target System | Role / Arm | Evaluated Score | S0 Pair-Weighted AUROC [95% CI] | Study-Mean AUROC [95% CI] | LOSO Range | S2 Quantitative Stratum | Pooled D1 [95% CI] | Pre-Specified Rule Verdict |")
     md.append("|---|---|---|---|---|---|---|---|---|")
     
     for t_key, t_info in s2_data['targets'].items():
@@ -319,7 +319,7 @@ def generate_step2_tables():
                 d1_str = f"{d1_val:.4f} [{d1_ci[0]:.4f}, {d1_ci[1]:.4f}]"
                 md.append(f"| **{g}-{d}** | {arm} | {score_label} | {pw_str} | {sm_str} | {loso_str} | {s2_str} | {d1_str} | {verdict} |")
             
-    md.append("\n#### Table 9C: Pre-Registered Empirical Contrast Tests (2,000 Study-Clustered Bootstrap Resamples)\n")
+    md.append("\n#### Table 9C: Pre-Specified Empirical Contrast Tests (2,000 Study-Clustered Bootstrap Resamples)\n")
     md.append("| Contrast | Hypothesized Relationship | Observed Delta | 95% Bootstrap CI | Empirical p-value | Final Verdict |")
     md.append("|---|---|---|---|---|---|")
     
@@ -383,7 +383,7 @@ def generate_step2_tables():
             
         md.append("\n#### Table 9E: Pre-Specified Post-Hoc Double Dissociation Crossover Benchmark (Polymerase vs. Exonuclease Active-Site Proximity)\n")
         md.append("*Pre-specified post-hoc test of the double dissociation hypothesis (docs/UL54_EXONUCLEASE_CONFIRMATORY_PREREGISTRATION.md; analysis plan written before execution, committed simultaneously with results; B=2,000 study-clustered bootstrap resamples, seed 42):*\n")
-        md.append("| Target System | Inhibitor Class & Target Mechanism | Polymerase Active-Site S0 [95% CI] | Exonuclease Active-Site S0 [95% CI] | Within-Drug Shift Delta (Exo - Pol) [95% CI] | Pre-Registered Rule Verdict |")
+        md.append("| Target System | Inhibitor Class & Target Mechanism | Polymerase Active-Site S0 [95% CI] | Exonuclease Active-Site S0 [95% CI] | Within-Drug Shift Delta (Exo - Pol) [95% CI] | Pre-Specified Rule Verdict |")
         md.append("|---|---|---|---|---|---|")
         
         target_info = [
@@ -486,7 +486,7 @@ def generate_where_ablation_table():
         
     md = []
     md.append("### Table 10: Decomposition Ablation of the Positional Prior (`Where`)\n")
-    md.append("*Evaluates the relative contributions of Evolutionary Positional Constraint (ESM-2 650M) versus 3D Active-Site Proximity (Linear Standardized and Rank-Normalized) across HSV-1 targets (docs/WHERE_COMPONENTS_ABLATION_PLAN.md; B=2,000 study-clustered bootstrap resamples, seed 42):*\n")
+    md.append("*Evaluates the relative contributions of Evolutionary Positional Constraint (ESM-2 650M) versus 3D Active-Site Proximity (Linear Standardized and Rank-Normalized; identical AUROCs due to rank invariance) across HSV-1 targets (docs/WHERE_COMPONENTS_ABLATION_PLAN.md; B=2,000 study-clustered bootstrap resamples, seed 42):*\n")
     md.append("| Target System | Benchmark Role | Evaluated Score / Component | S0 Pair-Weighted [95% CI] | Study-Mean AUROC | S2 Numeric FC Stratum | D1 Pooled AUROC |")
     md.append("|---|---|---|---|---|---|---|")
     
@@ -499,8 +499,7 @@ def generate_where_ablation_table():
     score_display = [
         ('Composite Where (Linear Std, Benchmark Standard)', 'Composite Where (Standardized)'),
         ('Composite Where (Rank-Normalized Distance)', 'Composite Where (Rank-Norm Dist)'),
-        ('Active-Site Proximity Only (Linear Std)', 'Active-Site Proximity Only (Linear Std)'),
-        ('Active-Site Proximity Only (Rank-Norm)', 'Active-Site Proximity Only (Rank-Norm)'),
+        ('Active-Site Proximity Only (Spatial Distance Prior)', 'Active-Site Proximity Only (Linear Std)'),
         ('Evolutionary Constraint Only (ESM-2 650M)', 'Evolutionary Constraint Only (ESM-2 650M)'),
         ('BLOSUM62 Radicalness (Non-Positional Baseline)', 'BLOSUM62 Radicalness')
     ]
@@ -519,7 +518,7 @@ def generate_where_ablation_table():
             s2_str = f"{s2:.4f}" if s2 is not None else "n/a"
             md.append(f"| **{t_key}** | {role} | {label} | {pw_str} | {sm:.4f} | {s2_str} | {d1:.4f} |")
             
-    md.append("\n*Paired Bootstrap Deltas (Within Shared Study Resamples, B=2,000):*\n")
+    md.append("\n*Paired Bootstrap Deltas (Within Shared Study Resamples, B=2,000; deltas report bootstrap-mean paired difference):*\n")
     md.append("| Target System | Delta(Composite - Constraint) [95% CI] | Delta(Composite - Distance_Std) [95% CI] | Delta(Distance_Std - Constraint) [95% CI] | Delta(Composite_Rank - Composite_Std) [95% CI] |")
     md.append("|---|---|---|---|---|")
     
@@ -539,10 +538,11 @@ def generate_where_ablation_table():
         
     md.append("\n*Methodological Interpretation of Table 10:*")
     md.append("1. Across all evaluated targets and component pairs, all paired delta confidence intervals span zero; neither active-site proximity nor evolutionary constraint statistically separates from the other in isolation under study-clustered resampling.")
-    md.append("2. Combining distance with evolutionary constraint in Composite Where yields S0 = 0.7865 on UL30-ACV (paired delta delta = +0.0768 [-0.0192, +0.1559] over constraint alone, p = 0.0615, spanning zero). Composite Where yields a narrower 95% bootstrap confidence interval width relative to distance alone (0.0953 vs. 0.2173 AUROC interval width), reflecting improved precision rather than mean discriminative performance.")
-    md.append("3. Rank-normalized distance formulation in Composite Where reaches within-study concordance of 0.8165 (paired delta = +0.0297 [-0.0061, +0.0645], p = 0.0645, spanning zero).")
-    md.append("4. On the dispensable kinase (UL23-ACV), distance alone reaches 0.6556 versus constraint alone (0.5710, paired delta = +0.0847 [-0.0717, +0.2370], p = 0.1150, spanning zero), indicating directional consistency without statistical separation.")
+    md.append("2. Combining distance with evolutionary constraint in Composite Where yields S0 = 0.7865 on UL30-ACV (bootstrap-mean paired delta = +0.0768 [-0.0192, +0.1559], observed point delta = +0.0768 over constraint alone, p = 0.0615, spanning zero; bootstrap-mean delta over distance = +0.0085 [-0.1089, +0.1449], observed point delta = +0.0019, p = 0.4795). Composite Where yields a narrower 95% bootstrap confidence interval width relative to distance alone (0.0953 vs. 0.2173 AUROC interval width), reflecting improved precision rather than mean discriminative performance.")
+    md.append("3. Rank-normalized distance formulation in Composite Where reaches within-study concordance of 0.8165 (bootstrap-mean paired delta = +0.0297 [-0.0061, +0.0645], p = 0.0645, spanning zero).")
+    md.append("4. On the dispensable kinase (UL23-ACV), distance alone reaches 0.6556 versus constraint alone (0.5710, bootstrap-mean paired delta = +0.0847 [-0.0717, +0.2370], p = 0.1150, spanning zero), indicating directional consistency without statistical separation.")
     md.append("5. S2 values report pooled stratum AUROC on the quantitative fold-change stratum, matching the Table 8 definition.")
+    md.append("6. Active-Site Proximity Only yields identical metrics under linear standardization and rank-normalization (0.7846 on UL30-ACV, 0.7195 on UL30-FOS, 0.6556 on UL23-ACV) by rank invariance of the concordance statistic.")
     
     return '\n'.join(md)
 
@@ -690,7 +690,7 @@ def generate_split_degradation_table():
     md.append("\n*Methodological Interpretation of Table 11:*")
     md.append("1. **Pre-Hoc Diagnostic Utility:** The label-free distance diagnostic demonstrates that position-grouped splits fail to close sequence-neighbour correlation channels (median nearest-train distance 1.0 aa in UL23, 2.0 aa in UL30; 60-96% of test positions sit within <= 2 residues of a training position).")
     md.append("2. **Positional Collapse Is Representation-Bound, Not Model-Bound:** Positional-identity features collapse under contiguous-block holdout in all six target x model-class combinations (Random Forest: 0.8797 -> 0.4591, Delta = +0.4206; 0.8661 -> 0.4669, Delta = +0.3992; 0.8185 -> 0.5450, Delta = +0.2735. Logistic Regression: Delta = +0.3424, +0.2929, +0.2336). A position-indexed feature cannot extrapolate to a sequence block disjoint from its training range, so the collapse is a property of the representation rather than of model capacity.")
-    md.append("3. **All Variant-Level Families Survive, Including Classical Ones:** Every family whose features are computed from the variant itself degrades substantially less than positional identity (a 2.5- to 10-fold reduction in degradation: evolutionary conservation Delta = 0.0362-0.1092 and protein language models Delta = 0.0062-0.0356). Because classical conservation scores (BLOSUM62, positional entropy, PSSM) embed no learned representation yet behave equivalently to ESM-2 and ProtBERT, this contrast must not be read as evidence that language models uniquely acquire transferable sequence-to-function structure. The defensible claim is narrower and stronger: leakage under position-grouped splitting is carried by position-indexed features, and any variant-level descriptor avoids it.")
+    md.append("3. **All Variant-Level Families Survive, Including Classical Ones:** Every family whose features are computed from the variant itself degrades substantially less than positional identity (a 3- to 11-fold reduction for evolutionary conservation, Delta = 0.0362-0.1092, and 7- to 68-fold for protein language models, Delta = 0.0062-0.0356). Because classical conservation scores (BLOSUM62, positional entropy, PSSM) embed no learned representation yet behave equivalently to ESM-2 and ProtBERT, this contrast must not be read as evidence that language models uniquely acquire transferable sequence-to-function structure. The defensible claim is narrower and stronger: leakage under position-grouped splitting is carried by position-indexed features, and any variant-level descriptor avoids it.")
     md.append("4. **Two Qualifications on the Collapse:** First, the high apparent position-grouped AUROC requires a non-linear model; under logistic regression the positional-identity family reaches only 0.5668 on UL30-ACV, so the 0.88 figure reflects a Random Forest partitioning position space rather than an intrinsic property of the split. Second, under block holdout positional features do not regress to 0.50 but invert below chance (0.2244-0.3470 under logistic regression), the expected signature of forced extrapolation beyond the training range.")
     md.append("5. **Negative Control Interpretation:** The unfitted BLOSUM62 score is identical across all split topologies (Delta = 0.0000 exactly). This is a tautology, not a result: a score that is never fitted cannot respond to a change of training set. It is reported precisely to make that tautology explicit, because comparing an unfitted zero-shot score's split-invariance against a fitted model's holdout degradation is not a valid comparison, and an earlier version of this analysis made exactly that error.")
     
