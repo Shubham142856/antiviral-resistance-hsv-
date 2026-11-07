@@ -37,7 +37,7 @@ def test_determinism():
     hash2 = hashlib.sha256(out2.encode('utf-8')).hexdigest()
     
     assert hash1 == hash2, f"FATAL: Non-deterministic output!\nRun 1 SHA: {hash1}\nRun 2 SHA: {hash2}"
-    expected_sha = "395cba189ef9b02135f8284e528fa8a0053dd506f12cea207e6618ad776434f2"
+    expected_sha = "7e95c16b59e207cd75c9c48d2e320822e3df153d2a6f34c8a2520ab9195a9a01"
     assert hash1 == expected_sha, f"FATAL: SHA-256 drifted! Expected {expected_sha}, got {hash1}"
     print(f"PASS: Determinism verified (SHA-256: {hash1})")
     return out1
@@ -157,6 +157,22 @@ def test_log_fidelity(output_text):
     # degradation contrast from being over-read as a property of language models.
     assert "+0.0678" in output_text, "UL30-ACV conservation RF degradation (+0.0678) missing"
 
+    # 4. Check Table 12 Cross-Pathogen
+    assert "HSV-1 UL23 (Thymidine Kinase)" in output_text, "UL23 missing from Table 12"
+    assert "HIV-1 Protease (PR)" in output_text, "HIV-1 PR missing from Table 12"
+    assert "SARS-CoV-2 Main Protease (Mpro)" in output_text, "SARS-CoV-2 Mpro missing from Table 12"
+    assert "8.07e-36" in output_text, "UL23 Wilcoxon p-value missing from Table 12"
+
+    # 5. Check Table 13 Dark Space
+    assert "76.0%" in output_text, "UL30 dark space share (76.0%) missing from Table 13"
+    assert "18.8%" in output_text, "UL23 dark space share (18.8%) missing from Table 13"
+    assert "Lethal Catalytic Core" in output_text, "Lethal Catalytic Core tier missing from Table 13"
+
+    # 6. Check Table 14 Clinical Triage
+    assert "94.4%" in output_text, "UL23 Full Cohort PPV (94.4%) missing from Table 14"
+    assert "96.3%" in output_text, "UL23 Full Cohort Specificity (96.3%) missing from Table 14"
+    assert "118 / 7 / 184 / 137" in output_text, "UL23 Full Cohort confusion matrix missing from Table 14"
+
     # Check that hallucinated / drifted numbers and retracted claims NEVER reappear.
     forbidden_strings = [
         "454 | 22.25%",
@@ -186,7 +202,12 @@ def test_manuscript_table_byte_match():
     import sys
     if os.path.join(ROOT, "scripts") not in sys.path:
         sys.path.insert(0, os.path.join(ROOT, "scripts"))
-    from make_tables_from_logs import generate_table7, generate_table8, generate_step1_tables, generate_step2_tables, generate_where_ablation_table, generate_split_degradation_table
+    from make_tables_from_logs import (
+        generate_table7, generate_table8, generate_step1_tables,
+        generate_step2_tables, generate_where_ablation_table,
+        generate_split_degradation_table, generate_table12_cross_pathogen,
+        generate_table13_dark_space, generate_table14_clinical_triage
+    )
     
     sections = {
         "Table 7": generate_table7(),
@@ -194,7 +215,10 @@ def test_manuscript_table_byte_match():
         "Step 1": generate_step1_tables(),
         "Table 9": generate_step2_tables(),
         "Table 10": generate_where_ablation_table(),
-        "Table 11": generate_split_degradation_table()
+        "Table 11": generate_split_degradation_table(),
+        "Table 12": generate_table12_cross_pathogen(),
+        "Table 13": generate_table13_dark_space(),
+        "Table 14": generate_table14_clinical_triage(),
     }
     
     manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')

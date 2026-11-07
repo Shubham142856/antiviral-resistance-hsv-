@@ -24,8 +24,8 @@
         "contig_block_sd": 0.06897166770350281,
         "contig_block_evaluable_folds": 5,
         "contig_block_student_t_ci_95": [
-          0.5523776163061713,
-          0.7236568896731967
+          0.5523776163061711,
+          0.723656889673197
         ],
         "pooled_auroc": 0.6129518072289156,
         "per_block_auroc": {
@@ -43,8 +43,8 @@
         "contig_block_sd": 0.09177005816076457,
         "contig_block_evaluable_folds": 5,
         "contig_block_student_t_ci_95": [
-          0.6162730162622433,
-          0.8441681709248171
+          0.6162730162622431,
+          0.8441681709248173
         ],
         "pooled_auroc": 0.7319528112449798,
         "per_block_auroc": {
@@ -62,8 +62,8 @@
         "contig_block_sd": 0.08919522399495963,
         "contig_block_evaluable_folds": 5,
         "contig_block_student_t_ci_95": [
-          0.6143570573059265,
-          0.8358580541984504
+          0.6143570573059263,
+          0.8358580541984506
         ],
         "pooled_auroc": 0.7279618473895582,
         "per_block_auroc": {
@@ -81,8 +81,8 @@
         "contig_block_sd": 0.09203445819098915,
         "contig_block_evaluable_folds": 5,
         "contig_block_student_t_ci_95": [
-          0.6230648983877577,
-          0.8516166450476391
+          0.6230648983877575,
+          0.8516166450476393
         ],
         "pooled_auroc": 0.7292670682730924,
         "per_block_auroc": {
@@ -102,8 +102,8 @@
         "contig_block_sd": 0.24959629394815597,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.1522672957241059,
-          0.9465940992119212
+          0.15226729572403663,
+          0.9465940992119904
         ],
         "pooled_auroc": 0.4942054958183991,
         "per_block_auroc": {
@@ -121,7 +121,7 @@
         "contig_block_sd": 0.24619940305192556,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.30761329853058317,
+          0.30761329853051483,
           1.0
         ],
         "pooled_auroc": 0.7071385902031063,
@@ -140,7 +140,7 @@
         "contig_block_sd": 0.2600873832138441,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.28599729062639345,
+          0.28599729062632123,
           1.0
         ],
         "pooled_auroc": 0.7155913978494624,
@@ -159,7 +159,7 @@
         "contig_block_sd": 0.317363026578468,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.13782019494444386,
+          0.13782019494435582,
           1.0
         ],
         "pooled_auroc": 0.6226403823178017,
@@ -180,8 +180,8 @@
         "contig_block_sd": 0.2997394065613611,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.03047350422527273,
-          0.9843780711844076
+          0.03047350422518952,
+          0.9843780711844907
         ],
         "pooled_auroc": 0.45312840636581647,
         "per_block_auroc": {
@@ -199,8 +199,8 @@
         "contig_block_sd": 0.08320576347649641,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.6899009864264356,
-          0.9546988609805216
+          0.6899009864264125,
+          0.9546988609805447
         ],
         "pooled_auroc": 0.7866797471114018,
         "per_block_auroc": {
@@ -218,8 +218,8 @@
         "contig_block_sd": 0.08173248317147538,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.6945618557787645,
-          0.9546710948694892
+          0.6945618557787419,
+          0.9546710948695118
         ],
         "pooled_auroc": 0.7898408545890561,
         "per_block_auroc": {
@@ -237,7 +237,7 @@
         "contig_block_sd": 0.26643317526015436,
         "contig_block_evaluable_folds": 4,
         "contig_block_student_t_ci_95": [
-          0.2364363284909226,
+          0.23643632849084867,
           1.0
         ],
         "pooled_auroc": 0.6302594288205798,

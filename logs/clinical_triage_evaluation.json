@@ -1,0 +1,61 @@
+{
+  "triage_architecture": {
+    "tier_1": "Loss-of-Function Inactivation (UL23 frameshift / nonsense / indel) -> Resistant (100% specificity)",
+    "tier_2": "3D Catalytic Pocket Proximity (dist <= 5.0 A in cryo-EM 8EXX / 8V1T / 1OF1) -> Resistant",
+    "tier_3": "Radical Substitution Filter (severity_blosum >= 2 <=> BLOSUM62 <= -2) -> Resistant / High Risk"
+  },
+  "evaluations": {
+    "UL23_Aciclovir_Full_Clinical_Cohort": {
+      "N": 446,
+      "TP": 118,
+      "FP": 7,
+      "TN": 184,
+      "FN": 137,
+      "sensitivity": 0.4627450980392157,
+      "specificity": 0.9633507853403142,
+      "ppv": 0.944,
+      "npv": 0.573208722741433,
+      "balanced_accuracy": 0.7130479416897649,
+      "accuracy": 0.6771300448430493
+    },
+    "UL23_Aciclovir_Missense_Cohort": {
+      "N": 286,
+      "TP": 69,
+      "FP": 47,
+      "TN": 119,
+      "FN": 51,
+      "sensitivity": 0.575,
+      "specificity": 0.7168674698795181,
+      "ppv": 0.5948275862068966,
+      "npv": 0.7,
+      "balanced_accuracy": 0.645933734939759,
+      "accuracy": 0.6573426573426573
+    },
+    "UL30_Aciclovir_Cohort": {
+      "N": 332,
+      "TP": 24,
+      "FP": 60,
+      "TN": 210,
+      "FN": 38,
+      "sensitivity": 0.3870967741935484,
+      "specificity": 0.7777777777777778,
+      "ppv": 0.2857142857142857,
+      "npv": 0.8467741935483871,
+      "balanced_accuracy": 0.5824372759856631,
+      "accuracy": 0.7048192771084337
+    },
+    "UL30_Foscarnet_Cohort": {
+      "N": 311,
+      "TP": 13,
+      "FP": 63,
+      "TN": 215,
+      "FN": 20,
+      "sensitivity": 0.3939393939393939,
+      "specificity": 0.7733812949640287,
+      "ppv": 0.17105263157894737,
+      "npv": 0.9148936170212766,
+      "balanced_accuracy": 0.5836603444517113,
+      "accuracy": 0.7331189710610932
+    }
+  }
+}
