@@ -24,4 +24,5 @@ PIIS*.pdf
 .DS_Store
 Thumbs.db
 .claude/
+.audit-cache/
 cloud_gpu/

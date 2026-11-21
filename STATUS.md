@@ -1,3 +1,5 @@
+> **Historical analysis log.** The [current manuscript](manuscript/manuscript_draft.md) and [corrections](README.md#corrections-to-the-earlier-analysis) supersede earlier performance and clinical interpretations recorded below.
+
 # STATUS.md: Audit Rectification & Evidence Register
 
 
