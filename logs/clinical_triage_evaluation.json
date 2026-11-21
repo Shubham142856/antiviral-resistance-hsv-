@@ -1,22 +1,26 @@
 {
   "triage_architecture": {
-    "tier_1": "Loss-of-Function Inactivation (UL23 frameshift / nonsense / indel) -> Resistant (100% specificity)",
+    "tier_1": "Loss-of-Function Inactivation (UL23 frameshift / nonsense / indel) -> positive under historical rule",
     "tier_2": "3D Catalytic Pocket Proximity (dist <= 5.0 A in cryo-EM 8EXX / 8V1T / 1OF1) -> Resistant",
     "tier_3": "Radical Substitution Filter (severity_blosum >= 2 <=> BLOSUM62 <= -2) -> Resistant / High Risk"
   },
+  "ul23_hsv1_labeled_records": 352,
+  "excluded_categories": {
+    "co_occurrence_combo": 1
+  },
   "evaluations": {
-    "UL23_Aciclovir_Full_Clinical_Cohort": {
-      "N": 446,
-      "TP": 118,
-      "FP": 7,
-      "TN": 184,
-      "FN": 137,
-      "sensitivity": 0.4627450980392157,
-      "specificity": 0.9633507853403142,
-      "ppv": 0.944,
-      "npv": 0.573208722741433,
-      "balanced_accuracy": 0.7130479416897649,
-      "accuracy": 0.6771300448430493
+    "UL23_Aciclovir_Evaluable_HSV1": {
+      "N": 351,
+      "TP": 130,
+      "FP": 51,
+      "TN": 119,
+      "FN": 51,
+      "sensitivity": 0.7182320441988951,
+      "specificity": 0.7,
+      "ppv": 0.7182320441988951,
+      "npv": 0.7,
+      "balanced_accuracy": 0.7091160220994475,
+      "accuracy": 0.7094017094017094
     },
     "UL23_Aciclovir_Missense_Cohort": {
       "N": 286,
