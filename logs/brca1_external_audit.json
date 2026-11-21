@@ -1,0 +1,225 @@
+{
+  "hashes": {
+    "brca1_findlay_scores.csv": "906dc152f28b4c8261e4e532a03c9c42f2e45e211aa3ada12e3c826c151580ec",
+    "GSE117159_Supplementary_Table_1.xlsx": "570d84bffef01a465b57476e3a84d62550bb0c1c5d1948795b451ee981f1da36",
+    "BRCA1_EXTERNAL_AUDIT.md": "c0774c9be25c4c8fcf479fe82f9ee564a12c84a6f6390c8c2e7cbd9d20a36b47"
+  },
+  "joined": 3893,
+  "max_score_difference": 8.881784197001252e-16,
+  "missense_classes": {
+    "FUNC": 1476,
+    "LOF": 441,
+    "INT": 169
+  },
+  "grouped": {
+    "pair_summary": {
+      "within": {
+        "count": 129777,
+        "concordance": 0.6822510922582584
+      },
+      "between": {
+        "count": 521139,
+        "concordance": 0.6718111674620398
+      }
+    },
+    "records": 1917,
+    "positions": 326,
+    "median_gap": 1.0,
+    "prevalence_only_pooled": 0.4624244910249556,
+    "pooled": 0.6738926374524515,
+    "within_fold_mean": 0.6822575808200202,
+    "folds": [
+      {
+        "fold": 0,
+        "records": 384,
+        "positive": 90,
+        "positions": 65,
+        "auc": 0.6930650037792894
+      },
+      {
+        "fold": 1,
+        "records": 384,
+        "positive": 95,
+        "positions": 66,
+        "auc": 0.6558186122746312
+      },
+      {
+        "fold": 2,
+        "records": 383,
+        "positive": 100,
+        "positions": 65,
+        "auc": 0.6793992932862191
+      },
+      {
+        "fold": 3,
+        "records": 383,
+        "positive": 81,
+        "positions": 65,
+        "auc": 0.7504292371842041
+      },
+      {
+        "fold": 4,
+        "records": 383,
+        "positive": 75,
+        "positions": 65,
+        "auc": 0.6325757575757576
+      }
+    ]
+  },
+  "blocked": {
+    "pair_summary": {
+      "within": {
+        "count": 127783,
+        "concordance": 0.5244163934169647
+      },
+      "between": {
+        "count": 523133,
+        "concordance": 0.4302060852593891
+      }
+    },
+    "records": 1917,
+    "positions": 326,
+    "median_gap": 21.0,
+    "prevalence_only_pooled": 0.4063742479828426,
+    "pooled": 0.44870075401434284,
+    "within_fold_mean": 0.5326821348138061,
+    "folds": [
+      {
+        "fold": 0,
+        "records": 393,
+        "positive": 99,
+        "positions": 66,
+        "auc": 0.5
+      },
+      {
+        "fold": 1,
+        "records": 374,
+        "positive": 61,
+        "positions": 65,
+        "auc": 0.6634106740690305
+      },
+      {
+        "fold": 2,
+        "records": 384,
+        "positive": 124,
+        "positions": 65,
+        "auc": 0.5
+      },
+      {
+        "fold": 3,
+        "records": 389,
+        "positive": 97,
+        "positions": 65,
+        "auc": 0.5
+      },
+      {
+        "fold": 4,
+        "records": 377,
+        "positive": 60,
+        "positions": 65,
+        "auc": 0.5
+      }
+    ]
+  },
+  "paired": {
+    "delta": 0.2251918834381087,
+    "ci95": [
+      0.13531862976093362,
+      0.31147184825231616
+    ],
+    "valid_draws": 2000,
+    "requested_draws": 2000,
+    "seed": 42
+  },
+  "adjacency": {
+    "pairs": 307,
+    "exons": 13,
+    "ambiguous_sites": 6,
+    "observed": 0.2546533271288971,
+    "null_mean": 0.29465176585907393,
+    "permutations": 9999,
+    "per_exon": {
+      "X15": {
+        "pairs": 31,
+        "observed": 0.12903225806451613,
+        "expected": 0.13667114695340501
+      },
+      "X16": {
+        "pairs": 28,
+        "observed": 0.16020408163265307,
+        "expected": 0.3095316287434514
+      },
+      "X17": {
+        "pairs": 24,
+        "observed": 0.3958333333333333,
+        "expected": 0.43022222222222223
+      },
+      "X18": {
+        "pairs": 12,
+        "observed": 0.08333333333333333,
+        "expected": 0.11141636141636138
+      },
+      "X19": {
+        "pairs": 27,
+        "observed": 0.41966490299823633,
+        "expected": 0.42850844041320235
+      },
+      "X2": {
+        "pairs": 25,
+        "observed": 0.25,
+        "expected": 0.2890659340659341
+      },
+      "X20": {
+        "pairs": 17,
+        "observed": 0.29747899159663865,
+        "expected": 0.2723155929038282
+      },
+      "X21": {
+        "pairs": 24,
+        "observed": 0.1316137566137566,
+        "expected": 0.21832804232804232
+      },
+      "X22": {
+        "pairs": 19,
+        "observed": 0.16666666666666666,
+        "expected": 0.24141604010025064
+      },
+      "X23": {
+        "pairs": 31,
+        "observed": 0.27496159754224264,
+        "expected": 0.33782642089093706
+      },
+      "X3": {
+        "pairs": 16,
+        "observed": 0.475,
+        "expected": 0.4485294117647059
+      },
+      "X4": {
+        "pairs": 24,
+        "observed": 0.3230489417989418,
+        "expected": 0.2807116402116402
+      },
+      "X5": {
+        "pairs": 29,
+        "observed": 0.2190476190476191,
+        "expected": 0.2829009304871374
+      }
+    },
+    "leave_one_exon_out_expected_minus_observed": {
+      "X15": 0.04345456134631613,
+      "X16": 0.028849796301205925,
+      "X17": 0.04030011008411828,
+      "X18": 0.04031616322082194,
+      "X19": 0.042826746346195446,
+      "X2": 0.03990644019677467,
+      "X20": 0.043648421603160646,
+      "X21": 0.0358626206006924,
+      "X22": 0.03753481386076636,
+      "X23": 0.03725164841785972,
+      "X3": 0.043483827831283545,
+      "X4": 0.04680692482414857,
+      "X5": 0.0373328001992546
+    },
+    "lower_tail_p": 0.0006
+  }
+}
