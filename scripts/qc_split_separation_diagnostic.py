@@ -52,7 +52,8 @@ def nearest_train_distances(sub, col):
 
 def main():
     path = os.path.join(ROOT, "data", "processed", "primary_3d_spatial_folds.tsv")
-    df = pd.read_csv(path, sep="\t")
+    df = pd.read_csv(path, sep="\t", usecols=["gene", "drug", "pos", "has_3d_coord",
+                                              *[column for _, column in SCHEMES]])
     print("=" * 78)
     print("LABEL-FREE SPLIT SEPARATION DIAGNOSTIC")
     print("=" * 78)

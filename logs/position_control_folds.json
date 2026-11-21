@@ -1,0 +1,881 @@
+{
+  "source_sha256": "0ed51d37d558530ef8b2d0c991780a23936580920e62c7ade46a426adfa96f4c",
+  "sklearn": "1.9.0",
+  "targets": {
+    "UL30-Aciclovir": {
+      "all": {
+        "Position-Grouped": {
+          "pair_summary": {
+            "within": {
+              "count": 3339,
+              "concordance": 0.8831985624438454
+            },
+            "between": {
+              "count": 13401,
+              "concordance": 0.878889635101858
+            }
+          },
+          "records": 332,
+          "positions": 290,
+          "median_gap": 2.0,
+          "prevalence_only_pooled": 0.4634707287933094,
+          "pooled": 0.8797491039426524,
+          "within_fold_mean": 0.8849552805684879,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 67,
+              "positive": 13,
+              "positions": 58,
+              "auc": 0.9230769230769231
+            },
+            {
+              "fold": 1,
+              "records": 67,
+              "positive": 12,
+              "positions": 58,
+              "auc": 0.8568181818181817
+            },
+            {
+              "fold": 2,
+              "records": 66,
+              "positive": 13,
+              "positions": 58,
+              "auc": 0.955732946298984
+            },
+            {
+              "fold": 3,
+              "records": 66,
+              "positive": 14,
+              "positions": 58,
+              "auc": 0.7802197802197801
+            },
+            {
+              "fold": 4,
+              "records": 66,
+              "positive": 10,
+              "positions": 58,
+              "auc": 0.9089285714285714
+            }
+          ]
+        },
+        "Contiguous Block": {
+          "pair_summary": {
+            "within": {
+              "count": 3023,
+              "concordance": 0.5661594442606682
+            },
+            "between": {
+              "count": 13717,
+              "concordance": 0.4355544215207407
+            }
+          },
+          "records": 332,
+          "positions": 290,
+          "median_gap": 85.0,
+          "prevalence_only_pooled": 0.1899342891278375,
+          "pooled": 0.4591397849462366,
+          "within_fold_mean": 0.5347222222222222,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 63,
+              "positive": 0,
+              "positions": 57,
+              "auc": null
+            },
+            {
+              "fold": 1,
+              "records": 39,
+              "positive": 1,
+              "positions": 36,
+              "auc": 0.5
+            },
+            {
+              "fold": 2,
+              "records": 77,
+              "positive": 26,
+              "positions": 65,
+              "auc": 0.5
+            },
+            {
+              "fold": 3,
+              "records": 77,
+              "positive": 32,
+              "positions": 69,
+              "auc": 0.6388888888888888
+            },
+            {
+              "fold": 4,
+              "records": 76,
+              "positive": 3,
+              "positions": 63,
+              "auc": 0.5
+            }
+          ]
+        }
+      },
+      "coordinate_matched": {
+        "Position-Grouped": {
+          "pair_summary": {
+            "within": {
+              "count": 2411,
+              "concordance": 0.8882206553297387
+            },
+            "between": {
+              "count": 9709,
+              "concordance": 0.8716654650324441
+            }
+          },
+          "records": 262,
+          "positions": 236,
+          "median_gap": 2.0,
+          "prevalence_only_pooled": 0.44591584158415853,
+          "pooled": 0.8749587458745874,
+          "within_fold_mean": 0.8926418390850674,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 47,
+              "positive": 13,
+              "positions": 44,
+              "auc": 0.9049773755656109
+            },
+            {
+              "fold": 1,
+              "records": 53,
+              "positive": 12,
+              "positions": 47,
+              "auc": 0.8353658536585364
+            },
+            {
+              "fold": 2,
+              "records": 55,
+              "positive": 12,
+              "positions": 49,
+              "auc": 0.9748062015503876
+            },
+            {
+              "fold": 3,
+              "records": 55,
+              "positive": 14,
+              "positions": 49,
+              "auc": 0.8074912891986062
+            },
+            {
+              "fold": 4,
+              "records": 52,
+              "positive": 9,
+              "positions": 47,
+              "auc": 0.9405684754521964
+            }
+          ]
+        },
+        "3D k-Means Spatial": {
+          "pair_summary": {
+            "within": {
+              "count": 2430,
+              "concordance": 0.5839506172839506
+            },
+            "between": {
+              "count": 9690,
+              "concordance": 0.6972136222910217
+            }
+          },
+          "records": 262,
+          "positions": 236,
+          "median_gap": 17.0,
+          "prevalence_only_pooled": 0.30420792079207926,
+          "pooled": 0.6745049504950495,
+          "within_fold_mean": 0.5887521112463345,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 61,
+              "positive": 19,
+              "positions": 59,
+              "auc": 0.6961152882205515
+            },
+            {
+              "fold": 1,
+              "records": 47,
+              "positive": 3,
+              "positions": 42,
+              "auc": 0.196969696969697
+            },
+            {
+              "fold": 2,
+              "records": 44,
+              "positive": 4,
+              "positions": 42,
+              "auc": 0.925
+            },
+            {
+              "fold": 3,
+              "records": 66,
+              "positive": 25,
+              "positions": 53,
+              "auc": 0.4717073170731707
+            },
+            {
+              "fold": 4,
+              "records": 44,
+              "positive": 9,
+              "positions": 40,
+              "auc": 0.653968253968254
+            }
+          ]
+        },
+        "Contiguous Block": {
+          "pair_summary": {
+            "within": {
+              "count": 2270,
+              "concordance": 0.6052863436123348
+            },
+            "between": {
+              "count": 9850,
+              "concordance": 0.5045177664974619
+            }
+          },
+          "records": 262,
+          "positions": 236,
+          "median_gap": 78.5,
+          "prevalence_only_pooled": 0.21592409240924093,
+          "pooled": 0.523391089108911,
+          "within_fold_mean": 0.5414930555555555,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 44,
+              "positive": 0,
+              "positions": 41,
+              "auc": null
+            },
+            {
+              "fold": 1,
+              "records": 39,
+              "positive": 1,
+              "positions": 36,
+              "auc": 0.5
+            },
+            {
+              "fold": 2,
+              "records": 51,
+              "positive": 24,
+              "positions": 44,
+              "auc": 0.5
+            },
+            {
+              "fold": 3,
+              "records": 77,
+              "positive": 32,
+              "positions": 69,
+              "auc": 0.6659722222222222
+            },
+            {
+              "fold": 4,
+              "records": 51,
+              "positive": 3,
+              "positions": 46,
+              "auc": 0.5
+            }
+          ]
+        }
+      }
+    },
+    "UL30-Foscarnet": {
+      "all": {
+        "Position-Grouped": {
+          "pair_summary": {
+            "within": {
+              "count": 1819,
+              "concordance": 0.8820780648708081
+            },
+            "between": {
+              "count": 7355,
+              "concordance": 0.8622025832766825
+            }
+          },
+          "records": 311,
+          "positions": 271,
+          "median_gap": 2.0,
+          "prevalence_only_pooled": 0.4125245258338784,
+          "pooled": 0.8661434488772619,
+          "within_fold_mean": 0.8946993819054052,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 63,
+              "positive": 8,
+              "positions": 55,
+              "auc": 0.9238636363636363
+            },
+            {
+              "fold": 1,
+              "records": 62,
+              "positive": 4,
+              "positions": 54,
+              "auc": 0.9741379310344828
+            },
+            {
+              "fold": 2,
+              "records": 62,
+              "positive": 9,
+              "positions": 54,
+              "auc": 0.7484276729559748
+            },
+            {
+              "fold": 3,
+              "records": 62,
+              "positive": 5,
+              "positions": 54,
+              "auc": 0.8842105263157896
+            },
+            {
+              "fold": 4,
+              "records": 62,
+              "positive": 7,
+              "positions": 54,
+              "auc": 0.9428571428571428
+            }
+          ]
+        },
+        "Contiguous Block": {
+          "pair_summary": {
+            "within": {
+              "count": 1713,
+              "concordance": 0.5519556333917105
+            },
+            "between": {
+              "count": 7461,
+              "concordance": 0.44739311084305056
+            }
+          },
+          "records": 311,
+          "positions": 271,
+          "median_gap": 87.0,
+          "prevalence_only_pooled": 0.19996729888816223,
+          "pooled": 0.46691737519075643,
+          "within_fold_mean": 0.5277923669467788,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 61,
+              "positive": 0,
+              "positions": 54,
+              "auc": null
+            },
+            {
+              "fold": 1,
+              "records": 38,
+              "positive": 1,
+              "positions": 36,
+              "auc": 0.5
+            },
+            {
+              "fold": 2,
+              "records": 70,
+              "positive": 14,
+              "positions": 59,
+              "auc": 0.5535714285714286
+            },
+            {
+              "fold": 3,
+              "records": 65,
+              "positive": 17,
+              "positions": 59,
+              "auc": 0.5575980392156863
+            },
+            {
+              "fold": 4,
+              "records": 77,
+              "positive": 1,
+              "positions": 63,
+              "auc": 0.5
+            }
+          ]
+        }
+      },
+      "coordinate_matched": {
+        "Position-Grouped": {
+          "pair_summary": {
+            "within": {
+              "count": 1333,
+              "concordance": 0.8833458364591148
+            },
+            "between": {
+              "count": 5387,
+              "concordance": 0.8555782439205495
+            }
+          },
+          "records": 242,
+          "positions": 219,
+          "median_gap": 2.0,
+          "prevalence_only_pooled": 0.4054315476190476,
+          "pooled": 0.8610863095238095,
+          "within_fold_mean": 0.9041885576399761,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 48,
+              "positive": 8,
+              "positions": 44,
+              "auc": 0.8984375
+            },
+            {
+              "fold": 1,
+              "records": 50,
+              "positive": 4,
+              "positions": 45,
+              "auc": 0.9782608695652174
+            },
+            {
+              "fold": 2,
+              "records": 51,
+              "positive": 9,
+              "positions": 45,
+              "auc": 0.7566137566137566
+            },
+            {
+              "fold": 3,
+              "records": 45,
+              "positive": 4,
+              "positions": 42,
+              "auc": 0.9573170731707318
+            },
+            {
+              "fold": 4,
+              "records": 48,
+              "positive": 7,
+              "positions": 43,
+              "auc": 0.9303135888501741
+            }
+          ]
+        },
+        "3D k-Means Spatial": {
+          "pair_summary": {
+            "within": {
+              "count": 1379,
+              "concordance": 0.7070340826686005
+            },
+            "between": {
+              "count": 5341,
+              "concordance": 0.7167197154090994
+            }
+          },
+          "records": 242,
+          "positions": 219,
+          "median_gap": 19.0,
+          "prevalence_only_pooled": 0.29650297619047616,
+          "pooled": 0.7147321428571429,
+          "within_fold_mean": 0.6293431713385946,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 53,
+              "positive": 9,
+              "positions": 51,
+              "auc": 0.7563131313131313
+            },
+            {
+              "fold": 1,
+              "records": 47,
+              "positive": 1,
+              "positions": 41,
+              "auc": 0.20652173913043476
+            },
+            {
+              "fold": 2,
+              "records": 41,
+              "positive": 4,
+              "positions": 39,
+              "auc": 0.9358108108108109
+            },
+            {
+              "fold": 3,
+              "records": 60,
+              "positive": 15,
+              "positions": 51,
+              "auc": 0.6866666666666666
+            },
+            {
+              "fold": 4,
+              "records": 41,
+              "positive": 3,
+              "positions": 37,
+              "auc": 0.5614035087719298
+            }
+          ]
+        },
+        "Contiguous Block": {
+          "pair_summary": {
+            "within": {
+              "count": 1333,
+              "concordance": 0.5386346586646662
+            },
+            "between": {
+              "count": 5387,
+              "concordance": 0.4275106738444403
+            }
+          },
+          "records": 242,
+          "positions": 219,
+          "median_gap": 81.0,
+          "prevalence_only_pooled": 0.2277529761904762,
+          "pooled": 0.44955357142857144,
+          "within_fold_mean": 0.5157781862745098,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 41,
+              "positive": 0,
+              "positions": 38,
+              "auc": null
+            },
+            {
+              "fold": 1,
+              "records": 38,
+              "positive": 1,
+              "positions": 36,
+              "auc": 0.5
+            },
+            {
+              "fold": 2,
+              "records": 46,
+              "positive": 13,
+              "positions": 40,
+              "auc": 0.5
+            },
+            {
+              "fold": 3,
+              "records": 65,
+              "positive": 17,
+              "positions": 59,
+              "auc": 0.5631127450980392
+            },
+            {
+              "fold": 4,
+              "records": 52,
+              "positive": 1,
+              "positions": 46,
+              "auc": 0.5
+            }
+          ]
+        }
+      }
+    },
+    "UL23-Aciclovir": {
+      "all": {
+        "Position-Grouped": {
+          "pair_summary": {
+            "within": {
+              "count": 3960,
+              "concordance": 0.8287878787878787
+            },
+            "between": {
+              "count": 15960,
+              "concordance": 0.8159147869674186
+            }
+          },
+          "records": 286,
+          "positions": 210,
+          "median_gap": 1.0,
+          "prevalence_only_pooled": 0.46034136546184734,
+          "pooled": 0.8184738955823293,
+          "within_fold_mean": 0.8295303137837753,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 58,
+              "positive": 22,
+              "positions": 42,
+              "auc": 0.8295454545454546
+            },
+            {
+              "fold": 1,
+              "records": 57,
+              "positive": 23,
+              "positions": 42,
+              "auc": 0.8523017902813299
+            },
+            {
+              "fold": 2,
+              "records": 57,
+              "positive": 24,
+              "positions": 42,
+              "auc": 0.8535353535353535
+            },
+            {
+              "fold": 3,
+              "records": 57,
+              "positive": 23,
+              "positions": 42,
+              "auc": 0.8887468030690536
+            },
+            {
+              "fold": 4,
+              "records": 57,
+              "positive": 28,
+              "positions": 42,
+              "auc": 0.7235221674876847
+            }
+          ]
+        },
+        "Contiguous Block": {
+          "pair_summary": {
+            "within": {
+              "count": 3411,
+              "concordance": 0.5537965406039285
+            },
+            "between": {
+              "count": 16509,
+              "concordance": 0.5431582773032891
+            }
+          },
+          "records": 286,
+          "positions": 210,
+          "median_gap": 23.5,
+          "prevalence_only_pooled": 0.2755773092369478,
+          "pooled": 0.5449799196787148,
+          "within_fold_mean": 0.5469931209191442,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 67,
+              "positive": 24,
+              "positions": 45,
+              "auc": 0.5
+            },
+            {
+              "fold": 1,
+              "records": 51,
+              "positive": 28,
+              "positions": 39,
+              "auc": 0.5
+            },
+            {
+              "fold": 2,
+              "records": 55,
+              "positive": 41,
+              "positions": 37,
+              "auc": 0.5348432055749128
+            },
+            {
+              "fold": 3,
+              "records": 62,
+              "positive": 19,
+              "positions": 46,
+              "auc": 0.7001223990208079
+            },
+            {
+              "fold": 4,
+              "records": 51,
+              "positive": 8,
+              "positions": 43,
+              "auc": 0.5
+            }
+          ]
+        }
+      },
+      "coordinate_matched": {
+        "Position-Grouped": {
+          "pair_summary": {
+            "within": {
+              "count": 2695,
+              "concordance": 0.7487940630797774
+            },
+            "between": {
+              "count": 10875,
+              "concordance": 0.7252413793103448
+            }
+          },
+          "records": 233,
+          "positions": 173,
+          "median_gap": 1.0,
+          "prevalence_only_pooled": 0.4556005895357406,
+          "pooled": 0.7299189388356672,
+          "within_fold_mean": 0.747469172465597,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 45,
+              "positive": 22,
+              "positions": 34,
+              "auc": 0.7361660079051383
+            },
+            {
+              "fold": 1,
+              "records": 49,
+              "positive": 23,
+              "positions": 36,
+              "auc": 0.7984949832775919
+            },
+            {
+              "fold": 2,
+              "records": 48,
+              "positive": 24,
+              "positions": 36,
+              "auc": 0.8098958333333334
+            },
+            {
+              "fold": 3,
+              "records": 44,
+              "positive": 21,
+              "positions": 33,
+              "auc": 0.8053830227743272
+            },
+            {
+              "fold": 4,
+              "records": 47,
+              "positive": 28,
+              "positions": 34,
+              "auc": 0.587406015037594
+            }
+          ]
+        },
+        "3D k-Means Spatial": {
+          "pair_summary": {
+            "within": {
+              "count": 2771,
+              "concordance": 0.6436304583182967
+            },
+            "between": {
+              "count": 10799,
+              "concordance": 0.6762663209556441
+            }
+          },
+          "records": 233,
+          "positions": 173,
+          "median_gap": 5.0,
+          "prevalence_only_pooled": 0.3757184966838615,
+          "pooled": 0.6696020633750921,
+          "within_fold_mean": 0.5825292415917416,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 36,
+              "positive": 26,
+              "positions": 29,
+              "auc": 0.4288461538461539
+            },
+            {
+              "fold": 1,
+              "records": 43,
+              "positive": 15,
+              "positions": 33,
+              "auc": 0.6666666666666667
+            },
+            {
+              "fold": 2,
+              "records": 68,
+              "positive": 35,
+              "positions": 45,
+              "auc": 0.7692640692640692
+            },
+            {
+              "fold": 3,
+              "records": 50,
+              "positive": 22,
+              "positions": 41,
+              "auc": 0.5681818181818181
+            },
+            {
+              "fold": 4,
+              "records": 36,
+              "positive": 20,
+              "positions": 25,
+              "auc": 0.47968749999999993
+            }
+          ]
+        },
+        "Contiguous Block": {
+          "pair_summary": {
+            "within": {
+              "count": 2251,
+              "concordance": 0.5319857840959573
+            },
+            "between": {
+              "count": 11319,
+              "concordance": 0.5840621963070942
+            }
+          },
+          "records": 233,
+          "positions": 173,
+          "median_gap": 22.0,
+          "prevalence_only_pooled": 0.26186440677966105,
+          "pooled": 0.5754237288135593,
+          "within_fold_mean": 0.5228597381026531,
+          "folds": [
+            {
+              "fold": 0,
+              "records": 35,
+              "positive": 24,
+              "positions": 20,
+              "auc": 0.5
+            },
+            {
+              "fold": 1,
+              "records": 48,
+              "positive": 28,
+              "positions": 37,
+              "auc": 0.4892857142857143
+            },
+            {
+              "fold": 2,
+              "records": 52,
+              "positive": 39,
+              "positions": 35,
+              "auc": 0.480276134122288
+            },
+            {
+              "fold": 3,
+              "records": 51,
+              "positive": 19,
+              "positions": 40,
+              "auc": 0.6447368421052632
+            },
+            {
+              "fold": 4,
+              "records": 47,
+              "positive": 8,
+              "positions": 41,
+              "auc": 0.5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "matched_position_intervals": {
+    "UL30-Aciclovir": {
+      "delta": 0.3515676567656765,
+      "ci95": [
+        0.2531549516143539,
+        0.4472878856713554
+      ],
+      "valid_draws": 2000,
+      "requested_draws": 2000,
+      "seed": 42
+    },
+    "UL30-Foscarnet": {
+      "delta": 0.41153273809523805,
+      "ci95": [
+        0.2729044117647059,
+        0.5375165183387268
+      ],
+      "valid_draws": 2000,
+      "requested_draws": 2000,
+      "seed": 42
+    },
+    "UL23-Aciclovir": {
+      "delta": 0.15449521002210787,
+      "ci95": [
+        0.04981255420174915,
+        0.25450677480916034
+      ],
+      "valid_draws": 2000,
+      "requested_draws": 2000,
+      "seed": 42
+    }
+  }
+}
