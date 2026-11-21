@@ -126,3 +126,4 @@ The tool is accessible as a standalone module within the project repository (`sp
 
 if __name__ == "__main__":
     main()
+

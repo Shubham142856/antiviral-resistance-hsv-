@@ -154,3 +154,4 @@ def partition_contiguous_blocks(positions: Union[List[int], np.ndarray], k_folds
         folds[sorted_indices[start:end]] = k
 
     return folds
+

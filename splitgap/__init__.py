@@ -24,3 +24,4 @@ __all__ = [
     "partition_contiguous_blocks",
     "recommend_block_partition",
 ]
+
