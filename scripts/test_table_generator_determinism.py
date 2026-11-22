@@ -37,12 +37,14 @@ def test_determinism():
     hash2 = hashlib.sha256(out2.encode('utf-8')).hexdigest()
     
     assert hash1 == hash2, f"FATAL: Non-deterministic output!\nRun 1 SHA: {hash1}\nRun 2 SHA: {hash2}"
-    expected_sha = "7e95c16b59e207cd75c9c48d2e320822e3df153d2a6f34c8a2520ab9195a9a01"
+    expected_sha = "4261d42c2c3558b272334922f1267aa0110099791908c20d6aba8429f260af7c"
     assert hash1 == expected_sha, f"FATAL: SHA-256 drifted! Expected {expected_sha}, got {hash1}"
     print(f"PASS: Determinism verified (SHA-256: {hash1})")
     return out1
 
-def test_log_fidelity(output_text):
+def test_log_fidelity(output_text=None):
+    if output_text is None:
+        output_text = run_generator()
     print("Testing Log Fidelity...")
     
     # 1. Load Step 1 Log
@@ -169,9 +171,9 @@ def test_log_fidelity(output_text):
     assert "Lethal Catalytic Core" in output_text, "Lethal Catalytic Core tier missing from Table 13"
 
     # 6. Check Table 14 Clinical Triage
-    assert "94.4%" in output_text, "UL23 Full Cohort PPV (94.4%) missing from Table 14"
-    assert "96.3%" in output_text, "UL23 Full Cohort Specificity (96.3%) missing from Table 14"
-    assert "118 / 7 / 184 / 137" in output_text, "UL23 Full Cohort confusion matrix missing from Table 14"
+    assert "71.8%" in output_text, "UL23 Evaluable HSV-1 PPV (71.8%) missing from Table 14"
+    assert "70.0%" in output_text, "UL23 Evaluable HSV-1 Specificity (70.0%) missing from Table 14"
+    assert "130 / 51 / 119 / 51" in output_text, "UL23 Evaluable HSV-1 confusion matrix missing from Table 14"
 
     # Check that hallucinated / drifted numbers and retracted claims NEVER reappear.
     forbidden_strings = [
@@ -221,7 +223,9 @@ def test_manuscript_table_byte_match():
         "Table 14": generate_table14_clinical_triage(),
     }
     
-    manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
+    manuscript_path = os.path.join(ROOT, 'manuscript', 'HSV_antiviral_resistance_paper.md')
+    if not os.path.exists(manuscript_path):
+        manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
     if not os.path.exists(manuscript_path):
         print("Note: manuscript/manuscript_draft.md not found, skipping byte match.")
         return
@@ -291,7 +295,9 @@ def test_manuscript_table_byte_match():
 
 def test_prose_table_concordance():
     print("Testing Prose vs. Table Concordance & Inferential Calibration...")
-    manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
+    manuscript_path = os.path.join(ROOT, 'manuscript', 'HSV_antiviral_resistance_paper.md')
+    if not os.path.exists(manuscript_path):
+        manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
     with open(manuscript_path, 'r', encoding='utf-8') as f:
         ms_text = f.read()
 
@@ -324,7 +330,9 @@ def test_prose_table_concordance():
 def test_manuscript_file_paths():
     print("Testing Manuscript Cited File Paths...")
     import re
-    manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
+    manuscript_path = os.path.join(ROOT, 'manuscript', 'HSV_antiviral_resistance_paper.md')
+    if not os.path.exists(manuscript_path):
+        manuscript_path = os.path.join(ROOT, 'manuscript', 'manuscript_draft.md')
     with open(manuscript_path, 'r', encoding='utf-8') as f:
         ms_text = f.read()
 

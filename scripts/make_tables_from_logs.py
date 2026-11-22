@@ -802,7 +802,7 @@ def generate_table14_clinical_triage():
 
     evals = data['evaluations']
     labels = {
-        'UL23_Aciclovir_Full_Clinical_Cohort': ('UL23-Aciclovir', 'Full Clinical Cohort (Truncating + Missense)'),
+        'UL23_Aciclovir_Evaluable_HSV1': ('UL23-Aciclovir', 'Evaluable HSV-1 Cohort (Truncating + Missense)'),
         'UL23_Aciclovir_Missense_Cohort': ('UL23-Aciclovir', 'Missense Substitutions Only'),
         'UL30_Aciclovir_Cohort': ('UL30-Aciclovir', 'Clinical Missense Cohort'),
         'UL30_Foscarnet_Cohort': ('UL30-Foscarnet', 'Clinical Missense Cohort')
@@ -821,7 +821,7 @@ def generate_table14_clinical_triage():
             md.append(f"| **{t_name}** | {pop} | {n} | {sens} | {spec} | **{ppv}** | {npv} | {bacc} | {cm} |")
 
     md.append("\n*Clinical Utility of Table 14:*")
-    md.append("1. **High Positive Predictive Value on Full Clinical Cohorts:** In clinical practice, patient isolates presenting with UL23 mutations under aciclovir failure are evaluated across all variant categories. Gating truncations first (Tier 1) followed by 3D pocket proximity and radicalness yields 94.4% PPV (118 TP vs 7 FP) and 96.3% specificity on the full UL23 clinical cohort (N=446), providing a safe rule-in diagnostic tool.")
+    md.append("1. **Performance on Evaluable Clinical Cohorts:** In clinical practice, patient isolates presenting with UL23 mutations under aciclovir failure are evaluated across all variant categories. Gating truncations first (Tier 1) followed by 3D pocket proximity and radicalness yields 71.8% PPV (130 TP vs 51 FP), 70.0% specificity, and 70.9% balanced accuracy on the evaluable HSV-1 cohort (N=351; 65 truncating + 286 missense). Note: The historical 94.4% PPV estimate derived from a heterogeneous 446-record cohort mixing viral types was withdrawn in commit ed06cd9 upon rigorous HSV-1 restriction.")
     md.append("2. **Separation of Missense Challenge:** Isolating missense variants drops PPV to 59.5% and balanced accuracy to 64.6%, directly demonstrating that the core clinical diagnostic difficulty lies in discriminating conservative active-site polymorphisms from true resistance mutations.")
     md.append("3. **High Negative Predictive Value on UL30:** On DNA polymerase (UL30), the triage rule delivers 84.7% NPV for aciclovir and 91.5% NPV for foscarnet, establishing its utility as a reliable rule-out screen for non-resistance variants outside the catalytic pocket.")
 
